@@ -1,30 +1,32 @@
 'use client';
 
-import {
-  StandardFonts, rgb, decodePDFRawStream, PDFArray, PDFDict, PDFName, PDFRawStream,
-  type PDFDocument, type PDFFont, type PDFObject, type PDFPage,
-} from 'pdf-lib';
+import { PDFDocument, PDFDict, PDFName, PDFRawStream, PDFArray, rgb, decodePDFRawStream } from 'pdf-lib';
 import { getPdfJs, readFileAsArrayBuffer, loadPdf } from './pdf-engine';
+import { collectEmbeddedFonts, FontResolver, type FontFamily } from './pdf-fonts';
+import {
+  scanContentStream, rewriteContentStream, multiply, invert,
+  type Matrix,
+} from './pdf-content-stream';
 
 /**
- * Text editing for PDFs.
+ * Editing the contents of a PDF.
  *
- * A PDF stores glyphs at coordinates rather than paragraphs, so there is no
- * text flow to re-wrap. What this does instead is read every run of text with
- * its position, size, style and colour, and on export rebuild the text layer of
- * the pages that were edited: the text-drawing operators are removed from the
- * page and every run is drawn again, carrying the user's changes.
+ * A PDF has no paragraphs and no layout model — it is a list of operators that
+ * paint glyphs and images at fixed coordinates. Editing it properly therefore
+ * means changing those operators, not painting over the result: a white box on
+ * top of a word leaves the word in the file, where search and copy-paste still
+ * find it.
  *
- * Removing rather than painting over matters. A white box on top of a word
- * leaves the word in the file, where search and copy-paste still find it — so
- * an "edited" price or a "deleted" address would still be in the document. This
- * takes the glyphs out.
+ * So this reads the operators, works out what each one draws and where, and on
+ * export rewrites the stream: the operators behind edited text and altered
+ * images are removed, and the replacements are drawn in their place. Everything
+ * else on the page is copied through byte for byte.
  *
- * The cost is that text on an edited page is redrawn in a standard PDF font.
- * Pages the user never touches are not rewritten at all.
+ * Where it can, redrawn text reuses the font the document already embeds, so an
+ * edited word looks like the words beside it.
  */
 
-export type FontFamily = 'Helvetica' | 'Times' | 'Courier';
+export type { FontFamily } from './pdf-fonts';
 
 export interface Rgb {
   r: number;
@@ -32,35 +34,55 @@ export interface Rgb {
   b: number;
 }
 
+export interface Box {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
 export interface TextBlock {
   id: string;
-  /** 0-based page index. */
   page: number;
   text: string;
   /** What the document said before the user touched it. Empty for added text. */
   original: string;
-  /** Baseline origin in PDF points, measured from the bottom-left of the page. */
+  /** Baseline origin in PDF points, from the bottom-left of the page. */
   x: number;
   y: number;
-  /** Width of the original run, in points. */
   width: number;
   fontSize: number;
   family: FontFamily;
   bold: boolean;
   italic: boolean;
   color: Rgb;
+  /** PostScript name of the font the run used, so it can be reused. */
+  sourceFont?: string;
   deleted: boolean;
   added: boolean;
 }
 
+export interface ImageObject {
+  id: string;
+  page: number;
+  /** Where it sits now — the user can move and resize it. */
+  box: Box;
+  originalBox: Box;
+  rotated: boolean;
+  opIndex: number;
+  thumbnail: string;
+  deleted: boolean;
+  /** A picture chosen to take its place. */
+  replacement: { dataUrl: string; name: string } | null;
+}
+
 export interface LoadedPage {
   index: number;
-  /** Page size in points. */
   width: number;
   height: number;
-  /** The page rendered as it currently stands, for the preview and hit boxes. */
   image: string;
   blocks: TextBlock[];
+  images: ImageObject[];
 }
 
 export interface EditorSession {
@@ -71,20 +93,19 @@ export interface EditorSession {
 
 const BLACK: Rgb = { r: 0, g: 0, b: 0 };
 const WHITE: Rgb = { r: 255, g: 255, b: 255 };
-const DELIMITERS = new Set([0x20, 0x0a, 0x0d, 0x09, 0x0c, 0x00, 0x2f, 0x5b, 0x5d, 0x3c, 0x3e, 0x28, 0x29, 0x7b, 0x7d, 0x25]);
 
-/** Characters outside WinAnsi that have an obvious plain equivalent. */
 const SUBSTITUTIONS: Record<string, string> = {
-  '‘': "'", '’': "'", '‚': ',', '‛': "'",
-  '“': '"', '”': '"', '„': '"',
-  '–': '-', '—': '-', '−': '-', '‐': '-', '‑': '-',
-  '…': '...', ' ': ' ', ' ': ' ', ' ': ' ', '​': '',
-  '•': '·', '′': "'", '″': '"',
+  '\u2018': "'", '\u2019': "'", '\u201a': ',', '\u201b': "'",
+  '\u201c': '"', '\u201d': '"', '\u201e': '"',
+  '\u2013': '-', '\u2014': '-', '\u2212': '-', '\u2010': '-', '\u2011': '-',
+  '\u2026': '...', '\u2022': '\u00b7', '\u2032': "'", '\u2033': '"',
+  '\u00a0': ' ', '\u2009': ' ', '\u202f': ' ', '\u2007': ' ', '\u200b': '',
 };
 
 /**
- * The standard PDF fonts encode WinAnsi only. Map what can be mapped and report
- * what cannot, so the UI can warn before the character silently disappears.
+ * Standard PDF fonts encode WinAnsi only. Map what maps cleanly and report what
+ * does not, so the interface can warn before a character quietly disappears.
+ * Text drawn in a font lifted from the document has no such limit.
  */
 export function toWinAnsi(text: string): { text: string; dropped: string[] } {
   const dropped: string[] = [];
@@ -95,20 +116,26 @@ export function toWinAnsi(text: string): { text: string; dropped: string[] } {
       continue;
     }
     const code = ch.codePointAt(0)!;
-    // Printable ASCII, plus the Latin-1 range the standard fonts cover.
-    if ((code >= 0x20 && code <= 0x7e) || (code >= 0xa0 && code <= 0xff)) {
-      out += ch;
-    } else if (ch === '\t') {
-      out += '    ';
-    } else {
-      if (!dropped.includes(ch)) dropped.push(ch);
-    }
+    if ((code >= 0x20 && code <= 0x7e) || (code >= 0xa0 && code <= 0xff)) out += ch;
+    else if (ch === '\t') out += '    ';
+    else if (!dropped.includes(ch)) dropped.push(ch);
   }
   return { text: out, dropped };
 }
 
 export function isChanged(block: TextBlock): boolean {
   return block.added || block.deleted || block.text !== block.original;
+}
+
+export function isImageChanged(image: ImageObject): boolean {
+  return (
+    image.deleted ||
+    image.replacement !== null ||
+    Math.abs(image.box.x - image.originalBox.x) > 0.01 ||
+    Math.abs(image.box.y - image.originalBox.y) > 0.01 ||
+    Math.abs(image.box.width - image.originalBox.width) > 0.01 ||
+    Math.abs(image.box.height - image.originalBox.height) > 0.01
+  );
 }
 
 function styleFromFontName(name: string): { family: FontFamily; bold: boolean; italic: boolean } {
@@ -121,10 +148,7 @@ function styleFromFontName(name: string): { family: FontFamily; bold: boolean; i
   return { family, bold, italic };
 }
 
-/** Distance between two colours, good enough to tell ink from paper. */
-function distance(a: Rgb, b: Rgb): number {
-  return Math.abs(a.r - b.r) + Math.abs(a.g - b.g) + Math.abs(a.b - b.b);
-}
+const distance = (a: Rgb, b: Rgb) => Math.abs(a.r - b.r) + Math.abs(a.g - b.g) + Math.abs(a.b - b.b);
 
 interface Sampler {
   data: Uint8ClampedArray;
@@ -138,44 +162,32 @@ function pixelAt(s: Sampler, x: number, y: number): Rgb | null {
   return { r: s.data[i], g: s.data[i + 1], b: s.data[i + 2] };
 }
 
-/**
- * The paper colour behind a run: the most common colour in a ring just outside
- * its box. Sampling the surroundings rather than assuming white keeps the cover
- * rectangle invisible on shaded tables and coloured headers.
- */
+/** The paper colour behind a run: the most common colour in a ring around it. */
 function sampleBackground(s: Sampler, left: number, top: number, right: number, bottom: number): Rgb {
   const counts = new Map<string, { colour: Rgb; n: number }>();
-  const pad = 3;
   const record = (x: number, y: number) => {
     const p = pixelAt(s, x, y);
     if (!p) return;
-    // Quantise so anti-aliasing noise collapses onto one bucket.
     const key = `${p.r >> 3}:${p.g >> 3}:${p.b >> 3}`;
     const hit = counts.get(key);
     if (hit) hit.n++;
     else counts.set(key, { colour: p, n: 1 });
   };
-
   const step = Math.max(1, Math.floor((right - left) / 24));
   for (let x = left; x <= right; x += step) {
-    record(x, top - pad);
-    record(x, bottom + pad);
+    record(x, top - 3);
+    record(x, bottom + 3);
   }
   for (let y = top; y <= bottom; y += Math.max(1, Math.floor((bottom - top) / 6))) {
-    record(left - pad, y);
-    record(right + pad, y);
+    record(left - 3, y);
+    record(right + 3, y);
   }
-
   let best: { colour: Rgb; n: number } | null = null;
   for (const entry of counts.values()) if (!best || entry.n > best.n) best = entry;
   return best?.colour ?? WHITE;
 }
 
-/**
- * The ink colour of a run: the pixel inside its box furthest from the paper.
- * Glyph cores are the extreme, so this lands on the real colour rather than on
- * an anti-aliased edge.
- */
+/** The ink colour: the pixel inside the run furthest from the paper around it. */
 function sampleInk(s: Sampler, left: number, top: number, right: number, bottom: number, background: Rgb): Rgb {
   let best = background;
   let bestDistance = 0;
@@ -192,7 +204,6 @@ function sampleInk(s: Sampler, left: number, top: number, right: number, bottom:
       }
     }
   }
-  // Nothing stood out from the paper — the run is probably whitespace.
   return bestDistance < 40 ? BLACK : best;
 }
 
@@ -205,13 +216,13 @@ interface RawRun {
   family: FontFamily;
   bold: boolean;
   italic: boolean;
+  sourceFont: string;
 }
 
 /**
- * pdf.js hands back text in fragments that can be as small as a single glyph.
- * Join fragments that sit on the same baseline, are close together and share a
- * style — so a paragraph becomes one editable line, while a bold total inside a
- * sentence stays its own block and keeps its own formatting.
+ * pdf.js returns text in fragments that can be a single glyph. Join fragments
+ * on the same baseline that are close together and share a style, so a sentence
+ * becomes one editable line while a bold total inside it stays its own block.
  */
 function joinRuns(runs: RawRun[]): RawRun[] {
   const sorted = [...runs].sort((a, b) => (Math.abs(a.y - b.y) > 1 ? b.y - a.y : a.x - b.x));
@@ -222,14 +233,13 @@ function joinRuns(runs: RawRun[]): RawRun[] {
     const sameLine = prev && Math.abs(prev.y - run.y) <= Math.max(1, prev.fontSize * 0.3);
     const sameStyle =
       prev &&
-      prev.family === run.family &&
+      prev.sourceFont === run.sourceFont &&
       prev.bold === run.bold &&
       prev.italic === run.italic &&
       Math.abs(prev.fontSize - run.fontSize) < 0.6;
     const gap = prev ? run.x - (prev.x + prev.width) : Infinity;
 
     if (prev && sameLine && sameStyle && gap > -prev.fontSize * 0.5 && gap < prev.fontSize * 0.9) {
-      // A gap wider than a space means the author put one there.
       const spacer = gap > prev.fontSize * 0.18 && !/\s$/.test(prev.text) && !/^\s/.test(run.text) ? ' ' : '';
       prev.text += spacer + run.text;
       prev.width = run.x + run.width - prev.x;
@@ -241,14 +251,61 @@ function joinRuns(runs: RawRun[]): RawRun[] {
   return out.filter(r => r.text.trim().length > 0);
 }
 
+/** Names of the image XObjects a page can draw, e.g. "/Im0". */
+function imageNamesFor(doc: PDFDocument, pageIndex: number): Set<string> {
+  const names = new Set<string>();
+  try {
+    const xobjects = doc.getPage(pageIndex).node.Resources()?.lookup(PDFName.of('XObject'), PDFDict);
+    if (!xobjects) return names;
+    for (const [name, value] of xobjects.entries()) {
+      const stream = doc.context.lookup(value);
+      if (!(stream instanceof PDFRawStream)) continue;
+      if (stream.dict.get(PDFName.of('Subtype'))?.toString() === '/Image') names.add(name.asString());
+    }
+  } catch {
+    // A page whose resources cannot be read simply has no editable images.
+  }
+  return names;
+}
+
+function pageContentBytes(doc: PDFDocument, pageIndex: number): Uint8Array | null {
+  const contents = doc.getPage(pageIndex).node.Contents();
+  if (!contents) return new Uint8Array(0);
+  const streams = contents instanceof PDFArray
+    ? contents.asArray().map(ref => doc.context.lookup(ref))
+    : [contents];
+
+  const parts: Uint8Array[] = [];
+  for (const stream of streams) {
+    if (!(stream instanceof PDFRawStream)) return null;
+    try {
+      parts.push(decodePDFRawStream(stream).decode());
+    } catch {
+      return null;
+    }
+  }
+  const total = parts.reduce((sum, p) => sum + p.length + 1, 0);
+  const joined = new Uint8Array(total);
+  let offset = 0;
+  for (const part of parts) {
+    joined.set(part, offset);
+    offset += part.length;
+    joined[offset++] = 0x0a;
+  }
+  return joined;
+}
+
 /**
- * Open a document for editing. Pages are read on demand — a 200-page file would
- * be slow and pointless to render up front when the user edits three pages.
+ * Open a document for editing. Pages are read on demand — rendering a
+ * two-hundred page file up front would be slow and mostly wasted.
  */
 export async function openEditableDocument(file: File): Promise<EditorSession> {
   const pdfjsLib = await getPdfJs();
   const buf = await readFileAsArrayBuffer(file);
-  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  // pdf.js transfers the buffer it is handed to its worker, which detaches the
+  // original — so give it a copy and keep `buf` for pdf-lib.
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf.slice(0)) }).promise;
+  const lib = await loadPdf(buf);
   const cache = new Map<number, LoadedPage>();
 
   return {
@@ -275,8 +332,7 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
         height: canvas.height,
       };
 
-      // commonObjs is only populated once the page has rendered, which is why
-      // the text is read after the draw rather than before it.
+      // commonObjs is only filled once the page has drawn, hence the order.
       const content = await page.getTextContent();
       const raw: RawRun[] = [];
       for (const item of content.items as Array<Record<string, unknown>>) {
@@ -292,7 +348,7 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
             fontName = (page.commonObjs.get(key) as { name?: string })?.name ?? '';
           }
         } catch {
-          // Font metadata is a nicety; the run is still editable without it.
+          // Font metadata is a nicety; the run is editable without it.
         }
 
         raw.push({
@@ -301,6 +357,7 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
           y: t[5],
           width: (item.width as number) || text.length * fontSize * 0.5,
           fontSize,
+          sourceFont: fontName,
           ...styleFromFontName(fontName || (item.fontName as string) || ''),
         });
       }
@@ -313,7 +370,7 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
         const bottom = baseline + run.fontSize * 0.24 * scale;
         const background = sampleBackground(sampler, left, top, right, bottom);
         return {
-          id: `p${index}-b${i}`,
+          id: `p${index}-t${i}`,
           page: index,
           text: run.text,
           original: run.text,
@@ -325,10 +382,38 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
           bold: run.bold,
           italic: run.italic,
           color: sampleInk(sampler, left, top, right, bottom, background),
+          sourceFont: run.sourceFont || undefined,
           deleted: false,
           added: false,
         };
       });
+
+      // Images come from the content stream, which is also what says where they
+      // are drawn. The thumbnail is cut from the page we just rendered.
+      const images: ImageObject[] = [];
+      const bytes = pageContentBytes(lib, index);
+      if (bytes && bytes.length > 0) {
+        const scan = scanContentStream(bytes, imageNamesFor(lib, index));
+        scan.images.forEach((placement, i) => {
+          const box: Box = {
+            x: placement.x,
+            y: placement.y,
+            width: placement.width,
+            height: placement.height,
+          };
+          images.push({
+            id: `p${index}-i${i}`,
+            page: index,
+            box,
+            originalBox: { ...box },
+            rotated: placement.rotated,
+            opIndex: placement.opIndex,
+            thumbnail: cropThumbnail(canvas, box, base.height, scale),
+            deleted: false,
+            replacement: null,
+          });
+        });
+      }
 
       const loaded: LoadedPage = {
         index,
@@ -336,6 +421,7 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
         height: base.height,
         image: canvas.toDataURL('image/jpeg', 0.85),
         blocks,
+        images,
       };
       cache.set(index, loaded);
       return loaded;
@@ -348,298 +434,191 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
   };
 }
 
-const STANDARD_FONTS: Record<FontFamily, Record<string, StandardFonts>> = {
-  Helvetica: {
-    regular: StandardFonts.Helvetica,
-    bold: StandardFonts.HelveticaBold,
-    italic: StandardFonts.HelveticaOblique,
-    bolditalic: StandardFonts.HelveticaBoldOblique,
-  },
-  Times: {
-    regular: StandardFonts.TimesRoman,
-    bold: StandardFonts.TimesRomanBold,
-    italic: StandardFonts.TimesRomanItalic,
-    bolditalic: StandardFonts.TimesRomanBoldItalic,
-  },
-  Courier: {
-    regular: StandardFonts.Courier,
-    bold: StandardFonts.CourierBold,
-    italic: StandardFonts.CourierOblique,
-    bolditalic: StandardFonts.CourierBoldOblique,
-  },
-};
+function cropThumbnail(source: HTMLCanvasElement, box: Box, pageHeight: number, scale: number): string {
+  const width = Math.max(1, Math.round(box.width * scale));
+  const height = Math.max(1, Math.round(box.height * scale));
+  const left = Math.round(box.x * scale);
+  const top = Math.round((pageHeight - box.y - box.height) * scale);
 
-function fontKey(block: Pick<TextBlock, 'family' | 'bold' | 'italic'>): string {
-  const weight = `${block.bold ? 'bold' : ''}${block.italic ? 'italic' : ''}` || 'regular';
-  return `${block.family}:${weight}`;
+  const out = document.createElement('canvas');
+  const cap = 240;
+  const ratio = Math.min(1, cap / Math.max(width, height));
+  out.width = Math.max(1, Math.round(width * ratio));
+  out.height = Math.max(1, Math.round(height * ratio));
+  out.getContext('2d')!.drawImage(source, left, top, width, height, 0, 0, out.width, out.height);
+  return out.toDataURL('image/jpeg', 0.8);
 }
 
-/**
- * Delete every BT…ET block from a content stream.
- *
- * Those blocks hold text and nothing else, so removing them whole takes the
- * words out without disturbing a single line, fill or image. The scan has to
- * step over strings, hex strings, comments and inline image data, because any
- * of them can contain the bytes "BT" without meaning an operator.
- */
-export function stripTextBlocks(input: Uint8Array): Uint8Array {
-  const out: number[] = [];
-  const n = input.length;
-  let i = 0;
-  let depth = 0;
-
-  const isDelimiter = (b: number) => DELIMITERS.has(b);
-  const keep = (from: number, to: number) => {
-    if (depth === 0) for (let k = from; k < to; k++) out.push(input[k]);
-  };
-
-  while (i < n) {
-    const c = input[i];
-
-    // Comment
-    if (c === 0x25) {
-      const start = i;
-      while (i < n && input[i] !== 0x0a && input[i] !== 0x0d) i++;
-      keep(start, i);
-      continue;
-    }
-
-    // Literal string: ( ... ) with escapes and nesting
-    if (c === 0x28) {
-      const start = i;
-      let nest = 1;
-      i++;
-      while (i < n && nest > 0) {
-        if (input[i] === 0x5c) i += 2;
-        else if (input[i] === 0x28) { nest++; i++; }
-        else if (input[i] === 0x29) { nest--; i++; }
-        else i++;
-      }
-      keep(start, i);
-      continue;
-    }
-
-    // Hex string: < ... >, but << opens a dictionary
-    if (c === 0x3c && input[i + 1] !== 0x3c) {
-      const start = i;
-      i++;
-      while (i < n && input[i] !== 0x3e) i++;
-      i++;
-      keep(start, i);
-      continue;
-    }
-
-    if (isDelimiter(c)) {
-      keep(i, i + 1);
-      i++;
-      continue;
-    }
-
-    // A bare token: an operator, a number or a name
-    const start = i;
-    while (i < n && !isDelimiter(input[i])) i++;
-    const token = String.fromCharCode(...input.slice(start, i));
-
-    if (token === 'BT') {
-      depth++;
-      continue; // drop the operator itself
-    }
-    if (token === 'ET') {
-      if (depth > 0) { depth--; continue; }
-      keep(start, i);
-      continue;
-    }
-    if (token === 'BI') {
-      // Inline image: binary data between ID and EI can hold anything.
-      const imageStart = start;
-      while (i < n - 1 && !(input[i] === 0x49 && input[i + 1] === 0x44)) i++;
-      i += 2;
-      while (i < n - 1 && !(input[i] === 0x45 && input[i + 1] === 0x49 && isDelimiter(input[i - 1]))) i++;
-      i += 2;
-      keep(imageStart, i);
-      continue;
-    }
-
-    keep(start, i);
-  }
-
-  return Uint8Array.from(out);
-}
-
-function decodeStream(stream: unknown): Uint8Array | null {
-  if (!(stream instanceof PDFRawStream)) return null;
-  try {
-    return decodePDFRawStream(stream).decode();
-  } catch {
-    return null;
-  }
-}
-
-/**
- * Replace a page's content streams with the same content minus its text.
- * Returns false only when a stream exists but cannot be read — an empty page
- * has nothing to strip and is not a failure.
- */
-function stripPageText(doc: PDFDocument, page: PDFPage): boolean {
-  const contents = page.node.Contents();
-  if (!contents) return true;
-
-  const streams = contents instanceof PDFArray
-    ? contents.asArray().map(ref => doc.context.lookup(ref))
-    : [contents];
-
-  const parts: Uint8Array[] = [];
-  for (const stream of streams) {
-    const bytes = decodeStream(stream);
-    if (!bytes) return false;
-    parts.push(stripTextBlocks(bytes));
-  }
-  if (parts.length === 0) return true;
-
-  const total = parts.reduce((sum, part) => sum + part.length + 1, 0);
-  const joined = new Uint8Array(total);
-  let offset = 0;
-  for (const part of parts) {
-    joined.set(part, offset);
-    offset += part.length;
-    joined[offset++] = 0x0a;
-  }
-
-  page.node.set(PDFName.of('Contents'), doc.context.register(doc.context.flateStream(joined)));
-  return true;
-}
-
-/**
- * Text can also live inside form XObjects the page draws. Strip those too,
- * writing the result to fresh objects so a page that was never edited keeps the
- * originals it shares.
- */
-function stripXObjectText(doc: PDFDocument, page: PDFPage, seen = new Set<string>(), depth = 0): void {
-  if (depth > 4) return;
-  const resources = page.node.Resources();
-  if (!resources) return;
-
-  let xobjects: PDFDict | undefined;
-  try {
-    xobjects = resources.lookup(PDFName.of('XObject'), PDFDict);
-  } catch {
-    return;
-  }
-  if (!xobjects) return;
-
-  const replacements: Array<[PDFName, Uint8Array]> = [];
-  for (const [name, value] of xobjects.entries()) {
-    const key = name.asString();
-    if (seen.has(key)) continue;
-    seen.add(key);
-    try {
-      const stream = doc.context.lookup(value);
-      if (!(stream instanceof PDFRawStream)) continue;
-      const subtype = stream.dict.get(PDFName.of('Subtype'));
-      if (!subtype || subtype.toString() !== '/Form') continue;
-      const bytes = decodeStream(stream);
-      if (!bytes) continue;
-      replacements.push([name, stripTextBlocks(bytes)]);
-    } catch {
-      // A form we cannot read is left alone; its text simply stays put.
-    }
-  }
-
-  if (replacements.length === 0) return;
-
-  // Clone the dictionaries before writing, so other pages keep what they had.
-  const ownResources = resources.clone(doc.context);
-  const ownXObjects = xobjects.clone(doc.context);
-  for (const [name, bytes] of replacements) {
-    const original = doc.context.lookup(xobjects.get(name));
-    const dict = original instanceof PDFRawStream ? original.dict.clone(doc.context) : undefined;
-    const replacement = doc.context.flateStream(bytes, dict ? dictEntries(dict) : undefined);
-    ownXObjects.set(name, doc.context.register(replacement));
-  }
-  ownResources.set(PDFName.of('XObject'), doc.context.register(ownXObjects));
-  page.node.set(PDFName.of('Resources'), doc.context.register(ownResources));
-}
-
-/** Carry a form's own dictionary entries (BBox, Matrix, Resources) onto its replacement. */
-function dictEntries(dict: PDFDict): Record<string, PDFObject> {
-  const out: Record<string, PDFObject> = {};
-  for (const [key, value] of dict.entries()) {
-    const name = key.asString().slice(1);
-    // The replacement stream declares its own length and compression.
-    if (name === 'Length' || name === 'Filter' || name === 'DecodeParms') continue;
-    out[name] = value;
-  }
-  return out;
-}
-
-/**
- * Nudge the size of untouched text so a base-14 font occupies the width the
- * original did. Small corrections only — a large one would mean the substitute
- * is nothing like the original, and shrinking it further would not help.
- */
-function fitSize(font: PDFFont, text: string, desired: number, targetWidth: number): number {
-  if (targetWidth <= 0) return desired;
-  const drawn = font.widthOfTextAtSize(text, desired);
-  if (drawn <= 0) return desired;
-  const ratio = targetWidth / drawn;
+/** Nudge a substitute font's size so it holds the width the original occupied. */
+function fitSize(measured: number, desired: number, targetWidth: number): number {
+  if (targetWidth <= 0 || measured <= 0) return desired;
+  const ratio = targetWidth / measured;
   return ratio > 0.8 && ratio < 1.25 ? desired * ratio : desired;
 }
 
+async function embedPicture(doc: PDFDocument, dataUrl: string) {
+  const bytes = await fetch(dataUrl).then(r => r.arrayBuffer());
+  if (dataUrl.startsWith('data:image/jpeg') || dataUrl.startsWith('data:image/jpg')) {
+    return doc.embedJpg(bytes);
+  }
+  return doc.embedPng(bytes);
+}
+
+export interface BuildResult {
+  bytes: Uint8Array;
+  /** Pages whose whole text layer had to be rebuilt rather than edited in place. */
+  rebuiltPages: number[];
+  /** True when at least one run had to fall back to a substitute font. */
+  substituted: boolean;
+}
+
 /**
- * Write the edits into the document. Only pages carrying an edit are rebuilt;
- * every other page keeps its original bytes, fonts and images untouched.
+ * Write the edits into the document.
+ *
+ * Only pages carrying a change are touched at all, and within those pages only
+ * the operators behind the changed text and images are removed. If a run cannot
+ * be located in the stream — which happens with unusual producers — that page
+ * falls back to rebuilding its whole text layer, which is reported so the
+ * interface can say the page was redrawn.
  */
-export async function buildEditedPdf(file: File, blocks: TextBlock[]): Promise<Uint8Array> {
+export async function buildEditedPdf(
+  file: File,
+  blocks: TextBlock[],
+  images: ImageObject[] = [],
+): Promise<BuildResult> {
   const buf = await readFileAsArrayBuffer(file);
   const doc = await loadPdf(buf);
-  const editedPages = new Set(blocks.filter(isChanged).map(b => b.page));
-  if (editedPages.size === 0) return doc.save();
 
-  const fonts = new Map<string, PDFFont>();
-  const fontFor = async (block: TextBlock): Promise<PDFFont> => {
-    const key = fontKey(block);
-    const existing = fonts.get(key);
-    if (existing) return existing;
-    const weight = `${block.bold ? 'bold' : ''}${block.italic ? 'italic' : ''}` || 'regular';
-    const font = await doc.embedFont(STANDARD_FONTS[block.family][weight]);
-    fonts.set(key, font);
-    return font;
-  };
+  const changedPages = new Set<number>([
+    ...blocks.filter(isChanged).map(b => b.page),
+    ...images.filter(isImageChanged).map(i => i.page),
+  ]);
+  if (changedPages.size === 0) {
+    return { bytes: await doc.save(), rebuiltPages: [], substituted: false };
+  }
 
-  const pageCount = doc.getPageCount();
+  const fonts = new FontResolver(doc);
+  const rebuiltPages: number[] = [];
+  let substituted = false;
 
-  for (const pageIndex of editedPages) {
-    if (pageIndex < 0 || pageIndex >= pageCount) continue;
+  for (const pageIndex of changedPages) {
+    if (pageIndex < 0 || pageIndex >= doc.getPageCount()) continue;
     const page = doc.getPage(pageIndex);
+    fonts.addPageFonts(collectEmbeddedFonts(doc, page));
 
-    if (!stripPageText(doc, page)) {
-      // Redrawing without removing the originals would double every word, so
-      // say what happened rather than hand back a mangled document.
+    const pageBlocks = blocks.filter(b => b.page === pageIndex);
+    const pageImages = images.filter(i => i.page === pageIndex);
+    const bytes = pageContentBytes(doc, pageIndex);
+
+    if (!bytes) {
       throw new Error(
-        `Page ${pageIndex + 1} uses a content stream this tool cannot rewrite, so its text cannot be edited.`,
+        `Page ${pageIndex + 1} uses a content stream this tool cannot rewrite, so its contents cannot be edited.`,
       );
     }
-    stripXObjectText(doc, page);
 
-    for (const block of blocks) {
-      if (block.page !== pageIndex || block.deleted) continue;
-      const { text } = toWinAnsi(block.text);
+    const scan = scanContentStream(bytes, imageNamesFor(doc, pageIndex));
+
+    // Work out which show operators sit behind each block.
+    const showsForBlock = new Map<string, number[]>();
+    for (const block of pageBlocks) {
+      if (block.added) continue;
+      const matches = scan.shows
+        .filter(show =>
+          show.x >= block.x - 1.5 &&
+          show.x <= block.x + Math.max(block.width, 1) + 1.5 &&
+          Math.abs(show.y - block.y) <= Math.max(1.5, block.fontSize * 0.5))
+        .map(show => show.opIndex);
+      showsForBlock.set(block.id, matches);
+    }
+
+    const changedBlocks = pageBlocks.filter(isChanged);
+    const unmatched = changedBlocks.some(b => !b.added && (showsForBlock.get(b.id)?.length ?? 0) === 0);
+
+    let redraw: TextBlock[];
+    const plan: Parameters<typeof rewriteContentStream>[2] = {};
+
+    if (unmatched) {
+      // Could not place every edit in the stream: rebuild the page's text.
+      plan.removeAllText = true;
+      redraw = pageBlocks;
+      rebuiltPages.push(pageIndex);
+    } else {
+      const removeShows = new Set<number>();
+      for (const block of changedBlocks) for (const op of showsForBlock.get(block.id) ?? []) removeShows.add(op);
+      // A single operator can carry more than one block. Redraw every block it
+      // covered, or the untouched half of it would vanish.
+      const affected = new Set(changedBlocks.map(b => b.id));
+      for (const block of pageBlocks) {
+        if (affected.has(block.id) || block.added) continue;
+        if ((showsForBlock.get(block.id) ?? []).some(op => removeShows.has(op))) affected.add(block.id);
+      }
+      plan.removeShows = removeShows;
+      redraw = pageBlocks.filter(b => affected.has(b.id));
+    }
+
+    const removeImages = new Set<number>();
+    const transformImages = new Map<number, Matrix>();
+    for (const image of pageImages) {
+      if (!isImageChanged(image)) continue;
+      if (image.deleted || image.replacement) {
+        removeImages.add(image.opIndex);
+        continue;
+      }
+      const placement = scan.images.find(p => p.opIndex === image.opIndex);
+      if (!placement) continue;
+      const target: Matrix = [
+        image.box.width, 0, 0, image.box.height, image.box.x, image.box.y,
+      ];
+      const inverse = invert(placement.ctm);
+      if (inverse) transformImages.set(image.opIndex, multiply(target, inverse));
+    }
+    plan.removeImages = removeImages;
+    plan.transformImages = transformImages;
+
+    const rewritten = rewriteContentStream(bytes, scan, plan);
+    page.node.set(PDFName.of('Contents'), doc.context.register(doc.context.flateStream(rewritten)));
+
+    // Draw the replacements.
+    for (const block of redraw) {
+      if (block.deleted) continue;
+      const resolved = await fonts.resolve(
+        { sourceFont: block.sourceFont, family: block.family, bold: block.bold, italic: block.italic },
+        block.text,
+      );
+      const text = resolved.original ? block.text : toWinAnsi(block.text).text;
       if (!text.trim()) continue;
+      if (!resolved.original) substituted = true;
 
-      const font = await fontFor(block);
-      const size = isChanged(block) ? block.fontSize : fitSize(font, text, block.fontSize, block.width);
+      const size = isChanged(block)
+        ? block.fontSize
+        : fitSize(resolved.font.widthOfTextAtSize(text, block.fontSize), block.fontSize, block.width);
 
       page.drawText(text, {
         x: block.x,
         y: block.y,
         size,
-        font,
+        font: resolved.font,
         color: rgb(block.color.r / 255, block.color.g / 255, block.color.b / 255),
       });
     }
+
+    for (const image of pageImages) {
+      if (!image.replacement || image.deleted) continue;
+      try {
+        const embedded = await embedPicture(doc, image.replacement.dataUrl);
+        page.drawImage(embedded, {
+          x: image.box.x,
+          y: image.box.y,
+          width: image.box.width,
+          height: image.box.height,
+        });
+      } catch {
+        throw new Error(`"${image.replacement.name}" could not be placed — try a PNG or JPEG.`);
+      }
+    }
   }
 
-  return doc.save();
+  return { bytes: await doc.save(), rebuiltPages, substituted };
 }
 
 export function rgbToHex({ r, g, b }: Rgb): string {
