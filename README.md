@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Blog
+
+Articles live in `src/lib/blog/posts/` as typed data and are rendered as static
+pages by `src/app/blog/[slug]/`. Adding one means adding an object to a posts
+file and exporting it through `src/lib/blog/posts/index.ts`.
+
+```bash
+npx tsx scripts/validate-blog.ts   # length, metadata, FAQ counts and dead links
+```
