@@ -3,6 +3,7 @@
 import { PDFDocument, PDFDict, PDFName, PDFRawStream, PDFArray, rgb, decodePDFRawStream } from 'pdf-lib';
 import { getPdfJs, readFileAsArrayBuffer, loadPdf } from './pdf-engine';
 import { collectEmbeddedFonts, FontResolver, type FontFamily } from './pdf-fonts';
+import { repairFontProgram } from './sfnt';
 import {
   scanContentStream, rewriteContentStream, multiply, invert,
   type Matrix,
@@ -27,6 +28,7 @@ import {
  */
 
 export type { FontFamily } from './pdf-fonts';
+export { normaliseFontName } from './pdf-fonts';
 
 export interface Rgb {
   r: number;
@@ -56,6 +58,8 @@ export interface TextBlock {
   bold: boolean;
   italic: boolean;
   color: Rgb;
+  /** The paper behind the run, so the editor can cover it while you type. */
+  background: Rgb;
   /** PostScript name of the font the run used, so it can be reused. */
   sourceFont?: string;
   deleted: boolean;
@@ -76,13 +80,28 @@ export interface ImageObject {
   replacement: { dataUrl: string; name: string } | null;
 }
 
+/** A font programme from the document, repaired so a browser can load it. */
+export interface EditorFont {
+  /** Normalised PostScript name, matching TextBlock.sourceFont. */
+  key: string;
+  bytes: Uint8Array;
+}
+
 export interface LoadedPage {
   index: number;
+  /** Display size in points — already includes the page's /Rotate. */
   width: number;
   height: number;
+  /**
+   * PDF user space to display space, at one point per pixel. Rotated pages make
+   * this more than a flip, so the editor maps every box through it.
+   */
+  transform: number[];
   image: string;
   blocks: TextBlock[];
   images: ImageObject[];
+  /** The page's own faces, for typing in the document's typeface. */
+  fonts: EditorFont[];
 }
 
 export interface EditorSession {
@@ -332,6 +351,21 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
         height: canvas.height,
       };
 
+      // Everything the page reports is in PDF user space; the canvas it was
+      // drawn on is not, once /Rotate is involved. This maps between them.
+      const vt = viewport.transform as number[];
+      const toCanvas = (x: number, y: number): [number, number] =>
+        [vt[0] * x + vt[2] * y + vt[4], vt[1] * x + vt[3] * y + vt[5]];
+      const canvasBox = (x0: number, y0: number, x1: number, y1: number) => {
+        const points = [toCanvas(x0, y0), toCanvas(x1, y0), toCanvas(x1, y1), toCanvas(x0, y1)];
+        return {
+          left: Math.min(...points.map(p => p[0])),
+          right: Math.max(...points.map(p => p[0])),
+          top: Math.min(...points.map(p => p[1])),
+          bottom: Math.max(...points.map(p => p[1])),
+        };
+      };
+
       // commonObjs is only filled once the page has drawn, hence the order.
       const content = await page.getTextContent();
       const raw: RawRun[] = [];
@@ -363,11 +397,10 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
       }
 
       const blocks: TextBlock[] = joinRuns(raw).map((run, i) => {
-        const left = run.x * scale;
-        const right = (run.x + run.width) * scale;
-        const baseline = (base.height - run.y) * scale;
-        const top = baseline - run.fontSize * 0.82 * scale;
-        const bottom = baseline + run.fontSize * 0.24 * scale;
+        const { left, right, top, bottom } = canvasBox(
+          run.x, run.y - run.fontSize * 0.24,
+          run.x + run.width, run.y + run.fontSize * 0.82,
+        );
         const background = sampleBackground(sampler, left, top, right, bottom);
         return {
           id: `p${index}-t${i}`,
@@ -382,6 +415,7 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
           bold: run.bold,
           italic: run.italic,
           color: sampleInk(sampler, left, top, right, bottom, background),
+          background,
           sourceFont: run.sourceFont || undefined,
           deleted: false,
           added: false,
@@ -408,20 +442,34 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
             originalBox: { ...box },
             rotated: placement.rotated,
             opIndex: placement.opIndex,
-            thumbnail: cropThumbnail(canvas, box, base.height, scale),
+            thumbnail: cropThumbnail(canvas, canvasBox(box.x, box.y, box.x + box.width, box.y + box.height)),
             deleted: false,
             replacement: null,
           });
         });
       }
 
+      // The page's own fonts, repaired enough for the browser to load them, so
+      // text typed on the page is set in the face the document actually uses.
+      const fonts: EditorFont[] = [];
+      try {
+        for (const [key, embedded] of collectEmbeddedFonts(lib, lib.getPage(index))) {
+          const program = repairFontProgram(embedded.bytes, embedded.charToGlyph, embedded.postscriptName);
+          if (program) fonts.push({ key, bytes: program });
+        }
+      } catch {
+        // Without them the editor falls back to a lookalike system font.
+      }
+
       const loaded: LoadedPage = {
         index,
         width: base.width,
         height: base.height,
+        transform: base.transform as number[],
         image: canvas.toDataURL('image/jpeg', 0.85),
         blocks,
         images,
+        fonts,
       };
       cache.set(index, loaded);
       return loaded;
@@ -434,11 +482,13 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
   };
 }
 
-function cropThumbnail(source: HTMLCanvasElement, box: Box, pageHeight: number, scale: number): string {
-  const width = Math.max(1, Math.round(box.width * scale));
-  const height = Math.max(1, Math.round(box.height * scale));
-  const left = Math.round(box.x * scale);
-  const top = Math.round((pageHeight - box.y - box.height) * scale);
+interface CanvasBox { left: number; top: number; right: number; bottom: number }
+
+function cropThumbnail(source: HTMLCanvasElement, area: CanvasBox): string {
+  const width = Math.max(1, Math.round(area.right - area.left));
+  const height = Math.max(1, Math.round(area.bottom - area.top));
+  const left = Math.round(area.left);
+  const top = Math.round(area.top);
 
   const out = document.createElement('canvas');
   const cap = 240;

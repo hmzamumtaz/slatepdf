@@ -186,6 +186,53 @@ function buildName(postscriptName: string): Uint8Array {
 }
 
 /**
+ * A minimal OS/2 table. TrueType outlines are rejected by browsers without one —
+ * fontkit does not need it, but `FontFace` does, and the editor loads these same
+ * programmes to type in the document's own face.
+ */
+function buildOs2(sfnt: Sfnt, charToGlyph: Map<number, number>): Uint8Array {
+  let ascender = 800;
+  let descender = -200;
+  const hhea = sfnt.tables.get('hhea');
+  if (hhea && hhea.length >= 10) {
+    const view = new DataView(hhea.buffer, hhea.byteOffset, hhea.byteLength);
+    ascender = view.getInt16(4);
+    descender = view.getInt16(6);
+  }
+
+  const codes = [...charToGlyph.keys()].filter(c => c > 0 && c <= 0xffff);
+  const first = codes.length ? Math.min(...codes) : 0x20;
+  const last = codes.length ? Math.max(...codes) : 0xff;
+
+  const table = new Uint8Array(96);
+  const view = new DataView(table.buffer);
+  view.setUint16(0, 4);        // version
+  view.setInt16(2, 500);       // xAvgCharWidth
+  view.setUint16(4, 400);      // usWeightClass
+  view.setUint16(6, 5);        // usWidthClass
+  view.setUint16(8, 0);        // fsType: installable
+  view.setInt16(28, Math.round(ascender * 0.06));  // yStrikeoutSize
+  view.setInt16(30, Math.round(ascender * 0.26));  // yStrikeoutPosition
+  view.setUint32(42, 1);       // ulUnicodeRange1: Basic Latin
+  for (let i = 0; i < 4; i++) table[58 + i] = 'SLTE'.charCodeAt(i);
+  view.setUint16(62, 0x0040);  // fsSelection: regular
+  view.setUint16(64, first);
+  view.setUint16(66, last);
+  view.setInt16(68, ascender);
+  view.setInt16(70, descender);
+  view.setInt16(72, 0);        // sTypoLineGap
+  view.setUint16(74, Math.max(0, ascender));
+  view.setUint16(76, Math.max(0, -descender));
+  view.setUint32(78, 1);       // ulCodePageRange1: Latin 1
+  view.setInt16(86, Math.round(ascender * 0.5));  // sxHeight
+  view.setInt16(88, Math.round(ascender * 0.7));  // sCapHeight
+  view.setUint16(90, 0);       // usDefaultChar
+  view.setUint16(92, 0x20);    // usBreakChar
+  view.setUint16(94, 1);       // usMaxContext
+  return table;
+}
+
+/**
  * Put back the tables a subsetter removed. Returns the programme unchanged when
  * nothing is missing, and null when it is not something we can repair.
  */
@@ -216,6 +263,11 @@ export function repairFontProgram(
     const post = new Uint8Array(32);
     new DataView(post.buffer).setUint32(0, 0x00030000); // version 3: no glyph names
     sfnt.tables.set('post', post);
+    repaired = true;
+  }
+
+  if (!sfnt.tables.has('OS/2')) {
+    sfnt.tables.set('OS/2', buildOs2(sfnt, charToGlyph));
     repaired = true;
   }
 
