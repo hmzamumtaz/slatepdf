@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, LayoutGrid } from 'lucide-react';
 import BrandMark from './BrandMark';
 import * as LucideIcons from 'lucide-react';
 import { categories, getToolsByCategory, type ToolInfo } from '@/lib/tools-data';
@@ -79,6 +79,13 @@ export default function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
+            <Link
+              href="/tools/pdf-workspace"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-foreground hover:bg-muted rounded-lg transition-colors"
+            >
+              <LayoutGrid className="w-4 h-4" />
+              Workspace
+            </Link>
             {navCategories.map((cat, i) => (
               <DropdownMenu key={cat} category={cat} tools={getToolsByCategory(cat)} alignRight={i >= 2} />
             ))}
@@ -103,6 +110,14 @@ export default function Header() {
       {mobileOpen && (
         <div className="lg:hidden border-t border-border bg-white animate-fade-in max-h-[70vh] overflow-y-auto">
           <div className="px-4 py-3 space-y-1">
+            <Link
+              href="/tools/pdf-workspace"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center gap-2 px-3 py-2.5 text-sm font-semibold text-foreground hover:bg-muted rounded-lg transition-colors"
+            >
+              <LayoutGrid className="w-4 h-4" />
+              Workspace
+            </Link>
             {navCategories.map((cat) => (
               <div key={cat}>
                 <button

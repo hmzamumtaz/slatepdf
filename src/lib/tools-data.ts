@@ -6,9 +6,22 @@ export interface ToolInfo {
   category: string;
   accept?: string;
   color: string;
+  /** Shown above everything else — the one tool that does the lot. */
+  featured?: boolean;
 }
 
 export const tools: ToolInfo[] = [
+  // The everything tool
+  {
+    slug: 'pdf-workspace',
+    name: 'PDF Workspace',
+    description: 'Edit, redact, sign, stamp and secure one document without leaving the page',
+    icon: 'LayoutGrid',
+    category: 'All-in-one',
+    color: '#4f46e5',
+    featured: true,
+  },
+
   // Organize
   { slug: 'merge-pdf', name: 'Merge PDF', description: 'Combine multiple PDFs into a single file', icon: 'Combine', category: 'Organize PDF', color: '#6366f1' },
   { slug: 'split-pdf', name: 'Split PDF', description: 'Separate a PDF into individual pages', icon: 'Scissors', category: 'Organize PDF', color: '#8b5cf6' },
@@ -57,6 +70,7 @@ export const tools: ToolInfo[] = [
 ];
 
 export const categories = [
+  'All-in-one',
   'Organize PDF',
   'Optimize PDF',
   'Create PDF',
@@ -73,3 +87,5 @@ export function getToolsByCategory(category: string): ToolInfo[] {
 export function getToolBySlug(slug: string): ToolInfo | undefined {
   return tools.find(t => t.slug === slug);
 }
+
+export const featuredTool = tools.find(t => t.featured)!;

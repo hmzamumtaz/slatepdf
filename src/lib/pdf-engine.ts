@@ -394,6 +394,32 @@ export async function compressToTargetSize(file: File, targetBytes: number, onPr
   return { blob: finalBlob, originalSize, compressedSize: finalBlob.size, targetSize: targetBytes, achieved: finalBlob.size <= targetBytes, quality: 0.35, pages: numPages };
 }
 
+/**
+ * A page as the reader sees it.
+ *
+ * /Rotate means the page's own coordinates are not the ones on screen: a
+ * landscape-looking A4 page is still 595 by 842 underneath. Anything positioned
+ * the way a person would describe it — "bottom centre", "across the middle" —
+ * has to be worked out in display space and mapped back.
+ */
+export function displayFrame(page: import('pdf-lib').PDFPage) {
+  const { width, height } = page.getSize();
+  const turn = ((page.getRotation().angle % 360) + 360) % 360;
+  const swapped = turn === 90 || turn === 270;
+  return {
+    turn,
+    width: swapped ? height : width,
+    height: swapped ? width : height,
+    /** Display point (origin bottom-left, y up) to the page's own coordinates. */
+    toUser(u: number, v: number): [number, number] {
+      if (turn === 90) return [width - v, u];
+      if (turn === 180) return [width - u, height - v];
+      if (turn === 270) return [v, height - u];
+      return [u, v];
+    },
+  };
+}
+
 export type PageNumberFormat = 'n' | 'page-n' | 'n-of-m';
 
 export async function addPageNumbersToFile(
@@ -409,21 +435,22 @@ export async function addPageNumbersToFile(
 
   for (let i = 0; i < total; i++) {
     const page = src.getPage(i);
-    const { width, height } = page.getSize();
+    const frame = displayFrame(page);
     const n = startNum + i;
     const text = format === 'page-n' ? `Page ${n}` : format === 'n-of-m' ? `${n} of ${startNum + total - 1}` : `${n}`;
     const fontSize = 12;
     const textWidth = font.widthOfTextAtSize(text, fontSize);
 
-    let x: number, y: number;
-    if (position.includes('left')) x = 40;
-    else if (position.includes('right')) x = width - textWidth - 40;
-    else x = (width - textWidth) / 2;
+    // "Bottom right" means the corner the reader sees, not the corner the page
+    // structure calls bottom right.
+    let u: number;
+    if (position.includes('left')) u = 40;
+    else if (position.includes('right')) u = frame.width - textWidth - 40;
+    else u = (frame.width - textWidth) / 2;
+    const v = position.includes('top') ? frame.height - 40 : 30;
 
-    if (position.includes('top')) y = height - 40;
-    else y = 30;
-
-    page.drawText(text, { x, y, size: fontSize, font, color: rgb(0, 0, 0) });
+    const [x, y] = frame.toUser(u, v);
+    page.drawText(text, { x, y, size: fontSize, font, color: rgb(0, 0, 0), rotate: degrees(frame.turn) });
   }
 
   return toBlob(await src.save());
@@ -440,15 +467,18 @@ export async function addWatermarkToFile(file: File, text: string, options?: { f
 
   for (let i = 0; i < src.getPageCount(); i++) {
     const page = src.getPage(i);
-    const { width, height } = page.getSize();
+    const frame = displayFrame(page);
     const textWidth = font.widthOfTextAtSize(text, fontSize);
     const textHeight = font.heightAtSize(fontSize);
 
     // pdf-lib rotates around the text origin (baseline start), so compute the
-    // origin that puts the rotated text's center at the page center.
+    // origin that puts the rotated text's center at the center of the page as
+    // it is displayed, then turn it by the page's own rotation as well so the
+    // angle is the one the reader sees.
     const rad = (rotation * Math.PI) / 180;
-    const x = width / 2 - (textWidth / 2) * Math.cos(rad) + (textHeight / 2) * Math.sin(rad);
-    const y = height / 2 - (textWidth / 2) * Math.sin(rad) - (textHeight / 2) * Math.cos(rad);
+    const u = frame.width / 2 - (textWidth / 2) * Math.cos(rad) + (textHeight / 2) * Math.sin(rad);
+    const v = frame.height / 2 - (textWidth / 2) * Math.sin(rad) - (textHeight / 2) * Math.cos(rad);
+    const [x, y] = frame.toUser(u, v);
 
     page.drawText(text, {
       x,
@@ -457,7 +487,7 @@ export async function addWatermarkToFile(file: File, text: string, options?: { f
       font,
       color: rgb(0.5, 0.5, 0.5),
       opacity,
-      rotate: degrees(rotation),
+      rotate: degrees(rotation + frame.turn),
     });
   }
 
@@ -471,8 +501,25 @@ export async function cropPdf(file: File, margins: { top: number; bottom: number
   for (let i = 0; i < src.getPageCount(); i++) {
     const page = src.getPage(i);
     const { width, height } = page.getSize();
-    page.setMediaBox(margins.left, margins.bottom, width - margins.left - margins.right, height - margins.top - margins.bottom);
-    page.setCropBox(margins.left, margins.bottom, width - margins.left - margins.right, height - margins.top - margins.bottom);
+    const frame = displayFrame(page);
+
+    // The margins are the ones the reader would point at, so on a rotated page
+    // they have to be turned to match the page's own edges.
+    const edges = frame.turn === 90
+      ? { left: margins.bottom, right: margins.top, bottom: margins.right, top: margins.left }
+      : frame.turn === 180
+        ? { left: margins.right, right: margins.left, bottom: margins.top, top: margins.bottom }
+        : frame.turn === 270
+          ? { left: margins.top, right: margins.bottom, bottom: margins.left, top: margins.right }
+          : margins;
+
+    const boxWidth = width - edges.left - edges.right;
+    const boxHeight = height - edges.top - edges.bottom;
+    if (boxWidth <= 1 || boxHeight <= 1) {
+      throw new Error(`Those margins would leave nothing of page ${i + 1}.`);
+    }
+    page.setMediaBox(edges.left, edges.bottom, boxWidth, boxHeight);
+    page.setCropBox(edges.left, edges.bottom, boxWidth, boxHeight);
   }
 
   return toBlob(await src.save());
