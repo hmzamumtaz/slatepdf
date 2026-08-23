@@ -38,12 +38,13 @@ export const tools: ToolInfo[] = [
   { slug: 'pdf-to-markdown', name: 'PDF to Markdown', description: 'Convert PDF content to Markdown text', icon: 'FileCode', category: 'Export PDF', color: '#0f766e' },
 
   // Edit
-  { slug: 'rotate-pdf', name: 'Rotate PDF', description: 'Rotate PDF pages to any angle', icon: 'RotateCw', category: 'Edit PDF', color: '#a855f7' },
-  { slug: 'add-page-numbers', name: 'Add Page Numbers', description: 'Insert page numbers into your PDF', icon: 'Hash', category: 'Edit PDF', color: '#3b82f6' },
-  { slug: 'add-watermark', name: 'Add Watermark', description: 'Add text or image watermarks', icon: 'Droplets', category: 'Edit PDF', color: '#0891b2' },
-  { slug: 'crop-pdf', name: 'Crop PDF', description: 'Crop and resize PDF pages', icon: 'Crop', category: 'Edit PDF', color: '#65a30d' },
-  { slug: 'sign-pdf', name: 'Sign PDF', description: 'Add digital signatures to PDFs', icon: 'PenTool', category: 'Edit PDF', color: '#1d4ed8' },
-  { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out sensitive information', icon: 'Eraser', category: 'Edit PDF', color: '#991b1b' },
+  { slug: 'edit-pdf', name: 'Edit PDF', description: 'Change the text, headings and numbers in a PDF', icon: 'TextCursorInput', category: 'Modify PDF', color: '#7c3aed' },
+  { slug: 'rotate-pdf', name: 'Rotate PDF', description: 'Rotate PDF pages to any angle', icon: 'RotateCw', category: 'Modify PDF', color: '#a855f7' },
+  { slug: 'add-page-numbers', name: 'Add Page Numbers', description: 'Insert page numbers into your PDF', icon: 'Hash', category: 'Modify PDF', color: '#3b82f6' },
+  { slug: 'add-watermark', name: 'Add Watermark', description: 'Add text or image watermarks', icon: 'Droplets', category: 'Modify PDF', color: '#0891b2' },
+  { slug: 'crop-pdf', name: 'Crop PDF', description: 'Crop and resize PDF pages', icon: 'Crop', category: 'Modify PDF', color: '#65a30d' },
+  { slug: 'sign-pdf', name: 'Sign PDF', description: 'Add digital signatures to PDFs', icon: 'PenTool', category: 'Modify PDF', color: '#1d4ed8' },
+  { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out sensitive information', icon: 'Eraser', category: 'Modify PDF', color: '#991b1b' },
 
   // Security
   { slug: 'unlock-pdf', name: 'Unlock PDF', description: 'Remove password protection from PDF', icon: 'Unlock', category: 'PDF Security', color: '#16a34a' },
@@ -60,7 +61,7 @@ export const categories = [
   'Optimize PDF',
   'Create PDF',
   'Export PDF',
-  'Edit PDF',
+  'Modify PDF',
   'PDF Security',
   'PDF Intelligence',
 ];

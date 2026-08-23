@@ -62,7 +62,7 @@ const navCategories = [
   'Organize PDF',
   'Create PDF',
   'Export PDF',
-  'Edit PDF',
+  'Modify PDF',
 ];
 
 export default function Header() {
