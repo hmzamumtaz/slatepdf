@@ -58,7 +58,7 @@ const weightOf = (r: Pick<FontRequest, 'bold' | 'italic'>) =>
   `${r.bold ? 'bold' : ''}${r.italic ? 'italic' : ''}` || 'regular';
 
 /** Subset fonts are named like "ABCDEF+Arial-BoldMT"; the tag is not identity. */
-function normaliseName(name: string): string {
+export function normaliseFontName(name: string): string {
   return name.replace(/^[A-Z]{6}\+/, '').replace(/^\//, '').toLowerCase();
 }
 
@@ -129,7 +129,7 @@ export function collectEmbeddedFonts(doc: PDFDocument, page: PDFPage): Map<strin
       return;
     }
     if (!raw) return;
-    const baseFont = normaliseName(raw);
+    const baseFont = normaliseFontName(raw);
 
     const descriptors: Array<{ dict: PDFDict; child: PDFDict | null }> = [];
     try {
@@ -210,7 +210,7 @@ export class FontResolver {
   }
 
   async resolve(request: FontRequest, text: string): Promise<ResolvedFont> {
-    const name = request.sourceFont ? normaliseName(request.sourceFont) : '';
+    const name = request.sourceFont ? normaliseFontName(request.sourceFont) : '';
     const source = name ? this.embedded.get(name) : undefined;
 
     if (source && !this.failed.has(name)) {
