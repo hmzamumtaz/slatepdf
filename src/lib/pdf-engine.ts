@@ -525,7 +525,35 @@ export async function cropPdf(file: File, margins: { top: number; bottom: number
   return toBlob(await src.save());
 }
 
-export async function unlockPdf(file: File, password: string): Promise<Blob> {
+/**
+ * Thrown when a PDF cannot be opened at all without a document-open password.
+ *
+ * This is the one lock that genuinely cannot be lifted without the password —
+ * the file's contents are encrypted, so there is nothing to read until the
+ * right key is supplied. It is distinct from the far more common owner
+ * (permissions) password, which only restricts printing/copying/editing and
+ * leaves the file openable by anyone; that one is removed here with no password
+ * at all.
+ */
+export class OpenPasswordRequiredError extends Error {
+  constructor(message = 'This PDF needs a password to open. Enter it to remove it.') {
+    super(message);
+    this.name = 'OpenPasswordRequiredError';
+  }
+}
+
+/**
+ * Remove protection from a PDF.
+ *
+ * The password argument defaults to empty, which is all that is needed for the
+ * usual case: a file that opens fine but is restricted from being printed,
+ * copied or edited. Those restrictions are set by an owner password the reader
+ * is not expected to have, so stripping them requires no password — the file is
+ * simply rebuilt without them. A password is only needed when the file will not
+ * open without one, and that case raises OpenPasswordRequiredError so the caller
+ * can ask for it.
+ */
+export async function unlockPdf(file: File, password: string = ''): Promise<Blob> {
   const pdfjsLib = await getPdfJs();
 
   const buf = await readFileAsArrayBuffer(file);
@@ -533,9 +561,15 @@ export async function unlockPdf(file: File, password: string): Promise<Blob> {
   try {
     pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf), password }).promise;
   } catch (err: any) {
-    if (err?.name === 'PasswordException' || /password/i.test(err?.message || '')) {
-      throw new Error('Incorrect password. Please try again.');
+    // pdf.js code 1 = a password is required, 2 = the one given was wrong.
+    // Either way the caller should keep asking, so both raise the same error.
+    if (err?.name === 'PasswordException') {
+      if (err.code === 2 || password) {
+        throw new OpenPasswordRequiredError('That password did not open the file. Check it and try again.');
+      }
+      throw new OpenPasswordRequiredError();
     }
+    if (/password/i.test(err?.message || '')) throw new OpenPasswordRequiredError();
     throw err;
   }
   const unlocked = await PDFDocument.create();
