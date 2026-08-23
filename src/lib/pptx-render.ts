@@ -11,6 +11,7 @@
  * layout and then the master, the way PowerPoint resolves it.
  */
 import { PDFDocument, rgb, StandardFonts, type PDFFont, type PDFPage, type RGB } from 'pdf-lib';
+import { SITE_NAME } from './site';
 
 const EMU_PER_PT = 12700;
 const A = 'http://schemas.openxmlformats.org/drawingml/2006/main';
@@ -442,7 +443,7 @@ export async function renderPptxToPdf(
 
   const pdf = await PDFDocument.create();
   pdf.setTitle(file.name.replace(/\.pptx$/i, ''));
-  pdf.setProducer('Folio');
+  pdf.setProducer(SITE_NAME);
   const fonts: Fonts = {
     regular: await pdf.embedFont(StandardFonts.Helvetica),
     bold: await pdf.embedFont(StandardFonts.HelveticaBold),

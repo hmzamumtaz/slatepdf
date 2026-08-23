@@ -45,7 +45,7 @@ function extFor(result: Blob) {
 }
 
 // When a run produces several outputs (page images, batches), number them so
-// the Folio_[tool]_[date] names don't all collide.
+// the SlatePDF_[tool]_[date] names don't all collide.
 function sequenceFor(results: ProcessedResult[], index: number): number | undefined {
   return results.length > 1 ? index + 1 : undefined;
 }

@@ -10,6 +10,7 @@
  * across continuation slides so nothing overflows.
  */
 import { getPdfJs, readFileAsArrayBuffer } from './pdf-engine';
+import { SITE_NAME } from './site';
 
 export interface PdfToPptxResult {
   blob: Blob;
@@ -132,7 +133,7 @@ export async function pdfToPowerpointStructured(
 
   const pptx = new PptxGenJS();
   pptx.layout = 'LAYOUT_16x9';
-  pptx.author = 'Folio';
+  pptx.author = SITE_NAME;
   pptx.title = file.name.replace(/\.pdf$/i, '');
 
   const ACCENT = '1F4E79';

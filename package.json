@@ -1,10 +1,10 @@
 {
-  "name": "folio",
+  "name": "slate-pdf",
   "version": "1.0.0",
   "private": true,
   "main": "electron.js",
-  "author": "Folio",
-  "description": "Folio \u2014 the modern PDF toolkit: edit, convert, merge & optimize PDFs",
+  "author": "Slate PDF",
+  "description": "Slate PDF \u2014 the PDF toolkit that runs in your browser: edit, convert, merge & optimize PDFs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,8 +15,8 @@
     "electron:build:dir": "next build && electron-builder --mac --dir"
   },
   "build": {
-    "appId": "com.folio.app",
-    "productName": "Folio",
+    "appId": "com.slatepdf.app",
+    "productName": "Slate PDF",
     "directories": {
       "output": "dist-electron"
     },

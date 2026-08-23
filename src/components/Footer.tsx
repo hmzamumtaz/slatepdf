@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BrandMark from './BrandMark';
+import { SITE_NAME } from '@/lib/site';
 
 export default function Footer() {
   return (
@@ -8,10 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <BrandMark className="w-4 h-4 text-black" />
-              </div>
-              <span className="text-lg font-bold text-white">Folio</span>
+              <BrandMark className="w-8 h-8 rounded-lg" ring />
+              <span className="text-lg font-bold text-white">{SITE_NAME}</span>
             </Link>
             <p className="text-sm leading-relaxed">
               The modern PDF toolkit. Edit, convert, merge, and optimize your PDFs entirely in your browser.
@@ -61,7 +60,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs">
-            &copy; {new Date().getFullYear()} Folio. Files are processed locally in your browser — only the optional Translate tool contacts an online service.
+            &copy; {new Date().getFullYear()} {SITE_NAME}. Files are processed locally in your browser — only the optional Translate tool contacts an online service.
           </p>
           <div className="flex items-center gap-4 text-xs">
             <span>No file size limits</span>
