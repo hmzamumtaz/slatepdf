@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Shield, Zap, Lock, ArrowRight, Sparkles, Globe } from 'lucide-react';
-import { tools, categories, getToolsByCategory } from '@/lib/tools-data';
+import Link from 'next/link';
+import { Shield, Zap, Lock, ArrowRight, Sparkles, Globe, LayoutGrid } from 'lucide-react';
+import { tools, categories, getToolsByCategory, featuredTool } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
 import { SITE_NAME } from '@/lib/site';
@@ -19,7 +20,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-border rounded-full text-sm font-medium text-foreground mb-8">
-              <span>{tools.length}+ Tools</span>
+              <span>{tools.length} tools, one workspace</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1] text-foreground">
@@ -48,9 +49,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The one tool that does the lot */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4">
+        <Link
+          href={`/tools/${featuredTool.slug}`}
+          className="group block rounded-3xl bg-foreground text-white p-8 sm:p-10 transition-all hover:shadow-2xl hover:shadow-foreground/25"
+        >
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+            <div className="flex-1 min-w-0">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold tracking-wide uppercase mb-4">
+                <LayoutGrid className="w-3.5 h-3.5" /> Featured
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3">{featuredTool.name}</h2>
+              <p className="text-white/70 text-base leading-relaxed max-w-2xl">
+                Open one document and do everything to it in one sitting. Rewrite the text, black out what
+                should not be seen, reorder the pages, sign it, stamp it, then lock it — each step picks up
+                exactly where the last one left off, and you can download the file at any point.
+              </p>
+              <span className="inline-flex items-center gap-2 mt-6 font-semibold">
+                Open the workspace
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </span>
+            </div>
+
+            <ol className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-x-6 gap-y-2 shrink-0 lg:w-72">
+              {['Edit', 'Redact', 'Pages', 'Sign', 'Stamp', 'Adjust', 'Protect', 'Download'].map((step, i) => (
+                <li key={step} className="flex items-center gap-2 text-sm text-white/80">
+                  <span className="w-5 h-5 rounded-md bg-white/10 flex items-center justify-center text-[11px] tabular-nums">
+                    {i + 1}
+                  </span>
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Link>
+      </section>
+
       {/* Tools by Category */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        {categories.map((category) => (
+        {categories.filter(c => c !== featuredTool.category).map((category) => (
           <div key={category} className="mb-14 last:mb-0">
             <div className="flex items-center justify-between mb-5">
               <h2 className="text-xl font-bold text-foreground">{category}</h2>
