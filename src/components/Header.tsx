@@ -84,6 +84,12 @@ export default function Header() {
               <DropdownMenu key={cat} category={cat} tools={getToolsByCategory(cat)} alignRight={i >= 2} />
             ))}
             <DropdownMenu category="PDF Intelligence" tools={getToolsByCategory('PDF Intelligence')} alignRight={true} />
+            <Link
+              href="/blog"
+              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+            >
+              Blog
+            </Link>
           </nav>
 
           <button
@@ -123,6 +129,13 @@ export default function Header() {
                 )}
               </div>
             ))}
+            <Link
+              href="/blog"
+              onClick={() => setMobileOpen(false)}
+              className="block px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+            >
+              Blog
+            </Link>
           </div>
         </div>
       )}

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Folio - Modern PDF Toolkit",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Folio - Modern PDF Toolkit",
+    // Pages set their own title; this appends the brand for search results.
+    template: `%s | ${SITE_NAME}`,
+  },
   description: "Edit, convert, merge, compress, and optimize your PDFs. Files are processed in your browser — nothing is uploaded (except optional online translation).",
+  applicationName: SITE_NAME,
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    title: "Folio - Modern PDF Toolkit",
+    description: SITE_DESCRIPTION,
+    url: '/',
+  },
+  twitter: {
+    card: 'summary',
+    title: "Folio - Modern PDF Toolkit",
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

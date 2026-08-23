@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-400 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
@@ -35,6 +35,16 @@ export default function Footer() {
               <li><Link href="/tools/pdf-to-jpg" className="hover:text-white transition-colors">PDF to JPG</Link></li>
               <li><Link href="/tools/word-to-pdf" className="hover:text-white transition-colors">Word to PDF</Link></li>
               <li><Link href="/tools/pdf-to-word" className="hover:text-white transition-colors">PDF to Word</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-3">Learn</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/blog" className="hover:text-white transition-colors">All PDF guides</Link></li>
+              <li><Link href="/blog/how-to-merge-pdf-files" className="hover:text-white transition-colors">How to merge PDFs</Link></li>
+              <li><Link href="/blog/how-to-compress-a-pdf-without-losing-quality" className="hover:text-white transition-colors">Compress without quality loss</Link></li>
+              <li><Link href="/blog/how-to-sign-a-pdf-electronically" className="hover:text-white transition-colors">Sign a PDF</Link></li>
             </ul>
           </div>
 
