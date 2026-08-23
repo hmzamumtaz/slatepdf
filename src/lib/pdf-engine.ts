@@ -3,13 +3,14 @@
 
 import { PDFDocument, degrees, rgb, StandardFonts } from 'pdf-lib';
 import { saveAs } from 'file-saver';
+import { SITE_NAME, SITE_SLUG } from './site';
 
 export function getOutputFilename(slug: string, ext: string, seq?: number): string {
   const now = new Date();
   const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
   const label = slug.replace(/-/g, '_');
   // seq keeps multi-file outputs (page images, batches) from colliding on one name
-  return `Folio_${label}_${date}${seq !== undefined ? `_${seq}` : ''}${ext}`;
+  return `${SITE_SLUG}_${label}_${date}${seq !== undefined ? `_${seq}` : ''}${ext}`;
 }
 
 export async function readFileAsArrayBuffer(file: File): Promise<ArrayBuffer> {
@@ -1214,8 +1215,8 @@ export async function convertToPdfA(file: File): Promise<Blob> {
   const author = src.getAuthor() || '';
   newDoc.setTitle(title);
   if (author) newDoc.setAuthor(author);
-  newDoc.setCreator(src.getCreator() || 'Folio');
-  newDoc.setProducer('Folio');
+  newDoc.setCreator(src.getCreator() || SITE_NAME);
+  newDoc.setProducer(SITE_NAME);
   const now = new Date();
   newDoc.setCreationDate(src.getCreationDate() || now);
   newDoc.setModificationDate(now);
@@ -1241,10 +1242,10 @@ export async function convertToPdfA(file: File): Promise<Blob> {
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/">
    <xmp:CreateDate>${iso}</xmp:CreateDate>
    <xmp:ModifyDate>${iso}</xmp:ModifyDate>
-   <xmp:CreatorTool>Folio</xmp:CreatorTool>
+   <xmp:CreatorTool>${SITE_NAME}</xmp:CreatorTool>
   </rdf:Description>
   <rdf:Description rdf:about="" xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
-   <pdf:Producer>Folio</pdf:Producer>
+   <pdf:Producer>${SITE_NAME}</pdf:Producer>
   </rdf:Description>
  </rdf:RDF>
 </x:xmpmeta>
@@ -1761,7 +1762,7 @@ export async function pdfToExcel(file: File): Promise<Blob> {
   const pages = await extractTextFromPdf(file);
 
   const workbook = new ExcelJS.Workbook();
-  workbook.creator = 'Folio';
+  workbook.creator = SITE_NAME;
   workbook.created = new Date();
 
   // Summary sheet
@@ -1808,7 +1809,7 @@ export async function pdfToPowerpoint(file: File): Promise<Blob> {
   const pages = await extractTextFromPdf(file);
 
   const pptx = new PptxGenJS();
-  pptx.author = 'Folio';
+  pptx.author = SITE_NAME;
   pptx.title = file.name.replace(/\.pdf$/i, '');
 
   const MAX_CHARS_PER_SLIDE = 1800;

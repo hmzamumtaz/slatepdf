@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import BrandMark from './BrandMark';
 import * as LucideIcons from 'lucide-react';
 import { categories, getToolsByCategory, type ToolInfo } from '@/lib/tools-data';
+import { SITE_NAME } from '@/lib/site';
 
 function DropdownMenu({ category, tools, alignRight }: { category: string; tools: ToolInfo[]; alignRight?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -73,10 +74,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 bg-black rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-              <BrandMark className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-black">Folio</span>
+            <BrandMark className="w-9 h-9 rounded-lg group-hover:scale-105 transition-transform" />
+            <span className="text-xl font-bold tracking-tight text-black">{SITE_NAME}</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
