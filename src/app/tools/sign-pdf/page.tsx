@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { ArrowLeft, Loader2, Check, AlertCircle, PenTool, Type, Upload, AlertTriangle, X, FileImage, Eye, Download, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
 import { Dancing_Script } from 'next/font/google';
@@ -19,8 +19,13 @@ type SigType = 'draw' | 'type' | 'upload';
 
 type PageInfo = SignPageScan;
 
+/** Signature rectangle in PDF points, origin bottom-left of the page. */
+type Placement = { x: number; y: number; w: number; h: number };
+
 const MIN_SIGN_WIDTH = 120;
 const MIN_SIGN_HEIGHT = 30;
+
+const clampPt = (v: number, min: number, max: number) => Math.max(min, Math.min(v, max));
 
 const messageOf = (_err: unknown, _fallback: string) => friendlyError(_err);
 
@@ -39,6 +44,8 @@ export default function SignPdfPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [hasDrawn, setHasDrawn] = useState(false);
+  /** Bumped whenever a stroke ends or the pad clears, so downstream effects re-run. */
+  const [drawVersion, setDrawVersion] = useState(0);
 
   // Type state
   const [signatureText, setSignatureText] = useState('');
@@ -53,6 +60,13 @@ export default function SignPdfPage() {
   // Warning state
   const [whitespaceWarning, setWhitespaceWarning] = useState<FooterWhitespaceResult | null>(null);
   const [forceSign, setForceSign] = useState(false);
+
+  // Interactive placement: the signature is auto-placed in the suggested
+  // footer spot, then the user can drag it anywhere and resize it. Manual
+  // adjustments are stored together with the signature/page "key" they were
+  // made against, so they automatically stop applying once either changes.
+  const [override, setOverride] = useState<{ key: string; rect: Placement } | null>(null);
+  const previewWrapRef = useRef<HTMLDivElement>(null);
 
   // Preview-before-download state
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -153,7 +167,10 @@ export default function SignPdfPage() {
     setHasDrawn(true);
   }, [isDrawing]);
 
-  const stopDraw = useCallback(() => { setIsDrawing(false); }, []);
+  const stopDraw = useCallback(() => {
+    setIsDrawing(false);
+    setDrawVersion(v => v + 1);
+  }, []);
 
   const clearCanvas = useCallback(() => {
     const canvas = canvasRef.current;
@@ -161,6 +178,7 @@ export default function SignPdfPage() {
     const ctx = canvas.getContext('2d')!;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setHasDrawn(false);
+    setDrawVersion(v => v + 1);
   }, []);
 
   // Upload image handler
@@ -205,6 +223,137 @@ export default function SignPdfPage() {
     (sigType === 'upload' && uploadedImage)
   );
 
+  const pageInfo = pages.find(p => p.page === selectedPage);
+
+  // Snapshot the finished signature as an image so placement editing, the
+  // on-page preview and the final stamp all share one source of truth.
+  const [sigImage, setSigImage] = useState<{ src: string; aspect: number } | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      let src: string | null = null;
+      if (sigType === 'draw' && hasDrawn && canvasRef.current) {
+        const trimmed = trimCanvas(canvasRef.current, 6);
+        src = trimmed ? trimmed.toDataURL('image/png') : null;
+      } else if (sigType === 'type') {
+        src = typedPreview;
+      } else if (sigType === 'upload') {
+        src = uploadedImage;
+      }
+      if (!src) {
+        await Promise.resolve();
+        if (!cancelled) setSigImage(null);
+        return;
+      }
+      const dims = await new Promise<{ w: number; h: number } | null>((resolve) => {
+        const im = new Image();
+        im.onload = () => resolve({ w: im.naturalWidth, h: im.naturalHeight });
+        im.onerror = () => resolve(null);
+        im.src = src;
+      });
+      if (cancelled) return;
+      if (!dims || !dims.w || !dims.h) {
+        setSigImage(null);
+        return;
+      }
+      setSigImage({ src, aspect: dims.w / dims.h });
+    })();
+    return () => { cancelled = true; };
+  }, [sigType, hasDrawn, drawVersion, typedPreview, uploadedImage]);
+
+  // Default placement: right-aligned inside the suggested footer whitespace,
+  // or bottom-right when there is none.
+  const defaultPlacement: Placement | null = useMemo(() => {
+    if (!sigImage || selectedPage === null) return null;
+    const info = pages.find(p => p.page === selectedPage);
+    if (!info) return null;
+    const ws = info.whitespace;
+    const inWhitespace = !!(ws && ws.found && (ws.sufficient || forceSign));
+    const boxW = inWhitespace ? Math.max(ws!.width * 0.9, 40) : 150;
+    const boxH = inWhitespace ? Math.max(ws!.height * 0.9, 20) : 50;
+
+    let w = Math.min(boxW, 180);
+    let h = w / sigImage.aspect;
+    if (h > boxH) { h = boxH; w = h * sigImage.aspect; }
+    w = Math.min(w, info.pointWidth - 40);
+    h = Math.min(h, info.pointHeight - 40);
+
+    let x: number, y: number;
+    if (inWhitespace) {
+      x = ws!.x + ws!.width - w;
+      y = ws!.y;
+    } else {
+      x = info.pointWidth - w - 40;
+      y = 40;
+    }
+    x = clampPt(x, 20, info.pointWidth - w - 20);
+    y = clampPt(y, 20, info.pointHeight - h - 20);
+    return { x, y, w, h };
+  }, [sigImage, selectedPage, pages, forceSign]);
+
+  // Manual drags/resizes only apply while the signature and page they were
+  // made against are still current.
+  const overrideKey = `${selectedPage ?? ''}|${sigType ?? ''}|${drawVersion}|${typedPreview || ''}|${uploadedImage || ''}`;
+  const placement = override && override.key === overrideKey ? override.rect : defaultPlacement;
+
+  // Drag anywhere on the page.
+  const beginMove = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    if (!placement || !pageInfo) return;
+    e.preventDefault();
+    const wrap = previewWrapRef.current?.getBoundingClientRect();
+    if (!wrap) return;
+    const info = pageInfo;
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const start = { ...placement };
+    const onPointerMove = (ev: PointerEvent) => {
+      const dx = ((ev.clientX - startX) / wrap.width) * info.pointWidth;
+      const dy = ((ev.clientY - startY) / wrap.height) * info.pointHeight;
+      setOverride({
+        key: overrideKey,
+        rect: {
+          ...start,
+          x: clampPt(start.x + dx, 4, info.pointWidth - start.w - 4),
+          y: clampPt(start.y - dy, 4, info.pointHeight - start.h - 4),
+        },
+      });
+    };
+    const onPointerUp = () => {
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+    };
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+  }, [placement, pageInfo, overrideKey]);
+
+  // Resize from the corner handle, keeping the signature's aspect ratio.
+  const beginResize = useCallback((e: React.PointerEvent<HTMLSpanElement>) => {
+    if (!placement || !pageInfo) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const wrap = previewWrapRef.current?.getBoundingClientRect();
+    if (!wrap) return;
+    const info = pageInfo;
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const start = { ...placement };
+    const aspect = sigImage?.aspect || start.w / start.h;
+    const onPointerMove = (ev: PointerEvent) => {
+      const dx = ((ev.clientX - startX) / wrap.width) * info.pointWidth;
+      const dy = ((ev.clientY - startY) / wrap.height) * info.pointHeight;
+      // Corner grows the box; anchored at its bottom-left corner.
+      let w = clampPt(start.w + dx + (-dy), 24, Infinity);
+      w = Math.min(w, info.pointWidth - start.x - 4, (info.pointHeight - start.y - 4) * aspect);
+      setOverride({ key: overrideKey, rect: { ...start, w, h: w / aspect } });
+    };
+    const onPointerUp = () => {
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+    };
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+  }, [placement, sigImage, overrideKey]);
+
   /** Produce the signed PDF. Shared by the preview and the download button. */
   const buildSignedPdf = useCallback(async (): Promise<Uint8Array> => {
     if (files.length === 0 || selectedPage === null) throw new Error('Select a page to sign first.');
@@ -240,6 +389,17 @@ export default function SignPdfPage() {
 
     const pdfPage = src.getPage(selectedPage - 1);
     const { width: pageW, height: pageH } = pdfPage.getSize();
+    const img = isPng ? await src.embedPng(sigBytes) : await src.embedJpg(sigBytes);
+
+    if (placement) {
+      // User-adjusted position/size from the interactive preview.
+      const w = clampPt(placement.w, 12, pageW - 8);
+      const h = clampPt(placement.h, 8, pageH - 8);
+      const x = clampPt(placement.x, 4, Math.max(pageW - w - 4, 4));
+      const y = clampPt(placement.y, 4, Math.max(pageH - h - 4, 4));
+      pdfPage.drawImage(img, { x, y, width: w, height: h });
+      return src.save();
+    }
 
     // The box the signature must fit inside
     const inWhitespace = !!(ws && ws.found && (ws.sufficient || forceSign));
@@ -247,7 +407,6 @@ export default function SignPdfPage() {
     const boxH = inWhitespace ? Math.max(ws!.height * 0.9, 20) : 50;
 
     // Size the signature preserving its aspect ratio, clamped to the box.
-    const img = isPng ? await src.embedPng(sigBytes) : await src.embedJpg(sigBytes);
     const aspect = img.width / img.height;
     let sigW = Math.min(boxW, 180);
     let sigH = sigW / aspect;
@@ -271,7 +430,7 @@ export default function SignPdfPage() {
     pdfPage.drawImage(img, { x: sigX, y: sigY, width: sigW, height: sigH });
 
     return src.save();
-  }, [files, selectedPage, pages, sigType, hasDrawn, handwritten, signatureText, uploadedImage, forceSign]);
+  }, [files, selectedPage, pages, sigType, hasDrawn, handwritten, signatureText, uploadedImage, forceSign, placement]);
 
   /** Sign, render the signed page to an image, and show it before downloading. */
   const runPreview = useCallback(async () => {
@@ -334,8 +493,6 @@ export default function SignPdfPage() {
     }
   }, [hasSignature, buildSignedPdf, saveSigned]);
 
-  const pageInfo = pages.find(p => p.page === selectedPage);
-
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -354,8 +511,8 @@ export default function SignPdfPage() {
             accept=".pdf"
             multiple={false}
             files={files}
-            onFilesSelected={(f) => { setFiles(f); setDone(false); setError(null); setSelectedPage(null); setSigType(null); setForceSign(false); }}
-            onRemoveFile={() => { setFiles([]); setPages([]); setSelectedPage(null); setSigType(null); setDone(false); }}
+            onFilesSelected={(f) => { setFiles(f); setDone(false); setError(null); setSelectedPage(null); setSigType(null); setForceSign(false); setOverride(null); }}
+            onRemoveFile={() => { setFiles([]); setPages([]); setSelectedPage(null); setSigType(null); setDone(false); setOverride(null); }}
           />
 
           {/* Scanning indicator */}
@@ -609,7 +766,7 @@ export default function SignPdfPage() {
                 </div>
               )}
 
-              {/* Page info + placement preview */}
+              {/* Page info + interactive placement */}
               {pageInfo && (
                 <div className="p-4 bg-gray-50 rounded-xl border border-border">
                   <div className="flex items-center justify-between mb-2">
@@ -620,21 +777,46 @@ export default function SignPdfPage() {
                       </span>
                     )}
                   </div>
-                  <div className="relative inline-block">
-                    <img src={pageInfo.url} alt={`Page ${selectedPage}`} className="max-h-48 rounded-lg border border-border" />
+                  <div ref={previewWrapRef} className="relative inline-block select-none">
+                    <img src={pageInfo.url} alt={`Page ${selectedPage}`} draggable={false} className="max-h-72 rounded-lg border border-border block" />
                     {pageInfo.whitespace && pageInfo.whitespace.found && (
                       <div
-                        className="absolute border-2 border-dashed border-primary/50 rounded pointer-events-none"
+                        className="absolute border-2 border-dashed border-primary/40 rounded pointer-events-none"
                         style={{
                           left: `${(pageInfo.whitespace.x / pageInfo.pointWidth) * 100}%`,
                           bottom: `${(pageInfo.whitespace.y / pageInfo.pointHeight) * 100}%`,
                           width: `${(pageInfo.whitespace.width / pageInfo.pointWidth) * 100}%`,
                           height: `${(pageInfo.whitespace.height / pageInfo.pointHeight) * 100}%`,
-                          backgroundColor: 'rgba(99, 102, 241, 0.08)',
+                          backgroundColor: 'rgba(99, 102, 241, 0.06)',
                         }}
                       />
                     )}
+                    {placement && sigImage && (
+                      <div
+                        onPointerDown={beginMove}
+                        className="absolute cursor-move touch-none ring-2 ring-primary/80 hover:ring-primary rounded-sm"
+                        style={{
+                          left: `${(placement.x / pageInfo.pointWidth) * 100}%`,
+                          top: `${((pageInfo.pointHeight - placement.y - placement.h) / pageInfo.pointHeight) * 100}%`,
+                          width: `${(placement.w / pageInfo.pointWidth) * 100}%`,
+                          height: `${(placement.h / pageInfo.pointHeight) * 100}%`,
+                        }}
+                        title="Drag to move your signature"
+                      >
+                        <img src={sigImage.src} alt="Signature" draggable={false} className="w-full h-full object-contain pointer-events-none opacity-90" />
+                        <span
+                          onPointerDown={beginResize}
+                          className="absolute -right-2 -bottom-2 w-4 h-4 bg-primary rounded-full border-2 border-white shadow cursor-nwse-resize touch-none"
+                          title="Drag to resize"
+                        />
+                      </div>
+                    )}
                   </div>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    {placement && sigImage
+                      ? 'Your signature was placed in the suggested spot — drag it anywhere on the page and use the corner handle to resize it.'
+                      : 'Add a signature above and it will be placed here automatically.'}
+                  </p>
                 </div>
               )}
 
