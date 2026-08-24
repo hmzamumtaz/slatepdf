@@ -827,7 +827,7 @@ export default function SignPdfPage() {
                         src={pageInfo.url}
                         alt={`Page ${selectedPage}`}
                         draggable={false}
-                        className="block rounded-lg border border-border bg-white"
+                        className="block rounded-lg border border-border bg-white max-w-none"
                         style={{ height: `${PREVIEW_BASE_HEIGHT * zoom}px`, width: 'auto' }}
                       />
                       {pageInfo.whitespace && pageInfo.whitespace.found && (
