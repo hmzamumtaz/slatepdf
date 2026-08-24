@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
-import { ArrowLeft, Loader2, Check, AlertCircle, PenTool, Type, Upload, AlertTriangle, X, FileImage, Eye, Download, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Loader2, Check, AlertCircle, PenTool, Type, Upload, AlertTriangle, X, FileImage, Eye, Download, RefreshCw, ZoomIn, ZoomOut } from 'lucide-react';
 import Link from 'next/link';
 import { Dancing_Script } from 'next/font/google';
 import FileUpload from '@/components/FileUpload';
@@ -26,6 +26,12 @@ const MIN_SIGN_WIDTH = 120;
 const MIN_SIGN_HEIGHT = 30;
 
 const clampPt = (v: number, min: number, max: number) => Math.max(min, Math.min(v, max));
+
+const ZOOM_MIN = 0.5;
+const ZOOM_MAX = 4;
+const ZOOM_STEP = 0.25;
+/** Displayed page height, in px, at 100% zoom. */
+const PREVIEW_BASE_HEIGHT = 288;
 
 const messageOf = (_err: unknown, _fallback: string) => friendlyError(_err);
 
@@ -67,6 +73,7 @@ export default function SignPdfPage() {
   // made against, so they automatically stop applying once either changes.
   const [override, setOverride] = useState<{ key: string; rect: Placement } | null>(null);
   const previewWrapRef = useRef<HTMLDivElement>(null);
+  const [zoom, setZoom] = useState(1);
 
   // Preview-before-download state
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -769,52 +776,89 @@ export default function SignPdfPage() {
               {/* Page info + interactive placement */}
               {pageInfo && (
                 <div className="p-4 bg-gray-50 rounded-xl border border-border">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between gap-3 mb-2">
                     <span className="text-sm font-medium text-foreground">Signing Page {selectedPage}</span>
-                    {pageInfo.whitespace && (
-                      <span className="text-xs text-muted-foreground">
-                        Signature area: {Math.round(pageInfo.whitespace.width)}x{Math.round(pageInfo.whitespace.height)}pt
-                      </span>
-                    )}
-                  </div>
-                  <div ref={previewWrapRef} className="relative inline-block select-none">
-                    <img src={pageInfo.url} alt={`Page ${selectedPage}`} draggable={false} className="max-h-72 rounded-lg border border-border block" />
-                    {pageInfo.whitespace && pageInfo.whitespace.found && (
-                      <div
-                        className="absolute border-2 border-dashed border-primary/40 rounded pointer-events-none"
-                        style={{
-                          left: `${(pageInfo.whitespace.x / pageInfo.pointWidth) * 100}%`,
-                          bottom: `${(pageInfo.whitespace.y / pageInfo.pointHeight) * 100}%`,
-                          width: `${(pageInfo.whitespace.width / pageInfo.pointWidth) * 100}%`,
-                          height: `${(pageInfo.whitespace.height / pageInfo.pointHeight) * 100}%`,
-                          backgroundColor: 'rgba(99, 102, 241, 0.06)',
-                        }}
-                      />
-                    )}
-                    {placement && sigImage && (
-                      <div
-                        onPointerDown={beginMove}
-                        className="absolute cursor-move touch-none ring-2 ring-primary/80 hover:ring-primary rounded-sm"
-                        style={{
-                          left: `${(placement.x / pageInfo.pointWidth) * 100}%`,
-                          top: `${((pageInfo.pointHeight - placement.y - placement.h) / pageInfo.pointHeight) * 100}%`,
-                          width: `${(placement.w / pageInfo.pointWidth) * 100}%`,
-                          height: `${(placement.h / pageInfo.pointHeight) * 100}%`,
-                        }}
-                        title="Drag to move your signature"
-                      >
-                        <img src={sigImage.src} alt="Signature" draggable={false} className="w-full h-full object-contain pointer-events-none opacity-90" />
-                        <span
-                          onPointerDown={beginResize}
-                          className="absolute -right-2 -bottom-2 w-4 h-4 bg-primary rounded-full border-2 border-white shadow cursor-nwse-resize touch-none"
-                          title="Drag to resize"
-                        />
+                    <div className="flex items-center gap-2">
+                      {pageInfo.whitespace && (
+                        <span className="text-xs text-muted-foreground hidden sm:inline">
+                          Signature area: {Math.round(pageInfo.whitespace.width)}x{Math.round(pageInfo.whitespace.height)}pt
+                        </span>
+                      )}
+                      <div className="flex items-center gap-1 bg-white border border-border rounded-lg px-1 py-0.5">
+                        <button
+                          onClick={() => setZoom(z => clampPt(z - ZOOM_STEP, ZOOM_MIN, ZOOM_MAX))}
+                          disabled={zoom <= ZOOM_MIN}
+                          className="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                          aria-label="Zoom out"
+                          title="Zoom out"
+                        >
+                          <ZoomOut className="w-4 h-4" />
+                        </button>
+                        <button
+                          onClick={() => setZoom(1)}
+                          className="px-1.5 text-xs font-medium text-muted-foreground hover:text-foreground tabular-nums min-w-[3rem]"
+                          title="Reset zoom"
+                        >
+                          {Math.round(zoom * 100)}%
+                        </button>
+                        <button
+                          onClick={() => setZoom(z => clampPt(z + ZOOM_STEP, ZOOM_MIN, ZOOM_MAX))}
+                          disabled={zoom >= ZOOM_MAX}
+                          className="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                          aria-label="Zoom in"
+                          title="Zoom in"
+                        >
+                          <ZoomIn className="w-4 h-4" />
+                        </button>
                       </div>
-                    )}
+                    </div>
+                  </div>
+                  <div className="overflow-auto max-h-[36rem] rounded-lg">
+                    <div ref={previewWrapRef} className="relative inline-block select-none">
+                      <img
+                        src={pageInfo.url}
+                        alt={`Page ${selectedPage}`}
+                        draggable={false}
+                        className="block rounded-lg border border-border bg-white"
+                        style={{ height: `${PREVIEW_BASE_HEIGHT * zoom}px`, width: 'auto' }}
+                      />
+                      {pageInfo.whitespace && pageInfo.whitespace.found && (
+                        <div
+                          className="absolute border-2 border-dashed border-primary/40 rounded pointer-events-none"
+                          style={{
+                            left: `${(pageInfo.whitespace.x / pageInfo.pointWidth) * 100}%`,
+                            bottom: `${(pageInfo.whitespace.y / pageInfo.pointHeight) * 100}%`,
+                            width: `${(pageInfo.whitespace.width / pageInfo.pointWidth) * 100}%`,
+                            height: `${(pageInfo.whitespace.height / pageInfo.pointHeight) * 100}%`,
+                            backgroundColor: 'rgba(99, 102, 241, 0.06)',
+                          }}
+                        />
+                      )}
+                      {placement && sigImage && (
+                        <div
+                          onPointerDown={beginMove}
+                          className="absolute cursor-move touch-none ring-2 ring-primary/80 hover:ring-primary rounded-sm"
+                          style={{
+                            left: `${(placement.x / pageInfo.pointWidth) * 100}%`,
+                            top: `${((pageInfo.pointHeight - placement.y - placement.h) / pageInfo.pointHeight) * 100}%`,
+                            width: `${(placement.w / pageInfo.pointWidth) * 100}%`,
+                            height: `${(placement.h / pageInfo.pointHeight) * 100}%`,
+                          }}
+                          title="Drag to move your signature"
+                        >
+                          <img src={sigImage.src} alt="Signature" draggable={false} className="w-full h-full object-contain pointer-events-none opacity-90" />
+                          <span
+                            onPointerDown={beginResize}
+                            className="absolute -right-2 -bottom-2 w-4 h-4 bg-primary rounded-full border-2 border-white shadow cursor-nwse-resize touch-none"
+                            title="Drag to resize"
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
                   <p className="mt-2 text-xs text-muted-foreground">
                     {placement && sigImage
-                      ? 'Your signature was placed in the suggested spot — drag it anywhere on the page and use the corner handle to resize it.'
+                      ? 'Your signature was placed in the suggested spot — drag it anywhere on the page and use the corner handle to resize it. Zoom in for precise placement.'
                       : 'Add a signature above and it will be placed here automatically.'}
                   </p>
                 </div>
