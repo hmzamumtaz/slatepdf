@@ -8,6 +8,7 @@ import { getToolBySlug } from '@/lib/tools-data';
 import FileUpload from './FileUpload';
 import LivePreviewModal from './LivePreviewModal';
 import { downloadBlob, downloadBlobsAsZip, renderPdfPages, getOutputFilename } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 interface ToolPageProps {
   slug: string;
@@ -326,8 +327,7 @@ export default function ToolPage({
       }
       setProgress(null);
     } catch (err: any) {
-      console.error(err);
-      setError(err.message || 'Something went wrong. Please try again.');
+      setError(friendlyError(err));
       setProgress(null);
     } finally {
       setProcessing(false);

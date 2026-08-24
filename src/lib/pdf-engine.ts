@@ -4,6 +4,7 @@
 import { PDFDocument, degrees, rgb, StandardFonts } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 import { SITE_NAME, SITE_SLUG } from './site';
+import { SERVICE_BUSY_MESSAGE } from './errors';
 
 export function getOutputFilename(slug: string, ext: string, seq?: number): string {
   const now = new Date();
@@ -21,7 +22,8 @@ export async function loadPdf(data: ArrayBuffer): Promise<PDFDocument> {
   try {
     return await PDFDocument.load(data, { ignoreEncryption: true });
   } catch (err: any) {
-    throw new Error(`Could not read this PDF: ${err?.message || 'the file appears to be corrupted or is not a PDF.'}`);
+    console.error(err);
+    throw new Error('This file could not be read as a PDF. It may be corrupted or not a valid PDF.');
   }
 }
 
@@ -1366,15 +1368,134 @@ const LANG_CODES: Record<string, string> = {
   'Ukrainian': 'uk', 'Tagalog': 'tl', 'Tamil': 'ta', 'Urdu': 'ur',
 };
 
+// Characters Helvetica/WinAnsi can encode. Anything outside this set routes
+// text through the rasterized path below, where the browser's fonts handle
+// every script (CJK, Arabic, Cyrillic, Devanagari, ...) correctly.
+const WINANSI_SAFE = /^[\t\n\r\x20-\x7E\xA0-\xFF]*$/;
+
+function normalizeTypographic(s: string): string {
+  return s
+    .replace(/[\u2018\u2019\u201A\u201B\u2032]/g, '\'')
+    .replace(/[\u201C\u201D\u201E\u201F\u2033]/g, '"')
+    .replace(/[\u2012-\u2015]/g, '-')
+    .replace(/\u2026/g, '...')
+    .replace(/[\u00A0\u2000-\u200B\u202F]/g, ' ')
+    .replace(/[\u2022\u2023\u2043\u25AA\u25CF]/g, '-');
+}
+
+function isRtlText(s: string): boolean {
+  return /[\u0590-\u05FF\u0600-\u06FF\u0700-\u074F\u0750-\u077F\u08A0-\u08FF\uFB1D-\uFDFF\uFE70-\uFEFF]/.test(s);
+}
+
+const CANVAS_FONT_STACK = `'Noto Sans', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', sans-serif`;
+
+interface LayoutLine {
+  text: string;
+  extraGap: boolean;
+}
+
+function layoutCanvasLines(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): LayoutLine[] {
+  const items: LayoutLine[] = [];
+  const paragraphs = text.split(/\n+/).map(p => p.trim()).filter(Boolean);
+  for (const para of paragraphs) {
+    let line = '';
+    for (const word of para.split(/\s+/)) {
+      let rest = word;
+      // Words wider than a full line are broken across lines.
+      while (ctx.measureText(rest).width > maxWidth && rest.length > 1) {
+        let cut = rest.length - 1;
+        while (cut > 1 && ctx.measureText(line ? `${line} ${rest.slice(0, cut)}` : rest.slice(0, cut)).width > maxWidth) cut--;
+        if (line) { items.push({ text: line, extraGap: false }); line = ''; }
+        items.push({ text: rest.slice(0, cut), extraGap: false });
+        rest = rest.slice(cut);
+      }
+      const test = line ? `${line} ${rest}` : rest;
+      if (ctx.measureText(test).width > maxWidth && line) {
+        items.push({ text: line, extraGap: false });
+        line = rest;
+      } else {
+        line = test;
+      }
+    }
+    if (line) items.push({ text: line, extraGap: true });
+  }
+  return items;
+}
+
+async function createPdfFromTextRasterized(text: string, title?: string): Promise<Blob> {
+  const doc = await PDFDocument.create();
+  if (title) doc.setTitle(`${title} (Slate PDF)`);
+
+  const SCALE = 2;
+  const pageW = 595.28;
+  const pageH = 841.89;
+  const canvasW = Math.round(pageW * SCALE);
+  const canvasH = Math.round(pageH * SCALE);
+  const margin = 100;
+  const fontSize = 30;
+  const lineHeight = 44;
+  const titleSize = 46;
+  const maxLineWidth = canvasW - margin * 2;
+  const rtl = isRtlText(`${title || ''}\n${text}`);
+
+  const probe = document.createElement('canvas').getContext('2d')!;
+  probe.font = `${fontSize}px ${CANVAS_FONT_STACK}`;
+  const lines = layoutCanvasLines(probe, text, maxLineWidth);
+
+  let index = 0;
+  let firstPage = true;
+  while (index < lines.length || firstPage) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvasW;
+    canvas.height = canvasH;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvasW, canvasH);
+    ctx.fillStyle = '#1f2430';
+    ctx.textBaseline = 'alphabetic';
+    ctx.direction = rtl ? 'rtl' : 'ltr';
+    ctx.textAlign = rtl ? 'right' : 'left';
+    const x = rtl ? canvasW - margin : margin;
+    let y = margin;
+
+    if (firstPage && title) {
+      ctx.font = `bold ${titleSize}px ${CANVAS_FONT_STACK}`;
+      ctx.fillText(title, x, y + titleSize);
+      y += titleSize + 28;
+    }
+
+    ctx.font = `${fontSize}px ${CANVAS_FONT_STACK}`;
+    while (index < lines.length) {
+      const line = lines[index];
+      if (y + lineHeight > canvasH - margin) break;
+      ctx.fillText(line.text, x, y + fontSize);
+      y += lineHeight + (line.extraGap ? Math.round(lineHeight / 2) : 0);
+      index++;
+    }
+
+    const png = await doc.embedPng(canvas.toDataURL('image/png'));
+    const page = doc.addPage([pageW, pageH]);
+    page.drawImage(png, { x: 0, y: 0, width: pageW, height: pageH });
+    firstPage = false;
+  }
+
+  return toBlob(await doc.save());
+}
+
 export async function createPdfFromText(text: string, title?: string): Promise<Blob> {
+  const normalized = normalizeTypographic(text);
+  const normalizedTitle = title ? normalizeTypographic(title) : undefined;
+
+  if (!WINANSI_SAFE.test(normalized) || (normalizedTitle && !WINANSI_SAFE.test(normalizedTitle))) {
+    return createPdfFromTextRasterized(normalized, normalizedTitle);
+  }
+
   const doc = await PDFDocument.create();
   const font = await doc.embedFont(StandardFonts.Helvetica);
   const boldFont = await doc.embedFont(StandardFonts.HelveticaBold);
 
   // Replace characters that WinAnsi can't encode
   const sanitize = (s: string) => s
-    .replace(/[\u2500-\u257F\u2580-\u259F\u25A0-\u25FF\u2600-\u26FF\u2700-\u27BF\u2B50-\u2B55\u2300-\u23FF\u2190-\u21FF\u2000-\u206F]/g, '-')
-    .replace(/[\u00A0]/g, ' ')
     .replace(/[^\x20-\x7E\xA0-\xFF]/g, '-');
 
   const pageWidth = 595.28;
@@ -1383,13 +1504,13 @@ export async function createPdfFromText(text: string, title?: string): Promise<B
   const lineHeight = 14;
   const maxLineWidth = pageWidth - margin * 2;
 
-  const paragraphs = text.split(/\n+/).filter(p => p.trim());
+  const paragraphs = normalized.split(/\n+/).filter(p => p.trim());
   let page = doc.addPage([pageWidth, pageHeight]);
   let y = pageHeight - margin;
 
-  if (title) {
-    doc.setTitle(title);
-    page.drawText(sanitize(title).slice(0, 80), { x: margin, y, size: 16, font: boldFont, color: rgb(0.1, 0.1, 0.1) });
+  if (normalizedTitle) {
+    doc.setTitle(normalizedTitle);
+    page.drawText(sanitize(normalizedTitle).slice(0, 80), { x: margin, y, size: 16, font: boldFont, color: rgb(0.1, 0.1, 0.1) });
     y -= 28;
   }
 
@@ -1427,61 +1548,92 @@ export async function createPdfFromText(text: string, title?: string): Promise<B
 }
 
 async function translateChunk(text: string, from: string, to: string): Promise<string> {
-  const fromLang = from === 'autodetect' ? 'auto' : from;
+  try {
+    const fromLang = from === 'autodetect' ? 'auto' : from;
 
-  // 1. Try Lingva Translate (free, unlimited, all languages)
-  const lingvaInstances = [
-    'https://lingva.ml',
-    'https://lingva.thedaviddelta.com',
-    'https://lingva.lunar.icu',
-  ];
-  for (const base of lingvaInstances) {
-    try {
-      const url = `${base}/api/v1/${fromLang}/${to}/${encodeURIComponent(text)}`;
-      const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
-      if (res.ok) {
-        const data = await res.json();
-        if (data?.translation) return data.translation;
+    // 1. Try Lingva Translate (free, unlimited, all languages)
+    const lingvaInstances = [
+      'https://lingva.ml',
+      'https://lingva.thedaviddelta.com',
+      'https://lingva.lunar.icu',
+    ];
+    for (const base of lingvaInstances) {
+      try {
+        const url = `${base}/api/v1/${fromLang}/${to}/${encodeURIComponent(text)}`;
+        const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+        if (res.ok) {
+          const data = await res.json();
+          const translation = typeof data?.translation === 'string' ? data.translation : '';
+          if (translation && !isSuspiciousTranslation(text, translation, to)) return translation;
+        }
+      } catch { /* try next */ }
+    }
+
+    // 2. Try LibreTranslate public instances (free, open-source)
+    const libreInstances = [
+      'https://libretranslate.com',
+      'https://translate.fortytwo-it.com',
+      'https://lt.vern.cc',
+    ];
+    for (const base of libreInstances) {
+      try {
+        const url = `${base}/translate`;
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ q: text, source: fromLang === 'auto' ? 'auto' : fromLang, target: to, format: 'text' }),
+          signal: AbortSignal.timeout(8000),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          const translation = typeof data?.translatedText === 'string' ? data.translatedText : '';
+          if (translation && !isSuspiciousTranslation(text, translation, to)) return translation;
+        }
+      } catch { /* try next */ }
+    }
+
+    // 3. MyMemory fallback with safe chunking (MyMemory spells auto-detection "Autodetect")
+    const memSource = fromLang === 'auto' ? 'Autodetect' : fromLang;
+    const langpair = `${memSource}|${to}`;
+    const memUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text.slice(0, 450))}&langpair=${encodeURIComponent(langpair)}`;
+    const res = await fetch(memUrl, { signal: AbortSignal.timeout(10000) });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.responseStatus === 200 || data.responseStatus === '200') {
+        const translation = String(data.responseData?.translatedText || '');
+        // MyMemory reports success even when it hit its free-tier quota or
+        // character limit — the details field then carries a warning and the
+        // "translation" may just be the original text. Treat both as failure.
+        const details = String(data.responseDetails || '');
+        const flagged = /warning|quota|limit|exceed|invalid|api\s*key|please\s*contact/i.test(details);
+        if (translation && !flagged && !isSuspiciousTranslation(text, translation, to)) {
+          return translation;
+        }
       }
-    } catch { /* try next */ }
-  }
+    }
 
-  // 2. Try LibreTranslate public instances (free, open-source)
-  const libreInstances = [
-    'https://libretranslate.com',
-    'https://translate.fortytwo-it.com',
-    'https://lt.vern.cc',
-  ];
-  for (const base of libreInstances) {
-    try {
-      const url = `${base}/translate`;
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ q: text, source: fromLang === 'auto' ? 'auto' : fromLang, target: to, format: 'text' }),
-        signal: AbortSignal.timeout(8000),
-      });
-      if (res.ok) {
-        const data = await res.json();
-        if (data?.translatedText) return data.translatedText;
-      }
-    } catch { /* try next */ }
+    throw new Error(SERVICE_BUSY_MESSAGE);
+  } catch (err) {
+    // Never surface raw provider/network errors to the UI.
+    if (err instanceof Error && err.message === SERVICE_BUSY_MESSAGE) throw err;
+    console.error(err);
+    throw new Error(SERVICE_BUSY_MESSAGE);
   }
+}
 
-  // 3. MyMemory fallback with safe chunking (MyMemory spells auto-detection "Autodetect")
-  const memSource = fromLang === 'auto' ? 'Autodetect' : fromLang;
-  const langpair = `${memSource}|${to}`;
-  const memUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text.slice(0, 450))}&langpair=${encodeURIComponent(langpair)}`;
-  const res = await fetch(memUrl, { signal: AbortSignal.timeout(10000) });
-  if (!res.ok) throw new Error(`Translation service unavailable (HTTP ${res.status}). Please try again later.`);
-  const data = await res.json();
-  if (data.responseStatus === 200 || data.responseStatus === '200') {
-    return data.responseData.translatedText;
-  }
-  if (fromLang === 'auto') {
-    throw new Error('Automatic language detection is unavailable right now. Select the document\'s source language and try again.');
-  }
-  throw new Error(data.responseDetails || 'Translation failed. Please try again later.');
+// Languages whose written form does not use the Latin alphabet. If one of
+// these is the target and a service hands back the source text unchanged, the
+// translation silently failed (e.g. quota exhausted) — downloading it would
+// produce an English-only PDF.
+const NON_LATIN_TARGETS = new Set([
+  'ru', 'zh-CN', 'zh-TW', 'ja', 'ko', 'ar', 'hi', 'el', 'he', 'th',
+  'bn', 'bg', 'fa', 'sr', 'uk', 'ta', 'ur',
+]);
+
+function isSuspiciousTranslation(source: string, result: string, targetCode: string): boolean {
+  if (!NON_LATIN_TARGETS.has(targetCode)) return false;
+  const norm = (s: string) => s.replace(/\s+/g, ' ').trim();
+  return norm(source) === norm(result);
 }
 
 export async function translateText(text: string, fromLang: string, toLang: string, onProgress?: (current: number, total: number) => void): Promise<string> {

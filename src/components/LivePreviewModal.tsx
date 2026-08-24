@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { X, Loader2, AlertCircle, FileText, RefreshCw, ChevronLeft, ChevronRight } from 'lucide-react';
 import { renderPdfPreviews, type PagePreview } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 type Result = Blob | Blob[];
 
@@ -83,7 +84,7 @@ export default function LivePreviewModal({ open, onClose, toolName, run, version
       }
     } catch (err: unknown) {
       if (token !== runToken.current) return;
-      setError(err instanceof Error ? err.message : 'Could not build a preview with these settings.');
+      setError(friendlyError(err));
     } finally {
       if (token === runToken.current) setBusy(false);
     }

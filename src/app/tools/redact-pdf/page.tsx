@@ -5,6 +5,7 @@ import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, FileDown, Eraser, Undo2,
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { renderPdfPreviews, redactPdf, downloadBlob, getOutputFilename, type PagePreview } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 /** A drawn box, stored in PDF points with a bottom-left origin. */
 interface Box { pageIndex: number; x: number; y: number; width: number; height: number }
@@ -42,7 +43,7 @@ export default function RedactPdfPage() {
       const previews = await renderPdfPreviews(selected[0], { scale: 2 }, (p, t) => setLoadMsg(`Rendering page ${p} of ${t}...`));
       setPages(previews);
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Could not open this PDF.');
+      setError(friendlyError(err));
     } finally {
       setLoading(false);
       setLoadMsg('');
@@ -121,7 +122,7 @@ export default function RedactPdfPage() {
       downloadBlob(blob, getOutputFilename('redact-pdf', '.pdf'));
       setDoneSize(blob.size);
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Redaction failed.');
+      setError(friendlyError(err));
     } finally {
       setProcessing(false);
     }

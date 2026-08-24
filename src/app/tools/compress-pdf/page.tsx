@@ -5,6 +5,7 @@ import { ArrowLeft, Loader2, FileDown, AlertCircle, CheckCircle2, Minus, Trendin
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { compressToTargetSize, CompressResult, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -42,7 +43,7 @@ export default function CompressPdfPage() {
         setProgress('');
       }
     } catch (err: any) {
-      setError(err.message || 'Compression failed');
+      setError(friendlyError(err));
       setProgress('');
     } finally {
       setProcessing(false);

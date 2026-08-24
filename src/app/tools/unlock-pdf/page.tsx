@@ -5,11 +5,11 @@ import { ArrowLeft, Loader2, Unlock, AlertCircle, CheckCircle2, Eye, EyeOff, Key
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { unlockPdf, OpenPasswordRequiredError, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 type Stage = 'idle' | 'working' | 'needs-password' | 'done';
 
-const messageOf = (err: unknown, fallback: string) =>
-  err instanceof Error && err.message ? err.message : fallback;
+const messageOf = (_err: unknown, _fallback: string) => friendlyError(_err);
 
 export default function UnlockPdfPage() {
   const [files, setFiles] = useState<File[]>([]);

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Dancing_Script } from 'next/font/google';
 import FileUpload from '@/components/FileUpload';
 import { readFileAsArrayBuffer, loadPdf, downloadBlob, scanPdfForSigning, getOutputFilename, getPdfJs, type FooterWhitespaceResult, type SignPageScan } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 import { renderTextSignature, trimCanvas, canvasToPngBytes } from '@/lib/signature-render';
 
 /** The handwriting face a typed name is turned into when the user asks for it. */
@@ -21,7 +22,7 @@ type PageInfo = SignPageScan;
 const MIN_SIGN_WIDTH = 120;
 const MIN_SIGN_HEIGHT = 30;
 
-const messageOf = (err: unknown, fallback: string) => (err instanceof Error && err.message ? err.message : fallback);
+const messageOf = (_err: unknown, _fallback: string) => friendlyError(_err);
 
 export default function SignPdfPage() {
   const [files, setFiles] = useState<File[]>([]);
@@ -82,7 +83,7 @@ export default function SignPdfPage() {
           if (pageInfos.length === 1) setSelectedPage(1);
         }
       } catch (err: any) {
-        if (!cancelled) setError(err.message || 'Failed to scan PDF');
+        if (!cancelled) setError(friendlyError(err));
       } finally {
         if (!cancelled) setScanning(false);
       }

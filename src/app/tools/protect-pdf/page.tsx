@@ -5,6 +5,7 @@ import { ArrowLeft, Loader2, Lock, AlertCircle, Check, Download, Trash2, FileDow
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { protectPdf, downloadBlob, downloadBlobsAsZip, renderPdfPages, getOutputFilename } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 interface FilePassword {
   file: File;
@@ -186,7 +187,7 @@ export default function ProtectPdfPage() {
       }
       setProgress(null);
     } catch (err: any) {
-      setError(err.message || 'Protection failed');
+      setError(friendlyError(err));
       setProgress(null);
     } finally {
       setProcessing(false);

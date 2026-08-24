@@ -15,6 +15,7 @@ import StampPanel from '@/components/workspace/StampPanel';
 import AdjustPanel from '@/components/workspace/AdjustPanel';
 import ProtectPanel from '@/components/workspace/ProtectPanel';
 import { downloadBlob, getOutputFilename, isPdfPasswordProtected } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 import { blobToFile, countPages, formatSize, type Version } from '@/lib/workspace';
 
 /**
@@ -39,8 +40,7 @@ const TABS: { id: TabId; label: string; icon: typeof Eraser; blurb: string }[] =
   { id: 'protect', label: 'Protect', icon: Lock, blurb: 'Lock it with a password' },
 ];
 
-const messageOf = (err: unknown, fallback: string) =>
-  err instanceof Error && err.message ? err.message : fallback;
+const messageOf = (_err: unknown, _fallback: string) => friendlyError(_err);
 
 export default function PdfWorkspacePage() {
   const [history, setHistory] = useState<Version[]>([]);

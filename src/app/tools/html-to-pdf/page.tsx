@@ -4,6 +4,7 @@ import { useState, useCallback, useMemo } from 'react';
 import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, FileDown, Code2, Eye, Palette, Type } from 'lucide-react';
 import Link from 'next/link';
 import { htmlToPdf, htmlToPdfVisual, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -48,7 +49,7 @@ export default function HtmlToPdfPage() {
       downloadBlob(blob, getOutputFilename('html-to-pdf', '.pdf'));
       setResultSize(blob.size);
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Conversion failed. Please check the HTML and try again.');
+      setError(friendlyError(err));
     } finally {
       setProcessing(false);
       setProgress('');

@@ -5,6 +5,7 @@ import { ArrowLeft, Loader2, FileDown, AlertCircle, CheckCircle2, ScanText, X } 
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { ocrPdf, OcrResult, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 const LANGUAGES = [
   { code: 'eng', name: 'English' }, { code: 'ara', name: 'Arabic' }, { code: 'ben', name: 'Bengali' },
@@ -67,7 +68,7 @@ export default function OcrPdfPage() {
       const res = await ocrPdf(files[0], selectedLangs, (page, total, msg) => setProgress(msg));
       setResult(res);
     } catch (err: any) {
-      setError(err.message || 'OCR processing failed');
+      setError(friendlyError(err));
       setProgress('');
     } finally {
       setProcessing(false);

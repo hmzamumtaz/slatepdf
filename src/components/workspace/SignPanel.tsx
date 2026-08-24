@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Dancing_Script } from 'next/font/google';
 import { ChevronLeft, ChevronRight, PenLine, Type as TypeIcon, Eraser, MoveDiagonal } from 'lucide-react';
 import { renderPdfPreviews, type PagePreview } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 import { trimCanvas, renderTextSignature } from '@/lib/signature-render';
 import { stampImage } from '@/lib/workspace';
 import { PanelHeader, ApplyButton, Loading, inputClass, type PanelProps } from './shared';
@@ -137,7 +138,7 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
       setStamp({ url: canvas.toDataURL('image/png'), aspect: canvas.width / canvas.height });
       setMoved(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Could not build that signature.');
+      setError(friendlyError(err));
     }
   }, [kind, name, handwritten]);
 

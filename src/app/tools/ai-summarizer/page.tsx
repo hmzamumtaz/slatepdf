@@ -5,6 +5,7 @@ import { ArrowLeft, Loader2, Sparkles, AlertCircle, CheckCircle2, Copy, Check } 
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { summarizePdf, SummaryResult } from '@/lib/summarizer';
+import { friendlyError } from '@/lib/errors';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -29,7 +30,7 @@ export default function AiSummarizerPage() {
       const res = await summarizePdf(files[0], (msg) => setProgress(msg));
       setResult(res);
     } catch (err: any) {
-      setError(err.message || 'Failed to summarize');
+      setError(friendlyError(err));
     } finally {
       setProcessing(false);
       setProgress('');

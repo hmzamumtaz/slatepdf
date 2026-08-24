@@ -5,6 +5,7 @@ import { ArrowLeft, Loader2, FileText, AlertCircle, Check, X, Scale, File, User,
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { comparePdfs, CompareResult } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 function FileInfoCard({ info, label, side }: { info: CompareResult['file1']; label: string; side: 'left' | 'right' }) {
   return (
@@ -67,7 +68,7 @@ export default function ComparePdfPage() {
       const res = await comparePdfs(files[0], files[1]);
       setResult(res);
     } catch (err: any) {
-      setError(err.message || 'Comparison failed');
+      setError(friendlyError(err));
     } finally {
       setProcessing(false);
     }

@@ -5,6 +5,7 @@ import { ArrowLeft, Loader2, Languages, AlertCircle, Copy, Check, FileDown, Shie
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { extractTextFromPdf, translateText, createPdfFromText, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 
 const LANGUAGES = [
   'English', 'Spanish', 'French', 'German', 'Italian', 'Portuguese', 'Russian',
@@ -53,7 +54,7 @@ export default function TranslatePdfPage() {
 
       setTranslated(result);
     } catch (err: any) {
-      setError(err.message || 'Translation failed');
+      setError(friendlyError(err));
     } finally {
       setProcessing(false);
       setProgress(null);

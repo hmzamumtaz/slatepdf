@@ -8,6 +8,7 @@ import {
   Replace, MoveDiagonal, Minus, ScanText,
 } from 'lucide-react';
 import { getPdfJs } from '@/lib/pdf-engine';
+import { friendlyError } from '@/lib/errors';
 import {
   openEditableDocument, buildEditedPdf, isChanged, isImageChanged, toWinAnsi,
   rgbToHex, hexToRgb, normaliseFontName,
@@ -41,7 +42,7 @@ const SWATCHES = ['#000000', '#404040', '#b91c1c', '#c2410c', '#047857', '#1d4ed
 /** Where a glyph's baseline sits inside a line box of the same size. */
 const BASELINE = 0.8;
 
-const messageOf = (err: unknown, fallback: string) => (err instanceof Error && err.message ? err.message : fallback);
+const messageOf = (_err: unknown, _fallback: string) => friendlyError(_err);
 const round = (v: number) => Math.round(v * 10) / 10;
 const css = ({ r, g, b }: Rgb) => `rgb(${Math.round(r)} ${Math.round(g)} ${Math.round(b)})`;
 
