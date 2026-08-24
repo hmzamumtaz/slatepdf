@@ -502,7 +502,7 @@ export default function SignPdfPage() {
 
   return (
     <div className="min-h-screen bg-gray-50/50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-6">
           <ArrowLeft className="w-4 h-4" />
           Back to all tools
@@ -622,9 +622,11 @@ export default function SignPdfPage() {
             </div>
           )}
 
-          {/* Signature type selector */}
+          {/* Signature editing: methods on the left, live page preview + actions pinned right */}
           {selectedPage !== null && !scanning && (forceSign || !whitespaceWarning || whitespaceWarning.sufficient) && !done && (
-            <div className="mt-6 space-y-5">
+            <div className="mt-6 flex flex-col lg:flex-row gap-6 items-start">
+              {/* Left: signature method */}
+              <div className="flex-1 min-w-0 lg:max-w-md space-y-5">
               <div>
                 <label className="block text-sm font-semibold text-foreground mb-2">Choose signature method</label>
                 <div className="grid grid-cols-3 gap-3">
@@ -773,6 +775,12 @@ export default function SignPdfPage() {
                 </div>
               )}
 
+              </div>
+
+              {/* Right: sticky page preview with zoom, download and preview actions */}
+              <div className="w-full lg:w-[27rem] shrink-0">
+                <div className="lg:sticky lg:top-8 space-y-4">
+
               {/* Page info + interactive placement */}
               {pageInfo && (
                 <div className="p-4 bg-gray-50 rounded-xl border border-border">
@@ -871,11 +879,11 @@ export default function SignPdfPage() {
                 </div>
               )}
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="space-y-3">
                 <button
                   onClick={handleSign}
                   disabled={processing || done || !hasSignature}
-                  className={`px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 ${
+                  className={`w-full px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2 ${
                     done ? 'bg-green-500 text-white' : 'bg-primary hover:bg-primary-hover text-white hover:shadow-lg active:scale-[0.98]'
                   } disabled:opacity-50 disabled:cursor-not-allowed`}
                 >
@@ -887,11 +895,13 @@ export default function SignPdfPage() {
                 <button
                   onClick={() => { setPreviewUrl(null); setPreviewOpen(true); }}
                   disabled={!hasSignature}
-                  className="px-6 py-3.5 rounded-xl font-semibold text-sm border border-border text-foreground hover:bg-gray-50 transition-all flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 py-3 rounded-xl font-semibold text-sm border border-border text-foreground hover:bg-gray-50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Eye className="w-4 h-4" />
                   Preview before download
                 </button>
+              </div>
+                </div>
               </div>
             </div>
           )}
