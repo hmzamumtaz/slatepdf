@@ -328,10 +328,7 @@ export default function Home() {
                 q: 'Can I use Slate PDF offline?',
                 a: 'Yes. Once the page is loaded, all processing happens locally in your browser. If you have a stable connection to load the site initially, you can continue using the tools even if your connection drops during processing.',
               },
-              {
-                q: 'Is Slate PDF open source?',
-                a: 'Yes. Slate PDF is fully open source. You can inspect the code, contribute features, or self-host it. The source code is available on GitHub.',
-              },
+
             ].map((faq, i) => (
               <div key={i} className="rounded-xl border border-border overflow-hidden">
                 <button
