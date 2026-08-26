@@ -247,7 +247,7 @@ export default function Home() {
                   { feature: 'Offline / local processing', slate: true, small: false, ilove: false },
                   { feature: 'PDF editing & signing', slate: true, small: true, ilove: true },
                   { feature: 'AI-powered tools', slate: true, small: true, ilove: false },
-                  { feature: 'Open source', slate: true, small: false, ilove: false },
+
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
                     <td className="py-3.5 px-6 text-foreground font-medium">{row.feature}</td>
