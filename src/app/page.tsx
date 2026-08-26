@@ -1,12 +1,48 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Shield, Lock, ArrowRight, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
 import { tools, categories, getToolsByCategory, featuredTool } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
 import { SITE_NAME } from '@/lib/site';
+
+function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          const duration = 1200;
+          const start = performance.now();
+
+          function tick(now: number) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.floor(eased * target));
+            if (progress < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [target]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -55,6 +91,38 @@ export default function Home() {
                 Get Started
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats bar */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="rounded-2xl border border-border bg-gray-50 px-6 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
+                <AnimatedCounter target={38} suffix="+" />
+              </div>
+              <div className="text-sm text-muted-foreground mt-1">PDF Tools</div>
+            </div>
+            <div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
+                <AnimatedCounter target={0} />
+              </div>
+              <div className="text-sm text-muted-foreground mt-1">Server Uploads</div>
+            </div>
+            <div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
+                <AnimatedCounter target={100} suffix="%" />
+              </div>
+              <div className="text-sm text-muted-foreground mt-1">Free Forever</div>
+            </div>
+            <div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
+                <AnimatedCounter target={0} suffix="s" />
+              </div>
+              <div className="text-sm text-muted-foreground mt-1">Upload Wait Time</div>
             </div>
           </div>
         </div>
