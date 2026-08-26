@@ -16,9 +16,11 @@ import { troubleshootingPosts2 } from './troubleshooting-2';
 import { troubleshootingPosts3 } from './troubleshooting-3';
 import { troubleshootingPosts4 } from './troubleshooting-4';
 import { newPosts } from './new-posts';
+import { newPosts2 } from './new-posts-2';
 
 export const allPosts: BlogPost[] = [
   ...newPosts,
+  ...newPosts2,
   ...mergingPosts,
   ...organizingPosts,
   ...convertingToPdfPosts,
