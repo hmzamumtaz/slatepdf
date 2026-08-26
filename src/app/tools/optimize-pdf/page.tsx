@@ -1,47 +1,24 @@
-'use client';
+import type { Metadata } from 'next';
+import ToolPageSEO from '@/components/ToolPageSEO';
+import { generateToolMetadata, getToolFaqs } from '@/lib/tool-seo';
+import { generateSoftwareApplicationSchema, generateFAQSchema } from '@/lib/schema';
+import { getToolBySlug } from '@/lib/tools-data';
+import OptimizePdfTool from '@/components/tools/OptimizePdfTool';
 
-import { useState } from 'react';
-import ToolPage from '@/components/ToolPage';
-import { optimizePdf } from '@/lib/pdf-engine';
+export async function generateMetadata(): Promise<Metadata> {
+  return generateToolMetadata('optimize-pdf');
+}
 
 export default function OptimizePdfPage() {
-  const [stripMetadata, setStripMetadata] = useState(false);
-  const [lastSaving, setLastSaving] = useState<string | null>(null);
+  const tool = getToolBySlug('optimize-pdf');
+  const faqs = getToolFaqs('optimize-pdf');
 
   return (
-    <ToolPage
-      slug="optimize-pdf"
-      accept=".pdf"
-      processLabel="Optimize PDF"
-      options={
-        <div className="space-y-3">
-          <label className="flex items-center gap-2.5 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={stripMetadata}
-              onChange={(e) => setStripMetadata(e.target.checked)}
-              className="w-4 h-4 accent-primary"
-            />
-            <span className="text-sm text-foreground">Remove document metadata (title, author, etc.)</span>
-          </label>
-          <p className="text-xs text-muted-foreground">
-            Losslessly rebuilds the PDF with compressed object streams and discards
-            unused objects and old revisions. Text stays selectable and images untouched.
-          </p>
-          {lastSaving && (
-            <p className="text-xs font-medium text-green-600">{lastSaving}</p>
-          )}
-        </div>
-      }
-      onProcess={async (files) => {
-        const res = await optimizePdf(files[0], { stripMetadata });
-        setLastSaving(
-          res.savedBytes > 0
-            ? `Saved ${(res.savedBytes / 1024).toFixed(1)} KB (${res.savedPercent}% smaller).`
-            : 'This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.'
-        );
-        return res.blob;
-      }}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSoftwareApplicationSchema({ name: tool!.name, description: tool!.description, slug: 'optimize-pdf', category: tool!.category })) }} />
+      {faqs.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }} />}
+      <OptimizePdfTool />
+      <ToolPageSEO slug="optimize-pdf" />
+    </>
   );
 }

@@ -146,6 +146,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* SEO content section */}
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-foreground text-center">
+            The Free PDF Toolkit That Runs in Your Browser
+          </h2>
+          <div className="prose prose-gray max-w-none">
+            <p className="text-gray-600 leading-relaxed mb-6">
+              {SITE_NAME} is a comprehensive, free PDF toolkit that runs entirely in your browser. Unlike traditional PDF software that requires installation and expensive subscriptions, {SITE_NAME} processes your files locally — meaning your documents never leave your device.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              With over {tools.length} tools covering every common PDF operation, you can merge multiple PDFs into one document, split large files into smaller pieces, compress file sizes without losing quality, convert between PDF and other formats, add electronic signatures, password-protect sensitive documents, and much more.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDF documents regularly, {SITE_NAME} provides the tools you need — completely free, with no sign-up required, no watermarks, and no file size limits.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

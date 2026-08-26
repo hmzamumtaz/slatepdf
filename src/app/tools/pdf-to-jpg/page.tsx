@@ -1,45 +1,24 @@
-'use client';
+import type { Metadata } from 'next';
+import ToolPageSEO from '@/components/ToolPageSEO';
+import { generateToolMetadata, getToolFaqs } from '@/lib/tool-seo';
+import { generateSoftwareApplicationSchema, generateFAQSchema } from '@/lib/schema';
+import { getToolBySlug } from '@/lib/tools-data';
+import PdfToJpgTool from '@/components/tools/PdfToJpgTool';
 
-import { useState } from 'react';
-import ToolPage from '@/components/ToolPage';
-import { pdfToImages } from '@/lib/pdf-engine';
+export async function generateMetadata(): Promise<Metadata> {
+  return generateToolMetadata('pdf-to-jpg');
+}
 
 export default function PdfToJpgPage() {
-  const [format, setFormat] = useState<'jpeg' | 'png'>('jpeg');
-  const [dpi, setDpi] = useState<'standard' | 'high'>('high');
+  const tool = getToolBySlug('pdf-to-jpg');
+  const faqs = getToolFaqs('pdf-to-jpg');
 
   return (
-    <ToolPage
-      slug="pdf-to-jpg"
-      accept=".pdf"
-      processLabel="Convert to Images"
-      options={
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Format</label>
-            <div className="flex gap-2">
-              {(['jpeg', 'png'] as const).map(f => (
-                <button
-                  key={f}
-                  onClick={() => setFormat(f)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${format === f ? 'bg-primary text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}
-                >
-                  {f.toUpperCase()}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Resolution</label>
-            <div className="flex gap-2">
-              <button onClick={() => setDpi('standard')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${dpi === 'standard' ? 'bg-primary text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}>Standard (144 DPI)</button>
-              <button onClick={() => setDpi('high')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${dpi === 'high' ? 'bg-primary text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}>High (216 DPI)</button>
-            </div>
-          </div>
-          <p className="text-xs text-muted-foreground">Multiple pages download together as a single ZIP.</p>
-        </div>
-      }
-      onProcess={async (files) => pdfToImages(files[0], { format, quality: 0.95, scale: dpi === 'high' ? 3 : 2 })}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSoftwareApplicationSchema({ name: tool!.name, description: tool!.description, slug: 'pdf-to-jpg', category: tool!.category })) }} />
+      {faqs.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }} />}
+      <PdfToJpgTool />
+      <ToolPageSEO slug="pdf-to-jpg" />
+    </>
   );
 }

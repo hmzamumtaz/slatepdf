@@ -1,41 +1,24 @@
-'use client';
+import type { Metadata } from 'next';
+import ToolPageSEO from '@/components/ToolPageSEO';
+import { generateToolMetadata, getToolFaqs } from '@/lib/tool-seo';
+import { generateSoftwareApplicationSchema, generateFAQSchema } from '@/lib/schema';
+import { getToolBySlug } from '@/lib/tools-data';
+import CropPdfTool from '@/components/tools/CropPdfTool';
 
-import { useState } from 'react';
-import ToolPage from '@/components/ToolPage';
-import { cropPdf } from '@/lib/pdf-engine';
+export async function generateMetadata(): Promise<Metadata> {
+  return generateToolMetadata('crop-pdf');
+}
 
 export default function CropPdfPage() {
-  const [margins, setMargins] = useState({ top: 50, bottom: 50, left: 50, right: 50 });
+  const tool = getToolBySlug('crop-pdf');
+  const faqs = getToolFaqs('crop-pdf');
 
   return (
-    <ToolPage
-      slug="crop-pdf"
-      accept=".pdf"
-      processLabel="Crop PDF"
-      options={
-        <div>
-          <label className="block text-sm font-medium text-foreground mb-3">Margins (points)</label>
-          <div className="grid grid-cols-2 gap-3 max-w-sm">
-            {(['top', 'bottom', 'left', 'right'] as const).map((side) => (
-              <div key={side}>
-                <label className="text-xs text-muted-foreground capitalize mb-1 block">{side}</label>
-                <input
-                  type="number"
-                  min="0"
-                  max="500"
-                  value={margins[side]}
-                  onChange={(e) => setMargins(prev => ({ ...prev, [side]: parseInt(e.target.value) || 0 }))}
-                  className="w-full px-3 py-2 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                />
-              </div>
-            ))}
-          </div>
-          <p className="mt-2 text-xs text-muted-foreground">
-            Values in points (1 inch = 72 points). This crops from each edge.
-          </p>
-        </div>
-      }
-      onProcess={async (files) => cropPdf(files[0], margins)}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSoftwareApplicationSchema({ name: tool!.name, description: tool!.description, slug: 'crop-pdf', category: tool!.category })) }} />
+      {faqs.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }} />}
+      <CropPdfTool />
+      <ToolPageSEO slug="crop-pdf" />
+    </>
   );
 }

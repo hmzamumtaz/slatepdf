@@ -1793,6 +1793,48 @@ export async function scanPdfForSigning(
   return results;
 }
 
+/**
+ * Embed a signature image (PNG bytes) into a specific page of a PDF.
+ */
+export async function signPdfWithImage(
+  file: File,
+  pageIndex: number,
+  sigBytes: Uint8Array,
+  placement: { x: number; y: number; width: number; height: number },
+  scale: number = 1,
+): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const src = await PDFDocument.load(buf);
+  const pdfjsLib = await getPdfJs();
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+
+  // Get page dimensions via pdf.js to match the thumbnail coordinates
+  const jsPage = await pdf.getPage(pageIndex);
+  const baseVp = jsPage.getViewport({ scale: 1 });
+  const pageW = baseVp.width;
+  const pageH = baseVp.height;
+
+  // The placement coordinates come from the thumbnail (percentage-based).
+  // Convert percentage → PDF points.
+  const x = (placement.x / 100) * pageW;
+  const yPt = (placement.y / 100) * pageH;
+  // pdf-lib uses bottom-left origin; the thumbnail uses top-left.
+  const y = pageH - yPt - (placement.height / 100) * pageH * scale;
+
+  const w = (placement.width / 100) * pageW * scale;
+  const h = (placement.height / 100) * pageH * scale;
+
+  // Determine PNG vs JPEG
+  const isPng = sigBytes[0] === 0x89 && sigBytes[1] === 0x50 && sigBytes[2] === 0x4e && sigBytes[3] === 0x47;
+  const img = isPng ? await src.embedPng(sigBytes) : await src.embedJpg(sigBytes);
+
+  const pdfPage = src.getPage(pageIndex - 1);
+  pdfPage.drawImage(img, { x, y, width: w, height: h });
+
+  const bytes = await src.save();
+  return new Blob([bytes as unknown as BlobPart], { type: 'application/pdf' });
+}
+
 function analyzeFooterWhitespace(
   ctx: CanvasRenderingContext2D,
   canvas: HTMLCanvasElement,
