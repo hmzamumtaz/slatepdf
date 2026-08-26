@@ -7,6 +7,7 @@ import { tools, categories, getToolsByCategory, featuredTool } from '@/lib/tools
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
 import { SITE_NAME } from '@/lib/site';
+import { getStats } from '@/lib/stats';
 
 function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -47,6 +48,11 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [stats, setStats] = useState({ filesConverted: 0, toolsUsed: 0 });
+
+  useEffect(() => {
+    setStats(getStats());
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -108,9 +114,9 @@ export default function Home() {
             </div>
             <div>
               <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
-                <AnimatedCounter target={0} />
+                <AnimatedCounter target={stats.filesConverted} />
               </div>
-              <div className="text-sm text-muted-foreground mt-1">Server Uploads</div>
+              <div className="text-sm text-muted-foreground mt-1">Files Converted</div>
             </div>
             <div>
               <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">

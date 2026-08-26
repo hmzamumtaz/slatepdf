@@ -9,6 +9,7 @@ import FileUpload from './FileUpload';
 import LivePreviewModal from './LivePreviewModal';
 import { downloadBlob, downloadBlobsAsZip, renderPdfPages, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
+import { trackConversion } from '@/lib/stats';
 
 interface ToolPageProps {
   slug: string;
@@ -326,6 +327,7 @@ export default function ToolPage({
         }
       }
       setProgress(null);
+      trackConversion(slug);
     } catch (err: any) {
       setError(friendlyError(err));
       setProgress(null);
