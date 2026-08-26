@@ -14,7 +14,7 @@ export default function CropPdfTool() {
       processLabel="Crop PDF"
       options={
         <div>
-          <label className="block text-sm font-medium text-foreground mb-3">Margins (points)</label>
+          <label className="block text-sm font-medium text-foreground mb-6">Margins (points)</label>
           <div className="grid grid-cols-2 gap-3 max-w-sm">
             {(['top', 'bottom', 'left', 'right'] as const).map((side) => (
               <div key={side}>

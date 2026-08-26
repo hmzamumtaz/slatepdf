@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Shield, Zap, Lock, ArrowRight, Sparkles, Globe, LayoutGrid } from 'lucide-react';
+import { Shield, Zap, Lock, ArrowRight, Sparkles, Globe, LayoutGrid, Server, FileCheck, CheckCircle2, Infinity } from 'lucide-react';
 import { tools, categories, getToolsByCategory, featuredTool } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
@@ -15,12 +15,14 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <ToolsModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
-      {/* Hero */}
-      <section className="pt-20 sm:pt-28 pb-16 sm:pb-20">
+      {/* Hero — trust-first */}
+      <section className="pt-16 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-border rounded-full text-sm font-medium text-foreground mb-8">
-              <span>{tools.length} tools, one workspace</span>
+            {/* Trust badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full text-sm font-medium text-green-800 mb-8">
+              <Shield className="w-4 h-4 text-green-600" />
+              <span>100% private — your files never leave your device</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1] text-foreground">
@@ -31,10 +33,18 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              Merge, split, convert, compress, edit, and secure your PDFs.
-              No file size limits. No watermarks. No sign-up required.
+            <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              Merge, split, convert, compress, edit, and secure your PDFs — all processing
+              happens in your browser. Your files never touch our servers.
             </p>
+
+            {/* Trust indicators row */}
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mb-10 text-sm text-muted-foreground">
+              <span className="flex items-center gap-2"><Server className="w-4 h-4 text-green-600" /> Zero server uploads</span>
+              <span className="flex items-center gap-2"><Lock className="w-4 h-4 text-green-600" /> No data collection</span>
+              <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-600" /> No sign-up required</span>
+              <span className="flex items-center gap-2"><Infinity className="w-4 h-4 text-green-600" /> No file size limits</span>
+            </div>
 
             <div className="flex items-center justify-center">
               <button
@@ -50,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* The one tool that does the lot */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-2">
         <Link
           href={`/tools/${featuredTool.slug}`}
           className="group block rounded-3xl bg-foreground text-white p-8 sm:p-10 transition-all hover:shadow-2xl hover:shadow-foreground/25"
@@ -98,42 +108,96 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Features */}
+      {/* The Free PDF Toolkit — descriptive section */}
+      <section className="bg-gray-50 border-y border-border py-20 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">The Free PDF Toolkit That Runs in Your Browser</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              Unlike traditional PDF software that requires installation and expensive subscriptions,
+              Slate PDF processes your files locally — meaning your documents never leave your device.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex gap-4">
+              <div className="shrink-0 w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center">
+                <FileCheck className="w-6 h-6 text-indigo-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1.5 text-foreground">33+ Professional Tools</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Merge multiple PDFs, split large files, compress without quality loss, convert between formats, add signatures, and password-protect documents.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="shrink-0 w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center">
+                <Globe className="w-6 h-6 text-amber-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1.5 text-foreground">Works Everywhere</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDFs regularly — it all runs in your browser.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="shrink-0 w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
+                <CheckCircle2 className="w-6 h-6 text-green-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1.5 text-foreground">Truly Free. Forever.</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  No sign-up required, no watermarks added to your output, no file size limits, and no hidden fees. Use every tool as many times as you want.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why SlatePDF — redesigned trust cards */}
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">Why {SITE_NAME}?</h2>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto">Built for speed, designed for privacy</p>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">Built for speed. Designed for privacy. Trusted by millions.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-8 rounded-2xl bg-gray-50 border border-border hover:border-primary/30 transition-colors">
-              <div className="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+            {/* Card 1 — Privacy */}
+            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-100/50 transition-all duration-300">
+              <div className="w-14 h-14 bg-indigo-100 group-hover:bg-indigo-200 rounded-2xl flex items-center justify-center mb-6 transition-colors">
                 <Lock className="w-7 h-7 text-indigo-600" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">Your Files Stay Private</h3>
+              <h3 className="text-lg font-bold mb-2 text-foreground">Your Files Stay Private</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                We never see your files. All processing happens on your device, so your documents never touch our servers. Perfect for confidential and sensitive work.
+                All processing happens on your device. Your documents never touch our servers — not during processing, not after. Perfect for confidential and sensitive work.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gray-50 border border-border hover:border-primary/30 transition-colors">
-              <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
+            {/* Card 2 — Speed */}
+            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-amber-50 to-white border border-amber-100 hover:border-amber-300 hover:shadow-lg hover:shadow-amber-100/50 transition-all duration-300">
+              <div className="w-14 h-14 bg-amber-100 group-hover:bg-amber-200 rounded-2xl flex items-center justify-center mb-6 transition-colors">
                 <Zap className="w-7 h-7 text-amber-600" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">Instant Processing</h3>
+              <h3 className="text-lg font-bold mb-2 text-foreground">Instant Processing</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                No waiting for uploads. No server queues. Your PDF is processed the moment you hit the button, even large files handle in seconds.
+                No waiting for uploads. No server queues. Your PDF is processed the moment you hit the button — even large files handle in seconds.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gray-50 border border-border hover:border-primary/30 transition-colors">
-              <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+            {/* Card 3 — Freedom */}
+            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-green-50 to-white border border-green-100 hover:border-green-300 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300">
+              <div className="w-14 h-14 bg-green-100 group-hover:bg-green-200 rounded-2xl flex items-center justify-center mb-6 transition-colors">
                 <Sparkles className="w-7 h-7 text-green-600" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">No Limits. No Watermarks.</h3>
+              <h3 className="text-lg font-bold mb-2 text-foreground">No Limits. No Watermarks.</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Use every tool as many times as you want. No file size restrictions. No watermarks added to your output. Completely free.
+                Use every tool as many times as you want. No file size restrictions. No watermarks added to your output. Completely free, forever.
               </p>
             </div>
           </div>
@@ -143,26 +207,6 @@ export default function Home() {
             <span className="flex items-center gap-2"><Globe className="w-4 h-4" /> Works in any modern browser</span>
             <span className="flex items-center gap-2"><Lock className="w-4 h-4" /> No account required</span>
             <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> No data collection</span>
-          </div>
-        </div>
-      </section>
-
-      {/* SEO content section */}
-      <section className="bg-gray-50 py-16 sm:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-foreground text-center">
-            The Free PDF Toolkit That Runs in Your Browser
-          </h2>
-          <div className="prose prose-gray max-w-none">
-            <p className="text-gray-600 leading-relaxed mb-6">
-              {SITE_NAME} is a comprehensive, free PDF toolkit that runs entirely in your browser. Unlike traditional PDF software that requires installation and expensive subscriptions, {SITE_NAME} processes your files locally — meaning your documents never leave your device.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              With over {tools.length} tools covering every common PDF operation, you can merge multiple PDFs into one document, split large files into smaller pieces, compress file sizes without losing quality, convert between PDF and other formats, add electronic signatures, password-protect sensitive documents, and much more.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDF documents regularly, {SITE_NAME} provides the tools you need — completely free, with no sign-up required, no watermarks, and no file size limits.
-            </p>
           </div>
         </div>
       </section>

@@ -75,12 +75,12 @@ export default function TranslatePdfTool() {
 
   return (
     <div className="min-h-screen bg-gray-50/50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
           <ArrowLeft className="w-4 h-4" /> Back to all tools
         </Link>
 
-        <div className="mb-8">
+        <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-sky-50"><Languages className="w-6 h-6 text-sky-500" /></div>
             <div>
