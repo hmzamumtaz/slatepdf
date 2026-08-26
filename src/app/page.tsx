@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Shield, Zap, Lock, ArrowRight, Sparkles, Globe, LayoutGrid, Server, FileCheck, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
+import { Shield, Lock, ArrowRight, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
 import { tools, categories, getToolsByCategory, featuredTool } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
@@ -121,46 +121,21 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex gap-4">
-              <div className="shrink-0 w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center">
-                <FileCheck className="w-6 h-6 text-indigo-600" />
+            {[
+              { title: '38 Professional Tools', text: 'Merge multiple PDFs, split large files, compress without quality loss, convert between formats, add signatures, and password-protect documents.' },
+              { title: 'Works Everywhere', text: 'Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDFs regularly — it all runs in your browser.' },
+              { title: 'Truly Free. Forever.', text: 'No sign-up required, no watermarks added to your output, no file size limits, and no hidden fees. Use every tool as many times as you want.' },
+            ].map((item) => (
+              <div key={item.title} className="p-6 rounded-xl bg-white border border-border">
+                <h3 className="font-semibold mb-2 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
               </div>
-              <div>
-                <h3 className="font-semibold mb-1.5 text-foreground">33+ Professional Tools</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Merge multiple PDFs, split large files, compress without quality loss, convert between formats, add signatures, and password-protect documents.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="shrink-0 w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center">
-                <Globe className="w-6 h-6 text-amber-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1.5 text-foreground">Works Everywhere</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDFs regularly — it all runs in your browser.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="shrink-0 w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center">
-                <CheckCircle2 className="w-6 h-6 text-green-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1.5 text-foreground">Truly Free. Forever.</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  No sign-up required, no watermarks added to your output, no file size limits, and no hidden fees. Use every tool as many times as you want.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Why SlatePDF — redesigned trust cards */}
+      {/* Why SlatePDF */}
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -169,33 +144,21 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 — Privacy */}
-            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-100/50 transition-all duration-300">
-              <div className="w-14 h-14 bg-indigo-100 group-hover:bg-indigo-200 rounded-2xl flex items-center justify-center mb-6 transition-colors">
-                <Lock className="w-7 h-7 text-indigo-600" />
-              </div>
+            <div className="p-8 rounded-2xl border border-border bg-white">
               <h3 className="text-lg font-bold mb-2 text-foreground">Your Files Stay Private</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 All processing happens on your device. Your documents never touch our servers — not during processing, not after. Perfect for confidential and sensitive work.
               </p>
             </div>
 
-            {/* Card 2 — Speed */}
-            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-amber-50 to-white border border-amber-100 hover:border-amber-300 hover:shadow-lg hover:shadow-amber-100/50 transition-all duration-300">
-              <div className="w-14 h-14 bg-amber-100 group-hover:bg-amber-200 rounded-2xl flex items-center justify-center mb-6 transition-colors">
-                <Zap className="w-7 h-7 text-amber-600" />
-              </div>
+            <div className="p-8 rounded-2xl border border-border bg-white">
               <h3 className="text-lg font-bold mb-2 text-foreground">Instant Processing</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 No waiting for uploads. No server queues. Your PDF is processed the moment you hit the button — even large files handle in seconds.
               </p>
             </div>
 
-            {/* Card 3 — Freedom */}
-            <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-green-50 to-white border border-green-100 hover:border-green-300 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300">
-              <div className="w-14 h-14 bg-green-100 group-hover:bg-green-200 rounded-2xl flex items-center justify-center mb-6 transition-colors">
-                <Sparkles className="w-7 h-7 text-green-600" />
-              </div>
+            <div className="p-8 rounded-2xl border border-border bg-white">
               <h3 className="text-lg font-bold mb-2 text-foreground">No Limits. No Watermarks.</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Use every tool as many times as you want. No file size restrictions. No watermarks added to your output. Completely free, forever.
