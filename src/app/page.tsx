@@ -209,7 +209,7 @@ export default function Home() {
                   { feature: 'Completely free forever', slate: true, small: false, ilove: false },
                   { feature: 'Offline / local processing', slate: true, small: false, ilove: false },
                   { feature: 'PDF editing & signing', slate: true, small: true, ilove: true },
-                  { feature: 'AI-powered tools', slate: true, small: true, ilove: false },
+
 
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
