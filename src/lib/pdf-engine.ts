@@ -2252,3 +2252,188 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
 
   return { blob: toBlob(await doc.save()), pages: numPages, totalChars };
 }
+
+/* ------------------------------------------------------------------ */
+/*  HEIC / HEIF → PDF                                                  */
+/* ------------------------------------------------------------------ */
+
+export async function heicToPdf(files: File[]): Promise<Blob> {
+  if (files.length === 0) throw new Error('Select at least one HEIC image.');
+  const heic2any = (await import('heic2any')).default;
+  const merged = await PDFDocument.create();
+  for (const file of files) {
+    try {
+      const jpegBlob = await heic2any({ blob: file, toType: 'image/jpeg', quality: 0.92 }) as Blob;
+      const buf = await jpegBlob.arrayBuffer();
+      const image = await merged.embedJpg(buf);
+      const page = merged.addPage([image.width, image.height]);
+      page.drawImage(image, { x: 0, y: 0, width: image.width, height: image.height });
+    } catch {
+      throw new Error(`"${file.name}" could not be decoded. It may be corrupted or in an unsupported HEIC variant.`);
+    }
+  }
+  return toBlob(await merged.save());
+}
+
+/* ------------------------------------------------------------------ */
+/*  TIFF → PDF                                                         */
+/* ------------------------------------------------------------------ */
+
+export async function tiffToPdf(files: File[]): Promise<Blob> {
+  if (files.length === 0) throw new Error('Select at least one TIFF image.');
+  const UTIF = await import('utif');
+  const merged = await PDFDocument.create();
+  for (const file of files) {
+    try {
+      const buf = new Uint8Array(await readFileAsArrayBuffer(file));
+      const ifds = UTIF.decode(buf);
+      for (let i = 0; i < ifds.length; i++) {
+        UTIF.decodeImage(buf, ifds[i]);
+        const w = ifds[i].width;
+        const h = ifds[i].height;
+        // TIFF decoded to RGBA via utif
+        const rgba = ifds[i].data;
+        // Encode as PNG via canvas
+        const canvas = document.createElement('canvas');
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext('2d')!;
+        const imageData = ctx.createImageData(w, h);
+        imageData.data.set(rgba);
+        ctx.putImageData(imageData, 0, 0);
+        const dataUrl = canvas.toDataURL('image/png');
+        const pngBytes = Uint8Array.from(atob(dataUrl.split(',')[1]), c => c.charCodeAt(0));
+        const image = await merged.embedPng(pngBytes);
+        const page = merged.addPage([image.width, image.height]);
+        page.drawImage(image, { x: 0, y: 0, width: image.width, height: image.height });
+      }
+    } catch {
+      throw new Error(`"${file.name}" could not be decoded. It may be corrupted or in an unsupported TIFF variant.`);
+    }
+  }
+  return toBlob(await merged.save());
+}
+
+/* ------------------------------------------------------------------ */
+/*  SVG → PDF                                                          */
+/* ------------------------------------------------------------------ */
+
+export async function svgToPdf(files: File[]): Promise<Blob> {
+  if (files.length === 0) throw new Error('Select at least one SVG image.');
+  const merged = await PDFDocument.create();
+  for (const file of files) {
+    try {
+      const svgText = await file.text();
+      const img = new Image();
+      const svgBlob = new Blob([svgText], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(svgBlob);
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error('Failed to load SVG'));
+        img.src = url;
+      });
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth || 800;
+      canvas.height = img.naturalHeight || 600;
+      const ctx = canvas.getContext('2d')!;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      const dataUrl = canvas.toDataURL('image/png');
+      const pngBytes = Uint8Array.from(atob(dataUrl.split(',')[1]), c => c.charCodeAt(0));
+      const image = await merged.embedPng(pngBytes);
+      const page = merged.addPage([image.width, image.height]);
+      page.drawImage(image, { x: 0, y: 0, width: image.width, height: image.height });
+    } catch {
+      throw new Error(`"${file.name}" could not be rendered as an SVG. It may be malformed or contain external resources.`);
+    }
+  }
+  return toBlob(await merged.save());
+}
+
+/* ------------------------------------------------------------------ */
+/*  EPUB → PDF                                                         */
+/* ------------------------------------------------------------------ */
+
+export async function epubToPdf(file: File, mode: 'visual' | 'text' = 'visual'): Promise<Blob> {
+  const JSZip = (await import('jszip')).default;
+  const zip = await JSZip.loadAsync(await file.arrayBuffer());
+
+  // 1. Find container.xml → rootfile path
+  const containerXml = await zip.file('META-INF/container.xml')?.async('text');
+  if (!containerXml) throw new Error('Invalid EPUB: missing container.xml');
+  const rootfileMatch = containerXml.match(/full-path="([^"]+)"/);
+  if (!rootfileMatch) throw new Error('Invalid EPUB: cannot find rootfile path');
+  const rootfilePath = rootfileMatch[1];
+  const rootfileDir = rootfilePath.substring(0, rootfilePath.lastIndexOf('/') + 1);
+
+  // 2. Parse content.opf
+  const opfText = await zip.file(rootfilePath)?.async('text');
+  if (!opfText) throw new Error('Invalid EPUB: missing content file');
+  const parser = new DOMParser();
+  const opfDoc = parser.parseFromString(opfText, 'application/xml');
+
+  // 3. Find spine order
+  const manifest = opfDoc.querySelector('manifest')!;
+  const spine = opfDoc.querySelector('spine')!;
+  const itemMap = new Map<string, string>();
+  manifest.querySelectorAll('item').forEach(item => {
+    itemMap.set(item.getAttribute('id')!, item.getAttribute('href')!);
+  });
+  const spineRefs = Array.from(spine.querySelectorAll('itemref')).map(ref => ref.getAttribute('idref')!);
+
+  // 4. Render each chapter
+  const pdfDoc = await PDFDocument.create();
+  for (const idref of spineRefs) {
+    const href = itemMap.get(idref);
+    if (!href) continue;
+    const chapterPath = rootfilePath.includes('/') ? rootfileDir + href : href;
+    const chapterFile = zip.file(chapterPath);
+    if (!chapterFile) continue;
+    let chapterHtml = await chapterFile.async('text');
+
+    // Resolve relative image paths
+    const chapterDir = chapterPath.substring(0, chapterPath.lastIndexOf('/') + 1);
+    const imgRegex = /<img[^>]+src="([^"]+)"/g;
+    let match;
+    const replacements: { original: string; dataUri: string }[] = [];
+    while ((match = imgRegex.exec(chapterHtml)) !== null) {
+      const imgPath = match[1];
+      if (imgPath.startsWith('data:')) continue;
+      const fullImgPath = chapterDir + imgPath;
+      const imgFile = zip.file(fullImgPath);
+      if (imgFile) {
+        const imgData = await imgFile.async('base64');
+        const ext = imgPath.split('.').pop()?.toLowerCase() || 'png';
+        const mime = ext === 'jpg' || ext === 'jpeg' ? 'image/jpeg' : ext === 'gif' ? 'image/gif' : 'image/png';
+        replacements.push({ original: match[0], dataUri: match[0].replace(match[1], `data:${mime};base64,${imgData}`) });
+      }
+    }
+    for (const r of replacements) {
+      chapterHtml = chapterHtml.replace(r.original, r.dataUri);
+    }
+
+    if (mode === 'visual') {
+      // Visual mode: render via html2canvas for design fidelity
+      const result = await renderHtmlToPdfVisual(chapterHtml);
+      const chapterDoc = await PDFDocument.load(new Uint8Array(result));
+      const copiedPages = await pdfDoc.copyPages(chapterDoc, chapterDoc.getPageIndices());
+      for (const p of copiedPages) pdfDoc.addPage(p);
+    } else {
+      // Text mode: text-reflow for selectable text
+      const result = await htmlToPdf(chapterHtml);
+      const chapterDoc = await PDFDocument.load(new Uint8Array(await result.arrayBuffer()));
+      const copiedPages = await pdfDoc.copyPages(chapterDoc, chapterDoc.getPageIndices());
+      for (const p of copiedPages) pdfDoc.addPage(p);
+    }
+  }
+
+  return toBlob(await pdfDoc.save());
+}
+
+/** Wrapper: render HTML string via the visual (iframe + html2canvas) pipeline. */
+async function renderHtmlToPdfVisual(html: string): Promise<Uint8Array> {
+  const blob = await htmlToPdfVisual(html);
+  return new Uint8Array(await blob.arrayBuffer());
+}

@@ -41,6 +41,11 @@ export const tools: ToolInfo[] = [
   { slug: 'powerpoint-to-pdf', name: 'PowerPoint to PDF', description: 'Turn slides (PPTX) into a PDF', icon: 'Presentation', category: 'Create PDF', color: '#dc2626' },
   { slug: 'excel-to-pdf', name: 'Excel to PDF', description: 'Turn a spreadsheet (XLSX) into a PDF', icon: 'Table', category: 'Create PDF', color: '#16a34a' },
   { slug: 'html-to-pdf', name: 'HTML to PDF', description: 'Convert web pages to PDF', icon: 'Globe', category: 'Create PDF', color: '#7c3aed' },
+  { slug: 'heic-to-pdf', name: 'HEIC to PDF', description: 'Convert Apple HEIC images to PDF', icon: 'Image', category: 'Create PDF', color: '#f97316' },
+  { slug: 'webp-to-pdf', name: 'WebP to PDF', description: 'Convert WebP images to PDF documents', icon: 'Image', category: 'Create PDF', color: '#f97316' },
+  { slug: 'tiff-to-pdf', name: 'TIFF to PDF', description: 'Convert TIFF images to PDF documents', icon: 'Image', category: 'Create PDF', color: '#f97316' },
+  { slug: 'svg-to-pdf', name: 'SVG to PDF', description: 'Convert SVG vector images to PDF', icon: 'Image', category: 'Create PDF', color: '#f97316' },
+  { slug: 'epub-to-pdf', name: 'EPUB to PDF', description: 'Convert EPUB ebooks to PDF documents', icon: 'BookOpen', category: 'Create PDF', color: '#f97316' },
 
   // Convert from PDF
   { slug: 'pdf-to-jpg', name: 'PDF to JPG', description: 'Convert PDF pages to JPG images', icon: 'FileImage', category: 'Export PDF', color: '#eab308' },

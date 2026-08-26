@@ -308,6 +308,56 @@ const toolSeo: Record<string, {
       { q: 'Will formatting be preserved?', a: 'Text is translated while maintaining the document layout. Some formatting may shift if the translated text is significantly longer.' },
     ],
   },
+  'heic-to-pdf': {
+    title: 'HEIC to PDF — Convert Apple HEIC Images to PDF Free',
+    description: 'Convert HEIC and HEIF photos from iPhone and iPad to PDF documents. Free, browser-based, no upload required. Preserves original image quality.',
+    keywords: ['heic to pdf', 'convert heic to pdf', 'heif to pdf', 'iphone photo to pdf', 'heic converter'],
+    faqs: [
+      { q: 'What is a HEIC file?', a: 'HEIC (High Efficiency Image Container) is the default image format used by iPhones and iPads since iOS 11. It offers better compression than JPEG but is not universally supported by all software.' },
+      { q: 'Can I convert HEIC to PDF on my phone?', a: 'Yes. The browser-based tool works on iPhone and Android. Open it in Safari or Chrome, select your HEIC photos, and download the PDF.' },
+      { q: 'Does conversion reduce image quality?', a: 'No. The HEIC image is decoded and embedded into the PDF at its original resolution. The visual quality is preserved.' },
+    ],
+  },
+  'webp-to-pdf': {
+    title: 'WebP to PDF — Convert WebP Images to PDF Free Online',
+    description: 'Convert WebP images to PDF documents in your browser. Free, no sign-up, no watermarks. Supports batch conversion with original quality preservation.',
+    keywords: ['webp to pdf', 'convert webp to pdf', 'webp to pdf converter', 'webp image to pdf', 'convert webp to pdf free'],
+    faqs: [
+      { q: 'What is a WebP file?', a: 'WebP is a modern image format developed by Google that provides superior compression for images on the web. It is widely used in web design and online content.' },
+      { q: 'Does converting WebP to PDF reduce quality?', a: 'No. The WebP image is decoded and embedded into the PDF at its original resolution without re-compression.' },
+      { q: 'Can I convert multiple WebP files at once?', a: 'Yes. Select multiple WebP images and they will be combined into a single multi-page PDF with one image per page.' },
+    ],
+  },
+  'tiff-to-pdf': {
+    title: 'TIFF to PDF — Convert TIFF Images to PDF Free Online',
+    description: 'Convert TIFF and TIF images to PDF documents. Supports multi-page TIFFs. Free, browser-based processing with no file upload required.',
+    keywords: ['tiff to pdf', 'convert tiff to pdf', 'tif to pdf', 'tiff to pdf converter', 'multi-page tiff to pdf'],
+    faqs: [
+      { q: 'Does this support multi-page TIFF files?', a: 'Yes. Multi-page TIFF files are split into individual pages, each becoming a separate page in the resulting PDF.' },
+      { q: 'What TIFF compression types are supported?', a: 'The tool handles uncompressed, LZW, and PackBits TIFF files. JPEG-compressed TIFFs are also supported.' },
+      { q: 'Can I convert multiple TIFF files at once?', a: 'Yes. Select multiple TIFF files and each will be converted, with all pages combined into a single PDF.' },
+    ],
+  },
+  'svg-to-pdf': {
+    title: 'SVG to PDF — Convert SVG Vector Images to PDF Free',
+    description: 'Convert SVG vector graphics to PDF documents in your browser. Free, no upload, no sign-up. Preserves vector quality and design fidelity.',
+    keywords: ['svg to pdf', 'convert svg to pdf', 'svg to pdf converter', 'svg image to pdf', 'vector to pdf'],
+    faqs: [
+      { q: 'Does converting SVG to PDF preserve vector quality?', a: 'The SVG is rendered at your screen resolution and embedded as a high-quality image in the PDF. For true vector output, use a dedicated vector editor.' },
+      { q: 'Can I convert SVG files with external resources?', a: 'SVGs that reference external images or fonts may not render completely. Self-contained SVGs with embedded resources work best.' },
+      { q: 'Is this free to use?', a: 'Yes. SVG to PDF conversion is completely free with no limits, no watermarks, and no sign-up required.' },
+    ],
+  },
+  'epub-to-pdf': {
+    title: 'EPUB to PDF — Convert EPUB Ebooks to PDF Free Online',
+    description: 'Convert EPUB ebooks to PDF documents in your browser. Choose between design-faithful or text-reflow output. Free, no software installation.',
+    keywords: ['epub to pdf', 'convert epub to pdf', 'epub to pdf converter', 'ebook to pdf', 'epub to pdf free'],
+    faqs: [
+      { q: 'What is an EPUB file?', a: 'EPUB (Electronic Publication) is a widely-used ebook format supported by most e-readers and reading apps. It contains HTML-based content with CSS styling.' },
+      { q: 'What is the difference between design and text mode?', a: 'Design mode preserves the original layout, fonts, and styling of the ebook. Text mode extracts the text content and reflows it into a clean, selectable-text PDF.' },
+      { q: 'Does this work with DRM-protected EPUBs?', a: 'No. DRM-protected EPUBs cannot be converted. Only unprotected EPUB files are supported.' },
+    ],
+  },
 };
 
 /** Generate full metadata for a tool page. */
