@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Shield, Zap, Lock, ArrowRight, Sparkles, Globe, LayoutGrid, Server, FileCheck, CheckCircle2, Infinity } from 'lucide-react';
+import { Shield, Zap, Lock, ArrowRight, Sparkles, Globe, LayoutGrid, Server, FileCheck, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
 import { tools, categories, getToolsByCategory, featuredTool } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
@@ -10,6 +10,7 @@ import { SITE_NAME } from '@/lib/site';
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
     <div className="min-h-screen bg-white">
@@ -207,6 +208,146 @@ export default function Home() {
             <span className="flex items-center gap-2"><Globe className="w-4 h-4" /> Works in any modern browser</span>
             <span className="flex items-center gap-2"><Lock className="w-4 h-4" /> No account required</span>
             <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> No data collection</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison — SlatePDF vs Smallpdf vs iLovePDF */}
+      <section className="bg-gray-50 border-y border-border py-20 sm:py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">How {SITE_NAME} Compares</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              See how we stack up against the most popular online PDF tools.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto rounded-2xl border border-border bg-white shadow-sm">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-4 px-6 font-semibold text-foreground w-2/5">Feature</th>
+                  <th className="text-center py-4 px-4 font-semibold text-foreground w-1/5">
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className="w-5 h-5 rounded bg-foreground text-white text-[10px] font-bold flex items-center justify-center">S</span>
+                      Slate PDF
+                    </span>
+                  </th>
+                  <th className="text-center py-4 px-4 font-semibold text-muted-foreground w-1/5">Smallpdf</th>
+                  <th className="text-center py-4 px-4 font-semibold text-muted-foreground w-1/5">iLovePDF</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { feature: 'Files uploaded to servers', slate: false, small: true, ilove: true },
+                  { feature: 'No account required', slate: true, small: false, ilove: false },
+                  { feature: 'No file size limits', slate: true, small: false, ilove: false },
+                  { feature: 'No watermarks on output', slate: true, small: false, ilove: false },
+                  { feature: 'Completely free forever', slate: true, small: false, ilove: false },
+                  { feature: 'Offline / local processing', slate: true, small: false, ilove: false },
+                  { feature: 'PDF editing & signing', slate: true, small: true, ilove: true },
+                  { feature: 'AI-powered tools', slate: true, small: true, ilove: false },
+                  { feature: 'Open source', slate: true, small: false, ilove: false },
+                ].map((row, i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
+                    <td className="py-3.5 px-6 text-foreground font-medium">{row.feature}</td>
+                    <td className="py-3.5 px-4 text-center">
+                      {row.slate ? (
+                        <span className="inline-flex w-6 h-6 items-center justify-center rounded-full bg-green-100">
+                          <CheckCircle2 className="w-4 h-4 text-green-600" />
+                        </span>
+                      ) : (
+                        <span className="inline-flex w-6 h-6 items-center justify-center rounded-full bg-red-50 text-red-400 text-xs font-bold">X</span>
+                      )}
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      {row.small ? (
+                        <span className="inline-flex w-6 h-6 items-center justify-center rounded-full bg-green-100">
+                          <CheckCircle2 className="w-4 h-4 text-green-600" />
+                        </span>
+                      ) : (
+                        <span className="inline-flex w-6 h-6 items-center justify-center rounded-full bg-red-50 text-red-400 text-xs font-bold">X</span>
+                      )}
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      {row.ilove ? (
+                        <span className="inline-flex w-6 h-6 items-center justify-center rounded-full bg-green-100">
+                          <CheckCircle2 className="w-4 h-4 text-green-600" />
+                        </span>
+                      ) : (
+                        <span className="inline-flex w-6 h-6 items-center justify-center rounded-full bg-red-50 text-red-400 text-xs font-bold">X</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            Smallpdf and iLovePDF are registered trademarks of their respective owners.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-white py-20 sm:py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">Frequently Asked Questions</h2>
+            <p className="text-muted-foreground text-lg">Everything you need to know about {SITE_NAME}.</p>
+          </div>
+
+          <div className="space-y-3">
+            {[
+              {
+                q: 'What is Slate PDF?',
+                a: 'Slate PDF is a free, browser-based PDF toolkit that lets you merge, split, compress, convert, edit, sign, and secure PDF files. All processing happens locally in your browser — your files never leave your device.',
+              },
+              {
+                q: 'Is Slate PDF really free?',
+                a: 'Yes. Every tool is completely free to use with no hidden fees, no subscription tiers, and no usage limits. There are no watermarks added to your output and no file size restrictions.',
+              },
+              {
+                q: 'Are my files uploaded to your servers?',
+                a: 'No. Unlike other PDF tools, Slate PDF processes everything locally in your browser using WebAssembly and client-side JavaScript. Your files are never uploaded, stored, or transmitted to any server.',
+              },
+              {
+                q: 'Do I need to create an account?',
+                a: 'No account is required. Simply visit the site, pick a tool, and start working on your PDFs immediately.',
+              },
+              {
+                q: 'Which browsers are supported?',
+                a: 'Slate PDF works in all modern browsers including Chrome, Firefox, Safari, and Edge. It runs entirely client-side, so no plugins or installations are needed.',
+              },
+              {
+                q: 'How does Slate PDF compare to Smallpdf or iLovePDF?',
+                a: 'Smallpdf and iLovePDF are great tools, but they require uploading your files to their servers for processing. Slate PDF does everything locally in your browser, which means faster processing (no upload wait), complete privacy, no file size limits, and no account required.',
+              },
+              {
+                q: 'Can I use Slate PDF offline?',
+                a: 'Yes. Once the page is loaded, all processing happens locally in your browser. If you have a stable connection to load the site initially, you can continue using the tools even if your connection drops during processing.',
+              },
+              {
+                q: 'Is Slate PDF open source?',
+                a: 'Yes. Slate PDF is fully open source. You can inspect the code, contribute features, or self-host it. The source code is available on GitHub.',
+              },
+            ].map((faq, i) => (
+              <div key={i} className="rounded-xl border border-border overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left hover:bg-gray-50 transition-colors"
+                >
+                  <span className="font-semibold text-foreground">{faq.q}</span>
+                  <ChevronDown className={`w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 pb-5 text-muted-foreground text-sm leading-relaxed">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
