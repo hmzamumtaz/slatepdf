@@ -17,8 +17,10 @@ import { troubleshootingPosts3 } from './troubleshooting-3';
 import { troubleshootingPosts4 } from './troubleshooting-4';
 import { newPosts } from './new-posts';
 import { newPosts2 } from './new-posts-2';
+import { newPosts3 } from './new-posts-3';
 
 export const allPosts: BlogPost[] = [
+  ...newPosts3,
   ...newPosts,
   ...newPosts2,
   ...mergingPosts,
