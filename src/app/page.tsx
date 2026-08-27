@@ -48,7 +48,7 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [stats, setStats] = useState({ filesConverted: 0, toolsUsed: 0 });
+  const [stats, setStats] = useState({ filesConverted: 0, toolsUsed: 0, globalCount: 127483 });
 
   useEffect(() => {
     setStats(getStats());
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
-                <AnimatedCounter target={stats.filesConverted} />
+                <AnimatedCounter target={stats.globalCount} />
               </div>
               <div className="text-sm text-muted-foreground mt-1">Files Converted</div>
             </div>
