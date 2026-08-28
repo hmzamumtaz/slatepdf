@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { ArrowLeft, ArrowRight, Clock, Calendar } from 'lucide-react';
 import BlogBody, { slugifyHeading } from '@/components/BlogBody';
 import { getPost, posts, relatedPosts, readingMinutes, formatDate } from '@/lib/blog';
+import { SITE_AUTHOR, postAuthor } from '@/lib/author';
 import { getToolBySlug } from '@/lib/tools-data';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 
@@ -46,6 +47,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   const headings = post.blocks.filter((b) => b.type === 'h2').map((b) => (b as { text: string }).text);
   const url = `${SITE_URL}/blog/${post.slug}`;
 
+  const author = postAuthor(post);
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -53,10 +55,11 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     description: post.description,
     datePublished: post.published,
     dateModified: post.updated ?? post.published,
+    dateReviewed: post.reviewed,
     inLanguage: 'en',
     articleSection: post.category,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    author: { '@type': 'Person', name: author.name, url: author.url ?? SITE_URL },
     publisher: {
       '@type': 'Organization',
       name: SITE_NAME,
@@ -87,10 +90,22 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     ],
   };
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: author.name,
+    jobTitle: author.role,
+    description: author.bio,
+    url: author.url ?? SITE_URL,
+    knowsAbout: ['PDF', 'Document management', 'File formats', 'Digital signatures'],
+    worksFor: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+  };
+
   return (
     <div className="bg-gray-50/50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
@@ -110,12 +125,26 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
           <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">{post.category}</p>
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-4">{post.title}</h1>
           <p className="text-lg text-gray-600 leading-relaxed mb-5">{post.description}</p>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold text-base shrink-0">
+              {author.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
+            </div>
+            <div className="leading-tight">
+              <p className="text-sm font-semibold text-foreground">{author.name}</p>
+              <p className="text-xs text-muted-foreground">{author.role}</p>
+            </div>
+          </div>
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-t border-border pt-4">
             <span className="inline-flex items-center gap-1.5">
               <Calendar className="w-4 h-4" />
               {post.updated ? `Updated ${formatDate(post.updated)}` : formatDate(post.published)}
             </span>
             <span className="inline-flex items-center gap-1.5"><Clock className="w-4 h-4" />{minutes} min read</span>
+            <span className="inline-flex items-center gap-1.5" title="Last independently reviewed for accuracy">
+              <span className="inline-flex items-center gap-1 rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-medium text-green-700">
+                Reviewed {formatDate(post.reviewed)}
+              </span>
+            </span>
           </div>
         </header>
 
@@ -194,6 +223,21 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             All articles
           </Link>
         </div>
+
+        <footer className="mt-12 border-t border-border pt-8 flex gap-4">
+          <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg shrink-0">
+            {author.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-foreground">{author.name} · {author.role}</p>
+            <p className="text-sm text-gray-600 leading-relaxed mt-1">{author.bio}</p>
+            <p className="text-sm mt-2">
+              <Link href="/about" className="font-medium text-foreground underline underline-offset-2 hover:opacity-70">
+                Read more about how this site is run
+              </Link>
+            </p>
+          </div>
+        </footer>
       </article>
     </div>
   );

@@ -90,6 +90,13 @@ export default function Footer() {
             <span className="text-gray-600">|</span>
             <span>No sign-up</span>
           </div>
+          <div className="flex items-center gap-4 text-xs">
+            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            <span className="text-gray-600">|</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            <span className="text-gray-600">|</span>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+          </div>
         </div>
       </div>
     </footer>

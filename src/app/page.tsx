@@ -7,6 +7,7 @@ import { tools, categories, getToolsByCategory, featuredTool } from '@/lib/tools
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
 import { SITE_NAME } from '@/lib/site';
+import { SITE_AUTHOR } from '@/lib/author';
 import { getStats } from '@/lib/stats';
 
 function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
@@ -324,6 +325,27 @@ export default function Home() {
           <p className="text-center text-sm text-muted-foreground mt-6">
             Smallpdf and iLovePDF are registered trademarks of their respective owners.
           </p>
+        </div>
+      </section>
+
+      {/* Editorial credibility — E-E-A-T */}
+      <section className="bg-white py-10 sm:py-12 border-b border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 rounded-2xl border border-border bg-gray-50 p-6 sm:p-8">
+            <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg shrink-0">
+              {SITE_AUTHOR.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-foreground">
+                Written and reviewed by {SITE_AUTHOR.name}, {SITE_AUTHOR.role}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+                Every guide is written from hands-on experience and independently fact-checked.
+                Nothing here is auto-generated — see how we keep content accurate on the{' '}
+                <Link href="/about" className="font-medium underline underline-offset-2 hover:opacity-70">About page</Link>.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import { SITE_NAME, SITE_URL } from './site';
+import { SITE_AUTHOR } from './author';
 
 /** Organization + WebSite schema for the homepage. */
 export function generateOrganizationSchema() {
@@ -10,6 +11,15 @@ export function generateOrganizationSchema() {
     logo: `${SITE_URL}/logo.svg`,
     description: 'Free PDF toolkit that runs in your browser. Edit, convert, merge, compress, and secure PDFs without uploading.',
     sameAs: [],
+    founder: { '@type': 'Person', name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role, url: `${SITE_URL}/about` },
+    employee: { '@type': 'Person', name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role, url: `${SITE_URL}/about` },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'support@slatepdf.space',
+      areaServed: 'Worldwide',
+      availableLanguage: 'English',
+    },
   };
 }
 

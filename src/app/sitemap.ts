@@ -27,6 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    // Trust / entity pages
+    { url: `${SITE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${SITE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${SITE_URL}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     // Tool pages - these are the money pages
     ...tools.map((tool) => ({
       url: `${SITE_URL}/tools/${tool.slug}`,
@@ -37,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog articles
     ...posts.map((post) => ({
       url: `${SITE_URL}/blog/${post.slug}`,
-      lastModified: new Date(post.updated ?? post.published),
+      lastModified: new Date(post.reviewed ?? post.updated ?? post.published),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),

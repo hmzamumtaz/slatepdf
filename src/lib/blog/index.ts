@@ -1,17 +1,35 @@
 import { allPosts } from './posts';
-import { BLOG_CATEGORIES, readingMinutes, type BlogCategory, type BlogPost } from './types';
+import { BLOG_CATEGORIES, readingMinutes, type BlogCategory, type BlogPost, type Author } from './types';
+import { SITE_AUTHOR, postAuthor } from '../author';
 
-export type { BlogPost, BlogCategory, Block, Faq } from './types';
+export type { BlogPost, BlogCategory, Block, Faq, Author } from './types';
 export { BLOG_CATEGORIES, readingMinutes } from './types';
+export { SITE_AUTHOR, postAuthor } from '../author';
+
+/** A published post guaranteed to carry an author and a reviewed date. */
+export type EnrichedPost = BlogPost & { author: Author; reviewed: string };
+
+/**
+ * Every article carries the site-wide named author and a "reviewed" date
+ * (defaulting to its update/publication date). This applies E-E-A-T metadata
+ * across all posts from a single place, so source files stay clean.
+ */
+function enriched(post: BlogPost): EnrichedPost {
+  const author = postAuthor(post);
+  const reviewed = post.reviewed ?? post.updated ?? post.published;
+  return { ...post, author, reviewed };
+}
 
 /** Newest first — the order the index and the sitemap use. */
-export const posts: BlogPost[] = [...allPosts].sort((a, b) =>
-  (b.updated ?? b.published).localeCompare(a.updated ?? a.published) || a.slug.localeCompare(b.slug),
-);
+export const posts: EnrichedPost[] = [...allPosts]
+  .map(enriched)
+  .sort((a, b) =>
+    (b.updated ?? b.published).localeCompare(a.updated ?? a.published) || a.slug.localeCompare(b.slug),
+  );
 
 const bySlug = new Map(posts.map(p => [p.slug, p]));
 
-export function getPost(slug: string): BlogPost | undefined {
+export function getPost(slug: string): EnrichedPost | undefined {
   return bySlug.get(slug);
 }
 

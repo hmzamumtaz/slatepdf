@@ -14,6 +14,21 @@ export interface Faq {
   a: string;
 }
 
+/**
+ * A named, human author for the site's articles. Publishing every post under
+ * a real byline is a core E-E-A-T signal (Expertise + Trustworthiness).
+ */
+export interface Author {
+  /** Display name, e.g. "Alex Carter". */
+  name: string;
+  /** Short role e.g. "PDF Workflow Editor". */
+  role: string;
+  /** 1-2 sentence bio shown under the byline. */
+  bio: string;
+  /** Link to the author's About page or profile. */
+  url?: string;
+}
+
 export const BLOG_CATEGORIES = [
   'Merging & Organizing',
   'Converting',
@@ -37,6 +52,12 @@ export interface BlogPost {
   category: BlogCategory;
   published: string;
   updated?: string;
+  /** ISO date of the last human fact-check / editorial review. */
+  reviewed?: string;
+  /** Optional named author override. Falls back to the site-wide author. */
+  author?: Author;
+  /** Optional first-person "I've actually done this" note for Experience. */
+  experience?: string;
   /** Slug of the tool the article sends readers to. */
   tool?: string;
   blocks: Block[];
