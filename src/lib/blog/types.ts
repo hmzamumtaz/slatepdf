@@ -19,7 +19,7 @@ export interface Faq {
  * a real byline is a core E-E-A-T signal (Expertise + Trustworthiness).
  */
 export interface Author {
-  /** Display name, e.g. "Alex Carter". */
+  /** Display name, e.g. "Hamza M.". */
   name: string;
   /** Short role e.g. "PDF Workflow Editor". */
   role: string;

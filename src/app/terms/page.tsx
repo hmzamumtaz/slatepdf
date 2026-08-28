@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
+import { SITE_EMAIL } from '@/lib/author';
 
 export const metadata: Metadata = {
   title: `Terms of Service | ${SITE_NAME}`,
@@ -75,7 +76,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-foreground mb-2">Contact</h2>
             <p>
-              Questions about these terms can be sent to <span className="font-medium">support@slatepdf.space</span>.
+              Questions about these terms can be sent to <span className="font-medium">{SITE_EMAIL}</span>.
             </p>
           </section>
         </div>

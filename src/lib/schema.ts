@@ -1,5 +1,5 @@
 import { SITE_NAME, SITE_URL } from './site';
-import { SITE_AUTHOR } from './author';
+import { SITE_AUTHOR, SITE_EMAIL } from './author';
 
 /** Organization + WebSite schema for the homepage. */
 export function generateOrganizationSchema() {
@@ -16,7 +16,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      email: 'support@slatepdf.space',
+      email: SITE_EMAIL,
       areaServed: 'Worldwide',
       availableLanguage: 'English',
     },

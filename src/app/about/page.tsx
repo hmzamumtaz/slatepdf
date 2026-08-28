@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Lock, BookOpenText, Mail } from 'lucide-react';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
-import { SITE_AUTHOR } from '@/lib/author';
+import { SITE_AUTHOR, SITE_EMAIL } from '@/lib/author';
 
 export const metadata: Metadata = {
   title: `About ${SITE_NAME}`,
@@ -130,7 +130,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-bold mb-1">Questions or corrections?</h3>
               <p className="text-gray-300 leading-relaxed">
                 If you spot something inaccurate or want to suggest a guide, email us at
-                <span className="text-white font-medium"> support@slatepdf.space</span>. We read
+                <span className="text-white font-medium"> {SITE_EMAIL}</span>. We read
                 every message and correct errors quickly.
               </p>
             </div>
