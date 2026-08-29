@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { PDFDocument, degrees, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument, degrees, rgb, StandardFonts, type PDFFont } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 import { SITE_NAME, SITE_SLUG } from './site';
 import { SERVICE_BUSY_MESSAGE } from './errors';
+import { needsUnicodeFallback, isRenderable, unsupportedCharacters, embedUnicodeFallback } from './unicode-font';
 
 export function getOutputFilename(slug: string, ext: string, seq?: number): string {
   const now = new Date();
@@ -18,7 +19,39 @@ export async function readFileAsArrayBuffer(file: File): Promise<ArrayBuffer> {
   return file.arrayBuffer();
 }
 
+/**
+ * True when the PDF carries the standard security handler's `/Encrypt` entry
+ * — whether or not a password is actually needed to open it. An owner-
+ * password-only file (the common "no printing/copying" case) is still
+ * encrypted by this definition, which is exactly what callers need to know:
+ * pdf-lib can parse an encrypted file's structure (object numbers, page
+ * count, trailer) without a password, but it has no decryption code at all —
+ * `ignoreEncryption` only suppresses the error it would otherwise throw.
+ * Every string and content stream it then reads or copies is still raw
+ * ciphertext, so anything built from it (merged, split, rotated,
+ * watermarked...) comes out corrupted while silently "succeeding".
+ */
+function isEncryptedBytes(bytes: Uint8Array): boolean {
+  const marker = [0x2f, 0x45, 0x6e, 0x63, 0x72, 0x79, 0x70, 0x74]; // "/Encrypt"
+  outer: for (let i = bytes.length - 1; i >= marker.length - 1; i--) {
+    if (bytes[i] !== marker[marker.length - 1]) continue;
+    for (let j = 0; j < marker.length; j++) {
+      if (bytes[i - marker.length + 1 + j] !== marker[j]) continue outer;
+    }
+    return true;
+  }
+  return false;
+}
+
 export async function loadPdf(data: ArrayBuffer): Promise<PDFDocument> {
+  // Refusing here, once, protects every caller (merge/split/rotate/watermark/
+  // compress/repair/edit/...) instead of each one silently corrupting its
+  // output on encrypted input.
+  if (isEncryptedBytes(new Uint8Array(data))) {
+    throw new OpenPasswordRequiredError(
+      'This PDF is password protected, so it can’t be read for editing. Remove the password with Unlock PDF first, then bring the result back here.',
+    );
+  }
   try {
     return await PDFDocument.load(data, { ignoreEncryption: true });
   } catch (err: any) {
@@ -247,8 +280,40 @@ export interface RepairResult {
  * far more tolerant parser), re-rendering each page and rebuilding the PDF
  * with an invisible text layer so text stays selectable.
  */
+/**
+ * A structural repair can "succeed" — pdf-lib parses a page count and writes a
+ * clean file — while every page's content stream is actually empty or garbage,
+ * which is exactly the kind of damage a truncated/corrupted file has. Confirm
+ * each page has more than a trivial number of drawing operators before
+ * trusting the fast path; if any page looks blank, the slower rasterize
+ * fallback below is the one actually built to recover damaged content.
+ */
+async function pagesLookIntact(bytes: Uint8Array, expectedPages: number): Promise<boolean> {
+  let pdf;
+  try {
+    const pdfjsLib = await getPdfJs();
+    pdf = await pdfjsLib.getDocument({ data: bytes, stopAtErrors: false }).promise;
+    if (pdf.numPages !== expectedPages) return false;
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const ops = await page.getOperatorList();
+      if (!ops || ops.fnArray.length <= 2) return false;
+    }
+    return true;
+  } catch {
+    return false;
+  } finally {
+    void pdf?.cleanup();
+  }
+}
+
 export async function repairPdf(file: File, onProgress?: (msg: string) => void): Promise<RepairResult> {
   const buf = await readFileAsArrayBuffer(file);
+  if (isEncryptedBytes(new Uint8Array(buf))) {
+    throw new OpenPasswordRequiredError(
+      'This PDF is password protected, so its contents can’t be read to check or repair. Remove the password with Unlock PDF first, then bring the result back here.',
+    );
+  }
 
   try {
     onProgress?.('Attempting structural repair...');
@@ -256,6 +321,8 @@ export async function repairPdf(file: File, onProgress?: (msg: string) => void):
     const pageCount = src.getPageCount();
     if (pageCount === 0) throw new Error('no pages');
     const bytes = await src.save({ useObjectStreams: true, addDefaultPage: false });
+    onProgress?.('Verifying the repaired pages...');
+    if (!(await pagesLookIntact(bytes, pageCount))) throw new Error('repaired pages are empty or unreadable');
     return {
       blob: toBlob(bytes),
       pages: pageCount,
@@ -271,6 +338,7 @@ export async function repairPdf(file: File, onProgress?: (msg: string) => void):
   const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf), stopAtErrors: false }).promise;
   const rebuilt = await PDFDocument.create();
   const font = await rebuilt.embedFont(StandardFonts.Helvetica);
+  const unicodeFont = await embedUnicodeFallback(rebuilt);
 
   for (let i = 1; i <= pdf.numPages; i++) {
     onProgress?.(`Recovering page ${i} of ${pdf.numPages}...`);
@@ -287,8 +355,9 @@ export async function repairPdf(file: File, onProgress?: (msg: string) => void):
     const img = await rebuilt.embedJpg(canvasToJpgBytes(canvas, 0.92));
     const pdfPage = rebuilt.addPage([baseVp.width, baseVp.height]);
     pdfPage.drawImage(img, { x: 0, y: 0, width: baseVp.width, height: baseVp.height });
-    await drawInvisibleTextLayer(pdfPage, page, baseVp, font);
+    await drawInvisibleTextLayer(pdfPage, page, baseVp, font, unicodeFont);
   }
+  void pdf.cleanup();
 
   return {
     blob: toBlob(await rebuilt.save()),
@@ -298,9 +367,14 @@ export async function repairPdf(file: File, onProgress?: (msg: string) => void):
   };
 }
 
-// Overlay the page's real text (from pdf.js) as invisible glyphs so
-// rasterized pages stay selectable and searchable.
-async function drawInvisibleTextLayer(pdfPage: any, pdfjsPage: any, baseVp: any, font: any) {
+/**
+ * Overlay the page's real text (from pdf.js) as invisible glyphs so
+ * rasterized pages stay selectable and searchable. Prefers the bundled
+ * Unicode fallback font for a run it can render in full — Helvetica alone
+ * would otherwise silently blank out anything outside Latin-1 (Cyrillic,
+ * Greek, Vietnamese, Polish/Turkish letters, smart punctuation...).
+ */
+async function drawInvisibleTextLayer(pdfPage: any, pdfjsPage: any, baseVp: any, font: any, unicodeFont: any = null) {
   try {
     const content = await pdfjsPage.getTextContent();
     for (const item of content.items) {
@@ -309,11 +383,13 @@ async function drawInvisibleTextLayer(pdfPage: any, pdfjsPage: any, baseVp: any,
       const fontSize = Math.abs(tx[3]) || Math.abs(tx[0]) || 10;
       const x = tx[4];
       const y = tx[5];
-      const clean = item.str.replace(/[^\x20-\x7E\xA0-\xFF]/g, ' ');
+      const raw = item.str;
+      const useUnicode = unicodeFont && needsUnicodeFallback(raw) && isRenderable(raw);
+      const clean = useUnicode ? raw : raw.replace(/[^\x20-\x7E\xA0-\xFF]/g, ' ');
       if (!clean.trim()) continue;
       try {
-        pdfPage.drawText(clean, { x, y, size: fontSize, font, opacity: 0 });
-      } catch { /* skip glyphs the fallback font can't encode */ }
+        pdfPage.drawText(clean, { x, y, size: fontSize, font: useUnicode ? unicodeFont : font, opacity: 0 });
+      } catch { /* skip glyphs neither font can encode */ }
     }
   } catch { /* text layer is best-effort */ }
 }
@@ -333,67 +409,77 @@ export async function compressToTargetSize(file: File, targetBytes: number, onPr
 
   const originalSize = file.size;
   const buf = await readFileAsArrayBuffer(file);
+  if (isEncryptedBytes(new Uint8Array(buf))) {
+    throw new OpenPasswordRequiredError(
+      'This PDF is password protected, so it can’t be read to compress. Remove the password with Unlock PDF first, then bring the result back here.',
+    );
+  }
   const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
   const numPages = pdfDoc.numPages;
 
-  if (targetBytes >= originalSize) {
-    return { blob: new Blob([buf], { type: 'application/pdf' }), originalSize, compressedSize: originalSize, targetSize: targetBytes, achieved: true, quality: 1, pages: numPages };
-  }
-
-  // Pass 1 — lossless: rebuild with compressed object streams. If this alone
-  // hits the target the text stays fully selectable and nothing is rasterized.
   try {
-    onProgress?.('Trying lossless compression...');
-    const lossless = await optimizePdf(file);
-    if (lossless.blob.size <= targetBytes) {
-      return { blob: lossless.blob, originalSize, compressedSize: lossless.blob.size, targetSize: targetBytes, achieved: true, quality: 1, pages: numPages };
+    if (targetBytes >= originalSize) {
+      return { blob: new Blob([buf], { type: 'application/pdf' }), originalSize, compressedSize: originalSize, targetSize: targetBytes, achieved: true, quality: 1, pages: numPages };
     }
-  } catch { /* corrupted structure — continue with raster pipeline */ }
 
-  async function renderAndBuild(scale: number): Promise<Blob> {
-    const doc = await PDFDocument.create();
-    const font = await doc.embedFont(StandardFonts.Helvetica);
-    for (let i = 1; i <= numPages; i++) {
-      const page = await pdfDoc.getPage(i);
-      const baseVp = page.getViewport({ scale: 1 });
-      const clamped = safeScale(baseVp.width, baseVp.height, scale, 4000);
-      const viewport = page.getViewport({ scale: clamped });
-      const canvas = document.createElement('canvas');
-      canvas.width = Math.floor(viewport.width);
-      canvas.height = Math.floor(viewport.height);
-      const ctx = canvas.getContext('2d')!;
-      await page.render({ canvasContext: ctx, viewport, canvas }).promise;
-      const img = await doc.embedJpg(canvasToJpgBytes(canvas, qualityForScale(scale)));
-      // Page keeps its original size in points — only the raster resolution changes.
-      const pdfPage = doc.addPage([baseVp.width, baseVp.height]);
-      pdfPage.drawImage(img, { x: 0, y: 0, width: baseVp.width, height: baseVp.height });
-      await drawInvisibleTextLayer(pdfPage, page, baseVp, font);
+    // Pass 1 — lossless: rebuild with compressed object streams. If this alone
+    // hits the target the text stays fully selectable and nothing is rasterized.
+    try {
+      onProgress?.('Trying lossless compression...');
+      const lossless = await optimizePdf(file);
+      if (lossless.blob.size <= targetBytes) {
+        return { blob: lossless.blob, originalSize, compressedSize: lossless.blob.size, targetSize: targetBytes, achieved: true, quality: 1, pages: numPages };
+      }
+    } catch { /* corrupted structure — continue with raster pipeline */ }
+
+    async function renderAndBuild(scale: number): Promise<Blob> {
+      const doc = await PDFDocument.create();
+      const font = await doc.embedFont(StandardFonts.Helvetica);
+      const unicodeFont = await embedUnicodeFallback(doc);
+      for (let i = 1; i <= numPages; i++) {
+        const page = await pdfDoc.getPage(i);
+        const baseVp = page.getViewport({ scale: 1 });
+        const clamped = safeScale(baseVp.width, baseVp.height, scale, 4000);
+        const viewport = page.getViewport({ scale: clamped });
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
+        const ctx = canvas.getContext('2d')!;
+        await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+        const img = await doc.embedJpg(canvasToJpgBytes(canvas, qualityForScale(scale)));
+        // Page keeps its original size in points — only the raster resolution changes.
+        const pdfPage = doc.addPage([baseVp.width, baseVp.height]);
+        pdfPage.drawImage(img, { x: 0, y: 0, width: baseVp.width, height: baseVp.height });
+        await drawInvisibleTextLayer(pdfPage, page, baseVp, font, unicodeFont);
+      }
+      return toBlob(await doc.save());
     }
-    return toBlob(await doc.save());
-  }
 
-  function qualityForScale(scale: number): number {
-    if (scale >= 2) return 0.92;
-    if (scale >= 1.5) return 0.85;
-    if (scale >= 1.2) return 0.75;
-    if (scale >= 1) return 0.65;
-    if (scale >= 0.8) return 0.55;
-    if (scale >= 0.6) return 0.45;
-    return 0.35;
-  }
-
-  const scales = [2, 1.8, 1.6, 1.4, 1.2, 1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4];
-
-  for (const scale of scales) {
-    onProgress?.(`Trying quality level ${Math.round(qualityForScale(scale) * 100)}%...`);
-    const blob = await renderAndBuild(scale);
-    if (blob.size <= targetBytes) {
-      return { blob, originalSize, compressedSize: blob.size, targetSize: targetBytes, achieved: true, quality: qualityForScale(scale), pages: numPages };
+    function qualityForScale(scale: number): number {
+      if (scale >= 2) return 0.92;
+      if (scale >= 1.5) return 0.85;
+      if (scale >= 1.2) return 0.75;
+      if (scale >= 1) return 0.65;
+      if (scale >= 0.8) return 0.55;
+      if (scale >= 0.6) return 0.45;
+      return 0.35;
     }
-  }
 
-  const finalBlob = await renderAndBuild(0.4);
-  return { blob: finalBlob, originalSize, compressedSize: finalBlob.size, targetSize: targetBytes, achieved: finalBlob.size <= targetBytes, quality: 0.35, pages: numPages };
+    const scales = [2, 1.8, 1.6, 1.4, 1.2, 1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4];
+
+    for (const scale of scales) {
+      onProgress?.(`Trying quality level ${Math.round(qualityForScale(scale) * 100)}%...`);
+      const blob = await renderAndBuild(scale);
+      if (blob.size <= targetBytes) {
+        return { blob, originalSize, compressedSize: blob.size, targetSize: targetBytes, achieved: true, quality: qualityForScale(scale), pages: numPages };
+      }
+    }
+
+    const finalBlob = await renderAndBuild(0.4);
+    return { blob: finalBlob, originalSize, compressedSize: finalBlob.size, targetSize: targetBytes, achieved: finalBlob.size <= targetBytes, quality: 0.35, pages: numPages };
+  } finally {
+    void pdfDoc.cleanup();
+  }
 }
 
 /**
@@ -459,9 +545,16 @@ export async function addPageNumbersToFile(
 }
 
 export async function addWatermarkToFile(file: File, text: string, options?: { fontSize?: number; opacity?: number; rotation?: number }): Promise<Blob> {
+  // Helvetica only encodes WinAnsi/Latin-1 — CJK, Cyrillic, Arabic or even a
+  // curly apostrophe/em-dash from autocorrect would otherwise throw and fail
+  // the whole watermark instead of just this one run of text.
+  if (!isRenderable(text)) {
+    const bad = unsupportedCharacters(text).slice(0, 5).join(' ');
+    throw new Error(`This watermark text contains characters this app can't render yet (${bad}). Try different text — Latin, Cyrillic, Greek, Vietnamese and most accented languages all work.`);
+  }
   const buf = await readFileAsArrayBuffer(file);
   const src = await loadPdf(buf);
-  const font = await src.embedFont(StandardFonts.HelveticaBold);
+  const font = needsUnicodeFallback(text) ? await embedUnicodeFallback(src, true) : await src.embedFont(StandardFonts.HelveticaBold);
 
   const fontSize = options?.fontSize || 50;
   const opacity = options?.opacity || 0.3;
@@ -556,9 +649,16 @@ export class OpenPasswordRequiredError extends Error {
  * can ask for it.
  */
 export async function unlockPdf(file: File, password: string = ''): Promise<Blob> {
-  const pdfjsLib = await getPdfJs();
-
   const buf = await readFileAsArrayBuffer(file);
+
+  // Nothing to strip: don't pay the cost of rasterizing a file that was never
+  // encrypted in the first place — that would only throw away its vector
+  // text, embedded fonts and links for no reason.
+  if (!isEncryptedBytes(new Uint8Array(buf))) {
+    return new Blob([buf], { type: 'application/pdf' });
+  }
+
+  const pdfjsLib = await getPdfJs();
   let pdf;
   try {
     pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf), password }).promise;
@@ -576,24 +676,29 @@ export async function unlockPdf(file: File, password: string = ''): Promise<Blob
   }
   const unlocked = await PDFDocument.create();
   const font = await unlocked.embedFont(StandardFonts.Helvetica);
+  const unicodeFont = await embedUnicodeFallback(unlocked);
 
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const baseVp = page.getViewport({ scale: 1 });
-    const scale = safeScale(baseVp.width, baseVp.height, 2, 4000);
-    const viewport = page.getViewport({ scale });
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.floor(viewport.width);
-    canvas.height = Math.floor(viewport.height);
-    const ctx = canvas.getContext('2d')!;
-    await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+  try {
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = safeScale(baseVp.width, baseVp.height, 2, 4000);
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.floor(viewport.width);
+      canvas.height = Math.floor(viewport.height);
+      const ctx = canvas.getContext('2d')!;
+      await page.render({ canvasContext: ctx, viewport, canvas }).promise;
 
-    const img = await unlocked.embedJpg(canvasToJpgBytes(canvas, 0.92));
-    // Keep the page at its original size in points (not the render-pixel size).
-    const pdfPage = unlocked.addPage([baseVp.width, baseVp.height]);
-    pdfPage.drawImage(img, { x: 0, y: 0, width: baseVp.width, height: baseVp.height });
-    // Preserve the document's real text so the unlocked copy stays searchable.
-    await drawInvisibleTextLayer(pdfPage, page, baseVp, font);
+      const img = await unlocked.embedJpg(canvasToJpgBytes(canvas, 0.92));
+      // Keep the page at its original size in points (not the render-pixel size).
+      const pdfPage = unlocked.addPage([baseVp.width, baseVp.height]);
+      pdfPage.drawImage(img, { x: 0, y: 0, width: baseVp.width, height: baseVp.height });
+      // Preserve the document's real text so the unlocked copy stays searchable.
+      await drawInvisibleTextLayer(pdfPage, page, baseVp, font, unicodeFont);
+    }
+  } finally {
+    void pdf.cleanup();
   }
 
   return toBlob(await unlocked.save());
@@ -601,37 +706,30 @@ export async function unlockPdf(file: File, password: string = ''): Promise<Blob
 
 export async function isPdfPasswordProtected(file: File): Promise<boolean> {
   const buf = await readFileAsArrayBuffer(file);
-  // A PDF is encrypted iff its trailer carries an /Encrypt dictionary. Checking
-  // the raw bytes avoids misreporting merely-corrupted files as "protected".
-  const bytes = new Uint8Array(buf);
-  const marker = [0x2f, 0x45, 0x6e, 0x63, 0x72, 0x79, 0x70, 0x74]; // "/Encrypt"
-  let hasEncryptMarker = false;
-  outer: for (let i = bytes.length - 1; i >= marker.length - 1; i--) {
-    if (bytes[i] !== marker[marker.length - 1]) continue;
-    for (let j = 0; j < marker.length; j++) {
-      if (bytes[i - marker.length + 1 + j] !== marker[j]) continue outer;
-    }
-    hasEncryptMarker = true;
-    break;
-  }
-  if (!hasEncryptMarker) return false;
+  return isEncryptedBytes(new Uint8Array(buf));
+}
 
-  // /Encrypt found — confirm a password is actually required to open it
-  // (owner-password-only files open without one).
-  try {
-    const pdfjsLib = await getPdfJs();
-    await pdfjsLib.getDocument({ data: bytes.slice() }).promise;
-    return true; // opens without a password, but is still encrypted — unlock is meaningful
-  } catch {
-    return true;
-  }
+/** A random password strong enough to stand in as an owner password no one is expected to type. */
+function randomPassword(): string {
+  const bytes = crypto.getRandomValues(new Uint8Array(24));
+  return btoa(String.fromCharCode(...bytes)).replace(/[+/=]/g, '');
 }
 
 export async function protectPdf(file: File, userPassword: string, ownerPassword?: string, permissions?: { allowPrinting?: boolean; allowModifying?: boolean; allowCopying?: boolean; allowAnnotating?: boolean; allowFillingForms?: boolean; allowExtraction?: boolean; allowAssembly?: boolean }): Promise<Blob> {
-  const { encryptPDF } = await import('@pdfsmaller/pdf-encrypt-lite');
   const buf = await readFileAsArrayBuffer(file);
+  if (isEncryptedBytes(new Uint8Array(buf))) {
+    throw new OpenPasswordRequiredError(
+      'This PDF is already password protected. Remove the existing password with Unlock PDF first, then protect it with the new one.',
+    );
+  }
+
+  const { encryptPDF } = await import('@pdfsmaller/pdf-encrypt-lite');
   const pdfBytes = new Uint8Array(buf);
-  const autoOwner = ownerPassword || userPassword + '_owner';
+  // Callers never supply their own owner password today, so this used to be
+  // derived from the user password with a fixed suffix — guessable by anyone
+  // who knew the convention, which defeated the point of the permission
+  // restrictions below. A random one can't be guessed at all.
+  const autoOwner = ownerPassword || randomPassword();
   const options: any = {
     ownerPassword: autoOwner,
   };
@@ -650,6 +748,9 @@ export async function protectPdf(file: File, userPassword: string, ownerPassword
 
 export async function jpgToPdf(files: File[]): Promise<Blob> {
   if (files.length === 0) throw new Error('Select at least one image.');
+  const A4_W = 595.28;
+  const A4_H = 841.89;
+  const MARGIN = 24;
   const merged = await PDFDocument.create();
   for (const file of files) {
     const buf = await readFileAsArrayBuffer(file);
@@ -666,8 +767,17 @@ export async function jpgToPdf(files: File[]): Promise<Blob> {
     } catch {
       throw new Error(`"${file.name}" could not be read as an image. It may be corrupted or in an unsupported format.`);
     }
-    const page = merged.addPage([image.width, image.height]);
-    page.drawImage(image, { x: 0, y: 0, width: image.width, height: image.height });
+    // A page sized to the image's raw pixel count (treated as PDF points)
+    // produced absurdly oversized, non-standard pages for any real photo —
+    // fit it onto a normal A4 page instead, scaled down only if it's larger
+    // than the printable area.
+    const maxW = A4_W - MARGIN * 2;
+    const maxH = A4_H - MARGIN * 2;
+    const scale = Math.min(maxW / image.width, maxH / image.height, 1);
+    const w = image.width * scale;
+    const h = image.height * scale;
+    const page = merged.addPage([A4_W, A4_H]);
+    page.drawImage(image, { x: (A4_W - w) / 2, y: (A4_H - h) / 2, width: w, height: h });
   }
   return toBlob(await merged.save());
 }
@@ -681,6 +791,11 @@ async function transcodeImageToPng(file: File): Promise<Uint8Array> {
   bitmap.close();
   const dataUrl = canvas.toDataURL('image/png');
   return Uint8Array.from(atob(dataUrl.split(',')[1]), c => c.charCodeAt(0));
+}
+
+/** Same re-encode, from raw bytes rather than a File — for images already unpacked from a document. */
+async function transcodeImageBytesToPng(bytes: Uint8Array, mime: string): Promise<Uint8Array> {
+  return transcodeImageToPng(new File([bytes as unknown as BlobPart], 'image', { type: mime }));
 }
 
 export async function pdfToImages(
@@ -733,21 +848,41 @@ export async function htmlToPdf(html: string): Promise<Blob> {
   const fBoldItalic = await pdf.embedFont(StandardFonts.HelveticaBoldOblique);
   const fCourier = await pdf.embedFont(StandardFonts.Courier);
 
-  // WinAnsi sanitize
+  // A Unicode fallback is only embedded (and only costs file size) when the
+  // source actually contains something the standard fonts can't encode.
+  const mayNeedUnicode = needsUnicodeFallback(html);
+  const fUnicodeRegular = mayNeedUnicode ? await embedUnicodeFallback(pdf, false) : null;
+  const fUnicodeBold = mayNeedUnicode ? await embedUnicodeFallback(pdf, true) : null;
+  let hadUnsupportedText = false;
+
+  // WinAnsi-and-beyond sanitize: keeps anything the standard fonts or the
+  // Unicode fallback can draw; only a truly unsupported character (CJK,
+  // Arabic, Hebrew, Devanagari, Thai...) becomes a visible '?' rather than
+  // silently vanishing the way it used to.
   function san(text: string): string {
     return text
       .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, ' ')
       .replace(/[\u{1F000}-\u{1FFFF}]/gu, '?')
       .replace(/[\u{2600}-\u{27BF}]/gu, '-')
-      .replace(/[^\x20-\x7E\xA0-\xFF]/g, c => {
-        const code = c.charCodeAt(0);
-        if (code === 0x2013 || code === 0x2014) return '-';
-        if (code === 0x2018 || code === 0x2019) return "'";
-        if (code === 0x201C || code === 0x201D) return '"';
-        if (code === 0x2026) return '...';
-        if (code === 0x2022 || code === 0x2023) return '\u2022';
-        return '';
+      .replace(/[\u2018\u2019]/g, "'")
+      .replace(/[\u201c\u201d]/g, '"')
+      .replace(/[\u2013\u2014]/g, '-')
+      .replace(/\u2026/g, '...')
+      .replace(/[\u2022\u2023]/g, '\u2022')
+      // `.` (without the `s` flag) never matches line terminators, so
+      // newlines survive untouched for the line-splitting logic below.
+      .replace(/./gu, c => {
+        if (isRenderable(c)) return c;
+        hadUnsupportedText = true;
+        return '?';
       });
+  }
+
+  // The standard font for this run, or the matching-weight Unicode fallback
+  // when the run needs it and one was embedded.
+  function fontFor(text: string, bold: boolean, base: PDFFont): PDFFont {
+    if (!mayNeedUnicode || !needsUnicodeFallback(text)) return base;
+    return (bold ? fUnicodeBold : fUnicodeRegular) ?? base;
   }
 
   function checkPage(needed: number) {
@@ -777,7 +912,8 @@ export async function htmlToPdf(html: string): Promise<Blob> {
 
   function drawLine(text: string, fontSize: number, isBold: boolean, isItalic: boolean, indent: number = 0, useCourier: boolean = false) {
     const clean = san(text);
-    const f = useCourier ? fCourier : isBold && isItalic ? fBoldItalic : isBold ? fBold : isItalic ? fItalic : fRegular;
+    const base = useCourier ? fCourier : isBold && isItalic ? fBoldItalic : isBold ? fBold : isItalic ? fItalic : fRegular;
+    const f = useCourier ? base : fontFor(clean, isBold, base);
     // Scale line height with the font so wrapped headings don't overlap.
     const lh = Math.max(LH, fontSize * 1.25);
     const lines = wrapText(clean, f, fontSize, USABLE_W - indent);
@@ -803,23 +939,21 @@ export async function htmlToPdf(html: string): Promise<Blob> {
     const maxCols = Math.max(...allRows.map(r => r.length));
     const colW = USABLE_W / maxCols;
     const cellLineH = 11;
-    const MAX_CELL_LINES = 6;
 
     for (let ri = 0; ri < allRows.length; ri++) {
       const row = allRows[ri];
       const isHeader = ri === 0;
-      const cellFont = isHeader ? fBold : fRegular;
+      const baseCellFont = isHeader ? fBold : fRegular;
 
       // Wrap every cell first so the row grows to fit its tallest cell —
       // multi-line content must not be silently truncated.
       const wrapped: string[][] = [];
+      const cellFonts: PDFFont[] = [];
       let maxLines = 1;
       for (let c = 0; c < maxCols; c++) {
-        let lines = wrapText(row[c] || '', cellFont, 9, colW - 6);
-        if (lines.length > MAX_CELL_LINES) {
-          lines = lines.slice(0, MAX_CELL_LINES);
-          lines[MAX_CELL_LINES - 1] += ' ...';
-        }
+        const cellFont = fontFor(row[c] || '', isHeader, baseCellFont);
+        cellFonts.push(cellFont);
+        const lines = wrapText(row[c] || '', cellFont, 9, colW - 6);
         wrapped.push(lines);
         maxLines = Math.max(maxLines, lines.length);
       }
@@ -838,7 +972,7 @@ export async function htmlToPdf(html: string): Promise<Blob> {
 
         const lines = wrapped[c];
         for (let li = 0; li < lines.length; li++) {
-          page.drawText(lines[li], { x: x + 3, y: cursorY + 2 - li * cellLineH, size: 9, font: cellFont, color: isHeader ? rgb(0.15, 0.25, 0.5) : rgb(0.1, 0.1, 0.1) });
+          page.drawText(lines[li], { x: x + 3, y: cursorY + 2 - li * cellLineH, size: 9, font: cellFonts[c], color: isHeader ? rgb(0.15, 0.25, 0.5) : rgb(0.1, 0.1, 0.1) });
         }
       }
       cursorY -= rowH;
@@ -874,7 +1008,7 @@ export async function htmlToPdf(html: string): Promise<Blob> {
     const maxW = USABLE_W - indent;
 
     type Token = { text: string; f: any };
-    const fontFor = (bold: boolean, italic: boolean) =>
+    const standardFontFor = (bold: boolean, italic: boolean) =>
       bold && italic ? fBoldItalic : bold ? fBold : italic ? fItalic : fRegular;
 
     let line: Token[] = [];
@@ -894,12 +1028,13 @@ export async function htmlToPdf(html: string): Promise<Blob> {
     };
 
     for (const frag of frags) {
-      const f = fontFor(frag.bold, frag.italic);
+      const base = standardFontFor(frag.bold, frag.italic);
       const parts = san(frag.text).split('\n');
       for (let pi = 0; pi < parts.length; pi++) {
         if (pi > 0) flushLine();
         for (const word of parts[pi].split(/\s+/)) {
           if (!word) continue;
+          const f = fontFor(word, frag.bold, base);
           const w = f.widthOfTextAtSize(word + ' ', size);
           if (lineW + w > maxW && line.length > 0) flushLine();
           line.push({ text: word, f });
@@ -936,8 +1071,8 @@ export async function htmlToPdf(html: string): Promise<Blob> {
           const bullet = tag === 'ol' ? `${idx + 1}. ` : '\u2022 ';
           checkPage(LH);
           const liText = san(li.textContent || '');
-          const f = fRegular;
-          page.drawText(bullet, { x: ML + indent, y: cursorY, size: 11, font: f, color: rgb(0.1, 0.1, 0.1) });
+          const f = fontFor(liText, false, fRegular);
+          page.drawText(bullet, { x: ML + indent, y: cursorY, size: 11, font: fRegular, color: rgb(0.1, 0.1, 0.1) });
           const lines = wrapText(liText, f, 11, USABLE_W - indent - 16);
           for (const line of lines) {
             checkPage(LH);
@@ -975,6 +1110,13 @@ export async function htmlToPdf(html: string): Promise<Blob> {
             let img;
             if (mime === 'image/png') img = await pdf.embedPng(imgBytes);
             else if (mime === 'image/jpeg' || mime === 'image/jpg') img = await pdf.embedJpg(imgBytes);
+            else if (mime) {
+              // GIF, BMP and other formats mammoth can emit from a .docx: let
+              // the browser decode it and re-embed as PNG rather than
+              // silently dropping the picture.
+              try { img = await pdf.embedPng(await transcodeImageBytesToPng(imgBytes, mime)); }
+              catch { /* genuinely undecodable (WMF/EMF/SVG) or corrupt — skip */ }
+            }
             if (img) {
               const scale = Math.min(USABLE_W / img.width, 200 / img.height, 1);
               const w = img.width * scale;
@@ -998,6 +1140,10 @@ export async function htmlToPdf(html: string): Promise<Blob> {
   const doc = parser.parseFromString(`<div>${html}</div>`, 'text/html');
   const container = doc.body.firstChild as HTMLElement;
   for (const child of container.childNodes) await processNode(child);
+
+  if (hadUnsupportedText) {
+    console.warn('htmlToPdf: some characters (e.g. CJK, Arabic, Hebrew, Devanagari or Thai script) could not be rendered and were replaced with "?".');
+  }
 
   const bytes = await pdf.save();
   return new Blob([bytes as unknown as BlobPart], { type: 'application/pdf' });
@@ -1204,50 +1350,58 @@ export async function comparePdfs(file1: File, file2: File): Promise<CompareResu
     const buf = await readFileAsArrayBuffer(file);
     const doc = await loadPdf(buf);
     const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
-    const meta = await pdfDoc.getMetadata();
-    const info = (meta.info || {}) as Record<string, string>;
+    try {
+      const meta = await pdfDoc.getMetadata();
+      const info = (meta.info || {}) as Record<string, string>;
 
-    const title = info['Title'] || '';
-    const author = info['Author'] || '';
-    const creator = info['Creator'] || '';
-    const producer = info['Producer'] || '';
-    const creationDate = info['CreationDate'] || info['ModDate'] || '';
+      const title = info['Title'] || '';
+      const author = info['Author'] || '';
+      const creator = info['Creator'] || '';
+      const producer = info['Producer'] || '';
+      const creationDate = info['CreationDate'] || info['ModDate'] || '';
 
-    const pageWidths: number[] = [];
-    const pageHeights: number[] = [];
-    const textByPage: string[] = [];
+      const pageWidths: number[] = [];
+      const pageHeights: number[] = [];
+      const textByPage: string[] = [];
 
-    for (let i = 0; i < doc.getPageCount(); i++) {
-      const pg = doc.getPage(i);
-      const { width, height } = pg.getSize();
-      pageWidths.push(Math.round(width * 100) / 100);
-      pageHeights.push(Math.round(height * 100) / 100);
+      for (let i = 0; i < doc.getPageCount(); i++) {
+        const pg = doc.getPage(i);
+        const { width, height } = pg.getSize();
+        pageWidths.push(Math.round(width * 100) / 100);
+        pageHeights.push(Math.round(height * 100) / 100);
 
-      const pdfPage = await pdfDoc.getPage(i + 1);
-      const content = await pdfPage.getTextContent();
-      const text = content.items.map(item => 'str' in item ? item.str : '').join(' ');
-      textByPage.push(text);
+        const pdfPage = await pdfDoc.getPage(i + 1);
+        const content = await pdfPage.getTextContent();
+        const text = content.items.map(item => 'str' in item ? item.str : '').join(' ');
+        textByPage.push(text);
+      }
+
+      return {
+        name: file.name,
+        pages: doc.getPageCount(),
+        fileSize: file.size,
+        title,
+        author,
+        creator,
+        producer,
+        creationDate,
+        pageWidths,
+        pageHeights,
+        textByPage,
+      };
+    } finally {
+      void pdfDoc.cleanup();
     }
-
-    return {
-      name: file.name,
-      pages: doc.getPageCount(),
-      fileSize: file.size,
-      title,
-      author,
-      creator,
-      producer,
-      creationDate,
-      pageWidths,
-      pageHeights,
-      textByPage,
-    };
   }
 
   const [info1, info2] = await Promise.all([extractInfo(file1), extractInfo(file2)]);
 
-  const identical = JSON.stringify(info1) === JSON.stringify(info2);
   const pagesSame = info1.pages === info2.pages && info1.pageWidths.join(',') === info2.pageWidths.join(',') && info1.pageHeights.join(',') === info2.pageHeights.join(',');
+  // Filename and exact byte size say nothing about the actual content — a
+  // renamed or re-saved but otherwise unchanged PDF would always show
+  // "different" if they were included here, contradicting the similarity
+  // panels shown right below this verdict.
+  const identical = pagesSame && info1.textByPage.join(' ') === info2.textByPage.join(' ');
 
   const maxPages = Math.max(info1.textByPage.length, info2.textByPage.length);
   const differingPages: number[] = [];
@@ -1351,8 +1505,21 @@ export async function pdfToMarkdown(file: File): Promise<string> {
   return pages.map((text, i) => `## Page ${i + 1}\n\n${text}\n\n---\n\n`).join('');
 }
 
+/** Word-ish tokens for term-frequency scoring — keeps any language's letters and digits, not just ASCII. */
 export function tokenize(text: string): string[] {
-  return text.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 2);
+  return text.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, '').split(/\s+/).filter(w => w.length > 2);
+}
+
+/** Fraction of non-space characters that are CJK ideographs, kana or hangul. */
+export function cjkFraction(text: string): number {
+  let cjk = 0;
+  let total = 0;
+  for (const ch of text) {
+    if (/\s/.test(ch)) continue;
+    total++;
+    if (/[㐀-鿿぀-ヿ가-힣]/.test(ch)) cjk++;
+  }
+  return total > 0 ? cjk / total : 0;
 }
 
 const LANG_CODES: Record<string, string> = {
@@ -1672,18 +1839,22 @@ export async function renderPdfPages(file: File, pageNumbers: number[]): Promise
   const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
   const results: { page: number; url: string; width: number; height: number }[] = [];
 
-  for (const pageNum of pageNumbers) {
-    if (pageNum < 1 || pageNum > pdf.numPages) continue;
-    const page = await pdf.getPage(pageNum);
-    const scale = 1.5;
-    const viewport = page.getViewport({ scale });
-    const canvas = document.createElement('canvas');
-    canvas.width = viewport.width;
-    canvas.height = viewport.height;
-    const ctx = canvas.getContext('2d')!;
-    await page.render({ canvasContext: ctx, viewport, canvas }).promise;
-    const url = canvas.toDataURL('image/jpeg', 0.8);
-    results.push({ page: pageNum, url, width: viewport.width, height: viewport.height });
+  try {
+    for (const pageNum of pageNumbers) {
+      if (pageNum < 1 || pageNum > pdf.numPages) continue;
+      const page = await pdf.getPage(pageNum);
+      const scale = 1.5;
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      const ctx = canvas.getContext('2d')!;
+      await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+      const url = canvas.toDataURL('image/jpeg', 0.8);
+      results.push({ page: pageNum, url, width: viewport.width, height: viewport.height });
+    }
+  } finally {
+    void pdf.cleanup();
   }
   return results;
 }
@@ -1711,23 +1882,27 @@ export async function renderPdfPreviews(
   const total = Math.min(pdf.numPages, options?.maxPages ?? 300);
   const out: PagePreview[] = [];
 
-  for (let i = 1; i <= total; i++) {
-    onProgress?.(i, total);
-    const page = await pdf.getPage(i);
-    const baseVp = page.getViewport({ scale: 1 });
-    const scale = safeScale(baseVp.width, baseVp.height, options?.scale ?? 2, 3000);
-    const viewport = page.getViewport({ scale });
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.floor(viewport.width);
-    canvas.height = Math.floor(viewport.height);
-    const ctx = canvas.getContext('2d')!;
-    await page.render({ canvasContext: ctx, viewport, canvas }).promise;
-    out.push({
-      page: i,
-      url: canvas.toDataURL('image/jpeg', 0.85),
-      pointWidth: baseVp.width,
-      pointHeight: baseVp.height,
-    });
+  try {
+    for (let i = 1; i <= total; i++) {
+      onProgress?.(i, total);
+      const page = await pdf.getPage(i);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = safeScale(baseVp.width, baseVp.height, options?.scale ?? 2, 3000);
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.floor(viewport.width);
+      canvas.height = Math.floor(viewport.height);
+      const ctx = canvas.getContext('2d')!;
+      await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+      out.push({
+        page: i,
+        url: canvas.toDataURL('image/jpeg', 0.85),
+        pointWidth: baseVp.width,
+        pointHeight: baseVp.height,
+      });
+    }
+  } finally {
+    void pdf.cleanup();
   }
   return out;
 }
@@ -1766,29 +1941,33 @@ export async function scanPdfForSigning(
   const pdfjsLib = await getPdfJs();
   const buf = await readFileAsArrayBuffer(file);
   const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
-  const total = Math.min(pdf.numPages, options?.maxPages ?? 200);
+  const total = Math.min(pdf.numPages, options?.maxPages ?? 2000);
   const results: SignPageScan[] = [];
 
-  for (let pageNum = 1; pageNum <= total; pageNum++) {
-    onProgress?.(pageNum, total);
-    const page = await pdf.getPage(pageNum);
-    const baseVp = page.getViewport({ scale: 1 });
-    const scale = safeScale(baseVp.width, baseVp.height, 2, 4000);
-    const viewport = page.getViewport({ scale });
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.floor(viewport.width);
-    canvas.height = Math.floor(viewport.height);
-    const ctx = canvas.getContext('2d')!;
-    await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+  try {
+    for (let pageNum = 1; pageNum <= total; pageNum++) {
+      onProgress?.(pageNum, total);
+      const page = await pdf.getPage(pageNum);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = safeScale(baseVp.width, baseVp.height, 2, 4000);
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.floor(viewport.width);
+      canvas.height = Math.floor(viewport.height);
+      const ctx = canvas.getContext('2d')!;
+      await page.render({ canvasContext: ctx, viewport, canvas }).promise;
 
-    const whitespace = analyzeFooterWhitespace(ctx, canvas, baseVp.width, baseVp.height, pageNum, minSignWidth, minSignHeight);
-    results.push({
-      page: pageNum,
-      url: canvas.toDataURL('image/jpeg', 0.8),
-      pointWidth: baseVp.width,
-      pointHeight: baseVp.height,
-      whitespace,
-    });
+      const whitespace = analyzeFooterWhitespace(ctx, canvas, baseVp.width, baseVp.height, pageNum, minSignWidth, minSignHeight);
+      results.push({
+        page: pageNum,
+        url: canvas.toDataURL('image/jpeg', 0.8),
+        pointWidth: baseVp.width,
+        pointHeight: baseVp.height,
+        whitespace,
+      });
+    }
+  } finally {
+    void pdf.cleanup();
   }
   return results;
 }
@@ -1925,6 +2104,48 @@ function analyzeFooterWhitespace(
   };
 }
 
+interface PositionedTextItem { str: string; x: number; y: number; width: number }
+
+/**
+ * Detect a two-column layout (papers, newsletters, brochures) by looking for a
+ * vertical gutter — a band in the middle of the page no text ever occupies —
+ * and if one is found, reorder items so the whole left column is read top to
+ * bottom before the right column starts, rather than in raw stream position
+ * (which can otherwise interleave the two columns line by line). Ordinary
+ * single-column text essentially never has a gap this wide and this
+ * consistently placed, so it passes through unchanged.
+ */
+function orderByColumns(items: PositionedTextItem[], pageWidth: number): PositionedTextItem[] {
+  if (items.length < 4 || pageWidth <= 0) return items;
+
+  const marginBand = pageWidth * 0.15;
+  const spans = items
+    .map((it): [number, number] => [it.x, it.x + it.width])
+    .filter(([x0, x1]) => x1 > marginBand && x0 < pageWidth - marginBand)
+    .sort((a, b) => a[0] - b[0]);
+  if (spans.length === 0) return items;
+
+  let gutterStart = -1;
+  let gutterEnd = -1;
+  let bestGap = 0;
+  let reach = spans[0][1];
+  for (const [x0, x1] of spans) {
+    if (x0 > reach && x0 - reach > bestGap) { bestGap = x0 - reach; gutterStart = reach; gutterEnd = x0; }
+    reach = Math.max(reach, x1);
+  }
+
+  if (bestGap < pageWidth * 0.05 || gutterStart < marginBand || gutterEnd > pageWidth - marginBand) {
+    return items;
+  }
+
+  const left = items.filter(it => it.x < gutterStart);
+  const right = items.filter(it => it.x >= gutterStart);
+  if (left.length === 0 || right.length === 0) return items;
+
+  const readingOrder = (a: PositionedTextItem, b: PositionedTextItem) => (Math.abs(a.y - b.y) > 2 ? b.y - a.y : a.x - b.x);
+  return [...left.sort(readingOrder), ...right.sort(readingOrder)];
+}
+
 export async function extractTextFromPdf(file: File): Promise<string[]> {
   const pdfjsLib = await getPdfJs();
 
@@ -1932,37 +2153,48 @@ export async function extractTextFromPdf(file: File): Promise<string[]> {
   const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
   const pages: string[] = [];
 
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const content = await page.getTextContent();
-    let lastY: number | null = null;
-    let pageText = '';
+  try {
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const pageWidth = page.getViewport({ scale: 1 }).width;
+      const content = await page.getTextContent();
 
-    for (const item of content.items) {
-      if (!('str' in item)) continue;
-      const ti = item as any;
-      // pdf.js TextItem coordinates: transform[5] is the Y position (top-down in canvas coords)
-      const y = ti.transform?.[5] ?? ti.y ?? null;
+      const items: PositionedTextItem[] = content.items
+        .filter((it): it is typeof it & { str: string } => 'str' in it)
+        .map(it => {
+          const ti = it as any;
+          return { str: ti.str as string, x: ti.transform?.[4] ?? 0, y: ti.transform?.[5] ?? 0, width: ti.width ?? 0 };
+        });
+      const ordered = orderByColumns(items, pageWidth);
 
-      if (y !== null && lastY !== null) {
-        const deltaY = Math.abs(y - lastY);
-        if (deltaY > 5) {
-          pageText += '\n';
-        } else if (deltaY < 1 && pageText.length > 0 && pageText.slice(-1) !== '\n' && pageText.slice(-1) !== ' ') {
-          // Same line, no space between items — add a space separator
-          const prevChar = pageText.slice(-1);
-          const nextChar = (item.str || '')[0];
-          if (prevChar !== ' ' && nextChar !== ' ' && prevChar !== '\n') {
-            pageText += ' ';
+      let lastY: number | null = null;
+      let pageText = '';
+
+      for (const item of ordered) {
+        const y = item.y;
+
+        if (lastY !== null) {
+          const deltaY = Math.abs(y - lastY);
+          if (deltaY > 5) {
+            pageText += '\n';
+          } else if (deltaY < 1 && pageText.length > 0 && pageText.slice(-1) !== '\n' && pageText.slice(-1) !== ' ') {
+            // Same line, no space between items — add a space separator
+            const prevChar = pageText.slice(-1);
+            const nextChar = item.str[0];
+            if (prevChar !== ' ' && nextChar !== ' ' && prevChar !== '\n') {
+              pageText += ' ';
+            }
           }
         }
+
+        pageText += item.str;
+        lastY = y;
       }
 
-      pageText += item.str || '';
-      if (y !== null) lastY = y;
+      pages.push(pageText.trim());
     }
-
-    pages.push(pageText.trim());
+  } finally {
+    void pdf.cleanup();
   }
   return pages;
 }
@@ -2176,10 +2408,12 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
 
   const langStr = languages.join('+');
   const buf = await readFileAsArrayBuffer(file);
+  if (isEncryptedBytes(new Uint8Array(buf))) throw new OpenPasswordRequiredError();
   const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
   const numPages = pdfDoc.numPages;
   const doc = await PDFDocument.create();
   const font = await doc.embedFont(StandardFonts.Helvetica);
+  const unicodeFont = await embedUnicodeFallback(doc);
   let totalChars = 0;
 
   // One worker for the whole document — reloading the language model per page
@@ -2225,8 +2459,11 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
         for (const paragraph of block.paragraphs || []) {
           for (const line of paragraph.lines || []) {
             for (const word of line.words || []) {
-              const text = (word.text || '').replace(/[^\x20-\x7E\xA0-\xFF]/g, '');
+              const raw = (word.text || '').trim();
+              if (!raw) continue;
+              const text = isRenderable(raw) ? raw : raw.replace(/[^\x20-\x7E\xA0-\xFF]/g, '');
               if (!text.trim()) continue;
+              const wordFont = needsUnicodeFallback(text) ? unicodeFont : font;
               const bx = word.bbox.x0 * px2pt;
               const by = ph - word.bbox.y1 * px2pt;
               const bh = (word.bbox.y1 - word.bbox.y0) * px2pt;
@@ -2236,11 +2473,11 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
                   x: bx,
                   y: by,
                   size: fontSize,
-                  font,
+                  font: wordFont,
                   color: rgb(0, 0, 0),
                   opacity: 0.01,
                 });
-              } catch { /* skip words the fallback font can't encode */ }
+              } catch { /* skip words neither font can encode */ }
             }
           }
         }
@@ -2248,6 +2485,7 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
     }
   } finally {
     await worker.terminate();
+    void pdfDoc.cleanup();
   }
 
   return { blob: toBlob(await doc.save()), pages: numPages, totalChars };

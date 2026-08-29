@@ -268,7 +268,13 @@ export default function ToolPage({
   const handleFilesSelected = useCallback((newFiles: File[]) => {
     setFiles(prev => {
       const updated = [...prev, ...newFiles];
-      setSelected(new Set(updated.map((_, i) => i)));
+      // Only auto-select the newly added files — a file the user already
+      // deselected must stay deselected when more files are added.
+      setSelected(prevSelected => {
+        const next = new Set(prevSelected);
+        for (let i = prev.length; i < updated.length; i++) next.add(i);
+        return next;
+      });
       return updated;
     });
     setResults([]);

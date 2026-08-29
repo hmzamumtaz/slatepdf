@@ -10,6 +10,7 @@ export default function JpgToPdfTool() {
       multiple
       accept="image/jpeg,image/png,image/webp"
       processLabel="Convert to PDF"
+      processAllTogether
       onProcess={async (files) => jpgToPdf(files)}
     />
   );

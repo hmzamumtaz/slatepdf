@@ -1,6 +1,6 @@
 'use client';
 
-import { extractTextFromPdf, tokenize } from './pdf-engine';
+import { extractTextFromPdf, tokenize, cjkFraction } from './pdf-engine';
 
 const STOPWORDS = new Set([
   'the','and','for','are','but','not','you','all','can','had','her','was','one','our','out','has','his','how','its','may',
@@ -58,6 +58,9 @@ export async function summarizePdf(
     });
 
   if (sentences.length === 0) {
+    if (cjkFraction(fullText) > 0.2) {
+      throw new Error('This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and ".!?" punctuation, so it can\'t segment this text yet.');
+    }
     throw new Error('The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).');
   }
 

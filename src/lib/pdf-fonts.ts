@@ -6,6 +6,7 @@ import {
   type PDFDocument, type PDFFont, type PDFPage,
 } from 'pdf-lib';
 import { repairFontProgram, parseToUnicode } from './sfnt';
+import { needsUnicodeFallback, isRenderable, embedUnicodeFallback } from './unicode-font';
 
 /**
  * Fonts for redrawn text.
@@ -48,10 +49,19 @@ export interface FontRequest {
   italic: boolean;
 }
 
+/** A font pulled from the cache: the document's own, or a standard/fallback substitute. */
+interface CachedFont {
+  font: PDFFont;
+  original: boolean;
+}
+
 export interface ResolvedFont {
   font: PDFFont;
   /** True when the document's own font is being used rather than a substitute. */
   original: boolean;
+  /** False when `font` cannot draw every character in the requested text — the
+   *  caller has no font left to try and must fall back to WinAnsi and drop them. */
+  renderable: boolean;
 }
 
 const weightOf = (r: Pick<FontRequest, 'bold' | 'italic'>) =>
@@ -189,7 +199,7 @@ export function collectEmbeddedFonts(doc: PDFDocument, page: PDFPage): Map<strin
  * actually render the characters asked for before committing to it.
  */
 export class FontResolver {
-  private cache = new Map<string, ResolvedFont>();
+  private cache = new Map<string, CachedFont>();
   private embedded = new Map<string, EmbeddedFont>();
   private failed = new Set<string>();
   private fontkitRegistered = false;
@@ -205,6 +215,16 @@ export class FontResolver {
     const hit = this.cache.get(key);
     if (hit) return hit.font;
     const font = await this.doc.embedFont(STANDARD[request.family][weightOf(request)]);
+    this.cache.set(key, { font, original: false });
+    return font;
+  }
+
+  /** The bundled Unicode fallback — cached per weight, registered fontkit once. */
+  private async unicodeFallback(bold: boolean): Promise<PDFFont> {
+    const key = `uni:${bold ? 'b' : 'r'}`;
+    const hit = this.cache.get(key);
+    if (hit) return hit.font;
+    const font = await embedUnicodeFallback(this.doc, bold);
     this.cache.set(key, { font, original: false });
     return font;
   }
@@ -232,10 +252,18 @@ export class FontResolver {
         }
       }
 
-      if (resolved && this.covers(resolved.font, text)) return resolved;
+      if (resolved && this.covers(resolved.font, text)) return { ...resolved, renderable: true };
     }
 
-    return { font: await this.standard(request), original: false };
+    // The document's own font is missing, unrepairable, or doesn't cover this
+    // run. Standard fonts only encode WinAnsi/Latin-1 — try the bundled
+    // Unicode fallback before falling back further and dropping characters.
+    if (needsUnicodeFallback(text) && isRenderable(text)) {
+      const font = await this.unicodeFallback(request.bold);
+      return { font, original: false, renderable: true };
+    }
+
+    return { font: await this.standard(request), original: false, renderable: !needsUnicodeFallback(text) };
   }
 
   /** A subset font only carries the glyphs the document happened to use. */

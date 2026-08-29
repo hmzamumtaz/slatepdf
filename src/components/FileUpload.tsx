@@ -20,6 +20,16 @@ interface FileUploadProps {
   selectable?: boolean;
 }
 
+/** "image/jpeg,image/png,.xlsx" → "JPEG, PNG, XLSX" — for the badge and error text. */
+function friendlyAcceptLabel(accept: string): string {
+  return accept
+    .split(',')
+    .map(r => r.trim())
+    .filter(Boolean)
+    .map(r => r.replace(/^\./, '').replace(/^image\//, '').toUpperCase())
+    .join(', ');
+}
+
 export default function FileUpload({
   accept = '.pdf',
   multiple = false,
@@ -68,20 +78,38 @@ export default function FileUpload({
     e.preventDefault();
     setIsDragOver(false);
     const dropped = Array.from(e.dataTransfer.files);
-    const accepted = dropped.filter(matchesAccept).slice(0, Math.max(0, maxFiles - files.length));
+    const matched = dropped.filter(matchesAccept);
+    const room = Math.max(0, maxFiles - files.length);
+    const accepted = matched.slice(0, multiple ? room : 1);
     if (accepted.length === 0 && dropped.length > 0) {
-      setDropError(`Only ${accept.replace(/\./g, '').toUpperCase()} files are supported here.`);
+      setDropError(`Only ${friendlyAcceptLabel(accept)} files are supported here.`);
       return;
     }
-    setDropError(null);
+    const skippedType = dropped.length - matched.length;
+    const skippedCap = matched.length - accepted.length;
+    if (skippedType > 0 || skippedCap > 0) {
+      const reasons = [
+        skippedCap > 0 ? `${skippedCap} over the ${maxFiles}-file limit` : null,
+        skippedType > 0 ? `${skippedType} not a supported file type` : null,
+      ].filter(Boolean).join(' and ');
+      setDropError(`Added ${accepted.length} of ${dropped.length} files — ${reasons}.`);
+    } else {
+      setDropError(null);
+    }
     if (accepted.length > 0) {
-      onFilesSelected(multiple ? accepted : accepted.slice(0, 1));
+      onFilesSelected(accepted);
     }
   }, [accept, files.length, matchesAccept, maxFiles, multiple, onFilesSelected]);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setDropError(null);
-    const selectedFiles = Array.from(e.target.files || []).slice(0, Math.max(0, maxFiles - files.length));
+    const picked = Array.from(e.target.files || []);
+    const room = Math.max(0, maxFiles - files.length);
+    const selectedFiles = picked.slice(0, room);
+    if (picked.length > selectedFiles.length) {
+      setDropError(`Added ${selectedFiles.length} of ${picked.length} files — ${picked.length - selectedFiles.length} over the ${maxFiles}-file limit.`);
+    } else {
+      setDropError(null);
+    }
     if (selectedFiles.length > 0) {
       onFilesSelected(selectedFiles);
     }
@@ -115,7 +143,7 @@ export default function FileUpload({
               <p className="text-sm text-muted-foreground mt-1">{description}</p>
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span className="px-2 py-1 bg-muted rounded-md font-medium">{accept.replace(/\./g, '').toUpperCase()}</span>
+              <span className="px-2 py-1 bg-muted rounded-md font-medium">{friendlyAcceptLabel(accept)}</span>
               {multiple && <span>Up to {maxFiles} files</span>}
             </div>
           </div>
@@ -198,6 +226,7 @@ export default function FileUpload({
             onChange={handleChange}
             className="hidden"
           />
+          {dropError && <p className="text-xs text-destructive font-medium">{dropError}</p>}
         </div>
       )}
     </div>

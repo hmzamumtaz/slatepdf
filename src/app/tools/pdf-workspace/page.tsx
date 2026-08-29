@@ -53,6 +53,10 @@ export default function PdfWorkspacePage() {
   const [showHistory, setShowHistory] = useState(false);
   const [name, setName] = useState('document.pdf');
   const nextId = useRef(1);
+  /** Bumped whenever the open document changes, so a stale apply() in flight
+   *  when the user closes or opens a different file can tell it no longer
+   *  applies and discard its result instead of corrupting the new history. */
+  const generation = useRef(0);
 
   const current: Version | null = history[cursor] ?? null;
 
@@ -100,10 +104,14 @@ export default function PdfWorkspacePage() {
    * comes through here, which is what keeps the history honest.
    */
   const apply = useCallback(async (run: () => Promise<Blob>, label: string) => {
+    const gen = generation.current;
     setBusy(true);
     setError(null);
     try {
       const blob = await run();
+      // The document may have been closed or replaced by a new one while this
+      // was running — discard rather than splice a stale result onto it.
+      if (gen !== generation.current) return;
       const file = blobToFile(blob, name);
       let pages = current?.pages ?? 0;
       try {
@@ -111,6 +119,7 @@ export default function PdfWorkspacePage() {
       } catch {
         // An encrypted result cannot be counted; keep the last known figure.
       }
+      if (gen !== generation.current) return;
       setHistory(prev => {
         const kept = prev.slice(0, cursor + 1);
         return [...kept, { id: nextId.current++, file, label, pages, size: file.size }];
@@ -118,7 +127,7 @@ export default function PdfWorkspacePage() {
       setCursor(c => c + 1);
       setSaved(false);
     } catch (err) {
-      setError(messageOf(err, 'That step could not be completed.'));
+      if (gen === generation.current) setError(messageOf(err, 'That step could not be completed.'));
     } finally {
       setBusy(false);
     }
@@ -330,19 +339,19 @@ export default function PdfWorkspacePage() {
                     savedLabel="Applied"
                     heightClass="h-full"
                   />
-                ) : panelProps && tab === 'redact' ? (
-                  <RedactPanel key={current.id} {...panelProps} />
-                ) : panelProps && tab === 'pages' ? (
-                  <PagesPanel key={current.id} {...panelProps} />
-                ) : panelProps && tab === 'sign' ? (
-                  <SignPanel key={current.id} {...panelProps} />
-                ) : panelProps && tab === 'stamp' ? (
-                  <StampPanel key={current.id} {...panelProps} />
-                ) : panelProps && tab === 'adjust' ? (
-                  <AdjustPanel key={current.id} {...panelProps} />
-                ) : panelProps ? (
-                  <ProtectPanel key={current.id} {...panelProps} />
-                ) : null}
+                ) : tab === 'redact' ? (
+                  <RedactPanel key={current.id} {...panelProps!} />
+                ) : tab === 'pages' ? (
+                  <PagesPanel key={current.id} {...panelProps!} />
+                ) : tab === 'sign' ? (
+                  <SignPanel key={current.id} {...panelProps!} />
+                ) : tab === 'stamp' ? (
+                  <StampPanel key={current.id} {...panelProps!} />
+                ) : tab === 'adjust' ? (
+                  <AdjustPanel key={current.id} {...panelProps!} />
+                ) : (
+                  <ProtectPanel key={current.id} {...panelProps!} />
+                )}
               </div>
 
               {showHistory && (

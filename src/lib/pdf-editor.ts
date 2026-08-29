@@ -631,11 +631,32 @@ export async function buildEditedPdf(
     // Draw the replacements.
     for (const block of redraw) {
       if (block.deleted) continue;
+
+      // removeAllText only strips BT…ET blocks from the page's own content
+      // stream. A run whose glyphs actually live in a Form XObject (or that
+      // this scanner otherwise failed to locate) is invisible to it and never
+      // gets removed, so redrawing over it would leave the original showing
+      // through underneath. Paint over its original box with the sampled
+      // paper color first so the two can't overlap.
+      if (unmatched && !block.added && (showsForBlock.get(block.id)?.length ?? 0) === 0) {
+        page.drawRectangle({
+          x: block.x,
+          y: block.y - block.fontSize * 0.24,
+          width: block.width,
+          height: block.fontSize * 1.06,
+          color: rgb(block.background.r / 255, block.background.g / 255, block.background.b / 255),
+        });
+      }
+
       const resolved = await fonts.resolve(
         { sourceFont: block.sourceFont, family: block.family, bold: block.bold, italic: block.italic },
         block.text,
       );
-      const text = resolved.original ? block.text : toWinAnsi(block.text).text;
+      // Draw the text in full whenever some font — the document's own, or the
+      // bundled Unicode fallback — can render it; only truly unsupported
+      // scripts (CJK, Arabic, Hebrew, Devanagari, Thai) fall back to dropping
+      // characters via WinAnsi.
+      const text = resolved.renderable ? block.text : toWinAnsi(block.text).text;
       if (!text.trim()) continue;
       if (!resolved.original) substituted = true;
 
