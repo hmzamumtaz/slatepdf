@@ -12,6 +12,7 @@
  */
 import { PDFDocument, rgb, StandardFonts, type PDFFont, type PDFPage, type RGB } from 'pdf-lib';
 import { SITE_NAME } from './site';
+import { needsUnicodeFallback, isRenderable, embedUnicodeFallback } from './unicode-font';
 
 const EMU_PER_PT = 12700;
 const A = 'http://schemas.openxmlformats.org/drawingml/2006/main';
@@ -23,7 +24,7 @@ export interface PptxRenderResult {
   images: number;
 }
 
-interface Fonts { regular: PDFFont; bold: PDFFont; italic: PDFFont; boldItalic: PDFFont }
+interface Fonts { regular: PDFFont; bold: PDFFont; italic: PDFFont; boldItalic: PDFFont; unicodeRegular: PDFFont; unicodeBold: PDFFont }
 
 interface Rect { x: number; y: number; w: number; h: number }
 
@@ -36,7 +37,12 @@ interface Ctx {
   imageCount: { n: number };
 }
 
-/** Standard PDF fonts only encode Latin-1; drop what they cannot draw. */
+/**
+ * Normalize smart punctuation to its plain form, then leave everything a
+ * standard font or the bundled Unicode fallback can draw untouched — only a
+ * character neither can render (CJK, Arabic, Hebrew, Devanagari, Thai) becomes
+ * a dash, rather than silently vanishing.
+ */
 function sanitize(text: string): string {
   return text
     .replace(/[–—]/g, '-')
@@ -45,7 +51,7 @@ function sanitize(text: string): string {
     .replace(/…/g, '...')
     .replace(/[•●▪◦]/g, '•')
     .replace(/ /g, ' ')
-    .replace(/[^\x20-\x7E\xA0-\xFF]/g, '');
+    .replace(/./g, c => (isRenderable(c) ? c : '-'));
 }
 
 function parseXml(text: string): Document {
@@ -172,6 +178,18 @@ function fontFor(fonts: Fonts, bold: boolean, italic: boolean): PDFFont {
 }
 
 /**
+ * Pick the font for one run of actual text: the standard font's italic/bold
+ * variants when it's plain WinAnsi, or the bundled Unicode fallback (no
+ * italic slant, but far broader coverage) when the run needs it and the
+ * fallback can render it. `sanitize()` already turned anything neither font
+ * can draw into a dash, so this never has to fall further back than that.
+ */
+function fontForRun(fonts: Fonts, text: string, bold: boolean, italic: boolean): PDFFont {
+  if (needsUnicodeFallback(text) && isRenderable(text)) return bold ? fonts.unicodeBold : fonts.unicodeRegular;
+  return fontFor(fonts, bold, italic);
+}
+
+/**
  * Draw a text body inside `rect`, wrapping on word boundaries and shrinking
  * uniformly if the text would overflow the shape (PowerPoint's autofit).
  */
@@ -215,7 +233,7 @@ function drawTextBody(page: PDFPage, ctx: Ctx, paras: Para[], rect: Rect, anchor
               if (line.tokens.length) { line.tokens.push({ text: ' ', run }); lineW += fontFor(ctx.fonts, run.bold, run.italic).widthOfTextAtSize(' ', run.size * scale); }
               continue;
             }
-            const f = fontFor(ctx.fonts, run.bold, run.italic);
+            const f = fontForRun(ctx.fonts, word, run.bold, run.italic);
             const w = f.widthOfTextAtSize(word, run.size * scale);
             if (lineW + w > avail && line.tokens.length > 0) pushLine();
             line.tokens.push({ text: word, run });
@@ -247,17 +265,17 @@ function drawTextBody(page: PDFPage, ctx: Ctx, paras: Para[], rect: Rect, anchor
   for (const line of lines) {
     y -= line.height;
     if (y < ctx.slideH - rect.y - rect.h - line.height) break; // overflowed the shape
-    const lineW = line.tokens.reduce((a, t) => a + fontFor(ctx.fonts, t.run.bold, t.run.italic).widthOfTextAtSize(t.text, t.run.size * scale), 0);
+    const lineW = line.tokens.reduce((a, t) => a + fontForRun(ctx.fonts, t.text, t.run.bold, t.run.italic).widthOfTextAtSize(t.text, t.run.size * scale), 0);
     let x = rect.x + padX + line.indent;
     if (line.align === 'ctr') x = rect.x + (rect.w - lineW) / 2;
     else if (line.align === 'r') x = rect.x + rect.w - padX - lineW;
 
     for (const tok of line.tokens) {
-      const f = fontFor(ctx.fonts, tok.run.bold, tok.run.italic);
+      const f = fontForRun(ctx.fonts, tok.text, tok.run.bold, tok.run.italic);
       const size = tok.run.size * scale;
       try {
         page.drawText(tok.text, { x, y: y + line.height * 0.22, size, font: f, color: tok.run.color });
-      } catch { /* skip glyphs the standard font cannot encode */ }
+      } catch { /* skip glyphs neither font can encode */ }
       x += f.widthOfTextAtSize(tok.text, size);
     }
   }
@@ -449,6 +467,8 @@ export async function renderPptxToPdf(
     bold: await pdf.embedFont(StandardFonts.HelveticaBold),
     italic: await pdf.embedFont(StandardFonts.HelveticaOblique),
     boldItalic: await pdf.embedFont(StandardFonts.HelveticaBoldOblique),
+    unicodeRegular: await embedUnicodeFallback(pdf),
+    unicodeBold: await embedUnicodeFallback(pdf, true),
   };
   const ctx: Ctx = { zip, pdf, fonts, slideH, imageCache: new Map(), imageCount: { n: 0 } };
 

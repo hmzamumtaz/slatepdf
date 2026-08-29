@@ -45,6 +45,13 @@ export default function SignPdfTool() {
   const [progress, setProgress] = useState('');
   const [error, setError] = useState<string | null>(null);
 
+  /** The document as it currently stands: the original upload until a
+   *  signature is actually saved, then the just-produced bytes — so signing
+   *  a second page builds on top of the first signature instead of silently
+   *  discarding it (every "Sign & Download" click otherwise re-read the
+   *  original, unsigned upload). */
+  const workingBytes = useRef<Uint8Array | null>(null);
+
   useEffect(() => {
     if (files.length === 0) { setPages([]); setSelectedPage(null); return; }
     let cancelled = false;
@@ -178,7 +185,10 @@ export default function SignPdfTool() {
     try {
       const pngBytes = await signaturePngBytes;
       if (!pngBytes) throw new Error('Could not render signature');
-      const blob = await signPdfWithImage(files[0], selectedPage, pngBytes, signaturePlacement, sigScale);
+      const wb = workingBytes.current;
+      const source = wb ? new File([wb.slice() as unknown as BlobPart], files[0].name, { type: 'application/pdf' }) : files[0];
+      const blob = await signPdfWithImage(source, selectedPage, pngBytes, signaturePlacement, sigScale);
+      workingBytes.current = new Uint8Array(await blob.arrayBuffer());
       downloadBlob(blob, getOutputFilename('sign-pdf', '-signed.pdf'));
     } catch (err: any) {
       setError(friendlyError(err));
@@ -188,7 +198,7 @@ export default function SignPdfTool() {
     }
   }, [files, selectedPage, signaturePlacement, sigScale, canSign, signaturePngBytes]);
 
-  const handlePageClick = (e: React.MouseEvent<HTMLDivElement>, pageIdx: number) => {
+  const handlePageClick = (e: React.MouseEvent<HTMLElement>, pageIdx: number) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -218,8 +228,8 @@ export default function SignPdfTool() {
             accept=".pdf"
             multiple={false}
             files={files}
-            onFilesSelected={(f) => { setFiles(f); setPages([]); setSelectedPage(null); setSignaturePlacement(null); setError(null); }}
-            onRemoveFile={() => { setFiles([]); setPages([]); setSelectedPage(null); setSignaturePlacement(null); }}
+            onFilesSelected={(f) => { setFiles(f); setPages([]); setSelectedPage(null); setSignaturePlacement(null); setError(null); workingBytes.current = null; }}
+            onRemoveFile={() => { setFiles([]); setPages([]); setSelectedPage(null); setSignaturePlacement(null); workingBytes.current = null; }}
           />
 
           {files.length > 0 && (
@@ -312,7 +322,7 @@ export default function SignPdfTool() {
               <label className="block text-sm font-semibold text-foreground mb-6">Select a page and place your signature</label>
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
                 {pages.map((p) => (
-                  <button key={p.page} onClick={() => { setSelectedPage(p.page); setSignaturePlacement(null); }}
+                  <button key={p.page} onClick={(e) => handlePageClick(e, p.page)}
                     className={`relative rounded-xl overflow-hidden border-2 transition-all ${selectedPage === p.page ? 'border-indigo-500 ring-2 ring-indigo-500/20' : 'border-border hover:border-gray-300'}`}>
                     <img src={p.url} alt={`Page ${p.page}`} className="w-full h-auto block" />
                     <div className="absolute bottom-0 left-0 right-0 py-1 px-1.5 bg-gradient-to-t from-black/60 to-transparent">

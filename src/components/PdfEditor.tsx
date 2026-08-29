@@ -10,10 +10,11 @@ import {
 import { getPdfJs } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 import {
-  openEditableDocument, buildEditedPdf, isChanged, isImageChanged, toWinAnsi,
+  openEditableDocument, buildEditedPdf, isChanged, isImageChanged,
   rgbToHex, hexToRgb, normaliseFontName,
   type EditorSession, type LoadedPage, type TextBlock, type ImageObject, type FontFamily, type Rgb,
 } from '@/lib/pdf-editor';
+import { unsupportedCharacters } from '@/lib/unicode-font';
 
 /**
  * The document is the editor.
@@ -388,7 +389,7 @@ export default function PdfEditor({
     return own ? `"${own}", ${FALLBACKS[block.family]}` : FALLBACKS[block.family];
   }, [faces]);
 
-  const dropped = selectedBlock ? toWinAnsi(selectedBlock.text).dropped : [];
+  const dropped = selectedBlock ? unsupportedCharacters(selectedBlock.text) : [];
   return (
     <>
       <input ref={replaceInput} type="file" accept="image/png,image/jpeg" className="hidden" onChange={chooseReplacement} />
@@ -616,7 +617,7 @@ export default function PdfEditor({
                   {dropped.length > 0 && (
                     <span
                       className="inline-flex items-center text-amber-300"
-                      title={`${dropped.join(' ')} isn't in the substitute font and will be dropped.`}
+                      title={`${dropped.join(' ')} can't be drawn by any available font and will be dropped when saved.`}
                     >
                       <AlertTriangle className="w-3.5 h-3.5" />
                     </span>

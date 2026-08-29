@@ -31,7 +31,10 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
     (async () => {
       setLoading(true);
       try {
-        const rendered = await renderPdfPreviews(file, { scale: 0.8 }, (p, t) => {
+        // No page cap here: this panel's own slots become the saved document,
+        // so silently truncating the preview would silently drop every page
+        // past the cap the moment any change was applied.
+        const rendered = await renderPdfPreviews(file, { scale: 0.8, maxPages: Number.MAX_SAFE_INTEGER }, (p, t) => {
           if (!cancelled) setProgress(`Rendering page ${p} of ${t}…`);
         });
         if (cancelled) return;
@@ -98,7 +101,8 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
           <div className="flex items-center gap-2">
             <button
               onClick={() => insertInput.current?.click()}
-              disabled={busy}
+              disabled={busy || changed}
+              title={changed ? 'Apply or reset your current page changes first — adding a PDF now would discard them.' : undefined}
               className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[12px] font-medium border border-border hover:bg-muted transition-colors disabled:opacity-50"
             >
               <FilePlus2 className="w-3.5 h-3.5" /> Add a PDF
