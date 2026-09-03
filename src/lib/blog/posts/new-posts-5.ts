@@ -232,6 +232,6 @@ export const newPosts5: BlogPost[] = [
       { q: 'Can I extract non-consecutive pages into one file?', a: 'Yes. Enter ranges like 1-3, 5, 7-10 to pull exactly those pages into a single new PDF in one pass.' },
       { q: 'Will splitting change my original PDF?', a: 'No. The browser tool creates a new file and leaves the original untouched, so you can split on different ranges as many times as you like.' },
     ],
-    related: ['how-to-split-a-pdf-into-separate-pages', 'how-to-split-a-pdf-by-file-size', 'how-to-merge-pdf-files-on-mac', 'how-to-extract-pages-from-pdf'],
+    related: ['how-to-split-a-pdf-into-separate-pages', 'how-to-split-a-pdf-by-file-size', 'how-to-merge-pdf-files-on-mac', 'how-to-delete-pages-from-a-pdf'],
   },
 ];

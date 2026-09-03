@@ -78,7 +78,7 @@ export const newPosts2: BlogPost[] = [
       { q: 'How do I convert multiple Google Docs to PDF at once?', a: 'Select multiple files in Google Drive, right-click, and choose Download. Drive exports them all as PDFs inside a single ZIP file.' },
       { q: 'Will comments and suggestions appear in the PDF?', a: 'No. The PDF shows only the final content. Comments, suggestions, and edit history are stripped during export.' },
     ],
-    related: ['how-to-convert-word-to-pdf', 'how-to-convert-images-to-pdf', 'how-to-compress-a-pdf-without-losing-quality'],
+    related: ['how-to-convert-word-to-pdf-on-mac', 'how-to-convert-jpg-to-pdf', 'how-to-compress-a-pdf-without-losing-quality'],
   },
 
   // Article 2: How to Share Large PDF Files via Email
@@ -153,7 +153,7 @@ export const newPosts2: BlogPost[] = [
       { q: 'Is sharing via a download link secure?', a: 'Link-based sharing is as secure as the service you use. For sensitive documents, choose a service that offers password protection or encryption on the shared link.' },
       { q: 'How do I know if my PDF will fit as an attachment?', a: 'Right-click the file and check its size. If it is under 20 MB, it will fit in any email client. If it is between 20 and 25 MB, it will fit in Gmail but not Outlook.' },
     ],
-    related: ['how-to-compress-a-pdf-without-losing-quality', 'how-to-reduce-pdf-file-size-for-email', 'how-to-split-a-pdf'],
+    related: ['how-to-compress-a-pdf-without-losing-quality', 'how-to-compress-pdf-for-email-attachment', 'how-to-split-a-pdf-into-separate-pages'],
   },
 
   // Article 3: How to Combine Images into One PDF
@@ -219,7 +219,7 @@ export const newPosts2: BlogPost[] = [
       { q: 'Can I rearrange the page order after converting?', a: 'Not within the JPG to PDF tool. Rearrange the images before converting. If you need to reorder after, use an Organize PDF tool.' },
       { q: 'Will the PDF look the same on every device?', a: 'Yes. That is the core purpose of PDF — to present content identically regardless of the device, operating system, or software viewing it.' },
     ],
-    related: ['how-to-convert-jpg-to-pdf-without-losing-quality', 'how-to-convert-images-to-pdf', 'how-to-merge-pdf-files'],
+    related: ['how-to-convert-jpg-to-pdf-without-losing-quality', 'how-to-convert-jpg-to-pdf', 'how-to-merge-pdf-files'],
   },
 
   // Article 4: How to Extract Text from a Scanned PDF Without Software
@@ -288,7 +288,7 @@ export const newPosts2: BlogPost[] = [
       { q: 'Will OCR change the appearance of my PDF?', a: 'OCR adds a text layer behind the images — the visual appearance does not change. The text becomes selectable and searchable while the document looks exactly the same.' },
       { q: 'Does OCR work on non-English text?', a: 'Yes. Modern OCR engines support dozens of languages. Select the correct language before processing for the best accuracy.' },
     ],
-    related: ['how-to-edit-pdf-text-without-acrobat', 'how-to-convert-pdf-to-word', 'how-to-add-text-to-a-pdf'],
+    related: ['how-to-edit-pdf-text-without-acrobat', 'how-to-convert-pdf-to-word-on-mac', 'how-to-add-text-to-a-pdf'],
   },
 
   // Article 5: How to Make a PDF on iPhone

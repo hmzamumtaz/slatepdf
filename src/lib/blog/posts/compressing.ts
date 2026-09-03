@@ -2,10 +2,10 @@ import type { BlogPost } from '../types';
 
 export const compressingPosts: BlogPost[] = [
   {
-    slug: 'how-to-compress-a-pdf-without-losing-quality',
-    title: 'How to Compress a PDF Without Losing Quality',
-    description: 'Shrink a PDF while keeping it readable. What compression actually removes, how far you can push it, and how to check the result before you send it.',
-    keyword: 'compress pdf without losing quality',
+    slug: 'does-compressing-a-pdf-reduce-quality',
+    title: 'Does Compressing a PDF Reduce Quality?',
+    description: 'Does compressing a PDF hurt quality? What compression actually removes, how far you can push it, and how to check the result before you send it.',
+    keyword: 'does compressing a pdf reduce quality',
     category: 'Compressing',
     published: '2026-02-14',
     updated: '2026-08-18',

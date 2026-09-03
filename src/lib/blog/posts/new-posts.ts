@@ -65,7 +65,7 @@ export const newPosts: BlogPost[] = [
       { q: 'Is compressed PDF quality good enough for printing?', a: 'At the Low compression level, yes — images stay at original resolution. At Recommended, printing is fine for everyday documents. For professional print shops, use Low or skip compression entirely.' },
       { q: 'Does compression remove text or links?', a: 'No. Compression only affects images, unused metadata, and embedded resources. Text, links, bookmarks, and form fields are preserved.' },
     ],
-    related: ['how-to-compress-a-pdf-online', 'how-to-reduce-pdf-file-size-for-email', 'combine-pdf-files-without-losing-quality'],
+    related: ['how-to-compress-pdf-for-email-attachment', 'how-to-reduce-pdf-file-size-to-100kb', 'combine-pdf-files-without-losing-quality'],
   },
 
   // Article 2: How to Sign a PDF Electronically for Free
@@ -120,7 +120,7 @@ export const newPosts: BlogPost[] = [
       { q: 'Can I use the same signature on multiple documents?', a: 'Yes. Draw or upload your signature once, and use it across as many documents as you need. There is no per-document limit.' },
       { q: 'What if I need to sign a password-protected PDF?', a: 'Unlock the PDF first using an unlock tool, then sign it. Password-protected files cannot be edited until the password is removed.' },
     ],
-    related: ['how-to-add-a-signature-to-a-pdf', 'how-to-fill-out-a-pdf-form', 'how-to-redact-a-pdf-properly'],
+    related: ['how-to-add-a-handwritten-signature-to-a-pdf', 'how-to-fill-out-a-pdf-form', 'how-to-redact-a-pdf-properly'],
   },
 
   // Article 3: How to Convert JPG to PDF Without Losing Quality
@@ -179,7 +179,7 @@ export const newPosts: BlogPost[] = [
       { q: 'Will the PDF look the same on every device?', a: 'Yes. That is the core purpose of PDF — to present content identically regardless of the device, operating system, or software viewing it.' },
       { q: 'Can I convert a JPG to a fillable PDF form?', a: 'Not directly. JPG to PDF creates a flat, non-editable page. To create fillable forms, you need a PDF editor that supports form fields.' },
     ],
-    related: ['how-to-convert-images-to-pdf', 'how-to-convert-pdf-to-jpg', 'how-to-scan-to-pdf-with-your-phone'],
+    related: ['how-to-convert-jpg-to-pdf', 'how-to-convert-pdf-to-jpg-high-quality', 'how-to-convert-a-photo-to-pdf-on-your-phone'],
   },
 
   // Article 4: How to Password Protect a PDF Without Adobe
@@ -234,7 +234,7 @@ export const newPosts: BlogPost[] = [
       { q: 'Can I protect a PDF that is already password-protected?', a: 'You need to unlock it first, then re-protect it with a new or different password.' },
       { q: 'Does password protection increase file size?', a: 'Negligibly. Encryption adds a small amount of metadata but does not meaningfully change the file size.' },
     ],
-    related: ['how-to-unlock-a-pdf', 'how-to-redact-sensitive-information', 'is-it-safe-to-use-online-pdf-tools'],
+    related: ['how-to-remove-a-password-from-a-pdf', 'how-to-redact-a-pdf-properly', 'is-it-safe-to-use-online-pdf-tools'],
   },
 
   // Article 5: How to Edit PDF Text Without Acrobat

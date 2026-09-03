@@ -147,7 +147,7 @@ export const newPosts3: BlogPost[] = [
       { q: 'Do I need a special reader to open the result?', a: 'No. The output is a standard PDF that opens in any PDF reader, on any device.' },
       { q: 'Is my EPUB uploaded to a server?', a: 'No. In a local browser converter, the EPUB is processed on your device and never uploaded.' },
     ],
-    related: ['how-to-convert-word-to-pdf', 'how-to-convert-a-pdf-into-editable-text', 'how-to-merge-pdf-files'],
+    related: ['how-to-convert-word-to-pdf-on-mac', 'how-to-convert-a-pdf-into-editable-text', 'how-to-merge-pdf-files'],
   },
 
   // Article 4: How to Convert SVG to PDF
