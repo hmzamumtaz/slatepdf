@@ -23,8 +23,10 @@ import { windowsGuidesPosts } from './windows-guides';
 import { mobilePdfGuidesPosts } from './mobile-pdf-guides';
 import { newPosts5 } from './new-posts-5';
 import { newPosts6 } from './new-posts-6';
+import { newPosts7 } from './new-posts-7';
 
 export const allPosts: BlogPost[] = [
+  ...newPosts7,
   ...newPosts6,
   ...newPosts5,
   ...mobilePdfGuidesPosts,
