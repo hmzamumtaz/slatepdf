@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   description:
     `How ${SITE_NAME} handles your data. Files are processed locally in your browser and never uploaded.`,
   alternates: { canonical: '/privacy' },
+  openGraph: {
+    type: 'website',
+    title: `Privacy Policy | ${SITE_NAME}`,
+    description: `How ${SITE_NAME} handles your data. Files are processed locally in your browser and never uploaded.`,
+    url: '/privacy',
+    siteName: SITE_NAME,
+  },
+  twitter: {
+    card: 'summary',
+    title: `Privacy Policy | ${SITE_NAME}`,
+    description: `How ${SITE_NAME} handles your data. Files are processed locally in your browser and never uploaded.`,
+  },
 };
 
 export default function PrivacyPage() {

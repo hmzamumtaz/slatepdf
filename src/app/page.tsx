@@ -349,6 +349,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Guides — crawl path from the homepage to the blog */}
+      <section className="bg-gray-50 border-b border-border py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">PDF guides that get the job done</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+                Step-by-step tutorials for the most common PDF tasks — written from hands-on experience and regularly fact-checked.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-foreground text-white font-semibold text-sm hover:opacity-90 transition-opacity shrink-0"
+            >
+              See all guides <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/blog/how-to-merge-pdf-files', title: 'How to merge PDF files', desc: 'Combine multiple PDFs into one document in a few clicks.' },
+              { href: '/blog/how-to-compress-a-pdf-without-losing-quality', title: 'Compress a PDF without losing quality', desc: 'Shrink large files while keeping text and images crisp.' },
+              { href: '/blog/how-to-edit-pdf-text-without-acrobat', title: 'Edit PDF text without Acrobat', desc: 'Change wording and numbers in a PDF for free, in your browser.' },
+              { href: '/blog/how-to-sign-a-pdf-electronically-for-free', title: 'Sign a PDF for free', desc: 'Add an electronic signature without signing up or paying.' },
+              { href: '/blog/how-to-password-protect-a-pdf-without-adobe', title: 'Password-protect a PDF', desc: 'Lock your document with strong encryption, no Adobe needed.' },
+              { href: '/blog/how-to-convert-pdf-to-word-without-losing-formatting', title: 'PDF to Word without losing formatting', desc: 'Turn a PDF into an editable document that keeps its layout.' },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="rounded-2xl border border-border bg-white p-5 hover:border-gray-300 hover:shadow-md transition-all"
+              >
+                <h3 className="font-bold text-foreground leading-snug mb-1.5">{guide.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

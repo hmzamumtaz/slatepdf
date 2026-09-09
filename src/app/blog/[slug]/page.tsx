@@ -29,10 +29,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.description,
       url,
       siteName: SITE_NAME,
+      images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: post.title }],
       publishedTime: post.published,
       modifiedTime: post.updated ?? post.published,
     },
-    twitter: { card: 'summary', title: post.title, description: post.description },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: [`${SITE_URL}/og-home.png`],
+    },
   };
 }
 

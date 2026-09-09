@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   description:
     `The terms governing your use of ${SITE_NAME}, the free browser-based PDF toolkit.`,
   alternates: { canonical: '/terms' },
+  openGraph: {
+    type: 'website',
+    title: `Terms of Service | ${SITE_NAME}`,
+    description: `The terms governing your use of ${SITE_NAME}, the free browser-based PDF toolkit.`,
+    url: '/terms',
+    siteName: SITE_NAME,
+  },
+  twitter: {
+    card: 'summary',
+    title: `Terms of Service | ${SITE_NAME}`,
+    description: `The terms governing your use of ${SITE_NAME}, the free browser-based PDF toolkit.`,
+  },
 };
 
 export default function TermsPage() {

@@ -385,11 +385,13 @@ export function generateToolMetadata(slug: string): Metadata {
       description: seo.description,
       url,
       siteName: SITE_NAME,
+      images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: `${SITE_NAME} — ${tool.name}` }],
     },
     twitter: {
       card: 'summary_large_image',
       title: seo.title,
       description: seo.description,
+      images: [`${SITE_URL}/og-home.png`],
     },
   };
 }

@@ -10,7 +10,7 @@ export function generateOrganizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.svg`,
     description: 'Free PDF toolkit that runs in your browser. Edit, convert, merge, compress, and secure PDFs without uploading.',
-    sameAs: [],
+    sameAs: ['https://github.com/hmzamumtaz/slatepdf'],
     founder: { '@type': 'Person', name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role, url: `${SITE_URL}/about` },
     employee: { '@type': 'Person', name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role, url: `${SITE_URL}/about` },
     contactPoint: {
@@ -56,13 +56,6 @@ export function generateSoftwareApplicationSchema(tool: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '150',
-      bestRating: '5',
-      worstRating: '1',
     },
   };
 }

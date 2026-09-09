@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-400 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-8 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
@@ -55,6 +55,34 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white mb-3">Export</h3>
             <ul className="space-y-2 text-sm">
               {getToolsByCategory('Export PDF').map((tool) => (
+                <li key={tool.slug}>
+                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
+                    {tool.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Modify */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-3">Modify</h3>
+            <ul className="space-y-2 text-sm">
+              {getToolsByCategory('Modify PDF').map((tool) => (
+                <li key={tool.slug}>
+                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
+                    {tool.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Secure */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-3">Security</h3>
+            <ul className="space-y-2 text-sm">
+              {getToolsByCategory('PDF Security').map((tool) => (
                 <li key={tool.slug}>
                   <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
                     {tool.name}

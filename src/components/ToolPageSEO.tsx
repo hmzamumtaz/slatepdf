@@ -13,6 +13,17 @@ export default function ToolPageSEO({ slug }: { slug: string }) {
   const tool = getToolBySlug(slug);
   if (!tool) return null;
 
+  const toolUrl = `${SITE_URL}/tools/${slug}`;
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: tool.name, item: toolUrl },
+    ],
+  };
+
   const relatedTools = tools
     .filter((t) => t.slug !== slug && t.category === tool.category)
     .slice(0, 4);
@@ -23,6 +34,7 @@ export default function ToolPageSEO({ slug }: { slug: string }) {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumbs */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4">
         <Breadcrumbs
