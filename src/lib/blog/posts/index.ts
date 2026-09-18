@@ -29,8 +29,10 @@ import { newPosts9 } from './new-posts-9';
 import { newPosts10 } from './new-posts-10';
 import { newPosts11 } from './new-posts-11';
 import { newPosts12 } from './new-posts-12';
+import { newPosts13 } from './new-posts-13';
 
 export const allPosts: BlogPost[] = [
+  ...newPosts13,
   ...newPosts12,
   ...newPosts11,
   ...newPosts10,
