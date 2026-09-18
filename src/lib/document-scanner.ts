@@ -15,7 +15,7 @@ export interface Corner {
 
 export type ScanFilter = 'photo' | 'enhance' | 'grayscale' | 'bw';
 
-const DETECT_MAX_SIDE = 384;
+const DETECT_MAX_SIDE = 448;
 
 const MIN_AREA_FRAC = 0.06;       // page must cover at least 6% of the frame
 const MAX_AREA_FRAC = 0.97;       // …and must not swallow the whole frame
@@ -137,14 +137,15 @@ function thresholdBinary(values: Float32Array, len: number, th: number): Uint8Ar
   return bin;
 }
 
-function morphClose(bin: Uint8Array, w: number, h: number): Uint8Array {
+function morphClose(bin: Uint8Array, w: number, h: number, radius = 1): Uint8Array {
+  const ra = Math.max(1, radius);
   const dilate = new Uint8Array(w * h);
   for (let y = 0; y < h; y++) {
     for (let x = 0; x < w; x++) {
       const i = y * w + x;
       if (bin[i] === 1) {
-        for (let dy = -1; dy <= 1; dy++) {
-          for (let dx = -1; dx <= 1; dx++) {
+        for (let dy = -ra; dy <= ra; dy++) {
+          for (let dx = -ra; dx <= ra; dx++) {
             const nx = x + dx;
             const ny = y + dy;
             if (nx >= 0 && ny >= 0 && nx < w && ny < h) dilate[ny * w + nx] = 1;
@@ -154,11 +155,11 @@ function morphClose(bin: Uint8Array, w: number, h: number): Uint8Array {
     }
   }
   const eroded = new Uint8Array(w * h);
-  for (let y = 1; y < h - 1; y++) {
-    for (let x = 1; x < w - 1; x++) {
+  for (let y = ra; y < h - ra; y++) {
+    for (let x = ra; x < w - ra; x++) {
       let all = 1;
-      for (let dy = -1; dy <= 1; dy++) {
-        for (let dx = -1; dx <= 1; dx++) {
+      for (let dy = -ra; dy <= ra; dy++) {
+        for (let dx = -ra; dx <= ra; dx++) {
           if (dilate[(y + dy) * w + (x + dx)] === 0) { all = 0; break; }
         }
         if (!all) break;
@@ -356,33 +357,70 @@ function isValidDocumentQuad(q: Point[], w: number, h: number, mag: Float32Array
  *  Public detection entry point
  * ------------------------------------------------------------------ */
 
+function toNormQuad(q: Point[], w: number, h: number): Corner[] {
+  return q.map(p => ({ x: Math.min(0.995, Math.max(0.005, p.x / (w - 1))), y: Math.min(0.995, Math.max(0.005, p.y / (h - 1))) }));
+}
+
+function quadFromComponent(bin: Uint8Array, w: number, h: number, mag: Float32Array, minFrac: number): Corner[] | null {
+  const comp = largestComponentBoundary(bin, w, h);
+  if (!comp || comp.count < w * h * minFrac) return null;
+  const hull = convexHull(comp.pts);
+  const quad = quadFromHull(hull);
+  if (!quad) return null;
+  if (!isValidDocumentQuad(quad, w, h, mag)) return null;
+  return toNormQuad(quad, w, h);
+}
+
+/**
+ * Strategy 1 (Adobe-style): find the page via its closed edge loop. The four
+ * page edges produce very strong Sobel gradients; morphological closing with a
+ * wider kernel bridges small gaps so the loop stays one connected component.
+ * Works on plain backgrounds and pages whose brightness matches the desk.
+ */
+function detectByEdgeLoop(mag: Float32Array, w: number, h: number): Corner[] | null {
+  const th = Math.max(6, otsuThreshold(mag, w * h) * 0.85);
+  let bin = thresholdBinary(mag, w * h, th);
+  bin = morphClose(bin, w, h, 2);
+  bin = morphClose(bin, w, h, 1);
+  return quadFromComponent(bin, w, h, mag, 0.05);
+}
+
+/**
+ * Strategy 2 (bright-blob): catch frames where the page is clearly the
+ * brightest region (white paper on a darker desk). Otsu splits bright vs
+ * dark; the biggest bright zone whose outline reads as a page wins.
+ */
+function detectByBrightBlob(blurred: Float32Array, w: number, h: number, mag: Float32Array): Corner[] | null {
+  const th = otsuThreshold(blurred, w * h);
+  const bin = new Uint8Array(w * h);
+  for (let i = 0; i < w * h; i++) bin[i] = blurred[i] > th ? 1 : 0;
+  // If the whole frame is "bright" there's no page/background split.
+  let brightCount = 0;
+  for (let i = 0; i < w * h; i++) brightCount += bin[i];
+  if (brightCount >= w * h * 0.92 || brightCount < w * h * 0.04) return null;
+  return quadFromComponent(bin, w, h, mag, 0.04);
+}
+
 /**
  * Detect the document's corners in a live video frame.
  * Returns 4 normalized [0..1] corners in TL,TR,BR,BL order, or null when no
- * convincing quad is found.
+ * convincing quad is found. Runs both detection strategies each frame and
+ * returns the first valid page quad.
  */
 export function detectDocumentCorners(video: HTMLVideoElement): Corner[] | null {
   const g = toGrayScale(video, DETECT_MAX_SIDE);
   if (!g) return null;
   const { w, h } = g;
-  const blurred = boxBlur(g.gray, w, h, 2);
+  const blurred = boxBlur(g.gray, w, h, 3);
   const mag = sobelMagnitude(blurred, w, h);
-  const th = otsuThreshold(mag, w * h);
-  let bin = thresholdBinary(mag, w * h, th);
-  bin = morphClose(bin, w, h);
-  bin = morphClose(bin, w, h);
 
-  const comp = largestComponentBoundary(bin, w, h);
-  if (!comp) return null;
-  // Too small to be a meaningful document.
-  if (comp.count < w * h * 0.07) return null;
+  const byEdges = detectByEdgeLoop(mag, w, h);
+  if (byEdges) return byEdges;
 
-  const hull = convexHull(comp.pts);
-  const quad = quadFromHull(hull);
-  if (!quad) return null;
-  if (!isValidDocumentQuad(quad, w, h, mag)) return null;
+  const byBright = detectByBrightBlob(blurred, w, h, mag);
+  if (byBright) return byBright;
 
-  return quad.map(p => ({ x: Math.min(0.995, Math.max(0.005, p.x / (w - 1))), y: Math.min(0.995, Math.max(0.005, p.y / (h - 1))) }));
+  return null;
 }
 
 /* ------------------------------------------------------------------ *

@@ -322,7 +322,7 @@ export default function ScanPdfTool() {
       const video = videoRef.current;
       if (!video || video.readyState < 2 || !isMounted.current) return;
       const now = performance.now();
-      if (now - lastTickRef.current < 110) return;
+      if (now - lastTickRef.current < 80) return;
       lastTickRef.current = now;
       ensureOverlaySize();
 
@@ -345,7 +345,7 @@ export default function ScanPdfTool() {
         const drift = cornerDrift(prevRaw, raw);
         if (drift < 0.004) stableCountRef.current++;
         else stableCountRef.current = 0;
-        const steady = stableCountRef.current >= 5 && validStreakRef.current >= 8;
+        const steady = stableCountRef.current >= 3 && validStreakRef.current >= 4;
         drawOverlay(smooth, steady ? STEADY_STROKE : TRACKING_STROKE);
         setDetectState(steady ? 'steady' : 'found');
         if (steady && autoScanRef.current && armedRef.current) {
