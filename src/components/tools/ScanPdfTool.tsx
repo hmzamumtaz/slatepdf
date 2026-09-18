@@ -79,6 +79,7 @@ export default function ScanPdfTool() {
   const capturingRef = useRef(false);
   const autoScanRef = useRef(true);
   const filterRef = useRef<ScanFilter>('photo');
+  const cameraOnRef = useRef(false);
   const overlaySizeRef = useRef({ w: 0, h: 0 });
 
   const [pages, setPages] = useState<ScannedPage[]>([]);
@@ -112,6 +113,10 @@ export default function ScanPdfTool() {
   useEffect(() => {
     filterRef.current = filter;
   }, [filter]);
+
+  useEffect(() => {
+    cameraOnRef.current = cameraOn;
+  }, [cameraOn]);
 
   // Binds a stream captured in the click handler to the <video> the moment it
   // mounts. getUserMedia must be called inside the user gesture (iOS), but the
@@ -335,7 +340,7 @@ export default function ScanPdfTool() {
         video: { facingMode: cameraFacing, width: { ideal: 1920 }, height: { ideal: 1080 } },
         audio: false,
       });
-      if (!isMounted.current || !cameraOn) {
+      if (!isMounted.current || !cameraOnRef.current) {
         stream.getTracks().forEach(track => track.stop());
         return;
       }
@@ -351,7 +356,7 @@ export default function ScanPdfTool() {
     } finally {
       if (isMounted.current) setCameraBusy(false);
     }
-  }, [cameraFacing, cameraOn, attachStream]);
+  }, [cameraFacing, attachStream]);
 
   const flipCamera = useCallback(async () => {
     const next = cameraFacing === 'environment' ? 'user' : 'environment';
@@ -364,7 +369,7 @@ export default function ScanPdfTool() {
         video: { facingMode: next, width: { ideal: 1920 }, height: { ideal: 1080 } },
         audio: false,
       });
-      if (!isMounted.current || !cameraOn) {
+      if (!isMounted.current || !cameraOnRef.current) {
         stream.getTracks().forEach(track => track.stop());
         return;
       }
@@ -377,7 +382,7 @@ export default function ScanPdfTool() {
     } finally {
       if (isMounted.current) setCameraBusy(false);
     }
-  }, [cameraFacing, cameraOn, attachStream]);
+  }, [cameraFacing, attachStream]);
 
   /* --------------------------- pages --------------------------- */
 
