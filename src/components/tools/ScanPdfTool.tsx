@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import {
   Camera, ImagePlus, ArrowLeft, RefreshCw, Trash2, ChevronLeft, ChevronRight,
   FileDown, Loader2, AlertCircle, CheckCircle2, X, Smartphone, Link2, Download,
@@ -721,10 +722,10 @@ export default function ScanPdfTool() {
       {/* ------------------------------------------------------------
           Fullscreen camera MVP: video + detection overlay + bottom menu
           ------------------------------------------------------------ */}
-      {cameraOn && (
+      {cameraOn && createPortal(
         <div
-          className="fixed top-0 inset-x-0 z-[70] h-screen bg-black select-none"
-          style={{ height: '100dvh', touchAction: 'none', overscrollBehavior: 'none' }}
+          className="fixed inset-0 z-[70] h-screen overflow-hidden bg-black select-none"
+          style={{ width: '100vw', maxWidth: '100vw', height: '100dvh', touchAction: 'none', overscrollBehavior: 'none' }}
         >
           <video ref={videoCallback} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover" />
           <canvas ref={overlayRef} className="absolute inset-0 w-full h-full pointer-events-none" />
@@ -827,7 +828,8 @@ export default function ScanPdfTool() {
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
