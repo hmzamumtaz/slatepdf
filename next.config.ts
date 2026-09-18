@@ -28,8 +28,10 @@ const nextConfig: NextConfig = {
             value: 'strict-origin-when-cross-origin',
           },
           {
+            // Scan PDF needs the device camera. Self-only keeps third-party
+            // iframes from using it while letting the tool work.
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            value: 'camera=(self), microphone=(), geolocation=()',
           },
         ],
       },

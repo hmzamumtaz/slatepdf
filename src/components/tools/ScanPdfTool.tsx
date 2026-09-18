@@ -26,15 +26,18 @@ function formatBytes(bytes: number): string {
 }
 
 export default function ScanPdfTool() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
+  const pendingStreamRef = useRef<MediaStream | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const nextId = useRef(1);
   const pagesRef = useRef<ScannedPage[]>([]);
+  const isMounted = useRef(true);
 
   const [pages, setPages] = useState<ScannedPage[]>([]);
   const [selected, setSelected] = useState<number | null>(null);
   const [cameraOn, setCameraOn] = useState(false);
+  const [cameraBusy, setCameraBusy] = useState(false);
   const [cameraFacing, setCameraFacing] = useState<'environment' | 'user'>('environment');
   const [fallbackMode, setFallbackMode] = useState<string | null>(null);
   const [pageSize, setPageSize] = useState<NonNullable<ScanPdfOptions['pageSize']>>('a4');
@@ -43,25 +46,40 @@ export default function ScanPdfTool() {
   const [result, setResult] = useState<Blob | null>(null);
   const [justScan, setJustScan] = useState(false);
 
-  const stopCamera = useCallback(() => {
-    streamRef.current?.getTracks().forEach(track => track.stop());
-    streamRef.current = null;
-    setCameraOn(false);
-    setCameraFacing('environment');
+  // Binds a stream captured in the click handler to the <video> the moment it
+  // mounts. getUserMedia must be called inside the user gesture (iOS), but the
+  // element only exists after React renders — the pending stream makes both work.
+  const videoCallback = useCallback((el: HTMLVideoElement | null) => {
+    videoRef.current = el;
+    const pending = pendingStreamRef.current;
+    if (el && pending) {
+      pendingStreamRef.current = null;
+      el.srcObject = pending;
+      el.play().catch(() => undefined);
+    }
   }, []);
 
-  const startCameraStream = useCallback(async (facing: 'environment' | 'user') => {
-    streamRef.current?.getTracks().forEach(track => track.stop());
-    const stream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: facing, width: { ideal: 1920 }, height: { ideal: 1080 } },
-      audio: false,
-    });
-    streamRef.current = stream;
-    if (videoRef.current) {
-      videoRef.current.srcObject = stream;
-      await videoRef.current.play().catch(() => undefined);
+  const attachStream = useCallback(() => {
+    pendingStreamRef.current = null;
+    const el = videoRef.current;
+    const stream = streamRef.current;
+    if (el && stream) {
+      el.srcObject = stream;
+      el.play().catch(() => undefined);
     }
-    setCameraOn(true);
+  }, []);
+
+  const closeCamera = useCallback(() => {
+    streamRef.current?.getTracks().forEach(track => track.stop());
+    streamRef.current = null;
+    if (pendingStreamRef.current) {
+      pendingStreamRef.current.getTracks().forEach(track => track.stop());
+      pendingStreamRef.current = null;
+    }
+    if (videoRef.current) videoRef.current.srcObject = null;
+    setCameraOn(false);
+    setCameraBusy(false);
+    setCameraFacing('environment');
   }, []);
 
   const handleOpenCamera = useCallback(async () => {
@@ -72,33 +90,67 @@ export default function ScanPdfTool() {
       setCameraOn(false);
       return;
     }
+    // Mount the camera view (and its <video>) immediately, then request the
+    // stream inside this very handler so the permission prompt counts as a
+    // user gesture on iOS.
+    setCameraOn(true);
+    setCameraBusy(true);
     try {
-      await startCameraStream('environment');
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: cameraFacing, width: { ideal: 1920 }, height: { ideal: 1080 } },
+        audio: false,
+      });
+      if (!isMounted.current || !cameraOn) {
+        stream.getTracks().forEach(track => track.stop());
+        return;
+      }
+      pendingStreamRef.current = stream;
+      streamRef.current = stream;
+      attachStream();
       setFallbackMode(null);
     } catch {
-      setFallbackMode('Camera access was denied or unavailable. You can still build a PDF from photos in your gallery.');
-      setCameraOn(false);
+      if (isMounted.current) {
+        setCameraOn(false);
+        setFallbackMode('Camera access was denied or unavailable. You can still build a PDF from photos in your gallery.');
+      }
+    } finally {
+      if (isMounted.current) setCameraBusy(false);
     }
-  }, [startCameraStream]);
+  }, [cameraFacing, cameraOn, attachStream]);
 
   const toggleCamera = useCallback(async () => {
     if (cameraOn) {
-      stopCamera();
+      closeCamera();
       return;
     }
     await handleOpenCamera();
-  }, [cameraOn, handleOpenCamera, stopCamera]);
+  }, [cameraOn, closeCamera, handleOpenCamera]);
 
   const flipCamera = useCallback(async () => {
     const next = cameraFacing === 'environment' ? 'user' : 'environment';
     setCameraFacing(next);
+    setCameraBusy(true);
+    streamRef.current?.getTracks().forEach(track => track.stop());
+    streamRef.current = null;
     try {
-      await startCameraStream(next);
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: next, width: { ideal: 1920 }, height: { ideal: 1080 } },
+        audio: false,
+      });
+      if (!isMounted.current || !cameraOn) {
+        stream.getTracks().forEach(track => track.stop());
+        return;
+      }
+      pendingStreamRef.current = stream;
+      streamRef.current = stream;
+      attachStream();
       setFallbackMode(null);
     } catch {
       setFallbackMode('Switching cameras failed. Continue with what you have.');
+    } finally {
+      if (isMounted.current) setCameraBusy(false);
     }
-  }, [cameraFacing, startCameraStream]);
+  }, [cameraFacing, cameraOn, attachStream]);
 
   const captureFrame = useCallback((): Promise<Blob | null> => new Promise(resolve => {
     const video = videoRef.current;
@@ -227,8 +279,11 @@ export default function ScanPdfTool() {
   }, [result]);
 
   useEffect(() => {
+    isMounted.current = true;
     return () => {
+      isMounted.current = false;
       streamRef.current?.getTracks().forEach(track => track.stop());
+      if (pendingStreamRef.current) pendingStreamRef.current.getTracks().forEach(track => track.stop());
       pagesRef.current.forEach(p => URL.revokeObjectURL(p.url));
     };
   }, []);
@@ -253,10 +308,17 @@ export default function ScanPdfTool() {
         </div>
 
         <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 shadow-sm">
-          {/* Camera / capture section */}
+          {/* Camera / capture section. The <video> mounts while the permission
+              prompt is showing; the ref callback wires the pending stream to it */}
           {cameraOn ? (
             <div className="relative rounded-2xl overflow-hidden bg-black aspect-[4/3] w-full">
-              <video ref={videoRef} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover" style={{ transform: cameraFacing === 'user' ? 'scaleX(-1)' : undefined }} />
+              <video ref={videoCallback} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover" style={{ transform: cameraFacing === 'user' ? 'scaleX(-1)' : undefined }} />
+              {cameraBusy && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white pointer-events-none">
+                  <Loader2 className="w-8 h-8 animate-spin" />
+                  <p className="text-sm font-medium">Starting camera…</p>
+                </div>
+              )}
               {justScan && (
                 <div className="absolute inset-0 bg-white/40 border-4 border-white flex items-center justify-center pointer-events-none">
                   <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center"><CheckCircle2 className="w-10 h-10 text-green-600" /></div>
