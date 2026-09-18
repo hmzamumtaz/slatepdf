@@ -2,17 +2,17 @@
 
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import {
-  Camera, ImagePlus, ScanLine, ArrowLeft, RefreshCw, Trash2, ChevronLeft, ChevronRight,
+  Camera, ImagePlus, ArrowLeft, RefreshCw, Trash2, ChevronLeft, ChevronRight,
   FileDown, Loader2, AlertCircle, CheckCircle2, X, Smartphone, Link2, Download,
-  Wand2, Scan as ScanIcon, SlidersHorizontal,
+  Wand2, SlidersHorizontal, ScanLine, Check,
 } from 'lucide-react';
 import Link from 'next/link';
 import { scannedPagesToPdf, getOutputFilename, downloadBlob, type ScanPdfOptions } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 import { trackConversion } from '@/lib/stats';
 import {
-  detectDocumentCorners, warpPageFrame, drawDetectionOverlay, applyFilter,
-  type Corner, type ScanFilter,
+  detectDocumentCorners, warpPageFrame, drawDetectionOverlayPixels, applyFilter,
+  type Corner, type ScanFilter, type PixelPoint,
 } from '@/lib/document-scanner';
 
 interface ScannedPage {
@@ -35,6 +35,9 @@ const FILTERS: { label: string; value: ScanFilter }[] = [
 ];
 
 const FULL_FRAME: Corner[] = [{ x: 0, y: 0 }, { x: 0.995, y: 0 }, { x: 0.995, y: 0.995 }, { x: 0, y: 0.995 }];
+
+const STEADY_STROKE = '#22c55e';
+const TRACKING_STROKE = '#fbbf24';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -70,6 +73,7 @@ export default function ScanPdfTool() {
   const lastCornersRef = useRef<Corner[] | null>(null);
   const lastRawRef = useRef<Corner[] | null>(null);
   const stableCountRef = useRef(0);
+  const validStreakRef = useRef(0);
   const armedRef = useRef(true);
   const capturingRef = useRef(false);
   const autoScanRef = useRef(true);
@@ -131,7 +135,7 @@ export default function ScanPdfTool() {
     }
   }, []);
 
-  /* ------------------------- detection loop ------------------------- */
+  /* ------------------------- detection ------------------------- */
 
   const stopDetection = useCallback(() => {
     if (detectRafRef.current != null) {
@@ -141,6 +145,7 @@ export default function ScanPdfTool() {
     lastCornersRef.current = null;
     lastRawRef.current = null;
     stableCountRef.current = 0;
+    validStreakRef.current = 0;
     armedRef.current = true;
     const canvas = overlayRef.current;
     if (canvas) overlayCtxRef.current?.clearRect(0, 0, canvas.width, canvas.height);
@@ -156,6 +161,36 @@ export default function ScanPdfTool() {
       canvas.height = h;
       overlaySizeRef.current = { w, h };
     }
+  }, []);
+
+  /** Draw the detected boundary aligned to what object-cover actually shows. */
+  const drawOverlay = useCallback((quad: Corner[] | null, stroke: string) => {
+    const canvas = overlayRef.current;
+    const ctx = overlayCtxRef.current;
+    if (!canvas || !ctx) return;
+    const w = canvas.width;
+    const h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    if (!quad) return;
+    const video = videoRef.current;
+    if (!video || !video.videoWidth || !video.videoHeight) return;
+    const vw = video.videoWidth;
+    const vh = video.videoHeight;
+    // Reconstruct the object-cover crop so overlay coordinates match the video.
+    let sx = 0;
+    let sy = 0;
+    let k = 1;
+    const va = vw / vh;
+    const ca = w / h;
+    if (va > ca) {
+      k = w / vw;
+      sy = (h - vh * k) / 2;
+    } else {
+      k = h / vh;
+      sx = (w - vw * k) / 2;
+    }
+    const pts: PixelPoint[] = quad.map(p => ({ x: sx + p.x * vw * k, y: sy + p.y * vh * k }));
+    drawDetectionOverlayPixels(ctx, pts, w, h, stroke);
   }, []);
 
   const addPhoto = useCallback((blob: Blob) => {
@@ -200,44 +235,43 @@ export default function ScanPdfTool() {
       if (now - lastTickRef.current < 110) return;
       lastTickRef.current = now;
       ensureOverlaySize();
+
       let raw: Corner[] | null = null;
       try {
         raw = detectDocumentCorners(video);
       } catch {
         raw = null;
       }
+
+      // A page is only recognised after a *valid* detection that also holds
+      // still for a few frames. Auto-capture requires both.
+      const prevRaw = lastRawRef.current;
+      lastRawRef.current = raw;
       const smooth = smoothCorners(lastCornersRef.current, raw);
       lastCornersRef.current = smooth;
-      lastRawRef.current = raw;
-      const ctx = overlayCtxRef.current;
-      const canvas = overlayRef.current;
-      if (ctx && canvas) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        if (smooth) drawDetectionOverlay(ctx, smooth, canvas.width, canvas.height);
-      }
+
       if (raw) {
-        const drift = cornerDrift(lastRawRef.current, raw);
-        if (drift < 0.004) {
-          stableCountRef.current++;
-          if (stableCountRef.current >= 7 && autoScanRef.current && armedRef.current) {
-            armedRef.current = false;
-            void captureFull();
-          } else {
-            setDetectState(stableCountRef.current >= 3 ? 'steady' : 'found');
-          }
-        } else {
-          stableCountRef.current = 0;
-          armedRef.current = true;
-          setDetectState('found');
+        validStreakRef.current++;
+        const drift = cornerDrift(prevRaw, raw);
+        if (drift < 0.004) stableCountRef.current++;
+        else stableCountRef.current = 0;
+        const steady = stableCountRef.current >= 5 && validStreakRef.current >= 8;
+        drawOverlay(smooth, steady ? STEADY_STROKE : TRACKING_STROKE);
+        setDetectState(steady ? 'steady' : 'found');
+        if (steady && autoScanRef.current && armedRef.current) {
+          armedRef.current = false;
+          void captureFull();
         }
       } else {
+        validStreakRef.current = 0;
         stableCountRef.current = 0;
         armedRef.current = true;
+        drawOverlay(null, '');
         setDetectState('searching');
       }
     };
     detectRafRef.current = window.requestAnimationFrame(tick);
-  }, [ensureOverlaySize, captureFull]);
+  }, [ensureOverlaySize, drawOverlay, captureFull]);
 
   useEffect(() => {
     if (!cameraOn) {
@@ -246,12 +280,12 @@ export default function ScanPdfTool() {
       return () => window.clearTimeout(t);
     }
     overlayCtxRef.current = overlayRef.current?.getContext('2d') ?? null;
-const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDetectState('searching'); }, 0);
-      startDetection();
-      return () => {
-        window.clearTimeout(resetToSearching);
-        stopDetection();
-      };
+    const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDetectState('searching'); }, 0);
+    startDetection();
+    return () => {
+      window.clearTimeout(resetToSearching);
+      stopDetection();
+    };
   }, [cameraOn, startDetection, stopDetection]);
 
   /* --------------------------- camera --------------------------- */
@@ -264,10 +298,27 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
       pendingStreamRef.current = null;
     }
     if (videoRef.current) videoRef.current.srcObject = null;
+    overlayCtxRef.current = null;
+    overlaySizeRef.current = { w: 0, h: 0 };
     setCameraOn(false);
     setCameraBusy(false);
     setCameraFacing('environment');
   }, []);
+
+  // While the fullscreen camera is open: lock scrolling and close on Escape.
+  useEffect(() => {
+    if (!cameraOn) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeCamera();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [cameraOn, closeCamera]);
 
   const handleOpenCamera = useCallback(async () => {
     setError(null);
@@ -300,14 +351,6 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
       if (isMounted.current) setCameraBusy(false);
     }
   }, [cameraFacing, cameraOn, attachStream]);
-
-  const toggleCamera = useCallback(async () => {
-    if (cameraOn) {
-      closeCamera();
-      return;
-    }
-    await handleOpenCamera();
-  }, [cameraOn, closeCamera, handleOpenCamera]);
 
   const flipCamera = useCallback(async () => {
     const next = cameraFacing === 'environment' ? 'user' : 'environment';
@@ -451,10 +494,16 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
 
   const primaryColor = '#7c3aed';
   const detectLabel =
-    detectState === 'steady' ? 'Hold steady'
-      : detectState === 'searching' ? 'Move the camera over a page'
-        : detectState === 'found' ? 'Page detected'
-          : '';
+    detectState === 'capturing' ? 'Capturing…'
+      : detectState === 'steady' ? (autoScan ? 'Hold steady' : 'Page detected — tap the shutter')
+        : detectState === 'found' ? (autoScan ? 'Page detected — hold steady' : 'Page detected — tap the shutter')
+          : detectState === 'searching' ? 'Move the camera over a page'
+            : '';
+
+  const shutterRelease = () => {
+    armedRef.current = true;
+    void captureFull();
+  };
 
   return (
     <div className="min-h-screen bg-gray-50/50">
@@ -474,67 +523,7 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
         </div>
 
         <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 shadow-sm">
-          {/* Camera view with live page-detection overlay */}
-          {cameraOn ? (
-            <div className="relative rounded-2xl overflow-hidden bg-black aspect-[4/3] w-full" style={{ touchAction: 'none' }}>
-              <video ref={videoCallback} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover" />
-              <canvas ref={overlayRef} className="absolute inset-0 w-full h-full pointer-events-none" />
-              {cameraBusy && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white pointer-events-none">
-                  <Loader2 className="w-8 h-8 animate-spin" />
-                  <p className="text-sm font-medium">Starting camera…</p>
-                </div>
-              )}
-              {justScan && (
-                <div className="absolute inset-0 bg-white/40 border-4 border-white flex items-center justify-center pointer-events-none animate-fade-in">
-                  <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center"><CheckCircle2 className="w-10 h-10 text-green-600" /></div>
-                </div>
-              )}
-              {detectLabel && !cameraBusy && (
-                <div className={`absolute top-3 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur pointer-events-none flex items-center gap-2 transition-colors ${detectState === 'steady' ? 'bg-green-500/90 text-white' : 'bg-black/60 text-white'}`}>
-                  <ScanIcon className="w-3.5 h-3.5" />
-                  {detectLabel}
-                  {detectState === 'steady' && autoScan && <span className="opacity-90">· auto-scan</span>}
-                </div>
-              )}
-              <div className="absolute top-3 right-3 flex gap-2">
-                <button onClick={flipCamera} className="p-2.5 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" title="Flip camera" aria-label="Flip camera">
-                  <RefreshCw className="w-5 h-5" />
-                </button>
-                <button onClick={toggleCamera} className="p-2.5 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors" title="Close camera" aria-label="Close camera">
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              <div className="absolute bottom-4 inset-x-0 flex items-center justify-center gap-6">
-                <button onClick={() => { armedRef.current = true; void captureFull(); }} className="w-16 h-16 rounded-full bg-white text-primary shadow-lg hover:scale-105 active:scale-95 transition-transform flex items-center justify-center" title="Capture page" aria-label="Capture page">
-                  <ScanLine className="w-8 h-8" style={{ color: primaryColor }} />
-                </button>
-              </div>
-              {/* Filter + auto-scan bar */}
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent px-3 pt-8 pb-3">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex gap-1.5 rounded-xl bg-black/40 backdrop-blur p-1">
-                    {FILTERS.map(f => (
-                      <button
-                        key={f.value}
-                        onClick={() => setFilter(f.value)}
-                        className={`px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-colors ${filter === f.value ? 'bg-white text-gray-900' : 'text-white/80 hover:text-white'}`}
-                      >
-                        {f.label}
-                      </button>
-                    ))}
-                  </div>
-                  <button
-                    onClick={() => setAutoScan(a => !a)}
-                    className={`px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition-colors flex items-center gap-1.5 backdrop-blur ${autoScan ? 'bg-green-500/90 text-white' : 'bg-black/40 text-white/80'}`}
-                    title="Auto-capture the page when it is steady"
-                  >
-                    <SlidersHorizontal className="w-3 h-3" /> Auto scan {autoScan ? 'on' : 'off'}
-                  </button>
-                </div>
-              </div>
-            </div>
-          ) : showPhotos ? (
+          {showPhotos ? (
             <div
               onDragOver={e => e.preventDefault()}
               onDrop={async e => {
@@ -624,7 +613,7 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
             </div>
           )}
 
-          {fallbackMode && !error && !cameraOn && (
+          {fallbackMode && !error && (
             <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-3">
               <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
               <p className="text-xs text-amber-800">{fallbackMode}</p>
@@ -637,16 +626,9 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-sm font-semibold text-foreground flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" />{pages.length} page{pages.length > 1 ? 's' : ''} ready</h3>
                 <div className="flex items-center gap-2">
-                  {cameraOn && (
-                    <button onClick={() => { armedRef.current = true; void captureFull(); }} className="px-3 py-1.5 rounded-lg text-xs font-medium text-white transition-colors flex items-center gap-1.5" style={{ backgroundColor: primaryColor }}>
-                      <Camera className="w-3.5 h-3.5" /> Add page
-                    </button>
-                  )}
-                  {!cameraOn && (
-                    <button onClick={() => fileInputRef.current?.click()} className="px-3 py-1.5 rounded-lg text-xs font-medium border border-border text-foreground hover:bg-gray-50 transition-colors flex items-center gap-1.5">
-                      <ImagePlus className="w-3.5 h-3.5" /> Add images
-                    </button>
-                  )}
+                  <button onClick={() => fileInputRef.current?.click()} className="px-3 py-1.5 rounded-lg text-xs font-medium border border-border text-foreground hover:bg-gray-50 transition-colors flex items-center gap-1.5">
+                    <ImagePlus className="w-3.5 h-3.5" /> Add images
+                  </button>
                   <button onClick={clearAll} className="px-3 py-1.5 rounded-lg text-xs font-medium text-destructive border border-red-200 hover:bg-red-50 transition-colors flex items-center gap-1.5">
                     <Trash2 className="w-3.5 h-3.5" /> Clear all
                   </button>
@@ -679,13 +661,6 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
                   </button>
                 ))}
               </div>
-            </div>
-          )}
-
-          {cameraOn && (
-            <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground gap-2 flex-wrap">
-              <span className="inline-flex items-center gap-1.5"><ScanIcon className="w-3.5 h-3.5" /> Tap the shutter or hold steady with auto-scan on to capture</span>
-              <span>Tap a thumbnail to reorder or remove</span>
             </div>
           )}
 
@@ -742,6 +717,115 @@ const resetToSearching = window.setTimeout(() => { if (isMounted.current) setDet
           )}
         </div>
       </div>
+
+      {/* ------------------------------------------------------------
+          Fullscreen camera MVP: video + detection overlay + bottom menu
+          ------------------------------------------------------------ */}
+      {cameraOn && (
+        <div className="fixed inset-0 z-[70] bg-black select-none" style={{ height: '100dvh', touchAction: 'none' }}>
+          <video ref={videoCallback} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover" />
+          <canvas ref={overlayRef} className="absolute inset-0 w-full h-full pointer-events-none" />
+
+          {/* Alignment guide while searching */}
+          {detectState === 'searching' && !cameraBusy && (
+            <div className="absolute inset-x-6 inset-y-24 border-2 border-dashed border-white/25 rounded-2xl pointer-events-none" />
+          )}
+
+          {cameraBusy && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white pointer-events-none">
+              <Loader2 className="w-8 h-8 animate-spin" />
+              <p className="text-sm font-medium">Starting camera…</p>
+            </div>
+          )}
+
+          {justScan && (
+            <div className="absolute inset-0 bg-white/40 border-4 border-white flex items-center justify-center pointer-events-none animate-fade-in">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center"><CheckCircle2 className="w-10 h-10 text-green-600" /></div>
+            </div>
+          )}
+
+          {/* Top bar: page count + thumbnails, flip + close */}
+          <div className="absolute top-0 inset-x-0 px-4 pt-4 pb-10 bg-gradient-to-b from-black/60 to-transparent flex items-start justify-between gap-3">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="px-3 py-1.5 rounded-full bg-black/50 text-white text-xs font-semibold backdrop-blur shrink-0">
+                {pages.length} page{pages.length === 1 ? '' : 's'}
+              </div>
+              {pages.length > 0 && (
+                <div className="flex gap-1.5 overflow-x-auto max-w-[55vw]">
+                  {pages.slice(-8).map((p, i, arr) => (
+                    <div key={p.id} className="relative w-9 h-12 shrink-0 rounded-md overflow-hidden ring-1 ring-white/40">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.url} alt={`Page ${pages.length - arr.length + i + 1}`} className="w-full h-full object-cover" />
+                      <span className="absolute bottom-0 right-0.5 px-0.5 text-[8px] font-bold text-white bg-black/60 rounded-sm">{pages.length - arr.length + i + 1}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div className="flex gap-2 shrink-0">
+              <button onClick={flipCamera} className="p-2.5 rounded-full bg-black/50 text-white hover:bg-black/70 active:bg-black/80 transition-colors" title="Flip camera" aria-label="Flip camera">
+                <RefreshCw className="w-5 h-5" />
+              </button>
+              <button onClick={closeCamera} className="p-2.5 rounded-full bg-black/50 text-white hover:bg-black/70 active:bg-black/80 transition-colors" title="Close camera" aria-label="Close camera">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Bottom menu: status, filters, shutter controls */}
+          <div className="absolute bottom-0 inset-x-0 px-4 pt-14 pb-5 bg-gradient-to-t from-black/85 via-black/60 to-transparent">
+            <p className="text-center text-xs font-medium text-white/90 mb-3 flex items-center justify-center gap-2">
+              <span className={`inline-block w-2 h-2 rounded-full ${detectState === 'steady' ? 'bg-green-400' : detectState === 'found' ? 'bg-amber-400' : 'bg-white/40'}`} />
+              {detectLabel}
+            </p>
+
+            <div className="flex justify-center gap-1.5 rounded-2xl bg-white/10 backdrop-blur p-1 mb-5 mx-auto w-fit">
+              {FILTERS.map(f => (
+                <button
+                  key={f.value}
+                  onClick={() => setFilter(f.value)}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${filter === f.value ? 'bg-white text-gray-900 shadow' : 'text-white/85 hover:text-white'}`}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex items-center justify-between px-2 sm:px-10">
+              <button
+                onClick={() => setAutoScan(a => !a)}
+                className={`flex flex-col items-center gap-1.5 text-[10px] font-semibold transition-colors ${autoScan ? 'text-white' : 'text-white/50'}`}
+              >
+                <span className={`w-12 h-12 rounded-full flex items-center justify-center backdrop-blur transition-colors ${autoScan ? 'bg-green-500/90 text-white' : 'bg-white/10 text-white/70'}`}>
+                  <SlidersHorizontal className="w-5 h-5" />
+                </span>
+                Auto scan
+              </button>
+
+              <button
+                onClick={shutterRelease}
+                disabled={cameraBusy}
+                className="w-20 h-20 rounded-full bg-white ring-4 ring-white/30 hover:ring-white/50 active:scale-95 transition-all flex items-center justify-center shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed"
+                title="Capture page" aria-label="Capture page"
+              >
+                <span className="w-[60px] h-[60px] rounded-full border-4 border-violet-600 flex items-center justify-center">
+                  <ScanLine className="w-7 h-7" style={{ color: primaryColor }} />
+                </span>
+              </button>
+
+              <button
+                onClick={closeCamera}
+                className="flex flex-col items-center gap-1.5 text-[10px] font-semibold text-white"
+              >
+                <span className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur text-white">
+                  <Check className="w-5 h-5" />
+                </span>
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

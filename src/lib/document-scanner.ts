@@ -17,6 +17,14 @@ export type ScanFilter = 'photo' | 'enhance' | 'grayscale' | 'bw';
 
 const DETECT_MAX_SIDE = 320;
 
+const MIN_AREA_FRAC = 0.10;       // page must cover at least 10% of the frame
+const MAX_AREA_FRAC = 0.94;       // …and must not swallow the whole frame
+const MIN_CORNER_MARGIN = 0.02;   // corners should sit ≥2% inside the frame
+const MIN_ANGLE_DEG = 40;         // interior angles must look like real corners
+const MAX_ANGLE_DEG = 140;
+const MAX_ASPECT_RATIO = 2.4;     // document width/height bounds
+const MIN_EDGE_STRENGTH = 52;     // mean Sobel magnitude along each edge
+
 /* ------------------------------------------------------------------ *
  *  Grayscale / blur / gradients — the cheap preprocessing stack
  * ------------------------------------------------------------------ */
@@ -258,6 +266,92 @@ function polygonArea(pts: Point[]): number {
   return Math.abs(s) / 2;
 }
 
+function interiorAngleDeg(a: Point, b: Point, c: Point): number {
+  const ux = a.x - b.x;
+  const uy = a.y - b.y;
+  const vx = c.x - b.x;
+  const vy = c.y - b.y;
+  const lu = Math.hypot(ux, uy);
+  const lv = Math.hypot(vx, vy);
+  if (lu < 1e-6 || lv < 1e-6) return 0;
+  const cos = Math.max(-1, Math.min(1, (ux * vx + uy * vy) / (lu * lv)));
+  return Math.acos(cos) * 180 / Math.PI;
+}
+
+function sampleMag(mag: Float32Array, w: number, h: number, x: number, y: number): number {
+  const x0 = Math.max(0, Math.min(w - 1, x));
+  const y0 = Math.max(0, Math.min(h - 1, y));
+  const xf = Math.floor(x0);
+  const yf = Math.floor(y0);
+  const x1 = Math.min(w - 1, xf + 1);
+  const y1 = Math.min(h - 1, yf + 1);
+  const fx = x0 - xf;
+  const fy = y0 - yf;
+  return (
+    (mag[yf * w + xf] * (1 - fx) + mag[yf * w + x1] * fx) * (1 - fy)
+    + (mag[y1 * w + xf] * (1 - fx) + mag[y1 * w + x1] * fx) * fy
+  );
+}
+
+/** Mean gradient magnitude along each edge; returns the weakest edge's mean. */
+function minEdgeStrength(q: Point[], mag: Float32Array, w: number, h: number): number {
+  let minVal = Infinity;
+  for (let i = 0; i < 4; i++) {
+    const a = q[i];
+    const b = q[(i + 1) % 4];
+    const len = Math.hypot(b.x - a.x, b.y - a.y);
+    const steps = Math.max(6, Math.round(len / 2));
+    let sum = 0;
+    for (let s = 0; s <= steps; s++) {
+      const t = s / steps;
+      sum += sampleMag(mag, w, h, a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t);
+    }
+    minVal = Math.min(minVal, sum / (steps + 1));
+  }
+  return minVal;
+}
+
+/**
+ * A candidate quad is only accepted when it is a convincing page:
+ * convex, four real corners, document-like aspect, inside-frame, and bounded
+ * by strong edges on all four sides. This is the gate that stops the scanner
+ * from capturing "anything".
+ */
+function isValidDocumentQuad(q: Point[], w: number, h: number, mag: Float32Array): boolean {
+  let sign = 0;
+  for (let i = 0; i < 4; i++) {
+    const a = q[i];
+    const b = q[(i + 1) % 4];
+    const c = q[(i + 2) % 4];
+    const cr = (b.x - a.x) * (c.y - b.y) - (b.y - a.y) * (c.x - b.x);
+    const s = Math.sign(cr);
+    if (s !== 0) {
+      if (sign !== 0 && s !== sign) return false;
+      sign = s;
+    }
+    const angle = interiorAngleDeg(a, b, c);
+    if (angle < MIN_ANGLE_DEG || angle > MAX_ANGLE_DEG) return false;
+  }
+
+  const edges = [0, 1, 2, 3].map(i =>
+    Math.hypot(q[(i + 1) % 4].x - q[i].x, q[(i + 1) % 4].y - q[i].y),
+  );
+  const maxEdge = Math.max(...edges);
+  const minEdge = Math.min(...edges);
+  if (minEdge <= 1 || maxEdge / minEdge > MAX_ASPECT_RATIO) return false;
+
+  const area = polygonArea(q);
+  if (area < w * h * MIN_AREA_FRAC || area > w * h * MAX_AREA_FRAC) return false;
+
+  for (const p of q) {
+    const margin = Math.min(p.x, w - 1 - p.x, p.y, h - 1 - p.y);
+    if (margin < Math.min(w, h) * MIN_CORNER_MARGIN) return false;
+  }
+
+  if (minEdgeStrength(q, mag, w, h) < MIN_EDGE_STRENGTH) return false;
+  return true;
+}
+
 /* ------------------------------------------------------------------ *
  *  Public detection entry point
  * ------------------------------------------------------------------ */
@@ -286,9 +380,7 @@ export function detectDocumentCorners(video: HTMLVideoElement): Corner[] | null 
   const hull = convexHull(comp.pts);
   const quad = quadFromHull(hull);
   if (!quad) return null;
-
-  const area = polygonArea(quad);
-  if (area < w * h * 0.04) return null;
+  if (!isValidDocumentQuad(quad, w, h, mag)) return null;
 
   return quad.map(p => ({ x: Math.min(0.995, Math.max(0.005, p.x / (w - 1))), y: Math.min(0.995, Math.max(0.005, p.y / (h - 1))) }));
 }
@@ -371,26 +463,56 @@ function bilinearSample(data: Uint8ClampedArray, w: number, h: number, x: number
   }
 }
 
-function drawQuadOnCanvas(ctx: CanvasRenderingContext2D, quad: Corner[], w: number, h: number, stroke: string): void {
-  ctx.clearRect(0, 0, w, h);
+export interface PixelPoint {
+  x: number;
+  y: number;
+}
+
+function strokeQuadPath(ctx: CanvasRenderingContext2D, pts: PixelPoint[], stroke: string, lineWidth: number): void {
   ctx.strokeStyle = stroke;
-  ctx.lineWidth = Math.max(2, Math.min(4, w / 200));
+  ctx.lineWidth = lineWidth;
   ctx.lineJoin = 'round';
   ctx.beginPath();
-  quad.forEach((p, i) => {
-    const px = p.x * w;
-    const py = p.y * h;
-    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  pts.forEach((p, i) => {
+    if (i === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
   });
   ctx.closePath();
   ctx.stroke();
-  // Corner dots
   ctx.fillStyle = stroke;
-  for (const p of quad) {
-    ctx.beginPath();
-    ctx.arc(p.x * w, p.y * h, Math.max(3, w / 140), 0, Math.PI * 2);
-    ctx.fill();
+  ctx.beginPath();
+  const dotR = Math.max(3, lineWidth * 1.6);
+  for (const p of pts) {
+    ctx.moveTo(p.x + dotR, p.y);
+    ctx.arc(p.x, p.y, dotR, 0, Math.PI * 2);
   }
+  ctx.fill();
+}
+
+/**
+ * Draw the detected page boundary using display pixel coordinates. Pass the
+ * corners already transformed from video space (see the cover-transform in the
+ * tool component) so the overlay stays glued to the visible video even when
+ * object-cover crops the feed.
+ */
+export function drawDetectionOverlayPixels(
+  ctx: CanvasRenderingContext2D,
+  pts: PixelPoint[],
+  width: number,
+  height: number,
+  stroke = '#22c55e',
+): void {
+  ctx.clearRect(0, 0, width, height);
+  strokeQuadPath(ctx, pts, stroke, Math.max(2, Math.min(4.5, width / 180)));
+}
+
+export function drawDetectionOverlay(
+  ctx: CanvasRenderingContext2D,
+  quad: Corner[],
+  width: number,
+  height: number,
+): void {
+  const pts = quad.map(p => ({ x: p.x * width, y: p.y * height }));
+  drawDetectionOverlayPixels(ctx, pts, width, height);
 }
 
 /**
@@ -515,13 +637,4 @@ export function applyFilter(canvas: HTMLCanvasElement, filter: ScanFilter): HTML
   }
   ctx.putImageData(img, 0, 0);
   return canvas;
-}
-
-export function drawDetectionOverlay(
-  ctx: CanvasRenderingContext2D,
-  quad: Corner[],
-  width: number,
-  height: number,
-): void {
-  drawQuadOnCanvas(ctx, quad, width, height, '#22c55e');
 }
