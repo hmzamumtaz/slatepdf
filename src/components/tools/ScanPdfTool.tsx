@@ -674,15 +674,15 @@ export default function ScanPdfTool() {
                     <Smartphone className="w-9 h-9" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h2 className="text-xl sm:text-2xl font-bold">Best experienced on your phone</h2>
+                    <h2 className="text-xl sm:text-2xl font-bold">Scan PDF — camera scanning is under development</h2>
                     <p className="text-sm text-violet-200 mt-1.5 leading-relaxed">
-                      The scanner uses your phone’s camera to detect the page, straighten it and capture multiple pages —
-                      everything stays on your device. Open this page on your phone to scan.
+                      Live camera scanning with auto page detection is being built for desktop and isn&apos;t available here yet.
+                      For the full scanner, open this page on your phone — or add photos from this device in the meantime.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-2 mt-4">
                       <button onClick={copyLink} className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white text-violet-700 text-sm font-semibold hover:bg-violet-50 transition-colors">
                         {copied ? <CheckCircle2 className="w-4 h-4" /> : <Link2 className="w-4 h-4" />}
-                        {copied ? 'Link copied!' : 'Copy link to send to your phone'}
+                        {copied ? 'Link copied!' : 'Scan on your phone instead'}
                       </button>
                       <button onClick={() => setShowPhotos(true)} className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 text-white text-sm font-medium hover:bg-white/25 transition-colors">
                         <Download className="w-4 h-4" /> Add photos from this device
