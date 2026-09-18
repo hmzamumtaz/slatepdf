@@ -15,15 +15,15 @@ export interface Corner {
 
 export type ScanFilter = 'photo' | 'enhance' | 'grayscale' | 'bw';
 
-const DETECT_MAX_SIDE = 320;
+const DETECT_MAX_SIDE = 384;
 
-const MIN_AREA_FRAC = 0.10;       // page must cover at least 10% of the frame
-const MAX_AREA_FRAC = 0.94;       // …and must not swallow the whole frame
-const MIN_CORNER_MARGIN = 0.02;   // corners should sit ≥2% inside the frame
+const MIN_AREA_FRAC = 0.06;       // page must cover at least 6% of the frame
+const MAX_AREA_FRAC = 0.97;       // …and must not swallow the whole frame
+const MIN_CORNER_MARGIN = 0.012;  // corners should sit ≥1.2% inside the frame
 const MIN_ANGLE_DEG = 40;         // interior angles must look like real corners
 const MAX_ANGLE_DEG = 140;
-const MAX_ASPECT_RATIO = 2.4;     // document width/height bounds
-const MIN_EDGE_STRENGTH = 52;     // mean Sobel magnitude along each edge
+const MAX_ASPECT_RATIO = 3.2;     // document width/height bounds
+const MIN_EDGE_STRENGTH = 26;     // mean Sobel magnitude along each edge
 
 /* ------------------------------------------------------------------ *
  *  Grayscale / blur / gradients — the cheap preprocessing stack
@@ -375,7 +375,7 @@ export function detectDocumentCorners(video: HTMLVideoElement): Corner[] | null 
   const comp = largestComponentBoundary(bin, w, h);
   if (!comp) return null;
   // Too small to be a meaningful document.
-  if (comp.count < w * h * 0.12) return null;
+  if (comp.count < w * h * 0.07) return null;
 
   const hull = convexHull(comp.pts);
   const quad = quadFromHull(hull);

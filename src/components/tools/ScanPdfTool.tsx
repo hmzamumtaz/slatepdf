@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import {
   Camera, ImagePlus, ArrowLeft, RefreshCw, Trash2, ChevronLeft, ChevronRight,
   FileDown, Loader2, AlertCircle, CheckCircle2, X, Smartphone, Link2, Download,
-  Wand2, SlidersHorizontal, ScanLine, Check,
+  Wand2, SlidersHorizontal, ScanLine, Check, RotateCw,
 } from 'lucide-react';
 import Link from 'next/link';
 import { scannedPagesToPdf, getOutputFilename, downloadBlob, type ScanPdfOptions } from '@/lib/pdf-engine';
@@ -59,6 +59,24 @@ function cornerDrift(a: Corner[] | null, b: Corner[] | null): number {
   return s / 4;
 }
 
+/** Rotate a canvas by 90° increments without mutating the source. */
+function rotatePage(src: HTMLCanvasElement, rot: number): HTMLCanvasElement {
+  const deg = ((rot % 360) + 360) % 360;
+  if (deg === 0) return src;
+  const swap = deg % 180 !== 0;
+  const w = swap ? src.height : src.width;
+  const h = swap ? src.width : src.height;
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  const ctx = c.getContext('2d');
+  if (!ctx) return src;
+  ctx.translate(w / 2, h / 2);
+  ctx.rotate((deg * Math.PI) / 180);
+  ctx.drawImage(src, -src.width / 2, -src.height / 2);
+  return c;
+}
+
 export default function ScanPdfTool() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const overlayRef = useRef<HTMLCanvasElement | null>(null);
@@ -81,6 +99,12 @@ export default function ScanPdfTool() {
   const filterRef = useRef<ScanFilter>('photo');
   const cameraOnRef = useRef(false);
   const overlaySizeRef = useRef({ w: 0, h: 0 });
+  const draftBaseRef = useRef<HTMLCanvasElement | null>(null);
+  const reviewOpenRef = useRef(false);
+  const renderSeqRef = useRef(0);
+  const draftUrlRef = useRef<string | null>(null);
+  const draftFilterRef = useRef<ScanFilter>('photo');
+  const draftRotRef = useRef(0);
 
   const [pages, setPages] = useState<ScannedPage[]>([]);
   const [selected, setSelected] = useState<number | null>(null);
@@ -92,12 +116,15 @@ export default function ScanPdfTool() {
   const [converting, setConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<Blob | null>(null);
-  const [justScan, setJustScan] = useState(false);
   const [autoScan, setAutoScan] = useState(true);
   const [filter, setFilter] = useState<ScanFilter>('photo');
   const [detectState, setDetectState] = useState<'disabled' | 'searching' | 'found' | 'steady' | 'capturing'>('disabled');
   const [showPhotos, setShowPhotos] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [reviewOpen, setReviewOpen] = useState(false);
+  const [draftUrl, setDraftUrl] = useState<string | null>(null);
+  const [draftFilter, setDraftFilter] = useState<ScanFilter>('photo');
+  const [draftRot, setDraftRot] = useState(0);
 
   const isMobile = useMemo(() => {
     if (typeof window === 'undefined') return false;
@@ -209,6 +236,60 @@ export default function ScanPdfTool() {
     setSelected(null);
   }, []);
 
+  const renderDraft = useCallback(async () => {
+    const base = draftBaseRef.current;
+    if (!base) return;
+    const filter = draftFilterRef.current;
+    const rot = draftRotRef.current;
+    const seq = ++renderSeqRef.current;
+    try {
+      const out = applyFilter(rotatePage(base, rot), filter);
+      const blob = await new Promise<Blob | null>(res => out.toBlob(b => res(b), 'image/jpeg', 0.9));
+      if (seq !== renderSeqRef.current) return;
+      if (draftUrlRef.current) URL.revokeObjectURL(draftUrlRef.current);
+      draftUrlRef.current = blob ? URL.createObjectURL(blob) : null;
+      setDraftUrl(draftUrlRef.current);
+    } catch {
+      /* keep the previous preview */
+    }
+  }, []);
+
+  const setDraftFilterValue = useCallback((f: ScanFilter) => {
+    draftFilterRef.current = f;
+    setDraftFilter(f);
+    void renderDraft();
+  }, [renderDraft]);
+
+  const setDraftRotValue = useCallback((r: number) => {
+    draftRotRef.current = r;
+    setDraftRot(r);
+    void renderDraft();
+  }, [renderDraft]);
+
+  const closeReview = useCallback(() => {
+    reviewOpenRef.current = false;
+    renderSeqRef.current++;
+    if (draftUrlRef.current) {
+      URL.revokeObjectURL(draftUrlRef.current);
+      draftUrlRef.current = null;
+    }
+    draftBaseRef.current = null;
+    setReviewOpen(false);
+    setDraftUrl(null);
+    setDetectState('searching');
+  }, []);
+
+  const saveDraft = useCallback(() => {
+    const base = draftBaseRef.current;
+    if (!base) return;
+    const out = applyFilter(rotatePage(base, draftRotRef.current), draftFilterRef.current);
+    out.toBlob(b => {
+      if (!b) return;
+      addPhoto(b);
+      closeReview();
+    }, 'image/jpeg', 0.9);
+  }, [addPhoto, closeReview]);
+
   const captureFull = useCallback(async () => {
     const video = videoRef.current;
     if (!video || video.readyState < 2 || capturingRef.current) return;
@@ -216,25 +297,28 @@ export default function ScanPdfTool() {
     setDetectState('capturing');
     try {
       const quad = lastCornersRef.current ?? FULL_FRAME;
-      const frame = warpPageFrame(video, quad, filterRef.current);
-      if (!frame) { setError('Could not process the camera frame. Try again.'); return; }
-      const blob = await new Promise<Blob | null>(res => frame.toBlob(b => res(b), 'image/jpeg', 0.9));
-      if (blob) {
-        await new Promise(r => window.setTimeout(r, 60)); // let the flash paint
-        addPhoto(blob);
-        setJustScan(true);
-        window.setTimeout(() => setJustScan(false), 380);
-      }
+      const base = warpPageFrame(video, quad, 'photo');
+      if (!base) { setError('Could not process the camera frame. Try again.'); return; }
+      drawOverlay(null, '');
+      draftBaseRef.current = base;
+      draftFilterRef.current = filterRef.current;
+      draftRotRef.current = 0;
+      reviewOpenRef.current = true;
+      armedRef.current = false;
+      setDraftFilter(filterRef.current);
+      setDraftRot(0);
+      setReviewOpen(true);
+      void renderDraft();
     } finally {
       capturingRef.current = false;
-      if (lastCornersRef.current) setDetectState('steady'); else setDetectState('found');
     }
-  }, [addPhoto]);
+  }, [drawOverlay, renderDraft]);
 
   const startDetection = useCallback(() => {
     if (detectRafRef.current != null) return;
     const tick = () => {
       detectRafRef.current = window.requestAnimationFrame(tick);
+      if (reviewOpenRef.current) return;
       const video = videoRef.current;
       if (!video || video.readyState < 2 || !isMounted.current) return;
       const now = performance.now();
@@ -747,13 +831,8 @@ export default function ScanPdfTool() {
             </div>
           )}
 
-          {justScan && (
-            <div className="absolute inset-0 bg-white/40 border-4 border-white flex items-center justify-center pointer-events-none animate-fade-in">
-              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center"><CheckCircle2 className="w-10 h-10 text-green-600" /></div>
-            </div>
-          )}
-
           {/* Top bar: page count + thumbnails, flip + close */}
+          {!reviewOpen && (
           <div className="absolute top-0 inset-x-0 px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-10 bg-gradient-to-b from-black/60 to-transparent flex items-start justify-between gap-3">
             <div className="flex items-center gap-2 min-w-0 flex-1">
               <div className="px-3 py-1.5 rounded-full bg-black/50 text-white text-xs font-semibold backdrop-blur shrink-0">
@@ -780,8 +859,10 @@ export default function ScanPdfTool() {
               </button>
             </div>
           </div>
+          )}
 
           {/* Bottom menu: status, filters, shutter controls */}
+          {!reviewOpen && (
           <div className="absolute bottom-0 inset-x-0 px-4 pt-14 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] bg-gradient-to-t from-black/85 via-black/60 to-transparent">
             <p className="text-center text-xs font-medium text-white/90 mb-3 flex items-center justify-center gap-2">
               <span className={`inline-block w-2 h-2 rounded-full ${detectState === 'steady' ? 'bg-green-400' : detectState === 'found' ? 'bg-amber-400' : 'bg-white/40'}`} />
@@ -833,6 +914,64 @@ export default function ScanPdfTool() {
               </button>
             </div>
           </div>
+          )}
+
+          {/* Review captured page before it gets finalized */}
+          {reviewOpen && draftUrl && (
+            <div className="absolute inset-0 z-10 flex flex-col bg-gray-950/95 animate-fade-in">
+              <div className="flex items-center justify-between px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-3">
+                <button onClick={closeReview} className="p-2.5 -ml-1.5 rounded-full text-white/80 hover:bg-white/10 transition-colors" title="Back to camera (discard)" aria-label="Discard and rescan">
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <p className="text-sm font-semibold text-white">Adjust page</p>
+                <button
+                  onClick={saveDraft}
+                  className="px-4 py-2 rounded-xl font-semibold text-sm text-white flex items-center gap-1.5 transition-all active:scale-95"
+                  style={{ backgroundColor: primaryColor }}
+                >
+                  <Check className="w-4 h-4" /> Save
+                </button>
+              </div>
+
+              <div className="flex-1 min-h-0 flex items-center justify-center px-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={draftUrl} alt="Captured page" className="max-h-full max-w-full rounded-xl shadow-2xl object-contain" />
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-1.5 rounded-2xl bg-white/10 backdrop-blur p-1 mb-3 mx-auto w-fit max-w-[92vw]">
+                {FILTERS.map(f => (
+                  <button
+                    key={f.value}
+                    onClick={() => setDraftFilterValue(f.value)}
+                    className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-colors ${draftFilter === f.value ? 'bg-white text-gray-900 shadow' : 'text-white/85 hover:text-white'}`}
+                  >
+                    {f.label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="w-full max-w-md mx-auto flex items-center justify-center gap-8 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">
+                <button onClick={() => setDraftRotValue(draftRot + 90)} className="flex flex-col items-center gap-1.5 text-[10px] font-semibold text-white">
+                  <span className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur text-white">
+                    <RotateCw className="w-5 h-5" />
+                  </span>
+                  Rotate
+                </button>
+                <button onClick={closeReview} className="flex flex-col items-center gap-1.5 text-[10px] font-semibold text-white">
+                  <span className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur text-white">
+                    <RefreshCw className="w-5 h-5" />
+                  </span>
+                  Rescan
+                </button>
+                <button onClick={closeReview} className="flex flex-col items-center gap-1.5 text-[10px] font-semibold text-red-300">
+                  <span className="w-12 h-12 rounded-full flex items-center justify-center bg-red-500/20 backdrop-blur text-red-300">
+                    <Trash2 className="w-5 h-5" />
+                  </span>
+                  Delete
+                </button>
+              </div>
+            </div>
+          )}
         </div>,
         document.body
       )}
