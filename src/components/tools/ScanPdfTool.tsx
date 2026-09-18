@@ -722,7 +722,10 @@ export default function ScanPdfTool() {
           Fullscreen camera MVP: video + detection overlay + bottom menu
           ------------------------------------------------------------ */}
       {cameraOn && (
-        <div className="fixed inset-0 z-[70] bg-black select-none" style={{ height: '100dvh', touchAction: 'none' }}>
+        <div
+          className="fixed top-0 inset-x-0 z-[70] h-screen bg-black select-none"
+          style={{ height: '100dvh', touchAction: 'none', overscrollBehavior: 'none' }}
+        >
           <video ref={videoCallback} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover" />
           <canvas ref={overlayRef} className="absolute inset-0 w-full h-full pointer-events-none" />
 
@@ -745,13 +748,13 @@ export default function ScanPdfTool() {
           )}
 
           {/* Top bar: page count + thumbnails, flip + close */}
-          <div className="absolute top-0 inset-x-0 px-4 pt-4 pb-10 bg-gradient-to-b from-black/60 to-transparent flex items-start justify-between gap-3">
-            <div className="flex items-center gap-2 min-w-0">
+          <div className="absolute top-0 inset-x-0 px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-10 bg-gradient-to-b from-black/60 to-transparent flex items-start justify-between gap-3">
+            <div className="flex items-center gap-2 min-w-0 flex-1">
               <div className="px-3 py-1.5 rounded-full bg-black/50 text-white text-xs font-semibold backdrop-blur shrink-0">
                 {pages.length} page{pages.length === 1 ? '' : 's'}
               </div>
               {pages.length > 0 && (
-                <div className="flex gap-1.5 overflow-x-auto max-w-[55vw]">
+                <div className="flex gap-1.5 max-w-[55vw] overflow-x-auto min-w-0">
                   {pages.slice(-8).map((p, i, arr) => (
                     <div key={p.id} className="relative w-9 h-12 shrink-0 rounded-md overflow-hidden ring-1 ring-white/40">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -773,13 +776,13 @@ export default function ScanPdfTool() {
           </div>
 
           {/* Bottom menu: status, filters, shutter controls */}
-          <div className="absolute bottom-0 inset-x-0 px-4 pt-14 pb-5 bg-gradient-to-t from-black/85 via-black/60 to-transparent">
+          <div className="absolute bottom-0 inset-x-0 px-4 pt-14 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] bg-gradient-to-t from-black/85 via-black/60 to-transparent">
             <p className="text-center text-xs font-medium text-white/90 mb-3 flex items-center justify-center gap-2">
               <span className={`inline-block w-2 h-2 rounded-full ${detectState === 'steady' ? 'bg-green-400' : detectState === 'found' ? 'bg-amber-400' : 'bg-white/40'}`} />
               {detectLabel}
             </p>
 
-            <div className="flex justify-center gap-1.5 rounded-2xl bg-white/10 backdrop-blur p-1 mb-5 mx-auto w-fit">
+            <div className="flex flex-wrap justify-center gap-1.5 rounded-2xl bg-white/10 backdrop-blur p-1 mb-5 mx-auto w-fit max-w-full">
               {FILTERS.map(f => (
                 <button
                   key={f.value}
@@ -791,7 +794,7 @@ export default function ScanPdfTool() {
               ))}
             </div>
 
-            <div className="flex items-center justify-between px-2 sm:px-10">
+            <div className="w-full max-w-md mx-auto flex items-center justify-between gap-4 px-2">
               <button
                 onClick={() => setAutoScan(a => !a)}
                 className={`flex flex-col items-center gap-1.5 text-[10px] font-semibold transition-colors ${autoScan ? 'text-white' : 'text-white/50'}`}
