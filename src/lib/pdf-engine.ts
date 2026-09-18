@@ -782,6 +782,57 @@ export async function jpgToPdf(files: File[]): Promise<Blob> {
   return toBlob(await merged.save());
 }
 
+export interface ScanPdfOptions {
+  pageSize?: 'a4' | 'a4-landscape' | 'letter' | 'original';
+}
+
+/**
+ * Turn scanned page images (JPEG per page) into a single PDF. Each image gets
+ * its own page, centred and scaled to fit the requested paper size. `original`
+ * sizes the page to the image's aspect ratio instead of a fixed paper size.
+ */
+export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions = {}): Promise<Blob> {
+  if (images.length === 0) throw new Error('Add at least one page to convert.');
+  const sizes = {
+    a4: { w: 595.28, h: 841.89 },
+    'a4-landscape': { w: 841.89, h: 595.28 },
+    letter: { w: 612, h: 792 },
+  } as const;
+  const MARGIN = 24;
+  const merged = await PDFDocument.create();
+  for (const image of images) {
+    const buf = await image.arrayBuffer();
+    let img;
+    try {
+      img = await merged.embedJpg(buf);
+    } catch {
+      throw new Error('A scanned page could not be read as an image. Try scanning again.');
+    }
+    let pw: number;
+    let ph: number;
+    if (options.pageSize && options.pageSize !== 'original') {
+      const size = sizes[options.pageSize];
+      pw = size.w;
+      ph = size.h;
+    } else {
+      // Match the image's aspect ratio, capped so absurdly large phone photos
+      // don't produce towering non-standard pages.
+      const cap = 2000;
+      const scale = Math.min(1, cap / Math.max(img.width, img.height));
+      pw = Math.max(1, img.width * scale);
+      ph = Math.max(1, img.height * scale);
+    }
+    const maxW = pw - MARGIN * 2;
+    const maxH = ph - MARGIN * 2;
+    const scale = Math.min(maxW / img.width, maxH / img.height);
+    const w = img.width * scale;
+    const h = img.height * scale;
+    const page = merged.addPage([pw, ph]);
+    page.drawImage(img, { x: (pw - w) / 2, y: (ph - h) / 2, width: w, height: h });
+  }
+  return toBlob(await merged.save());
+}
+
 async function transcodeImageToPng(file: File): Promise<Uint8Array> {
   const bitmap = await createImageBitmap(file);
   const canvas = document.createElement('canvas');

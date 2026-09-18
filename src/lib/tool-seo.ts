@@ -110,6 +110,17 @@ const toolSeo: Record<string, {
       { q: 'Can I combine multiple images into one PDF?', a: 'Yes. Load all your JPGs, arrange them in order, and convert. Each image becomes one page in the resulting PDF.' },
     ],
   },
+  'scan-pdf': {
+    title: 'Scan PDF — Scan Documents to PDF From Your Camera',
+    description: 'Scan documents with your camera or phone photos and save them as a PDF. Free, no app, no sign-up. All scanning happens in your browser.',
+    keywords: ['scan to pdf', 'scan pdf', 'document scanner to pdf', 'camera scanner pdf', 'scan documents to pdf'],
+    faqs: [
+      { q: 'Do I need a scanner to make a PDF?', a: 'No. Use your phone or laptop camera to capture each page, or add photos directly from your device. The pages are combined into a single PDF in your browser.' },
+      { q: 'Is my scanned document uploaded to a server?', a: 'No. Everything happens on your device — the camera stream, image processing, and PDF creation. Your document never leaves your browser.' },
+      { q: 'Can I scan multiple pages into one PDF?', a: 'Yes. Capture as many pages as you need — each capture becomes one page — and they are all merged into a single PDF when you convert.' },
+      { q: 'Can I reorder or remove scanned pages?', a: 'Yes. Tap a page thumbnail to select it, then use the move buttons to reorder it or the trash button to remove it before converting.' },
+    ],
+  },
   'word-to-pdf': {
     title: 'Word to PDF — Convert DOCX to PDF Free Online',
     description: 'Convert Word documents (DOCX) to PDF. Preserve formatting, fonts, and layout. Free, browser-based, no upload required.',

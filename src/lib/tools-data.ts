@@ -37,6 +37,7 @@ export const tools: ToolInfo[] = [
 
   // Convert to PDF
   { slug: 'jpg-to-pdf', name: 'JPG to PDF', description: 'Convert images to PDF documents', icon: 'Image', category: 'Create PDF', color: '#f97316' },
+  { slug: 'scan-pdf', name: 'Scan PDF', description: 'Scan documents with your camera and save as PDF', icon: 'Camera', category: 'Create PDF', color: '#7c3aed' },
   { slug: 'word-to-pdf', name: 'Word to PDF', description: 'Turn a document (DOCX) into a PDF', icon: 'FileText', category: 'Create PDF', color: '#2563eb' },
   { slug: 'powerpoint-to-pdf', name: 'PowerPoint to PDF', description: 'Turn slides (PPTX) into a PDF', icon: 'Presentation', category: 'Create PDF', color: '#dc2626' },
   { slug: 'excel-to-pdf', name: 'Excel to PDF', description: 'Turn a spreadsheet (XLSX) into a PDF', icon: 'Table', category: 'Create PDF', color: '#16a34a' },
