@@ -43,6 +43,8 @@ export interface Box {
   height: number;
 }
 
+export type TextAlign = 'left' | 'center' | 'right';
+
 export interface TextBlock {
   id: string;
   page: number;
@@ -52,6 +54,9 @@ export interface TextBlock {
   /** Baseline origin in PDF points, from the bottom-left of the page. */
   x: number;
   y: number;
+  /** Where the line originally sat, so moves can be matched to the stream and reverted. */
+  ox: number;
+  oy: number;
   width: number;
   fontSize: number;
   family: FontFamily;
@@ -60,6 +65,10 @@ export interface TextBlock {
   color: Rgb;
   /** The paper behind the run, so the editor can cover it while you type. */
   background: Rgb;
+  /** How the line is placed inside its box when drawn. */
+  align: TextAlign;
+  /** An explicit marker colour behind the text, or null for no highlight. */
+  highlight: Rgb | null;
   /** PostScript name of the font the run used, so it can be reused. */
   sourceFont?: string;
   deleted: boolean;
@@ -143,7 +152,15 @@ export function toWinAnsi(text: string): { text: string; dropped: string[] } {
 }
 
 export function isChanged(block: TextBlock): boolean {
-  return block.added || block.deleted || block.text !== block.original;
+  return (
+    block.added ||
+    block.deleted ||
+    block.text !== block.original ||
+    block.align !== 'left' ||
+    block.highlight !== null ||
+    Math.abs(block.x - block.ox) > 0.01 ||
+    Math.abs(block.y - block.oy) > 0.01
+  );
 }
 
 export function isImageChanged(image: ImageObject): boolean {
@@ -409,6 +426,8 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
           original: run.text,
           x: run.x,
           y: run.y,
+          ox: run.x,
+          oy: run.y,
           width: run.width,
           fontSize: run.fontSize,
           family: run.family,
@@ -416,6 +435,8 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
           italic: run.italic,
           color: sampleInk(sampler, left, top, right, bottom, background),
           background,
+          align: 'left',
+          highlight: null,
           sourceFont: run.sourceFont || undefined,
           deleted: false,
           added: false,
@@ -568,15 +589,17 @@ export async function buildEditedPdf(
 
     const scan = scanContentStream(bytes, imageNamesFor(doc, pageIndex));
 
-    // Work out which show operators sit behind each block.
+    // Work out which show operators sit behind each block. Matching runs
+    // against the block's original position: a moved block still has to find
+    // the operators that drew it where it used to be.
     const showsForBlock = new Map<string, number[]>();
     for (const block of pageBlocks) {
       if (block.added) continue;
       const matches = scan.shows
         .filter(show =>
-          show.x >= block.x - 1.5 &&
-          show.x <= block.x + Math.max(block.width, 1) + 1.5 &&
-          Math.abs(show.y - block.y) <= Math.max(1.5, block.fontSize * 0.5))
+          show.x >= block.ox - 1.5 &&
+          show.x <= block.ox + Math.max(block.width, 1) + 1.5 &&
+          Math.abs(show.y - block.oy) <= Math.max(1.5, block.fontSize * 0.5))
         .map(show => show.opIndex);
       showsForBlock.set(block.id, matches);
     }
@@ -629,6 +652,10 @@ export async function buildEditedPdf(
     page.node.set(PDFName.of('Contents'), doc.context.register(doc.context.flateStream(rewritten)));
 
     // Draw the replacements.
+
+    // Pass one: anything behind the text — paper covers for runs that could
+    // not be removed in place, and explicit highlights. Drawn before any text
+    // so no neighbour can sit on top of them.
     for (const block of redraw) {
       if (block.deleted) continue;
 
@@ -640,13 +667,41 @@ export async function buildEditedPdf(
       // paper color first so the two can't overlap.
       if (unmatched && !block.added && (showsForBlock.get(block.id)?.length ?? 0) === 0) {
         page.drawRectangle({
-          x: block.x,
-          y: block.y - block.fontSize * 0.24,
+          x: block.ox,
+          y: block.oy - block.fontSize * 0.24,
           width: block.width,
           height: block.fontSize * 1.06,
           color: rgb(block.background.r / 255, block.background.g / 255, block.background.b / 255),
         });
       }
+
+      if (block.highlight) {
+        const resolved = await fonts.resolve(
+          { sourceFont: block.sourceFont, family: block.family, bold: block.bold, italic: block.italic },
+          block.text,
+        );
+        const text = resolved.renderable ? block.text : toWinAnsi(block.text).text;
+        if (!text.trim()) continue;
+        const size = isChanged(block)
+          ? block.fontSize
+          : fitSize(resolved.font.widthOfTextAtSize(text, block.fontSize), block.fontSize, block.width);
+        const lines = text.split('\n');
+        const widths = lines.map(line => resolved.font.widthOfTextAtSize(line, size));
+        const reference = Math.max(block.width, 0, ...widths);
+        page.drawRectangle({
+          x: block.x,
+          y: block.y - size * 0.36,
+          width: reference,
+          height: lines.length * size * 1.16,
+          color: rgb(block.highlight.r / 255, block.highlight.g / 255, block.highlight.b / 255),
+          opacity: 0.4,
+        });
+      }
+    }
+
+    // Pass two: the text itself, line by line, aligned to its reference width.
+    for (const block of redraw) {
+      if (block.deleted) continue;
 
       const resolved = await fonts.resolve(
         { sourceFont: block.sourceFont, family: block.family, bold: block.bold, italic: block.italic },
@@ -664,13 +719,20 @@ export async function buildEditedPdf(
         ? block.fontSize
         : fitSize(resolved.font.widthOfTextAtSize(text, block.fontSize), block.fontSize, block.width);
 
-      page.drawText(text, {
-        x: block.x,
-        y: block.y,
-        size,
-        font: resolved.font,
-        color: rgb(block.color.r / 255, block.color.g / 255, block.color.b / 255),
-      });
+      const lines = text.split('\n');
+      const widths = lines.map(line => resolved.font.widthOfTextAtSize(line, size));
+      const reference = Math.max(block.width, 0, ...widths);
+      const color = rgb(block.color.r / 255, block.color.g / 255, block.color.b / 255);
+      const lineHeight = size * 1.16;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (!line.trim()) continue;
+        let x = block.x;
+        if (block.align === 'center') x += (reference - widths[i]) / 2;
+        else if (block.align === 'right') x += reference - widths[i];
+        page.drawText(line, { x, y: block.y - i * lineHeight, size, font: resolved.font, color });
+      }
     }
 
     for (const image of pageImages) {
