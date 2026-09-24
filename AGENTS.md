@@ -12,7 +12,7 @@ Live at https://slatepdf.space/ (GitHub `hmzamumtaz/slatepdf`). Next.js 16.3.1, 
 
 ## Commands (required before finishing any task)
 - Node is NOT on the default PATH. Export it first:
-  `export PATH="/var/folders/bl/pttt5my53pg44y3szmbqmx080000gn/T/opencode/node/node-v22.14.0-darwin-x64/bin:$PATH"`
+  `export PATH="/var/folders/bl/pttt5my53pg44y3szmbqmx080000gn/T/nodefix/node-v22.16.0-darwin-x64/bin:$PATH"`
 - Verify with: `npx tsc --noEmit`, `npx eslint`, `npm run build`.
 - Commit + push to `origin main` only when the user asks. Vercel deploys on push.
 
