@@ -30,8 +30,10 @@ import { newPosts15 } from './new-posts-15';
 import { newPosts16 } from './new-posts-16';
 import { newPosts17 } from './new-posts-17';
 import { newPosts18 } from './new-posts-18';
+import { newPosts19 } from './new-posts-19';
 
 export const allPosts: BlogPost[] = [
+  ...newPosts19,
   ...newPosts18,
   ...newPosts17,
   ...newPosts16,
