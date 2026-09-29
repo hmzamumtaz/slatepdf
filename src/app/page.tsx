@@ -50,7 +50,7 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [stats, setStats] = useState({ filesConverted: 0, toolsUsed: 0, globalCount: 127483 });
+  const [stats, setStats] = useState({ filesConverted: 0, toolsUsed: 0, globalCount: 0 });
 
   const popularTools = ['merge-pdf', 'compress-pdf', 'jpg-to-pdf', 'pdf-to-word', 'sign-pdf', 'edit-pdf']
     .map(getToolBySlug)
@@ -186,15 +186,11 @@ export default function Home() {
               <div className="text-sm text-muted-foreground mt-1">Files Converted</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
-                <AnimatedCounter target={100} suffix="%" />
-              </div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">100%</div>
               <div className="text-sm text-muted-foreground mt-1">Free Forever</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
-                <AnimatedCounter target={0} suffix="s" />
-              </div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">0s</div>
               <div className="text-sm text-muted-foreground mt-1">Upload Wait Time</div>
             </div>
           </div>
