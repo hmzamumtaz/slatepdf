@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Shield, Lock, ArrowRight, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown, Zap, UserPlus } from 'lucide-react';
+import { Shield, Lock, ArrowRight, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
 import { categories, getToolsByCategory, featuredTool, getToolBySlug } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
@@ -67,9 +67,9 @@ export default function Home() {
 
       {/* Hero — conversion-first */}
       <section className="relative overflow-hidden pt-16 sm:pt-24 pb-14 sm:pb-20">
-        {/* Ambient brand glow */}
-        <div aria-hidden className="pointer-events-none absolute -top-28 right-[-6%] h-[420px] w-[420px] xl:h-[520px] xl:w-[520px] rounded-full bg-gradient-to-br from-indigo-100/70 via-violet-100/40 to-transparent blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute top-16 left-[-8%] h-[340px] w-[340px] rounded-full bg-gradient-to-tr from-indigo-50 to-transparent blur-2xl" />
+        {/* Ambient neutral glow */}
+        <div aria-hidden className="pointer-events-none absolute -top-24 right-[-8%] h-[440px] w-[440px] xl:h-[540px] xl:w-[540px] rounded-full bg-gradient-to-br from-gray-900/[0.05] to-transparent blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute top-24 left-[-10%] h-[360px] w-[360px] rounded-full bg-gradient-to-tr from-gray-100 to-transparent blur-2xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-14 lg:gap-10 xl:gap-14 items-center">
@@ -78,57 +78,51 @@ export default function Home() {
             <div className="lg:col-span-7 text-center lg:text-left animate-fade-in">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 border border-green-200 rounded-full text-sm font-medium text-green-800">
                 <Shield className="w-4 h-4 text-green-600" />
-                <span>100% private — your files never leave your device</span>
+                <span>Files never leave your device</span>
               </div>
 
               <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-foreground">
-                Your PDFs, handled in
+                Every PDF task,
                 <br />
-                <span className="text-primary">seconds — not software.</span>
+                <span className="mt-3 inline-block bg-foreground text-white px-4 sm:px-5 rounded-xl">
+                  free and private.
+                </span>
               </h1>
 
               <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Merge, split, compress, convert, edit and sign PDFs right in your browser.
-                Nothing is uploaded, no account is needed, and there are no limits on size or files.
+                Merge, split, compress, convert, edit and sign documents in your browser.
+                No uploads, no sign up, no watermarks and no limits.
               </p>
 
               <div className="mt-9 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start">
                 <button
                   onClick={() => setModalOpen(true)}
-                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-8 py-4 bg-primary text-white font-bold rounded-2xl transition-all hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/20 active:scale-[0.98] text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-8 py-4 bg-foreground text-white font-bold rounded-2xl transition-all hover:bg-[#27272a] hover:shadow-2xl hover:shadow-foreground/25 active:scale-[0.98] text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40 focus-visible:ring-offset-2"
                 >
-                  Start now — it&apos;s free
+                  Use the tools free
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </button>
                 <a
                   href="#tools"
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-2xl border border-border bg-white text-foreground font-semibold text-base transition-all hover:border-primary/40 hover:bg-muted active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-2xl border border-border bg-white text-foreground font-semibold text-base transition-all hover:border-gray-400 hover:bg-muted active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40 focus-visible:ring-offset-2"
                 >
-                  Browse all tools
+                  Browse every tool
                 </a>
               </div>
 
               <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2.5 justify-center lg:justify-start text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-600" /> No sign up</span>
                 <span className="inline-flex items-center gap-2"><Server className="w-4 h-4 text-green-600" /> No uploads</span>
-                <span className="inline-flex items-center gap-2"><UserPlus className="w-4 h-4 text-green-600" /> No account</span>
                 <span className="inline-flex items-center gap-2"><Infinity className="w-4 h-4 text-green-600" /> No limits</span>
+                <span className="inline-flex items-center gap-2"><Lock className="w-4 h-4 text-green-600" /> 100% private</span>
               </div>
             </div>
 
-            {/* Product visual — popular tools quick launcher */}
+            {/* Real tools quick launcher */}
             <div className="lg:col-span-5">
-              <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-                <div className="hidden lg:flex absolute -top-5 -right-3 z-10 items-center gap-2 pl-3 pr-4 py-2 rounded-full bg-white border border-border shadow-lg shadow-gray-900/5">
-                  <Lock className="w-4 h-4 text-primary" />
-                  <span className="text-xs font-semibold text-foreground">100% private, always</span>
-                </div>
-                <div className="hidden lg:flex absolute -bottom-5 -left-5 z-10 items-center gap-2 pl-3 pr-4 py-2 rounded-full bg-white border border-border shadow-lg shadow-gray-900/5">
-                  <Zap className="w-4 h-4 text-amber-500" />
-                  <span className="text-xs font-semibold text-foreground">Instant — even offline</span>
-                </div>
-
-                <div className="rounded-2xl border border-border bg-white shadow-xl shadow-gray-900/[0.06] overflow-hidden">
-                  <div className="flex items-center gap-1.5 px-5 py-3.5 border-b border-border bg-gray-50">
+              <div className="mx-auto w-full max-w-md lg:max-w-none">
+                <div className="rounded-2xl border border-gray-200 bg-white shadow-2xl shadow-gray-900/[0.08] overflow-hidden">
+                  <div className="flex items-center gap-1.5 px-5 py-3.5 border-b border-gray-200 bg-gray-50">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-300" />
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-300" />
                     <span className="w-2.5 h-2.5 rounded-full bg-green-300" />
@@ -143,8 +137,8 @@ export default function Home() {
                           href={`/tools/${tool.slug}`}
                           className="group flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-muted transition-colors"
                         >
-                          <span className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${tool.color}12` }}>
-                            <IconComp className="w-5 h-5" style={{ color: tool.color }} />
+                          <span className="w-10 h-10 rounded-xl bg-gray-900/[0.05] flex items-center justify-center shrink-0">
+                            <IconComp className="w-5 h-5 text-foreground" />
                           </span>
                           <span className="flex-1 min-w-0 text-left">
                             <span className="block text-sm font-semibold text-foreground">{tool.name}</span>
@@ -157,12 +151,15 @@ export default function Home() {
                   </div>
                   <Link
                     href="/tools/pdf-workspace"
-                    className="group flex items-center justify-center gap-2 px-5 py-3.5 border-t border-border bg-gray-50 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
+                    className="group flex items-center justify-center gap-2 px-5 py-3.5 border-t border-gray-200 bg-gray-50 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
                   >
-                    Open the PDF Workspace
+                    See all tools now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                 </div>
+                <p className="mt-4 text-center text-xs text-muted-foreground">
+                  Runs entirely in your browser with nothing uploaded anywhere
+                </p>
               </div>
             </div>
           </div>
