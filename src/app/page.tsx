@@ -81,10 +81,9 @@ export default function Home() {
                 <span>Files never leave your device</span>
               </div>
 
-              <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-foreground">
+              <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-foreground text-balance">
                 Every PDF task,
-                <br />
-                <span className="mt-3 inline-block bg-foreground text-white px-4 sm:px-5 rounded-xl">
+                <span className="mt-3 block w-fit mx-auto lg:mx-0 bg-foreground text-white px-4 sm:px-5 rounded-xl leading-snug">
                   free and private.
                 </span>
               </h1>
