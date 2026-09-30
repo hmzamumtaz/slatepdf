@@ -72,7 +72,7 @@ export default function Home() {
         <div aria-hidden className="pointer-events-none absolute top-24 left-[-10%] h-[360px] w-[360px] rounded-full bg-gradient-to-tr from-gray-100 to-transparent blur-2xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-14 lg:gap-10 xl:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-10 xl:gap-14 items-center">
 
             {/* Copy + actions */}
             <div className="lg:col-span-7 text-center lg:text-left animate-fade-in">
@@ -424,7 +424,7 @@ export default function Home() {
               See all guides <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { href: '/blog/how-to-merge-pdf-files', title: 'How to merge PDF files', desc: 'Combine multiple PDFs into one document in a few clicks.' },
               { href: '/blog/how-to-compress-a-pdf-without-losing-quality', title: 'Compress a PDF without losing quality', desc: 'Shrink large files while keeping text and images crisp.' },
