@@ -633,6 +633,9 @@ export async function buildEditedPdf(
     const transformImages = new Map<number, Matrix>();
     for (const image of pageImages) {
       if (!isImageChanged(image)) continue;
+      // A picture added during this session has no content-stream operator —
+      // nothing to remove or rescale; it is only drawn on top below.
+      if (image.opIndex < 0) continue;
       if (image.deleted || image.replacement) {
         removeImages.add(image.opIndex);
         continue;

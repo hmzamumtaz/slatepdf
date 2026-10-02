@@ -6,6 +6,7 @@ import {
   Loader2, Check, AlertCircle, Bold, Italic, Trash2, RotateCcw,
   Download, ChevronLeft, ChevronRight, Plus, AlertTriangle, Undo2,
   Replace, MoveDiagonal, Minus, ScanText, AlignLeft, AlignCenter, AlignRight,
+  ImagePlus,
 } from 'lucide-react';
 import { getPdfJs } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
@@ -192,6 +193,7 @@ export default function PdfEditor({
   const focused = useRef<string | null>(null);
   const replaceTarget = useRef<string | null>(null);
   const replaceInput = useRef<HTMLInputElement>(null);
+  const addImageInput = useRef<HTMLInputElement>(null);
   const suppressClick = useRef(false);
 
   const pageBlocks = useMemo(() => blocks.filter(b => b.page === pageIndex), [blocks, pageIndex]);
@@ -412,6 +414,58 @@ export default function PdfEditor({
     reader.readAsDataURL(file);
   }, [updateImage]);
 
+  /** A brand-new picture dropped onto the page: placed, then moved and resized freely. */
+  const handleAddImage = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file || !page) return;
+    if (!/^image\/(png|jpeg|jpg)$/.test(file.type)) {
+      setError('Added pictures need to be a PNG or a JPEG.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const dataUrl = reader.result as string;
+      const img = new Image();
+      img.onload = () => {
+        const ratio = img.naturalWidth ? img.naturalHeight / img.naturalWidth : 0.75;
+        let width = Math.round(Math.min(page.width * 0.6, 260));
+        let height = Math.round(width * ratio);
+        // Keep the picture on the page: clamp to 90% of the page in both axes.
+        if (height > page.height * 0.9) {
+          height = Math.round(page.height * 0.9);
+          width = Math.round(height / (ratio || 0.75));
+        }
+        if (width > page.width * 0.9) width = Math.round(page.width * 0.9);
+        const box = {
+          x: Math.round((page.width - width) / 2),
+          y: Math.round((page.height - height) / 2),
+          width,
+          height,
+        };
+        const image: ImageObject = {
+          id: `new-image-${addedCount.current++}`,
+          page: pageIndex,
+          box,
+          originalBox: { ...box },
+          rotated: false,
+          opIndex: -1,
+          thumbnail: '',
+          deleted: false,
+          replacement: { dataUrl, name: file.name },
+        };
+        setImages(prev => [...prev, image]);
+        setSelectedId(image.id);
+        setPlacing(false);
+        setError(null);
+        setDone(false);
+      };
+      img.onerror = () => setError('That picture could not be read — try a PNG or a JPEG.');
+      img.src = dataUrl;
+    };
+    reader.readAsDataURL(file);
+  }, [page, pageIndex]);
+
   const handleDownload = useCallback(async () => {
     setProcessing(true);
     setError(null);
@@ -553,6 +607,7 @@ export default function PdfEditor({
   return (
     <>
       <input ref={replaceInput} type="file" accept="image/png,image/jpeg" className="hidden" onChange={chooseReplacement} />
+      <input ref={addImageInput} type="file" accept="image/png,image/jpeg" className="hidden" onChange={handleAddImage} />
 
       <div className={`bg-white rounded-2xl border border-border shadow-sm overflow-hidden flex flex-col ${heightClass} min-h-[34rem]`}>
             {/* Toolbar */}
@@ -622,6 +677,15 @@ export default function PdfEditor({
                 {placing ? 'Click the page' : 'Add text'}
               </button>
 
+              <button
+                onClick={() => addImageInput.current?.click()}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[13px] font-medium border border-border text-foreground hover:bg-muted transition-colors"
+                title="Add a PNG or JPEG picture, then drag it anywhere and resize it"
+              >
+                <ImagePlus className="w-3.5 h-3.5" />
+                Add image
+              </button>
+
               <span className="text-xs text-muted-foreground hidden lg:inline tabular-nums">
                 {pageBlocks.length} text · {pageImages.length} image{pageImages.length === 1 ? '' : 's'}
               </span>
@@ -642,7 +706,7 @@ export default function PdfEditor({
                         ...b, text: b.original, deleted: false, align: 'left', highlight: null,
                         x: b.ox, y: b.oy,
                       })));
-                      setImages(prev => prev.map(i => ({ ...i, deleted: false, replacement: null, box: { ...i.originalBox } })));
+                      setImages(prev => prev.filter(i => i.opIndex >= 0).map(i => ({ ...i, deleted: false, replacement: null, box: { ...i.originalBox } })));
                       setGuides([]);
                       setSelectedId(null);
                       setDone(false);
@@ -677,7 +741,7 @@ export default function PdfEditor({
               )}
               {!selectedBlock && !selectedImage ? (
                 <span className="text-[12px] text-muted-foreground">
-                  Click a line on the page to edit it, or a picture to replace, move or delete it.
+                  Click a line on the page to edit it, or a picture to replace, move or delete it. Use Add text or Add image to place new content.
                 </span>
               ) : selectedBlock ? (
                 <>
@@ -844,25 +908,36 @@ export default function PdfEditor({
                   >
                     <Replace className="w-3.5 h-3.5" /> Replace
                   </button>
-                  <button
-                    onClick={() => updateImage(selectedImage.id, { deleted: !selectedImage.deleted })}
-                    className={`inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium transition-colors ${
-                      selectedImage.deleted ? 'bg-white text-foreground' : 'hover:bg-white/20'
-                    }`}
-                  >
-                    {selectedImage.deleted ? <><Undo2 className="w-3.5 h-3.5" /> Restore</> : <><Trash2 className="w-3.5 h-3.5" /> Delete</>}
-                  </button>
-                  {isImageChanged(selectedImage) && (
+                  {selectedImage.opIndex < 0 ? (
                     <button
-                      onClick={() => updateImage(selectedImage.id, {
-                        deleted: false,
-                        replacement: null,
-                        box: { ...selectedImage.originalBox },
-                      })}
+                      onClick={() => { setImages(prev => prev.filter(i => i.id !== selectedImage.id)); setSelectedId(null); }}
                       className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
                     >
-                      <RotateCcw className="w-3.5 h-3.5" /> Revert
+                      <Trash2 className="w-3.5 h-3.5" /> Remove
                     </button>
+                  ) : (
+                    <>
+                      <button
+                        onClick={() => updateImage(selectedImage.id, { deleted: !selectedImage.deleted })}
+                        className={`inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium transition-colors ${
+                          selectedImage.deleted ? 'bg-white text-foreground' : 'hover:bg-white/20'
+                        }`}
+                      >
+                        {selectedImage.deleted ? <><Undo2 className="w-3.5 h-3.5" /> Restore</> : <><Trash2 className="w-3.5 h-3.5" /> Delete</>}
+                      </button>
+                      {isImageChanged(selectedImage) && (
+                        <button
+                          onClick={() => updateImage(selectedImage.id, {
+                            deleted: false,
+                            replacement: null,
+                            box: { ...selectedImage.originalBox },
+                          })}
+                          className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
+                        >
+                          <RotateCcw className="w-3.5 h-3.5" /> Revert
+                        </button>
+                      )}
+                    </>
                   )}
                   <span className="w-px h-5 bg-white/25" />
                   <span className="text-[11px] tabular-nums text-white/70 px-1">
@@ -893,7 +968,7 @@ export default function PdfEditor({
                 <p className="text-[13px] text-amber-800">
                   No editable text on this page — it is probably a scan. Run{' '}
                   <Link href="/tools/ocr-pdf" className="underline">OCR PDF</Link>{' '}
-                  first to turn the picture into text, or use Add text to write on top. Pictures can still be swapped.
+                  first to turn the picture into text, or use Add text or Add image to write or place pictures on top.
                 </p>
               </div>
             )}
