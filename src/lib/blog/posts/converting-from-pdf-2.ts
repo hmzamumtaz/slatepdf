@@ -157,15 +157,17 @@ export const convertingFromPdfPosts2: BlogPost[] = [
     keyword: 'convert pdf to image for printing',
     category: 'Converting',
     published: '2026-07-31',
+    updated: '2026-10-04',
     tool: 'pdf-to-jpg',
     blocks: [
       { type: 'p', text: 'Print shops sometimes ask for images rather than PDFs, and some large-format workflows only accept them. When that happens, resolution is the only setting that really matters.' },
       { type: 'h2', text: 'Render pages at print resolution' },
       { type: 'steps', items: [
         'Open the PDF to JPG tool and add your document.',
-        'Set 300 DPI for normal printing.',
+        'Choose High (216 DPI), the highest setting, and pick PNG for text or line art or JPEG for photographic pages.',
         'Convert, and check one page at 100% zoom to confirm the text is crisp.',
       ] },
+      { type: 'p', text: 'Be aware that many print shops quote 300 DPI as their standard, and the tool tops out at 216 DPI (Standard is 144). For an A4 page that is about 1786 × 2526 pixels rather than 2480 × 3508. That is plenty for screens, proofs and posters viewed from a distance, but if the shop insists on 300 DPI, send the PDF itself instead, which prints text at the printer\'s full resolution anyway.' },
       { type: 'h2', text: 'The resolution maths' },
       { type: 'p', text: 'DPI describes dots per printed inch, so the pixel size you need follows from the physical size of the output.' },
       { type: 'table', head: ['Output', 'DPI', 'Pixels for A4'], rows: [
@@ -192,7 +194,7 @@ export const convertingFromPdfPosts2: BlogPost[] = [
       { type: 'p', text: 'That last point saves more jobs than anything else on the list. Print operators generally prefer a PDF, and a request for images is often a default rather than a requirement — asking takes one message and frequently removes the whole problem.' },
     ],
     faqs: [
-      { q: 'What DPI does a print shop need?', a: '300 for ordinary print. Ask for large-format work — the answer is usually lower than you would guess.' },
+      { q: 'What DPI does a print shop need?', a: 'Usually 300 for ordinary print. The PDF to JPG tool exports at up to 216 DPI, so if the shop requires 300, send the PDF instead. Ask for large-format work — the answer is usually lower than you would guess.' },
       { q: 'JPG or PNG for print?', a: 'PNG for pages with text or line art, since JPEG artefacts show around sharp edges. JPG is acceptable for photographic pages at high quality.' },
       { q: 'Why do my colours look different after converting?', a: 'The document was CMYK and the image is RGB. Send the PDF instead if the colour matters.' },
       { q: 'Should I convert at 600 DPI to be safe?', a: 'Only if the source has that detail. Otherwise you get a much larger file and no improvement.' },

@@ -111,14 +111,15 @@ const toolSeo: Record<string, {
     ],
   },
   'scan-pdf': {
-    title: 'Scan PDF — Scan Documents to PDF From Your Camera',
-    description: 'Scan documents with your camera or phone photos and save them as a PDF. Free, no app, no sign-up. All scanning happens in your browser.',
-    keywords: ['scan to pdf', 'scan pdf', 'document scanner to pdf', 'camera scanner pdf', 'scan documents to pdf'],
+    title: 'Scan PDF — Free Document Scanner in Your Browser',
+    description: 'Scan documents to PDF with your phone camera: auto edge detection, crop, filters, book and ID card modes, and searchable OCR. Free, no app, no upload.',
+    keywords: ['scan to pdf', 'scan pdf', 'document scanner to pdf', 'camera scanner pdf', 'scan documents to pdf', 'free document scanner'],
     faqs: [
-      { q: 'Do I need a scanner to make a PDF?', a: 'No. Use your phone or laptop camera to capture each page, or add photos directly from your device. The pages are combined into a single PDF in your browser.' },
-      { q: 'Is my scanned document uploaded to a server?', a: 'No. Everything happens on your device — the camera stream, image processing, and PDF creation. Your document never leaves your browser.' },
-      { q: 'Can I scan multiple pages into one PDF?', a: 'Yes. Capture as many pages as you need — each capture becomes one page — and they are all merged into a single PDF when you convert.' },
-      { q: 'Can I reorder or remove scanned pages?', a: 'Yes. Tap a page thumbnail to select it, then use the move buttons to reorder it or the trash button to remove it before converting.' },
+      { q: 'Do I need an app or a scanner to make a PDF?', a: 'No. Open this page on your phone and point the camera at the page. It finds the edges, captures the page when you hold steady, straightens it and cleans up shadows. You can also import photos you already took.' },
+      { q: 'Is my scanned document uploaded to a server?', a: 'No. The camera stream, page detection, filters and PDF creation all run in your browser. Pages are kept on this device so a reload does not lose them. The only download is the text-recognition language model, fetched once if you turn on OCR.' },
+      { q: 'Can I make the scanned PDF searchable?', a: 'Yes. Leave "Recognize text (OCR)" on when you save. The recognized text is laid invisibly over each page image, so you can search, select and copy it. Accuracy depends on how sharp and well-lit the photo is.' },
+      { q: 'What do the Book, ID card and Whiteboard modes do?', a: 'Book splits an open book into a left and a right page. ID card scans the front and then the back of a card and places both on one page at real size. Whiteboard whitens glare and boosts marker colours.' },
+      { q: 'Can I fix a page after scanning it?', a: 'Yes. In Review you can drag the corners to re-crop, rotate, change the filter, adjust brightness and contrast, brush away marks, retake, reorder or delete any page. Edits are applied to the original photo, so nothing loses quality.' },
     ],
   },
   'word-to-pdf': {
@@ -185,12 +186,13 @@ const toolSeo: Record<string, {
     ],
   },
   'pdf-to-excel': {
-    title: 'PDF to Excel — Convert PDF Tables to Spreadsheets',
-    description: 'Extract tables from PDF documents into editable Excel spreadsheets (XLSX). Preserve table structure and data. Free, no sign-up.',
+    title: 'PDF to Excel — Export PDF Text to a Spreadsheet',
+    description: 'Export the text of a PDF into an Excel workbook (XLSX): one sheet per page, one line of text per row. Free, in-browser, no sign-up.',
     keywords: ['pdf to excel', 'pdf table to excel', 'convert pdf to excel', 'pdf to spreadsheet'],
     faqs: [
-      { q: 'How accurate is table extraction?', a: 'Accuracy depends on the table structure. Well-formatted tables extract cleanly. Complex or irregular tables may need manual adjustment.' },
-      { q: 'Can I extract multiple tables?', a: 'Yes. The tool identifies and extracts all tables in the PDF, placing each in a separate worksheet.' },
+      { q: 'Does it rebuild tables into columns?', a: 'No. Each line of text on a page goes into a single cell, so table rows land in one cell rather than separate columns. Use Excel\'s Text to Columns (or Power Query) to split them afterwards.' },
+      { q: 'How is the workbook organized?', a: 'You get a Summary sheet with line and character counts per page, then one sheet per PDF page with each text line in its own row.' },
+      { q: 'Does it work on scanned PDFs?', a: 'Only if the PDF has a text layer. For scanned pages, run OCR PDF first so there is text to export.' },
     ],
   },
   'pdf-to-pdfa': {
@@ -266,12 +268,13 @@ const toolSeo: Record<string, {
     ],
   },
   'redact-pdf': {
-    title: 'Redact PDF — Black Out Sensitive Information Free',
-    description: 'Permanently redact sensitive information from PDF documents. Black out text, images, and content. Free, browser-based, no upload required.',
+    title: 'Redact PDF — Black Out Whole Pages Free',
+    description: 'Permanently black out whole pages of a PDF. Selected pages stay in place as solid black pages; their text and images are discarded. Free, no upload.',
     keywords: ['redact pdf', 'black out pdf', 'censor pdf', 'redact sensitive information'],
     faqs: [
-      { q: 'Is redaction permanent?', a: 'Yes. Redaction permanently removes the selected content from the document. The underlying data is deleted, not just hidden.' },
-      { q: 'Can redacted content be recovered?', a: 'No. Unlike simply blacking out text with a rectangle, proper redaction removes the content from the file structure entirely.' },
+      { q: 'Is redaction permanent?', a: 'Yes. Each selected page is re-drawn as a flat image that is fully blacked out, so its original text, images and hidden layers are not carried into the new file. The page itself stays in the document, so page count and numbering do not change.' },
+      { q: 'Can redacted content be recovered?', a: 'No. Unlike drawing a black rectangle over text, which leaves the text underneath, the redacted pages are rebuilt from a blacked-out image and the original page content is discarded.' },
+      { q: 'Can I black out just part of a page?', a: 'Not in this tool — it redacts whole pages. To draw boxes over specific text or images, use the Redact tab in PDF Workspace, which burns your boxes into the page the same permanent way.' },
     ],
   },
   'unlock-pdf': {
@@ -361,11 +364,11 @@ const toolSeo: Record<string, {
   },
   'epub-to-pdf': {
     title: 'EPUB to PDF — Convert EPUB Ebooks to PDF Free Online',
-    description: 'Convert EPUB ebooks to PDF documents in your browser. Choose between design-faithful or text-reflow output. Free, no software installation.',
+    description: 'Convert EPUB ebooks to PDF documents in your browser. Choose between an image-based layout or a selectable-text output. Free, no software installation.',
     keywords: ['epub to pdf', 'convert epub to pdf', 'epub to pdf converter', 'ebook to pdf', 'epub to pdf free'],
     faqs: [
       { q: 'What is an EPUB file?', a: 'EPUB (Electronic Publication) is a widely-used ebook format supported by most e-readers and reading apps. It contains HTML-based content with CSS styling.' },
-      { q: 'What is the difference between design and text mode?', a: 'Design mode preserves the original layout, fonts, and styling of the ebook. Text mode extracts the text content and reflows it into a clean, selectable-text PDF.' },
+      { q: 'What is the difference between design and text mode?', a: 'Exact design mode renders each chapter as an image, keeping its layout, images and inline styling; linked stylesheets and embedded custom fonts are not loaded, so those parts fall back to default fonts and styles. Selectable text mode extracts the text content and reflows it into a clean, selectable-text PDF.' },
       { q: 'Does this work with DRM-protected EPUBs?', a: 'No. DRM-protected EPUBs cannot be converted. Only unprotected EPUB files are supported.' },
     ],
   },

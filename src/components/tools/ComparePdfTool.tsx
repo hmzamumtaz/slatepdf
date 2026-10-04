@@ -93,7 +93,7 @@ export default function ComparePdfTool() {
                 <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
                 <p className="text-sm text-green-800">
                   <span className="font-semibold">Comparison complete</span> — {result.identical ? 'Files are identical' : `${result.differingPages.length} page${result.differingPages.length !== 1 ? 's' : ''} differ`}
-                  {` (similarity: ${Math.round(result.textSimilarity * 100)}%)`}
+                  {` (similarity: ${Math.min(100, Math.max(0, Math.round(result.textSimilarity)))}%)`}
                 </p>
               </div>
 
