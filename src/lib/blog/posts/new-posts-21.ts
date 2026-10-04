@@ -162,7 +162,7 @@ export const newPosts21: BlogPost[] = [
       { q: 'Is it really private to initial a PDF this way?', a: 'Yes. The tool runs entirely in your browser — the file is processed in place and never uploaded, so a sensitive contract stays on your device until you download and send it yourself.' },
       { q: 'I missed a page. Can I add initials later?', a: 'Yes — reopen the file in the Sign PDF tool, place your initials on the missed page, and download a new copy. Just make sure the added page matches the rest of the set.' },
     ],
-    related: ['how-to-sign-a-pdf-electronically-for-free', 'how-to-sign-a-pdf-without-printing-it', 'how-to-fill-out-a-pdf-form', 'how-to-add-a-handwritten-signature-to-a-pdf'],
+    related: ['how-to-sign-a-pdf-electronically', 'how-to-sign-a-pdf-without-printing-it', 'how-to-fill-out-a-pdf-form', 'how-to-add-a-handwritten-signature-to-a-pdf'],
   },
   {
     slug: 'how-to-add-a-seal-or-stamp-image-to-a-pdf',
@@ -201,6 +201,6 @@ export const newPosts21: BlogPost[] = [
       { q: 'What is the difference from a watermark?', a: 'A watermark is applied automatically to every page for continuous branding. A stamp is placed by hand at a specific spot on specific pages — an official corner, an approval block, a cover page.' },
       { q: 'Can I remove a stamp I placed by mistake?', a: 'Re-run the flow: reopen the file the same way and place the corrected stamp, or re-export from your last good download. Placement is part of the page you save.' },
     ],
-    related: ['how-to-add-a-watermark-to-a-pdf', 'how-to-add-a-handwritten-signature-to-a-pdf', 'how-to-sign-a-pdf-electronically-for-free', 'how-to-flatten-a-pdf'],
+    related: ['how-to-add-a-watermark-to-a-pdf', 'how-to-add-a-handwritten-signature-to-a-pdf', 'how-to-sign-a-pdf-electronically', 'how-to-flatten-a-pdf'],
   },
 ];

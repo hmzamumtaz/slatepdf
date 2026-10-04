@@ -784,6 +784,15 @@ export async function jpgToPdf(files: File[]): Promise<Blob> {
 
 export interface ScanPdfOptions {
   pageSize?: 'a4' | 'a4-landscape' | 'letter' | 'original';
+  /** Document title written into the PDF's properties. */
+  title?: string;
+  /**
+   * Recognise the text on every page (Tesseract, on this device) and lay it
+   * over the image as an invisible layer, so the PDF is searchable and its
+   * text can be selected and copied.
+   */
+  ocrLanguages?: string[];
+  onProgress?: (message: string) => void;
 }
 
 /**
@@ -800,36 +809,94 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
   } as const;
   const MARGIN = 24;
   const merged = await PDFDocument.create();
-  for (const image of images) {
-    const buf = await image.arrayBuffer();
-    let img;
-    try {
-      img = await merged.embedJpg(buf);
-    } catch {
-      throw new Error('A scanned page could not be read as an image. Try scanning again.');
-    }
-    let pw: number;
-    let ph: number;
-    if (options.pageSize && options.pageSize !== 'original') {
-      const size = sizes[options.pageSize];
-      pw = size.w;
-      ph = size.h;
-    } else {
-      // Match the image's aspect ratio, capped so absurdly large phone photos
-      // don't produce towering non-standard pages.
-      const cap = 2000;
-      const scale = Math.min(1, cap / Math.max(img.width, img.height));
-      pw = Math.max(1, img.width * scale);
-      ph = Math.max(1, img.height * scale);
-    }
-    const maxW = pw - MARGIN * 2;
-    const maxH = ph - MARGIN * 2;
-    const scale = Math.min(maxW / img.width, maxH / img.height);
-    const w = img.width * scale;
-    const h = img.height * scale;
-    const page = merged.addPage([pw, ph]);
-    page.drawImage(img, { x: (pw - w) / 2, y: (ph - h) / 2, width: w, height: h });
+  if (options.title) merged.setTitle(options.title);
+
+  const languages = options.ocrLanguages?.filter(Boolean) ?? [];
+  let worker: Awaited<ReturnType<typeof import('tesseract.js')['createWorker']>> | null = null;
+  let font: PDFFont | null = null;
+  let unicodeFont: PDFFont | null = null;
+  if (languages.length > 0) {
+    options.onProgress?.('Loading text recognition…');
+    const Tesseract = await import('tesseract.js');
+    worker = await Tesseract.createWorker(languages.join('+'));
+    font = await merged.embedFont(StandardFonts.Helvetica);
+    unicodeFont = await embedUnicodeFallback(merged);
   }
+
+  try {
+    for (let n = 0; n < images.length; n++) {
+      const image = images[n];
+      options.onProgress?.(worker ? `Recognizing text on page ${n + 1} of ${images.length}…` : `Adding page ${n + 1} of ${images.length}…`);
+      const buf = await image.arrayBuffer();
+      let img;
+      try {
+        img = await merged.embedJpg(buf);
+      } catch {
+        throw new Error('A scanned page could not be read as an image. Try scanning again.');
+      }
+      let pw: number;
+      let ph: number;
+      if (options.pageSize && options.pageSize !== 'original') {
+        const size = sizes[options.pageSize];
+        pw = size.w;
+        ph = size.h;
+      } else {
+        // Match the image's aspect ratio, capped so absurdly large phone photos
+        // don't produce towering non-standard pages.
+        const cap = 2000;
+        const scale = Math.min(1, cap / Math.max(img.width, img.height));
+        pw = Math.max(1, img.width * scale);
+        ph = Math.max(1, img.height * scale);
+      }
+      const maxW = pw - MARGIN * 2;
+      const maxH = ph - MARGIN * 2;
+      const scale = Math.min(maxW / img.width, maxH / img.height);
+      const w = img.width * scale;
+      const h = img.height * scale;
+      const x0 = (pw - w) / 2;
+      const y0 = (ph - h) / 2;
+      const page = merged.addPage([pw, ph]);
+      page.drawImage(img, { x: x0, y: y0, width: w, height: h });
+
+      if (worker && font && unicodeFont) {
+        const { data } = await worker.recognize(image, {}, { blocks: true });
+        // Image pixels → page points; PDF y runs bottom-up.
+        const kx = w / img.width;
+        const ky = h / img.height;
+        const blocks = (data as any).blocks || [];
+        for (const block of blocks) {
+          for (const paragraph of block.paragraphs || []) {
+            for (const line of paragraph.lines || []) {
+              for (const word of line.words || []) {
+                const raw = (word.text || '').trim();
+                if (!raw) continue;
+                // Paper texture, folds and edges read as stray "|" or "~": drop
+                // low-confidence words and lone symbols so search stays clean.
+                const conf = typeof word.confidence === 'number' ? word.confidence : 100;
+                if (conf < 35 || (!/[\p{L}\p{N}]/u.test(raw) && (raw.length <= 2 || conf < 80))) continue;
+                const text = isRenderable(raw) ? raw : raw.replace(/[^\x20-\x7E\xA0-\xFF]/g, '');
+                if (!text.trim()) continue;
+                const bh = (word.bbox.y1 - word.bbox.y0) * ky;
+                try {
+                  page.drawText(text, {
+                    x: x0 + word.bbox.x0 * kx,
+                    y: y0 + h - word.bbox.y1 * ky,
+                    size: Math.max(4, Math.min(bh * 0.9, 60)),
+                    font: needsUnicodeFallback(text) ? unicodeFont : font,
+                    color: rgb(0, 0, 0),
+                    opacity: 0.01,
+                  });
+                } catch { /* skip words neither font can encode */ }
+              }
+            }
+          }
+        }
+      }
+    }
+  } finally {
+    await worker?.terminate();
+  }
+  options.onProgress?.('Saving PDF…');
   return toBlob(await merged.save());
 }
 

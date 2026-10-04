@@ -4,7 +4,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-unlock-a-pdf-for-printing',
     title: 'How to Unlock a PDF for Printing (Free, No Upload)',
-    description: 'Unlock a PDF that blocks printing for free in your browser — release the restriction on owner-locked files in seconds and know when a real password stands in the way.',
+    description: 'Unlock a PDF that blocks printing for free in your browser — lift the restriction on owner-locked files in seconds, and know when a real password blocks you.',
     keyword: 'how to unlock a pdf for printing',
     category: 'Security & Privacy',
     published: '2026-09-24',
@@ -52,7 +52,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-extract-text-from-a-pdf',
     title: 'How to Extract Text From a PDF (Free)',
-    description: 'Extract text from a PDF for free — pull the readable text out of an electronic PDF into plain text or Markdown, and know what to do when your PDF is really an image.',
+    description: 'Extract text from a PDF for free — pull the text out of an electronic PDF into plain text or Markdown, and what to do when your PDF is really an image.',
     keyword: 'how to extract text from a pdf',
     category: 'Converting',
     published: '2026-09-24',
@@ -97,7 +97,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-rotate-a-single-page-in-a-pdf',
     title: 'How to Rotate a Single Page in a PDF',
-    description: 'Rotate one sideways page in a multi-page PDF without touching the rest — fix only the pages that need it, save the rotation so it sticks, and keep the file organized.',
+    description: 'Rotate one sideways page in a multi-page PDF without touching the rest — fix only the pages that need it and save the rotation so it sticks. Free.',
     keyword: 'how to rotate a single page in a pdf',
     category: 'Merging & Organizing',
     published: '2026-09-24',
@@ -143,7 +143,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-change-the-font-of-a-pdf',
     title: 'How to Change the Font of a PDF (Free)',
-    description: 'Change the font of a PDF for free in your browser — pick a new typeface, size, weight or colour for a text block without moving the layout, and no upload required.',
+    description: 'Change the font of a PDF for free in your browser — pick a new typeface, size, weight or colour for a text block without moving the layout. No upload.',
     keyword: 'how to change the font of a pdf',
     category: 'Editing & Signing',
     published: '2026-09-24',
@@ -183,13 +183,13 @@ export const newPosts17: BlogPost[] = [
       { q: 'Will the new font stay if I send the PDF?', a: 'Yes, the chosen family is written into the file. Some device readers substitute a default when a font is missing, so verify on the receiving end for a client-facing document.' },
       { q: 'Does changing the font make the text searchable?', a: 'It keeps the text layer intact because the text itself is unchanged — only the typeface is swapped. A scanned page with no text layer still needs OCR.' },
     ],
-    related: ['how-to-edit-pdf-text-without-acrobat', 'how-to-fix-fonts-not-displaying-in-a-pdf', 'how-to-add-text-to-a-pdf', 'how-to-make-a-pdf-accessible'],
+    related: ['how-to-edit-a-pdf-without-adobe', 'how-to-fix-fonts-not-displaying-in-a-pdf', 'how-to-add-text-to-a-pdf', 'how-to-make-a-pdf-accessible'],
   },
 
   {
     slug: 'how-to-highlight-text-in-a-pdf',
     title: 'How to Highlight Text in a PDF (Free)',
-    description: 'Highlight text in a PDF for free in your browser — mark important lines in several colours, change or clear the highlight, and keep it when you print or send the file.',
+    description: 'Highlight text in a PDF for free in your browser — mark lines in several colours, change or clear a highlight, and keep it when you print or send the file.',
     keyword: 'how to highlight text in a pdf',
     category: 'Editing & Signing',
     published: '2026-09-24',
@@ -229,6 +229,6 @@ export const newPosts17: BlogPost[] = [
       { q: 'Will my highlights be visible to the recipient?', a: 'In most readers, yes, and they are baked into the file. Flatten the document if it must print exactly as marked.' },
       { q: 'How do I remove a highlight from a PDF?', a: 'Click the highlighted block and use the clear-highlight button. Removing marks you no longer want is the same two clicks as adding them.' },
     ],
-    related: ['how-to-annotate-a-pdf', 'how-to-edit-pdf-text-without-acrobat', 'how-to-print-a-pdf-correctly', 'how-to-make-a-scanned-pdf-searchable'],
+    related: ['how-to-annotate-a-pdf', 'how-to-edit-a-pdf-without-adobe', 'how-to-print-a-pdf-correctly', 'how-to-make-a-scanned-pdf-searchable'],
   },
 ];

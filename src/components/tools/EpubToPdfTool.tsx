@@ -82,7 +82,7 @@ export default function EpubToPdfTool() {
             <div className="grid sm:grid-cols-2 gap-3">
               <button onClick={() => setMode('visual')} className={`text-left p-4 rounded-xl border-2 transition-all ${mode === 'visual' ? 'border-primary bg-primary/5' : 'border-border hover:border-gray-300'}`}>
                 <div className="flex items-center gap-2 mb-1"><Palette className={`w-4 h-4 ${mode === 'visual' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">Exact design</span></div>
-                <p className="text-xs text-muted-foreground">Preserves the original layout, fonts, and CSS styling of the ebook. Best for illustrated and designed books.</p>
+                <p className="text-xs text-muted-foreground">Keeps each chapter&apos;s layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.</p>
               </button>
               <button onClick={() => setMode('text')} className={`text-left p-4 rounded-xl border-2 transition-all ${mode === 'text' ? 'border-primary bg-primary/5' : 'border-border hover:border-gray-300'}`}>
                 <div className="flex items-center gap-2 mb-1"><Type className={`w-4 h-4 ${mode === 'text' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">Selectable text</span></div>

@@ -99,9 +99,9 @@ export default function Footer() {
               <li><Link href="/blog" className="hover:text-white transition-colors">All PDF guides</Link></li>
               <li><Link href="/blog/how-to-merge-pdf-files" className="hover:text-white transition-colors">How to merge PDFs</Link></li>
               <li><Link href="/blog/how-to-compress-a-pdf-without-losing-quality" className="hover:text-white transition-colors">Compress without quality loss</Link></li>
-              <li><Link href="/blog/how-to-sign-a-pdf-electronically-for-free" className="hover:text-white transition-colors">Sign a PDF for free</Link></li>
+              <li><Link href="/blog/how-to-sign-a-pdf-electronically" className="hover:text-white transition-colors">Sign a PDF for free</Link></li>
               <li><Link href="/blog/how-to-password-protect-a-pdf-without-adobe" className="hover:text-white transition-colors">Password protect PDF</Link></li>
-              <li><Link href="/blog/how-to-edit-pdf-text-without-acrobat" className="hover:text-white transition-colors">Edit PDF text</Link></li>
+              <li><Link href="/blog/how-to-edit-a-pdf-without-adobe" className="hover:text-white transition-colors">Edit PDF text</Link></li>
             </ul>
           </div>
         </div>

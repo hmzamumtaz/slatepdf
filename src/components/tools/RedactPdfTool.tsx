@@ -29,7 +29,7 @@ export default function RedactPdfTool() {
   const [processing, setProcessing] = useState(false);
   const [progress, setProgress] = useState('');
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<{ size: number; removed: number } | null>(null);
+  const [result, setResult] = useState<{ size: number; redacted: number } | null>(null);
 
   useEffect(() => {
     if (files.length === 0) { setThumbs([]); setSelectedPages(new Set()); return; }
@@ -90,7 +90,7 @@ export default function RedactPdfTool() {
 
       const blob = await redactPdf(files[0], redactions);
       downloadBlob(blob, getOutputFilename('redact-pdf', '-redacted.pdf'));
-      setResult({ size: blob.size, removed: selectedPages.size });
+      setResult({ size: blob.size, redacted: selectedPages.size });
       setSelectedPages(new Set());
     } catch (err: any) {
       setError(friendlyError(err));
@@ -112,7 +112,7 @@ export default function RedactPdfTool() {
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-red-50"><Scissors className="w-6 h-6 text-red-500" /></div>
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Redact PDF</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Permanently remove pages from your PDF document</p>
+              <p className="text-muted-foreground text-sm sm:text-base">Permanently black out whole pages of your PDF document</p>
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function RedactPdfTool() {
               <div className="p-3 bg-red-50/60 border border-red-200 rounded-xl flex items-start gap-2.5">
                 <AlertTriangle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <p className="text-xs text-red-800 leading-relaxed">
-                  Redaction permanently removes the selected pages from the PDF. Only use this on documents you own or have permission to modify.
+                  Redaction permanently blacks out the selected pages: they stay in the PDF as solid black pages and their original text and images are discarded. To black out only part of a page, use the Redact tab in <Link href="/tools/pdf-workspace" className="underline font-medium">PDF Workspace</Link>. Only use this on documents you own or have permission to modify.
                 </p>
               </div>
 
@@ -207,7 +207,7 @@ export default function RedactPdfTool() {
             <div className="mt-6 space-y-4 animate-fade-in">
               <div className="p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-                <p className="text-sm text-green-800"><span className="font-semibold">PDF redacted</span> — {result.removed} page{result.removed !== 1 ? 's' : ''} removed ({formatBytes(result.size)}).</p>
+                <p className="text-sm text-green-800"><span className="font-semibold">PDF redacted</span> — {result.redacted} page{result.redacted !== 1 ? 's' : ''} blacked out ({formatBytes(result.size)}).</p>
               </div>
               <button onClick={() => { setResult(null); setFiles([]); setThumbs([]); setSelectedPages(new Set()); }}
                 className="px-5 py-2.5 rounded-xl text-sm font-medium border border-border hover:bg-gray-50 transition-colors">

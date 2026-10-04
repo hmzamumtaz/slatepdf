@@ -6,7 +6,7 @@ import BlogBody, { slugifyHeading } from '@/components/BlogBody';
 import { getPost, posts, relatedPosts, readingMinutes, formatDate } from '@/lib/blog';
 import { SITE_AUTHOR, postAuthor } from '@/lib/author';
 import { getToolBySlug } from '@/lib/tools-data';
-import { SITE_NAME, SITE_URL } from '@/lib/site';
+import { SITE_NAME, SITE_URL, pageTitle } from '@/lib/site';
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const url = `/blog/${post.slug}`;
   return {
-    title: post.title,
+    title: pageTitle(post.title),
     description: post.description,
     keywords: [post.keyword],
     alternates: { canonical: url },
@@ -70,7 +70,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
       '@type': 'Organization',
       name: SITE_NAME,
       url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon-512.png` },
     },
   };
 

@@ -1,0 +1,488 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(self), microphone=(), geolocation=()"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/blog/are-electronic-signatures-legally-binding",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-free-pdf-tools-without-sign-up",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/electronic-signature-vs-digital-signature",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-add-a-watermark-to-a-pdf-on-iphone",
+      "destination": "/blog/how-to-add-a-watermark-to-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-add-page-numbers-to-a-pdf-on-mac",
+      "destination": "/blog/how-to-add-page-numbers-to-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-batch-process-pdf-files",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-choose-between-sending-a-pdf-or-a-word-document",
+      "destination": "/blog/how-to-convert-word-to-pdf-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-on-android",
+      "destination": "/blog/how-to-compress-a-pdf-without-losing-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-on-ipad",
+      "destination": "/blog/how-to-compress-a-pdf-without-losing-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-on-iphone",
+      "destination": "/blog/how-to-compress-a-pdf-without-losing-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-on-mac",
+      "destination": "/blog/how-to-compress-a-pdf-without-losing-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-on-windows",
+      "destination": "/blog/how-to-compress-a-pdf-without-losing-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-under-1mb",
+      "destination": "/blog/how-to-reduce-pdf-size-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-pdf-on-chromebook",
+      "destination": "/blog/how-to-compress-a-pdf-without-losing-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-jpg-to-pdf-on-android",
+      "destination": "/blog/how-to-convert-jpg-to-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-jpg-to-pdf-on-ipad",
+      "destination": "/blog/how-to-convert-jpg-to-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-jpg-to-pdf-on-iphone",
+      "destination": "/blog/how-to-convert-jpg-to-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-jpg-to-pdf-on-windows",
+      "destination": "/blog/how-to-convert-jpg-to-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-jpg-on-android",
+      "destination": "/blog/how-to-convert-pdf-to-jpg-high-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-jpg-on-chromebook",
+      "destination": "/blog/how-to-convert-pdf-to-jpg-high-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-jpg-on-iphone",
+      "destination": "/blog/how-to-convert-pdf-to-jpg-high-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-jpg-on-windows",
+      "destination": "/blog/how-to-convert-pdf-to-jpg-high-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-word-on-android",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-word-on-iphone",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-word-on-mac",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-word-on-windows",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-crop-a-pdf-on-iphone",
+      "destination": "/blog/how-to-crop-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-a-pdf-on-a-chromebook",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-a-pdf-on-android",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-a-pdf-on-ipad",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-a-pdf-on-iphone",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-a-pdf-on-mac",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-a-pdf-on-windows",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-flatten-a-pdf-on-iphone",
+      "destination": "/blog/how-to-flatten-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-merge-pdf-files-on-android",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-merge-pdf-files-on-chromebook",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-merge-pdf-files-on-iphone",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-merge-pdf-files-on-mac",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-merge-pdf-files-on-windows",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-organize-a-large-pdf-library",
+      "destination": "/tools/organize-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-password-protect-a-pdf-on-android",
+      "destination": "/blog/how-to-password-protect-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-password-protect-a-pdf-on-iphone",
+      "destination": "/blog/how-to-password-protect-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-password-protect-a-pdf-on-mac",
+      "destination": "/blog/how-to-password-protect-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-password-protect-a-pdf-on-windows",
+      "destination": "/blog/how-to-password-protect-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-reduce-pdf-file-size-on-iphone",
+      "destination": "/blog/how-to-reduce-pdf-size-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-reduce-pdf-file-size-on-mac",
+      "destination": "/blog/how-to-reduce-pdf-size-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-reduce-pdf-file-size-on-windows",
+      "destination": "/blog/how-to-reduce-pdf-size-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-remove-pages-from-a-pdf-on-android",
+      "destination": "/blog/how-to-delete-pages-from-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-remove-pages-from-a-pdf-on-iphone",
+      "destination": "/blog/how-to-delete-pages-from-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rotate-a-pdf-on-android",
+      "destination": "/blog/how-to-rotate-a-pdf-and-save-it",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rotate-a-pdf-on-iphone",
+      "destination": "/blog/how-to-rotate-a-pdf-and-save-it",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rotate-a-pdf-on-mac",
+      "destination": "/blog/how-to-rotate-a-pdf-and-save-it",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rotate-a-pdf-on-windows",
+      "destination": "/blog/how-to-rotate-a-pdf-and-save-it",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-share-large-pdf-files-via-email",
+      "destination": "/blog/how-to-compress-pdf-for-email-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-sign-a-pdf-on-android",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-sign-a-pdf-on-chromebook",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-sign-a-pdf-on-mac",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-sign-a-pdf-on-windows",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-split-a-pdf-on-android",
+      "destination": "/blog/how-to-split-a-pdf-into-separate-pages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-split-a-pdf-on-chromebook",
+      "destination": "/blog/how-to-split-a-pdf-into-separate-pages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-split-a-pdf-on-iphone",
+      "destination": "/blog/how-to-split-a-pdf-into-separate-pages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-split-a-pdf-on-mac",
+      "destination": "/blog/how-to-split-a-pdf-into-separate-pages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-split-pdf-on-windows",
+      "destination": "/blog/how-to-split-a-pdf-into-separate-pages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/merge-pdf-without-uploading-files",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/merge-vs-split-pdf",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pdf-encryption-explained",
+      "destination": "/blog/how-to-password-protect-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pdf-file-size-limits-explained",
+      "destination": "/blog/why-is-my-pdf-so-large",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pdf-page-sizes-explained",
+      "destination": "/blog/how-to-change-the-page-size-of-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pdf-vs-pdfa-what-is-the-difference",
+      "destination": "/blog/how-to-convert-pdf-to-pdfa-for-archiving",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-a-pdf-file",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-ocr-and-how-does-it-work",
+      "destination": "/blog/how-to-make-a-scanned-pdf-searchable",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-personal-data-is-hidden-in-your-pdf",
+      "destination": "/blog/how-to-remove-metadata-from-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-does-my-pdf-look-different-on-another-device",
+      "destination": "/blog/how-to-fix-fonts-not-displaying-in-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/word-vs-pdf-which-format-to-send",
+      "destination": "/blog/how-to-convert-word-to-pdf-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-merge-pdfs-into-one-file-online",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-split-a-pdf-file-into-pages",
+      "destination": "/blog/how-to-split-a-pdf-into-separate-pages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-to-a-smaller-size",
+      "destination": "/blog/how-to-reduce-pdf-size-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-powerpoint-online",
+      "destination": "/blog/how-to-convert-pdf-to-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rotate-a-pdf-page-online",
+      "destination": "/blog/how-to-rotate-a-pdf-and-save-it",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-repair-a-broken-pdf-online",
+      "destination": "/blog/how-to-repair-a-corrupted-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-unlock-a-password-protected-pdf",
+      "destination": "/blog/how-to-remove-a-password-from-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-redact-a-pdf-online",
+      "destination": "/blog/how-to-redact-a-pdf-properly",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-crop-a-pdf-page",
+      "destination": "/blog/how-to-crop-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-an-epub-book-to-pdf",
+      "destination": "/blog/how-to-convert-epub-to-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rearrange-pages-in-a-pdf",
+      "destination": "/blog/how-to-reorder-pages-in-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-find-differences-between-two-pdf-files",
+      "destination": "/blog/how-to-compare-two-pdfs",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-a-pdf-to-word-format-for-free",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-a-pdf-document-to-excel-format",
+      "destination": "/blog/how-to-convert-pdf-to-excel-with-tables",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-format-a-pdf-as-jpg",
+      "destination": "/blog/how-to-convert-pdf-to-jpg-high-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-jpg-and-pdf-to-pdf",
+      "destination": "/blog/how-to-combine-a-photo-and-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-sign-a-pdf-electronically-for-free",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-pdf-text-without-acrobat",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
+      "permanent": true
+    }
+  ]
+}

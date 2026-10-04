@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ToolPageSEO from '@/components/ToolPageSEO';
 import { generateToolMetadata, getToolFaqs } from '@/lib/tool-seo';
-import { generateSoftwareApplicationSchema, generateFAQSchema } from '@/lib/schema';
+import { generateToolPageSchema, generateFAQSchema } from '@/lib/schema';
 import { getToolBySlug } from '@/lib/tools-data';
 import EpubToPdfTool from '@/components/tools/EpubToPdfTool';
 
@@ -15,7 +15,7 @@ export default function EpubToPdfPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSoftwareApplicationSchema({ name: tool!.name, description: tool!.description, slug: 'epub-to-pdf', category: tool!.category })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateToolPageSchema({ name: tool!.name, description: tool!.description, slug: 'epub-to-pdf', category: tool!.category })) }} />
       {faqs.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }} />}
       <EpubToPdfTool />
       <ToolPageSEO slug="epub-to-pdf" />

@@ -53,7 +53,7 @@ export const newPosts14: BlogPost[] = [
   {
     slug: 'how-to-scan-a-document-to-pdf-on-iphone',
     title: 'How to Scan a Document to PDF on iPhone (Free)',
-    description: 'Scan a document to PDF on your iPhone for free without an app — use the built-in Notes scanner, or an in-browser scanner with auto page detection that runs on your device.',
+    description: 'Scan a document to PDF on your iPhone for free without an app — use the built-in Notes scanner, or an in-browser scanner with auto page detection.',
     keyword: 'how to scan a document to pdf on iphone',
     category: 'Converting',
     published: '2026-09-19',
@@ -108,7 +108,7 @@ export const newPosts14: BlogPost[] = [
   {
     slug: 'how-to-scan-multiple-pages-into-one-pdf',
     title: 'How to Scan Multiple Pages Into One PDF (Free)',
-    description: 'Scan multiple pages into one PDF for free — auto-capture each page, review and adjust on the fly, and download a single multi-page PDF from your phone or computer.',
+    description: 'Scan multiple pages into one PDF for free — auto-capture each page, review as you go, and download a single multi-page PDF from your phone or computer.',
     keyword: 'how to scan multiple pages into one pdf',
     category: 'Converting',
     published: '2026-09-19',
@@ -152,7 +152,7 @@ export const newPosts14: BlogPost[] = [
   {
     slug: 'how-to-scan-a-receipt-to-pdf',
     title: 'How to Scan a Receipt to PDF (Free)',
-    description: 'Scan a receipt to PDF for free on your phone — snap it, let auto-detection crop the edges, apply a B&W filter for clean copy, and keep your expenses in one file.',
+    description: 'Scan a receipt to PDF for free on your phone — snap it, let auto-detection crop the edges, apply a B&W filter, and keep your expenses in one file.',
     keyword: 'how to scan a receipt to pdf',
     category: 'Converting',
     published: '2026-09-19',

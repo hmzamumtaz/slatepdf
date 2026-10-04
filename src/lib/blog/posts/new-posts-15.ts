@@ -4,7 +4,7 @@ export const newPosts15: BlogPost[] = [
   {
     slug: 'how-to-scan-a-document-without-a-scanner',
     title: 'How to Scan a Document Without a Scanner (Free)',
-    description: 'Scan a document without a scanner for free using just your phone camera and a browser — auto edge detection, straightening, and a clean PDF that never leaves your device.',
+    description: 'Scan a document without a scanner for free using your phone camera and a browser — auto edge detection, straightening, and a PDF that stays on your device.',
     keyword: 'how to scan a document without a scanner',
     category: 'Converting',
     published: '2026-09-19',
@@ -57,7 +57,7 @@ export const newPosts15: BlogPost[] = [
   {
     slug: 'how-to-sign-a-pdf-without-printing-it',
     title: 'How to Sign a PDF Without Printing It (Free)',
-    description: 'Sign a PDF without printing it, for free — type your name, draw a signature, or upload a photo of your handwritten one, all in your browser with no upload and no app.',
+    description: 'Sign a PDF without printing it, for free — type your name, draw a signature, or add a photo of your handwritten one, all in your browser with no upload.',
     keyword: 'how to sign a pdf without printing it',
     category: 'Editing & Signing',
     published: '2026-09-19',
@@ -102,13 +102,13 @@ export const newPosts15: BlogPost[] = [
       { q: 'Do I need an Adobe account to sign a PDF?', a: 'No. A browser-based signing tool works without an account, without an upload, and without any software install.' },
       { q: 'How do I add a signature to a PDF on my phone?', a: 'Open the Sign PDF tool in your phone’s browser, upload the PDF, and draw the signature with your finger or stylus. Place and resize it, then download the signed document.' },
     ],
-    related: ['how-to-sign-a-pdf-electronically', 'how-to-sign-a-pdf-electronically-for-free', 'how-to-edit-a-pdf'],
+    related: ['how-to-sign-a-pdf-electronically', 'how-to-edit-a-pdf'],
   },
 
   {
     slug: 'why-cant-i-edit-a-pdf',
     title: "Why Can't I Edit a PDF? (And How to Actually Fix It)",
-    description: "Why can't I edit a PDF? Here are the four real reasons — password protection, scanned pages, signed locks, or the wrong app — and how to fix each one for free.",
+    description: "Why can't I edit a PDF? The four real reasons — password protection, scanned pages, signed locks, or the wrong app — and how to fix each one for free.",
     keyword: "why can't i edit a pdf",
     category: 'Troubleshooting',
     published: '2026-09-19',
@@ -152,7 +152,7 @@ export const newPosts15: BlogPost[] = [
   {
     slug: 'how-to-compress-a-pdf-for-whatsapp',
     title: 'How to Compress a PDF for WhatsApp (Free)',
-    description: 'Compress a PDF for WhatsApp for free in your browser — no upload, no app, and no quality loss you will notice. Keep documents shareable even when file size is the blocker.',
+    description: 'Compress a PDF for WhatsApp for free in your browser — no upload, no app, and no quality loss you will notice. Keep documents shareable at any size.',
     keyword: 'how to compress a pdf for whatsapp',
     category: 'Compressing',
     published: '2026-09-19',

@@ -428,8 +428,8 @@ export default function Home() {
             {[
               { href: '/blog/how-to-merge-pdf-files', title: 'How to merge PDF files', desc: 'Combine multiple PDFs into one document in a few clicks.' },
               { href: '/blog/how-to-compress-a-pdf-without-losing-quality', title: 'Compress a PDF without losing quality', desc: 'Shrink large files while keeping text and images crisp.' },
-              { href: '/blog/how-to-edit-pdf-text-without-acrobat', title: 'Edit PDF text without Acrobat', desc: 'Change wording and numbers in a PDF for free, in your browser.' },
-              { href: '/blog/how-to-sign-a-pdf-electronically-for-free', title: 'Sign a PDF for free', desc: 'Add an electronic signature without signing up or paying.' },
+              { href: '/blog/how-to-edit-a-pdf-without-adobe', title: 'Edit PDF text without Acrobat', desc: 'Change wording and numbers in a PDF for free, in your browser.' },
+              { href: '/blog/how-to-sign-a-pdf-electronically', title: 'Sign a PDF for free', desc: 'Add an electronic signature without signing up or paying.' },
               { href: '/blog/how-to-password-protect-a-pdf-without-adobe', title: 'Password-protect a PDF', desc: 'Lock your document with strong encryption, no Adobe needed.' },
               { href: '/blog/how-to-convert-pdf-to-word-without-losing-formatting', title: 'PDF to Word without losing formatting', desc: 'Turn a PDF into an editable document that keeps its layout.' },
             ].map((guide) => (

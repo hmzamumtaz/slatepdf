@@ -13,7 +13,7 @@ export interface Corner {
   y: number;
 }
 
-export type ScanFilter = 'photo' | 'enhance' | 'grayscale' | 'bw';
+export type ScanFilter = 'photo' | 'enhance' | 'grayscale' | 'bw' | 'whiteboard';
 
 const DETECT_MAX_SIDE = 448;
 
@@ -29,9 +29,12 @@ const MIN_EDGE_STRENGTH = 26;     // mean Sobel magnitude along each edge
  *  Grayscale / blur / gradients — the cheap preprocessing stack
  * ------------------------------------------------------------------ */
 
-function toGrayScale(video: HTMLVideoElement, maxSide: number): { gray: Float32Array; w: number; h: number } | null {
-  const sw = video.videoWidth;
-  const sh = video.videoHeight;
+function toGrayScale(
+  source: CanvasImageSource,
+  sw: number,
+  sh: number,
+  maxSide: number,
+): { gray: Float32Array; w: number; h: number } | null {
   if (!sw || !sh) return null;
   const scale = Math.min(1, maxSide / Math.max(sw, sh));
   const w = Math.max(2, Math.round(sw * scale));
@@ -41,7 +44,7 @@ function toGrayScale(video: HTMLVideoElement, maxSide: number): { gray: Float32A
   canvas.height = h;
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
   if (!ctx) return null;
-  ctx.drawImage(video, 0, 0, w, h);
+  ctx.drawImage(source, 0, 0, w, h);
   const data = ctx.getImageData(0, 0, w, h).data;
   const gray = new Float32Array(w * h);
   for (let i = 0; i < w * h; i++) {
@@ -408,7 +411,16 @@ function detectByBrightBlob(blurred: Float32Array, w: number, h: number, mag: Fl
  * returns the first valid page quad.
  */
 export function detectDocumentCorners(video: HTMLVideoElement): Corner[] | null {
-  const g = toGrayScale(video, DETECT_MAX_SIDE);
+  return detectInSource(video, video.videoWidth, video.videoHeight);
+}
+
+/** Same detection on a still image (a gallery photo or a full-resolution capture). */
+export function detectDocumentCornersInImage(image: HTMLCanvasElement): Corner[] | null {
+  return detectInSource(image, image.width, image.height);
+}
+
+function detectInSource(source: CanvasImageSource, sw: number, sh: number): Corner[] | null {
+  const g = toGrayScale(source, sw, sh, DETECT_MAX_SIDE);
   if (!g) return null;
   const { w, h } = g;
   const blurred = boxBlur(g.gray, w, h, 3);
@@ -554,42 +566,160 @@ export function drawDetectionOverlay(
 }
 
 /**
- * Perspective-correct a captured frame using the detected corners. Returns a
- * new canvas with the straightened page; applies the selected filter.
+ * Sharpen detected corners on the full-resolution capture. Live detection runs
+ * on a small thumbnail, so its corners can be several pixels off. For each
+ * edge, find the strongest brightness step across the edge at many points,
+ * fit a straight line through them, and intersect neighbouring lines.
  */
-export function warpPageFrame(
-  video: HTMLVideoElement,
-  quad: Corner[],
-  filter: ScanFilter,
-  maxOut = 2000,
-  maxSource = 1600,
-): HTMLCanvasElement | null {
+export function refineCorners(image: HTMLCanvasElement, quad: Corner[]): Corner[] {
+  const g = toGrayScale(image, image.width, image.height, 1400);
+  if (!g) return quad;
+  const { w, h } = g;
+  const gray = boxBlur(g.gray, w, h, 1);
+  const at = (x: number, y: number) => {
+    const xi = Math.max(0, Math.min(w - 1, Math.round(x)));
+    const yi = Math.max(0, Math.min(h - 1, Math.round(y)));
+    return gray[yi * w + xi];
+  };
+  const P = quad.map(c => ({ x: c.x * (w - 1), y: c.y * (h - 1) }));
+  const reach = Math.max(4, Math.round(Math.min(w, h) * 0.025));
+  const lines: { px: number; py: number; dx: number; dy: number }[] = [];
+
+  for (let e = 0; e < 4; e++) {
+    const a = P[e];
+    const b = P[(e + 1) % 4];
+    const len = Math.hypot(b.x - a.x, b.y - a.y);
+    if (len < 10) return quad;
+    const tx = (b.x - a.x) / len;
+    const ty = (b.y - a.y) / len;
+    const nx = -ty;
+    const ny = tx;
+    const pts: { x: number; y: number }[] = [];
+    const N = 24;
+    for (let i = 1; i < N; i++) {
+      const t = 0.08 + (0.84 * i) / N;
+      const cx = a.x + (b.x - a.x) * t;
+      const cy = a.y + (b.y - a.y) * t;
+      let best = 0;
+      let bestK = 0;
+      for (let k = -reach; k <= reach; k++) {
+        const g1 = at(cx + nx * (k + 1), cy + ny * (k + 1));
+        const g0 = at(cx + nx * (k - 1), cy + ny * (k - 1));
+        const m = Math.abs(g1 - g0);
+        if (m > best) { best = m; bestK = k; }
+      }
+      if (best > 12) pts.push({ x: cx + nx * bestK, y: cy + ny * bestK });
+    }
+    if (pts.length < 6) return quad;
+    // Total least squares line through the points, with one pass of outlier removal.
+    const fit = (q: { x: number; y: number }[]) => {
+      const mx = q.reduce((s2, p) => s2 + p.x, 0) / q.length;
+      const my = q.reduce((s2, p) => s2 + p.y, 0) / q.length;
+      let sxx = 0, syy = 0, sxy = 0;
+      for (const p of q) { sxx += (p.x - mx) ** 2; syy += (p.y - my) ** 2; sxy += (p.x - mx) * (p.y - my); }
+      const ang = 0.5 * Math.atan2(2 * sxy, sxx - syy);
+      return { px: mx, py: my, dx: Math.cos(ang), dy: Math.sin(ang) };
+    };
+    let line = fit(pts);
+    const dist = (p: { x: number; y: number }) => Math.abs((p.x - line.px) * line.dy - (p.y - line.py) * line.dx);
+    const kept = pts.filter(p => dist(p) < 2.5);
+    if (kept.length >= 6) line = fit(kept);
+    lines.push(line);
+  }
+
+  const out: Corner[] = [];
+  for (let i = 0; i < 4; i++) {
+    // Corner i is where edge (i-1) meets edge i.
+    const l1 = lines[(i + 3) % 4];
+    const l2 = lines[i];
+    const det = l1.dx * l2.dy - l1.dy * l2.dx;
+    if (Math.abs(det) < 1e-6) return quad;
+    const t = ((l2.px - l1.px) * l2.dy - (l2.py - l1.py) * l2.dx) / det;
+    const x = l1.px + l1.dx * t;
+    const y = l1.py + l1.dy * t;
+    // A refined corner may only move a little; anything else is a bad fit.
+    if (Math.hypot(x - P[i].x, y - P[i].y) > reach * 1.8) return quad;
+    out.push({ x: Math.max(0, Math.min(1, x / (w - 1))), y: Math.max(0, Math.min(1, y / (h - 1))) });
+  }
+  return out;
+}
+
+/**
+ * True width/height of a rectangle seen in perspective (Zhang & He,
+ * "Whiteboard scanning and image enhancement"). Assumes square pixels and the
+ * optical centre at the middle of the image; the focal length is recovered
+ * from the quad itself. Returns null when the geometry is degenerate.
+ */
+function rectangleAspect(quad: Corner[], sw: number, sh: number): number | null {
+  const [tl, tr, br, bl] = quad;
+  const P = (c: Corner) => [c.x * sw - sw / 2, c.y * sh - sh / 2, 1];
+  const m1 = P(tl), m2 = P(tr), m3 = P(bl), m4 = P(br);
+  const cross = (a: number[], b: number[]) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+  const dot = (a: number[], b: number[]) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+  const d2 = dot(cross(m2, m4), m3);
+  const d3 = dot(cross(m3, m4), m2);
+  if (Math.abs(d2) < 1e-9 || Math.abs(d3) < 1e-9) return null;
+  const k2 = dot(cross(m1, m4), m3) / d2;
+  const k3 = dot(cross(m1, m4), m2) / d3;
+  const n2 = [k2 * m2[0] - m1[0], k2 * m2[1] - m1[1], k2 - 1];
+  const n3 = [k3 * m3[0] - m1[0], k3 * m3[1] - m1[1], k3 - 1];
+  let ratio: number;
+  const nz = n2[2] * n3[2];
+  const f2 = Math.abs(nz) > 1e-9 ? -(n2[0] * n3[0] + n2[1] * n3[1]) / nz : -1;
+  if (f2 > 0) {
+    ratio = Math.sqrt((n2[0] * n2[0] + n2[1] * n2[1] + f2 * n2[2] * n2[2]) / (n3[0] * n3[0] + n3[1] * n3[1] + f2 * n3[2] * n3[2]));
+  } else {
+    // Parallel edges (no perspective): plain length ratio.
+    ratio = Math.sqrt((n2[0] * n2[0] + n2[1] * n2[1]) / (n3[0] * n3[0] + n3[1] * n3[1]));
+  }
+  if (!Number.isFinite(ratio) || ratio < 0.15 || ratio > 7) return null;
+  // Guard against wild estimates from noisy corners: stay near the edge ratio.
+  const edge = Math.hypot((tr.x - tl.x) * sw, (tr.y - tl.y) * sh) / Math.max(1, Math.hypot((bl.x - tl.x) * sw, (bl.y - tl.y) * sh));
+  if (ratio / edge > 1.6 || edge / ratio > 1.6) return null;
+  return ratio;
+}
+
+/** Copy the current video frame into a canvas, capped to `maxSide` pixels. */
+export function grabVideoFrame(video: HTMLVideoElement, maxSide = 3200): HTMLCanvasElement | null {
   const vw = video.videoWidth;
   const vh = video.videoHeight;
   if (!vw || !vh) return null;
+  const scale = Math.min(1, maxSide / Math.max(vw, vh));
+  const c = document.createElement('canvas');
+  c.width = Math.max(2, Math.round(vw * scale));
+  c.height = Math.max(2, Math.round(vh * scale));
+  const ctx = c.getContext('2d');
+  if (!ctx) return null;
+  ctx.drawImage(video, 0, 0, c.width, c.height);
+  return c;
+}
 
-  // Downscale the source before the per-pixel pass to keep the (blocking) warp
-  // fast enough to still feel responsive on phones.
-  const sScale = Math.min(1, maxSource / Math.max(vw, vh));
-  const sw = Math.max(2, Math.round(vw * sScale));
-  const sh = Math.max(2, Math.round(vh * sScale));
-
-  const src = document.createElement('canvas');
-  src.width = sw;
-  src.height = sh;
-  const sctx = src.getContext('2d', { willReadFrequently: true });
+/**
+ * Perspective-correct the area inside `quad` (normalized corners, TL/TR/BR/BL)
+ * into a flat, straight page. Output size follows the quad's own edge lengths,
+ * capped at `maxOut` on the long side.
+ */
+export function warpCanvas(source: HTMLCanvasElement, quad: Corner[], maxOut = 2400): HTMLCanvasElement | null {
+  const sw = source.width;
+  const sh = source.height;
+  if (!sw || !sh || quad.length !== 4) return null;
+  const sctx = source.getContext('2d', { willReadFrequently: true });
   if (!sctx) return null;
-  sctx.drawImage(video, 0, 0, sw, sh);
   const srcData = sctx.getImageData(0, 0, sw, sh);
 
-  // Target size from the quad's edge lengths (pixels in the source frame).
   const [tl, tr, br, bl] = quad;
   const wTop = Math.hypot((tr.x - tl.x) * sw, (tr.y - tl.y) * sh);
   const wBot = Math.hypot((br.x - bl.x) * sw, (br.y - bl.y) * sh);
   const hLeft = Math.hypot((bl.x - tl.x) * sw, (bl.y - tl.y) * sh);
   const hRight = Math.hypot((br.x - tr.x) * sw, (br.y - tr.y) * sh);
-  const outW0 = Math.round((wTop + wBot) / 2);
-  const outH0 = Math.round((hLeft + hRight) / 2);
+  const avgW = (wTop + wBot) / 2;
+  const avgH = (hLeft + hRight) / 2;
+  // Edge lengths are foreshortened by perspective; recover the page's true
+  // proportions, then keep roughly the captured pixel count.
+  const ratio = rectangleAspect(quad, sw, sh) ?? avgW / Math.max(1, avgH);
+  const area = Math.max(4, avgW * avgH);
+  const outH0 = Math.max(2, Math.sqrt(area / ratio));
+  const outW0 = Math.max(2, outH0 * ratio);
   const scale = Math.min(1, maxOut / Math.max(outW0, outH0));
   const outW = Math.max(2, Math.round(outW0 * scale));
   const outH = Math.max(2, Math.round(outH0 * scale));
@@ -632,47 +762,271 @@ export function warpPageFrame(
     }
   }
   octx.putImageData(img, 0, 0);
-
-  return applyFilter(out, filter);
+  return out;
 }
 
-/** Apply an Adobe-Scan-style filter to a page canvas. */
-export function applyFilter(canvas: HTMLCanvasElement, filter: ScanFilter): HTMLCanvasElement {
-  if (filter === 'photo') return canvas;
+/**
+ * Perspective-correct a live video frame using the detected corners and apply
+ * the selected filter.
+ */
+export function warpPageFrame(
+  video: HTMLVideoElement,
+  quad: Corner[],
+  filter: ScanFilter,
+  maxOut = 2000,
+  maxSource = 1600,
+): HTMLCanvasElement | null {
+  const frame = grabVideoFrame(video, maxSource);
+  if (!frame) return null;
+  const out = warpCanvas(frame, quad, maxOut);
+  return out ? applyFilter(out, filter) : null;
+}
+
+export interface ScanAdjust {
+  /** -100..100; 0 leaves the page alone. */
+  brightness: number;
+  /** -100..100; 0 leaves the page alone. */
+  contrast: number;
+}
+
+/**
+ * Estimate the paper's brightness across the page (the "illumination map").
+ * Each cell keeps its brightest luminance, so ink and text drop out and only
+ * the paper — including shadows and uneven lighting across it — remains.
+ */
+function illuminationMap(d: Uint8ClampedArray, w: number, h: number): { map: Float32Array; gw: number; gh: number; cell: number } {
+  const cell = Math.max(4, Math.round(Math.max(w, h) / 64));
+  const gw = Math.ceil(w / cell);
+  const gh = Math.ceil(h / cell);
+  const raw = new Float32Array(gw * gh);
+  for (let gy = 0; gy < gh; gy++) {
+    for (let gx = 0; gx < gw; gx++) {
+      let best = 0;
+      const y1 = Math.min(h, (gy + 1) * cell);
+      const x1 = Math.min(w, (gx + 1) * cell);
+      for (let y = gy * cell; y < y1; y += 2) {
+        for (let x = gx * cell; x < x1; x += 2) {
+          const o = (y * w + x) * 4;
+          const v = d[o] * 0.299 + d[o + 1] * 0.587 + d[o + 2] * 0.114;
+          if (v > best) best = v;
+        }
+      }
+      raw[gy * gw + gx] = best;
+    }
+  }
+  // A small max filter swallows thick strokes and headings; the blur then
+  // smooths cell-to-cell steps so the correction has no visible tiles.
+  const dil = new Float32Array(gw * gh);
+  for (let gy = 0; gy < gh; gy++) {
+    for (let gx = 0; gx < gw; gx++) {
+      let m = 0;
+      for (let dy = -1; dy <= 1; dy++) {
+        for (let dx = -1; dx <= 1; dx++) {
+          const nx = gx + dx;
+          const ny = gy + dy;
+          if (nx >= 0 && ny >= 0 && nx < gw && ny < gh) m = Math.max(m, raw[ny * gw + nx]);
+        }
+      }
+      dil[gy * gw + gx] = m;
+    }
+  }
+  return { map: boxBlur(dil, gw, gh, 2), gw, gh, cell };
+}
+
+function sampleMap(m: { map: Float32Array; gw: number; gh: number; cell: number }, x: number, y: number): number {
+  const fx = Math.max(0, Math.min(m.gw - 1, x / m.cell - 0.5));
+  const fy = Math.max(0, Math.min(m.gh - 1, y / m.cell - 0.5));
+  const x0 = Math.floor(fx);
+  const y0 = Math.floor(fy);
+  const x1 = Math.min(m.gw - 1, x0 + 1);
+  const y1 = Math.min(m.gh - 1, y0 + 1);
+  const tx = fx - x0;
+  const ty = fy - y0;
+  const g = m.map;
+  return (g[y0 * m.gw + x0] * (1 - tx) + g[y0 * m.gw + x1] * tx) * (1 - ty)
+    + (g[y1 * m.gw + x0] * (1 - tx) + g[y1 * m.gw + x1] * tx) * ty;
+}
+
+const clamp255 = (v: number) => (v < 0 ? 0 : v > 255 ? 255 : v);
+
+/** Linear stretch: `lo` and below → 0, `hi` and above → 255. */
+const stretch = (v: number, lo: number, hi: number) => clamp255(((v - lo) / (hi - lo)) * 255);
+
+/**
+ * Apply a scan filter (and optional brightness/contrast) to a page canvas in
+ * place.
+ *
+ * - photo: untouched colours.
+ * - enhance ("Auto color"): evens out lighting and shadows, whitens the paper,
+ *   keeps ink and photos in colour.
+ * - grayscale: the same clean-up in shades of grey.
+ * - bw: crisp black text on white paper, robust to shadows (adaptive, not a
+ *   single global threshold).
+ * - whiteboard: whitens a glossy, unevenly lit board and boosts marker colours.
+ */
+export function applyFilter(canvas: HTMLCanvasElement, filter: ScanFilter, adjust?: ScanAdjust): HTMLCanvasElement {
+  const b = adjust?.brightness ?? 0;
+  const c = adjust?.contrast ?? 0;
+  if (filter === 'photo' && b === 0 && c === 0) return canvas;
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
   if (!ctx) return canvas;
-
-  if (filter === 'enhance') {
-    ctx.filter = 'contrast(1.18) saturate(1.35) brightness(1.04)';
-    ctx.drawImage(canvas, 0, 0);
-    ctx.filter = 'none';
-    return canvas;
-  }
-
-  // Grayscale (and black & white step through a hard threshold).
-  const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const w = canvas.width;
+  const h = canvas.height;
+  const img = ctx.getImageData(0, 0, w, h);
   const d = img.data;
-  const gray = new Float32Array(canvas.width * canvas.height);
-  for (let i = 0; i < gray.length; i++) {
-    const o = i * 4;
-    gray[i] = d[o] * 0.299 + d[o + 1] * 0.587 + d[o + 2] * 0.114;
-  }
-  if (filter === 'grayscale') {
-    for (let i = 0; i < gray.length; i++) {
-      const o = i * 4;
-      const v = gray[i];
-      d[o] = d[o + 1] = d[o + 2] = v;
+  const light = filter === 'photo' ? null : illuminationMap(d, w, h);
+  const cf = (100 + c) / 100;
+  const bOff = b * 1.2;
+
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const o = (y * w + x) * 4;
+      let r = d[o];
+      let g = d[o + 1];
+      let bl = d[o + 2];
+      if (light) {
+        // Divide by the local paper brightness → the paper becomes uniformly white.
+        const bg = Math.max(48, sampleMap(light, x, y));
+        const gain = 248 / bg;
+        r *= gain; g *= gain; bl *= gain;
+        if (filter === 'enhance') {
+          r = stretch(r, 18, 242); g = stretch(g, 18, 242); bl = stretch(bl, 18, 242);
+          const l = (r + g + bl) / 3;
+          r = clamp255(l + (r - l) * 1.25); g = clamp255(l + (g - l) * 1.25); bl = clamp255(l + (bl - l) * 1.25);
+        } else if (filter === 'whiteboard') {
+          r = stretch(r, 40, 215); g = stretch(g, 40, 215); bl = stretch(bl, 40, 215);
+          const l = (r + g + bl) / 3;
+          r = clamp255(l + (r - l) * 1.7); g = clamp255(l + (g - l) * 1.7); bl = clamp255(l + (bl - l) * 1.7);
+        } else {
+          const l = r * 0.299 + g * 0.587 + bl * 0.114;
+          const v = filter === 'bw' ? stretch(l, 105, 185) : stretch(l, 25, 238);
+          r = g = bl = v;
+        }
+      }
+      if (c !== 0 || b !== 0) {
+        r = clamp255((r - 128) * cf + 128 + bOff);
+        g = clamp255((g - 128) * cf + 128 + bOff);
+        bl = clamp255((bl - 128) * cf + 128 + bOff);
+      }
+      d[o] = r;
+      d[o + 1] = g;
+      d[o + 2] = bl;
     }
-    ctx.putImageData(img, 0, 0);
-    return canvas;
-  }
-  // black & white
-  const th = otsuThreshold(gray, gray.length);
-  for (let i = 0; i < gray.length; i++) {
-    const o = i * 4;
-    const v = gray[i] > th ? 255 : 0;
-    d[o] = d[o + 1] = d[o + 2] = v;
   }
   ctx.putImageData(img, 0, 0);
   return canvas;
+}
+
+/** Rotate a canvas clockwise by a multiple of 90° (returns the source for 0°). */
+export function rotateCanvas(src: HTMLCanvasElement, rotation: number): HTMLCanvasElement {
+  const deg = ((rotation % 360) + 360) % 360;
+  if (deg === 0) return src;
+  const swap = deg % 180 !== 0;
+  const c = document.createElement('canvas');
+  c.width = swap ? src.height : src.width;
+  c.height = swap ? src.width : src.height;
+  const ctx = c.getContext('2d');
+  if (!ctx) return src;
+  ctx.translate(c.width / 2, c.height / 2);
+  ctx.rotate((deg * Math.PI) / 180);
+  ctx.drawImage(src, -src.width / 2, -src.height / 2);
+  return c;
+}
+
+/**
+ * A cleanup brush stroke. Points are normalized to the page *before* rotation
+ * and the radius is a fraction of the page's long side, so strokes stay put
+ * when the page is later rotated.
+ */
+export interface CleanupStroke {
+  points: Corner[];
+  radius: number;
+  color: string;
+}
+
+export function applyCleanup(canvas: HTMLCanvasElement, strokes: CleanupStroke[]): HTMLCanvasElement {
+  if (strokes.length === 0) return canvas;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return canvas;
+  const long = Math.max(canvas.width, canvas.height);
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  for (const s of strokes) {
+    if (s.points.length === 0) continue;
+    ctx.strokeStyle = s.color;
+    ctx.fillStyle = s.color;
+    ctx.lineWidth = s.radius * 2 * long;
+    ctx.beginPath();
+    const p0 = s.points[0];
+    if (s.points.length === 1) {
+      ctx.arc(p0.x * canvas.width, p0.y * canvas.height, s.radius * long, 0, Math.PI * 2);
+      ctx.fill();
+      continue;
+    }
+    ctx.moveTo(p0.x * canvas.width, p0.y * canvas.height);
+    for (const p of s.points.slice(1)) ctx.lineTo(p.x * canvas.width, p.y * canvas.height);
+    ctx.stroke();
+  }
+  return canvas;
+}
+
+/**
+ * Colour to paint with when cleaning up a mark: the paper colour around the
+ * point (the brightest common tone in a small window), so the patch blends in.
+ */
+export function samplePaperColor(canvas: HTMLCanvasElement, x: number, y: number): string {
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
+  if (!ctx) return '#ffffff';
+  const r = Math.max(8, Math.round(Math.max(canvas.width, canvas.height) * 0.03));
+  const x0 = Math.max(0, Math.round(x * canvas.width) - r);
+  const y0 = Math.max(0, Math.round(y * canvas.height) - r);
+  const w = Math.min(canvas.width - x0, r * 2);
+  const h = Math.min(canvas.height - y0, r * 2);
+  if (w <= 0 || h <= 0) return '#ffffff';
+  const d = ctx.getImageData(x0, y0, w, h).data;
+  const px: [number, number, number, number][] = [];
+  for (let i = 0; i < d.length; i += 4) px.push([d[i] * 0.299 + d[i + 1] * 0.587 + d[i + 2] * 0.114, d[i], d[i + 1], d[i + 2]]);
+  px.sort((a, b) => b[0] - a[0]);
+  // Average the brightest quarter: that's the paper, not the mark being removed.
+  const top = px.slice(0, Math.max(1, Math.floor(px.length / 4)));
+  const avg = [1, 2, 3].map(k => Math.round(top.reduce((s, p) => s + p[k], 0) / top.length));
+  return `rgb(${avg[0]}, ${avg[1]}, ${avg[2]})`;
+}
+
+/** Split a book spread's quad down the middle into left and right pages. */
+export function splitBookQuad(quad: Corner[]): [Corner[], Corner[]] {
+  const [tl, tr, br, bl] = quad;
+  const midTop = { x: (tl.x + tr.x) / 2, y: (tl.y + tr.y) / 2 };
+  const midBot = { x: (bl.x + br.x) / 2, y: (bl.y + br.y) / 2 };
+  return [[tl, midTop, midBot, bl], [midTop, tr, br, midBot]];
+}
+
+/**
+ * Lay the front and back of an ID card on one A4-proportioned page at real
+ * size (ID-1 is 85.6 × 54 mm), the way a photocopy of an ID is expected to
+ * look.
+ */
+export function composeIdCard(front: HTMLCanvasElement, back: HTMLCanvasElement | null): HTMLCanvasElement {
+  const pageW = 1654; // A4 at 200 dpi
+  const pageH = 2339;
+  const page = document.createElement('canvas');
+  page.width = pageW;
+  page.height = pageH;
+  const ctx = page.getContext('2d');
+  if (!ctx) return front;
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, pageW, pageH);
+  const boxW = Math.round(pageW * (85.6 / 210));
+  const boxH = Math.round(boxW * (54 / 85.6));
+  const place = (img: HTMLCanvasElement, cy: number) => {
+    // Cards are landscape; a portrait capture is turned to fit.
+    const src = img.height > img.width ? rotateCanvas(img, 90) : img;
+    const s = Math.min(boxW / src.width, boxH / src.height);
+    const w = src.width * s;
+    const h = src.height * s;
+    ctx.drawImage(src, (pageW - w) / 2, cy - h / 2, w, h);
+  };
+  place(front, pageH * 0.27);
+  if (back) place(back, pageH * 0.27 + boxH + pageH * 0.06);
+  return page;
 }

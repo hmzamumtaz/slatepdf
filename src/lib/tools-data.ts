@@ -52,7 +52,7 @@ export const tools: ToolInfo[] = [
   { slug: 'pdf-to-jpg', name: 'PDF to JPG', description: 'Convert PDF pages to JPG images', icon: 'FileImage', category: 'Export PDF', color: '#eab308' },
   { slug: 'pdf-to-word', name: 'PDF to Word', description: 'Turn a PDF into an editable document (DOCX)', icon: 'FileType', category: 'Export PDF', color: '#0891b2' },
   { slug: 'pdf-to-powerpoint', name: 'PDF to PowerPoint', description: 'Turn a PDF into editable slides (PPTX)', icon: 'Slideshow', category: 'Export PDF', color: '#ea580c' },
-  { slug: 'pdf-to-excel', name: 'PDF to Excel', description: 'Turn PDF tables into a spreadsheet (XLSX)', icon: 'Grid3x3', category: 'Export PDF', color: '#0d9488' },
+  { slug: 'pdf-to-excel', name: 'PDF to Excel', description: 'Export PDF text to a spreadsheet, one line per row (XLSX)', icon: 'Grid3x3', category: 'Export PDF', color: '#0d9488' },
   { slug: 'pdf-to-pdfa', name: 'PDF to PDF/A', description: 'Convert PDF to archival PDF/A format', icon: 'Archive', category: 'Export PDF', color: '#64748b' },
   { slug: 'pdf-to-markdown', name: 'PDF to Markdown', description: 'Convert PDF content to Markdown text', icon: 'FileCode', category: 'Export PDF', color: '#0f766e' },
 
@@ -63,7 +63,7 @@ export const tools: ToolInfo[] = [
   { slug: 'add-watermark', name: 'Add Watermark', description: 'Add text or image watermarks', icon: 'Droplets', category: 'Modify PDF', color: '#0891b2' },
   { slug: 'crop-pdf', name: 'Crop PDF', description: 'Crop and resize PDF pages', icon: 'Crop', category: 'Modify PDF', color: '#65a30d' },
   { slug: 'sign-pdf', name: 'Sign PDF', description: 'Add digital signatures to PDFs', icon: 'PenTool', category: 'Modify PDF', color: '#1d4ed8' },
-  { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out sensitive information', icon: 'Eraser', category: 'Modify PDF', color: '#991b1b' },
+  { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out whole pages permanently', icon: 'Eraser', category: 'Modify PDF', color: '#991b1b' },
 
   // Security
   { slug: 'unlock-pdf', name: 'Unlock PDF', description: 'Remove password protection from PDF', icon: 'Unlock', category: 'PDF Security', color: '#16a34a' },

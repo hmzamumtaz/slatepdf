@@ -8,7 +8,7 @@ export function generateOrganizationSchema() {
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.svg`,
+    logo: `${SITE_URL}/icon-512.png`,
     description: 'Free PDF toolkit that runs in your browser. Edit, convert, merge, compress, and secure PDFs without uploading.',
     sameAs: ['https://github.com/hmzamumtaz/slatepdf'],
     founder: { '@type': 'Person', name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role, url: `${SITE_URL}/about` },
@@ -32,8 +32,14 @@ export function generateWebSiteSchema() {
   };
 }
 
-/** SoftwareApplication schema for a tool page. */
-export function generateSoftwareApplicationSchema(tool: {
+/**
+ * WebPage schema for a tool page.
+ *
+ * Deliberately not SoftwareApplication: Google requires aggregateRating or
+ * review for that type and reports every page without one as an invalid item
+ * in Search Console. We have no genuine ratings and will not invent them.
+ */
+export function generateToolPageSchema(tool: {
   name: string;
   description: string;
   slug: string;
@@ -41,17 +47,12 @@ export function generateSoftwareApplicationSchema(tool: {
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: `${SITE_NAME} — ${tool.name}`,
+    '@type': 'WebPage',
+    name: `${tool.name} — ${SITE_NAME}`,
     description: tool.description,
     url: `${SITE_URL}/tools/${tool.slug}`,
-    applicationCategory: 'UtilitiesApplication',
-    operatingSystem: 'Any (Browser-based)',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
+    inLanguage: 'en',
+    isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
   };
 }
 
