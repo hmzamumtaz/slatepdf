@@ -55,7 +55,7 @@ export const newPosts18: BlogPost[] = [
   {
     slug: 'how-to-convert-a-scanned-pdf-to-an-excel-spreadsheet',
     title: 'How to Convert a Scanned PDF to an Excel Spreadsheet (Free)',
-    description: 'Turn a scanned PDF into an editable spreadsheet for free — OCR the scan so its tables become real text, then convert the searchable PDF to Excel in your browser.',
+    description: 'Turn a scanned PDF into an editable spreadsheet for free — OCR the scan so its tables become real text, then convert it to Excel in your browser.',
     keyword: 'how to convert a scanned pdf to an excel spreadsheet',
     category: 'Converting',
     published: '2026-09-24',
@@ -150,7 +150,7 @@ export const newPosts18: BlogPost[] = [
   {
     slug: 'how-to-make-a-pdf-not-printable',
     title: 'How to Make a PDF Not Printable (Free)',
-    description: 'Make a PDF not printable for free — set a no-printing permission flag so conforming readers grey out Print, and understand honestly how far that restriction goes.',
+    description: 'Make a PDF not printable for free — set a no-printing permission so conforming readers grey out Print, and learn honestly how far that restriction goes.',
     keyword: 'how to make a pdf not printable',
     category: 'Security & Privacy',
     published: '2026-09-24',
@@ -200,7 +200,7 @@ export const newPosts18: BlogPost[] = [
   {
     slug: 'how-to-change-a-pdf-from-portrait-to-landscape',
     title: 'How to Change a PDF from Portrait to Landscape (Free)',
-    description: 'Change a PDF from portrait to landscape (or back) for free — rotate the pages a quarter turn so the orientation sticks, and the option for landscape without turning the text.',
+    description: 'Change a PDF from portrait to landscape (or back) for free — rotate pages a quarter turn so the orientation sticks, or go landscape without turning the text.',
     keyword: 'how to change a pdf from portrait to landscape',
     category: 'Editing & Signing',
     published: '2026-09-24',

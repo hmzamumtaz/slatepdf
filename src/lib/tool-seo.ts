@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { SITE_NAME, SITE_URL } from './site';
+import { SITE_NAME, SITE_URL, pageTitle } from './site';
 import { getToolBySlug, tools } from './tools-data';
 
 /** SEO data for every tool, keyed by slug. Only overrides where we need something specific. */
@@ -386,7 +386,7 @@ export function generateToolMetadata(slug: string): Metadata {
   const url = `/tools/${slug}`;
   
   return {
-    title: seo.title,
+    title: pageTitle(seo.title),
     description: seo.description,
     keywords: seo.keywords,
     alternates: { canonical: url },

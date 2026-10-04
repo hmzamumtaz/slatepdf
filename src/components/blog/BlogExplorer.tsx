@@ -151,7 +151,6 @@ export default function BlogExplorer({ cards, categories }: { cards: BlogCard[];
             const meta = CATEGORY_META[category];
             const Icon = meta.icon;
             const isOpen = expanded[category] ?? false;
-            const visible = isOpen ? groupPosts : groupPosts.slice(0, COLLAPSE_AT);
             return (
               <section key={category} className="rounded-2xl border border-border bg-white overflow-hidden">
                 <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-5 sm:px-6 py-4">
@@ -173,8 +172,10 @@ export default function BlogExplorer({ cards, categories }: { cards: BlogCard[];
                 </div>
 
                 <ul>
-                  {visible.map((post, i) => (
-                    <li key={post.slug}>
+                  {/* Every link stays in the HTML so crawlers reach every guide;
+                      collapsing only hides the overflow visually. */}
+                  {groupPosts.map((post, i) => (
+                    <li key={post.slug} className={!isOpen && i >= COLLAPSE_AT ? 'hidden' : undefined}>
                       <Link
                         href={`/blog/${post.slug}`}
                         className={`flex items-center gap-3 px-5 sm:px-6 py-3 group transition-colors ${i !== 0 ? 'border-t border-border/70' : ''}`}

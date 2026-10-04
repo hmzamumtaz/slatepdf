@@ -4,7 +4,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-unlock-a-pdf-for-printing',
     title: 'How to Unlock a PDF for Printing (Free, No Upload)',
-    description: 'Unlock a PDF that blocks printing for free in your browser — release the restriction on owner-locked files in seconds and know when a real password stands in the way.',
+    description: 'Unlock a PDF that blocks printing for free in your browser — lift the restriction on owner-locked files in seconds, and know when a real password blocks you.',
     keyword: 'how to unlock a pdf for printing',
     category: 'Security & Privacy',
     published: '2026-09-24',
@@ -52,7 +52,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-extract-text-from-a-pdf',
     title: 'How to Extract Text From a PDF (Free)',
-    description: 'Extract text from a PDF for free — pull the readable text out of an electronic PDF into plain text or Markdown, and know what to do when your PDF is really an image.',
+    description: 'Extract text from a PDF for free — pull the text out of an electronic PDF into plain text or Markdown, and what to do when your PDF is really an image.',
     keyword: 'how to extract text from a pdf',
     category: 'Converting',
     published: '2026-09-24',
@@ -97,7 +97,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-rotate-a-single-page-in-a-pdf',
     title: 'How to Rotate a Single Page in a PDF',
-    description: 'Rotate one sideways page in a multi-page PDF without touching the rest — fix only the pages that need it, save the rotation so it sticks, and keep the file organized.',
+    description: 'Rotate one sideways page in a multi-page PDF without touching the rest — fix only the pages that need it and save the rotation so it sticks. Free.',
     keyword: 'how to rotate a single page in a pdf',
     category: 'Merging & Organizing',
     published: '2026-09-24',
@@ -143,7 +143,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-change-the-font-of-a-pdf',
     title: 'How to Change the Font of a PDF (Free)',
-    description: 'Change the font of a PDF for free in your browser — pick a new typeface, size, weight or colour for a text block without moving the layout, and no upload required.',
+    description: 'Change the font of a PDF for free in your browser — pick a new typeface, size, weight or colour for a text block without moving the layout. No upload.',
     keyword: 'how to change the font of a pdf',
     category: 'Editing & Signing',
     published: '2026-09-24',
@@ -189,7 +189,7 @@ export const newPosts17: BlogPost[] = [
   {
     slug: 'how-to-highlight-text-in-a-pdf',
     title: 'How to Highlight Text in a PDF (Free)',
-    description: 'Highlight text in a PDF for free in your browser — mark important lines in several colours, change or clear the highlight, and keep it when you print or send the file.',
+    description: 'Highlight text in a PDF for free in your browser — mark lines in several colours, change or clear a highlight, and keep it when you print or send the file.',
     keyword: 'how to highlight text in a pdf',
     category: 'Editing & Signing',
     published: '2026-09-24',

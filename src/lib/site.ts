@@ -15,3 +15,12 @@ export const SITE_DESCRIPTION =
 
 /** Absolute origin, used for canonical URLs, Open Graph and the sitemap. */
 export const SITE_URL = 'https://slatepdf.space';
+
+/**
+ * Page title for metadata. Appends " | Slate PDF" only when the result still
+ * fits in ~60 characters; longer titles go out bare so Google shows the
+ * keyword instead of truncating or rewriting the title.
+ */
+export function pageTitle(title: string): string | { absolute: string } {
+  return `${title} | ${SITE_NAME}`.length <= 60 ? title : { absolute: title };
+}
