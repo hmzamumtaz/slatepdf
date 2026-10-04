@@ -102,7 +102,7 @@ export const newPosts15: BlogPost[] = [
       { q: 'Do I need an Adobe account to sign a PDF?', a: 'No. A browser-based signing tool works without an account, without an upload, and without any software install.' },
       { q: 'How do I add a signature to a PDF on my phone?', a: 'Open the Sign PDF tool in your phone’s browser, upload the PDF, and draw the signature with your finger or stylus. Place and resize it, then download the signed document.' },
     ],
-    related: ['how-to-sign-a-pdf-electronically', 'how-to-sign-a-pdf-electronically-for-free', 'how-to-edit-a-pdf'],
+    related: ['how-to-sign-a-pdf-electronically', 'how-to-edit-a-pdf'],
   },
 
   {

@@ -86,7 +86,7 @@
     },
     {
       "source": "/blog/how-to-compress-a-pdf-under-1mb",
-      "destination": "/blog/how-to-compress-a-pdf-to-a-smaller-size",
+      "destination": "/blog/how-to-reduce-pdf-size-without-adobe",
       "permanent": true
     },
     {
@@ -136,22 +136,22 @@
     },
     {
       "source": "/blog/how-to-convert-pdf-to-word-on-android",
-      "destination": "/blog/how-to-convert-a-pdf-to-word-format-for-free",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
       "permanent": true
     },
     {
       "source": "/blog/how-to-convert-pdf-to-word-on-iphone",
-      "destination": "/blog/how-to-convert-a-pdf-to-word-format-for-free",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
       "permanent": true
     },
     {
       "source": "/blog/how-to-convert-pdf-to-word-on-mac",
-      "destination": "/blog/how-to-convert-a-pdf-to-word-format-for-free",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
       "permanent": true
     },
     {
       "source": "/blog/how-to-convert-pdf-to-word-on-windows",
-      "destination": "/blog/how-to-convert-a-pdf-to-word-format-for-free",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
       "permanent": true
     },
     {
@@ -392,6 +392,96 @@
     {
       "source": "/blog/word-vs-pdf-which-format-to-send",
       "destination": "/blog/how-to-convert-word-to-pdf-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-merge-pdfs-into-one-file-online",
+      "destination": "/blog/how-to-merge-pdf-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-split-a-pdf-file-into-pages",
+      "destination": "/blog/how-to-split-a-pdf-into-separate-pages",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-compress-a-pdf-to-a-smaller-size",
+      "destination": "/blog/how-to-reduce-pdf-size-without-adobe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-pdf-to-powerpoint-online",
+      "destination": "/blog/how-to-convert-pdf-to-powerpoint",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rotate-a-pdf-page-online",
+      "destination": "/blog/how-to-rotate-a-pdf-and-save-it",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-repair-a-broken-pdf-online",
+      "destination": "/blog/how-to-repair-a-corrupted-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-unlock-a-password-protected-pdf",
+      "destination": "/blog/how-to-remove-a-password-from-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-redact-a-pdf-online",
+      "destination": "/blog/how-to-redact-a-pdf-properly",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-crop-a-pdf-page",
+      "destination": "/blog/how-to-crop-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-an-epub-book-to-pdf",
+      "destination": "/blog/how-to-convert-epub-to-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-rearrange-pages-in-a-pdf",
+      "destination": "/blog/how-to-reorder-pages-in-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-find-differences-between-two-pdf-files",
+      "destination": "/blog/how-to-compare-two-pdfs",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-a-pdf-to-word-format-for-free",
+      "destination": "/blog/how-to-convert-pdf-to-word-without-losing-formatting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-a-pdf-document-to-excel-format",
+      "destination": "/blog/how-to-convert-pdf-to-excel-with-tables",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-format-a-pdf-as-jpg",
+      "destination": "/blog/how-to-convert-pdf-to-jpg-high-quality",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-convert-jpg-and-pdf-to-pdf",
+      "destination": "/blog/how-to-combine-a-photo-and-a-pdf",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-sign-a-pdf-electronically-for-free",
+      "destination": "/blog/how-to-sign-a-pdf-electronically",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-edit-pdf-text-without-acrobat",
+      "destination": "/blog/how-to-edit-a-pdf-without-adobe",
       "permanent": true
     }
   ]

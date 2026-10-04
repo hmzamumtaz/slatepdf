@@ -213,7 +213,7 @@ export const newPosts2: BlogPost[] = [
       { q: 'Will OCR change the appearance of my PDF?', a: 'OCR adds a text layer behind the images — the visual appearance does not change. The text becomes selectable and searchable while the document looks exactly the same.' },
       { q: 'Does OCR work on non-English text?', a: 'Yes. Modern OCR engines support dozens of languages. Select the correct language before processing for the best accuracy.' },
     ],
-    related: ['how-to-edit-pdf-text-without-acrobat', 'how-to-convert-pdf-to-word-on-mac', 'how-to-add-text-to-a-pdf'],
+    related: ['how-to-edit-a-pdf-without-adobe', 'how-to-convert-pdf-to-word-on-mac', 'how-to-add-text-to-a-pdf'],
   },
 
   // Article 5: How to Make a PDF on iPhone

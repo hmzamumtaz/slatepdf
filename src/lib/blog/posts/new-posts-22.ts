@@ -38,7 +38,7 @@ export const newPosts22: BlogPost[] = [
       { q: 'Is signing this way secure?', a: 'The document is processed locally in your browser and nothing is uploaded. Your file only goes where you choose — back into Files, then to the person you send it to.' },
       { q: 'Is a signed PDF from my iPhone legally binding?', a: 'For ordinary business and personal documents, yes — E-SIGN, UETA and eIDAS recognise electronic signatures made with intent. A certificate-backed digital signature is a different, stronger requirement and is not what this flow provides.' },
     ],
-    related: ['how-to-sign-a-pdf-without-printing-it', 'how-to-add-initials-to-a-pdf', 'how-to-sign-a-pdf-electronically-for-free', 'how-to-scan-a-document-to-pdf-on-iphone'],
+    related: ['how-to-sign-a-pdf-without-printing-it', 'how-to-add-initials-to-a-pdf', 'how-to-sign-a-pdf-electronically', 'how-to-scan-a-document-to-pdf-on-iphone'],
   },
   {
     slug: 'how-to-start-page-numbers-at-a-specific-number-in-a-pdf',

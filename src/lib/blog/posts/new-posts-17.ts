@@ -183,7 +183,7 @@ export const newPosts17: BlogPost[] = [
       { q: 'Will the new font stay if I send the PDF?', a: 'Yes, the chosen family is written into the file. Some device readers substitute a default when a font is missing, so verify on the receiving end for a client-facing document.' },
       { q: 'Does changing the font make the text searchable?', a: 'It keeps the text layer intact because the text itself is unchanged — only the typeface is swapped. A scanned page with no text layer still needs OCR.' },
     ],
-    related: ['how-to-edit-pdf-text-without-acrobat', 'how-to-fix-fonts-not-displaying-in-a-pdf', 'how-to-add-text-to-a-pdf', 'how-to-make-a-pdf-accessible'],
+    related: ['how-to-edit-a-pdf-without-adobe', 'how-to-fix-fonts-not-displaying-in-a-pdf', 'how-to-add-text-to-a-pdf', 'how-to-make-a-pdf-accessible'],
   },
 
   {
@@ -229,6 +229,6 @@ export const newPosts17: BlogPost[] = [
       { q: 'Will my highlights be visible to the recipient?', a: 'In most readers, yes, and they are baked into the file. Flatten the document if it must print exactly as marked.' },
       { q: 'How do I remove a highlight from a PDF?', a: 'Click the highlighted block and use the clear-highlight button. Removing marks you no longer want is the same two clicks as adding them.' },
     ],
-    related: ['how-to-annotate-a-pdf', 'how-to-edit-pdf-text-without-acrobat', 'how-to-print-a-pdf-correctly', 'how-to-make-a-scanned-pdf-searchable'],
+    related: ['how-to-annotate-a-pdf', 'how-to-edit-a-pdf-without-adobe', 'how-to-print-a-pdf-correctly', 'how-to-make-a-scanned-pdf-searchable'],
   },
 ];

@@ -53,10 +53,11 @@ export const organizingPosts: BlogPost[] = [
   {
     slug: 'how-to-rotate-a-pdf-and-save-it',
     title: 'How to Rotate a PDF and Save It Permanently',
-    description: 'Rotate sideways or upside-down PDF pages and save the rotation so it sticks — including why the view in your reader sometimes resets.',
+    description: 'Rotate PDF pages online by 90°, 180° or 270° and save the rotation permanently — one page or all, free in your browser. Plus why reader rotation resets.',
     keyword: 'how to rotate a pdf and save it',
     category: 'Merging & Organizing',
     published: '2026-04-08',
+    updated: '2026-10-04',
     tool: 'rotate-pdf',
     blocks: [
       { type: 'p', text: 'Almost everyone has hit this: you rotate a sideways page in your PDF reader, it looks right, you close the file, and the next time you open it the page is sideways again.' },
@@ -66,14 +67,23 @@ export const organizingPosts: BlogPost[] = [
       { type: 'p', text: 'If you are fixing a page for your own benefit, view rotation is fine. If you are sending the file to anyone, you need the saved kind.' },
       { type: 'h2', text: 'How to rotate and actually save it' },
       { type: 'steps', items: [
-        'Open the Rotate PDF tool and add your file.',
-        'Rotate the pages that need it — all of them, or just the ones that are wrong.',
+        'Open the Rotate PDF tool and add your file. Nothing is uploaded; the rotation runs in your browser.',
+        'Pick the angle: 90°, 180° or 270°.',
+        'Choose All pages, or Specific pages and type the ones that are wrong, such as 2 or 1, 3, 5-8.',
         'Download the rotated PDF. The rotation is now part of the document.',
         'Re-open the downloaded file to confirm the pages come up the right way.',
       ] },
+      { type: 'h2', text: 'Rotate a PDF page online: 90, 180 or 270 degrees?' },
+      { type: 'p', text: 'Rotation in a PDF is measured clockwise, and the angle you pick is added to whatever rotation the page already has.' },
+      { type: 'table', head: ['The page looks like this', 'Pick', 'Result'], rows: [
+        ['Sideways, top of the text pointing left', '90°', 'A quarter turn clockwise brings it upright'],
+        ['Sideways, top of the text pointing right', '270°', 'Three quarter turns clockwise, which is one quarter turn anticlockwise'],
+        ['Upside down', '180°', 'A half turn flips it upright'],
+      ] },
+      { type: 'p', text: 'If you guess wrong, no harm done: run the downloaded file through again with the angle that finishes the job — a page that came out upside down needs another 180°. Because angles add up, rotating the same page twice by 90° is the same as rotating it once by 180°.' },
       { type: 'h2', text: 'Rotating some pages but not others' },
       { type: 'p', text: 'Mixed orientation is normal in real documents. A report with a landscape chart on page 9 and a landscape appendix at the back should keep those pages landscape while the rest stay portrait.' },
-      { type: 'p', text: 'Rotate the specific pages rather than the whole file. Rotating everything to fix two pages breaks the other forty.' },
+      { type: 'p', text: 'Rotate the specific pages rather than the whole file. Rotating everything to fix two pages breaks the other forty. If different pages need different angles — some sideways one way, some the other — do one pass per angle, each with its own page list.' },
       { type: 'callout', title: 'Landscape content, portrait page', text: 'A page can be portrait-shaped while the content printed on it runs sideways. Rotating the page makes the text upright but leaves you with a tall page containing sideways-shaped content. Some documents genuinely need to be read sideways — check whether rotating actually improves it.' },
       { type: 'h2', text: 'Why scans come out sideways' },
       { type: 'list', items: [
@@ -84,15 +94,19 @@ export const organizingPosts: BlogPost[] = [
       ] },
       { type: 'p', text: 'None of these are recoverable by a setting after the fact; you rotate the pages and move on.' },
       { type: 'h2', text: 'Does rotating affect quality or size?' },
-      { type: 'p', text: 'No. Rotation is a number stored on the page — 90, 180 or 270 degrees. Nothing is re-rendered, so quality is identical and the file size is unchanged to within a few bytes.' },
+      { type: 'p', text: 'No. Rotation is a number stored on the page — 90, 180 or 270 degrees. Nothing is re-rendered, so quality is identical and the file size barely changes.' },
+      { type: 'p', text: 'It also means the page turns as one unit. Text, images and tables rotate together exactly as they stood; nothing is re-flowed or re-wrapped to suit the new orientation.' },
+      { type: 'h2', text: 'After the rotation: tidy the rest of the document' },
+      { type: 'p', text: 'Rotating is often one step in a longer clean-up. Once the pages are upright, fix their sequence with Organize PDF, or split the corrected file into separate sections — the rotated PDF behaves like any other in the next step.' },
     ],
     faqs: [
       { q: 'Why does my PDF keep opening sideways after I rotate it?', a: 'You rotated the view rather than the document. The view rotation is not written to the file. Use a tool that saves the rotation into the PDF and download the result.' },
-      { q: 'Can I rotate a single page in a PDF?', a: 'Yes. Choose the page and rotate only that one — the rest of the document is left alone.' },
-      { q: 'How do I rotate a PDF 180 degrees?', a: 'Apply 90 degrees twice, or pick 180 directly if the tool offers it. Upside-down pages usually come from a stack fed in the wrong way.' },
+      { q: 'Can I rotate a single page in a PDF?', a: 'Yes. Choose Specific pages, type the page number (or a range such as 5-7), and only those pages turn — the rest of the document is left alone.' },
+      { q: 'How do I rotate a PDF 180 degrees?', a: 'Pick 180° and apply it to the pages that are upside down. Upside-down pages usually come from a stack fed into the scanner the wrong way.' },
+      { q: 'Which angles can I rotate a PDF page by?', a: '90°, 180° and 270° clockwise — the three turns that fix a sideways or upside-down page. There is no free-angle option for straightening a slightly skewed scan.' },
       { q: 'Does rotating a PDF lose quality?', a: 'No. It changes a rotation value on the page rather than re-drawing the content.' },
     ],
-    related: ['how-to-rearrange-pages-in-a-pdf', 'how-to-combine-scanned-documents-into-one-pdf', 'why-is-my-pdf-blurry'],
+    related: ['how-to-reorder-pages-in-a-pdf', 'how-to-rotate-a-single-page-in-a-pdf', 'how-to-change-a-pdf-from-portrait-to-landscape', 'how-to-combine-scanned-documents-into-one-pdf', 'why-is-my-pdf-blurry'],
   },
 
   {
@@ -214,7 +228,7 @@ export const organizingPosts: BlogPost[] = [
       { q: 'Does reversing lose quality?', a: 'No. Only the page order changes; the pages themselves are copied as they are.' },
       { q: 'My duplex scan is half reversed. What now?', a: 'Split into odd and even pages, reverse whichever set runs backwards, then merge them back together alternately.' },
     ],
-    related: ['how-to-rearrange-pages-in-a-pdf', 'how-to-split-a-pdf-into-separate-pages', 'how-to-combine-scanned-documents-into-one-pdf'],
+    related: ['how-to-reorder-pages-in-a-pdf', 'how-to-split-a-pdf-into-separate-pages', 'how-to-combine-scanned-documents-into-one-pdf'],
   },
 
   {
