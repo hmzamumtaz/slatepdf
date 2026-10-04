@@ -793,6 +793,12 @@ export interface ScanPdfOptions {
    */
   ocrLanguages?: string[];
   onProgress?: (message: string) => void;
+  /**
+   * Per page: place it on an A4 sheet edge to edge, ignoring `pageSize` and
+   * the margin — for ID-card pages, whose image is already laid out on A4 so
+   * the card prints at its real 85.6 mm width.
+   */
+  realSizeA4?: boolean[];
 }
 
 /**
@@ -840,7 +846,11 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
       }
       let pw: number;
       let ph: number;
-      if (options.pageSize && options.pageSize !== 'original') {
+      const realSize = !!options.realSizeA4?.[n];
+      if (realSize) {
+        pw = sizes.a4.w;
+        ph = sizes.a4.h;
+      } else if (options.pageSize && options.pageSize !== 'original') {
         const size = sizes[options.pageSize];
         pw = size.w;
         ph = size.h;
@@ -852,8 +862,9 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
         pw = Math.max(1, img.width * scale);
         ph = Math.max(1, img.height * scale);
       }
-      const maxW = pw - MARGIN * 2;
-      const maxH = ph - MARGIN * 2;
+      const margin = realSize ? 0 : MARGIN;
+      const maxW = pw - margin * 2;
+      const maxH = ph - margin * 2;
       const scale = Math.min(maxW / img.width, maxH / img.height);
       const w = img.width * scale;
       const h = img.height * scale;

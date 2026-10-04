@@ -355,8 +355,8 @@ function Scanner() {
         <div className="flex items-center gap-3 mb-4">
           <div className="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center"><Camera className="w-6 h-6 text-violet-600" /></div>
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Scan PDF</h1>
-            <p className="text-muted-foreground text-sm sm:text-base">Scan documents with your phone camera and save them as a PDF</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Scan to PDF Online</h1>
+            <p className="text-muted-foreground text-sm sm:text-base">Free camera scanner — scan documents with your phone and save them as a PDF. No app, nothing uploaded.</p>
           </div>
         </div>
 
@@ -473,7 +473,10 @@ function Scanner() {
           initialStream={stream}
           pageCount={pages.length}
           lastThumb={lastThumb}
-          retake={retakeId !== null}
+          retakeMode={retakeId === null ? undefined : (() => {
+            const layout = pages.find(p => p.id === retakeId)?.layout;
+            return layout === 'id-card' ? 'id-card' : layout === 'card' ? 'business-card' : 'document';
+          })()}
           onCapture={handleCapture}
           onImport={files => void importFiles(files)}
           onReview={() => { setReviewIndex(Math.max(0, pages.length - 1)); closeCamera('review'); }}

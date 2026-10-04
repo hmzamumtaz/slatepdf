@@ -168,6 +168,7 @@ export default function ExportPanel({ pages, docName, onDocName, dark, onScanNew
       title: docName.trim() || undefined,
       ocrLanguages: useOcr ? [lang] : undefined,
       onProgress: setProgress,
+      realSizeA4: pages.map(p => p.layout === 'id-card'),
     });
     if (useProtect) {
       setProgress('Adding the password…');

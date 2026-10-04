@@ -111,9 +111,9 @@ const toolSeo: Record<string, {
     ],
   },
   'scan-pdf': {
-    title: 'Scan PDF — Free Document Scanner in Your Browser',
-    description: 'Free document scanner in your browser: auto edge detection, crop, filters, book, ID and business card modes, sign, OCR and password. No app, no upload.',
-    keywords: ['scan to pdf', 'scan pdf', 'document scanner to pdf', 'camera scanner pdf', 'scan documents to pdf', 'free document scanner'],
+    title: 'Scan to PDF Online Free — Camera Scanner, No App',
+    description: 'Scan documents to PDF online with your phone camera: auto edge detection, crop, filters, OCR, ID and book modes. Free, no app, no sign-up, no upload.',
+    keywords: ['scan to pdf online', 'scan document to pdf free', 'online camera scanner', 'scan to pdf no app', 'document scanner online', 'scan pdf'],
     faqs: [
       { q: 'Do I need an app or a scanner to make a PDF?', a: 'No. Open this page on your phone and point the camera at the page. It finds the edges, captures the page when you hold steady, straightens it and cleans up shadows. You can also import photos you already took.' },
       { q: 'Is my scanned document uploaded to a server?', a: 'No. The camera stream, page detection, filters and PDF creation all run in your browser. Pages are kept on this device so a reload does not lose them. The only download is the text-recognition language model, fetched once if you turn on OCR.' },

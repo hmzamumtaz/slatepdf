@@ -1,0 +1,41 @@
+# Tell IndexNow search engines (Bing, Yandex, Seznam, Naver — Bing also feeds
+# ChatGPT search) which pages changed, right after Vercel deploys main.
+# The key is public by design: it is served at /fb2c758e27e6446daf01261d0a32ed1f.txt.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the Vercel production deploy
+        run: sleep 240
+      - name: Submit recently changed URLs
+        env:
+          SITE: https://slatepdf.space
+          KEY: fb2c758e27e6446daf01261d0a32ed1f
+        run: |
+          set -euo pipefail
+          curl -fsSL "$SITE/sitemap.xml" -o sitemap.xml
+          # Pages whose lastmod is within the last 3 days, plus the home page and blog index.
+          since=$(date -u -d '3 days ago' +%Y-%m-%d)
+          python3 - "$since" > urls.json <<'PY'
+          import json, re, sys
+          since = sys.argv[1]
+          xml = open('sitemap.xml').read()
+          urls = {'https://slatepdf.space', 'https://slatepdf.space/blog', 'https://slatepdf.space/llms.txt'}
+          for loc, mod in re.findall(r'<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>', xml):
+              if mod[:10] >= since:
+                  urls.add(loc)
+          print(json.dumps(sorted(urls)))
+          PY
+          echo "Submitting $(python3 -c 'import json;print(len(json.load(open("urls.json"))))') URLs"
+          body=$(python3 -c 'import json,os;print(json.dumps({"host":"slatepdf.space","key":os.environ["KEY"],"keyLocation":os.environ["SITE"]+"/"+os.environ["KEY"]+".txt","urlList":json.load(open("urls.json"))}))')
+          code=$(curl -s -o resp.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$body")
+          echo "IndexNow responded $code"; cat resp.txt || true
+          # 200/202 = accepted. 422/403 usually means the key file is not live yet.
+          [ "$code" = 200 ] || [ "$code" = 202 ]

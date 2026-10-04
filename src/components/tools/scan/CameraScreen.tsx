@@ -36,7 +36,8 @@ interface Props {
   pageCount: number;
   lastThumb: string | null;
   /** Retaking one page: document mode only, closes after one capture. */
-  retake?: boolean;
+  /** Retaking one page: the mode to retake it in (the page's own kind); closes after one capture. */
+  retakeMode?: ScanMode;
   onCapture: (pages: CapturedPage[]) => void;
   onImport: (files: FileList) => void;
   onReview: () => void;
@@ -84,7 +85,8 @@ async function takeFullResPhoto(track: MediaStreamTrack | null): Promise<HTMLCan
   }
 }
 
-export default function CameraScreen({ initialStream, pageCount, lastThumb, retake, onCapture, onImport, onReview, onClose }: Props) {
+export default function CameraScreen({ initialStream, pageCount, lastThumb, retakeMode, onCapture, onImport, onReview, onClose }: Props) {
+  const retake = !!retakeMode;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const overlayRef = useRef<HTMLCanvasElement | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -249,7 +251,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
       }
       if (!image) return;
       const source = await canvasToJpeg(image, 0.92);
-      const m = retake ? 'document' : modeRef.current;
+      const m = retakeMode ?? modeRef.current;
       const filter = MODES.find(x => x.value === m)?.filter ?? 'enhance';
       const needsCrop = !quad;
       const q = quad ? refineCorners(image, quad) : FULL_QUAD;
@@ -279,7 +281,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
       busyRef.current = false;
       if (mountedRef.current) setDetect('searching');
     }
-  }, [onCapture, retake]);
+  }, [onCapture, retakeMode]);
 
   const tapToFocus = (e: React.MouseEvent<HTMLDivElement>) => {
     const track = streamRef.current?.getVideoTracks()[0];
@@ -365,11 +367,12 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
     return () => { if (rafRef.current != null) cancelAnimationFrame(rafRef.current); };
   }, [capture, drawOverlay]);
 
+  const effMode = retakeMode ?? mode;
   const status =
     detect === 'capturing' ? 'Capturing…'
       : dark && detect === 'searching' ? (torchAvailable && !torch ? 'Too dark — turn on the flash' : 'Too dark — find more light')
-      : mode === 'business-card' && !retake && detect === 'searching' ? 'Fit the business card inside the frame'
-      : mode === 'id-card' && !retake ? (frontDone ? 'Now turn the card over and scan the back' : 'Scan the front of the card')
+      : effMode === 'business-card' && detect === 'searching' ? 'Fit the business card inside the frame'
+      : effMode === 'id-card' ? (frontDone ? 'Now turn the card over and scan the back' : 'Scan the front of the card')
         : detect === 'steady' ? (auto ? 'Hold steady…' : 'Page found — tap the shutter')
           : detect === 'found' ? (auto ? 'Page found — hold steady' : 'Page found — tap the shutter')
             : mode === 'book' && !retake ? 'Line up the spine with the center line'
@@ -386,7 +389,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
       )}
 
       {mode === 'book' && !retake && <div className="absolute top-24 bottom-56 left-1/2 border-l-2 border-dashed border-white/50 pointer-events-none" />}
-      {(mode === 'id-card' || mode === 'business-card') && !retake && detect === 'searching' && (
+      {(effMode === 'id-card' || effMode === 'business-card') && detect === 'searching' && (
         <div className="absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-[78vw] max-w-sm aspect-[85.6/54] border-2 border-dashed border-white/60 rounded-2xl pointer-events-none" />
       )}
       {flash > 0 && <div key={flash} className="absolute inset-0 bg-white pointer-events-none animate-[scanflash_350ms_ease-out_forwards]" />}
@@ -425,7 +428,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
           <span className={`inline-block w-2 h-2 rounded-full ${detect === 'steady' ? 'bg-green-400' : detect === 'found' ? 'bg-amber-400' : 'bg-white/40'}`} />
           {retake ? `Retake page · ${status}` : status}
         </p>
-        {mode === 'id-card' && frontDone && (
+        {effMode === 'id-card' && frontDone && (
           <div className="flex justify-center mb-3">
             <button onClick={skipBack} className="px-4 py-1.5 rounded-full bg-white/15 text-xs font-semibold">Front only — skip the back</button>
           </div>
