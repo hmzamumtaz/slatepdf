@@ -13,7 +13,7 @@ export interface Corner {
   y: number;
 }
 
-export type ScanFilter = 'photo' | 'enhance' | 'grayscale' | 'bw' | 'whiteboard';
+export type ScanFilter = 'photo' | 'enhance' | 'lighttext' | 'grayscale' | 'bw' | 'whiteboard';
 
 const DETECT_MAX_SIDE = 448;
 
@@ -29,17 +29,22 @@ const MIN_EDGE_STRENGTH = 26;     // mean Sobel magnitude along each edge
  *  Grayscale / blur / gradients — the cheap preprocessing stack
  * ------------------------------------------------------------------ */
 
+// The live detector runs ~12 times a second; reusing one small canvas keeps
+// phones (iOS especially) from piling up canvas memory between collections.
+let sharedCanvas: HTMLCanvasElement | null = null;
+
 function toGrayScale(
   source: CanvasImageSource,
   sw: number,
   sh: number,
   maxSide: number,
+  reuse = false,
 ): { gray: Float32Array; w: number; h: number } | null {
   if (!sw || !sh) return null;
   const scale = Math.min(1, maxSide / Math.max(sw, sh));
   const w = Math.max(2, Math.round(sw * scale));
   const h = Math.max(2, Math.round(sh * scale));
-  const canvas = document.createElement('canvas');
+  const canvas = reuse ? (sharedCanvas ??= document.createElement('canvas')) : document.createElement('canvas');
   canvas.width = w;
   canvas.height = h;
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
@@ -51,7 +56,40 @@ function toGrayScale(
     const o = i * 4;
     gray[i] = data[o] * 0.299 + data[o + 1] * 0.587 + data[o + 2] * 0.114;
   }
+  if (!reuse) releaseCanvas(canvas);
   return { gray, w, h };
+}
+
+/**
+ * Free a canvas's pixel memory now instead of at the next garbage
+ * collection. iOS Safari caps total canvas memory and throws once it is
+ * exceeded, so large intermediates must be released explicitly.
+ */
+export function releaseCanvas(c: HTMLCanvasElement | null | undefined): void {
+  if (!c) return;
+  c.width = 0;
+  c.height = 0;
+}
+
+/**
+ * A tiny fingerprint of the frame: mean brightness plus a 12×12 grey
+ * thumbnail. Used to tell "too dark" scenes and whether a new page has been
+ * put in front of the camera since the last capture.
+ */
+export function frameSignature(video: HTMLVideoElement): { mean: number; thumb: Float32Array } | null {
+  const g = toGrayScale(video, video.videoWidth, video.videoHeight, 12, true);
+  if (!g) return null;
+  let sum = 0;
+  for (let i = 0; i < g.gray.length; i++) sum += g.gray[i];
+  return { mean: sum / g.gray.length, thumb: g.gray };
+}
+
+/** Mean absolute difference between two frame fingerprints (0–255). */
+export function signatureDistance(a: Float32Array, b: Float32Array): number {
+  if (a.length !== b.length || a.length === 0) return 255;
+  let d = 0;
+  for (let i = 0; i < a.length; i++) d += Math.abs(a[i] - b[i]);
+  return d / a.length;
 }
 
 function boxBlur(src: Float32Array, w: number, h: number, radius: number): Float32Array {
@@ -411,7 +449,7 @@ function detectByBrightBlob(blurred: Float32Array, w: number, h: number, mag: Fl
  * returns the first valid page quad.
  */
 export function detectDocumentCorners(video: HTMLVideoElement): Corner[] | null {
-  return detectInSource(video, video.videoWidth, video.videoHeight);
+  return detectInSource(video, video.videoWidth, video.videoHeight, true);
 }
 
 /** Same detection on a still image (a gallery photo or a full-resolution capture). */
@@ -419,8 +457,8 @@ export function detectDocumentCornersInImage(image: HTMLCanvasElement): Corner[]
   return detectInSource(image, image.width, image.height);
 }
 
-function detectInSource(source: CanvasImageSource, sw: number, sh: number): Corner[] | null {
-  const g = toGrayScale(source, sw, sh, DETECT_MAX_SIDE);
+function detectInSource(source: CanvasImageSource, sw: number, sh: number, reuse = false): Corner[] | null {
+  const g = toGrayScale(source, sw, sh, DETECT_MAX_SIDE, reuse);
   if (!g) return null;
   const { w, h } = g;
   const blurred = boxBlur(g.gray, w, h, 3);
@@ -862,6 +900,7 @@ const stretch = (v: number, lo: number, hi: number) => clamp255(((v - lo) / (hi 
  * - grayscale: the same clean-up in shades of grey.
  * - bw: crisp black text on white paper, robust to shadows (adaptive, not a
  *   single global threshold).
+ * - lighttext: darkens faint text (pencil, faded receipts) on white paper.
  * - whiteboard: whitens a glossy, unevenly lit board and boosts marker colours.
  */
 export function applyFilter(canvas: HTMLCanvasElement, filter: ScanFilter, adjust?: ScanAdjust): HTMLCanvasElement {
@@ -897,6 +936,12 @@ export function applyFilter(canvas: HTMLCanvasElement, filter: ScanFilter, adjus
           r = stretch(r, 40, 215); g = stretch(g, 40, 215); bl = stretch(bl, 40, 215);
           const l = (r + g + bl) / 3;
           r = clamp255(l + (r - l) * 1.7); g = clamp255(l + (g - l) * 1.7); bl = clamp255(l + (bl - l) * 1.7);
+        } else if (filter === 'lighttext') {
+          // Faint pencil, receipts and faded print: push every non-paper tone
+          // towards black while the paper stays white.
+          const l = r * 0.299 + g * 0.587 + bl * 0.114;
+          const t = stretch(l, 70, 232) / 255;
+          r = g = bl = 255 * Math.pow(t, 2.4);
         } else {
           const l = r * 0.299 + g * 0.587 + bl * 0.114;
           const v = filter === 'bw' ? stretch(l, 105, 185) : stretch(l, 25, 238);

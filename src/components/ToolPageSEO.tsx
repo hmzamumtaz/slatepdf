@@ -4,11 +4,16 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumbs from './Breadcrumbs';
+import type { ReactNode } from 'react';
 import { getToolBySlug, tools } from '@/lib/tools-data';
+import { getToolFaqs } from '@/lib/tool-seo';
 import { SITE_URL } from '@/lib/site';
 
-/** Client-side SEO wrapper for tool pages. Adds breadcrumbs, related tools, and SEO content. */
-export default function ToolPageSEO({ slug }: { slug: string }) {
+/**
+ * Client-side SEO wrapper for tool pages. Adds breadcrumbs, related tools, and SEO content.
+ * `guide` replaces the generic explainer with tool-specific content.
+ */
+export default function ToolPageSEO({ slug, guide }: { slug: string; guide?: ReactNode }) {
   const pathname = usePathname();
   const tool = getToolBySlug(slug);
   if (!tool) return null;
@@ -23,6 +28,8 @@ export default function ToolPageSEO({ slug }: { slug: string }) {
       { '@type': 'ListItem', position: 2, name: tool.name, item: toolUrl },
     ],
   };
+
+  const faqs = getToolFaqs(slug);
 
   const relatedTools = tools
     .filter((t) => t.slug !== slug && t.category === tool.category)
@@ -46,6 +53,7 @@ export default function ToolPageSEO({ slug }: { slug: string }) {
       </div>
 
       {/* SEO content below the tool */}
+      {guide ?? (
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
           {tool.name} — Free Online Tool
@@ -85,6 +93,25 @@ export default function ToolPageSEO({ slug }: { slug: string }) {
           </ul>
         </div>
       </section>
+      )}
+
+      {/* The FAQ is visible on the page, matching the FAQPage structured data. */}
+      {faqs.length > 0 && (
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-4">{tool.name} — frequently asked questions</h2>
+          <div className="divide-y divide-border rounded-2xl border border-border bg-white">
+            {faqs.map(f => (
+              <details key={f.q} className="group px-5 py-4">
+                <summary className="cursor-pointer list-none font-semibold text-foreground flex items-start justify-between gap-4">
+                  {f.q}
+                  <span className="text-muted-foreground transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+                </summary>
+                <p className="mt-2 text-gray-600 leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Related tools in same category */}
       {relatedTools.length > 0 && (

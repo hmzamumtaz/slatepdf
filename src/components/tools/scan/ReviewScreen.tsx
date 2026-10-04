@@ -2,24 +2,28 @@
 
 import { useEffect, useRef, useState } from 'react';
 import {
-  ArrowLeft, Camera, ChevronLeft, ChevronRight, Crop, Eraser, LayoutGrid, Loader2, Palette,
-  Pencil, RotateCw, ScanLine, SlidersHorizontal, Trash2, X,
+  ArrowLeft, Camera, ChevronLeft, ChevronRight, Contact, Crop, Eraser, GripVertical, History, LayoutGrid, Loader2,
+  Palette, PenLine, Pencil, RotateCw, ScanLine, ScanText, SlidersHorizontal, Trash2, Undo2, X,
 } from 'lucide-react';
 import type { ScanFilter } from '@/lib/document-scanner';
-import { renderFilterPreview, type ScanPage } from '@/lib/scan-session';
+import { renderFilterPreview, renderPage, type ScanPage } from '@/lib/scan-session';
 import CropEditor from './CropEditor';
 import CleanupEditor from './CleanupEditor';
+import MarkupEditor from './MarkupEditor';
 import ExportPanel from './ExportPanel';
+import TextSheet from './TextSheet';
+import ContactSheet from './ContactSheet';
 
 export const FILTERS: { value: ScanFilter; label: string }[] = [
   { value: 'enhance', label: 'Auto color' },
   { value: 'photo', label: 'Original' },
+  { value: 'lighttext', label: 'Light text' },
   { value: 'grayscale', label: 'Grayscale' },
   { value: 'bw', label: 'B&W' },
   { value: 'whiteboard', label: 'Whiteboard' },
 ];
 
-type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes'>>;
+type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes' | 'marks'>>;
 
 interface Props {
   pages: ScanPage[];
@@ -37,16 +41,35 @@ interface Props {
   onDelete: (id: number) => void;
   onMove: (from: number, to: number) => void;
   onFilterAll: (filter: ScanFilter) => void;
+  onRevert: (id: number) => void;
+  canUndo: boolean;
+  onUndo: () => void;
   onScanNew: () => void;
 }
 
 type Panel = 'filters' | 'adjust' | 'reorder' | 'save' | 'delete' | null;
 
 export default function ReviewScreen(props: Props) {
-  const { pages, index, onIndex, docName, onDocName, onBack, onAddMore, onRetake, onUpdate, onDelete, onMove, onFilterAll, onScanNew } = props;
+  const { pages, index, onIndex, docName, onDocName, onBack, onAddMore, onRetake, onUpdate, onDelete, onMove, onFilterAll, onRevert, canUndo, onUndo, onScanNew } = props;
   const page = pages[Math.min(index, pages.length - 1)];
   const [panel, setPanel] = useState<Panel>(null);
-  const [editor, setEditor] = useState<'crop' | 'cleanup' | null>(props.cropFirst ? 'crop' : null);
+  const [editor, setEditor] = useState<'crop' | 'cleanup' | 'markup' | 'text' | 'contact' | null>(props.cropFirst ? 'crop' : null);
+  const [zoom, setZoom] = useState({ s: 1, x: 0, y: 0 });
+  const pointers = useRef(new Map<number, { x: number; y: number }>());
+  const gesture = useRef<{ dist: number; s: number; x: number; y: number; px: number; py: number } | null>(null);
+  const lastTap = useRef(0);
+  const [dragFrom, setDragFrom] = useState<number | null>(null);
+  // Text recognition reads the page without markup, so highlights and ink don't garble it.
+  const [ocrImage, setOcrImage] = useState<{ id: number; blob: Blob } | null>(null);
+  const openOcr = (kind: 'text' | 'contact') => {
+    const p = page;
+    setOcrImage(null);
+    setEditor(kind);
+    if (!p) return;
+    void renderPage({ ...p, marks: [] }).then(blob => setOcrImage({ id: p.id, blob })).catch(() => {
+      if (p.out) setOcrImage({ id: p.id, blob: p.out });
+    });
+  };
   const [cropPart, setCropPart] = useState(0);
   const [renaming, setRenaming] = useState(false);
   const [previews, setPreviews] = useState<Partial<Record<ScanFilter, string>>>({});
@@ -84,7 +107,69 @@ export default function ReviewScreen(props: Props) {
 
   if (!page) return null;
 
-  const go = (d: number) => onIndex(Math.max(0, Math.min(pages.length - 1, index + d)));
+  const go = (d: number) => {
+    setZoom({ s: 1, x: 0, y: 0 });
+    onIndex(Math.max(0, Math.min(pages.length - 1, index + d)));
+  };
+
+  /* Preview gestures: swipe (not zoomed), pinch to zoom, drag to pan, double-tap to toggle zoom. */
+  const onPreviewDown = (e: React.PointerEvent) => {
+    // The previous/next arrows sit inside the preview; let them get their click.
+    if ((e.target as HTMLElement).closest('button')) return;
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    (e.currentTarget as Element).setPointerCapture?.(e.pointerId);
+    const pts = [...pointers.current.values()];
+    if (pts.length === 2) {
+      gesture.current = { dist: Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y), s: zoom.s, x: zoom.x, y: zoom.y, px: 0, py: 0 };
+    } else if (pts.length === 1) {
+      gesture.current = { dist: 0, s: zoom.s, x: zoom.x, y: zoom.y, px: e.clientX, py: e.clientY };
+      swipeRef.current = { x: e.clientX, y: e.clientY };
+    }
+  };
+  const onPreviewMove = (e: React.PointerEvent) => {
+    if (!pointers.current.has(e.pointerId) || !gesture.current) return;
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const pts = [...pointers.current.values()];
+    const g = gesture.current;
+    if (pts.length === 2 && g.dist > 0) {
+      const s = Math.min(4, Math.max(1, (g.s * Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y)) / g.dist));
+      setZoom(z => (s === 1 ? { s: 1, x: 0, y: 0 } : { ...z, s }));
+    } else if (pts.length === 1 && g.s > 1) {
+      setZoom({ s: g.s, x: g.x + (e.clientX - g.px), y: g.y + (e.clientY - g.py) });
+    }
+  };
+  const onPreviewUp = (e: React.PointerEvent) => {
+    const wasPinch = pointers.current.size > 1;
+    pointers.current.delete(e.pointerId);
+    if (pointers.current.size > 0) return;
+    gesture.current = null;
+    const s = swipeRef.current;
+    swipeRef.current = null;
+    if (wasPinch || !s) return;
+    const dx = e.clientX - s.x;
+    const dy = e.clientY - s.y;
+    if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+      const now = performance.now();
+      if (now - lastTap.current < 300) {
+        lastTap.current = 0;
+        setZoom(z => (z.s > 1 ? { s: 1, x: 0, y: 0 } : { s: 2.5, x: 0, y: 0 }));
+      } else lastTap.current = now;
+      return;
+    }
+    if (zoom.s === 1 && Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1);
+  };
+
+  /* Reorder by dragging the grip on a thumbnail. */
+  const onGripMove = (e: React.PointerEvent) => {
+    if (dragFrom === null) return;
+    const el = document.elementFromPoint(e.clientX, e.clientY)?.closest('[data-page-index]');
+    const to = el ? Number(el.getAttribute('data-page-index')) : NaN;
+    if (Number.isInteger(to) && to !== dragFrom) {
+      onMove(dragFrom, to);
+      setDragFrom(to);
+      setSelected(to);
+    }
+  };
 
   const tool = (label: string, icon: React.ReactNode, onClick: () => void, opts: { active?: boolean; danger?: boolean } = {}) => (
     <button
@@ -122,25 +207,28 @@ export default function ReviewScreen(props: Props) {
           )}
           <p className="text-[11px] text-white/60">Page {index + 1} of {pages.length}</p>
         </div>
+        <button onClick={onUndo} disabled={!canUndo} className="p-2.5 rounded-full hover:bg-white/10 disabled:opacity-30" aria-label="Undo last change"><Undo2 className="w-5 h-5" /></button>
         <button onClick={() => togglePanel('save')} className="px-4 py-2 rounded-xl bg-violet-600 font-semibold text-sm">Save PDF</button>
       </div>
 
       {/* Page preview — swipe left/right */}
       <div
-        className="relative flex-1 min-h-0 flex items-center justify-center px-10"
-        onPointerDown={e => { swipeRef.current = { x: e.clientX, y: e.clientY }; }}
-        onPointerUp={e => {
-          const s = swipeRef.current;
-          swipeRef.current = null;
-          if (!s) return;
-          const dx = e.clientX - s.x;
-          if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(e.clientY - s.y)) go(dx < 0 ? 1 : -1);
-        }}
-        style={{ touchAction: 'pan-y' }}
+        className="relative flex-1 min-h-0 flex items-center justify-center px-10 overflow-hidden"
+        onPointerDown={onPreviewDown}
+        onPointerMove={onPreviewMove}
+        onPointerUp={onPreviewUp}
+        onPointerCancel={onPreviewUp}
+        style={{ touchAction: 'none' }}
       >
         {page.url ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={page.url} alt={`Page ${index + 1}`} draggable={false} className="max-h-full max-w-full rounded-md shadow-2xl object-contain bg-white" />
+          <img
+            src={page.url}
+            alt={`Page ${index + 1}`}
+            draggable={false}
+            className="max-h-full max-w-full rounded-md shadow-2xl object-contain bg-white select-none"
+            style={{ transform: `translate(${zoom.x}px, ${zoom.y}px) scale(${zoom.s})`, transition: 'transform 60ms linear' }}
+          />
         ) : (
           <Loader2 className="w-8 h-8 animate-spin" />
         )}
@@ -182,20 +270,37 @@ export default function ReviewScreen(props: Props) {
       )}
 
       {panel === 'reorder' && (
-        <div className="px-3 pt-3 max-h-[45vh] overflow-y-auto">
+        <div
+          className="px-3 pt-3 max-h-[45vh] overflow-y-auto"
+          onPointerMove={onGripMove}
+          onPointerUp={() => setDragFrom(null)}
+          onPointerCancel={() => setDragFrom(null)}
+          style={dragFrom !== null ? { touchAction: 'none' } : undefined}
+        >
           <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
             {pages.map((p, i) => (
-              <button key={p.id} onClick={() => setSelected(s => (s === i ? null : i))} className={`relative aspect-[3/4] rounded-md overflow-hidden bg-white/10 ring-2 ${selected === i ? 'ring-violet-500' : i === index ? 'ring-white/40' : 'ring-transparent'}`}>
-                {p.url && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={p.url} alt={`Page ${i + 1}`} className="w-full h-full object-cover" />
-                )}
-                <span className="absolute bottom-0.5 left-0.5 px-1 rounded bg-black/70 text-[10px] font-bold">{i + 1}</span>
-              </button>
+              <div key={p.id} data-page-index={i} className={`relative aspect-[3/4] rounded-md overflow-hidden bg-white/10 ring-2 ${dragFrom === i ? 'ring-violet-400 opacity-70' : selected === i ? 'ring-violet-500' : i === index ? 'ring-white/40' : 'ring-transparent'}`}>
+                <button onClick={() => setSelected(s => (s === i ? null : i))} className="absolute inset-0" aria-label={`Select page ${i + 1}`}>
+                  {p.url && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={p.url} alt={`Page ${i + 1}`} className="w-full h-full object-cover" draggable={false} />
+                  )}
+                </button>
+                <span className="absolute bottom-0.5 left-0.5 px-1 rounded bg-black/70 text-[10px] font-bold pointer-events-none">{i + 1}</span>
+                <span
+                  role="button"
+                  aria-label={`Drag page ${i + 1} to reorder`}
+                  className="absolute top-0 right-0 w-8 h-8 flex items-center justify-center bg-black/55 rounded-bl-md cursor-grab"
+                  style={{ touchAction: 'none' }}
+                  onPointerDown={e => { (e.currentTarget as Element).releasePointerCapture?.(e.pointerId); setDragFrom(i); setSelected(i); }}
+                >
+                  <GripVertical className="w-4 h-4" />
+                </span>
+              </div>
             ))}
           </div>
           <div className="flex gap-2 py-3">
-            {selected === null ? <p className="text-xs text-white/60">Tap a page, then move it.</p> : (
+            {selected === null ? <p className="text-xs text-white/60">Drag a page by its handle, or tap it and use the buttons.</p> : (
               <>
                 <button onClick={() => { onMove(selected, 0); setSelected(0); }} disabled={selected === 0} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">First</button>
                 <button onClick={() => { onMove(selected, selected - 1); setSelected(selected - 1); }} disabled={selected === 0} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">◀ Earlier</button>
@@ -223,8 +328,12 @@ export default function ReviewScreen(props: Props) {
         {tool('Rotate', <RotateCw className="w-5 h-5" />, () => onUpdate(page.id, { rotation: (page.rotation + 90) % 360 }))}
         {tool('Filters', <Palette className="w-5 h-5" />, () => togglePanel('filters'), { active: panel === 'filters' })}
         {tool('Adjust', <SlidersHorizontal className="w-5 h-5" />, () => togglePanel('adjust'), { active: panel === 'adjust' })}
+        {tool('Markup', <PenLine className="w-5 h-5" />, () => setEditor('markup'))}
         {tool('Cleanup', <Eraser className="w-5 h-5" />, () => setEditor('cleanup'))}
+        {tool('Copy text', <ScanText className="w-5 h-5" />, () => openOcr('text'))}
+        {page.layout === 'card' && tool('Contact', <Contact className="w-5 h-5" />, () => openOcr('contact'))}
         {tool('Reorder', <LayoutGrid className="w-5 h-5" />, () => { setSelected(index); togglePanel('reorder'); }, { active: panel === 'reorder' })}
+        {tool('Revert', <History className="w-5 h-5" />, () => onRevert(page.id))}
         {tool('Delete', <Trash2 className="w-5 h-5" />, () => togglePanel('delete'), { danger: true })}
       </div>
 
@@ -255,6 +364,24 @@ export default function ReviewScreen(props: Props) {
             setEditor(null);
           }}
         />
+      )}
+
+      {editor === 'markup' && (
+        <MarkupEditor
+          page={page}
+          onCancel={() => setEditor(null)}
+          onDone={marks => { onUpdate(page.id, { marks }); setEditor(null); }}
+        />
+      )}
+
+      {(editor === 'text' || editor === 'contact') && (
+        ocrImage && ocrImage.id === page.id ? (
+          editor === 'text'
+            ? <TextSheet image={ocrImage.blob} onClose={() => setEditor(null)} />
+            : <ContactSheet image={ocrImage.blob} onClose={() => setEditor(null)} />
+        ) : (
+          <div className="absolute inset-0 z-40 flex items-center justify-center bg-gray-950"><Loader2 className="w-8 h-8 animate-spin" /></div>
+        )
       )}
 
       {editor === 'cleanup' && (

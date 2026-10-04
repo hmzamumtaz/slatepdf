@@ -783,7 +783,7 @@ export async function jpgToPdf(files: File[]): Promise<Blob> {
 }
 
 export interface ScanPdfOptions {
-  pageSize?: 'a4' | 'a4-landscape' | 'letter' | 'original';
+  pageSize?: 'a4' | 'a4-landscape' | 'letter' | 'letter-landscape' | 'legal' | 'original';
   /** Document title written into the PDF's properties. */
   title?: string;
   /**
@@ -793,6 +793,12 @@ export interface ScanPdfOptions {
    */
   ocrLanguages?: string[];
   onProgress?: (message: string) => void;
+  /**
+   * Per page: place it on an A4 sheet edge to edge, ignoring `pageSize` and
+   * the margin — for ID-card pages, whose image is already laid out on A4 so
+   * the card prints at its real 85.6 mm width.
+   */
+  realSizeA4?: boolean[];
 }
 
 /**
@@ -806,6 +812,8 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
     a4: { w: 595.28, h: 841.89 },
     'a4-landscape': { w: 841.89, h: 595.28 },
     letter: { w: 612, h: 792 },
+    'letter-landscape': { w: 792, h: 612 },
+    legal: { w: 612, h: 1008 },
   } as const;
   const MARGIN = 24;
   const merged = await PDFDocument.create();
@@ -819,6 +827,8 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
     options.onProgress?.('Loading text recognition…');
     const Tesseract = await import('tesseract.js');
     worker = await Tesseract.createWorker(languages.join('+'));
+    // Silence Tesseract's internal diagnostics ("Line cannot be recognized!!").
+    await worker.setParameters({ debug_file: '/dev/null' } as Partial<Tesseract.WorkerParams>).catch(() => undefined);
     font = await merged.embedFont(StandardFonts.Helvetica);
     unicodeFont = await embedUnicodeFallback(merged);
   }
@@ -836,7 +846,11 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
       }
       let pw: number;
       let ph: number;
-      if (options.pageSize && options.pageSize !== 'original') {
+      const realSize = !!options.realSizeA4?.[n];
+      if (realSize) {
+        pw = sizes.a4.w;
+        ph = sizes.a4.h;
+      } else if (options.pageSize && options.pageSize !== 'original') {
         const size = sizes[options.pageSize];
         pw = size.w;
         ph = size.h;
@@ -848,8 +862,9 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
         pw = Math.max(1, img.width * scale);
         ph = Math.max(1, img.height * scale);
       }
-      const maxW = pw - MARGIN * 2;
-      const maxH = ph - MARGIN * 2;
+      const margin = realSize ? 0 : MARGIN;
+      const maxW = pw - margin * 2;
+      const maxH = ph - margin * 2;
       const scale = Math.min(maxW / img.width, maxH / img.height);
       const w = img.width * scale;
       const h = img.height * scale;
@@ -2544,6 +2559,8 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
       }
     },
   });
+  // Silence Tesseract's internal diagnostics ("Line cannot be recognized!!").
+  await worker.setParameters({ debug_file: '/dev/null' } as Partial<Tesseract.WorkerParams>).catch(() => undefined);
 
   try {
     for (let i = 1; i <= numPages; i++) {

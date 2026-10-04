@@ -14,7 +14,8 @@ import { SITE_URL } from '@/lib/site';
 export const dynamic = 'force-static';
 
 const SITE_LAUNCH = new Date('2025-11-01');
-const TOOL_DATE = new Date('2025-12-15');
+// Last real change to every tool page: FAQs made visible (2026-10-04).
+const TOOL_DATE = new Date('2026-10-04');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const newest = posts[0]?.updated ?? posts[0]?.published;

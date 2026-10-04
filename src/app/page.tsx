@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Shield, Lock, ArrowRight, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
+import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
 import { categories, getToolsByCategory, featuredTool, getToolBySlug } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
@@ -231,6 +231,28 @@ export default function Home() {
       </section>
 
       {/* Tools by Category */}
+      {/* The phone scanner — the other headline tool */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+        <Link
+          href="/tools/scan-pdf"
+          className="group flex flex-col sm:flex-row sm:items-center gap-5 rounded-3xl border border-violet-200 bg-violet-50 p-6 sm:p-8 transition-all hover:shadow-xl hover:shadow-violet-200/60"
+        >
+          <span className="w-14 h-14 rounded-2xl bg-violet-600 text-white flex items-center justify-center shrink-0">
+            <Camera className="w-7 h-7" />
+          </span>
+          <span className="flex-1 min-w-0">
+            <span className="block text-xl sm:text-2xl font-bold text-foreground">Scan to PDF with your phone camera</span>
+            <span className="block text-gray-600 mt-1.5 leading-relaxed">
+              A full document scanner in your browser: it finds the page, captures it when you hold steady, straightens it
+              and removes shadows. Book, ID card, business card and whiteboard modes, signatures and searchable text — no app.
+            </span>
+          </span>
+          <span className="inline-flex items-center gap-2 font-semibold text-violet-700 shrink-0">
+            Start scanning <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          </span>
+        </Link>
+      </section>
+
       <section id="tools" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 scroll-mt-24">
         {categories.filter(c => c !== featuredTool.category).map((category) => (
           <div key={category} className="mb-14 last:mb-0">
