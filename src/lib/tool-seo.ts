@@ -112,14 +112,16 @@ const toolSeo: Record<string, {
   },
   'scan-pdf': {
     title: 'Scan PDF — Free Document Scanner in Your Browser',
-    description: 'Scan documents to PDF with your phone camera: auto edge detection, crop, filters, book and ID card modes, and searchable OCR. Free, no app, no upload.',
+    description: 'Free document scanner in your browser: auto edge detection, crop, filters, book, ID and business card modes, sign, OCR and password. No app, no upload.',
     keywords: ['scan to pdf', 'scan pdf', 'document scanner to pdf', 'camera scanner pdf', 'scan documents to pdf', 'free document scanner'],
     faqs: [
       { q: 'Do I need an app or a scanner to make a PDF?', a: 'No. Open this page on your phone and point the camera at the page. It finds the edges, captures the page when you hold steady, straightens it and cleans up shadows. You can also import photos you already took.' },
       { q: 'Is my scanned document uploaded to a server?', a: 'No. The camera stream, page detection, filters and PDF creation all run in your browser. Pages are kept on this device so a reload does not lose them. The only download is the text-recognition language model, fetched once if you turn on OCR.' },
       { q: 'Can I make the scanned PDF searchable?', a: 'Yes. Leave "Recognize text (OCR)" on when you save. The recognized text is laid invisibly over each page image, so you can search, select and copy it. Accuracy depends on how sharp and well-lit the photo is.' },
       { q: 'What do the Book, ID card and Whiteboard modes do?', a: 'Book splits an open book into a left and a right page. ID card scans the front and then the back of a card and places both on one page at real size. Whiteboard whitens glare and boosts marker colours.' },
-      { q: 'Can I fix a page after scanning it?', a: 'Yes. In Review you can drag the corners to re-crop, rotate, change the filter, adjust brightness and contrast, brush away marks, retake, reorder or delete any page. Edits are applied to the original photo, so nothing loses quality.' },
+      { q: 'Can I fix a page after scanning it?', a: 'Yes. In Review you can drag the corners to re-crop, rotate, change the filter, adjust brightness and contrast, brush away marks, draw, highlight, add text or sign, retake, reorder or delete any page, and undo any change. Edits are applied to the original photo, so nothing loses quality.' },
+      { q: 'Can I scan a business card into my contacts?', a: 'Yes. Use Business card mode, then tap Contact: the name, job title, company, phone, email and website are read from the card for you to check, and saved as a .vcf contact file your phone can import.' },
+      { q: 'Can I password-protect the scan or save it as JPG?', a: 'Yes. When saving, tick "Protect with a password" to lock the PDF, or choose JPG to get one image per page. Saved PDFs are also kept in Recent scans on this device so you can download or share them again.' },
     ],
   },
   'word-to-pdf': {

@@ -783,7 +783,7 @@ export async function jpgToPdf(files: File[]): Promise<Blob> {
 }
 
 export interface ScanPdfOptions {
-  pageSize?: 'a4' | 'a4-landscape' | 'letter' | 'original';
+  pageSize?: 'a4' | 'a4-landscape' | 'letter' | 'letter-landscape' | 'legal' | 'original';
   /** Document title written into the PDF's properties. */
   title?: string;
   /**
@@ -806,6 +806,8 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
     a4: { w: 595.28, h: 841.89 },
     'a4-landscape': { w: 841.89, h: 595.28 },
     letter: { w: 612, h: 792 },
+    'letter-landscape': { w: 792, h: 612 },
+    legal: { w: 612, h: 1008 },
   } as const;
   const MARGIN = 24;
   const merged = await PDFDocument.create();
@@ -819,6 +821,8 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
     options.onProgress?.('Loading text recognition…');
     const Tesseract = await import('tesseract.js');
     worker = await Tesseract.createWorker(languages.join('+'));
+    // Silence Tesseract's internal diagnostics ("Line cannot be recognized!!").
+    await worker.setParameters({ debug_file: '/dev/null' } as Partial<Tesseract.WorkerParams>).catch(() => undefined);
     font = await merged.embedFont(StandardFonts.Helvetica);
     unicodeFont = await embedUnicodeFallback(merged);
   }
@@ -2544,6 +2548,8 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
       }
     },
   });
+  // Silence Tesseract's internal diagnostics ("Line cannot be recognized!!").
+  await worker.setParameters({ debug_file: '/dev/null' } as Partial<Tesseract.WorkerParams>).catch(() => undefined);
 
   try {
     for (let i = 1; i <= numPages; i++) {

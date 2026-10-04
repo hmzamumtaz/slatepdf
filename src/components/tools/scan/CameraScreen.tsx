@@ -3,12 +3,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ImagePlus, Loader2, RefreshCw, X, Zap, ZapOff } from 'lucide-react';
 import {
-  detectDocumentCorners, detectDocumentCornersInImage, drawDetectionOverlayPixels, grabVideoFrame, refineCorners, splitBookQuad,
+  detectDocumentCorners, detectDocumentCornersInImage, drawDetectionOverlayPixels, frameSignature, grabVideoFrame,
+  refineCorners, signatureDistance, splitBookQuad,
   type Corner, type PixelPoint, type ScanFilter,
 } from '@/lib/document-scanner';
 import { blobToCanvas, canvasToJpeg, FULL_QUAD, type PageLayout, type PagePart } from '@/lib/scan-session';
 
-export type ScanMode = 'whiteboard' | 'book' | 'document' | 'id-card';
+export type ScanMode = 'whiteboard' | 'book' | 'document' | 'id-card' | 'business-card';
 
 export interface CapturedPage {
   parts: PagePart[];
@@ -23,6 +24,7 @@ const MODES: { value: ScanMode; label: string; filter: ScanFilter }[] = [
   { value: 'book', label: 'Book', filter: 'enhance' },
   { value: 'document', label: 'Document', filter: 'enhance' },
   { value: 'id-card', label: 'ID card', filter: 'enhance' },
+  { value: 'business-card', label: 'Business card', filter: 'enhance' },
 ];
 
 const STEADY_STROKE = '#22c55e';
@@ -56,8 +58,13 @@ function cornerDrift(a: Corner[] | null, b: Corner[] | null): number {
 
 /** Ask for the camera. Call it straight from a tap: iOS only trusts user gestures. */
 export function openCameraStream(face: 'environment' | 'user'): Promise<MediaStream> {
+  // Where full-resolution stills exist (ImageCapture), a lighter preview
+  // stream is enough; elsewhere (iOS) the stream itself is the photo.
+  const stills = typeof window !== 'undefined' && 'ImageCapture' in window;
   return navigator.mediaDevices.getUserMedia({
-    video: { facingMode: face, width: { ideal: 3840 }, height: { ideal: 2160 } },
+    video: stills
+      ? { facingMode: face, width: { ideal: 1920 }, height: { ideal: 1080 } }
+      : { facingMode: face, width: { ideal: 3840 }, height: { ideal: 2160 } },
     audio: false,
   });
 }
@@ -94,6 +101,8 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
   const modeRef = useRef<ScanMode>('document');
   const frontRef = useRef<PagePart | null>(null);
   const mountedRef = useRef(true);
+  const lastShotRef = useRef<Float32Array | null>(null);
+  const lastLightCheck = useRef(0);
 
   const [facing, setFacing] = useState<'environment' | 'user'>('environment');
   const [starting, setStarting] = useState(true);
@@ -105,6 +114,9 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
   const [detect, setDetect] = useState<'searching' | 'found' | 'steady' | 'capturing'>('searching');
   const [flash, setFlash] = useState(0);
   const [frontDone, setFrontDone] = useState(false);
+  const [steady, setSteady] = useState(0);
+  const [dark, setDark] = useState(false);
+  const [focusAt, setFocusAt] = useState<{ x: number; y: number; n: number } | null>(null);
 
   useEffect(() => { autoRef.current = auto; }, [auto]);
   useEffect(() => { modeRef.current = mode; }, [mode]);
@@ -217,6 +229,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
     const video = videoRef.current;
     if (!video || video.readyState < 2 || busyRef.current) return;
     busyRef.current = true;
+    lastShotRef.current = frameSignature(video)?.thumb ?? null;
     setDetect('capturing');
     setFlash(f => f + 1);
     navigator.vibrate?.(30);
@@ -244,27 +257,47 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
       if (m === 'book') {
         const [left, right] = splitBookQuad(q);
         onCapture([
-          { parts: [{ source, quad: left }], layout: 'single', filter, needsCrop },
-          { parts: [{ source, quad: right }], layout: 'single', filter, needsCrop },
+          { parts: [{ source, quad: left, autoQuad: quad ? left : undefined }], layout: 'single', filter, needsCrop },
+          { parts: [{ source, quad: right, autoQuad: quad ? right : undefined }], layout: 'single', filter, needsCrop },
         ]);
       } else if (m === 'id-card') {
         if (!frontRef.current) {
-          frontRef.current = { source, quad: q };
+          frontRef.current = { source, quad: q, autoQuad: quad ? q : undefined };
           setFrontDone(true);
         } else {
           const front = frontRef.current;
           frontRef.current = null;
           setFrontDone(false);
-          onCapture([{ parts: [front, { source, quad: q }], layout: 'id-card', filter, needsCrop }]);
+          onCapture([{ parts: [front, { source, quad: q, autoQuad: quad ? q : undefined }], layout: 'id-card', filter, needsCrop }]);
         }
+      } else if (m === 'business-card') {
+        onCapture([{ parts: [{ source, quad: q, autoQuad: quad ? q : undefined }], layout: 'card', filter, needsCrop }]);
       } else {
-        onCapture([{ parts: [{ source, quad: q }], layout: 'single', filter, needsCrop }]);
+        onCapture([{ parts: [{ source, quad: q, autoQuad: quad ? q : undefined }], layout: 'single', filter, needsCrop }]);
       }
     } finally {
       busyRef.current = false;
       if (mountedRef.current) setDetect('searching');
     }
   }, [onCapture, retake]);
+
+  const tapToFocus = (e: React.MouseEvent<HTMLDivElement>) => {
+    const track = streamRef.current?.getVideoTracks()[0];
+    const video = videoRef.current;
+    if (!track || !video?.videoWidth) return;
+    setFocusAt(f => ({ x: e.clientX, y: e.clientY, n: (f?.n ?? 0) + 1 }));
+    // Screen point → normalized video point (undo object-cover).
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const k = Math.max(w / video.videoWidth, h / video.videoHeight);
+    const x = (e.clientX - (w - video.videoWidth * k) / 2) / (video.videoWidth * k);
+    const y = (e.clientY - (h - video.videoHeight * k) / 2) / (video.videoHeight * k);
+    const caps = (track.getCapabilities?.() ?? {}) as { focusMode?: string[] };
+    const advanced: Record<string, unknown> = { pointsOfInterest: [{ x: Math.min(1, Math.max(0, x)), y: Math.min(1, Math.max(0, y)) }] };
+    if (caps.focusMode?.includes('single-shot')) advanced.focusMode = 'single-shot';
+    else if (caps.focusMode?.includes('continuous')) advanced.focusMode = 'continuous';
+    track.applyConstraints({ advanced: [advanced as MediaTrackConstraintSet] }).catch(() => undefined);
+  };
 
   const skipBack = () => {
     const front = frontRef.current;
@@ -285,6 +318,21 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
       if (now - lastTickRef.current < 80) return;
       lastTickRef.current = now;
 
+      // Twice a second: is it too dark, and has a new page replaced the last one?
+      if (now - lastLightCheck.current > 500) {
+        lastLightCheck.current = now;
+        const sig = frameSignature(video);
+        if (sig) {
+          setDark(sig.mean < 42);
+          if (!armedRef.current && lastShotRef.current && signatureDistance(sig.thumb, lastShotRef.current) > 16) {
+            // The view changed a lot since the last shot (page turned or
+            // swapped) — allow the next auto-capture without leaving the frame.
+            armedRef.current = true;
+            stableRef.current = 0;
+          }
+        }
+      }
+
       let raw: Corner[] | null = null;
       try { raw = detectDocumentCorners(video); } catch { raw = null; }
       const prevRaw = rawRef.current;
@@ -296,6 +344,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
         streakRef.current++;
         stableRef.current = cornerDrift(prevRaw, raw) < 0.004 ? stableRef.current + 1 : 0;
         const steady = stableRef.current >= 3 && streakRef.current >= 4;
+        setSteady(armedRef.current ? Math.min(1, Math.min(stableRef.current / 3, streakRef.current / 4)) : 0);
         drawOverlay(smooth, steady ? STEADY_STROKE : TRACKING_STROKE);
         setDetect(steady ? 'steady' : 'found');
         if (steady && autoRef.current && armedRef.current) {
@@ -307,6 +356,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
         streakRef.current = 0;
         stableRef.current = 0;
         armedRef.current = true;
+        setSteady(0);
         drawOverlay(null, '');
         setDetect('searching');
       }
@@ -317,6 +367,8 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
 
   const status =
     detect === 'capturing' ? 'Capturing…'
+      : dark && detect === 'searching' ? (torchAvailable && !torch ? 'Too dark — turn on the flash' : 'Too dark — find more light')
+      : mode === 'business-card' && !retake && detect === 'searching' ? 'Fit the business card inside the frame'
       : mode === 'id-card' && !retake ? (frontDone ? 'Now turn the card over and scan the back' : 'Scan the front of the card')
         : detect === 'steady' ? (auto ? 'Hold steady…' : 'Page found — tap the shutter')
           : detect === 'found' ? (auto ? 'Page found — hold steady' : 'Page found — tap the shutter')
@@ -327,13 +379,18 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
     <div className="fixed inset-0 z-[70] bg-black text-white select-none overflow-hidden" style={{ height: '100dvh', touchAction: 'none', overscrollBehavior: 'none' }}>
       <video ref={videoRef} autoPlay playsInline muted className="absolute inset-0 w-full h-full object-cover" />
       <canvas ref={overlayRef} className="absolute inset-0 w-full h-full pointer-events-none" />
+      {/* Tap to focus (where the camera supports it) */}
+      <div className="absolute inset-x-0 top-20 bottom-56" onClick={tapToFocus} aria-hidden />
+      {focusAt && (
+        <div key={focusAt.n} className="absolute w-16 h-16 -ml-8 -mt-8 rounded-full border-2 border-yellow-300 pointer-events-none animate-[scanfocus_700ms_ease-out_forwards]" style={{ left: focusAt.x, top: focusAt.y }} />
+      )}
 
       {mode === 'book' && !retake && <div className="absolute top-24 bottom-56 left-1/2 border-l-2 border-dashed border-white/50 pointer-events-none" />}
-      {mode === 'id-card' && !retake && detect === 'searching' && (
+      {(mode === 'id-card' || mode === 'business-card') && !retake && detect === 'searching' && (
         <div className="absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-[78vw] max-w-sm aspect-[85.6/54] border-2 border-dashed border-white/60 rounded-2xl pointer-events-none" />
       )}
       {flash > 0 && <div key={flash} className="absolute inset-0 bg-white pointer-events-none animate-[scanflash_350ms_ease-out_forwards]" />}
-      <style>{'@keyframes scanflash{from{opacity:.85}to{opacity:0}}'}</style>
+      <style>{'@keyframes scanflash{from{opacity:.85}to{opacity:0}}@keyframes scanfocus{0%{transform:scale(1.4);opacity:1}70%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:0}}'}</style>
 
       {(starting || failed) && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-8 text-center">
@@ -401,10 +458,15 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
           <button
             onClick={() => { armedRef.current = false; void capture(); }}
             disabled={starting || !!failed}
-            className="w-20 h-20 rounded-full bg-white ring-4 ring-white/30 active:scale-95 transition-transform flex items-center justify-center disabled:opacity-40"
+            className="relative w-20 h-20 rounded-full bg-white ring-4 ring-white/30 active:scale-95 transition-transform flex items-center justify-center disabled:opacity-40"
             aria-label="Capture page"
           >
             <span className="w-16 h-16 rounded-full border-[3px] border-gray-900/80" />
+            {auto && steady > 0 && (
+              <svg className="absolute inset-0 -rotate-90 pointer-events-none" viewBox="0 0 80 80" aria-hidden>
+                <circle cx="40" cy="40" r="37" fill="none" stroke="#22c55e" strokeWidth="5" strokeDasharray={`${232 * steady} 232`} strokeLinecap="round" />
+              </svg>
+            )}
           </button>
 
           <button onClick={() => fileRef.current?.click()} className="w-14 h-14 rounded-lg bg-white/10 flex flex-col items-center justify-center gap-0.5 text-[10px] font-semibold" aria-label="Import photos">

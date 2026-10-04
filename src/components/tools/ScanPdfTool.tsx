@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import {
-  AlertCircle, ArrowLeft, BookOpen, Camera, CheckCircle2, Contact, Crop, Eraser, FileSearch,
-  ImagePlus, Link2, Loader2, Palette, Presentation, Smartphone, Trash2,
+  AlertCircle, ArrowLeft, BookOpen, Camera, CheckCircle2, Contact, Crop, Eraser, FileSearch, IdCard,
+  ImagePlus, Link2, Loader2, Lock, Palette, PenLine, Presentation, Smartphone, Trash2,
 } from 'lucide-react';
 import { detectDocumentCornersInImage, refineCorners, type ScanFilter } from '@/lib/document-scanner';
 import {
@@ -14,6 +14,9 @@ import {
 import CameraScreen, { openCameraStream, type CapturedPage } from './scan/CameraScreen';
 import ReviewScreen from './scan/ReviewScreen';
 import ExportPanel from './scan/ExportPanel';
+import RecentScans from './scan/RecentScans';
+import ScanErrorBoundary from './scan/ScanErrorBoundary';
+import { terminateOcr } from '@/lib/scan-ocr';
 
 type View = 'home' | 'camera' | 'review';
 
@@ -23,20 +26,25 @@ function detectMobile(): boolean {
   const coarse = window.matchMedia?.('(pointer: coarse)').matches ?? false;
   return /Mobi|Android|iPhone|iPad|iPod|Silk/i.test(navigator.userAgent) || (coarse && navigator.maxTouchPoints > 0);
 }
-type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes'>>;
+type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes' | 'marks'>>;
+
+const HISTORY_LIMIT = 30;
 
 const FEATURES = [
   { icon: FileSearch, title: 'Auto page detection', text: 'Finds the page edges and captures it when you hold steady.' },
   { icon: Crop, title: 'Crop & straighten', text: 'Drag the corners; skewed photos come out flat and square.' },
   { icon: Palette, title: 'Scan filters', text: 'Auto color, Grayscale, B&W and Whiteboard remove shadows.' },
   { icon: BookOpen, title: 'Book mode', text: 'Splits an open book into two separate pages.' },
-  { icon: Contact, title: 'ID card mode', text: 'Front and back of a card on one page, at real size.' },
+  { icon: IdCard, title: 'ID card mode', text: 'Front and back of a card on one page, at real size.' },
+  { icon: Contact, title: 'Business cards', text: 'Reads the card and saves it as a contact.' },
   { icon: Presentation, title: 'Whiteboard mode', text: 'Whitens glare and boosts marker colours.' },
+  { icon: PenLine, title: 'Markup & sign', text: 'Draw, highlight, add text and your signature.' },
   { icon: Eraser, title: 'Cleanup', text: 'Brush away stains, marks and fingers.' },
   { icon: CheckCircle2, title: 'Searchable PDF', text: 'Text recognition (OCR) so you can search and copy.' },
+  { icon: Lock, title: 'Password & JPG', text: 'Lock the PDF with a password, or save pages as JPG.' },
 ];
 
-export default function ScanPdfTool() {
+function Scanner() {
   const [pages, setPages] = useState<ScanPage[]>([]);
   const [docName, setDocName] = useState('');
   const [view, setView] = useState<View>('home');
@@ -49,6 +57,7 @@ export default function ScanPdfTool() {
   const [notice, setNotice] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const [canUndo, setCanUndo] = useState(false);
 
   const pagesRef = useRef<ScanPage[]>([]);
   const nextId = useRef(1);
@@ -57,6 +66,7 @@ export default function ScanPdfTool() {
   const queue = useRef<Promise<void>>(Promise.resolve());
   const restored = useRef(false);
   const fileRef = useRef<HTMLInputElement>(null);
+  const history = useRef<ScanPage[][]>([]);
 
   // Server HTML assumes desktop; the device check runs after hydration
   // (useSyncExternalStore avoids a hydration mismatch).
@@ -65,6 +75,13 @@ export default function ScanPdfTool() {
   const commit = useCallback((next: ScanPage[]) => {
     pagesRef.current = next;
     setPages(next);
+  }, []);
+
+  /** Remember the pages before a user edit so it can be undone. */
+  const remember = useCallback(() => {
+    history.current.push(pagesRef.current);
+    if (history.current.length > HISTORY_LIMIT) history.current.shift();
+    setCanUndo(true);
   }, []);
 
   /* ---------------------------- rendering ---------------------------- */
@@ -92,6 +109,7 @@ export default function ScanPdfTool() {
   const newPage = useCallback((c: Omit<ScanPage, 'id' | 'out' | 'url' | keyof typeof DEFAULT_EDITS> & { filter: ScanFilter }): ScanPage => ({
     ...DEFAULT_EDITS,
     strokes: [],
+    marks: [],
     ...c,
     id: nextId.current++,
     out: null,
@@ -109,7 +127,8 @@ export default function ScanPdfTool() {
         setDocName(defaultDocName());
         return;
       }
-      const list = saved.pages.map(p => ({ ...p, id: nextId.current++, out: null, url: null }));
+      // Sessions saved before markup existed have no `marks`.
+      const list = saved.pages.map(p => ({ ...p, marks: p.marks ?? [], id: nextId.current++, out: null, url: null }));
       commit(list);
       setDocName(saved.docName || defaultDocName());
       setNotice(`Restored ${list.length} scanned page${list.length === 1 ? '' : 's'} from your last session.`);
@@ -121,14 +140,17 @@ export default function ScanPdfTool() {
   useEffect(() => {
     if (!restored.current) return;
     const t = window.setTimeout(() => {
-      void saveSession({ docName, pages: pages.map(({ id, parts, layout, rotation, filter, brightness, contrast, strokes }) => ({ id, parts, layout, rotation, filter, brightness, contrast, strokes, out: null })) });
+      void saveSession({ docName, pages: pages.map(({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks }) => ({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks, out: null })) });
     }, 700);
     return () => window.clearTimeout(t);
   }, [pages, docName]);
 
   useEffect(() => {
     const map = urls.current;
-    return () => { map.forEach(u => URL.revokeObjectURL(u)); };
+    return () => {
+      map.forEach(u => URL.revokeObjectURL(u));
+      void terminateOcr();
+    };
   }, []);
 
   /* ----------------------------- adding ------------------------------ */
@@ -161,6 +183,7 @@ export default function ScanPdfTool() {
 
   const handleCapture = useCallback((captured: CapturedPage[]) => {
     const made = captured.map(c => newPage({ parts: c.parts, layout: c.layout, filter: c.filter }));
+    remember();
     if (retakeId !== null) {
       const idx = pagesRef.current.findIndex(p => p.id === retakeId);
       const replacement = made[0];
@@ -182,7 +205,7 @@ export default function ScanPdfTool() {
       setCropFirst(true);
       closeCamera('review');
     }
-  }, [retakeId, newPage, commit, schedule, closeCamera]);
+  }, [retakeId, newPage, commit, schedule, closeCamera, remember]);
 
   const importFiles = useCallback(async (files: FileList | File[]) => {
     const list = Array.from(files).filter(f => f.type.startsWith('image/') || /\.(heic|heif)$/i.test(f.name));
@@ -196,13 +219,14 @@ export default function ScanPdfTool() {
         const found = detectDocumentCornersInImage(canvas);
         const quad = found ? refineCorners(canvas, found) : FULL_QUAD;
         const source = await canvasToJpeg(canvas, 0.92);
-        made.push(newPage({ parts: [{ source, quad }], layout: 'single', filter: 'enhance' }));
+        made.push(newPage({ parts: [{ source, quad, autoQuad: found ? quad : undefined }], layout: 'single', filter: 'enhance' }));
       } catch {
         setError(`"${file.name}" could not be read as an image.`);
       }
     }
     setImporting(false);
     if (made.length === 0) return;
+    remember();
     if (retakeId !== null) {
       const idx = pagesRef.current.findIndex(p => p.id === retakeId);
       const next = pagesRef.current.slice();
@@ -219,11 +243,12 @@ export default function ScanPdfTool() {
     setReviewIndex(start);
     if (view === 'camera') closeCamera('review');
     else if (isMobile) setView('review');
-  }, [retakeId, newPage, commit, schedule, closeCamera, view, isMobile]);
+  }, [retakeId, newPage, commit, schedule, closeCamera, view, isMobile, remember]);
 
   /* ----------------------------- editing ----------------------------- */
 
   const updatePage = useCallback((id: number, edit: Edit) => {
+    remember();
     let changed: ScanPage | null = null;
     const next = pagesRef.current.map(p => {
       if (p.id !== id) return p;
@@ -232,9 +257,38 @@ export default function ScanPdfTool() {
     });
     commit(next);
     if (changed) schedule(changed);
-  }, [commit, schedule]);
+  }, [commit, schedule, remember]);
+
+  const revertPage = useCallback((id: number) => {
+    const page = pagesRef.current.find(p => p.id === id);
+    if (!page) return;
+    updatePage(id, {
+      parts: page.parts.map(part => ({ ...part, quad: part.autoQuad ?? FULL_QUAD })),
+      rotation: 0, brightness: 0, contrast: 0, strokes: [], marks: [],
+    });
+  }, [updatePage]);
+
+  const undo = useCallback(() => {
+    const prev = history.current.pop();
+    setCanUndo(history.current.length > 0);
+    if (!prev) return;
+    const current = new Map(pagesRef.current.map(p => [p.id, p]));
+    const changed: ScanPage[] = [];
+    const next = prev.map(p => {
+      if (current.get(p.id) === p) return p;
+      // A changed (or deleted) page gets re-rendered; keep its live preview meanwhile.
+      const restoredPage = { ...p, url: urls.current.get(p.id) ?? null };
+      changed.push(restoredPage);
+      return restoredPage;
+    });
+    commit(next);
+    changed.forEach(schedule);
+    setReviewIndex(i => Math.min(i, Math.max(0, next.length - 1)));
+    if (next.length > 0 && view === 'home' && isMobile) setView('review');
+  }, [commit, schedule, view, isMobile]);
 
   const filterAll = useCallback((filter: ScanFilter) => {
+    remember();
     const changed: ScanPage[] = [];
     const next = pagesRef.current.map(p => {
       if (p.filter === filter) return p;
@@ -244,33 +298,35 @@ export default function ScanPdfTool() {
     });
     commit(next);
     changed.forEach(schedule);
-  }, [commit, schedule]);
+  }, [commit, schedule, remember]);
 
   const deletePage = useCallback((id: number) => {
+    remember();
     const idx = pagesRef.current.findIndex(p => p.id === id);
-    const old = urls.current.get(id);
-    if (old) URL.revokeObjectURL(old);
-    urls.current.delete(id);
+    // Keep the preview URL: undo may bring the page back.
     versions.current.delete(id);
     const next = pagesRef.current.filter(p => p.id !== id);
     commit(next);
     setReviewIndex(Math.max(0, Math.min(idx, next.length - 1)));
     if (next.length === 0) setView('home');
-  }, [commit]);
+  }, [commit, remember]);
 
   const movePage = useCallback((from: number, to: number) => {
     const next = pagesRef.current.slice();
-    if (to < 0 || to >= next.length) return;
+    if (to < 0 || to >= next.length || from === to) return;
+    remember();
     const [p] = next.splice(from, 1);
     next.splice(to, 0, p);
     commit(next);
     setReviewIndex(to);
-  }, [commit]);
+  }, [commit, remember]);
 
   const startOver = useCallback(() => {
     urls.current.forEach(u => URL.revokeObjectURL(u));
     urls.current.clear();
     versions.current.clear();
+    history.current = [];
+    setCanUndo(false);
     commit([]);
     setDocName(defaultDocName());
     setNotice(null);
@@ -388,6 +444,8 @@ export default function ScanPdfTool() {
             </div>
           )}
 
+          <div className="mt-6 empty:hidden"><RecentScans /></div>
+
           {pages.length === 0 && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
               {FEATURES.map(f => (
@@ -401,6 +459,14 @@ export default function ScanPdfTool() {
           )}
         </div>
       </div>
+
+      {opening && (
+        <div className="fixed inset-0 z-[80] flex flex-col items-center justify-center gap-3 bg-black text-white" role="status">
+          <Loader2 className="w-8 h-8 animate-spin" />
+          <p className="text-sm">Starting camera…</p>
+          <p className="text-xs text-white/60 px-8 text-center">If your browser asks, allow camera access.</p>
+        </div>
+      )}
 
       {view === 'camera' && (
         <CameraScreen
@@ -431,9 +497,20 @@ export default function ScanPdfTool() {
           onDelete={deletePage}
           onMove={movePage}
           onFilterAll={filterAll}
+          onRevert={revertPage}
+          canUndo={canUndo}
+          onUndo={undo}
           onScanNew={startOver}
         />
       )}
     </div>
+  );
+}
+
+export default function ScanPdfTool() {
+  return (
+    <ScanErrorBoundary>
+      <Scanner />
+    </ScanErrorBoundary>
   );
 }
