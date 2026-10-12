@@ -402,9 +402,9 @@
     },
     "ocr-pdf": {
       "slug": "pdf-szovegfelismeres",
-      "name": "OCR PDF",
+      "name": "PDF szövegfelismerés (OCR)",
       "description": "Szöveg kinyerése szkennelt dokumentumokból",
-      "seoTitle": "OCR PDF – szövegfelismerés szkennelt dokumentumokban",
+      "seoTitle": "PDF szövegfelismerés (OCR) – szkennelt dokumentumokhoz",
       "metaDescription": "Alakítsd a szkennelt dokumentumokat kereshető, kijelölhető szöveggé OCR-rel. Kereshető és szerkeszthető szkennelt PDF-ek. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
@@ -418,7 +418,7 @@
       ],
       "howTo": {
         "title": "Hogyan tehető kereshetővé egy szkennelt PDF OCR-rel",
-        "intro": "Az OCR PDF felismeri a szkennelt oldalakon lévő szöveget, és hozzáadja a PDF-hez, így kereshetsz benne, kijelölheted és másolhatod. 44 nyelv közül legfeljebb hármat választhatsz ki a dokumentumhoz.",
+        "intro": "A PDF szövegfelismerés (OCR) felismeri a szkennelt oldalakon lévő szöveget, és hozzáadja a PDF-hez, így kereshetsz benne, kijelölheted és másolhatod. 44 nyelv közül legfeljebb hármat választhatsz ki a dokumentumhoz.",
         "steps": [
           "Válaszd ki a szkennelt PDF-et",
           "Keresd meg és válaszd ki a dokumentum nyelvét – vegyes nyelvű fájloknál legfeljebb hármat",
@@ -867,7 +867,7 @@
         "title": "Hogyan lehet PDF-et Wordbe konvertálni",
         "intro": "A PDF Word konvertálás kinyeri egy PDF szövegét egy szerkeszthető .docx fájlba, minden oldalhoz egy címsorral. A szöveget viszi át, nem az elrendezést: a képek és az összetett formázás nem kerülnek át.",
         "steps": [
-          "Válassz ki egy vagy több PDF-et (szkennelt dokumentumoknál előbb futtasd az OCR PDF eszközt)",
+          "Válassz ki egy vagy több PDF-et (szkennelt dokumentumoknál előbb futtasd a PDF szövegfelismerés (OCR) eszközt)",
           "Kattints a Konvertálás Wordbe gombra",
           "Töltsd le a .docx fájlt, és nyisd meg Wordben, Google Dokumentumokban vagy LibreOffice-ban"
         ],
@@ -926,7 +926,7 @@
         },
         {
           "q": "Működik szkennelt PDF-ekkel?",
-          "a": "Csak ha a PDF-ben van szövegréteg. Szkennelt oldalaknál előbb futtasd az OCR PDF eszközt, hogy legyen exportálható szöveg."
+          "a": "Csak ha a PDF-ben van szövegréteg. Szkennelt oldalaknál előbb futtasd a PDF szövegfelismerés (OCR) eszközt, hogy legyen exportálható szöveg."
         }
       ],
       "howTo": {
@@ -1107,7 +1107,7 @@
       "name": "Vízjel hozzáadása",
       "description": "Szöveges vagy képes vízjel hozzáadása",
       "seoTitle": "Vízjel hozzáadása PDF-hez – ingyenes szöveges vízjel",
-      "metaDescription": "Helyezz szöveges vízjelet, például BIZALMAS vagy TERVEZET feliratot egy PDF minden oldalára. Állítsd be az átlátszóságot és a méretet. Ingyenes, feltöltés nélkül.",
+      "metaDescription": "Helyezz szöveges vízjelet, például BIZALMAS vagy TERVEZET feliratot egy PDF minden oldalára. Állítható átlátszóság és méret. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
           "q": "Beállíthatom a vízjel átlátszóságát?",
@@ -1318,7 +1318,7 @@
         },
         {
           "q": "Összehasonlíthatok szkennelt PDF-eket?",
-          "a": "Előbb futtasd az OCR PDF eszközt mindkét szkennen. Az összehasonlítás a fájlokban lévő szövegen dolgozik, így a csak képet tartalmazó szkennekben nincs mit összehasonlítani."
+          "a": "Előbb futtasd a PDF szövegfelismerés (OCR) eszközt mindkét szkennen. Az összehasonlítás a fájlokban lévő szövegen dolgozik, így a csak képet tartalmazó szkennekben nincs mit összehasonlítani."
         }
       ],
       "howTo": {
@@ -1340,7 +1340,7 @@
       "slug": "pdf-osszefoglalo",
       "name": "Összefoglaló",
       "description": "PDF tartalmának összefoglalása",
-      "seoTitle": "PDF összefoglaló – PDF összefoglalása ingyen, feltöltés nélkül",
+      "seoTitle": "PDF összefoglaló – PDF összefoglalása ingyen, online",
       "metaDescription": "Kapd meg egy PDF fő pontjait és témáit másodpercek alatt. Az összefoglaló a saját eszközödön készül, így a dokumentum sosem töltődik fel. Ingyenes.",
       "faqs": [
         {
@@ -1391,7 +1391,7 @@
         "title": "Hogyan lehet egy PDF-et lefordítani",
         "intro": "A PDF fordítás 42 nyelv egyikére fordítja le egy PDF szövegét, és a fordítást a képernyőn vagy egy új, csak szöveget tartalmazó PDF-ként adja meg. A többi eszközünkkel ellentétben a szöveget egy ingyenes online fordítószolgáltatásnak küldi el – az oldal ezt még a kezdés előtt jelzi.",
         "steps": [
-          "Válassz egy valódi szöveget tartalmazó PDF-et (szkenneknél előbb futtasd az OCR PDF eszközt)",
+          "Válassz egy valódi szöveget tartalmazó PDF-et (szkenneknél előbb futtasd a PDF szövegfelismerés (OCR) eszközt)",
           "Válaszd ki a forrásnyelvet, vagy hagyd Automatikus felismerésen, majd a célnyelvet",
           "Kattints a Fordítás gombra",
           "Másold ki a fordítást, vagy töltsd le PDF-ként"
