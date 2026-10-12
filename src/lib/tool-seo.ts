@@ -356,7 +356,7 @@ const toolSeo: Record<string, {
   },
   'svg-to-pdf': {
     title: 'SVG to PDF — Convert SVG Vector Images to PDF Free',
-    description: 'Convert SVG vector graphics to PDF documents in your browser. Free, no upload, no sign-up. Preserves vector quality and design fidelity.',
+    description: 'Convert SVG files to PDF in your browser. Free, no upload, no sign-up — your SVG files never leave your device. Convert one or several at once.',
     keywords: ['svg to pdf', 'convert svg to pdf', 'svg to pdf converter', 'svg image to pdf', 'vector to pdf'],
     faqs: [
       { q: 'Does converting SVG to PDF preserve vector quality?', a: 'The SVG is rendered at your screen resolution and embedded as a high-quality image in the PDF. For true vector output, use a dedicated vector editor.' },

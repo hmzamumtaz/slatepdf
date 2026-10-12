@@ -80,8 +80,8 @@ export const troubleshootingPosts: BlogPost[] = [
 
   {
     slug: 'pdf-wont-open-how-to-fix-it',
-    title: 'PDF Will Not Open? Here Is How to Fix It',
-    description: 'Work through the causes in order — reader problems, download failures, encryption and genuine corruption — and get the document open.',
+    title: 'PDF Won\'t Open? How to Fix It, Step by Step',
+    description: 'PDF won\'t open or shows an error? Check the reader, the download, the password and corruption in the right order and get the file open in minutes.',
     keyword: 'pdf wont open',
     category: 'Troubleshooting',
     published: '2026-03-28',
@@ -222,7 +222,7 @@ export const troubleshootingPosts: BlogPost[] = [
       { q: 'Does everyone see the same substitution?', a: 'No. Each reader substitutes from what it has, which is why the document looks different everywhere.' },
       { q: 'Does embedding increase file size?', a: 'Yes, though subsetting keeps only the characters used, which limits the cost considerably.' },
     ],
-    related: ['how-to-convert-word-to-pdf-without-losing-formatting', 'why-does-my-pdf-look-different-on-another-device', 'how-to-convert-pdf-to-pdfa-for-archiving'],
+    related: ['how-to-convert-word-to-pdf-without-losing-formatting', 'how-to-fix-fonts-not-displaying-in-a-pdf', 'how-to-convert-pdf-to-pdfa-for-archiving'],
   },
 
   {

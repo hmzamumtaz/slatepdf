@@ -111,7 +111,7 @@ export const troubleshootingPosts4: BlogPost[] = [
       { q: 'Why check in a second reader?', a: 'Because rendering differs between them. What looks right in yours may not in the recipient\'s.' },
       { q: 'Is this necessary every time?', a: 'For external, legal or published documents, yes. For internal drafts, the content checks suffice.' },
     ],
-    related: ['what-personal-data-is-hidden-in-your-pdf', 'how-to-redact-a-pdf-properly', 'why-does-my-pdf-look-different-on-another-device'],
+    related: ['what-personal-data-is-hidden-in-your-pdf', 'how-to-redact-a-pdf-properly', 'how-to-fix-fonts-not-displaying-in-a-pdf'],
   },
 
   {
