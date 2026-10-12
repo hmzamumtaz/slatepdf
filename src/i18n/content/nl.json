@@ -43,7 +43,7 @@
       }
     ],
     "hubTitle": "Alle PDF-tools — {count} gratis tools, zonder upload",
-    "hubDescription": "Alle tools van {site} op één plek: PDF samenvoegen, splitsen, verkleinen, omzetten, bewerken, ondertekenen en beveiligen. Gratis, zonder account en upload.",
+    "hubDescription": "Alle tools van {site} op één plek: PDF samenvoegen, splitsen, verkleinen, omzetten, bewerken, ondertekenen en beveiligen. Gratis, zonder account of upload.",
     "hubH1": "Alle PDF-tools die je nodig hebt, op één plek",
     "hubIntro": "{count} gratis PDF-tools om je documenten samen te voegen, te splitsen, te comprimeren, om te zetten, te bewerken, te ondertekenen en te beveiligen. Ze werken allemaal in je browser, dus je bestanden worden nooit geüpload — geen account, geen watermerk.",
     "navWorkspace": "Werkruimte",
@@ -270,7 +270,7 @@
       "name": "PDF ordenen",
       "description": "Pagina's herschikken, draaien en beheren",
       "seoTitle": "PDF-pagina's ordenen — volgorde wijzigen, gratis",
-      "metaDescription": "Zet de pagina's van een PDF in elke gewenste volgorde en laat overbodige pagina's weg, in één stap. Gratis, zonder account, en het bestand blijft in je browser.",
+      "metaDescription": "Zet de pagina's van een PDF in elke gewenste volgorde en laat overbodige pagina's weg, in één stap. Gratis, zonder account; het bestand blijft in je browser.",
       "faqs": [
         {
           "q": "Hoe stel ik de nieuwe paginavolgorde in?",
