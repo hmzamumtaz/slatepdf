@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Convert to PDF",
+  "Converted {slides} slide including {images} image.": "Converted {slides} slide including {images} image.",
+  "Converted {slides} slide including {images} images.": "Converted {slides} slide including {images} images.",
+  "Converted {slides} slide.": "Converted {slides} slide.",
+  "Converted {slides} slides including {images} image.": "Converted {slides} slides including {images} image.",
+  "Converted {slides} slides including {images} images.": "Converted {slides} slides including {images} images.",
+  "Converted {slides} slides.": "Converted {slides} slides.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.",
+  "Rendering slide {current} of {total}...": "Rendering slide {current} of {total}..."
+}

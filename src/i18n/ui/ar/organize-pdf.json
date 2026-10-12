@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "أدخل ترتيب الصفحات الجديد (مفصولًا بفواصل، مثال: 3,1,2,4,5)",
+  "Organize PDF": "ترتيب PDF",
+  "Please enter a page order": "يُرجى إدخال ترتيب الصفحات",
+  "Preview in new order:": "المعاينة بالترتيب الجديد:",
+  "Total pages: {total} | Reordered: {count}": "إجمالي الصفحات: {total} | المعاد ترتيبها: {count}",
+  "e.g., 3,1,2,4,5": "مثال: 3,1,2,4,5"
+}

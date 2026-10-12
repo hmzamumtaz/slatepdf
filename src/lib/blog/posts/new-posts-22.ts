@@ -194,7 +194,7 @@ export const newPosts22: BlogPost[] = [
   },
   {
     slug: 'how-to-keep-slides-from-getting-cut-off-when-converting-to-pdf',
-    title: 'Slides Cut Off When Converting to PDF? How to Fix It',
+    title: 'How to Keep Slides from Getting Cut Off When Converting to PDF',
     description: 'Stop PowerPoint slides from being cut off at the edges when converting to PDF. Render each slide to its own page instead. Free, no upload.',
     keyword: 'keep slides from getting cut off when converting powerpoint to pdf',
     category: 'Converting',

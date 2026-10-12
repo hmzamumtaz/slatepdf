@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { X, Search } from 'lucide-react';
-import { toolIcon } from '@/lib/tool-icons';
+import { toolIcon } from '@/components/tool-icons';
 import { tools, categories, getToolsByCategory } from '@/lib/tools-data';
 
 interface ToolsModalProps {

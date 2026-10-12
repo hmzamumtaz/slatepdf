@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Reconstruit le PDF sans perte avec des flux d’objets compressés et supprime les objets inutilisés et les anciennes révisions. Le texte reste sélectionnable et les images restent intactes.",
+  "Optimize PDF": "Optimiser le PDF",
+  "Remove document metadata (title, author, etc.)": "Supprimer les métadonnées du document (titre, auteur, etc.)",
+  "Saved {size} KB ({percent}% smaller).": "{size} Ko gagnés ({percent} % plus léger).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Ce PDF est déjà optimisé — il vous est rendu inchangé. Pour une réduction plus importante, essayez l’outil Compresser PDF."
+}

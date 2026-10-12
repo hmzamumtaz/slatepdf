@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{slides} Folie aus {pages} Seite erstellt.",
+  "Built {slides} slide from {pages} pages.": "{slides} Folie aus {pages} Seiten erstellt.",
+  "Built {slides} slides from {pages} page.": "{slides} Folien aus {pages} Seite erstellt.",
+  "Built {slides} slides from {pages} pages.": "{slides} Folien aus {pages} Seiten erstellt.",
+  "Convert to PowerPoint": "In PowerPoint umwandeln",
+  "Reading page {current} of {total}...": "Seite {current} von {total} wird gelesen …",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Liest die Struktur des Dokuments, statt nur Rohtext einzufügen: Überschriften werden zu Folientiteln, Absätze zu Aufzählungspunkten. Lange Seiten werden auf weiteren Folien fortgesetzt."
+}

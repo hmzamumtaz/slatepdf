@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
 import { MIN_PUBLIC_VOTES, type Rating } from '@/lib/ratings';
+import { useT } from '@/i18n/I18nProvider';
 
 type Status = 'idle' | 'saving' | 'thanks' | 'already' | 'error';
 
@@ -17,6 +18,7 @@ function storageKey(slug: string) {
  * the offline desktop build) the widget hides itself.
  */
 export default function RateTool({ slug, toolName, initial }: { slug: string; toolName: string; initial: Rating }) {
+  const t = useT();
   const [rating, setRating] = useState<Rating>(initial);
   const [available, setAvailable] = useState(initial.count > 0);
   const [hover, setHover] = useState(0);
@@ -75,10 +77,10 @@ export default function RateTool({ slug, toolName, initial }: { slug: string; to
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 rounded-2xl border border-border bg-white px-5 py-4">
-        <p className="font-semibold text-foreground">Rate {toolName}</p>
+        <p className="font-semibold text-foreground">{t('Rate {tool}', { tool: t(toolName) })}</p>
         <div
           role="radiogroup"
-          aria-label={`Rate ${toolName} from 1 to 5 stars`}
+          aria-label={t('Rate {tool} from 1 to 5 stars', { tool: t(toolName) })}
           className="flex items-center gap-1"
           onMouseLeave={() => setHover(0)}
         >
@@ -88,7 +90,7 @@ export default function RateTool({ slug, toolName, initial }: { slug: string; to
               type="button"
               role="radio"
               aria-checked={chosen === n}
-              aria-label={`${n} star${n > 1 ? 's' : ''}`}
+              aria-label={n > 1 ? t('{count} stars', { count: n }) : t('{count} star', { count: n })}
               disabled={locked}
               onMouseEnter={() => !locked && setHover(n)}
               onFocus={() => !locked && setHover(n)}
@@ -101,12 +103,12 @@ export default function RateTool({ slug, toolName, initial }: { slug: string; to
           ))}
         </div>
         <p className="text-sm text-gray-600" aria-live="polite">
-          {status === 'thanks' && 'Thanks for rating! '}
-          {status === 'already' && 'You have rated this tool. '}
-          {status === 'error' && 'Could not save your rating — please try again later. '}
+          {status === 'thanks' && `${t('Thanks for rating!')} `}
+          {status === 'already' && `${t('You have rated this tool.')} `}
+          {status === 'error' && `${t('Could not save your rating — please try again later.')} `}
           {showAggregate
-            ? <><strong className="text-foreground">{rating.average.toFixed(1)} / 5</strong> from {rating.count.toLocaleString('en-US')} votes</>
-            : status === 'idle' && 'Tell us how it worked for you.'}
+            ? <><strong className="text-foreground">{rating.average.toFixed(1)} / 5</strong> {t('from {count} votes', { count: rating.count.toLocaleString('en-US') })}</>
+            : status === 'idle' && t('Tell us how it worked for you.')}
         </p>
       </div>
     </div>

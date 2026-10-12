@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Neue Seitenreihenfolge eingeben (durch Kommas getrennt, z. B. 3,1,2,4,5)",
+  "Organize PDF": "PDF organisieren",
+  "Please enter a page order": "Bitte geben Sie eine Seitenreihenfolge ein",
+  "Preview in new order:": "Vorschau in neuer Reihenfolge:",
+  "Total pages: {total} | Reordered: {count}": "Seiten insgesamt: {total} | Neu angeordnet: {count}",
+  "e.g., 3,1,2,4,5": "z. B. 3,1,2,4,5"
+}

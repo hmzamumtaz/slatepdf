@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Back to all tools",
+  "Convert EPUB ebooks to PDF documents": "Convert EPUB ebooks to PDF documents",
+  "Convert to PDF": "Convert to PDF",
+  "Converting...": "Converting...",
+  "EPUB to PDF": "EPUB to PDF",
+  "Exact design": "Exact design",
+  "Extracting EPUB content...": "Extracting EPUB content...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.",
+  "PDF downloaded": "PDF downloaded",
+  "PDF output": "PDF output",
+  "Selectable text": "Selectable text",
+  "Upload .epub file": "Upload .epub file",
+  "Upload an EPUB file first.": "Upload an EPUB file first."
+}

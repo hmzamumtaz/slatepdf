@@ -9,6 +9,7 @@
  * dominant heading of each page becomes the slide title. Long pages are split
  * across continuation slides so nothing overflows.
  */
+import { msg } from '@/i18n/format';
 import { getPdfJs, readFileAsArrayBuffer } from './pdf-engine';
 import { SITE_NAME } from './site';
 
@@ -204,7 +205,7 @@ export async function pdfToPowerpointStructured(
   }
 
   if (!anyText) {
-    throw new Error('No selectable text found in this PDF — it looks like a scan. Run it through the OCR PDF tool first, then convert.');
+    throw new Error(msg('No selectable text found in this PDF — it looks like a scan. Run it through the OCR PDF tool first, then convert.'));
   }
 
   const buffer = (await pptx.write({ outputType: 'arraybuffer' })) as ArrayBuffer;

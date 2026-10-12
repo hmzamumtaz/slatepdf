@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Voltar para todas as ferramentas",
+  "Convert to PDF": "Converter para PDF",
+  "Converting...": "Convertendo...",
+  "Design preview": "Pré-visualização do design",
+  "Exact design": "Design exato",
+  "HTML code": "Código HTML",
+  "HTML design preview": "Pré-visualização do design HTML",
+  "HTML to PDF": "HTML para PDF",
+  "Live preview — this is the design that will be converted": "Pré-visualização ao vivo — este é o design que será convertido",
+  "PDF downloaded": "PDF baixado",
+  "PDF output": "Saída em PDF",
+  "Paste some HTML or upload an .html file first.": "Cole um HTML ou escolha um arquivo .html primeiro.",
+  "Paste your HTML here, or upload an .html file above...": "Cole seu HTML aqui ou escolha um arquivo .html acima...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Diagrama o conteúdo de novo como texto de PDF de verdade, que você pode selecionar e pesquisar, com estilo simplificado.",
+  "Render the HTML design first, then convert it to PDF": "Renderize o design HTML primeiro e depois converta para PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Renderiza a página com todo o CSS — cores, fontes, fundos, layout — exatamente como na pré-visualização. Recomendado.",
+  "Selectable text": "Texto selecionável",
+  "Upload .html file": "Escolher arquivo .html",
+  "Upload an .html file above, or switch to the": "Escolha um arquivo .html acima ou mude para a aba",
+  "Your design preview will appear here": "A pré-visualização do seu design vai aparecer aqui",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "e cole seu código. A página é renderizada aqui com o design completo — exatamente como seu PDF vai ficar."
+}

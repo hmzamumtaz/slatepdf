@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "المؤلف: {value}",
+  "Back to all tools": "العودة إلى كل الأدوات",
+  "Changed": "المعدَّل",
+  "Compare Another": "مقارنة ملفات أخرى",
+  "Compare PDF": "مقارنة ملفات PDF",
+  "Compare PDFs": "مقارنة ملفات PDF",
+  "Compare two PDFs and see the differences": "قارن بين ملفَّي PDF واطّلع على الاختلافات",
+  "Comparing...": "جارٍ المقارنة...",
+  "Comparison complete": "اكتملت المقارنة",
+  "Creator: {value}": "المنشئ: {value}",
+  "Differing pages": "الصفحات المختلفة",
+  "File 1": "الملف 1",
+  "File 2": "الملف 2",
+  "Files are identical": "الملفان متطابقان",
+  "Original": "الأصلي",
+  "Page {page}": "صفحة {page}",
+  "Pages: {pages} | Size: {size}": "الصفحات: {pages} | الحجم: {size}",
+  "Title: {value}": "العنوان: {value}",
+  "similarity: {value}%": "التشابه: {value}%",
+  "{count} page differ": "{count} صفحة مختلفة",
+  "{count} pages differ": "الصفحات المختلفة: {count}"
+}

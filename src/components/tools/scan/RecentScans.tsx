@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Check, FileDown, FileText, Lock, Pencil, Search, Share2, Trash2, X } from 'lucide-react';
 import { downloadBlob } from '@/lib/pdf-engine';
 import { deleteScan, listScans, renameScan, subscribeScans, type SavedScan } from '@/lib/scan-library';
+import { useT } from '@/i18n/I18nProvider';
 
 interface Item {
   doc: SavedScan;
@@ -30,6 +31,7 @@ function formatDate(ms: number): string {
 }
 
 export default function RecentScans({ dark }: { dark?: boolean }) {
+  const t = useT();
   const [items, setItems] = useState<Item[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [draft, setDraft] = useState('');
@@ -58,10 +60,10 @@ export default function RecentScans({ dark }: { dark?: boolean }) {
 
   if (items.length === 0) return null;
 
-  const t = dark
+  const tone = dark
     ? { title: 'text-white', muted: 'text-white/60', card: 'bg-white/5 border-white/10', btn: 'border-white/15 text-white/80 hover:text-white hover:bg-white/10', input: 'bg-white/10 border-white/15 text-white', thumb: 'bg-white/10', badge: 'bg-white/10 text-white/80' }
     : { title: 'text-foreground', muted: 'text-muted-foreground', card: 'bg-gray-50 border-border', btn: 'border-border text-muted-foreground hover:text-foreground hover:bg-white', input: 'bg-white border-border text-foreground', thumb: 'bg-white', badge: 'bg-white border border-border text-muted-foreground' };
-  const iconBtn = `w-11 h-11 shrink-0 rounded-lg border flex items-center justify-center transition-colors ${t.btn}`;
+  const iconBtn = `w-11 h-11 shrink-0 rounded-lg border flex items-center justify-center transition-colors ${tone.btn}`;
 
   const share = async (doc: SavedScan) => {
     const file = new File([doc.pdf], pdfName(doc.name), { type: 'application/pdf' });
@@ -101,18 +103,18 @@ export default function RecentScans({ dark }: { dark?: boolean }) {
   return (
     <section aria-labelledby="recent-scans-title" className="space-y-3">
       <div>
-        <h2 id="recent-scans-title" className={`text-base font-semibold ${t.title}`}>Recent scans</h2>
-        <p className={`text-xs mt-0.5 ${t.muted}`}>Saved on this device only. Nothing is uploaded; clearing this site&apos;s data removes them.</p>
+        <h2 id="recent-scans-title" className={`text-base font-semibold ${tone.title}`}>{t('Recent scans')}</h2>
+        <p className={`text-xs mt-0.5 ${tone.muted}`}>{t("Saved on this device only. Nothing is uploaded; clearing this site's data removes them.")}</p>
       </div>
       <ul className="space-y-2">
         {items.map(({ doc, thumbUrl }) => (
-          <li key={doc.id} className={`rounded-xl border p-3 ${t.card}`}>
+          <li key={doc.id} className={`rounded-xl border p-3 ${tone.card}`}>
             <div className="flex gap-3">
-              <div className={`w-14 h-[4.5rem] shrink-0 rounded-md overflow-hidden flex items-center justify-center ${t.thumb}`}>
+              <div className={`w-14 h-[4.5rem] shrink-0 rounded-md overflow-hidden flex items-center justify-center ${tone.thumb}`}>
                 {thumbUrl
                   // eslint-disable-next-line @next/next/no-img-element -- local object URL
                   ? <img src={thumbUrl} alt="" className="w-full h-full object-cover" />
-                  : <FileText className={`w-6 h-6 ${t.muted}`} />}
+                  : <FileText className={`w-6 h-6 ${tone.muted}`} />}
               </div>
               <div className="min-w-0 flex-1">
                 {editingId === doc.id ? (
@@ -125,22 +127,22 @@ export default function RecentScans({ dark }: { dark?: boolean }) {
                       value={draft}
                       onChange={e => setDraft(e.target.value)}
                       onKeyDown={e => { if (e.key === 'Escape') setEditingId(null); }}
-                      aria-label="New name"
-                      className={`min-w-0 flex-1 rounded-lg border px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-violet-500/40 ${t.input}`}
+                      aria-label={t('New name')}
+                      className={`min-w-0 flex-1 rounded-lg border px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-violet-500/40 ${tone.input}`}
                     />
-                    <button type="submit" aria-label="Save name" disabled={!draft.trim()} className={`${iconBtn} disabled:opacity-50`}><Check className="w-4 h-4" /></button>
-                    <button type="button" aria-label="Cancel rename" onClick={() => setEditingId(null)} className={iconBtn}><X className="w-4 h-4" /></button>
+                    <button type="submit" aria-label={t('Save name')} disabled={!draft.trim()} className={`${iconBtn} disabled:opacity-50`}><Check className="w-4 h-4" /></button>
+                    <button type="button" aria-label={t('Cancel rename')} onClick={() => setEditingId(null)} className={iconBtn}><X className="w-4 h-4" /></button>
                   </form>
                 ) : (
-                  <p className={`text-sm font-semibold break-words ${t.title}`}>{doc.name}</p>
+                  <p className={`text-sm font-semibold break-words ${tone.title}`}>{doc.name}</p>
                 )}
-                <p className={`text-xs mt-1 ${t.muted}`}>
-                  {formatDate(doc.createdAt)} · {doc.pages} page{doc.pages === 1 ? '' : 's'} · {formatBytes(doc.size)}
+                <p className={`text-xs mt-1 ${tone.muted}`}>
+                  {formatDate(doc.createdAt)} · {doc.pages === 1 ? t('{count} page', { count: doc.pages }) : t('{count} pages', { count: doc.pages })} · {formatBytes(doc.size)}
                 </p>
                 {(doc.protected || doc.searchable) && (
                   <div className="flex flex-wrap gap-1.5 mt-1.5">
-                    {doc.protected && <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-medium ${t.badge}`}><Lock className="w-3 h-3" /> Password</span>}
-                    {doc.searchable && <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-medium ${t.badge}`}><Search className="w-3 h-3" /> Searchable</span>}
+                    {doc.protected && <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-medium ${tone.badge}`}><Lock className="w-3 h-3" /> {t('Password')}</span>}
+                    {doc.searchable && <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-medium ${tone.badge}`}><Search className="w-3 h-3" /> {t('Searchable')}</span>}
                   </div>
                 )}
               </div>
@@ -148,10 +150,10 @@ export default function RecentScans({ dark }: { dark?: boolean }) {
 
             {confirmId === doc.id ? (
               <div className="mt-3 flex flex-wrap items-center gap-2">
-                <span className={`text-sm ${t.title}`}>Delete this scan from this device?</span>
+                <span className={`text-sm ${tone.title}`}>{t('Delete this scan from this device?')}</span>
                 <div className="flex gap-2 ml-auto">
-                  <button onClick={() => void remove(doc.id)} className="min-h-11 px-4 rounded-lg text-sm font-semibold text-white bg-red-600 active:scale-[0.98]">Delete</button>
-                  <button onClick={() => setConfirmId(null)} className={`min-h-11 px-4 rounded-lg text-sm font-medium border ${t.btn}`}>Cancel</button>
+                  <button onClick={() => void remove(doc.id)} className="min-h-11 px-4 rounded-lg text-sm font-semibold text-white bg-red-600 active:scale-[0.98]">{t('Delete')}</button>
+                  <button onClick={() => setConfirmId(null)} className={`min-h-11 px-4 rounded-lg text-sm font-medium border ${tone.btn}`}>{t('Cancel')}</button>
                 </div>
               </div>
             ) : (
@@ -159,15 +161,15 @@ export default function RecentScans({ dark }: { dark?: boolean }) {
                 <button
                   onClick={() => downloadBlob(doc.pdf, pdfName(doc.name))}
                   className="flex-1 min-h-11 px-4 rounded-lg font-semibold text-sm text-white bg-violet-600 flex items-center justify-center gap-2 active:scale-[0.98]"
-                  aria-label={`Download ${doc.name}`}
+                  aria-label={t('Download {name}', { name: doc.name })}
                 >
-                  <FileDown className="w-4 h-4" /> Download
+                  <FileDown className="w-4 h-4" /> {t('Download')}
                 </button>
                 {canShare(doc) && (
-                  <button onClick={() => void share(doc)} aria-label={`Share ${doc.name}`} title="Share" className={iconBtn}><Share2 className="w-4 h-4" /></button>
+                  <button onClick={() => void share(doc)} aria-label={t('Share {name}', { name: doc.name })} title={t('Share')} className={iconBtn}><Share2 className="w-4 h-4" /></button>
                 )}
-                <button onClick={() => startRename(doc)} aria-label={`Rename ${doc.name}`} title="Rename" className={iconBtn}><Pencil className="w-4 h-4" /></button>
-                <button onClick={() => { setEditingId(null); setConfirmId(doc.id); }} aria-label={`Delete ${doc.name}`} title="Delete" className={iconBtn}><Trash2 className="w-4 h-4" /></button>
+                <button onClick={() => startRename(doc)} aria-label={t('Rename {name}', { name: doc.name })} title={t('Rename')} className={iconBtn}><Pencil className="w-4 h-4" /></button>
+                <button onClick={() => { setEditingId(null); setConfirmId(doc.id); }} aria-label={t('Delete {name}', { name: doc.name })} title={t('Delete')} className={iconBtn}><Trash2 className="w-4 h-4" /></button>
               </div>
             )}
           </li>

@@ -4,8 +4,11 @@ import { useState, useMemo, useCallback } from 'react';
 import ToolPage from '@/components/ToolPage';
 import PdfPreview from '@/components/PdfPreview';
 import { reorderPages, getPdfInfo } from '@/lib/pdf-engine';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 export default function OrganizePdfTool() {
+  const t = useT();
   const [order, setOrder] = useState('');
   const [pdfInfo, setPdfInfo] = useState<{ totalPages: number } | null>(null);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
@@ -37,37 +40,37 @@ export default function OrganizePdfTool() {
       slug="organize-pdf"
       accept=".pdf"
       multiple={false}
-      processLabel="Organize PDF"
+      processLabel={t('Organize PDF')}
       onFilesSelected={handleFilesSelected}
       options={
         <div>
           <label className="block text-sm font-medium text-foreground mb-2">
-            Enter new page order (comma-separated, e.g., 3,1,2,4,5)
+            {t('Enter new page order (comma-separated, e.g., 3,1,2,4,5)')}
           </label>
           <input
             type="text"
             value={order}
             onChange={(e) => setOrder(e.target.value)}
-            placeholder="e.g., 3,1,2,4,5"
+            placeholder={t('e.g., 3,1,2,4,5')}
             className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
           />
           {pdfInfo && (
             <p className="mt-2 text-xs text-muted-foreground">
-              Total pages: {pdfInfo.totalPages} | Reordered: {previewPages.length}
+              {t('Total pages: {total} | Reordered: {count}', { total: pdfInfo.totalPages, count: previewPages.length })}
             </p>
           )}
           {currentFile && previewPages.length > 0 && (
             <PdfPreview
               file={currentFile}
               pageNumbers={previewPages}
-              label="Preview in new order:"
+              label={t('Preview in new order:')}
             />
           )}
         </div>
       }
       onProcess={async (files) => {
         const parsed = parseOrder(order);
-        if (parsed.length === 0) throw new Error('Please enter a page order');
+        if (parsed.length === 0) throw new Error(msg('Please enter a page order'));
         return reorderPages(files[0], parsed);
       }}
     />

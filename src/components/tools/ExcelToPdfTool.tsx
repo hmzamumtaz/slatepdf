@@ -4,6 +4,8 @@ import ToolPage from '@/components/ToolPage';
 import { htmlToPdfVisual } from '@/lib/pdf-engine';
 import { assertExpectedInput } from '@/lib/input-guard';
 import type { Cell, Worksheet } from 'exceljs';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 const MAX_ROWS_PER_SHEET = 3000;
 const MAX_COLS_PER_SHEET = 128;
@@ -399,11 +401,12 @@ function csvToHtml(rows: string[][]): string {
 }
 
 export default function ExcelToPdfTool() {
+  const t = useT();
   return (
     <ToolPage
       slug="excel-to-pdf"
       accept=".xlsx,.csv"
-      processLabel="Convert to PDF"
+      processLabel={t('Convert to PDF')}
       onProcess={async (files) => {
         const file = files[0];
         assertExpectedInput(file, {
@@ -414,7 +417,7 @@ export default function ExcelToPdfTool() {
         const ext = file.name.split('.').pop()?.toLowerCase();
 
         if (ext === 'xls') {
-          throw new Error('Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.');
+          throw new Error(msg('Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.'));
         }
 
         if (ext === 'csv') {
@@ -428,7 +431,7 @@ export default function ExcelToPdfTool() {
         try {
           await workbook.xlsx.load(await file.arrayBuffer());
         } catch {
-          throw new Error(`"${file.name}" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.`);
+          throw new Error(t('"{name}" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.', { name: file.name }));
         }
 
         // Only sheets — and within them, only the rows/columns — that actually
@@ -444,7 +447,7 @@ export default function ExcelToPdfTool() {
           })
           .filter((x): x is { sheet: Worksheet; layout: SheetLayout } => x !== null);
 
-        if (sheetInfos.length === 0) throw new Error('No data found in this workbook.');
+        if (sheetInfos.length === 0) throw new Error(msg('No data found in this workbook.'));
 
         // Excel-style page setup: widest sheet decides portrait vs landscape,
         // then each sheet is fit-to-width for that orientation.

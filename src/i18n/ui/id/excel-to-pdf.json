@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" tidak dapat dibaca sebagai workbook Excel. Pastikan file tersebut adalah file .xlsx yang valid.",
+  "Convert to PDF": "Ubah ke PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "File .xls lama tidak didukung. Simpan file sebagai .xlsx di Excel lalu coba lagi.",
+  "No data found in this workbook.": "Tidak ada data di workbook ini."
+}

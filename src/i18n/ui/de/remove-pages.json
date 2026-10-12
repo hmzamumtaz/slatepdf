@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Zu entfernende Seiten (durch Kommas getrennt, z. B. 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Bitte geben Sie die zu entfernenden Seiten ein (z. B. 1, 3, 5-8)",
+  "Preview after removal:": "Vorschau nach dem Entfernen:",
+  "Remove Pages": "Seiten entfernen",
+  "Total pages: {total} | Remaining: {count}": "Seiten insgesamt: {total} | Verbleibend: {count}",
+  "e.g., 1, 3, 5, 7": "z. B. 1, 3, 5, 7"
+}

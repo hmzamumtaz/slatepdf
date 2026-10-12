@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Ко всем инструментам",
+  "Enter the PDF password (leave empty if none)": "Введите пароль PDF (оставьте пустым, если его нет)",
+  "File": "Файл",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "Используйте только PDF, которые принадлежат вам или которые вам разрешено изменять. Снятие защиты с чужого PDF может нарушать законы об авторском праве или о защите личных данных.",
+  "PDF unlocked and downloaded": "Защита снята, PDF скачан",
+  "Password (if required)": "Пароль (если нужен)",
+  "Remove password protection from a PDF file": "Снимите защиту паролем с PDF-файла",
+  "Size": "Размер",
+  "Unlock PDF": "Снять защиту с PDF",
+  "Unlocking...": "Снятие защиты..."
+}

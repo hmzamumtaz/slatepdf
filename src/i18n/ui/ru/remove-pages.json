@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Страницы для удаления (через запятую, например 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Введите страницы для удаления (например, 1, 3, 5-8)",
+  "Preview after removal:": "Предпросмотр после удаления:",
+  "Remove Pages": "Удалить страницы",
+  "Total pages: {total} | Remaining: {count}": "Всего страниц: {total} | Останется: {count}",
+  "e.g., 1, 3, 5, 7": "например, 1, 3, 5, 7"
+}

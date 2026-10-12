@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Halaman yang akan dihapus (dipisahkan koma, mis., 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Masukkan halaman yang akan dihapus (mis., 1, 3, 5-8)",
+  "Preview after removal:": "Pratinjau setelah dihapus:",
+  "Remove Pages": "Hapus Halaman",
+  "Total pages: {total} | Remaining: {count}": "Total halaman: {total} | Tersisa: {count}",
+  "e.g., 1, 3, 5, 7": "mis., 1, 3, 5, 7"
+}

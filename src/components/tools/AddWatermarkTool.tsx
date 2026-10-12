@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import ToolPage from '@/components/ToolPage';
 import { addWatermarkToFile } from '@/lib/pdf-engine';
+import { useT } from '@/i18n/I18nProvider';
 
 export default function AddWatermarkTool() {
+  const t = useT();
   const [text, setText] = useState('CONFIDENTIAL');
   const [opacity, setOpacity] = useState(0.3);
   const [fontSize, setFontSize] = useState(50);
@@ -13,22 +15,22 @@ export default function AddWatermarkTool() {
     <ToolPage
       slug="add-watermark"
       accept=".pdf"
-      processLabel="Add Watermark"
+      processLabel={t('Add Watermark')}
       options={
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Watermark text</label>
+            <label className="block text-sm font-medium text-foreground mb-2">{t('Watermark text')}</label>
             <input
               type="text"
               value={text}
               onChange={(e) => setText(e.target.value)}
-              placeholder="e.g., CONFIDENTIAL"
+              placeholder={t('e.g., CONFIDENTIAL')}
               className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">Opacity: {Math.round(opacity * 100)}%</label>
+              <label className="block text-sm font-medium text-foreground mb-2">{t('Opacity: {value}%', { value: Math.round(opacity * 100) })}</label>
               <input
                 type="range"
                 min="0.05"
@@ -40,7 +42,7 @@ export default function AddWatermarkTool() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">Font size: {fontSize}px</label>
+              <label className="block text-sm font-medium text-foreground mb-2">{t('Font size: {size}px', { size: fontSize })}</label>
               <input
                 type="range"
                 min="20"

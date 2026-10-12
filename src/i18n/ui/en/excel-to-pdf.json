@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.",
+  "Convert to PDF": "Convert to PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.",
+  "No data found in this workbook.": "No data found in this workbook."
+}

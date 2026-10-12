@@ -4,6 +4,7 @@
  * Both the on-screen preview and the stamp that lands in the PDF come from the
  * same canvas, so what the user approves is byte-for-byte what gets embedded.
  */
+import { msg } from '@/i18n/format';
 
 /** Crop a canvas down to its non-transparent pixels, plus a little breathing room. */
 export function trimCanvas(source: HTMLCanvasElement, padding = 8): HTMLCanvasElement {
@@ -89,6 +90,6 @@ export async function renderTextSignature(
 /** PNG bytes for a canvas, ready for pdf-lib's embedPng. */
 export async function canvasToPngBytes(canvas: HTMLCanvasElement): Promise<ArrayBuffer> {
   const blob: Blob | null = await new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
-  if (!blob) throw new Error('Could not render the signature image.');
+  if (!blob) throw new Error(msg('Could not render the signature image.'));
   return blob.arrayBuffer();
 }

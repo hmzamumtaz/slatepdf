@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{slides} slide dibuat dari {pages} halaman.",
+  "Built {slides} slide from {pages} pages.": "{slides} slide dibuat dari {pages} halaman.",
+  "Built {slides} slides from {pages} page.": "{slides} slide dibuat dari {pages} halaman.",
+  "Built {slides} slides from {pages} pages.": "{slides} slide dibuat dari {pages} halaman.",
+  "Convert to PowerPoint": "Ubah ke PowerPoint",
+  "Reading page {current} of {total}...": "Membaca halaman {current} dari {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Membaca struktur dokumen — judul menjadi judul slide dan paragraf menjadi poin-poin — alih-alih menempelkan teks mentah. Halaman yang panjang berlanjut ke slide tambahan."
+}

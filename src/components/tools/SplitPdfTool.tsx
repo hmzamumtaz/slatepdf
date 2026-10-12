@@ -4,8 +4,11 @@ import { useState, useMemo, useCallback } from 'react';
 import ToolPage from '@/components/ToolPage';
 import PdfPreview from '@/components/PdfPreview';
 import { splitPdf, getPdfInfo } from '@/lib/pdf-engine';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 export default function SplitPdfTool() {
+  const t = useT();
   const [ranges, setRanges] = useState('');
   const [pdfInfo, setPdfInfo] = useState<{ totalPages: number } | null>(null);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
@@ -54,12 +57,12 @@ export default function SplitPdfTool() {
       slug="split-pdf"
       accept=".pdf"
       multiple={false}
-      processLabel="Split PDF"
+      processLabel={t('Split PDF')}
       onFilesSelected={handleFilesSelected}
       options={
         <div>
           <label className="block text-sm font-medium text-foreground mb-2">
-            Page ranges (e.g., 1-3, 5, 7-10)
+            {t('Page ranges (e.g., 1-3, 5, 7-10)')}
           </label>
           <input
             type="text"
@@ -70,21 +73,21 @@ export default function SplitPdfTool() {
           />
           {pdfInfo && (
             <p className="mt-2 text-xs text-muted-foreground">
-              Total pages: {pdfInfo.totalPages} | Pages in ranges: {previewPages.length}
+              {t('Total pages: {total} | Pages in ranges: {count}', { total: pdfInfo.totalPages, count: previewPages.length })}
             </p>
           )}
           {currentFile && previewPages.length > 0 && (
             <PdfPreview
               file={currentFile}
               pageNumbers={previewPages}
-              label="Preview of pages in ranges:"
+              label={t('Preview of pages in ranges:')}
             />
           )}
         </div>
       }
       onProcess={async (files) => {
         const parsed = parseRanges(ranges);
-        if (parsed.length === 0) throw new Error('Please enter valid page ranges');
+        if (parsed.length === 0) throw new Error(msg('Please enter valid page ranges'));
         return splitPdf(files[0], parsed);
       }}
     />

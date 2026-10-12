@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "العودة إلى كل الأدوات",
+  "Convert EPUB ebooks to PDF documents": "حوّل الكتب الإلكترونية EPUB إلى مستندات PDF",
+  "Convert to PDF": "تحويل إلى PDF",
+  "Converting...": "جارٍ التحويل...",
+  "EPUB to PDF": "تحويل EPUB إلى PDF",
+  "Exact design": "تصميم مطابق",
+  "Extracting EPUB content...": "جارٍ استخراج محتوى EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "يستخرج المحتوى النصي ويعيد تنسيقه في ملف PDF نظيف وقابل للبحث. الأفضل للروايات والكتب ذات النصوص الكثيرة.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "يحتفظ بتخطيط كل فصل وصوره وتنسيقاته المضمّنة. لا تُحمَّل أوراق الأنماط المرتبطة ولا الخطوط المخصصة المضمّنة، فتُستبدل بالأنماط الافتراضية. الأفضل للكتب المصوّرة.",
+  "PDF downloaded": "تم تنزيل PDF",
+  "PDF output": "مخرجات PDF",
+  "Selectable text": "نص قابل للتحديد",
+  "Upload .epub file": "تحميل ملف ‎.epub",
+  "Upload an EPUB file first.": "حمّل ملف EPUB أولًا."
+}

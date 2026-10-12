@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Kembali ke semua alat",
+  "Convert to PDF": "Ubah ke PDF",
+  "Converting...": "Mengonversi...",
+  "Design preview": "Pratinjau desain",
+  "Exact design": "Desain persis",
+  "HTML code": "Kode HTML",
+  "HTML design preview": "Pratinjau desain HTML",
+  "HTML to PDF": "HTML ke PDF",
+  "Live preview — this is the design that will be converted": "Pratinjau langsung — inilah desain yang akan dikonversi",
+  "PDF downloaded": "PDF diunduh",
+  "PDF output": "Hasil PDF",
+  "Paste some HTML or upload an .html file first.": "Tempel kode HTML atau unggah file .html terlebih dahulu.",
+  "Paste your HTML here, or upload an .html file above...": "Tempel HTML Anda di sini, atau unggah file .html di atas...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Menyusun ulang konten sebagai teks PDF sungguhan yang bisa dipilih dan dicari, dengan gaya yang disederhanakan.",
+  "Render the HTML design first, then convert it to PDF": "Render desain HTML terlebih dahulu, lalu ubah ke PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Merender halaman dengan CSS lengkap — warna, font, latar belakang, tata letak — persis seperti pratinjaunya. Disarankan.",
+  "Selectable text": "Teks yang bisa dipilih",
+  "Upload .html file": "Unggah file .html",
+  "Upload an .html file above, or switch to the": "Unggah file .html di atas, atau beralih ke tab",
+  "Your design preview will appear here": "Pratinjau desain Anda akan muncul di sini",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "lalu tempel markup Anda. Halaman dirender di sini dengan desain lengkapnya — persis seperti tampilan PDF Anda nanti."
+}

@@ -2,6 +2,7 @@
 
 import { PDFDocument, degrees } from 'pdf-lib';
 import { readFileAsArrayBuffer, loadPdf, displayFrame } from './pdf-engine';
+import { msg } from '@/i18n/format';
 
 /**
  * The workspace's document model.
@@ -51,12 +52,12 @@ export interface PageOp {
  * page. Here every index refers to the document as it was opened.
  */
 export async function rebuildPages(file: File, ops: PageOp[]): Promise<Blob> {
-  if (ops.length === 0) throw new Error('A PDF needs at least one page.');
+  if (ops.length === 0) throw new Error(msg('A PDF needs at least one page.'));
 
   const source = await loadPdf(await readFileAsArrayBuffer(file));
   const total = source.getPageCount();
   for (const op of ops) {
-    if (op.source < 0 || op.source >= total) throw new Error('That page is not in this document any more.');
+    if (op.source < 0 || op.source >= total) throw new Error(msg('That page is not in this document any more.'));
   }
 
   const out = await PDFDocument.create();
@@ -74,7 +75,7 @@ export async function rebuildPages(file: File, ops: PageOp[]): Promise<Blob> {
 export async function insertPdf(file: File, incoming: File, atIndex: number): Promise<Blob> {
   const base = await loadPdf(await readFileAsArrayBuffer(file));
   const extra = await loadPdf(await readFileAsArrayBuffer(incoming));
-  if (extra.getPageCount() === 0) throw new Error('That file has no pages to insert.');
+  if (extra.getPageCount() === 0) throw new Error(msg('That file has no pages to insert.'));
 
   const at = Math.max(0, Math.min(atIndex, base.getPageCount()));
   const pages = await base.copyPages(extra, extra.getPageIndices());
@@ -103,7 +104,7 @@ export interface Placement {
 export async function stampImage(file: File, png: Uint8Array, at: Placement): Promise<Blob> {
   const doc = await loadPdf(await readFileAsArrayBuffer(file));
   if (at.pageIndex < 0 || at.pageIndex >= doc.getPageCount()) {
-    throw new Error('That page is not in this document any more.');
+    throw new Error(msg('That page is not in this document any more.'));
   }
 
   const page = doc.getPage(at.pageIndex);

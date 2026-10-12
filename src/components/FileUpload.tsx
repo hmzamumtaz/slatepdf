@@ -2,6 +2,7 @@
 
 import { useCallback, useState, useRef } from 'react';
 import { Upload, FileText, X, Plus, CheckSquare, Square, MinusSquare } from 'lucide-react';
+import { useT } from '@/i18n/I18nProvider';
 
 interface FileUploadProps {
   accept?: string;
@@ -37,8 +38,8 @@ export default function FileUpload({
   onFilesSelected,
   files,
   onRemoveFile,
-  label = 'Drop your files here',
-  description = 'or click to browse',
+  label,
+  description,
   selected,
   onToggleFile,
   onToggleAll,
@@ -46,6 +47,7 @@ export default function FileUpload({
   someSelected = false,
   selectable = false,
 }: FileUploadProps) {
+  const t = useT();
   const [isDragOver, setIsDragOver] = useState(false);
   const [dropError, setDropError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -82,31 +84,32 @@ export default function FileUpload({
     const room = Math.max(0, maxFiles - files.length);
     const accepted = matched.slice(0, multiple ? room : 1);
     if (accepted.length === 0 && dropped.length > 0) {
-      setDropError(`Only ${friendlyAcceptLabel(accept)} files are supported here.`);
+      setDropError(t('Only {types} files are supported here.', { types: friendlyAcceptLabel(accept) }));
       return;
     }
     const skippedType = dropped.length - matched.length;
     const skippedCap = matched.length - accepted.length;
     if (skippedType > 0 || skippedCap > 0) {
-      const reasons = [
-        skippedCap > 0 ? `${skippedCap} over the ${maxFiles}-file limit` : null,
-        skippedType > 0 ? `${skippedType} not a supported file type` : null,
-      ].filter(Boolean).join(' and ');
-      setDropError(`Added ${accepted.length} of ${dropped.length} files — ${reasons}.`);
+      const vars = { added: accepted.length, total: dropped.length, over: skippedCap, max: maxFiles, skipped: skippedType };
+      setDropError(skippedCap > 0 && skippedType > 0
+        ? t('Added {added} of {total} files — {over} over the {max}-file limit and {skipped} not a supported file type.', vars)
+        : skippedCap > 0
+          ? t('Added {added} of {total} files — {over} over the {max}-file limit.', vars)
+          : t('Added {added} of {total} files — {skipped} not a supported file type.', vars));
     } else {
       setDropError(null);
     }
     if (accepted.length > 0) {
       onFilesSelected(accepted);
     }
-  }, [accept, files.length, matchesAccept, maxFiles, multiple, onFilesSelected]);
+  }, [accept, files.length, matchesAccept, maxFiles, multiple, onFilesSelected, t]);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const picked = Array.from(e.target.files || []);
     const room = Math.max(0, maxFiles - files.length);
     const selectedFiles = picked.slice(0, room);
     if (picked.length > selectedFiles.length) {
-      setDropError(`Added ${selectedFiles.length} of ${picked.length} files — ${picked.length - selectedFiles.length} over the ${maxFiles}-file limit.`);
+      setDropError(t('Added {added} of {total} files — {over} over the {max}-file limit.', { added: selectedFiles.length, total: picked.length, over: picked.length - selectedFiles.length, max: maxFiles }));
     } else {
       setDropError(null);
     }
@@ -114,7 +117,7 @@ export default function FileUpload({
       onFilesSelected(selectedFiles);
     }
     if (inputRef.current) inputRef.current.value = '';
-  }, [files.length, maxFiles, onFilesSelected]);
+  }, [files.length, maxFiles, onFilesSelected, t]);
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
@@ -139,12 +142,12 @@ export default function FileUpload({
               <Upload className={`w-8 h-8 ${isDragOver ? 'text-primary' : 'text-muted-foreground'}`} />
             </div>
             <div>
-              <p className="text-lg font-semibold text-foreground">{label}</p>
-              <p className="text-sm text-muted-foreground mt-1">{description}</p>
+              <p className="text-lg font-semibold text-foreground">{label ?? t('Drop your files here')}</p>
+              <p className="text-sm text-muted-foreground mt-1">{description ?? t('or click to browse')}</p>
             </div>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <div className="flex items-center gap-2 text-xs text-gray-600">
               <span className="px-2 py-1 bg-muted rounded-md font-medium">{friendlyAcceptLabel(accept)}</span>
-              {multiple && <span>Up to {maxFiles} files</span>}
+              {multiple && <span>{t('Up to {count} files', { count: maxFiles })}</span>}
             </div>
           </div>
           <input
@@ -167,10 +170,10 @@ export default function FileUpload({
                 className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {allSelected ? <CheckSquare className="w-4 h-4 text-primary" /> : someSelected ? <MinusSquare className="w-4 h-4 text-primary" /> : <Square className="w-4 h-4" />}
-                {allSelected ? 'Deselect all' : 'Select all'}
+                {allSelected ? t('Deselect all') : t('Select all')}
               </button>
               <span className="text-xs text-muted-foreground">
-                {selected ? `${selected.size} of ${files.length} selected` : `${files.length} file${files.length > 1 ? 's' : ''}`}
+                {selected ? t('{selected} of {total} selected', { selected: selected.size, total: files.length }) : files.length > 1 ? t('{count} files', { count: files.length }) : t('{count} file', { count: files.length })}
               </span>
             </div>
           )}
@@ -202,6 +205,7 @@ export default function FileUpload({
                 <button
                   onClick={(e) => { e.stopPropagation(); onRemoveFile(index); }}
                   className="p-1.5 rounded-lg hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0"
+                  aria-label={t('Remove file')}
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -215,7 +219,7 @@ export default function FileUpload({
               className="w-full p-4 border-2 border-dashed border-border rounded-xl text-sm font-medium text-muted-foreground hover:border-primary hover:text-primary hover:bg-indigo-50/50 transition-all flex items-center justify-center gap-2"
             >
               <Plus className="w-4 h-4" />
-              Add more files
+              {t('Add more files')}
             </button>
           )}
           <input

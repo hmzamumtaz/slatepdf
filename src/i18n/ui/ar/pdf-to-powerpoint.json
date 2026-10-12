@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "أُنشئت {slides} شريحة من {pages} صفحة.",
+  "Built {slides} slide from {pages} pages.": "أُنشئت {slides} شريحة من الصفحات (العدد: {pages}).",
+  "Built {slides} slides from {pages} page.": "عدد الشرائح المُنشأة: {slides}، من {pages} صفحة.",
+  "Built {slides} slides from {pages} pages.": "عدد الشرائح المُنشأة: {slides}، من الصفحات (العدد: {pages}).",
+  "Convert to PowerPoint": "تحويل إلى PowerPoint",
+  "Reading page {current} of {total}...": "جارٍ قراءة الصفحة {current} من {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "يقرأ بنية المستند، فتصبح العناوين عناوين للشرائح والفقرات نقاطًا، بدلًا من لصق النص الخام. تمتد الصفحات الطويلة إلى شرائح إضافية."
+}

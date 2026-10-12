@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, pageTitle } from './site';
 import { getToolBySlug, tools } from './tools-data';
+import { languageAlternates } from '@/i18n/alternates';
+import { toolOgImage } from '@/i18n/og';
 
 /** SEO data for every tool, keyed by slug. Only overrides where we need something specific. */
 const toolSeo: Record<string, {
@@ -398,20 +400,20 @@ export function generateToolMetadata(slug: string): Metadata {
     title: pageTitle(seo.title),
     description: seo.description,
     keywords: seo.keywords,
-    alternates: { canonical: url },
+    alternates: { canonical: url, languages: languageAlternates({ kind: 'tool', slug }) },
     openGraph: {
       type: 'website',
       title: seo.title,
       description: seo.description,
       url,
       siteName: SITE_NAME,
-      images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: `${SITE_NAME} — ${tool.name}` }],
+      images: [{ url: toolOgImage('en', slug), width: 1200, height: 630, alt: `${SITE_NAME} — ${tool.name}` }],
     },
     twitter: {
       card: 'summary_large_image',
       title: seo.title,
       description: seo.description,
-      images: [`${SITE_URL}/og-home.png`],
+      images: [toolOgImage('en', slug)],
     },
   };
 }
@@ -430,4 +432,9 @@ export function getRelatedTools(slug: string, count = 4): { slug: string; name: 
     .filter(t => t.slug !== slug && t.category === tool.category)
     .slice(0, count)
     .map(t => ({ slug: t.slug, name: t.name, description: t.description }));
+}
+
+/** Raw SEO record for a tool (title, description, keywords, FAQs). */
+export function getToolSeo(slug: string) {
+  return toolSeo[slug];
 }

@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { renderPdfPages } from '@/lib/pdf-engine';
 import { Loader2 } from 'lucide-react';
+import { useT } from '@/i18n/I18nProvider';
 
 interface PdfPreviewProps {
   file: File;
@@ -11,6 +12,7 @@ interface PdfPreviewProps {
 }
 
 export default function PdfPreview({ file, pageNumbers, label }: PdfPreviewProps) {
+  const t = useT();
   const [pages, setPages] = useState<{ page: number; url: string; width: number; height: number }[]>([]);
   const [loading, setLoading] = useState(false);
   const prevKey = useRef('');
@@ -46,7 +48,7 @@ export default function PdfPreview({ file, pageNumbers, label }: PdfPreviewProps
       {loading ? (
         <div className="flex items-center justify-center py-8 gap-2">
           <Loader2 className="w-4 h-4 animate-spin text-primary" />
-          <span className="text-xs text-muted-foreground">Rendering preview...</span>
+          <span className="text-xs text-muted-foreground">{t('Rendering preview...')}</span>
         </div>
       ) : (
         <div className="flex gap-3 overflow-x-auto pb-2">
@@ -55,12 +57,12 @@ export default function PdfPreview({ file, pageNumbers, label }: PdfPreviewProps
               <div className="border border-border rounded-lg overflow-hidden shadow-sm bg-white">
                 <img
                   src={p.url}
-                  alt={`Page ${p.page}`}
+                  alt={t('Page {page}', { page: p.page })}
                   className="block"
                   style={{ width: 120, height: 160, objectFit: 'contain' }}
                 />
               </div>
-              <p className="text-[10px] text-muted-foreground mt-1.5 font-medium">Page {p.page}</p>
+              <p className="text-[10px] text-muted-foreground mt-1.5 font-medium">{t('Page {page}', { page: p.page })}</p>
             </div>
           ))}
         </div>

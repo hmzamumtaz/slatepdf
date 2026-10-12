@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Seiten extrahieren",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Zu extrahierende Seiten (z. B. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Bitte geben Sie die zu extrahierenden Seiten ein (z. B. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Vorschau der extrahierten Seiten:",
+  "Total pages: {total} | Extracting: {count}": "Seiten insgesamt: {total} | Extrahiert: {count}",
+  "e.g., 1, 3, 5": "z. B. 1, 3, 5"
+}

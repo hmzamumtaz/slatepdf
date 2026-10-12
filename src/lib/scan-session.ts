@@ -13,6 +13,7 @@ import {
   warpCanvas, applyFilter, rotateCanvas, applyCleanup, composeIdCard, releaseCanvas,
   type Corner, type ScanFilter, type CleanupStroke,
 } from './document-scanner';
+import { msg } from '@/i18n/format';
 
 export const FULL_QUAD: Corner[] = [{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 1, y: 1 }, { x: 0, y: 1 }];
 
@@ -85,7 +86,7 @@ export async function blobToCanvas(blob: Blob, maxSide = 3200): Promise<HTMLCanv
       const jpeg = await heic2any({ blob, toType: 'image/jpeg', quality: 0.92 }) as Blob;
       bitmap = await createImageBitmap(jpeg);
     } catch {
-      throw new Error('This image could not be opened. Try a JPG or PNG photo.');
+      throw new Error(msg('This image could not be opened. Try a JPG or PNG photo.'));
     }
   }
   const scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));
@@ -106,7 +107,7 @@ export async function blobToCanvas(blob: Blob, maxSide = 3200): Promise<HTMLCanv
 
 export function canvasToJpeg(canvas: HTMLCanvasElement, quality = 0.9): Promise<Blob> {
   return new Promise((resolve, reject) => {
-    canvas.toBlob(b => (b ? resolve(b) : reject(new Error('Could not encode the page image.'))), 'image/jpeg', quality);
+    canvas.toBlob(b => (b ? resolve(b) : reject(new Error(msg('Could not encode the page image.')))), 'image/jpeg', quality);
   });
 }
 
@@ -122,7 +123,7 @@ function loadImage(src: string): Promise<HTMLImageElement> {
     p = new Promise((resolve, reject) => {
       const img = new Image();
       img.onload = () => resolve(img);
-      img.onerror = () => reject(new Error('Could not load a signature image.'));
+      img.onerror = () => reject(new Error(msg('Could not load a signature image.')));
       img.src = src;
     });
     imageCache.set(src, p);
@@ -197,7 +198,7 @@ async function renderBase(page: Pick<ScanPage, 'parts' | 'layout' | 'filter' | '
     const w = warpCanvas(src, part.quad, maxOut);
     if (!w) {
       warped.forEach(releaseCanvas);
-      throw new Error('Could not straighten this page. Try adjusting the crop.');
+      throw new Error(msg('Could not straighten this page. Try adjusting the crop.'));
     }
     warped.push(w);
   }
@@ -270,9 +271,9 @@ export function unrotatePoint(p: Corner, rotation: number): Corner {
 export type ScanQuality = 'high' | 'medium' | 'small';
 
 export const QUALITY_SETTINGS: Record<ScanQuality, { label: string; hint: string; maxSide: number; jpeg: number }> = {
-  high: { label: 'High', hint: 'Sharpest, largest file', maxSide: 2400, jpeg: 0.9 },
-  medium: { label: 'Medium', hint: 'Good for email', maxSide: 1800, jpeg: 0.78 },
-  small: { label: 'Small', hint: 'Smallest file, still readable', maxSide: 1300, jpeg: 0.6 },
+  high: { label: msg('High'), hint: msg('Sharpest, largest file'), maxSide: 2400, jpeg: 0.9 },
+  medium: { label: msg('Medium'), hint: msg('Good for email'), maxSide: 1800, jpeg: 0.78 },
+  small: { label: msg('Small'), hint: msg('Smallest file, still readable'), maxSide: 1300, jpeg: 0.6 },
 };
 
 export async function pageForExport(page: ScanPage, quality: ScanQuality): Promise<Blob> {

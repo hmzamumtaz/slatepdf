@@ -5,8 +5,10 @@
  * with a generic "busy" message. The real error is always logged to the
  * console for debugging.
  */
-export const SERVICE_BUSY_MESSAGE =
-  'This tool is experiencing high usage right now. Please come back a little later and try again.';
+import { msg } from '@/i18n/format';
+
+export const SERVICE_BUSY_MESSAGE = msg(
+  'This tool is experiencing high usage right now. Please come back a little later and try again.');
 
 const TECHNICAL = [
   /\bhttps?:\/\//i,

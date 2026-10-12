@@ -6,6 +6,8 @@ import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { compressToTargetSize, CompressResult, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
+import { useT, useHomeHref } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -14,6 +16,8 @@ function formatBytes(bytes: number): string {
 }
 
 export default function CompressPdfTool() {
+  const t = useT();
+  const homeHref = useHomeHref();
   const [files, setFiles] = useState<File[]>([]);
   const [targetValue, setTargetValue] = useState('');
   const [targetUnit, setTargetUnit] = useState<'MB' | 'KB'>('MB');
@@ -34,9 +38,9 @@ export default function CompressPdfTool() {
     setProcessing(true);
     setError(null);
     setResult(null);
-    setProgress('Starting compression...');
+    setProgress(msg('Starting compression...'));
     try {
-      const res = await compressToTargetSize(files[0], targetBytes, (msg) => setProgress(msg));
+      const res = await compressToTargetSize(files[0], targetBytes, (p) => setProgress(p));
       setResult(res);
       if (!res.achieved) {
         setProgress('');
@@ -57,16 +61,16 @@ export default function CompressPdfTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+        <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-emerald-50"><TrendingDown className="w-6 h-6 text-emerald-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Compress PDF</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Reduce PDF file size to your target</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Compress PDF')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base">{t('Reduce PDF file size to your target')}</p>
             </div>
           </div>
         </div>
@@ -85,14 +89,14 @@ export default function CompressPdfTool() {
               {/* Original size */}
               <div className="p-4 bg-gray-50 rounded-xl border border-border">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Original size</span>
+                  <span className="text-sm text-muted-foreground">{t('Original size')}</span>
                   <span className="text-lg font-bold text-foreground">{formatBytes(originalSize)}</span>
                 </div>
               </div>
 
               {/* Target size input */}
               <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Target file size</label>
+                <label className="block text-sm font-semibold text-foreground mb-2">{t('Target file size')}</label>
                 <div className="flex gap-2">
                   <input
                     type="number"
@@ -114,7 +118,7 @@ export default function CompressPdfTool() {
 
               {/* Auto presets */}
               <div>
-                <label className="block text-sm font-medium text-muted-foreground mb-2">Quick presets</label>
+                <label className="block text-sm font-medium text-muted-foreground mb-2">{t('Quick presets')}</label>
                 <div className="flex flex-wrap gap-2">
                   {[50, 25, 10, 5].map(pct => {
                     const presetBytes = Math.round(originalSize * pct / 100);
@@ -146,19 +150,19 @@ export default function CompressPdfTool() {
                     <div>
                       {noCompressionNeeded ? (
                         <>
-                          <p className="text-sm font-semibold text-blue-800">No compression needed</p>
-                          <p className="text-sm text-blue-700">Target size ({formatBytes(targetBytes)}) is larger than the original ({formatBytes(originalSize)}).</p>
+                          <p className="text-sm font-semibold text-blue-800">{t('No compression needed')}</p>
+                          <p className="text-sm text-blue-700">{t('Target size ({target}) is larger than the original ({original}).', { target: formatBytes(targetBytes), original: formatBytes(originalSize) })}</p>
                         </>
                       ) : notPossible ? (
                         <>
-                          <p className="text-sm font-semibold text-red-800">Target too small</p>
-                          <p className="text-sm text-red-700">Target size ({formatBytes(targetBytes)}) is below the minimum possible size (~50 KB). Try a larger target.</p>
+                          <p className="text-sm font-semibold text-red-800">{t('Target too small')}</p>
+                          <p className="text-sm text-red-700">{t('Target size ({target}) is below the minimum possible size (~50 KB). Try a larger target.', { target: formatBytes(targetBytes) })}</p>
                         </>
                       ) : (
                         <>
-                          <p className="text-sm font-semibold text-green-800">Compression possible</p>
+                          <p className="text-sm font-semibold text-green-800">{t('Compression possible')}</p>
                           <p className="text-sm text-green-700">
-                            Reduce from {formatBytes(originalSize)} to {formatBytes(targetBytes)} ({Math.round((1 - targetBytes / originalSize) * 100)}% reduction)
+                            {t('Reduce from {original} to {target} ({percent}% reduction)', { original: formatBytes(originalSize), target: formatBytes(targetBytes), percent: Math.round((1 - targetBytes / originalSize) * 100) })}
                           </p>
                         </>
                       )}
@@ -171,13 +175,13 @@ export default function CompressPdfTool() {
                 <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3 animate-fade-in">
                   <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                   <div className="text-xs text-amber-700 leading-relaxed">
-                    <p className="font-semibold mb-1">Quality reduction warning</p>
+                    <p className="font-semibold mb-1">{t('Quality reduction warning')}</p>
                     <p>
                       {Math.round((1 - targetBytes / originalSize) * 100) >= 70
-                        ? 'This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).'
+                        ? t('This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).')
                         : Math.round((1 - targetBytes / originalSize) * 100) >= 40
-                        ? 'This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).'
-                        : 'Some image quality reduction will occur. Text and layout will remain mostly intact.'}
+                        ? t('This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).')
+                        : t('Some image quality reduction will occur. Text and layout will remain mostly intact.')}
                     </p>
                   </div>
                 </div>
@@ -186,21 +190,21 @@ export default function CompressPdfTool() {
               {error && (
                 <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-destructive shrink-0" />
-                  <p className="text-sm text-destructive">{error}</p>
+                  <p className="text-sm text-destructive">{t(error)}</p>
                 </div>
               )}
 
               {processing && progress && (
                 <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3 animate-fade-in">
                   <Loader2 className="w-4 h-4 animate-spin text-emerald-600" />
-                  <p className="text-sm font-medium text-emerald-800">{progress}</p>
+                  <p className="text-sm font-medium text-emerald-800">{t(progress)}</p>
                 </div>
               )}
 
               {targetValid && !noCompressionNeeded && !notPossible && (
                 <button onClick={handleCompress} disabled={processing}
                   className="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white hover:shadow-lg hover:shadow-emerald-500/25 active:scale-[0.98] disabled:opacity-50">
-                  {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> Compressing...</> : <><TrendingDown className="w-4 h-4" /> Compress to {formatBytes(targetBytes!)}</>}
+                  {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('Compressing...')}</> : <><TrendingDown className="w-4 h-4" /> {t('Compress to {size}', { size: formatBytes(targetBytes!) })}</>}
                 </button>
               )}
             </div>
@@ -213,12 +217,12 @@ export default function CompressPdfTool() {
                   {result.achieved ? <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" /> : <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />}
                   <div>
                     <p className={`text-sm font-semibold ${result.achieved ? 'text-green-800' : 'text-amber-800'}`}>
-                      {result.achieved ? 'Compression successful' : 'Could not reach target size'}
+                      {result.achieved ? t('Compression successful') : t('Could not reach target size')}
                     </p>
                     <p className={`text-sm ${result.achieved ? 'text-green-700' : 'text-amber-700'}`}>
                       {result.achieved
-                        ? `Reduced from ${formatBytes(result.originalSize)} to ${formatBytes(result.compressedSize)} (${Math.round((1 - result.compressedSize / result.originalSize) * 100)}% smaller)`
-                        : `Smallest achievable: ${formatBytes(result.compressedSize)} (target was ${formatBytes(result.targetSize)})`}
+                        ? t('Reduced from {original} to {compressed} ({percent}% smaller)', { original: formatBytes(result.originalSize), compressed: formatBytes(result.compressedSize), percent: Math.round((1 - result.compressedSize / result.originalSize) * 100) })
+                        : t('Smallest achievable: {compressed} (target was {target})', { compressed: formatBytes(result.compressedSize), target: formatBytes(result.targetSize) })}
                     </p>
                   </div>
                 </div>
@@ -228,17 +232,17 @@ export default function CompressPdfTool() {
               <div className="p-5 bg-gray-50 rounded-xl border border-border">
                 <div className="flex items-center gap-4">
                   <div className="flex-1 text-center">
-                    <p className="text-xs text-muted-foreground mb-1">Original</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t('Original')}</p>
                     <p className="text-xl font-bold text-foreground">{formatBytes(result.originalSize)}</p>
                   </div>
                   <Minus className="w-5 h-5 text-muted-foreground shrink-0" />
                   <div className="flex-1 text-center">
-                    <p className="text-xs text-muted-foreground mb-1">Compressed</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t('Compressed')}</p>
                     <p className="text-xl font-bold text-green-600">{formatBytes(result.compressedSize)}</p>
                   </div>
                   <Minus className="w-5 h-5 text-muted-foreground shrink-0" />
                   <div className="flex-1 text-center">
-                    <p className="text-xs text-muted-foreground mb-1">Saved</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t('Saved')}</p>
                     <p className="text-xl font-bold text-primary">{formatBytes(result.originalSize - result.compressedSize)}</p>
                   </div>
                 </div>
@@ -255,10 +259,10 @@ export default function CompressPdfTool() {
 
               <div className="flex gap-3">
                 <button onClick={handleDownload} className="px-6 py-3 rounded-xl font-semibold text-sm bg-primary hover:bg-primary-hover text-white transition-all flex items-center gap-2">
-                  <FileDown className="w-4 h-4" /> Download Compressed PDF
+                  <FileDown className="w-4 h-4" /> {t('Download Compressed PDF')}
                 </button>
                 <button onClick={() => { setResult(null); setTargetValue(''); }} className="px-6 py-3 rounded-xl text-sm font-medium border border-border hover:bg-gray-50 transition-colors">
-                  Compress Again
+                  {t('Compress Again')}
                 </button>
               </div>
             </div>
