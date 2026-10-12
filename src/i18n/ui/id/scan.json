@@ -237,5 +237,6 @@
   "{count} JPG images, one per page, in a .zip.": "{count} gambar JPG, satu per halaman, dalam .zip.",
   "{count} page": "{count} halaman",
   "{count} pages": "{count} halaman",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Jika pengenalan teks tidak dapat dimuat (perlu koneksi saat pertama kali), nonaktifkan lalu coba lagi."
+  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Jika pengenalan teks tidak dapat dimuat (perlu koneksi saat pertama kali), nonaktifkan lalu coba lagi.",
+  "Go back": "Kembali"
 }

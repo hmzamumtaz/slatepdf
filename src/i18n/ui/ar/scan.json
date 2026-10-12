@@ -237,5 +237,6 @@
   "{count} JPG images, one per page, in a .zip.": "صور JPG ({count})، صورة لكل صفحة، في ملف ‎.zip.",
   "{count} page": "{count} صفحة",
   "{count} pages": "عدد الصفحات: {count}",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} إذا تعذّر تحميل التعرف على النص (يحتاج إلى اتصال في المرة الأولى)، فأوقفه وحاول مرة أخرى."
+  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} إذا تعذّر تحميل التعرف على النص (يحتاج إلى اتصال في المرة الأولى)، فأوقفه وحاول مرة أخرى.",
+  "Go back": "رجوع"
 }
