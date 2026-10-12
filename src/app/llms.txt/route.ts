@@ -29,7 +29,7 @@ export function GET() {
   }
   lines.push('## Guides', '');
   for (const p of posts) lines.push(`- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description}`);
-  lines.push('', '## About', '', `- [About ${SITE_NAME}](${SITE_URL}/about)`, `- [Privacy](${SITE_URL}/privacy)`, '');
+  lines.push('', '## About', '', `- [About ${SITE_NAME}](${SITE_URL}/about)`, `- [How to verify files are never uploaded](${SITE_URL}/verify-no-upload)`, `- [Privacy](${SITE_URL}/privacy)`, '');
 
   return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }

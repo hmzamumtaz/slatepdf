@@ -6,6 +6,7 @@ import { I18nProvider } from '@/i18n/I18nProvider';
 import { LOCALES, OG_LOCALES, isLocale, type Locale } from '@/i18n/config';
 import { getContent, toolContent, toolMessages } from '@/i18n/content';
 import { languageAlternates } from '@/i18n/alternates';
+import { toolOgImage } from '@/i18n/og';
 import { localizedSlug, slugFromLocalized, toolHref } from '@/i18n/paths';
 import { generateFAQSchema } from '@/lib/schema';
 import { SITE_NAME, SITE_URL, pageTitle } from '@/lib/site';
@@ -40,9 +41,9 @@ export async function generateMetadata({ params }: PageProps<'/[lang]/[tool]'>):
       description: local.metaDescription,
       url,
       siteName: SITE_NAME,
-      images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: `${SITE_NAME} — ${local.name}` }],
+      images: [{ url: toolOgImage(lang, slug), width: 1200, height: 630, alt: `${SITE_NAME} — ${local.name}` }],
     },
-    twitter: { card: 'summary_large_image', title: local.seoTitle, description: local.metaDescription, images: [`${SITE_URL}/og-home.png`] },
+    twitter: { card: 'summary_large_image', title: local.seoTitle, description: local.metaDescription, images: [toolOgImage(lang, slug)] },
   };
 }
 

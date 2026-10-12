@@ -20,12 +20,13 @@ export default function Footer({ nav }: { nav: NavData }) {
             <p className="text-sm leading-relaxed mb-4">
               {english ? 'The modern PDF toolkit. Edit, convert, merge, and optimize your PDFs entirely in your browser.' : nav.labels.footerTagline}
             </p>
-            <p className="text-xs text-gray-500 mb-4">
+            <p className="text-xs text-gray-400 mb-4">
               {nav.labels.footerPrivate}
             </p>
             <ul className="space-y-2 text-sm">
               <li><Link href={nav.hubHref} className="font-medium text-white hover:text-gray-200 transition-colors">{nav.labels.footerAllTools}</Link></li>
               <li><Link href={nav.workspace.href} className="hover:text-white transition-colors">{nav.categories[0].tools[0].name}</Link></li>
+              {english && <li><Link href="/verify-no-upload" className="hover:text-white transition-colors">Verify we never upload your files</Link></li>}
             </ul>
           </div>
 
@@ -83,7 +84,7 @@ export default function Footer({ nav }: { nav: NavData }) {
             <span className="text-gray-600">|</span>
             <Link href="/terms" className="hover:text-white transition-colors">{nav.labels.terms}</Link>
             <span className="text-gray-600">|</span>
-            <LanguageSwitcher label={nav.labels.language} dropUp />
+            <LanguageSwitcher label={nav.labels.language} dropUp dark />
           </div>
         </div>
       </div>

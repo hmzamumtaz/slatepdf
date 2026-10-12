@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { ArrowLeft, Download, Loader2, Check, AlertCircle, FileText, Trash2, FileDown, List, LayoutGrid, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
+import { toolIcon } from '@/components/tool-icons';
 import Link from 'next/link';
 import { getToolBySlug } from '@/lib/tools-data';
 import FileUpload from './FileUpload';
@@ -387,7 +387,7 @@ export default function ToolPage({
 
   if (!tool) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">{t('Tool not found.')}</p></div>;
 
-  const IconComponent = (LucideIcons as any)[tool.icon] || LucideIcons.FileText;
+  const IconComponent = toolIcon(tool.icon);
   const showTwoCol = files.length > 0;
 
   return (

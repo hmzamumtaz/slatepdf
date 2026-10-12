@@ -34,6 +34,7 @@ export const site = {
   navAllTools: 'All tools',
   navGuides: 'Guides (English)',
   language: 'Language',
+  menu: 'Menu',
   footerTagline: 'Free PDF tools that run in your browser. Edit, convert, merge and compress PDFs without uploading them.',
   footerPrivate: '100% private. Files never leave your device.',
   footerAllTools: 'All {count} PDF tools',
