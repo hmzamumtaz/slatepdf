@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "PDF'ye Dönüştür",
+  "Converted {slides} slide including {images} image.": "{images} görsel dahil {slides} slayt dönüştürüldü.",
+  "Converted {slides} slide including {images} images.": "{images} görsel dahil {slides} slayt dönüştürüldü.",
+  "Converted {slides} slide.": "{slides} slayt dönüştürüldü.",
+  "Converted {slides} slides including {images} image.": "{images} görsel dahil {slides} slayt dönüştürüldü.",
+  "Converted {slides} slides including {images} images.": "{images} görsel dahil {slides} slayt dönüştürüldü.",
+  "Converted {slides} slides.": "{slides} slayt dönüştürüldü.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Her slayt, orijinal boyutunda beyaz bir sayfaya yeniden çizilir — metin gerçek konumu, boyutu ve rengiyle, ayrıca resimler, tablolar ve gruplanmış şekillerle birlikte.",
+  "Rendering slide {current} of {total}...": "Slayt işleniyor: {current}/{total}..."
+}

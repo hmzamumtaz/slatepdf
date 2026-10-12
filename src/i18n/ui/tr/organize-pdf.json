@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Yeni sayfa sırasını girin (virgülle ayrılmış, ör. 3,1,2,4,5)",
+  "Organize PDF": "PDF'yi Düzenle",
+  "Please enter a page order": "Lütfen bir sayfa sırası girin",
+  "Preview in new order:": "Yeni sıradaki önizleme:",
+  "Total pages: {total} | Reordered: {count}": "Toplam sayfa: {total} | Yeniden sıralanan: {count}",
+  "e.g., 3,1,2,4,5": "ör. 3,1,2,4,5"
+}

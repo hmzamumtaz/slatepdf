@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{pages} sayfadan {slides} slayt oluşturuldu.",
+  "Built {slides} slide from {pages} pages.": "{pages} sayfadan {slides} slayt oluşturuldu.",
+  "Built {slides} slides from {pages} page.": "{pages} sayfadan {slides} slayt oluşturuldu.",
+  "Built {slides} slides from {pages} pages.": "{pages} sayfadan {slides} slayt oluşturuldu.",
+  "Convert to PowerPoint": "PowerPoint'e Dönüştür",
+  "Reading page {current} of {total}...": "Sayfa okunuyor: {current}/{total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Ham metni yapıştırmak yerine belgenin yapısını okur — başlıklar slayt başlıklarına, paragraflar madde işaretlerine dönüşür. Uzun sayfalar ek slaytlarda devam eder."
+}

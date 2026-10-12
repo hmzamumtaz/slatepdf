@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Tillbaka till alla verktyg",
+  "Convert to PDF": "Konvertera till PDF",
+  "Converting...": "Konverterar …",
+  "Design preview": "Förhandsvisning av designen",
+  "Exact design": "Exakt design",
+  "HTML code": "HTML-kod",
+  "HTML design preview": "Förhandsvisning av HTML-designen",
+  "HTML to PDF": "HTML till PDF",
+  "Live preview — this is the design that will be converted": "Live-förhandsvisning – det här är designen som konverteras",
+  "PDF downloaded": "PDF:en har laddats ner",
+  "PDF output": "PDF-utdata",
+  "Paste some HTML or upload an .html file first.": "Klistra in lite HTML eller ladda upp en .html-fil först.",
+  "Paste your HTML here, or upload an .html file above...": "Klistra in din HTML här, eller ladda upp en .html-fil ovan …",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Sätter om innehållet som riktig PDF-text som du kan markera och söka i, med förenklad formatering.",
+  "Render the HTML design first, then convert it to PDF": "Rendera HTML-designen först och konvertera den sedan till PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Renderar sidan med full CSS – färger, typsnitt, bakgrunder, layout – exakt som i förhandsvisningen. Rekommenderas.",
+  "Selectable text": "Markerbar text",
+  "Upload .html file": "Ladda upp .html-fil",
+  "Upload an .html file above, or switch to the": "Ladda upp en .html-fil ovan, eller byt till fliken",
+  "Your design preview will appear here": "Förhandsvisningen av din design visas här",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "och klistra in din kod. Sidan renderas här med hela sin design – exakt så som din PDF kommer att se ut."
+}

@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "”{name}” kunde inte läsas som en Excel-arbetsbok. Kontrollera att det är en giltig .xlsx-fil.",
+  "Convert to PDF": "Konvertera till PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Äldre .xls-filer stöds inte. Spara filen som .xlsx i Excel och försök igen.",
+  "No data found in this workbook.": "Inga data hittades i arbetsboken."
+}

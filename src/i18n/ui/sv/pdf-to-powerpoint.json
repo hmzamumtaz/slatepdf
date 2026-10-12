@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Skapade {slides} bild av {pages} sida.",
+  "Built {slides} slide from {pages} pages.": "Skapade {slides} bild av {pages} sidor.",
+  "Built {slides} slides from {pages} page.": "Skapade {slides} bilder av {pages} sida.",
+  "Built {slides} slides from {pages} pages.": "Skapade {slides} bilder av {pages} sidor.",
+  "Convert to PowerPoint": "Konvertera till PowerPoint",
+  "Reading page {current} of {total}...": "Läser sida {current} av {total} …",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Läser dokumentets struktur – rubriker blir bildrubriker och stycken blir punkter – i stället för att klistra in rå text. Långa sidor fortsätter på extra bilder."
+}

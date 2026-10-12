@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Författare: {value}",
+  "Back to all tools": "Tillbaka till alla verktyg",
+  "Changed": "Ändrad",
+  "Compare Another": "Jämför andra filer",
+  "Compare PDF": "Jämför PDF",
+  "Compare PDFs": "Jämför PDF-filer",
+  "Compare two PDFs and see the differences": "Jämför två PDF-filer och se skillnaderna",
+  "Comparing...": "Jämför …",
+  "Comparison complete": "Jämförelsen är klar",
+  "Creator: {value}": "Skapad med: {value}",
+  "Differing pages": "Sidor som skiljer sig",
+  "File 1": "Fil 1",
+  "File 2": "Fil 2",
+  "Files are identical": "Filerna är identiska",
+  "Original": "Original",
+  "Page {page}": "Sida {page}",
+  "Pages: {pages} | Size: {size}": "Sidor: {pages} | Storlek: {size}",
+  "Title: {value}": "Titel: {value}",
+  "similarity: {value}%": "likhet: {value} %",
+  "{count} page differ": "{count} sida skiljer sig",
+  "{count} pages differ": "{count} sidor skiljer sig"
+}

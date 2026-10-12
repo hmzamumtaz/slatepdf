@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Sidintervall (t.ex. 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Ange giltiga sidintervall",
+  "Preview of pages in ranges:": "Förhandsvisning av sidorna i intervallen:",
+  "Split PDF": "Dela PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "Totalt antal sidor: {total} | Sidor i intervallen: {count}"
+}

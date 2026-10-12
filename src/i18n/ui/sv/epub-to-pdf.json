@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Tillbaka till alla verktyg",
+  "Convert EPUB ebooks to PDF documents": "Konvertera EPUB-e-böcker till PDF-dokument",
+  "Convert to PDF": "Konvertera till PDF",
+  "Converting...": "Konverterar …",
+  "EPUB to PDF": "EPUB till PDF",
+  "Exact design": "Exakt design",
+  "Extracting EPUB content...": "Extraherar EPUB-innehåll …",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Extraherar textinnehållet och bryter om det till en ren, sökbar PDF. Bäst för romaner och textrika böcker.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Behåller varje kapitels layout, bilder och inline-formatering. Länkade stilmallar och inbäddade anpassade typsnitt läses inte in, så där används standardstilar i stället. Bäst för illustrerade böcker.",
+  "PDF downloaded": "PDF:en har laddats ner",
+  "PDF output": "PDF-utdata",
+  "Selectable text": "Markerbar text",
+  "Upload .epub file": "Ladda upp .epub-fil",
+  "Upload an EPUB file first.": "Ladda upp en EPUB-fil först."
+}

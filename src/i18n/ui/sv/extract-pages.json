@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Extrahera sidor",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Sidor att extrahera (t.ex. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Ange sidor att extrahera (t.ex. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Förhandsvisning av extraherade sidor:",
+  "Total pages: {total} | Extracting: {count}": "Totalt antal sidor: {total} | Extraheras: {count}",
+  "e.g., 1, 3, 5": "t.ex. 1, 3, 5"
+}
