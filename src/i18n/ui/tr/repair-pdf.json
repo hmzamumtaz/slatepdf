@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "Kesik veya bozuk dosyaları düzeltmek için PDF'nin iç yapısını (çapraz başvuru tablosu, nesne numaralandırması, trailer) yeniden oluşturur. Yapı kurtarılamıyorsa sayfalar, aranabilir bir metin katmanıyla yeni bir PDF'ye yeniden işlenir.",
+  "Repair PDF": "PDF'yi Onar"
+}

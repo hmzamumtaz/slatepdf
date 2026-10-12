@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Sayfa aralıkları (ör. 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Lütfen geçerli sayfa aralıkları girin",
+  "Preview of pages in ranges:": "Aralıklardaki sayfaların önizlemesi:",
+  "Split PDF": "PDF'yi Böl",
+  "Total pages: {total} | Pages in ranges: {count}": "Toplam sayfa: {total} | Aralıklardaki sayfalar: {count}"
+}

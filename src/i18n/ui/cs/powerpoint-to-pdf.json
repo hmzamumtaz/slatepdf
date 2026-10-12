@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Převést do PDF",
+  "Converted {slides} slide including {images} image.": "Převeden {slides} snímek včetně {images} obrázku.",
+  "Converted {slides} slide including {images} images.": "Převeden {slides} snímek (počet obrázků: {images}).",
+  "Converted {slides} slide.": "Převeden {slides} snímek.",
+  "Converted {slides} slides including {images} image.": "Převedeno snímků: {slides}, včetně {images} obrázku.",
+  "Converted {slides} slides including {images} images.": "Převedeno snímků: {slides} (počet obrázků: {images}).",
+  "Converted {slides} slides.": "Převedeno snímků: {slides}.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Každý snímek se překreslí na bílou stránku v původní velikosti – text se skutečnou pozicí, velikostí a barvou a také obrázky, tabulky a seskupené tvary.",
+  "Rendering slide {current} of {total}...": "Vykresluji snímek {current} z {total}..."
+}
