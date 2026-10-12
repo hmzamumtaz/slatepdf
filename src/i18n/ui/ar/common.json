@@ -114,5 +114,6 @@
   "{count} stars": "عدد النجوم: {count}",
   "{kind} ready — {size}": "{kind} جاهز – {size}",
   "{selected} of {total} selected": "تم تحديد {selected} من {total}",
-  "{tool} live preview": "معاينة مباشرة لـ {tool}"
+  "{tool} live preview": "معاينة مباشرة لـ {tool}",
+  "… (truncated)": "… (مقتطع)"
 }
