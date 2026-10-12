@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Se creó {slides} diapositiva a partir de {pages} página.",
+  "Built {slides} slide from {pages} pages.": "Se creó {slides} diapositiva a partir de {pages} páginas.",
+  "Built {slides} slides from {pages} page.": "Se crearon {slides} diapositivas a partir de {pages} página.",
+  "Built {slides} slides from {pages} pages.": "Se crearon {slides} diapositivas a partir de {pages} páginas.",
+  "Convert to PowerPoint": "Convertir a PowerPoint",
+  "Reading page {current} of {total}...": "Leyendo la página {current} de {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Lee la estructura del documento (los títulos pasan a ser títulos de diapositiva y los párrafos se convierten en viñetas) en lugar de pegar el texto sin más. Las páginas largas continúan en diapositivas adicionales."
+}

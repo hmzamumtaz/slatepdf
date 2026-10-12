@@ -4,8 +4,11 @@ import { useState, useMemo, useCallback } from 'react';
 import ToolPage from '@/components/ToolPage';
 import PdfPreview from '@/components/PdfPreview';
 import { removePagesFromFile, getPdfInfo, parsePageSpec } from '@/lib/pdf-engine';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 export default function RemovePagesTool() {
+  const t = useT();
   const [pagesToRemove, setPagesToRemove] = useState('');
   const [pdfInfo, setPdfInfo] = useState<{ totalPages: number } | null>(null);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
@@ -38,30 +41,30 @@ export default function RemovePagesTool() {
       slug="remove-pages"
       accept=".pdf"
       multiple={false}
-      processLabel="Remove Pages"
+      processLabel={t('Remove Pages')}
       onFilesSelected={handleFilesSelected}
       options={
         <div>
           <label className="block text-sm font-medium text-foreground mb-2">
-            Pages to remove (comma-separated, e.g., 1, 3, 5-8)
+            {t('Pages to remove (comma-separated, e.g., 1, 3, 5-8)')}
           </label>
           <input
             type="text"
             value={pagesToRemove}
             onChange={(e) => setPagesToRemove(e.target.value)}
-            placeholder="e.g., 1, 3, 5, 7"
+            placeholder={t('e.g., 1, 3, 5, 7')}
             className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
           />
           {pdfInfo && (
             <p className="mt-2 text-xs text-muted-foreground">
-              Total pages: {pdfInfo.totalPages} | Remaining: {remainingPages.length}
+              {t('Total pages: {total} | Remaining: {count}', { total: pdfInfo.totalPages, count: remainingPages.length })}
             </p>
           )}
           {currentFile && remainingPages.length > 0 && remainingPages.length < (pdfInfo?.totalPages ?? 0) && (
             <PdfPreview
               file={currentFile}
               pageNumbers={remainingPages}
-              label="Preview after removal:"
+              label={t('Preview after removal:')}
             />
           )}
         </div>
@@ -69,7 +72,7 @@ export default function RemovePagesTool() {
       onProcess={async (files) => {
         const info = await getPdfInfo(files[0]);
         const pages = parsePageSpec(pagesToRemove, info.pageCount);
-        if (pages.length === 0) throw new Error('Please enter pages to remove (e.g., 1, 3, 5-8)');
+        if (pages.length === 0) throw new Error(msg('Please enter pages to remove (e.g., 1, 3, 5-8)'));
         return removePagesFromFile(files[0], pages);
       }}
     />

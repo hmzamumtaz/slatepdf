@@ -6,6 +6,7 @@ import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { summarizePdf, SummaryResult } from '@/lib/summarizer';
 import { friendlyError } from '@/lib/errors';
+import { useT, useHomeHref } from '@/i18n/I18nProvider';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -14,6 +15,8 @@ function formatBytes(bytes: number): string {
 }
 
 export default function AiSummarizerTool() {
+  const t = useT();
+  const homeHref = useHomeHref();
   const [files, setFiles] = useState<File[]>([]);
   const [processing, setProcessing] = useState(false);
   const [progress, setProgress] = useState('');
@@ -47,16 +50,16 @@ export default function AiSummarizerTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+        <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-pink-50"><Sparkles className="w-6 h-6 text-pink-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Summarizer</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Get an intelligent summary of your PDF document</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Summarizer')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base">{t('Get an intelligent summary of your PDF document')}</p>
             </div>
           </div>
         </div>
@@ -74,11 +77,11 @@ export default function AiSummarizerTool() {
             <div className="mt-6 space-y-5">
               <div className="p-4 bg-gray-50 rounded-xl border border-border space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">File</span>
+                  <span className="text-sm text-muted-foreground">{t('File')}</span>
                   <span className="text-sm font-medium text-foreground">{files[0].name}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Size</span>
+                  <span className="text-sm text-muted-foreground">{t('Size')}</span>
                   <span className="text-sm font-medium text-foreground">{formatBytes(files[0].size)}</span>
                 </div>
               </div>
@@ -86,20 +89,20 @@ export default function AiSummarizerTool() {
               {error && (
                 <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-destructive shrink-0" />
-                  <p className="text-sm text-destructive">{error}</p>
+                  <p className="text-sm text-destructive">{t(error)}</p>
                 </div>
               )}
 
               {processing && progress && (
                 <div className="p-4 bg-pink-50 border border-pink-200 rounded-xl flex items-center gap-3 animate-fade-in">
                   <Loader2 className="w-4 h-4 animate-spin text-pink-600" />
-                  <p className="text-sm font-medium text-pink-800">{progress}</p>
+                  <p className="text-sm font-medium text-pink-800">{t(progress)}</p>
                 </div>
               )}
 
               <button onClick={handleSummarize} disabled={processing}
                 className="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white hover:shadow-lg hover:shadow-pink-500/25 active:scale-[0.98] disabled:opacity-50">
-                {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> Analyzing...</> : <><Sparkles className="w-4 h-4" /> Generate Summary</>}
+                {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('Analyzing...')}</> : <><Sparkles className="w-4 h-4" /> {t('Generate Summary')}</>}
               </button>
             </div>
           )}
@@ -109,16 +112,16 @@ export default function AiSummarizerTool() {
               <div className="p-5 bg-green-50 border border-green-200 rounded-xl flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-semibold text-green-800">Summary generated</p>
+                  <p className="text-sm font-semibold text-green-800">{t('Summary generated')}</p>
                   <p className="text-sm text-green-700">
-                    {result.wordCount} words from {result.originalWordCount.toLocaleString()} original words ({Math.round((1 - result.wordCount / Math.max(result.originalWordCount, 1)) * 100)}% reduction)
+                    {t('{words} words from {original} original words ({percent}% reduction)', { words: result.wordCount, original: result.originalWordCount.toLocaleString(), percent: Math.round((1 - result.wordCount / Math.max(result.originalWordCount, 1)) * 100) })}
                   </p>
                 </div>
               </div>
 
               <div className="p-6 bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl border border-pink-200">
                 <h3 className="text-sm font-semibold text-foreground mb-6 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-pink-500" /> Key points
+                  <Sparkles className="w-4 h-4 text-pink-500" /> {t('Key points')}
                 </h3>
                 <ul className="space-y-2">
                   {result.keyPoints.map((point, i) => (
@@ -130,7 +133,7 @@ export default function AiSummarizerTool() {
                 </ul>
                 {result.keywords.length > 0 && (
                   <div className="mt-4 pt-4 border-t border-pink-200/60">
-                    <p className="text-xs font-semibold text-muted-foreground mb-2">Top topics</p>
+                    <p className="text-xs font-semibold text-muted-foreground mb-2">{t('Top topics')}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {result.keywords.map(kw => (
                         <span key={kw} className="px-2.5 py-1 bg-white/70 text-pink-700 rounded-lg text-xs font-medium border border-pink-200">{kw}</span>
@@ -143,11 +146,11 @@ export default function AiSummarizerTool() {
               <div className="flex gap-3">
                 <button onClick={handleCopy}
                   className="px-5 py-2.5 rounded-xl text-sm font-medium border border-border hover:bg-gray-50 transition-colors flex items-center gap-2">
-                  {copied ? <><Check className="w-4 h-4 text-green-500" /> Copied</> : <><Copy className="w-4 h-4" /> Copy</>}
+                  {copied ? <><Check className="w-4 h-4 text-green-500" /> {t('Copied')}</> : <><Copy className="w-4 h-4" /> {t('Copy')}</>}
                 </button>
                 <button onClick={() => setResult(null)}
                   className="px-5 py-2.5 rounded-xl text-sm font-medium border border-border hover:bg-gray-50 transition-colors">
-                  Summarize Again
+                  {t('Summarize Again')}
                 </button>
               </div>
             </div>

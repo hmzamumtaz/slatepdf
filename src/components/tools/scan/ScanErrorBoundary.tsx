@@ -2,6 +2,7 @@
 
 import { Component, type ReactNode } from 'react';
 import { AlertCircle, RefreshCw } from 'lucide-react';
+import { useT } from '@/i18n/I18nProvider';
 
 interface State {
   failed: boolean;
@@ -25,18 +26,23 @@ export default class ScanErrorBoundary extends Component<{ children: ReactNode }
 
   render() {
     if (!this.state.failed) return this.props.children;
-    return (
-      <div className="max-w-md mx-auto my-16 px-6 text-center">
-        <AlertCircle className="w-10 h-10 mx-auto text-destructive mb-3" />
-        <p className="text-lg font-semibold text-foreground">Something went wrong in the scanner</p>
-        <p className="text-sm text-muted-foreground mt-2">Your scanned pages are saved on this device. Reload to pick up where you left off.</p>
-        <button
-          onClick={() => window.location.reload()}
-          className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-violet-600 text-white text-sm font-semibold"
-        >
-          <RefreshCw className="w-4 h-4" /> Reload scanner
-        </button>
-      </div>
-    );
+    return <ScanCrashed />;
   }
+}
+
+function ScanCrashed() {
+  const t = useT();
+  return (
+    <div className="max-w-md mx-auto my-16 px-6 text-center">
+      <AlertCircle className="w-10 h-10 mx-auto text-destructive mb-3" />
+      <p className="text-lg font-semibold text-foreground">{t('Something went wrong in the scanner')}</p>
+      <p className="text-sm text-muted-foreground mt-2">{t('Your scanned pages are saved on this device. Reload to pick up where you left off.')}</p>
+      <button
+        onClick={() => window.location.reload()}
+        className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-violet-600 text-white text-sm font-semibold"
+      >
+        <RefreshCw className="w-4 h-4" /> {t('Reload scanner')}
+      </button>
+    </div>
+  );
 }

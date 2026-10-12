@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Retour à tous les outils",
+  "Convert to PDF": "Convertir en PDF",
+  "Converting...": "Conversion...",
+  "Design preview": "Aperçu du design",
+  "Exact design": "Design exact",
+  "HTML code": "Code HTML",
+  "HTML design preview": "Aperçu du design HTML",
+  "HTML to PDF": "HTML en PDF",
+  "Live preview — this is the design that will be converted": "Aperçu en direct — c’est ce design qui sera converti",
+  "PDF downloaded": "PDF téléchargé",
+  "PDF output": "Sortie PDF",
+  "Paste some HTML or upload an .html file first.": "Collez d’abord du code HTML ou importez un fichier .html.",
+  "Paste your HTML here, or upload an .html file above...": "Collez votre code HTML ici, ou importez un fichier .html ci-dessus...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Recompose le contenu en vrai texte PDF que vous pouvez sélectionner et rechercher, avec une mise en forme simplifiée.",
+  "Render the HTML design first, then convert it to PDF": "Affichez d’abord le design HTML, puis convertissez-le en PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Affiche la page avec tout son CSS — couleurs, polices, arrière-plans, mise en page — exactement comme dans l’aperçu. Recommandé.",
+  "Selectable text": "Texte sélectionnable",
+  "Upload .html file": "Importer un fichier .html",
+  "Upload an .html file above, or switch to the": "Importez un fichier .html ci-dessus, ou passez à l’onglet",
+  "Your design preview will appear here": "L’aperçu de votre design s’affichera ici",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "et collez votre code. La page s’affiche ici avec tout son design — exactement comme votre PDF."
+}

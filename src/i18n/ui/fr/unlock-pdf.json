@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Retour à tous les outils",
+  "Enter the PDF password (leave empty if none)": "Saisissez le mot de passe du PDF (laissez vide s’il n’y en a pas)",
+  "File": "Fichier",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "N’utilisez que des PDF qui vous appartiennent ou que vous êtes autorisé à modifier. Retirer la protection du PDF d’une autre personne peut enfreindre le droit d’auteur ou les lois sur la vie privée.",
+  "PDF unlocked and downloaded": "PDF déverrouillé et téléchargé",
+  "Password (if required)": "Mot de passe (si nécessaire)",
+  "Remove password protection from a PDF file": "Supprimez la protection par mot de passe d’un fichier PDF",
+  "Size": "Taille",
+  "Unlock PDF": "Déverrouiller le PDF",
+  "Unlocking...": "Déverrouillage..."
+}

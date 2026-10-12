@@ -8,16 +8,16 @@ export interface BreadcrumbItem {
   href?: string;
 }
 
-export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
+export default function Breadcrumbs({ items, home = { label: 'Home', href: '/' } }: { items: BreadcrumbItem[]; home?: { label: string; href: string } }) {
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
       <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
         <li>
-          <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+          <Link href={home.href} className="hover:text-foreground transition-colors">{home.label}</Link>
         </li>
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-1.5">
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3 h-3 rtl:rotate-180" />
             {item.href ? (
               <Link href={item.href} className="hover:text-foreground transition-colors">
                 {item.label}

@@ -13,14 +13,16 @@ import MarkupEditor from './MarkupEditor';
 import ExportPanel from './ExportPanel';
 import TextSheet from './TextSheet';
 import ContactSheet from './ContactSheet';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 export const FILTERS: { value: ScanFilter; label: string }[] = [
-  { value: 'enhance', label: 'Auto color' },
-  { value: 'photo', label: 'Original' },
-  { value: 'lighttext', label: 'Light text' },
-  { value: 'grayscale', label: 'Grayscale' },
-  { value: 'bw', label: 'B&W' },
-  { value: 'whiteboard', label: 'Whiteboard' },
+  { value: 'enhance', label: msg('Auto color') },
+  { value: 'photo', label: msg('Original') },
+  { value: 'lighttext', label: msg('Light text') },
+  { value: 'grayscale', label: msg('Grayscale') },
+  { value: 'bw', label: msg('B&W') },
+  { value: 'whiteboard', label: msg('Whiteboard') },
 ];
 
 type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes' | 'marks'>>;
@@ -50,6 +52,7 @@ interface Props {
 type Panel = 'filters' | 'adjust' | 'reorder' | 'save' | 'delete' | null;
 
 export default function ReviewScreen(props: Props) {
+  const t = useT();
   const { pages, index, onIndex, docName, onDocName, onBack, onAddMore, onRetake, onUpdate, onDelete, onMove, onFilterAll, onRevert, canUndo, onUndo, onScanNew } = props;
   const page = pages[Math.min(index, pages.length - 1)];
   const [panel, setPanel] = useState<Panel>(null);
@@ -188,7 +191,7 @@ export default function ReviewScreen(props: Props) {
     <div className="fixed inset-0 z-[75] flex flex-col bg-gray-950 text-white" style={{ height: '100dvh' }}>
       {/* Header */}
       <div className="flex items-center gap-2 px-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-2">
-        <button onClick={onBack} className="p-2.5 rounded-full hover:bg-white/10" aria-label="Back"><ArrowLeft className="w-5 h-5" /></button>
+        <button onClick={onBack} className="p-2.5 rounded-full hover:bg-white/10" aria-label={t('Go back')}><ArrowLeft className="w-5 h-5" /></button>
         <div className="flex-1 min-w-0">
           {renaming ? (
             <input
@@ -198,17 +201,17 @@ export default function ReviewScreen(props: Props) {
               onBlur={() => setRenaming(false)}
               onKeyDown={e => { if (e.key === 'Enter') setRenaming(false); }}
               className="w-full bg-white/10 rounded-lg px-2 py-1.5 text-sm outline-none"
-              aria-label="Document name"
+              aria-label={t('Document name')}
             />
           ) : (
             <button onClick={() => setRenaming(true)} className="flex items-center gap-1.5 max-w-full text-sm font-semibold">
               <span className="truncate">{docName}</span><Pencil className="w-3.5 h-3.5 shrink-0 text-white/60" />
             </button>
           )}
-          <p className="text-[11px] text-white/60">Page {index + 1} of {pages.length}</p>
+          <p className="text-[11px] text-white/60">{t('Page {number} of {total}', { number: index + 1, total: pages.length })}</p>
         </div>
-        <button onClick={onUndo} disabled={!canUndo} className="p-2.5 rounded-full hover:bg-white/10 disabled:opacity-30" aria-label="Undo last change"><Undo2 className="w-5 h-5" /></button>
-        <button onClick={() => togglePanel('save')} className="px-4 py-2 rounded-xl bg-violet-600 font-semibold text-sm">Save PDF</button>
+        <button onClick={onUndo} disabled={!canUndo} className="p-2.5 rounded-full hover:bg-white/10 disabled:opacity-30" aria-label={t('Undo last change')}><Undo2 className="w-5 h-5" /></button>
+        <button onClick={() => togglePanel('save')} className="px-4 py-2 rounded-xl bg-violet-600 font-semibold text-sm">{t('Save PDF')}</button>
       </div>
 
       {/* Page preview — swipe left/right */}
@@ -224,7 +227,7 @@ export default function ReviewScreen(props: Props) {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={page.url}
-            alt={`Page ${index + 1}`}
+            alt={t('Page {number}', { number: index + 1 })}
             draggable={false}
             className="max-h-full max-w-full rounded-md shadow-2xl object-contain bg-white select-none"
             style={{ transform: `translate(${zoom.x}px, ${zoom.y}px) scale(${zoom.s})`, transition: 'transform 60ms linear' }}
@@ -232,8 +235,8 @@ export default function ReviewScreen(props: Props) {
         ) : (
           <Loader2 className="w-8 h-8 animate-spin" />
         )}
-        {index > 0 && <button onClick={() => go(-1)} className="absolute left-1 p-2 rounded-full bg-white/10" aria-label="Previous page"><ChevronLeft className="w-5 h-5" /></button>}
-        {index < pages.length - 1 && <button onClick={() => go(1)} className="absolute right-1 p-2 rounded-full bg-white/10" aria-label="Next page"><ChevronRight className="w-5 h-5" /></button>}
+        {index > 0 && <button onClick={() => go(-1)} className="absolute left-1 p-2 rounded-full bg-white/10" aria-label={t('Previous page')}><ChevronLeft className="w-5 h-5" /></button>}
+        {index < pages.length - 1 && <button onClick={() => go(1)} className="absolute right-1 p-2 rounded-full bg-white/10" aria-label={t('Next page')}><ChevronRight className="w-5 h-5" /></button>}
       </div>
 
       {/* Panels */}
@@ -248,11 +251,11 @@ export default function ReviewScreen(props: Props) {
                     <img src={previews[f.value]} alt="" className="w-full h-full object-cover" />
                   ) : <Loader2 className="w-4 h-4 animate-spin mx-auto mt-8 text-white/50" />}
                 </span>
-                <span className={`block mt-1 text-[11px] font-semibold ${page.filter === f.value ? 'text-violet-300' : 'text-white/80'}`}>{f.label}</span>
+                <span className={`block mt-1 text-[11px] font-semibold ${page.filter === f.value ? 'text-violet-300' : 'text-white/80'}`}>{t(f.label)}</span>
               </button>
             ))}
           </div>
-          {pages.length > 1 && <button onClick={() => onFilterAll(page.filter)} className="w-full py-2 rounded-lg bg-white/10 text-xs font-semibold">Apply this filter to all {pages.length} pages</button>}
+          {pages.length > 1 && <button onClick={() => onFilterAll(page.filter)} className="w-full py-2 rounded-lg bg-white/10 text-xs font-semibold">{t('Apply this filter to all {count} pages', { count: pages.length })}</button>}
         </div>
       )}
 
@@ -260,12 +263,12 @@ export default function ReviewScreen(props: Props) {
         <div className="px-6 pt-3 space-y-3 max-w-md w-full mx-auto">
           {(['brightness', 'contrast'] as const).map(k => (
             <label key={k} className="flex items-center gap-3 text-xs font-semibold capitalize">
-              <span className="w-20">{k}</span>
+              <span className="w-20">{k === 'brightness' ? t('brightness') : t('contrast')}</span>
               <input type="range" min={-60} max={60} step={5} value={page[k]} onChange={e => onUpdate(page.id, { [k]: Number(e.target.value) })} className="flex-1 accent-violet-500" />
               <span className="w-8 text-right tabular-nums text-white/70">{page[k]}</span>
             </label>
           ))}
-          <button onClick={() => onUpdate(page.id, { brightness: 0, contrast: 0 })} className="text-xs text-white/70 underline">Reset</button>
+          <button onClick={() => onUpdate(page.id, { brightness: 0, contrast: 0 })} className="text-xs text-white/70 underline">{t('Reset')}</button>
         </div>
       )}
 
@@ -280,16 +283,16 @@ export default function ReviewScreen(props: Props) {
           <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
             {pages.map((p, i) => (
               <div key={p.id} data-page-index={i} className={`relative aspect-[3/4] rounded-md overflow-hidden bg-white/10 ring-2 ${dragFrom === i ? 'ring-violet-400 opacity-70' : selected === i ? 'ring-violet-500' : i === index ? 'ring-white/40' : 'ring-transparent'}`}>
-                <button onClick={() => setSelected(s => (s === i ? null : i))} className="absolute inset-0" aria-label={`Select page ${i + 1}`}>
+                <button onClick={() => setSelected(s => (s === i ? null : i))} className="absolute inset-0" aria-label={t('Select page {number}', { number: i + 1 })}>
                   {p.url && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={p.url} alt={`Page ${i + 1}`} className="w-full h-full object-cover" draggable={false} />
+                    <img src={p.url} alt={t('Page {number}', { number: i + 1 })} className="w-full h-full object-cover" draggable={false} />
                   )}
                 </button>
                 <span className="absolute bottom-0.5 left-0.5 px-1 rounded bg-black/70 text-[10px] font-bold pointer-events-none">{i + 1}</span>
                 <span
                   role="button"
-                  aria-label={`Drag page ${i + 1} to reorder`}
+                  aria-label={t('Drag page {number} to reorder', { number: i + 1 })}
                   className="absolute top-0 right-0 w-8 h-8 flex items-center justify-center bg-black/55 rounded-bl-md cursor-grab"
                   style={{ touchAction: 'none' }}
                   onPointerDown={e => { (e.currentTarget as Element).releasePointerCapture?.(e.pointerId); setDragFrom(i); setSelected(i); }}
@@ -300,12 +303,12 @@ export default function ReviewScreen(props: Props) {
             ))}
           </div>
           <div className="flex gap-2 py-3">
-            {selected === null ? <p className="text-xs text-white/60">Drag a page by its handle, or tap it and use the buttons.</p> : (
+            {selected === null ? <p className="text-xs text-white/60">{t('Drag a page by its handle, or tap it and use the buttons.')}</p> : (
               <>
-                <button onClick={() => { onMove(selected, 0); setSelected(0); }} disabled={selected === 0} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">First</button>
-                <button onClick={() => { onMove(selected, selected - 1); setSelected(selected - 1); }} disabled={selected === 0} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">◀ Earlier</button>
-                <button onClick={() => { onMove(selected, selected + 1); setSelected(selected + 1); }} disabled={selected === pages.length - 1} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">Later ▶</button>
-                <button onClick={() => { onMove(selected, pages.length - 1); setSelected(pages.length - 1); }} disabled={selected === pages.length - 1} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">Last</button>
+                <button onClick={() => { onMove(selected, 0); setSelected(0); }} disabled={selected === 0} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">{t('First')}</button>
+                <button onClick={() => { onMove(selected, selected - 1); setSelected(selected - 1); }} disabled={selected === 0} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">◀ {t('Earlier')}</button>
+                <button onClick={() => { onMove(selected, selected + 1); setSelected(selected + 1); }} disabled={selected === pages.length - 1} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">{t('Later')} ▶</button>
+                <button onClick={() => { onMove(selected, pages.length - 1); setSelected(pages.length - 1); }} disabled={selected === pages.length - 1} className="flex-1 py-2 rounded-lg bg-white/10 text-xs font-semibold disabled:opacity-30">{t('Last')}</button>
               </>
             )}
           </div>
@@ -314,27 +317,27 @@ export default function ReviewScreen(props: Props) {
 
       {panel === 'delete' && (
         <div className="px-4 pt-3 flex items-center justify-center gap-3">
-          <p className="text-sm">Delete page {index + 1}?</p>
-          <button onClick={() => { setPanel(null); onDelete(page.id); }} className="px-4 py-2 rounded-lg bg-red-600 text-sm font-semibold">Delete</button>
-          <button onClick={() => setPanel(null)} className="px-4 py-2 rounded-lg bg-white/10 text-sm font-semibold">Keep</button>
+          <p className="text-sm">{t('Delete page {number}?', { number: index + 1 })}</p>
+          <button onClick={() => { setPanel(null); onDelete(page.id); }} className="px-4 py-2 rounded-lg bg-red-600 text-sm font-semibold">{t('Delete')}</button>
+          <button onClick={() => setPanel(null)} className="px-4 py-2 rounded-lg bg-white/10 text-sm font-semibold">{t('Keep')}</button>
         </div>
       )}
 
       {/* Toolbar */}
       <div className="flex gap-1 overflow-x-auto px-2 pt-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] justify-start sm:justify-center">
-        {tool('Add', <Camera className="w-5 h-5" />, onAddMore)}
-        {tool('Retake', <ScanLine className="w-5 h-5" />, () => onRetake(page.id))}
-        {tool('Crop', <Crop className="w-5 h-5" />, () => { setCropPart(0); setEditor('crop'); })}
-        {tool('Rotate', <RotateCw className="w-5 h-5" />, () => onUpdate(page.id, { rotation: (page.rotation + 90) % 360 }))}
-        {tool('Filters', <Palette className="w-5 h-5" />, () => togglePanel('filters'), { active: panel === 'filters' })}
-        {tool('Adjust', <SlidersHorizontal className="w-5 h-5" />, () => togglePanel('adjust'), { active: panel === 'adjust' })}
-        {tool('Markup', <PenLine className="w-5 h-5" />, () => setEditor('markup'))}
-        {tool('Cleanup', <Eraser className="w-5 h-5" />, () => setEditor('cleanup'))}
-        {tool('Copy text', <ScanText className="w-5 h-5" />, () => openOcr('text'))}
-        {page.layout === 'card' && tool('Contact', <Contact className="w-5 h-5" />, () => openOcr('contact'))}
-        {tool('Reorder', <LayoutGrid className="w-5 h-5" />, () => { setSelected(index); togglePanel('reorder'); }, { active: panel === 'reorder' })}
-        {tool('Revert', <History className="w-5 h-5" />, () => onRevert(page.id))}
-        {tool('Delete', <Trash2 className="w-5 h-5" />, () => togglePanel('delete'), { danger: true })}
+        {tool(t('Add'), <Camera className="w-5 h-5" />, onAddMore)}
+        {tool(t('Retake'), <ScanLine className="w-5 h-5" />, () => onRetake(page.id))}
+        {tool(t('Crop'), <Crop className="w-5 h-5" />, () => { setCropPart(0); setEditor('crop'); })}
+        {tool(t('Rotate'), <RotateCw className="w-5 h-5" />, () => onUpdate(page.id, { rotation: (page.rotation + 90) % 360 }))}
+        {tool(t('Filters'), <Palette className="w-5 h-5" />, () => togglePanel('filters'), { active: panel === 'filters' })}
+        {tool(t('Adjust'), <SlidersHorizontal className="w-5 h-5" />, () => togglePanel('adjust'), { active: panel === 'adjust' })}
+        {tool(t('Markup'), <PenLine className="w-5 h-5" />, () => setEditor('markup'))}
+        {tool(t('Cleanup'), <Eraser className="w-5 h-5" />, () => setEditor('cleanup'))}
+        {tool(t('Copy text'), <ScanText className="w-5 h-5" />, () => openOcr('text'))}
+        {page.layout === 'card' && tool(t('Contact'), <Contact className="w-5 h-5" />, () => openOcr('contact'))}
+        {tool(t('Reorder'), <LayoutGrid className="w-5 h-5" />, () => { setSelected(index); togglePanel('reorder'); }, { active: panel === 'reorder' })}
+        {tool(t('Revert'), <History className="w-5 h-5" />, () => onRevert(page.id))}
+        {tool(t('Delete'), <Trash2 className="w-5 h-5" />, () => togglePanel('delete'), { danger: true })}
       </div>
 
       {/* Save sheet */}
@@ -342,8 +345,8 @@ export default function ReviewScreen(props: Props) {
         <div className="absolute inset-0 z-20 flex flex-col justify-end bg-black/60" onClick={() => setPanel(null)}>
           <div className="max-h-[92dvh] overflow-y-auto rounded-t-3xl bg-gray-900 px-5 pt-4 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-4">
-              <p className="text-base font-bold">Save as PDF</p>
-              <button onClick={() => setPanel(null)} className="p-2 rounded-full hover:bg-white/10" aria-label="Close"><X className="w-5 h-5" /></button>
+              <p className="text-base font-bold">{t('Save as PDF')}</p>
+              <button onClick={() => setPanel(null)} className="p-2 rounded-full hover:bg-white/10" aria-label={t('Close')}><X className="w-5 h-5" /></button>
             </div>
             <ExportPanel pages={pages} docName={docName} onDocName={onDocName} dark onScanNew={onScanNew} />
           </div>
@@ -355,7 +358,7 @@ export default function ReviewScreen(props: Props) {
           key={`${page.id}-${cropPart}`}
           source={page.parts[cropPart].source}
           quad={page.parts[cropPart].quad}
-          tabs={page.parts.length > 1 ? page.parts.map((_, i) => ({ label: i === 0 ? 'Front' : 'Back', active: i === cropPart, onSelect: () => setCropPart(i) })) : undefined}
+          tabs={page.parts.length > 1 ? page.parts.map((_, i) => ({ label: i === 0 ? t('Front') : t('Back'), active: i === cropPart, onSelect: () => setCropPart(i) })) : undefined}
           onCancel={() => setEditor(null)}
           onDone={quad => {
             const parts = page.parts.map((p, i) => (i === cropPart ? { ...p, quad } : p));

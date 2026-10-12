@@ -1,0 +1,16 @@
+{
+  "Analyzing...": "Анализ...",
+  "Back to all tools": "Ко всем инструментам",
+  "Copied": "Скопировано",
+  "Copy": "Копировать",
+  "File": "Файл",
+  "Generate Summary": "Создать краткое содержание",
+  "Get an intelligent summary of your PDF document": "Получите умное краткое содержание PDF-документа",
+  "Key points": "Ключевые мысли",
+  "Size": "Размер",
+  "Summarize Again": "Создать заново",
+  "Summarizer": "Краткое содержание",
+  "Summary generated": "Краткое содержание готово",
+  "Top topics": "Основные темы",
+  "{words} words from {original} original words ({percent}% reduction)": "Слов: {words} из {original} в оригинале (сокращение на {percent}%)"
+}

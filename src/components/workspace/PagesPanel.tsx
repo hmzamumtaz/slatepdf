@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { RotateCw, RotateCcw, Trash2, Undo2, ArrowLeft, ArrowRight, FilePlus2 } from 'lucide-react';
 import { renderPdfPreviews, type PagePreview } from '@/lib/pdf-engine';
 import { rebuildPages, insertPdf, type PageOp } from '@/lib/workspace';
+import { useT } from '@/i18n/I18nProvider';
 import { PanelHeader, ApplyButton, Loading, type PanelProps } from './shared';
 
 interface Slot extends PageOp {
@@ -20,6 +21,7 @@ interface Slot extends PageOp {
  * you end up turning the wrong page.
  */
 export default function PagesPanel({ file, busy, apply }: PanelProps) {
+  const t = useT();
   const [previews, setPreviews] = useState<PagePreview[]>([]);
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState('');
@@ -34,8 +36,8 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
         // No page cap here: this panel's own slots become the saved document,
         // so silently truncating the preview would silently drop every page
         // past the cap the moment any change was applied.
-        const rendered = await renderPdfPreviews(file, { scale: 0.8, maxPages: Number.MAX_SAFE_INTEGER }, (p, t) => {
-          if (!cancelled) setProgress(`Rendering page ${p} of ${t}…`);
+        const rendered = await renderPdfPreviews(file, { scale: 0.8, maxPages: Number.MAX_SAFE_INTEGER }, (p, total) => {
+          if (!cancelled) setProgress(t('Rendering page {page} of {total}…', { page: p, total }));
         });
         if (cancelled) return;
         setPreviews(rendered);
@@ -45,7 +47,7 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
       }
     })();
     return () => { cancelled = true; };
-  }, [file]);
+  }, [file, t]);
 
   const kept = useMemo(() => slots.filter(s => !s.removed), [slots]);
   const changed = useMemo(
@@ -73,13 +75,13 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
     const turned = kept.filter(s => s.rotate !== 0).length;
     const sources = kept.map(s => s.source);
     const reordered = sources.some((v, i) => i > 0 && v < sources[i - 1]);
-    if (removed) summary.push(`removed ${removed} page${removed === 1 ? '' : 's'}`);
-    if (turned) summary.push(`turned ${turned} page${turned === 1 ? '' : 's'}`);
-    if (reordered) summary.push('reordered pages');
+    if (removed) summary.push(removed === 1 ? t('removed {count} page', { count: removed }) : t('removed {count} pages', { count: removed }));
+    if (turned) summary.push(turned === 1 ? t('turned {count} page', { count: turned }) : t('turned {count} pages', { count: turned }));
+    if (reordered) summary.push(t('reordered pages'));
 
     return apply(
       () => rebuildPages(file, kept.map(({ source, rotate }) => ({ source, rotate }))),
-      summary.length ? `Pages: ${summary.join(', ')}` : 'Rebuilt pages',
+      summary.length ? t('Pages: {changes}', { changes: summary.join(', ') }) : t('Rebuilt pages'),
     );
   };
 
@@ -87,7 +89,7 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
     const incoming = e.target.files?.[0];
     e.target.value = '';
     if (!incoming) return;
-    void apply(() => insertPdf(file, incoming, previews.length), `Inserted ${incoming.name}`);
+    void apply(() => insertPdf(file, incoming, previews.length), t('Inserted {name}', { name: incoming.name }));
   };
 
   return (
@@ -95,28 +97,28 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
       <input ref={insertInput} type="file" accept=".pdf,application/pdf" className="hidden" onChange={chooseInsert} />
 
       <PanelHeader
-        title="Pages"
-        hint="Reorder, turn and drop pages, or add another PDF to the end."
+        title={t('Pages')}
+        hint={t('Reorder, turn and drop pages, or add another PDF to the end.')}
         action={
           <div className="flex items-center gap-2">
             <button
               onClick={() => insertInput.current?.click()}
               disabled={busy || changed}
-              title={changed ? 'Apply or reset your current page changes first — adding a PDF now would discard them.' : undefined}
+              title={changed ? t('Apply or reset your current page changes first — adding a PDF now would discard them.') : undefined}
               className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[12px] font-medium border border-border hover:bg-muted transition-colors disabled:opacity-50"
             >
-              <FilePlus2 className="w-3.5 h-3.5" /> Add a PDF
+              <FilePlus2 className="w-3.5 h-3.5" /> {t('Add a PDF')}
             </button>
             {changed && (
               <button
                 onClick={() => setSlots(previews.map((_, i) => ({ key: i, source: i, rotate: 0, removed: false })))}
                 className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[12px] font-medium border border-border hover:bg-muted transition-colors"
               >
-                <Undo2 className="w-3 h-3" /> Reset
+                <Undo2 className="w-3 h-3" /> {t('Reset')}
               </button>
             )}
             <ApplyButton onClick={run} disabled={!changed || kept.length === 0} busy={busy}>
-              Apply page changes
+              {t('Apply page changes')}
             </ApplyButton>
           </div>
         }
@@ -124,12 +126,12 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
 
       <div className="flex-1 min-h-0 overflow-auto bg-gray-200/70 p-6">
         {loading ? (
-          <Loading message={progress || 'Rendering the document…'} />
+          <Loading message={progress || t('Rendering the document…')} />
         ) : (
           <>
             {kept.length === 0 && (
               <p className="text-center text-[13px] text-destructive mb-4">
-                A PDF needs at least one page — restore one before applying.
+                {t('A PDF needs at least one page — restore one before applying.')}
               </p>
             )}
             <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
@@ -147,17 +149,17 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={preview?.url}
-                        alt={`Page ${slot.source + 1}`}
+                        alt={t('Page {n}', { n: slot.source + 1 })}
                         className="max-w-full max-h-full object-contain transition-transform"
                         style={{ transform: `rotate(${slot.rotate}deg)` }}
                         draggable={false}
                       />
                       <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-md bg-black/70 text-white text-[10px] tabular-nums">
-                        {slot.removed ? 'removed' : position + 1}
+                        {slot.removed ? t('removed') : position + 1}
                       </span>
                       {slot.source !== index && !slot.removed && (
                         <span className="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded-md bg-primary text-white text-[10px]">
-                          was {slot.source + 1}
+                          {t('was {n}', { n: slot.source + 1 })}
                         </span>
                       )}
                     </div>
@@ -167,7 +169,7 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
                         onClick={() => move(slot.key, -1)}
                         disabled={index === 0 || slot.removed}
                         className="w-7 h-7 rounded-md hover:bg-muted disabled:opacity-30 flex items-center justify-center transition-colors"
-                        aria-label={`Move page ${slot.source + 1} earlier`}
+                        aria-label={t('Move page {n} earlier', { n: slot.source + 1 })}
                       >
                         <ArrowLeft className="w-3.5 h-3.5" />
                       </button>
@@ -175,7 +177,7 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
                         onClick={() => patch(slot.key, { rotate: slot.rotate - 90 })}
                         disabled={slot.removed}
                         className="w-7 h-7 rounded-md hover:bg-muted disabled:opacity-30 flex items-center justify-center transition-colors"
-                        aria-label={`Turn page ${slot.source + 1} left`}
+                        aria-label={t('Turn page {n} left', { n: slot.source + 1 })}
                       >
                         <RotateCcw className="w-3.5 h-3.5" />
                       </button>
@@ -183,7 +185,7 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
                         onClick={() => patch(slot.key, { rotate: slot.rotate + 90 })}
                         disabled={slot.removed}
                         className="w-7 h-7 rounded-md hover:bg-muted disabled:opacity-30 flex items-center justify-center transition-colors"
-                        aria-label={`Turn page ${slot.source + 1} right`}
+                        aria-label={t('Turn page {n} right', { n: slot.source + 1 })}
                       >
                         <RotateCw className="w-3.5 h-3.5" />
                       </button>
@@ -192,7 +194,7 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
                         className={`w-7 h-7 rounded-md flex items-center justify-center transition-colors ${
                           slot.removed ? 'bg-foreground text-white' : 'hover:bg-muted'
                         }`}
-                        aria-label={slot.removed ? `Restore page ${slot.source + 1}` : `Remove page ${slot.source + 1}`}
+                        aria-label={slot.removed ? t('Restore page {n}', { n: slot.source + 1 }) : t('Remove page {n}', { n: slot.source + 1 })}
                       >
                         {slot.removed ? <Undo2 className="w-3.5 h-3.5" /> : <Trash2 className="w-3.5 h-3.5" />}
                       </button>
@@ -200,7 +202,7 @@ export default function PagesPanel({ file, busy, apply }: PanelProps) {
                         onClick={() => move(slot.key, 1)}
                         disabled={index === slots.length - 1 || slot.removed}
                         className="w-7 h-7 rounded-md hover:bg-muted disabled:opacity-30 flex items-center justify-center transition-colors"
-                        aria-label={`Move page ${slot.source + 1} later`}
+                        aria-label={t('Move page {n} later', { n: slot.source + 1 })}
                       >
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>

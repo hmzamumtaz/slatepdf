@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Volver a todas las herramientas",
+  "Enter the PDF password (leave empty if none)": "Escribe la contraseña del PDF (déjala vacía si no tiene)",
+  "File": "Archivo",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "Usa solo PDF que sean tuyos o que tengas permiso para modificar. Quitar la seguridad del PDF de otra persona puede infringir las leyes de derechos de autor o de privacidad.",
+  "PDF unlocked and downloaded": "PDF desbloqueado y descargado",
+  "Password (if required)": "Contraseña (si hace falta)",
+  "Remove password protection from a PDF file": "Quita la protección con contraseña de un archivo PDF",
+  "Size": "Tamaño",
+  "Unlock PDF": "Desbloquear PDF",
+  "Unlocking...": "Desbloqueando..."
+}

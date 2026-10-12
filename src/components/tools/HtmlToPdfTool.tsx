@@ -5,6 +5,8 @@ import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, FileDown, Code2, Eye, Pa
 import Link from 'next/link';
 import { htmlToPdf, htmlToPdfVisual, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
+import { useT, useHomeHref } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -13,6 +15,8 @@ function formatBytes(bytes: number): string {
 }
 
 export default function HtmlToPdfTool() {
+  const t = useT();
+  const homeHref = useHomeHref();
   const [html, setHtml] = useState('');
   const [mode, setMode] = useState<'design' | 'text'>('design');
   const [tab, setTab] = useState<'code' | 'preview'>('preview');
@@ -38,7 +42,7 @@ export default function HtmlToPdfTool() {
   }, [html]);
 
   const handleConvert = useCallback(async () => {
-    if (!html.trim()) { setError('Paste some HTML or upload an .html file first.'); return; }
+    if (!html.trim()) { setError(msg('Paste some HTML or upload an .html file first.')); return; }
     setProcessing(true);
     setError(null);
     setResultSize(null);
@@ -59,16 +63,16 @@ export default function HtmlToPdfTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+        <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-violet-50"><Code2 className="w-6 h-6 text-violet-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">HTML to PDF</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Render the HTML design first, then convert it to PDF</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('HTML to PDF')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base">{t('Render the HTML design first, then convert it to PDF')}</p>
             </div>
           </div>
         </div>
@@ -77,15 +81,15 @@ export default function HtmlToPdfTool() {
           {/* Source: upload or paste */}
           <div className="flex flex-wrap items-center justify-between gap-3">
             <label className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 border-dashed border-border text-sm font-medium text-muted-foreground hover:border-primary hover:text-primary cursor-pointer transition-all">
-              <FileDown className="w-4 h-4 rotate-180" /> Upload .html file
+              <FileDown className="w-4 h-4 rotate-180" /> {t('Upload .html file')}
               <input type="file" accept=".html,.htm" onChange={handleFileUpload} className="hidden" />
             </label>
             <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-0.5">
               <button onClick={() => setTab('preview')} className={`px-3 py-1.5 rounded-md text-xs font-medium flex items-center gap-1.5 transition-colors ${tab === 'preview' ? 'bg-white text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
-                <Eye className="w-3.5 h-3.5" /> Design preview
+                <Eye className="w-3.5 h-3.5" /> {t('Design preview')}
               </button>
               <button onClick={() => setTab('code')} className={`px-3 py-1.5 rounded-md text-xs font-medium flex items-center gap-1.5 transition-colors ${tab === 'code' ? 'bg-white text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
-                <Code2 className="w-3.5 h-3.5" /> HTML code
+                <Code2 className="w-3.5 h-3.5" /> {t('HTML code')}
               </button>
             </div>
           </div>
@@ -98,18 +102,18 @@ export default function HtmlToPdfTool() {
               rows={16}
               spellCheck={false}
               className="w-full px-4 py-3 border border-border rounded-xl text-xs font-mono focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-y bg-gray-50/50"
-              placeholder="Paste your HTML here, or upload an .html file above..."
+              placeholder={t('Paste your HTML here, or upload an .html file above...')}
             />
           ) : (
             <div className="border border-border rounded-xl overflow-hidden bg-gray-100">
               <div className="px-4 py-2 bg-gray-50 border-b border-border text-xs font-medium text-muted-foreground">
-                Live preview — this is the design that will be converted
+                {t('Live preview — this is the design that will be converted')}
               </div>
               {html.trim() ? (
                 <iframe
                   sandbox=""
                   srcDoc={previewDoc}
-                  title="HTML design preview"
+                  title={t('HTML design preview')}
                   className="w-full bg-white"
                   style={{ height: 420, border: 0 }}
                 />
@@ -118,11 +122,11 @@ export default function HtmlToPdfTool() {
                   <div className="w-14 h-14 rounded-2xl bg-violet-50 flex items-center justify-center">
                     <Eye className="w-7 h-7 text-violet-400" />
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Your design preview will appear here</p>
+                  <p className="text-sm font-semibold text-foreground">{t('Your design preview will appear here')}</p>
                   <p className="text-xs text-muted-foreground max-w-sm leading-relaxed">
-                    Upload an <span className="font-medium">.html</span> file above, or switch to the{' '}
-                    <button onClick={() => setTab('code')} className="text-violet-600 font-medium hover:underline">HTML code</button>{' '}
-                    tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.
+                    {t('Upload an .html file above, or switch to the')}{' '}
+                    <button onClick={() => setTab('code')} className="text-violet-600 font-medium hover:underline">{t('HTML code')}</button>{' '}
+                    {t('tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.')}
                   </p>
                 </div>
               )}
@@ -131,15 +135,15 @@ export default function HtmlToPdfTool() {
 
           {/* Output mode */}
           <div>
-            <label className="block text-sm font-semibold text-foreground mb-2">PDF output</label>
+            <label className="block text-sm font-semibold text-foreground mb-2">{t('PDF output')}</label>
             <div className="grid sm:grid-cols-2 gap-3">
               <button onClick={() => setMode('design')} className={`text-left p-4 rounded-xl border-2 transition-all ${mode === 'design' ? 'border-primary bg-primary/5' : 'border-border hover:border-gray-300'}`}>
-                <div className="flex items-center gap-2 mb-1"><Palette className={`w-4 h-4 ${mode === 'design' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">Exact design</span></div>
-                <p className="text-xs text-muted-foreground">Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.</p>
+                <div className="flex items-center gap-2 mb-1"><Palette className={`w-4 h-4 ${mode === 'design' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">{t('Exact design')}</span></div>
+                <p className="text-xs text-muted-foreground">{t('Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.')}</p>
               </button>
               <button onClick={() => setMode('text')} className={`text-left p-4 rounded-xl border-2 transition-all ${mode === 'text' ? 'border-primary bg-primary/5' : 'border-border hover:border-gray-300'}`}>
-                <div className="flex items-center gap-2 mb-1"><Type className={`w-4 h-4 ${mode === 'text' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">Selectable text</span></div>
-                <p className="text-xs text-muted-foreground">Re-typesets the content as real PDF text you can select and search, with simplified styling.</p>
+                <div className="flex items-center gap-2 mb-1"><Type className={`w-4 h-4 ${mode === 'text' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">{t('Selectable text')}</span></div>
+                <p className="text-xs text-muted-foreground">{t('Re-typesets the content as real PDF text you can select and search, with simplified styling.')}</p>
               </button>
             </div>
           </div>
@@ -147,27 +151,27 @@ export default function HtmlToPdfTool() {
           {error && (
             <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
               <AlertCircle className="w-5 h-5 text-destructive shrink-0" />
-              <p className="text-sm text-destructive">{error}</p>
+              <p className="text-sm text-destructive">{t(error)}</p>
             </div>
           )}
 
           {processing && progress && (
             <div className="p-4 bg-violet-50 border border-violet-200 rounded-xl flex items-center gap-3 animate-fade-in">
               <Loader2 className="w-4 h-4 animate-spin text-violet-600" />
-              <p className="text-sm font-medium text-violet-800">{progress}</p>
+              <p className="text-sm font-medium text-violet-800">{t(progress)}</p>
             </div>
           )}
 
           {resultSize !== null && !processing && (
             <div className="p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3 animate-fade-in">
               <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-              <p className="text-sm text-green-800"><span className="font-semibold">PDF downloaded</span> ({formatBytes(resultSize)}).</p>
+              <p className="text-sm text-green-800"><span className="font-semibold">{t('PDF downloaded')}</span> ({formatBytes(resultSize)}).</p>
             </div>
           )}
 
           <button onClick={handleConvert} disabled={processing || !html.trim()}
             className="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 bg-violet-500 hover:bg-violet-600 text-white hover:shadow-lg hover:shadow-violet-500/25 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
-            {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> Converting...</> : <><FileDown className="w-4 h-4" /> Convert to PDF</>}
+            {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('Converting...')}</> : <><FileDown className="w-4 h-4" /> {t('Convert to PDF')}</>}
           </button>
         </div>
       </div>

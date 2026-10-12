@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" no se pudo leer como libro de Excel. Asegúrate de que sea un archivo .xlsx válido.",
+  "Convert to PDF": "Convertir a PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Los archivos .xls antiguos no son compatibles. Guarda el archivo como .xlsx en Excel e inténtalo de nuevo.",
+  "No data found in this workbook.": "No se encontraron datos en este libro."
+}

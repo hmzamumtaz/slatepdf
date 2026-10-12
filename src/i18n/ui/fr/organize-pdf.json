@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Saisissez le nouvel ordre des pages (séparées par des virgules, ex. : 3,1,2,4,5)",
+  "Organize PDF": "Organiser le PDF",
+  "Please enter a page order": "Saisissez un ordre de pages",
+  "Preview in new order:": "Aperçu dans le nouvel ordre :",
+  "Total pages: {total} | Reordered: {count}": "Pages au total : {total} | Réordonnées : {count}",
+  "e.g., 3,1,2,4,5": "ex. : 3,1,2,4,5"
+}

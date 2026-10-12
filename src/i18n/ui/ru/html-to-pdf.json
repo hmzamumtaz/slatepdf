@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Ко всем инструментам",
+  "Convert to PDF": "Конвертировать в PDF",
+  "Converting...": "Конвертация...",
+  "Design preview": "Предпросмотр дизайна",
+  "Exact design": "Точный дизайн",
+  "HTML code": "HTML-код",
+  "HTML design preview": "Предпросмотр HTML-дизайна",
+  "HTML to PDF": "HTML в PDF",
+  "Live preview — this is the design that will be converted": "Живой предпросмотр — именно этот дизайн будет конвертирован",
+  "PDF downloaded": "PDF скачан",
+  "PDF output": "Вид PDF",
+  "Paste some HTML or upload an .html file first.": "Сначала вставьте HTML-код или загрузите файл .html.",
+  "Paste your HTML here, or upload an .html file above...": "Вставьте HTML-код сюда или загрузите файл .html выше...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Заново верстает содержимое настоящим текстом PDF, который можно выделять и искать, с упрощённым оформлением.",
+  "Render the HTML design first, then convert it to PDF": "Сначала отрисуйте HTML-дизайн, затем конвертируйте его в PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Отрисовывает страницу с полным CSS — цветами, шрифтами, фоном и макетом — точно как в предпросмотре. Рекомендуется.",
+  "Selectable text": "Выделяемый текст",
+  "Upload .html file": "Загрузить файл .html",
+  "Upload an .html file above, or switch to the": "Загрузите файл .html выше или перейдите на вкладку",
+  "Your design preview will appear here": "Здесь появится предпросмотр дизайна",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "и вставьте разметку. Страница отрисуется здесь с полным дизайном — именно так будет выглядеть ваш PDF."
+}

@@ -7,6 +7,8 @@ import { renderPdfPreviews, type PagePreview } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 import { trimCanvas, renderTextSignature } from '@/lib/signature-render';
 import { stampImage } from '@/lib/workspace';
+import { msg } from '@/i18n/format';
+import { useT } from '@/i18n/I18nProvider';
 import { PanelHeader, ApplyButton, Loading, inputClass, type PanelProps } from './shared';
 
 /** The handwriting face a typed name is turned into when the user asks for it. */
@@ -25,6 +27,7 @@ type Kind = 'draw' | 'type';
  * by dragging it, not by guessing where whitespace is.
  */
 export default function SignPanel({ file, busy, apply }: PanelProps) {
+  const t = useT();
   const [previews, setPreviews] = useState<PagePreview[]>([]);
   const [loading, setLoading] = useState(true);
   const [current, setCurrent] = useState(0);
@@ -123,17 +126,17 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
     try {
       let canvas: HTMLCanvasElement | null;
       if (kind === 'draw') {
-        if (!canvasRef.current || !hasDrawn.current) throw new Error('Draw your signature first.');
+        if (!canvasRef.current || !hasDrawn.current) throw new Error(msg('Draw your signature first.'));
         canvas = trimCanvas(canvasRef.current, 6);
       } else {
-        if (!name.trim()) throw new Error('Type your name first.');
-        if (handwritten === null) throw new Error('Choose whether it should be handwritten.');
+        if (!name.trim()) throw new Error(msg('Type your name first.'));
+        if (handwritten === null) throw new Error(msg('Choose whether it should be handwritten.'));
         canvas = await renderTextSignature(name, {
           fontFamily: handwritten ? handwriting.style.fontFamily : TYPED_FONT,
           color: INK,
         });
       }
-      if (!canvas || canvas.width === 0) throw new Error('There is nothing to place yet.');
+      if (!canvas || canvas.width === 0) throw new Error(msg('There is nothing to place yet.'));
 
       setStamp({ url: canvas.toDataURL('image/png'), aspect: canvas.width / canvas.height });
       setMoved(null);
@@ -187,7 +190,7 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
         width: box.width,
         height: box.width / stamp.aspect,
       }),
-      `Signed page ${current + 1}`,
+      t('Signed page {n}', { n: current + 1 }),
     );
     clearPad();
   };
@@ -195,11 +198,11 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
   return (
     <>
       <PanelHeader
-        title="Sign"
-        hint="Draw or type a signature, then drag it where it belongs."
+        title={t('Sign')}
+        hint={t('Draw or type a signature, then drag it where it belongs.')}
         action={
           <ApplyButton onClick={run} disabled={!stamp || !box} busy={busy}>
-            Place signature
+            {t('Place signature')}
           </ApplyButton>
         }
       />
@@ -208,7 +211,7 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
         {/* Make the signature */}
         <div className="border-b lg:border-b-0 lg:border-r border-border p-4 space-y-3 overflow-y-auto">
           <div className="flex gap-1.5">
-            {([['draw', 'Draw', PenLine], ['type', 'Type', TypeIcon]] as const).map(([value, label, Icon]) => (
+            {([['draw', t('Draw'), PenLine], ['type', t('Type'), TypeIcon]] as const).map(([value, label, Icon]) => (
               <button
                 key={value}
                 onClick={() => { setKind(value); setStamp(null); setMoved(null); }}
@@ -237,7 +240,7 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
                 onClick={clearPad}
                 className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[12px] font-medium border border-border hover:bg-muted transition-colors"
               >
-                <Eraser className="w-3 h-3" /> Clear
+                <Eraser className="w-3 h-3" /> {t('Clear')}
               </button>
             </div>
           ) : (
@@ -245,14 +248,14 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
               <input
                 value={name}
                 onChange={(e) => { setName(e.target.value); setStamp(null); }}
-                placeholder="Your name"
+                placeholder={t('Your name')}
                 className={inputClass}
-                aria-label="Signature name"
+                aria-label={t('Signature name')}
               />
               <div>
-                <p className="text-[12px] font-medium text-foreground mb-1.5">Should it be handwritten?</p>
+                <p className="text-[12px] font-medium text-foreground mb-1.5">{t('Should it be handwritten?')}</p>
                 <div className="flex gap-1.5">
-                  {([[true, 'Yes, handwrite it'], [false, 'No, keep it typed']] as const).map(([value, label]) => (
+                  {([[true, t('Yes, handwrite it')], [false, t('No, keep it typed')]] as const).map(([value, label]) => (
                     <button
                       key={String(value)}
                       onClick={() => { setHandwritten(value); setStamp(null); }}
@@ -280,14 +283,13 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
             onClick={build}
             className="w-full px-3 py-2 rounded-lg text-[13px] font-medium border border-border hover:bg-muted transition-colors"
           >
-            {stamp ? 'Rebuild signature' : 'Put it on the page'}
+            {stamp ? t('Rebuild signature') : t('Put it on the page')}
           </button>
 
-          {error && <p className="text-[12px] text-destructive">{error}</p>}
+          {error && <p className="text-[12px] text-destructive">{t(error)}</p>}
           {stamp && (
             <p className="text-[11px] text-muted-foreground leading-snug">
-              Click the page to move it there, drag it to nudge, or pull the corner to resize.
-              It goes on page {current + 1}.
+              {t('Click the page to move it there, drag it to nudge, or pull the corner to resize. It goes on page {n}.', { n: current + 1 })}
             </p>
           )}
         </div>
@@ -300,16 +302,16 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
                 onClick={() => setCurrent(c => Math.max(0, c - 1))}
                 disabled={current === 0}
                 className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
-                aria-label="Previous page"
+                aria-label={t('Previous page')}
               >
                 <ChevronLeft className="w-3.5 h-3.5" />
               </button>
-              <span className="text-xs text-muted-foreground tabular-nums">Page {current + 1} of {previews.length}</span>
+              <span className="text-xs text-muted-foreground tabular-nums">{t('Page {n} of {total}', { n: current + 1, total: previews.length })}</span>
               <button
                 onClick={() => setCurrent(c => Math.min(previews.length - 1, c + 1))}
                 disabled={current >= previews.length - 1}
                 className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
-                aria-label="Next page"
+                aria-label={t('Next page')}
               >
                 <ChevronRight className="w-3.5 h-3.5" />
               </button>
@@ -318,7 +320,7 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
 
           <div className="flex-1 min-h-0 overflow-auto bg-gray-200/70 p-6 flex justify-center">
             {loading ? (
-              <Loading message="Rendering the document…" />
+              <Loading message={t('Rendering the document…')} />
             ) : page ? (
               <div
                 ref={surface}
@@ -328,7 +330,7 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
                 className={`relative inline-block self-start shadow-xl max-w-full ${stamp ? 'cursor-crosshair' : ''}`}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={page.url} alt={`Page ${current + 1}`} draggable={false} className="block max-w-full h-auto select-none" />
+                <img src={page.url} alt={t('Page {n}', { n: current + 1 })} draggable={false} className="block max-w-full h-auto select-none" />
 
                 {stamp && box && (
                   <div
@@ -342,7 +344,7 @@ export default function SignPanel({ file, busy, apply }: PanelProps) {
                     }}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={stamp.url} alt="Signature" draggable={false} className="w-full h-full select-none" />
+                    <img src={stamp.url} alt={t('Signature')} draggable={false} className="w-full h-full select-none" />
                     <span
                       onPointerDown={(e) => startDrag(e, 'resize')}
                       className="absolute -right-1.5 -bottom-1.5 w-4 h-4 rounded-sm bg-primary text-white flex items-center justify-center cursor-nwse-resize"

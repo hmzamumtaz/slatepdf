@@ -6,8 +6,12 @@ import { ArrowLeft } from 'lucide-react';
 import FileUpload from '@/components/FileUpload';
 import PdfEditor from '@/components/PdfEditor';
 import { downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
+import { useT, useToolHref, useHomeHref } from '@/i18n/I18nProvider';
 
 export default function EditPdfTool() {
+  const t = useT();
+  const homeHref = useHomeHref();
+  const toolHref = useToolHref();
   const [file, setFile] = useState<File | null>(null);
 
   const save = useCallback((bytes: Uint8Array) => {
@@ -21,13 +25,13 @@ export default function EditPdfTool() {
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-4">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-4 h-4" />
-            All tools
+            {t('All tools')}
           </Link>
-          <h1 className="text-xl sm:text-2xl font-bold text-foreground">Edit PDF</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-foreground">{t('Edit PDF')}</h1>
           <p className="text-muted-foreground text-[13px]">
-            Click any line on the page and type. Everything runs in this tab — your file is never uploaded.
+            {t('Click any line on the page and type. Everything runs in this tab — your file is never uploaded.')}
           </p>
         </div>
 
@@ -41,9 +45,8 @@ export default function EditPdfTool() {
               onRemoveFile={() => setFile(null)}
             />
             <p className="mt-6 text-[13px] text-muted-foreground">
-              Editing one file is all this page does. To edit, redact, sign and secure the same document in
-              one sitting, use the{' '}
-              <Link href="/tools/pdf-workspace" className="text-primary hover:underline font-medium">PDF Workspace</Link>.
+              {t('Editing one file is all this page does. To edit, redact, sign and secure the same document in one sitting, use the')}{' '}
+              <Link href={toolHref('pdf-workspace')} className="text-primary hover:underline font-medium">{t('PDF Workspace')}</Link>.
             </p>
           </div>
         ) : (
@@ -55,7 +58,7 @@ export default function EditPdfTool() {
                 onClick={() => setFile(null)}
                 className="text-xs text-muted-foreground hover:text-foreground transition-colors"
               >
-                Change
+                {t('Change')}
               </button>
             }
           />

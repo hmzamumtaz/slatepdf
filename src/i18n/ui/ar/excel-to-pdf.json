@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "تعذّرت قراءة «{name}» كمصنف Excel. تأكد من أنه ملف ‎.xlsx صالح.",
+  "Convert to PDF": "تحويل إلى PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "ملفات ‎.xls القديمة غير مدعومة. احفظ الملف بصيغة ‎.xlsx في Excel وحاول مرة أخرى.",
+  "No data found in this workbook.": "لم يُعثر على بيانات في هذا المصنف."
+}

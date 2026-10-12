@@ -16,6 +16,12 @@ Live at https://slatepdf.space/ (GitHub `hmzamumtaz/slatepdf`). Next.js 16.3.1, 
 - Verify with: `npx tsc --noEmit`, `npx eslint`, `npm run build`.
 - Commit + push to `origin main` only when the user asks. Vercel deploys on push.
 
+## Languages (i18n)
+- English lives at the root (`/tools/merge-pdf`); es, pt, fr, de, it, id, ru, ar live under `/<lang>/` with translated slugs (`/es/unir-pdf`). Config: `src/i18n/config.ts`. Every home/hub/tool page carries hreflang for all languages + x-default (`src/i18n/alternates.ts`), and the sitemap lists every version.
+- Translated page content: `src/i18n/content/<lang>.json`, generated from English by `node scripts/export-en-content.mjs` (sources: `tools-data.ts`, `tool-seo.ts`, `tool-howto.ts`, `src/i18n/site-en.ts`). Tool interfaces wrap text in `t('…')` (components) or `msg('…')` (lib code); `node scripts/check-i18n.mjs --write-en` extracts them to `src/i18n/ui/en/`, and each language needs `src/i18n/ui/<lang>/`.
+- **Whenever you change tool copy or UI text:** re-run both scripts, translate the new/changed strings in every language, and make `npm run check:i18n` pass before finishing. Never ship a language with missing strings; never use `${}` inside `t()` — use `{placeholders}`.
+- The blog and legal pages are English-only; translated pages label links to them "(English)".
+
 ## Blog file layout
 - Posts live in `src/lib/blog/posts/`. One `export const newPostsNN: BlogPost[] = [...]` per batch file, newest batch imported first in `src/lib/blog/posts/index.ts` (`allPosts` is flattened into the newest-first `posts` in `src/lib/blog/index.ts`; sitemap, blog index, related links and JSON-LD all derive from `posts` automatically).
 - `related` arrays are safe to point at any slug; `relatedPosts()` silently skips missing ones. Still: only list slugs that exist.
@@ -59,7 +65,7 @@ Run tsc/eslint/build (commands above), confirm the new slug appears in the built
 
 ## PART 2 — Traffic operations (fix + maintain)
 
-- **Google Search Console**: domain is verified (`verification.google` metadata exists). The site is static-exported; `sitemap.xml` and `robots.txt` are auto-generated (`src/app/sitemap.ts`, `src/app/robots.ts`) — never hand-edit a URL list. Verify: Pages → Indexed in GSC; request re-indexing for new/updated URLs.
+- **Google Search Console**: domain is verified (`verification.google` metadata exists). Every page is prerendered at build time (Vercel runs standard Next.js so `/api/rating` can work; the Electron app builds a static export with `STATIC_EXPORT=1`); `sitemap.xml` and `robots.txt` are auto-generated (`src/app/sitemap.ts`, `src/app/robots.ts`) — never hand-edit a URL list. Verify: Pages → Indexed in GSC; request re-indexing for new/updated URLs.
 - **AI / answer-engine visibility (AEO)**: `robots.txt` already allows OAI-SearchBot, ChatGPT-User, PerplexityBot, Google-Extended, ClaudeBot, etc. Keep every article quotable: the 40–60 word direct answer under a clean H2, an FAQ block, list-based steps, and honest "does not truly do X" disclaimers. AI engines reward accurate, citable, no-hype copy.
 - **Content hygiene (the rule that prevents re-creating the 2025 mess)**: 76 near-duplicate articles (device-variant spam, encyclopedia filler, listicles) were deleted — the site went 185 → 109 posts and builds 158 static pages. Never reintroduce: (a) per-device variants of a generic intent that already has a pillar; (b) definition/explainer posts with no tool and no action; (c) listicles/decision posts ("Word vs PDF") that big brands own. Consolidate rather than duplicate.
 - **Performance (Core Web Vitals)**: verify with Lighthouse before/after tool changes; tool pages are heavy (pdf.js, camera pipeline). Keep mobile LCP < 2.5s, INP < 200ms.

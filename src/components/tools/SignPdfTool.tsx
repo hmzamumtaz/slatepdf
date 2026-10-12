@@ -8,6 +8,8 @@ import FileUpload from '@/components/FileUpload';
 import { readFileAsArrayBuffer, downloadBlob, getOutputFilename, getPdfJs, scanPdfForSigning, signPdfWithImage } from '@/lib/pdf-engine';
 import type { SignPageScan } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
+import { useT, useHomeHref } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 import { renderTextSignature, trimCanvas, canvasToPngBytes } from '@/lib/signature-render';
 
 const dancingScript = Dancing_Script({ subsets: ['latin'], weight: '700' });
@@ -21,6 +23,8 @@ function formatBytes(bytes: number): string {
 type SigMode = 'draw' | 'type' | 'image';
 
 export default function SignPdfTool() {
+  const t = useT();
+  const homeHref = useHomeHref();
   const [files, setFiles] = useState<File[]>([]);
   const [pages, setPages] = useState<SignPageScan[]>([]);
   const [loadingPages, setLoadingPages] = useState(false);
@@ -62,7 +66,7 @@ export default function SignPdfTool() {
         const scanned = await scanPdfForSigning(files[0], 20, 10, { maxPages: 200 });
         if (!cancelled) setPages(scanned);
       } catch {
-        if (!cancelled) setPageError('Could not read the PDF. The file may be corrupted or encrypted.');
+        if (!cancelled) setPageError(msg('Could not read the PDF. The file may be corrupted or encrypted.'));
       } finally {
         if (!cancelled) setLoadingPages(false);
       }
@@ -184,7 +188,7 @@ export default function SignPdfTool() {
     setError(null);
     try {
       const pngBytes = await signaturePngBytes;
-      if (!pngBytes) throw new Error('Could not render signature');
+      if (!pngBytes) throw new Error(msg('Could not render signature'));
       const wb = workingBytes.current;
       const source = wb ? new File([wb.slice() as unknown as BlobPart], files[0].name, { type: 'application/pdf' }) : files[0];
       const blob = await signPdfWithImage(source, selectedPage, pngBytes, signaturePlacement, sigScale);
@@ -209,16 +213,16 @@ export default function SignPdfTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+        <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-indigo-50"><PenTool className="w-6 h-6 text-indigo-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Sign PDF</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Add your signature to a PDF document — draw, type, or upload an image</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Sign PDF')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base">{t('Add your signature to a PDF document — draw, type, or upload an image')}</p>
             </div>
           </div>
         </div>
@@ -235,11 +239,11 @@ export default function SignPdfTool() {
           {files.length > 0 && (
             <div className="p-4 bg-gray-50 rounded-xl border border-border space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">File</span>
+                <span className="text-sm text-muted-foreground">{t('File')}</span>
                 <span className="text-sm font-medium text-foreground">{files[0].name}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Pages</span>
+                <span className="text-sm text-muted-foreground">{t('Pages')}</span>
                 <span className="text-sm font-medium text-foreground">{pages.length || '...'}</span>
               </div>
             </div>
@@ -248,12 +252,12 @@ export default function SignPdfTool() {
           {/* Signature mode tabs */}
           {files.length > 0 && (
             <div>
-              <label className="block text-sm font-semibold text-foreground mb-6">Create your signature</label>
+              <label className="block text-sm font-semibold text-foreground mb-6">{t('Create your signature')}</label>
               <div className="flex gap-2 mb-4">
-                {([['draw', 'Draw', PenTool], ['type', 'Type', Type], ['image', 'Image', FileImage]] as const).map(([mode, label, Icon]) => (
+                {([['draw', msg('Draw'), PenTool], ['type', msg('Type'), Type], ['image', msg('Image'), FileImage]] as const).map(([mode, label, Icon]) => (
                   <button key={mode} onClick={() => setSigMode(mode)}
                     className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border-2 transition-all ${sigMode === mode ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-border text-muted-foreground hover:border-gray-300'}`}>
-                    <Icon className="w-4 h-4" /> {label}
+                    <Icon className="w-4 h-4" /> {t(label)}
                   </button>
                 ))}
               </div>
@@ -265,22 +269,22 @@ export default function SignPdfTool() {
                       className="w-full cursor-crosshair touch-none" style={{ height: 150 }} />
                   </div>
                   <button onClick={clearDrawCanvas} className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1.5">
-                    <RefreshCw className="w-3 h-3" /> Clear canvas
+                    <RefreshCw className="w-3 h-3" /> {t('Clear canvas')}
                   </button>
                 </div>
               )}
 
               {sigMode === 'type' && (
                 <div className="space-y-3">
-                  <input type="text" value={typeValue} onChange={(e) => setTypeValue(e.target.value)} placeholder="Type your full name"
+                  <input type="text" value={typeValue} onChange={(e) => setTypeValue(e.target.value)} placeholder={t('Type your full name')}
                     className="w-full px-4 py-3 border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" />
                   <div className="flex items-center gap-4">
                     <div className="flex-1">
-                      <label className="block text-xs text-muted-foreground mb-1">Font size</label>
+                      <label className="block text-xs text-muted-foreground mb-1">{t('Font size')}</label>
                       <input type="range" min={24} max={72} value={typeFontSize} onChange={(e) => setTypeFontSize(Number(e.target.value))} className="w-full accent-indigo-500" />
                     </div>
                     <div>
-                      <label className="block text-xs text-muted-foreground mb-1">Color</label>
+                      <label className="block text-xs text-muted-foreground mb-1">{t('Color')}</label>
                       <input type="color" value={typeColor} onChange={(e) => setTypeColor(e.target.value)} className="w-8 h-8 rounded border border-border cursor-pointer" />
                     </div>
                   </div>
@@ -295,12 +299,12 @@ export default function SignPdfTool() {
               {sigMode === 'image' && (
                 <div className="space-y-3">
                   <label className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 border-dashed border-border text-sm font-medium text-muted-foreground hover:border-indigo-300 hover:text-indigo-600 cursor-pointer transition-all">
-                    <Upload className="w-4 h-4" /> Upload signature image
+                    <Upload className="w-4 h-4" /> {t('Upload signature image')}
                     <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
                   </label>
                   {uploadedImage && (
                     <div className="p-4 bg-white border border-border rounded-xl flex items-center justify-center">
-                      <img src={uploadedImage} alt="Signature" className="max-h-24 object-contain" />
+                      <img src={uploadedImage} alt={t('Signature')} className="max-h-24 object-contain" />
                     </div>
                   )}
                 </div>
@@ -309,8 +313,8 @@ export default function SignPdfTool() {
               {previewDataUrl && (
                 <div className="mt-4 p-3 bg-white border border-border rounded-xl flex items-center gap-3">
                   <Eye className="w-4 h-4 text-muted-foreground" />
-                  <img src={previewDataUrl} alt="Signature preview" className="h-10 object-contain" />
-                  <span className="text-xs text-muted-foreground">Preview of your signature</span>
+                  <img src={previewDataUrl} alt={t('Signature preview')} className="h-10 object-contain" />
+                  <span className="text-xs text-muted-foreground">{t('Preview of your signature')}</span>
                 </div>
               )}
             </div>
@@ -319,14 +323,14 @@ export default function SignPdfTool() {
           {/* Page selection */}
           {pages.length > 0 && (
             <div>
-              <label className="block text-sm font-semibold text-foreground mb-6">Select a page and place your signature</label>
+              <label className="block text-sm font-semibold text-foreground mb-6">{t('Select a page and place your signature')}</label>
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
                 {pages.map((p) => (
                   <button key={p.page} onClick={(e) => handlePageClick(e, p.page)}
                     className={`relative rounded-xl overflow-hidden border-2 transition-all ${selectedPage === p.page ? 'border-indigo-500 ring-2 ring-indigo-500/20' : 'border-border hover:border-gray-300'}`}>
-                    <img src={p.url} alt={`Page ${p.page}`} className="w-full h-auto block" />
+                    <img src={p.url} alt={t('Page {page}', { page: p.page })} className="w-full h-auto block" />
                     <div className="absolute bottom-0 left-0 right-0 py-1 px-1.5 bg-gradient-to-t from-black/60 to-transparent">
-                      <span className="text-[10px] font-medium text-white">Page {p.page}</span>
+                      <span className="text-[10px] font-medium text-white">{t('Page {page}', { page: p.page })}</span>
                     </div>
                   </button>
                 ))}
@@ -338,7 +342,7 @@ export default function SignPdfTool() {
           {selectedPage && signaturePlacement && previewDataUrl && (
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <label className="text-sm font-semibold text-foreground">Position & size</label>
+                <label className="text-sm font-semibold text-foreground">{t('Position & size')}</label>
                 <div className="flex items-center gap-2">
                   <button onClick={() => setSigScale(s => Math.max(0.5, s - 0.1))} className="p-1.5 rounded-lg border border-border hover:bg-gray-50"><ZoomOut className="w-4 h-4" /></button>
                   <span className="text-xs text-muted-foreground w-12 text-center">{Math.round(sigScale * 100)}%</span>
@@ -352,8 +356,8 @@ export default function SignPdfTool() {
                   const y = ((e.clientY - rect.top) / rect.height) * 100;
                   setSignaturePlacement(prev => prev ? { ...prev, x: Math.max(0, Math.min(85, x - 7.5)), y: Math.max(0, Math.min(90, y - 2.5)) } : null);
                 }}>
-                <img src={pages.find(p => p.page === selectedPage)?.url || ''} alt={`Page ${selectedPage}`} className="w-full h-auto block" />
-                <img src={previewDataUrl} alt="Signature"
+                <img src={pages.find(p => p.page === selectedPage)?.url || ''} alt={t('Page {page}', { page: selectedPage })} className="w-full h-auto block" />
+                <img src={previewDataUrl} alt={t('Signature')}
                   className="absolute pointer-events-none"
                   style={{
                     left: `${signaturePlacement.x}%`,
@@ -369,21 +373,21 @@ export default function SignPdfTool() {
           {error && (
             <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
               <AlertCircle className="w-5 h-5 text-destructive shrink-0" />
-              <p className="text-sm text-destructive">{error}</p>
+              <p className="text-sm text-destructive">{t(error)}</p>
             </div>
           )}
 
           {processing && progress && (
             <div className="p-4 bg-indigo-50 border border-indigo-200 rounded-xl flex items-center gap-3 animate-fade-in">
               <Loader2 className="w-4 h-4 animate-spin text-indigo-600" />
-              <p className="text-sm font-medium text-indigo-800">{progress}</p>
+              <p className="text-sm font-medium text-indigo-800">{t(progress)}</p>
             </div>
           )}
 
           {files.length > 0 && (
             <button onClick={handleSign} disabled={processing || !canSign}
               className="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white hover:shadow-lg hover:shadow-indigo-500/25 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
-              {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> Signing...</> : <><Download className="w-4 h-4" /> Sign & Download PDF</>}
+              {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('Signing...')}</> : <><Download className="w-4 h-4" /> {t('Sign & Download PDF')}</>}
             </button>
           )}
         </div>

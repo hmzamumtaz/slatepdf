@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "العودة إلى كل الأدوات",
+  "Convert to PDF": "تحويل إلى PDF",
+  "Converting...": "جارٍ التحويل...",
+  "Design preview": "معاينة التصميم",
+  "Exact design": "تصميم مطابق",
+  "HTML code": "شيفرة HTML",
+  "HTML design preview": "معاينة تصميم HTML",
+  "HTML to PDF": "تحويل HTML إلى PDF",
+  "Live preview — this is the design that will be converted": "معاينة مباشرة: هذا هو التصميم الذي سيُحوَّل",
+  "PDF downloaded": "تم تنزيل PDF",
+  "PDF output": "مخرجات PDF",
+  "Paste some HTML or upload an .html file first.": "الصق شيفرة HTML أو حمّل ملف ‎.html أولًا.",
+  "Paste your HTML here, or upload an .html file above...": "الصق شيفرة HTML هنا، أو حمّل ملف ‎.html أعلاه...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "يعيد تنضيد المحتوى كنص PDF حقيقي يمكنك تحديده والبحث فيه، مع تنسيق مبسّط.",
+  "Render the HTML design first, then convert it to PDF": "اعرض تصميم HTML أولًا، ثم حوّله إلى PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "يعرض الصفحة بكامل CSS، من ألوان وخطوط وخلفيات وتخطيط، تمامًا كما في المعاينة. موصى به.",
+  "Selectable text": "نص قابل للتحديد",
+  "Upload .html file": "تحميل ملف ‎.html",
+  "Upload an .html file above, or switch to the": "حمّل ملف ‎.html أعلاه، أو انتقل إلى تبويب",
+  "Your design preview will appear here": "ستظهر معاينة التصميم هنا",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "والصق الشيفرة. تُعرض الصفحة هنا بتصميمها الكامل، تمامًا كما سيبدو ملف PDF."
+}

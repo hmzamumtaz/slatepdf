@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "In PDF umwandeln",
+  "Converted {slides} slide including {images} image.": "{slides} Folie mit {images} Bild umgewandelt.",
+  "Converted {slides} slide including {images} images.": "{slides} Folie mit {images} Bildern umgewandelt.",
+  "Converted {slides} slide.": "{slides} Folie umgewandelt.",
+  "Converted {slides} slides including {images} image.": "{slides} Folien mit {images} Bild umgewandelt.",
+  "Converted {slides} slides including {images} images.": "{slides} Folien mit {images} Bildern umgewandelt.",
+  "Converted {slides} slides.": "{slides} Folien umgewandelt.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Jede Folie wird in Originalgröße auf einer weißen Seite neu gezeichnet – Text mit echter Position, Größe und Farbe, dazu Bilder, Tabellen und gruppierte Formen.",
+  "Rendering slide {current} of {total}...": "Folie {current} von {total} wird gerendert …"
+}

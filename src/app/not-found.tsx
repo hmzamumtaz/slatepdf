@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { tools } from '@/lib/tools-data';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { getNav } from '@/i18n/nav';
 
 export const metadata: Metadata = {
   title: 'Page Not Found',
@@ -8,13 +11,16 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-export default function NotFound() {
+export default async function NotFound() {
+  const nav = await getNav('en');
   const popularTools = tools.filter((t) =>
     ['merge-pdf', 'compress-pdf', 'split-pdf', 'pdf-to-word', 'sign-pdf', 'edit-pdf'].includes(t.slug)
   );
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center px-4">
+    <>
+    <Header nav={nav} />
+    <main className="flex-1 min-h-[60vh] flex items-center justify-center px-4">
       <div className="text-center max-w-lg">
         <p className="text-6xl font-bold text-gray-200 mb-4">404</p>
         <h1 className="text-2xl font-bold text-foreground mb-3">Page not found</h1>
@@ -41,6 +47,8 @@ export default function NotFound() {
           Go to Homepage
         </Link>
       </div>
-    </div>
+    </main>
+    <Footer nav={nav} />
+    </>
   );
 }

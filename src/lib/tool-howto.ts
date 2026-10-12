@@ -135,6 +135,17 @@ const howTos: Record<string, Omit<ToolHowTo, 'benefits'> & { benefits?: string[]
       'Download one PDF that contains every image',
     ],
   },
+  'scan-pdf': {
+    title: 'How to scan a document to PDF with your phone',
+    intro: 'Scan PDF turns your phone or laptop camera into a document scanner: it finds the page edges, straightens the page and cleans it up, then saves a PDF you can make searchable.',
+    steps: [
+      'Allow camera access, or add photos you already took',
+      'Hold the page in view — the edges are detected and the page is cropped and straightened',
+      'Review each page: re-crop, rotate, pick a filter such as B&W or Whiteboard, or retake it',
+      'Choose the page size and file size, turn on text recognition (OCR) if you want it, and save as PDF or JPG',
+    ],
+    benefits: [PRIVATE, FREE, 'Scans stay on your device, including the copies kept in Recent scans'],
+  },
   'word-to-pdf': {
     title: 'How to convert Word to PDF',
     intro: 'Word to PDF turns .docx files into PDFs in your browser. It keeps your text, headings, lists and tables, but re-typesets them, so complex layouts and custom fonts will not match the original exactly.',

@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Autor: {value}",
+  "Back to all tools": "Voltar para todas as ferramentas",
+  "Changed": "Alterado",
+  "Compare Another": "Comparar outros",
+  "Compare PDF": "Comparar PDF",
+  "Compare PDFs": "Comparar PDFs",
+  "Compare two PDFs and see the differences": "Compare dois PDFs e veja as diferenças",
+  "Comparing...": "Comparando...",
+  "Comparison complete": "Comparação concluída",
+  "Creator: {value}": "Criador: {value}",
+  "Differing pages": "Páginas diferentes",
+  "File 1": "Arquivo 1",
+  "File 2": "Arquivo 2",
+  "Files are identical": "Os arquivos são idênticos",
+  "Original": "Original",
+  "Page {page}": "Página {page}",
+  "Pages: {pages} | Size: {size}": "Páginas: {pages} | Tamanho: {size}",
+  "Title: {value}": "Título: {value}",
+  "similarity: {value}%": "semelhança: {value}%",
+  "{count} page differ": "{count} página diferente",
+  "{count} pages differ": "{count} páginas diferentes"
+}

@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Masukkan urutan halaman baru (dipisahkan koma, mis., 3,1,2,4,5)",
+  "Organize PDF": "Atur PDF",
+  "Please enter a page order": "Masukkan urutan halaman",
+  "Preview in new order:": "Pratinjau dengan urutan baru:",
+  "Total pages: {total} | Reordered: {count}": "Total halaman: {total} | Diurutkan ulang: {count}",
+  "e.g., 3,1,2,4,5": "mis., 3,1,2,4,5"
+}

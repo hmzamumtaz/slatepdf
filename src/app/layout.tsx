@@ -4,10 +4,9 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
 import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/schema";
+import { languageAlternates } from "@/i18n/alternates";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +36,8 @@ export const metadata: Metadata = {
   },
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME }],
-  alternates: { canonical: '/' },
+  // The homepage is a client component, so its hreflang set lives here.
+  alternates: { canonical: '/', languages: languageAlternates({ kind: 'home' }) },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -109,9 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>

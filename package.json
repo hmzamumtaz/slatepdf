@@ -10,6 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "check:i18n": "node scripts/export-en-content.mjs --check && node scripts/check-i18n.mjs",
     "electron:dev": "STATIC_EXPORT=1 next build && electron .",
     "electron:build": "STATIC_EXPORT=1 next build && electron-builder --mac",
     "electron:build:dir": "STATIC_EXPORT=1 next build && electron-builder --mac --dir"

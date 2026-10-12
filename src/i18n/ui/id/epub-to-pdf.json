@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Kembali ke semua alat",
+  "Convert EPUB ebooks to PDF documents": "Ubah ebook EPUB menjadi dokumen PDF",
+  "Convert to PDF": "Ubah ke PDF",
+  "Converting...": "Mengonversi...",
+  "EPUB to PDF": "EPUB ke PDF",
+  "Exact design": "Desain persis",
+  "Extracting EPUB content...": "Mengambil konten EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Mengambil isi teks dan menyusunnya ulang menjadi PDF yang rapi dan bisa dicari. Paling cocok untuk novel dan buku yang banyak teksnya.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Mempertahankan tata letak, gambar, dan gaya inline setiap bab. Stylesheet tertaut dan font khusus yang disematkan tidak dimuat, sehingga beralih ke gaya bawaan. Paling cocok untuk buku bergambar.",
+  "PDF downloaded": "PDF diunduh",
+  "PDF output": "Hasil PDF",
+  "Selectable text": "Teks yang bisa dipilih",
+  "Upload .epub file": "Unggah file .epub",
+  "Upload an EPUB file first.": "Unggah file EPUB terlebih dahulu."
+}

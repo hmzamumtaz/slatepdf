@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Автор: {value}",
+  "Back to all tools": "Ко всем инструментам",
+  "Changed": "Изменённый",
+  "Compare Another": "Сравнить другие",
+  "Compare PDF": "Сравнить PDF",
+  "Compare PDFs": "Сравнить PDF",
+  "Compare two PDFs and see the differences": "Сравните два PDF и посмотрите, чем они отличаются",
+  "Comparing...": "Сравнение...",
+  "Comparison complete": "Сравнение завершено",
+  "Creator: {value}": "Создатель: {value}",
+  "Differing pages": "Отличающиеся страницы",
+  "File 1": "Файл 1",
+  "File 2": "Файл 2",
+  "Files are identical": "Файлы идентичны",
+  "Original": "Оригинал",
+  "Page {page}": "Страница {page}",
+  "Pages: {pages} | Size: {size}": "Страниц: {pages} | Размер: {size}",
+  "Title: {value}": "Название: {value}",
+  "similarity: {value}%": "сходство: {value}%",
+  "{count} page differ": "Отличается {count} страница",
+  "{count} pages differ": "Отличающихся страниц: {count}"
+}

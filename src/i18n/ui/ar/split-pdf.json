@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "نطاقات الصفحات (مثال: 1-3، 5، 7-10)",
+  "Please enter valid page ranges": "يُرجى إدخال نطاقات صفحات صالحة",
+  "Preview of pages in ranges:": "معاينة الصفحات ضمن النطاقات:",
+  "Split PDF": "تقسيم PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "إجمالي الصفحات: {total} | الصفحات ضمن النطاقات: {count}"
+}

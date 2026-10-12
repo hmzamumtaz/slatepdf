@@ -10,6 +10,9 @@ import { posts } from '@/lib/blog';
 import { generateBreadcrumbSchema, generateToolRatingSchema } from '@/lib/schema';
 import { getPageRating, MIN_PUBLIC_VOTES } from '@/lib/ratings';
 import { SITE_URL } from '@/lib/site';
+import { DEFAULT_LOCALE, type AnyLocale } from '@/i18n/config';
+import { categoryName, fill, getContent, toolContent } from '@/i18n/content';
+import { homeHref, toolHref, toolsHubHref } from '@/i18n/paths';
 
 /**
  * Server-rendered SEO content for tool pages: breadcrumbs, a tool-specific
@@ -17,24 +20,33 @@ import { SITE_URL } from '@/lib/site';
  * A server component on purpose — it reads blog data, which must never be
  * shipped to the browser. `guide` replaces the how-to with bespoke content.
  */
-export default async function ToolPageSEO({ slug, guide }: { slug: string; guide?: ReactNode }) {
+export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE }: { slug: string; guide?: ReactNode; locale?: AnyLocale }) {
   const tool = getToolBySlug(slug);
   if (!tool) return null;
 
-  const toolsUrl = `${SITE_URL}/tools`;
-  const categoryHref = `/tools#${categoryAnchor(tool.category)}`;
+  const english = locale === DEFAULT_LOCALE;
+  const content = await getContent(locale);
+  const site = content.site;
+  const local = toolContent(content, slug);
+  const name = local.name;
+  const category = categoryName(content, tool.category);
+  const hubHref = toolsHubHref(locale);
+  const categoryHref = `${hubHref}#${categoryAnchor(tool.category)}`;
+  const pageUrl = `${SITE_URL}${toolHref(locale, slug)}`;
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: SITE_URL },
-    { name: 'PDF Tools', url: toolsUrl },
-    { name: tool.category, url: `${SITE_URL}${categoryHref}` },
-    { name: tool.name, url: `${toolsUrl}/${slug}` },
+    { name: site.breadcrumbHome, url: `${SITE_URL}${english ? '' : homeHref(locale)}` },
+    { name: site.breadcrumbTools, url: `${SITE_URL}${hubHref}` },
+    { name: category, url: `${SITE_URL}${categoryHref}` },
+    { name, url: pageUrl },
   ]);
 
-  const faqs = getToolFaqs(slug);
-  const howTo = getToolHowTo(slug);
-  const guides = posts.filter((p) => p.tool === slug);
-  const nextTools = getNextTools(slug, 4);
+  // English reads the source modules; other languages read their content file.
+  const faqs = english ? getToolFaqs(slug) : local.faqs;
+  const howTo = english ? getToolHowTo(slug) : local.howTo;
+  // Guides are English articles, so only the English page lists them.
+  const guides = english ? posts.filter((p) => p.tool === slug) : [];
+  const nextTools = getNextTools(slug, 4).map(t => ({ ...t, ...toolContent(content, t.slug), href: toolHref(locale, t.slug) }));
   // Prerendered and refreshed hourly; the widget also fetches the live figure.
   const rating = await getPageRating(slug);
 
@@ -42,15 +54,16 @@ export default async function ToolPageSEO({ slug, guide }: { slug: string; guide
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {rating.count >= MIN_PUBLIC_VOTES && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateToolRatingSchema(tool, rating)) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...generateToolRatingSchema({ ...tool, name, description: local.description }, rating), url: pageUrl }) }} />
       )}
-      <RateTool slug={slug} toolName={tool.name} initial={rating} />
+      <RateTool slug={slug} toolName={name} initial={rating} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4">
         <Breadcrumbs
+          home={{ label: site.breadcrumbHome, href: homeHref(locale) }}
           items={[
-            { label: 'PDF Tools', href: '/tools' },
-            { label: tool.category, href: categoryHref },
-            { label: tool.name },
+            { label: site.breadcrumbTools, href: hubHref },
+            { label: category, href: categoryHref },
+            { label: name },
           ]}
         />
       </div>
@@ -71,7 +84,7 @@ export default async function ToolPageSEO({ slug, guide }: { slug: string; guide
           </ol>
 
           <div className="rounded-2xl bg-gray-50 border border-border p-6">
-            <h3 className="text-lg font-semibold text-foreground mb-3">Why use {tool.name} here?</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">{fill(site.whyToolHeading, { tool: name })}</h3>
             <ul className="space-y-2 text-gray-600">
               {howTo.benefits.map((b) => (
                 <li key={b} className="flex items-start gap-2">
@@ -87,7 +100,7 @@ export default async function ToolPageSEO({ slug, guide }: { slug: string; guide
       {/* The FAQ is visible on the page, matching the FAQPage structured data. */}
       {faqs.length > 0 && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-4">{tool.name} — frequently asked questions</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">{fill(site.faqHeading, { tool: name })}</h2>
           <div className="divide-y divide-border rounded-2xl border border-border bg-white">
             {faqs.map(f => (
               <details key={f.q} className="group px-5 py-4">
@@ -124,12 +137,12 @@ export default async function ToolPageSEO({ slug, guide }: { slug: string; guide
 
       {nextTools.length > 0 && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <h2 className="text-xl font-bold text-foreground mb-4">Continue with another tool</h2>
+          <h2 className="text-xl font-bold text-foreground mb-4">{site.continueHeading}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {nextTools.map((t) => (
               <Link
                 key={t.slug}
-                href={`/tools/${t.slug}`}
+                href={t.href}
                 className="rounded-xl border border-border bg-white p-4 hover:border-gray-300 hover:shadow-md transition-all"
               >
                 <p className="font-semibold text-foreground mb-1">{t.name}</p>
@@ -138,10 +151,10 @@ export default async function ToolPageSEO({ slug, guide }: { slug: string; guide
             ))}
           </div>
           <Link
-            href="/tools"
+            href={hubHref}
             className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:underline"
           >
-            See all {tools.length} PDF tools <ArrowRight className="w-4 h-4" />
+            {fill(site.seeAllTools, { count: tools.length })} <ArrowRight className="w-4 h-4 rtl:rotate-180" />
           </Link>
         </section>
       )}

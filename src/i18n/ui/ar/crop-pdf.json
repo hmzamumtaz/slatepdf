@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "قص PDF",
+  "Margins (points)": "الهوامش (بالنقاط)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "القيم بالنقاط (البوصة = 72 نقطة). يُقص من كل حافة.",
+  "bottom": "الأسفل",
+  "left": "اليسار",
+  "right": "اليمين",
+  "top": "الأعلى"
+}

@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Ubah ke PDF",
+  "Converted {slides} slide including {images} image.": "{slides} slide dikonversi, termasuk {images} gambar.",
+  "Converted {slides} slide including {images} images.": "{slides} slide dikonversi, termasuk {images} gambar.",
+  "Converted {slides} slide.": "{slides} slide dikonversi.",
+  "Converted {slides} slides including {images} image.": "{slides} slide dikonversi, termasuk {images} gambar.",
+  "Converted {slides} slides including {images} images.": "{slides} slide dikonversi, termasuk {images} gambar.",
+  "Converted {slides} slides.": "{slides} slide dikonversi.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Setiap slide digambar ulang di halaman putih dengan ukuran aslinya — teks dengan posisi, ukuran, dan warna aslinya, ditambah gambar, tabel, dan bentuk yang dikelompokkan.",
+  "Rendering slide {current} of {total}...": "Merender slide {current} dari {total}..."
+}

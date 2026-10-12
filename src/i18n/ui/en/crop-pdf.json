@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Crop PDF",
+  "Margins (points)": "Margins (points)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Values in points (1 inch = 72 points). This crops from each edge.",
+  "bottom": "bottom",
+  "left": "left",
+  "right": "right",
+  "top": "top"
+}

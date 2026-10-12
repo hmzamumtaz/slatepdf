@@ -12,6 +12,7 @@
  */
 
 import type Tesseract from 'tesseract.js';
+import { msg } from '@/i18n/format';
 
 // ---------------------------------------------------------------------------
 // OCR
@@ -191,12 +192,12 @@ export async function terminateOcr(): Promise<void> {
 
 /** A user-facing explanation for a recognition failure. */
 export function ocrErrorMessage(err: unknown): string {
-  const msg = err instanceof Error ? err.message : String(err ?? '');
+  const message = err instanceof Error ? err.message : String(err ?? '');
   const offline = typeof navigator !== 'undefined' && navigator.onLine === false;
-  if (offline || /fetch|network|load|importScripts|traineddata|failed to/i.test(msg)) {
-    return 'Text recognition needs an internet connection the first time to download the language model.';
+  if (offline || /fetch|network|load|importScripts|traineddata|failed to/i.test(message)) {
+    return msg('Text recognition needs an internet connection the first time to download the language model.');
   }
-  return 'Text recognition failed on this image. Try a sharper, well-lit scan and run it again.';
+  return msg('Text recognition failed on this image. Try a sharper, well-lit scan and run it again.');
 }
 
 // ---------------------------------------------------------------------------

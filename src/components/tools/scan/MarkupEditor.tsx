@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Check, Highlighter, Loader2, PenLine, PenTool, Trash2, Type, Undo2, X } from 'lucide-react';
 import { releaseCanvas, type Corner } from '@/lib/document-scanner';
 import { applyMarks, renderPageCanvas, rotatePoint, unrotatePoint, type PageMark, type ScanPage } from '@/lib/scan-session';
+import { useT } from '@/i18n/I18nProvider';
 
 type Tool = 'pen' | 'highlight' | 'text' | 'sign';
 
@@ -86,6 +87,7 @@ function trimSignature(c: HTMLCanvasElement): { src: string; aspect: number } | 
 }
 
 function SignaturePad({ onCancel, onUse }: { onCancel: () => void; onUse: (sig: { src: string; aspect: number }) => void }) {
+  const t = useT();
   const ref = useRef<HTMLCanvasElement>(null);
   const drawing = useRef(false);
   const [empty, setEmpty] = useState(true);
@@ -115,8 +117,8 @@ function SignaturePad({ onCancel, onUse }: { onCancel: () => void; onUse: (sig: 
     <div className="absolute inset-0 z-50 flex flex-col justify-end bg-black/60">
       <div className="rounded-t-3xl bg-gray-900 px-5 pt-4 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">
         <div className="flex items-center justify-between mb-3">
-          <p className="text-base font-bold">Draw your signature</p>
-          <button onClick={onCancel} className="p-2.5 rounded-full hover:bg-white/10" aria-label="Close signature pad"><X className="w-5 h-5" /></button>
+          <p className="text-base font-bold">{t('Draw your signature')}</p>
+          <button onClick={onCancel} className="p-2.5 rounded-full hover:bg-white/10" aria-label={t('Close signature pad')}><X className="w-5 h-5" /></button>
         </div>
         <canvas
           ref={ref}
@@ -155,14 +157,14 @@ function SignaturePad({ onCancel, onUse }: { onCancel: () => void; onUse: (sig: 
             }}
             className="flex-1 min-h-11 rounded-xl bg-white/10 text-sm font-semibold"
           >
-            Clear
+            {t('Clear')}
           </button>
           <button
             disabled={empty}
             onClick={() => { const c = ref.current; const sig = c ? trimSignature(c) : null; if (sig) onUse(sig); }}
             className="flex-1 min-h-11 rounded-xl bg-violet-600 text-sm font-semibold disabled:opacity-40"
           >
-            Use signature
+            {t('Use signature')}
           </button>
         </div>
       </div>
@@ -175,6 +177,7 @@ function SignaturePad({ onCancel, onUse }: { onCancel: () => void; onUse: (sig: 
  * stay sharp and can be undone; rotation is handled when they're stored.
  */
 export default function MarkupEditor({ page, onCancel, onDone }: Props) {
+  const t = useT();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const baseRef = useRef<HTMLCanvasElement | null>(null);
   const marksRef = useRef<PageMark[]>(page.marks.map(m => toDisplay(m, page.rotation)));
@@ -380,12 +383,12 @@ export default function MarkupEditor({ page, onCancel, onDone }: Props) {
 
   const colors = tool === 'highlight' ? HIGHLIGHT_COLORS : PEN_COLORS;
   const activeColor = tool === 'highlight' ? hiColor : penColor;
-  const toolBtn = (t: Tool, label: string, icon: React.ReactNode) => (
+  const toolBtn = (id: Tool, label: string, icon: React.ReactNode) => (
     <button
-      key={t}
-      onClick={() => { setTool(t); setSelected(null); if (t === 'sign' && !savedSig) setPadOpen(true); }}
-      className={`flex flex-col items-center gap-1 min-w-[4rem] min-h-11 px-2 py-1.5 rounded-xl text-[11px] font-semibold ${tool === t ? 'bg-white text-gray-900' : 'text-white/85'}`}
-      aria-pressed={tool === t}
+      key={id}
+      onClick={() => { setTool(id); setSelected(null); if (id === 'sign' && !savedSig) setPadOpen(true); }}
+      className={`flex flex-col items-center gap-1 min-w-[4rem] min-h-11 px-2 py-1.5 rounded-xl text-[11px] font-semibold ${tool === id ? 'bg-white text-gray-900' : 'text-white/85'}`}
+      aria-pressed={tool === id}
     >
       {icon}{label}
     </button>
@@ -394,11 +397,11 @@ export default function MarkupEditor({ page, onCancel, onDone }: Props) {
   return (
     <div className="absolute inset-0 z-30 flex flex-col bg-gray-950 text-white">
       <div className="flex items-center justify-between px-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-2">
-        <button onClick={onCancel} className="p-2.5 rounded-full hover:bg-white/10" aria-label="Cancel markup"><X className="w-6 h-6" /></button>
-        <p className="text-sm font-semibold">Markup</p>
+        <button onClick={onCancel} className="p-2.5 rounded-full hover:bg-white/10" aria-label={t('Cancel markup')}><X className="w-6 h-6" /></button>
+        <p className="text-sm font-semibold">{t('Markup')}</p>
         <div className="flex items-center gap-2">
-          <button onClick={undo} disabled={!view.canUndo} className="p-2.5 rounded-full hover:bg-white/10 disabled:opacity-30" aria-label="Undo"><Undo2 className="w-5 h-5" /></button>
-          <button onClick={finish} className="px-4 py-2 rounded-xl bg-violet-600 font-semibold text-sm flex items-center gap-1.5"><Check className="w-4 h-4" /> Done</button>
+          <button onClick={undo} disabled={!view.canUndo} className="p-2.5 rounded-full hover:bg-white/10 disabled:opacity-30" aria-label={t('Undo')}><Undo2 className="w-5 h-5" /></button>
+          <button onClick={finish} className="px-4 py-2 rounded-xl bg-violet-600 font-semibold text-sm flex items-center gap-1.5"><Check className="w-4 h-4" /> {t('Done')}</button>
         </div>
       </div>
 
@@ -422,16 +425,16 @@ export default function MarkupEditor({ page, onCancel, onDone }: Props) {
             value={textInput.value}
             onChange={e => setTextInput({ ...textInput, value: e.target.value })}
             onKeyDown={e => { if (e.key === 'Enter') finishText(); }}
-            placeholder="Type text to add"
+            placeholder={t('Type text to add')}
             className="flex-1 min-h-11 rounded-xl bg-white/10 px-3 text-sm outline-none"
-            aria-label="Text to add"
+            aria-label={t('Text to add')}
           />
-          <button onClick={finishText} className="min-h-11 px-4 rounded-xl bg-violet-600 text-sm font-semibold">Add</button>
-          <button onClick={() => setTextInput(null)} className="min-h-11 px-3 rounded-xl bg-white/10 text-sm" aria-label="Cancel text"><X className="w-4 h-4" /></button>
+          <button onClick={finishText} className="min-h-11 px-4 rounded-xl bg-violet-600 text-sm font-semibold">{t('Add')}</button>
+          <button onClick={() => setTextInput(null)} className="min-h-11 px-3 rounded-xl bg-white/10 text-sm" aria-label={t('Cancel text')}><X className="w-4 h-4" /></button>
         </div>
       ) : sel && (sel.kind === 'text' || sel.kind === 'image') ? (
         <div className="px-4 pt-3 flex items-center gap-3 max-w-md w-full mx-auto">
-          <span className="text-xs font-semibold w-10">Size</span>
+          <span className="text-xs font-semibold w-10">{t('Size')}</span>
           <input
             type="range"
             min={sel.kind === 'text' ? 0.012 : 0.08}
@@ -441,35 +444,35 @@ export default function MarkupEditor({ page, onCancel, onDone }: Props) {
             onChange={e => resizeSelected(Number(e.target.value))}
             onPointerUp={() => commit(marksRef.current.slice())}
             className="flex-1 accent-violet-500"
-            aria-label="Size"
+            aria-label={t('Size')}
           />
           {sel.kind === 'text' && (
-            <button onClick={() => setTextInput({ x: sel.x, y: sel.y, value: sel.text, index: selected })} className="min-h-11 px-3 rounded-xl bg-white/10 text-xs font-semibold">Edit</button>
+            <button onClick={() => setTextInput({ x: sel.x, y: sel.y, value: sel.text, index: selected })} className="min-h-11 px-3 rounded-xl bg-white/10 text-xs font-semibold">{t('Edit')}</button>
           )}
-          <button onClick={deleteSelected} className="min-h-11 px-3 rounded-xl bg-red-500/20 text-red-300" aria-label="Delete selected"><Trash2 className="w-4 h-4" /></button>
+          <button onClick={deleteSelected} className="min-h-11 px-3 rounded-xl bg-red-500/20 text-red-300" aria-label={t('Delete selected')}><Trash2 className="w-4 h-4" /></button>
         </div>
       ) : (
         <div className="px-4 pt-3 flex items-center justify-center gap-3">
           {tool !== 'sign' && colors.map(c => (
-            <button key={c} onClick={() => (tool === 'highlight' ? setHiColor(c) : setPenColor(c))} className={`w-9 h-9 rounded-full ring-2 ${activeColor === c ? 'ring-white' : 'ring-transparent'}`} style={{ backgroundColor: c }} aria-label={`Colour ${c}`} />
+            <button key={c} onClick={() => (tool === 'highlight' ? setHiColor(c) : setPenColor(c))} className={`w-9 h-9 rounded-full ring-2 ${activeColor === c ? 'ring-white' : 'ring-transparent'}`} style={{ backgroundColor: c }} aria-label={t('Colour {color}', { color: c })} />
           ))}
           {tool === 'pen' && (
-            <input type="range" min={0.0015} max={0.012} step={0.0005} value={penWidth} onChange={e => setPenWidth(Number(e.target.value))} className="w-28 accent-violet-500" aria-label="Pen width" />
+            <input type="range" min={0.0015} max={0.012} step={0.0005} value={penWidth} onChange={e => setPenWidth(Number(e.target.value))} className="w-28 accent-violet-500" aria-label={t('Pen width')} />
           )}
           {tool === 'sign' && (
-            <p className="text-xs text-white/70">{savedSig ? 'Tap the page to place your signature.' : 'Draw your signature first.'} <button onClick={() => setPadOpen(true)} className="underline">{savedSig ? 'New signature' : 'Draw'}</button></p>
+            <p className="text-xs text-white/70">{savedSig ? t('Tap the page to place your signature.') : t('Draw your signature first.')} <button onClick={() => setPadOpen(true)} className="underline">{savedSig ? t('New signature') : t('Draw')}</button></p>
           )}
         </div>
       )}
       <p className="text-center text-[11px] text-white/55 px-6 pt-2">
-        {tool === 'text' ? 'Tap where the text should go. Drag text to move it.' : tool === 'sign' ? 'Drag the signature to move it; use Size to resize.' : 'Draw with your finger.'}
+        {tool === 'text' ? t('Tap where the text should go. Drag text to move it.') : tool === 'sign' ? t('Drag the signature to move it; use Size to resize.') : t('Draw with your finger.')}
       </p>
 
       <div className="flex justify-center gap-1 px-2 pt-2 pb-[calc(env(safe-area-inset-bottom)+0.75rem)]">
-        {toolBtn('pen', 'Pen', <PenLine className="w-5 h-5" />)}
-        {toolBtn('highlight', 'Highlight', <Highlighter className="w-5 h-5" />)}
-        {toolBtn('text', 'Text', <Type className="w-5 h-5" />)}
-        {toolBtn('sign', 'Sign', <PenTool className="w-5 h-5" />)}
+        {toolBtn('pen', t('Pen'), <PenLine className="w-5 h-5" />)}
+        {toolBtn('highlight', t('Highlight'), <Highlighter className="w-5 h-5" />)}
+        {toolBtn('text', t('Text'), <Type className="w-5 h-5" />)}
+        {toolBtn('sign', t('Sign'), <PenTool className="w-5 h-5" />)}
       </div>
 
       {padOpen && (

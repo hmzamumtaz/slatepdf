@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "تحويل إلى PDF",
+  "Converted {slides} slide including {images} image.": "حُوّلت {slides} شريحة تتضمن {images} صورة.",
+  "Converted {slides} slide including {images} images.": "حُوّلت {slides} شريحة تتضمن صورًا (العدد: {images}).",
+  "Converted {slides} slide.": "حُوّلت {slides} شريحة.",
+  "Converted {slides} slides including {images} image.": "عدد الشرائح المحوّلة: {slides}، وتتضمن {images} صورة.",
+  "Converted {slides} slides including {images} images.": "عدد الشرائح المحوّلة: {slides}، وعدد الصور: {images}.",
+  "Converted {slides} slides.": "عدد الشرائح المحوّلة: {slides}.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "تُعاد رسم كل شريحة على صفحة بيضاء بحجمها الأصلي، بالنص في موضعه الحقيقي وبحجمه ولونه، إضافة إلى الصور والجداول والأشكال المجمّعة.",
+  "Rendering slide {current} of {total}...": "جارٍ عرض الشريحة {current} من {total}..."
+}
