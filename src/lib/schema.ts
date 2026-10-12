@@ -56,6 +56,35 @@ export function generateToolPageSchema(tool: {
   };
 }
 
+/**
+ * SoftwareApplication schema with the tool's real visitor rating. Only call
+ * it once the tool has enough genuine votes (see MIN_PUBLIC_VOTES): Google
+ * requires aggregateRating for this type, and the figure must match the
+ * rating shown on the page.
+ */
+export function generateToolRatingSchema(
+  tool: { name: string; description: string; slug: string },
+  rating: { count: number; average: number },
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    description: tool.description,
+    url: `${SITE_URL}/tools/${tool.slug}`,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any (runs in a web browser)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: rating.average.toFixed(1),
+      ratingCount: rating.count,
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+}
+
 /** FAQPage schema for tool pages. */
 export function generateFAQSchema(faqs: { q: string; a: string }[]) {
   if (!faqs.length) return null;
