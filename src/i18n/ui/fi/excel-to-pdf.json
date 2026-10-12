@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "Tiedostoa \"{name}\" ei voitu lukea Excel-työkirjana. Varmista, että se on kelvollinen .xlsx-tiedosto.",
+  "Convert to PDF": "Muunna PDF:ksi",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Vanhoja .xls-tiedostoja ei tueta. Tallenna tiedosto Excelissä .xlsx-muotoon ja yritä uudelleen.",
+  "No data found in this workbook.": "Työkirjasta ei löytynyt tietoja."
+}

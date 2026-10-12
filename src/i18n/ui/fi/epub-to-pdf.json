@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Takaisin kaikkiin työkaluihin",
+  "Convert EPUB ebooks to PDF documents": "Muunna EPUB-e-kirjat PDF-asiakirjoiksi",
+  "Convert to PDF": "Muunna PDF:ksi",
+  "Converting...": "Muunnetaan...",
+  "EPUB to PDF": "EPUB PDF:ksi",
+  "Exact design": "Tarkka ulkoasu",
+  "Extracting EPUB content...": "Poimitaan EPUB-sisältöä...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Poimii tekstisisällön ja taittaa sen uudelleen siistiksi, haettavaksi PDF:ksi. Paras romaaneille ja tekstipainotteisille kirjoille.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Säilyttää jokaisen luvun asettelun, kuvat ja sisäiset tyylit. Linkitettyjä tyylitiedostoja ja upotettuja mukautettuja fontteja ei ladata, joten niiden tilalla käytetään oletustyylejä. Paras kuvitetuille kirjoille.",
+  "PDF downloaded": "PDF ladattu",
+  "PDF output": "PDF-tuloste",
+  "Selectable text": "Valittava teksti",
+  "Upload .epub file": "Valitse .epub-tiedosto",
+  "Upload an EPUB file first.": "Valitse ensin EPUB-tiedosto."
+}

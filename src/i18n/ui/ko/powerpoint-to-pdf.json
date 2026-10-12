@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "PDF로 변환",
+  "Converted {slides} slide including {images} image.": "이미지 {images}개를 포함해 슬라이드 {slides}장을 변환했습니다.",
+  "Converted {slides} slide including {images} images.": "이미지 {images}개를 포함해 슬라이드 {slides}장을 변환했습니다.",
+  "Converted {slides} slide.": "슬라이드 {slides}장을 변환했습니다.",
+  "Converted {slides} slides including {images} image.": "이미지 {images}개를 포함해 슬라이드 {slides}장을 변환했습니다.",
+  "Converted {slides} slides including {images} images.": "이미지 {images}개를 포함해 슬라이드 {slides}장을 변환했습니다.",
+  "Converted {slides} slides.": "슬라이드 {slides}장을 변환했습니다.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "각 슬라이드를 원래 크기의 흰 페이지에 다시 그립니다. 텍스트는 실제 위치, 크기, 색상 그대로이며 그림, 표, 그룹 도형도 함께 그립니다.",
+  "Rendering slide {current} of {total}...": "{total}장 중 {current}번째 슬라이드 렌더링 중..."
+}

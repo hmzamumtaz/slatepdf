@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Rakentaa PDF:n häviöttömästi uudelleen pakatuilla objektivirroilla ja poistaa käyttämättömät objektit ja vanhat versiot. Teksti pysyy valittavana ja kuvat koskemattomina.",
+  "Optimize PDF": "Optimoi PDF",
+  "Remove document metadata (title, author, etc.)": "Poista asiakirjan metatiedot (otsikko, tekijä jne.)",
+  "Saved {size} KB ({percent}% smaller).": "Säästettiin {size} KB ({percent} % pienempi).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Tämä PDF on jo optimaalisesti pakattu – palautettiin muuttamattomana. Suurempaa pienennystä varten kokeile Pakkaa PDF -työkalua."
+}

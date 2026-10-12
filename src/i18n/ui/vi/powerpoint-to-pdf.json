@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Chuyển sang PDF",
+  "Converted {slides} slide including {images} image.": "Đã chuyển {slides} slide, gồm {images} ảnh.",
+  "Converted {slides} slide including {images} images.": "Đã chuyển {slides} slide, gồm {images} ảnh.",
+  "Converted {slides} slide.": "Đã chuyển {slides} slide.",
+  "Converted {slides} slides including {images} image.": "Đã chuyển {slides} slide, gồm {images} ảnh.",
+  "Converted {slides} slides including {images} images.": "Đã chuyển {slides} slide, gồm {images} ảnh.",
+  "Converted {slides} slides.": "Đã chuyển {slides} slide.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Mỗi slide được vẽ lại trên một trang trắng với kích thước gốc — chữ đúng vị trí, cỡ và màu thật, cùng hình ảnh, bảng và các nhóm hình.",
+  "Rendering slide {current} of {total}...": "Đang hiển thị slide {current}/{total}..."
+}

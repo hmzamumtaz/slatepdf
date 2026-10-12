@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Dựng lại PDF mà không giảm chất lượng, dùng luồng đối tượng nén và loại bỏ các đối tượng không dùng đến cùng các bản sửa đổi cũ. Văn bản vẫn chọn được và hình ảnh giữ nguyên.",
+  "Optimize PDF": "Tối ưu PDF",
+  "Remove document metadata (title, author, etc.)": "Xóa siêu dữ liệu tài liệu (tiêu đề, tác giả, v.v.)",
+  "Saved {size} KB ({percent}% smaller).": "Đã giảm {size} KB (nhỏ hơn {percent}%).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "PDF này đã được đóng gói tối ưu — trả lại nguyên vẹn. Để giảm dung lượng nhiều hơn, hãy thử công cụ Nén PDF."
+}

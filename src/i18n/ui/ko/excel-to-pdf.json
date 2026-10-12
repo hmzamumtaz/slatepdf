@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" 파일을 엑셀 통합 문서로 읽을 수 없습니다. 올바른 .xlsx 파일인지 확인하세요.",
+  "Convert to PDF": "PDF로 변환",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "오래된 .xls 파일은 지원되지 않습니다. 엑셀에서 .xlsx로 저장한 뒤 다시 시도하세요.",
+  "No data found in this workbook.": "이 통합 문서에 데이터가 없습니다."
+}

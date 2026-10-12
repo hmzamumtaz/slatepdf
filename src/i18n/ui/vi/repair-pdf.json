@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "Dựng lại cấu trúc bên trong PDF (bảng tham chiếu chéo, cách đánh số đối tượng, phần trailer) để sửa tệp bị cắt cụt hoặc bị hỏng. Nếu không khôi phục được cấu trúc, các trang sẽ được dựng lại thành một PDF mới có lớp văn bản tìm kiếm được.",
+  "Repair PDF": "Sửa lỗi PDF"
+}

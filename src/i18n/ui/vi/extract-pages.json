@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Trích xuất trang",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Các trang cần trích xuất (ví dụ: 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Vui lòng nhập các trang cần trích xuất (ví dụ: 1, 3, 5-8)",
+  "Preview of extracted pages:": "Xem trước các trang được trích xuất:",
+  "Total pages: {total} | Extracting: {count}": "Tổng số trang: {total} | Trích xuất: {count}",
+  "e.g., 1, 3, 5": "ví dụ: 1, 3, 5"
+}

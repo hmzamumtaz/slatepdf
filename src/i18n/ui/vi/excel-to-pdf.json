@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "Không đọc được \"{name}\" dưới dạng sổ làm việc Excel. Hãy đảm bảo đây là tệp .xlsx hợp lệ.",
+  "Convert to PDF": "Chuyển sang PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Không hỗ trợ tệp .xls cũ. Hãy lưu tệp thành .xlsx trong Excel rồi thử lại.",
+  "No data found in this workbook.": "Không tìm thấy dữ liệu trong sổ làm việc này."
+}

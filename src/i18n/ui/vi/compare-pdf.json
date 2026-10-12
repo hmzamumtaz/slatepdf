@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Tác giả: {value}",
+  "Back to all tools": "Quay lại tất cả công cụ",
+  "Changed": "Bản đã thay đổi",
+  "Compare Another": "So sánh tệp khác",
+  "Compare PDF": "So sánh PDF",
+  "Compare PDFs": "So sánh PDF",
+  "Compare two PDFs and see the differences": "So sánh hai tệp PDF và xem điểm khác biệt",
+  "Comparing...": "Đang so sánh...",
+  "Comparison complete": "So sánh hoàn tất",
+  "Creator: {value}": "Phần mềm tạo: {value}",
+  "Differing pages": "Các trang khác nhau",
+  "File 1": "Tệp 1",
+  "File 2": "Tệp 2",
+  "Files are identical": "Hai tệp giống hệt nhau",
+  "Original": "Bản gốc",
+  "Page {page}": "Trang {page}",
+  "Pages: {pages} | Size: {size}": "Số trang: {pages} | Dung lượng: {size}",
+  "Title: {value}": "Tiêu đề: {value}",
+  "similarity: {value}%": "độ tương đồng: {value}%",
+  "{count} page differ": "{count} trang khác nhau",
+  "{count} pages differ": "{count} trang khác nhau"
+}

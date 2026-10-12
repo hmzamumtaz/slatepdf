@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "Znovu sestaví vnitřní strukturu PDF (tabulku křížových odkazů, číslování objektů, trailer) a opraví tak zkrácené nebo poškozené soubory. Pokud strukturu nelze obnovit, stránky se znovu vykreslí do nového PDF s prohledávatelnou textovou vrstvou.",
+  "Repair PDF": "Opravit PDF"
+}

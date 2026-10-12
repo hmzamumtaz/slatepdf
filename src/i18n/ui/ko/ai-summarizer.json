@@ -1,0 +1,16 @@
+{
+  "Analyzing...": "분석 중...",
+  "Back to all tools": "모든 도구로 돌아가기",
+  "Copied": "복사됨",
+  "Copy": "복사",
+  "File": "파일",
+  "Generate Summary": "요약 생성",
+  "Get an intelligent summary of your PDF document": "PDF 문서의 핵심을 똑똑하게 요약해 드립니다",
+  "Key points": "핵심 내용",
+  "Size": "크기",
+  "Summarize Again": "다시 요약",
+  "Summarizer": "요약 도구",
+  "Summary generated": "요약 생성 완료",
+  "Top topics": "주요 주제",
+  "{words} words from {original} original words ({percent}% reduction)": "원문 {original}단어 → {words}단어({percent}% 감소)"
+}

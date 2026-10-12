@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "새 페이지 순서를 입력하세요(쉼표로 구분, 예: 3,1,2,4,5)",
+  "Organize PDF": "페이지 순서 변경",
+  "Please enter a page order": "페이지 순서를 입력하세요",
+  "Preview in new order:": "새 순서 미리보기:",
+  "Total pages: {total} | Reordered: {count}": "전체 페이지: {total} | 재정렬: {count}",
+  "e.g., 3,1,2,4,5": "예: 3,1,2,4,5"
+}

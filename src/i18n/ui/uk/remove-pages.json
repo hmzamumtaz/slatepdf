@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Сторінки для видалення (через кому, напр., 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Введіть сторінки для видалення (напр., 1, 3, 5-8)",
+  "Preview after removal:": "Попередній перегляд після видалення:",
+  "Remove Pages": "Видалити сторінки",
+  "Total pages: {total} | Remaining: {count}": "Усього сторінок: {total} | Залишиться: {count}",
+  "e.g., 1, 3, 5, 7": "напр., 1, 3, 5, 7"
+}

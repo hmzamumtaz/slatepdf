@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "לא ניתן לקרוא את \"{name}\" כחוברת עבודה של Excel. יש לוודא שזה קובץ ‎.xlsx תקין.",
+  "Convert to PDF": "המרה ל-PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "קובצי ‎.xls ישנים אינם נתמכים. יש לשמור את הקובץ כ-‎.xlsx ב-Excel ולנסות שוב.",
+  "No data found in this workbook.": "לא נמצאו נתונים בחוברת העבודה הזו."
+}

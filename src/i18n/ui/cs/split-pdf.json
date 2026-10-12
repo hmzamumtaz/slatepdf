@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Rozsahy stránek (např. 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Zadejte platné rozsahy stránek",
+  "Preview of pages in ranges:": "Náhled stránek v rozsazích:",
+  "Split PDF": "Rozdělit PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "Celkem stránek: {total} | Stránek v rozsazích: {count}"
+}

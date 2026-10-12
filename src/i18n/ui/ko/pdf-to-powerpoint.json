@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{pages}페이지로 슬라이드 {slides}장을 만들었습니다.",
+  "Built {slides} slide from {pages} pages.": "{pages}페이지로 슬라이드 {slides}장을 만들었습니다.",
+  "Built {slides} slides from {pages} page.": "{pages}페이지로 슬라이드 {slides}장을 만들었습니다.",
+  "Built {slides} slides from {pages} pages.": "{pages}페이지로 슬라이드 {slides}장을 만들었습니다.",
+  "Convert to PowerPoint": "파워포인트로 변환",
+  "Reading page {current} of {total}...": "{total}페이지 중 {current}페이지 읽는 중...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "원문 텍스트를 그대로 붙여 넣는 대신 문서 구조를 읽어 제목은 슬라이드 제목으로, 단락은 글머리 기호로 만듭니다. 긴 페이지는 추가 슬라이드로 이어집니다."
+}

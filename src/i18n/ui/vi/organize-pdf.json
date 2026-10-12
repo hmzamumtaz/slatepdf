@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Nhập thứ tự trang mới (cách nhau bằng dấu phẩy, ví dụ: 3,1,2,4,5)",
+  "Organize PDF": "Sắp xếp PDF",
+  "Please enter a page order": "Vui lòng nhập thứ tự trang",
+  "Preview in new order:": "Xem trước theo thứ tự mới:",
+  "Total pages: {total} | Reordered: {count}": "Tổng số trang: {total} | Đã sắp xếp: {count}",
+  "e.g., 3,1,2,4,5": "ví dụ: 3,1,2,4,5"
+}

@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Cắt lề PDF",
+  "Margins (points)": "Lề (point)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Giá trị tính bằng point (1 inch = 72 point). Phần này được cắt khỏi từng cạnh.",
+  "bottom": "dưới",
+  "left": "trái",
+  "right": "phải",
+  "top": "trên"
+}

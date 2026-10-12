@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Назад до всіх інструментів",
+  "Enter the PDF password (leave empty if none)": "Введіть пароль PDF (залиште порожнім, якщо його немає)",
+  "File": "Файл",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "Використовуйте лише PDF, які належать вам або які ви маєте дозвіл змінювати. Зняття захисту з чужого PDF може порушувати закони про авторське право чи захист приватності.",
+  "PDF unlocked and downloaded": "PDF розблоковано й завантажено",
+  "Password (if required)": "Пароль (якщо потрібен)",
+  "Remove password protection from a PDF file": "Зніміть захист паролем із PDF-файлу",
+  "Size": "Розмір",
+  "Unlock PDF": "Розблокувати PDF",
+  "Unlocking...": "Розблокування..."
+}

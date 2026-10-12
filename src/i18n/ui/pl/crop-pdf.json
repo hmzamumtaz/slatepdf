@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Przytnij PDF",
+  "Margins (points)": "Marginesy (punkty)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Wartości w punktach (1 cal = 72 punkty). Przycina od każdej krawędzi.",
+  "bottom": "dół",
+  "left": "lewo",
+  "right": "prawo",
+  "top": "góra"
+}

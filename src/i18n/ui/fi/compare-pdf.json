@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Tekijä: {value}",
+  "Back to all tools": "Takaisin kaikkiin työkaluihin",
+  "Changed": "Muutettu",
+  "Compare Another": "Vertaa muita",
+  "Compare PDF": "Vertaa PDF",
+  "Compare PDFs": "Vertaa PDF-tiedostoja",
+  "Compare two PDFs and see the differences": "Vertaa kahta PDF-tiedostoa ja näe erot",
+  "Comparing...": "Verrataan...",
+  "Comparison complete": "Vertailu valmis",
+  "Creator: {value}": "Luontiohjelma: {value}",
+  "Differing pages": "Eroavat sivut",
+  "File 1": "Tiedosto 1",
+  "File 2": "Tiedosto 2",
+  "Files are identical": "Tiedostot ovat identtiset",
+  "Original": "Alkuperäinen",
+  "Page {page}": "Sivu {page}",
+  "Pages: {pages} | Size: {size}": "Sivuja: {pages} | Koko: {size}",
+  "Title: {value}": "Otsikko: {value}",
+  "similarity: {value}%": "samankaltaisuus: {value} %",
+  "{count} page differ": "{count} sivu eroaa",
+  "{count} pages differ": "{count} sivua eroaa"
+}

@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Quay lại tất cả công cụ",
+  "Convert EPUB ebooks to PDF documents": "Chuyển ebook EPUB thành tài liệu PDF",
+  "Convert to PDF": "Chuyển sang PDF",
+  "Converting...": "Đang chuyển đổi...",
+  "EPUB to PDF": "EPUB sang PDF",
+  "Exact design": "Giữ nguyên thiết kế",
+  "Extracting EPUB content...": "Đang trích xuất nội dung EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Trích xuất nội dung chữ và dàn trang lại thành PDF gọn gàng, tìm kiếm được. Phù hợp nhất cho tiểu thuyết và sách nhiều chữ.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Giữ bố cục, hình ảnh và định dạng nội dòng của từng chương. Các stylesheet liên kết và phông tùy chỉnh nhúng không được tải, nên phần đó sẽ dùng kiểu mặc định. Phù hợp nhất cho sách có minh họa.",
+  "PDF downloaded": "Đã tải xuống PDF",
+  "PDF output": "Kiểu PDF đầu ra",
+  "Selectable text": "Văn bản chọn được",
+  "Upload .epub file": "Tải lên tệp .epub",
+  "Upload an EPUB file first.": "Hãy tải lên tệp EPUB trước."
+}

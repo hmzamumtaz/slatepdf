@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "חזרה לכל הכלים",
+  "Convert to PDF": "המרה ל-PDF",
+  "Converting...": "ממיר...",
+  "Design preview": "תצוגה מקדימה של העיצוב",
+  "Exact design": "עיצוב מדויק",
+  "HTML code": "קוד HTML",
+  "HTML design preview": "תצוגה מקדימה של עיצוב ה-HTML",
+  "HTML to PDF": "HTML ל-PDF",
+  "Live preview — this is the design that will be converted": "תצוגה חיה — זה העיצוב שיומר",
+  "PDF downloaded": "ה-PDF הורד",
+  "PDF output": "פלט PDF",
+  "Paste some HTML or upload an .html file first.": "יש להדביק קוד HTML או לטעון קובץ ‎.html קודם.",
+  "Paste your HTML here, or upload an .html file above...": "להדביק כאן את קוד ה-HTML, או לטעון קובץ ‎.html למעלה...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "מסדר את התוכן מחדש כטקסט PDF אמיתי שאפשר לסמן ולחפש בו, עם עיצוב פשוט יותר.",
+  "Render the HTML design first, then convert it to PDF": "מציגים קודם את עיצוב ה-HTML, ואז ממירים אותו ל-PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "מציג את הדף עם CSS מלא — צבעים, גופנים, רקעים ופריסה — בדיוק כמו בתצוגה המקדימה. מומלץ.",
+  "Selectable text": "טקסט שאפשר לסמן",
+  "Upload .html file": "טעינת קובץ ‎.html",
+  "Upload an .html file above, or switch to the": "אפשר לטעון קובץ ‎.html למעלה, או לעבור לכרטיסייה",
+  "Your design preview will appear here": "התצוגה המקדימה של העיצוב תופיע כאן",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "ולהדביק את הקוד. הדף יוצג כאן עם העיצוב המלא — בדיוק כפי שה-PDF ייראה."
+}
