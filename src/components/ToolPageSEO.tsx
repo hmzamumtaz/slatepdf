@@ -31,7 +31,7 @@ export default function ToolPageSEO({ slug, guide }: { slug: string; guide?: Rea
 
   const faqs = getToolFaqs(slug);
   const howTo = getToolHowTo(slug);
-  const guides = posts.filter((p) => p.tool === slug).slice(0, 6);
+  const guides = posts.filter((p) => p.tool === slug);
   const nextTools = getNextTools(slug, 4);
 
   return (

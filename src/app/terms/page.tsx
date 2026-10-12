@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: `The terms governing your use of ${SITE_NAME}, the free browser-based PDF toolkit.`,
     url: '/terms',
     siteName: SITE_NAME,
+    images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: 'summary',
