@@ -53,19 +53,34 @@ export function generateToolPageSchema(tool: {
     url: `${SITE_URL}/tools/${tool.slug}`,
     inLanguage: 'en',
     isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
-    // The tool itself, described as a free browser app so search and answer
-    // engines can tell this page *is* the tool, not an article about one.
-    mainEntity: {
-      '@type': 'WebApplication',
-      name: tool.name,
-      description: tool.description,
-      url: `${SITE_URL}/tools/${tool.slug}`,
-      applicationCategory: 'UtilitiesApplication',
-      operatingSystem: 'Any (runs in a web browser)',
-      browserRequirements: 'Requires JavaScript and a modern web browser.',
-      isAccessibleForFree: true,
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+  };
+}
+
+/**
+ * SoftwareApplication schema with the tool's real visitor rating. Only call
+ * it once the tool has enough genuine votes (see MIN_PUBLIC_VOTES): Google
+ * requires aggregateRating for this type, and the figure must match the
+ * rating shown on the page.
+ */
+export function generateToolRatingSchema(
+  tool: { name: string; description: string; slug: string },
+  rating: { count: number; average: number },
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    description: tool.description,
+    url: `${SITE_URL}/tools/${tool.slug}`,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any (runs in a web browser)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: rating.average.toFixed(1),
+      ratingCount: rating.count,
+      bestRating: '5',
+      worstRating: '1',
     },
   };
 }

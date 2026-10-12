@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import BrandMark from './BrandMark';
 import { SITE_NAME } from '@/lib/site';
-import { tools, categories, getToolsByCategory } from '@/lib/tools-data';
+import { tools, categories, categoryAnchor, getToolsByCategory } from '@/lib/tools-data';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-400 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-8 gap-8 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
@@ -17,80 +17,34 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-4">
               The modern PDF toolkit. Edit, convert, merge, and optimize your PDFs entirely in your browser.
             </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 mb-4">
               100% private. Files never leave your device.
             </p>
-          </div>
-
-          {/* Organize */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Organize</h3>
             <ul className="space-y-2 text-sm">
-              {getToolsByCategory('Organize PDF').map((tool) => (
-                <li key={tool.slug}>
-                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
-                    {tool.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link href="/tools" className="font-medium text-white hover:text-gray-200 transition-colors">All {tools.length} PDF tools</Link></li>
+              <li><Link href="/tools/pdf-workspace" className="hover:text-white transition-colors">PDF Workspace</Link></li>
             </ul>
           </div>
 
-          {/* Create */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Create</h3>
-            <ul className="space-y-2 text-sm">
-              {getToolsByCategory('Create PDF').map((tool) => (
-                <li key={tool.slug}>
-                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
-                    {tool.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Export */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Export</h3>
-            <ul className="space-y-2 text-sm">
-              {getToolsByCategory('Export PDF').map((tool) => (
-                <li key={tool.slug}>
-                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
-                    {tool.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Modify */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Modify</h3>
-            <ul className="space-y-2 text-sm">
-              {getToolsByCategory('Modify PDF').map((tool) => (
-                <li key={tool.slug}>
-                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
-                    {tool.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Secure */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Security</h3>
-            <ul className="space-y-2 text-sm">
-              {getToolsByCategory('PDF Security').map((tool) => (
-                <li key={tool.slug}>
-                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
-                    {tool.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Every tool, grouped like the header and /tools */}
+          {categories.filter(c => c !== 'All-in-one').map((category) => (
+            <div key={category}>
+              <h3 className="text-sm font-semibold text-white mb-3">
+                <Link href={`/tools#${categoryAnchor(category)}`} className="hover:text-gray-200 transition-colors">
+                  {category}
+                </Link>
+              </h3>
+              <ul className="space-y-2 text-sm">
+                {getToolsByCategory(category).map((tool) => (
+                  <li key={tool.slug}>
+                    <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
+                      {tool.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
           {/* Learn */}
           <div>

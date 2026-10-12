@@ -10,9 +10,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "electron:dev": "next build && electron .",
-    "electron:build": "next build && electron-builder --mac",
-    "electron:build:dir": "next build && electron-builder --mac --dir"
+    "electron:dev": "STATIC_EXPORT=1 next build && electron .",
+    "electron:build": "STATIC_EXPORT=1 next build && electron-builder --mac",
+    "electron:build:dir": "STATIC_EXPORT=1 next build && electron-builder --mac --dir"
   },
   "build": {
     "appId": "com.slatepdf.app",

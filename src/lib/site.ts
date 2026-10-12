@@ -8,7 +8,7 @@ export const SITE_NAME = 'Slate PDF';
 /** Used where a filename or identifier can't contain a space. */
 export const SITE_SLUG = 'SlatePDF';
 
-export const SITE_TAGLINE = 'The PDF toolkit that runs in your browser';
+export const SITE_TAGLINE = 'Free PDF Tools That Run in Your Browser';
 
 export const SITE_DESCRIPTION =
   'Merge, split, compress, convert, sign and edit PDFs right in your browser. No uploads, no sign-up, no file size limits.';

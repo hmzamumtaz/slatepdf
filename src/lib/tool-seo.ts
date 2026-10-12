@@ -23,7 +23,7 @@ const toolSeo: Record<string, {
     description: 'Combine two or more PDF files into a single document. Free, no sign-up, no watermarks. Merging happens in your browser — files are never uploaded.',
     keywords: ['merge pdf', 'combine pdf', 'join pdf', 'merge pdf files free', 'combine pdf online'],
     faqs: [
-      { q: 'How many PDFs can I merge at once?', a: 'There is no fixed limit. The practical ceiling is your device memory. Dozens of ordinary documents are routine; hundreds of large scans are better done in batches.' },
+      { q: 'How many PDFs can I merge at once?', a: 'Up to 20 files per merge, with no size cap beyond your device memory. For more, merge in batches of 20, then merge the results together.' },
       { q: 'Does merging reduce PDF quality?', a: 'No. A correct merge copies each page object into a new document without re-encoding images or text. Your pages remain identical to the originals.' },
       { q: 'Can I merge password-protected PDFs?', a: 'You need to unlock them first. Password-protected PDFs cannot be read until the password is removed.' },
     ],
@@ -56,11 +56,12 @@ const toolSeo: Record<string, {
     ],
   },
   'organize-pdf': {
-    title: 'Organize PDF — Reorder, Rotate & Manage Pages',
-    description: 'Reorder, rotate, and manage pages in a PDF. Drag and drop pages into any order, rotate individual pages, and download the reorganized file.',
+    title: 'Organize PDF — Reorder & Remove Pages Free',
+    description: 'Put the pages of a PDF in any order and drop the ones you do not need, in one step. Free, no sign-up, and the file never leaves your browser.',
     keywords: ['organize pdf', 'reorder pdf pages', 'rotate pdf pages', 'rearrange pdf'],
     faqs: [
-      { q: 'Can I rotate individual pages?', a: 'Yes. Each page can be rotated independently — 90°, 180°, or 270° — while leaving other pages unchanged.' },
+      { q: 'How do I set the new page order?', a: 'Type the page numbers in the order you want, for example 3, 1, 2, 4. The current order is filled in for you, and a preview shows the result before you save.' },
+      { q: 'Can I rotate pages here?', a: 'No. Use Rotate PDF, which turns all pages or just the ones you list by 90°, 180° or 270°.' },
       { q: 'Can I mix pages from different PDFs?', a: 'The organize tool works on a single PDF. To combine pages from different files, use Merge PDF after extracting the pages you need.' },
     ],
   },
@@ -126,16 +127,16 @@ const toolSeo: Record<string, {
   },
   'word-to-pdf': {
     title: 'Word to PDF — Convert DOCX to PDF Free Online',
-    description: 'Convert Word documents (DOCX) to PDF. Preserve formatting, fonts, and layout. Free, browser-based, no upload required.',
+    description: 'Convert Word documents (DOCX) to PDF in your browser. Keeps your text, headings, lists and tables. Free, no sign-up, and no upload.',
     keywords: ['word to pdf', 'docx to pdf', 'convert word to pdf', 'word to pdf free'],
     faqs: [
-      { q: 'Will my formatting be preserved?', a: 'Yes. The conversion maintains fonts, images, tables, and layout as closely as possible to the original Word document.' },
+      { q: 'Will my formatting be preserved?', a: 'Your text, headings, lists and tables come across, but the document is re-typeset rather than copied pixel for pixel, so custom fonts and complex page layouts will not match exactly. For a pixel-perfect copy, use File → Save as PDF in Word itself.' },
       { q: 'Do I need Microsoft Word installed?', a: 'No. The conversion happens in your browser. No software installation is required.' },
     ],
   },
   'powerpoint-to-pdf': {
     title: 'PowerPoint to PDF — Convert PPTX to PDF Free',
-    description: 'Convert PowerPoint presentations (PPTX) to PDF. Preserve slide layout, images, and animations as static pages. Free, no sign-up.',
+    description: 'Convert PowerPoint presentations (PPTX) to PDF, one page per slide, with text, pictures and tables. Free, no sign-up, and no upload.',
     keywords: ['powerpoint to pdf', 'pptx to pdf', 'convert powerpoint to pdf', 'slides to pdf'],
     faqs: [
       { q: 'Will animations be preserved?', a: 'Animations are converted to static pages since PDF does not support animations. The final state of each slide is captured.' },
@@ -144,7 +145,7 @@ const toolSeo: Record<string, {
   },
   'excel-to-pdf': {
     title: 'Excel to PDF — Convert Spreadsheets to PDF Free',
-    description: 'Convert Excel spreadsheets (XLSX) to PDF. Preserve tables, formulas as values, and formatting. Free, browser-based conversion.',
+    description: 'Convert Excel spreadsheets (XLSX or CSV) to PDF, each sheet fitted to the page width. Free, browser-based, no sign-up and no upload.',
     keywords: ['excel to pdf', 'xlsx to pdf', 'spreadsheet to pdf', 'convert excel to pdf'],
     faqs: [
       { q: 'Will my formulas be preserved?', a: 'Formulas are calculated and saved as their resulting values in the PDF. The formulas themselves are not preserved since PDF is a static format.' },
@@ -171,19 +172,19 @@ const toolSeo: Record<string, {
   },
   'pdf-to-word': {
     title: 'PDF to Word — Convert PDF to Editable DOCX Free',
-    description: 'Convert PDF documents to editable Word files (DOCX). Preserve text, formatting, and layout. Free, browser-based, no upload required.',
+    description: 'Turn the text of a PDF into an editable Word file (DOCX), page by page. Free, browser-based, no sign-up and no upload.',
     keywords: ['pdf to word', 'pdf to docx', 'convert pdf to word', 'pdf to editable'],
     faqs: [
-      { q: 'Will the Word file be editable?', a: 'Yes. Text becomes editable, images are preserved, and layout is maintained as closely as possible.' },
+      { q: 'Will the Word file keep the layout and images?', a: 'No. It carries the text across as editable headings and paragraphs, with a heading for each page; images and complex layouts are not rebuilt. It is built for reusing the words, not for a look-alike copy.' },
       { q: 'Does this work on scanned PDFs?', a: 'Scanned PDFs need OCR first to extract the text. Run OCR, then convert the result to Word for best results.' },
     ],
   },
   'pdf-to-powerpoint': {
     title: 'PDF to PowerPoint — Convert PDF to Editable PPTX',
-    description: 'Convert PDF documents to editable PowerPoint presentations (PPTX). Preserve layout and images. Free, no sign-up required.',
+    description: 'Turn a PDF into editable PowerPoint slides (PPTX): headings become titles, paragraphs become bullets. Free, no sign-up, no upload.',
     keywords: ['pdf to powerpoint', 'pdf to pptx', 'convert pdf to powerpoint', 'pdf to slides'],
     faqs: [
-      { q: 'Will each PDF page become a slide?', a: 'Yes. Each page in the PDF becomes one slide in the PowerPoint presentation.' },
+      { q: 'Will each PDF page become a slide?', a: 'Usually. Each page starts a new slide, and a text-heavy page continues onto extra slides so nothing is cut off. Headings become slide titles and paragraphs become bullets.' },
       { q: 'Can I edit the resulting slides?', a: 'Yes. The output is a standard PPTX file that you can edit in any PowerPoint-compatible application.' },
     ],
   },
@@ -208,11 +209,11 @@ const toolSeo: Record<string, {
   },
   'pdf-to-markdown': {
     title: 'PDF to Markdown — Convert PDF Content to Markdown Text',
-    description: 'Convert PDF documents to clean Markdown text. Preserve headings, lists, and formatting. Free, browser-based, no sign-up required.',
+    description: 'Convert the text of a PDF into a clean Markdown (.md) file for notes, docs and AI tools. Free, browser-based, no sign-up required.',
     keywords: ['pdf to markdown', 'convert pdf to markdown', 'pdf to md', 'pdf to text markdown'],
     faqs: [
-      { q: 'Will formatting be preserved in Markdown?', a: 'Headings, bold, italic, lists, and tables are converted to their Markdown equivalents. Complex layouts are simplified.' },
-      { q: 'Can I convert specific pages?', a: 'Yes. Specify a page range to convert only the sections you need.' },
+      { q: 'Will formatting be preserved in Markdown?', a: 'The text comes across in reading order as plain Markdown. Complex layouts, tables and images are simplified, so check the preview before relying on the structure.' },
+      { q: 'Can I convert specific pages?', a: 'The whole document is converted. To convert only some pages, run Extract Pages first and convert that file.' },
     ],
   },
   'edit-pdf': {
@@ -243,8 +244,8 @@ const toolSeo: Record<string, {
     ],
   },
   'add-watermark': {
-    title: 'Add Watermark to PDF — Text & Image Watermarks Free',
-    description: 'Add text or image watermarks to PDF documents. Customize opacity, position, and rotation. Free, no sign-up, no watermarks on output.',
+    title: 'Add Watermark to PDF — Free Text Watermark Tool',
+    description: 'Stamp a text watermark such as CONFIDENTIAL or DRAFT on every page of a PDF. Set opacity and size. Free, no sign-up, and no upload.',
     keywords: ['add watermark to pdf', 'pdf watermark', 'stamp pdf', 'watermark pdf free'],
     faqs: [
       { q: 'Can I adjust watermark opacity?', a: 'Yes. Control the transparency of your watermark from fully opaque to nearly invisible.' },
@@ -301,29 +302,30 @@ const toolSeo: Record<string, {
   },
   'compare-pdf': {
     title: 'Compare PDF — Find Differences Between Two PDFs',
-    description: 'Compare two PDF documents side by side. Highlight differences in text, images, and formatting. Free, browser-based, no upload required.',
+    description: 'Check whether two PDFs match: get a similarity score and the exact pages that differ. Free, browser-based, no upload required.',
     keywords: ['compare pdf', 'pdf diff', 'compare pdf files', 'find differences pdf'],
     faqs: [
-      { q: 'What types of differences are detected?', a: 'Text changes, added or removed content, image differences, and formatting changes are all highlighted.' },
-      { q: 'Can I compare scanned PDFs?', a: 'Scanned PDFs can be compared, but accuracy depends on OCR quality. Text-based PDFs produce more reliable comparisons.' },
+      { q: 'What does the comparison show?', a: 'Whether the two files are identical, a similarity percentage, which page numbers differ, and each file\'s page count, size and document details. It points you to the changed pages rather than marking up individual words.' },
+      { q: 'Can I compare scanned PDFs?', a: 'Run OCR PDF on both scans first. Comparison works on the text inside the files, so image-only scans have nothing to compare.' },
     ],
   },
   'ai-summarizer': {
-    title: 'AI PDF Summarizer — Summarize PDF Content Instantly',
-    description: 'Summarize PDF documents using AI. Extract key points, main arguments, and essential information. Free, no sign-up required.',
+    title: 'PDF Summarizer — Summarize a PDF Free, No Upload',
+    description: 'Get the key points and top topics of a PDF in seconds. The summary is worked out on your device, so the document is never uploaded. Free.',
     keywords: ['pdf summarizer', 'ai pdf summary', 'summarize pdf', 'pdf summary tool'],
     faqs: [
-      { q: 'How accurate is the AI summary?', a: 'The AI identifies key points and main themes accurately. For critical documents, always review the summary against the original.' },
-      { q: 'Is my document sent to a server?', a: 'The summarize tool may contact an online service for processing. Review the tool documentation for details on data handling.' },
+      { q: 'How does the summarizer work?', a: 'It scores every sentence by how many of the document\'s key terms it contains and keeps the strongest ones as key points. The words are the author\'s own, not rewritten by a chatbot — always check important documents against the original.' },
+      { q: 'Is my document sent to a server?', a: 'No. The summary is computed in your browser, and the PDF never leaves your device.' },
     ],
   },
   'translate-pdf': {
     title: 'Translate PDF — Translate PDF Content to Any Language',
-    description: 'Translate PDF documents to any language. Preserve formatting while translating text content. Free, no sign-up required.',
+    description: 'Translate the text of a PDF into 42 languages and download it as a new PDF. Free, no sign-up. Text is sent to a translation service.',
     keywords: ['translate pdf', 'pdf translation', 'translate pdf to english', 'pdf language translation'],
     faqs: [
-      { q: 'How many languages are supported?', a: 'The translate tool supports dozens of major languages. Check the tool for the complete list of available languages.' },
-      { q: 'Will formatting be preserved?', a: 'Text is translated while maintaining the document layout. Some formatting may shift if the translated text is significantly longer.' },
+      { q: 'How many languages are supported?', a: '42, with automatic detection of the source language.' },
+      { q: 'Will formatting be preserved?', a: 'No. You get the translated text on screen and as a new text-only PDF; the original layout and images are not rebuilt.' },
+      { q: 'Is my document uploaded?', a: 'This is the one Slate PDF tool that sends data online: the extracted text goes to a free public translation service. Do not use it for confidential documents.' },
     ],
   },
   'heic-to-pdf': {

@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     `${SITE_NAME} is a free, private PDF toolkit that runs entirely in your browser. Learn who writes our guides and how we keep your files secure.`,
   alternates: { canonical: '/about' },
   openGraph: {
-    images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: SITE_NAME }],
     type: 'website',
     title: `About ${SITE_NAME}`,
     description:
       `${SITE_NAME} is a free, private PDF toolkit that runs in your browser. Learn who's behind it and how your files stay secure.`,
     url: '/about',
     siteName: SITE_NAME,
+    images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: { card: 'summary', title: `About ${SITE_NAME}`, description: "Who's behind Slate PDF and how your files stay secure." },
 };
