@@ -91,6 +91,12 @@ export default function Header() {
             ))}
             <DropdownMenu category="PDF Intelligence" tools={getToolsByCategory('PDF Intelligence')} alignRight={true} />
             <Link
+              href="/tools"
+              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+            >
+              All tools
+            </Link>
+            <Link
               href="/blog"
               className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
             >
@@ -143,6 +149,13 @@ export default function Header() {
                 )}
               </div>
             ))}
+            <Link
+              href="/tools"
+              onClick={() => setMobileOpen(false)}
+              className="block px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+            >
+              All PDF tools
+            </Link>
             <Link
               href="/blog"
               onClick={() => setMobileOpen(false)}

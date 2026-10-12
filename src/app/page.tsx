@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
-import { categories, getToolsByCategory, featuredTool, getToolBySlug } from '@/lib/tools-data';
+import { categories, getToolsByCategory, featuredTool, getToolBySlug, tools } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
-import { SITE_NAME } from '@/lib/site';
+import { SITE_NAME, SITE_URL } from '@/lib/site';
 import { SITE_AUTHOR } from '@/lib/author';
 import { getStats } from '@/lib/stats';
 
@@ -47,6 +47,20 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
   return <span ref={ref}>{count}{suffix}</span>;
 }
 
+/** Every tool as an ItemList, so the homepage's tool grid is explicit to crawlers. */
+const toolListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${SITE_NAME} PDF tools`,
+  numberOfItems: tools.length,
+  itemListElement: tools.map((t, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: t.name,
+    url: `${SITE_URL}/tools/${t.slug}`,
+  })),
+};
+
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -64,6 +78,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <ToolsModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolListSchema) }} />
 
       {/* Hero — conversion-first */}
       <section className="relative overflow-hidden pt-16 sm:pt-24 pb-14 sm:pb-20">
@@ -82,7 +97,7 @@ export default function Home() {
               </div>
 
               <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-foreground text-balance">
-                Every PDF task,
+                Every PDF tool you need,
                 <span className="mt-3 block w-fit mx-auto lg:mx-0 bg-foreground text-white px-4 sm:px-5 rounded-xl leading-snug">
                   free and private.
                 </span>
