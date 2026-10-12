@@ -63,7 +63,7 @@ export const tools: ToolInfo[] = [
   { slug: 'add-watermark', name: 'Add Watermark', description: 'Add text or image watermarks', icon: 'Droplets', category: 'Modify PDF', color: '#0891b2' },
   { slug: 'crop-pdf', name: 'Crop PDF', description: 'Crop and resize PDF pages', icon: 'Crop', category: 'Modify PDF', color: '#65a30d' },
   { slug: 'sign-pdf', name: 'Sign PDF', description: 'Add digital signatures to PDFs', icon: 'PenTool', category: 'Modify PDF', color: '#1d4ed8' },
-  { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out whole pages permanently', icon: 'Eraser', category: 'Modify PDF', color: '#991b1b' },
+  { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out text, images or pages permanently', icon: 'Eraser', category: 'Modify PDF', color: '#991b1b' },
 
   // Security
   { slug: 'unlock-pdf', name: 'Unlock PDF', description: 'Remove password protection from PDF', icon: 'Unlock', category: 'PDF Security', color: '#16a34a' },

@@ -126,7 +126,7 @@ export const securityPosts: BlogPost[] = [
       { type: 'p', text: 'There are two routes, depending on how much of the page has to go. Both run in your browser, so the document never leaves your device, and neither needs an account.' },
       { type: 'h3', text: 'Black out specific passages' },
       { type: 'steps', items: [
-        'Open the PDF Workspace, add your document and switch to the Redact tab.',
+        'Open the Redact PDF tool and add your document. "Draw boxes" is the default mode.',
         'Drag a box over each passage that must be removed, moving page by page through the preview.',
         'Cover the whole passage, and the whole field rather than just the digits — partial redaction leaves fragments that are often enough to reconstruct the rest.',
         'Apply the redaction and download the result.',
@@ -134,7 +134,7 @@ export const securityPosts: BlogPost[] = [
       ] },
       { type: 'h3', text: 'Black out entire pages' },
       { type: 'steps', items: [
-        'Open the Redact PDF tool and add your document.',
+        'Open the Redact PDF tool, add your document and switch to "Whole pages".',
         'Click the thumbnail of every page that must be blacked out.',
         'Run the redaction. Each selected page is replaced by a solid black page; the rest are left as they were.',
         'Download the result and check the page count still matches the original.',

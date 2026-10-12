@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
-import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, FileDown, Scissors, AlertTriangle } from 'lucide-react';
+import { useState, useCallback, useEffect, useRef } from 'react';
+import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, Scissors, AlertTriangle, ChevronLeft, ChevronRight, Undo2, Trash2, MousePointerSquareDashed } from 'lucide-react';
 import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
-import { readFileAsArrayBuffer, loadPdf, redactPdf, downloadBlob, getOutputFilename, getPdfJs } from '@/lib/pdf-engine';
+import { renderPdfPreviews, redactPdf, downloadBlob, getOutputFilename, type PagePreview } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 
 function formatBytes(bytes: number): string {
@@ -13,55 +13,122 @@ function formatBytes(bytes: number): string {
   return `${(bytes / 1048576).toFixed(2)} MB`;
 }
 
-interface PageThumb {
-  pageIndex: number;
-  dataUrl: string;
-  width: number;
-  height: number;
-}
+/** A drawn box, stored in PDF points with a bottom-left origin (what redactPdf expects). */
+interface Box { pageIndex: number; x: number; y: number; width: number; height: number }
+
+type Mode = 'areas' | 'pages';
+
+const MIN_BOX_PX = 4;
 
 export default function RedactPdfTool() {
   const [files, setFiles] = useState<File[]>([]);
-  const [thumbs, setThumbs] = useState<PageThumb[]>([]);
+  const [previews, setPreviews] = useState<PagePreview[]>([]);
+  const [loadingPreviews, setLoadingPreviews] = useState(false);
+  const [previewProgress, setPreviewProgress] = useState('');
+  const [previewError, setPreviewError] = useState<string | null>(null);
+  const [mode, setMode] = useState<Mode>('areas');
+  const [current, setCurrent] = useState(0);
+  const [boxes, setBoxes] = useState<Box[]>([]);
+  const [drag, setDrag] = useState<{ x0: number; y0: number; x1: number; y1: number } | null>(null);
   const [selectedPages, setSelectedPages] = useState<Set<number>>(new Set());
-  const [loadingThumbs, setLoadingThumbs] = useState(false);
-  const [thumbError, setThumbError] = useState<string | null>(null);
   const [processing, setProcessing] = useState(false);
-  const [progress, setProgress] = useState('');
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<{ size: number; redacted: number } | null>(null);
+  const [result, setResult] = useState<{ size: number; summary: string } | null>(null);
+  const surface = useRef<HTMLDivElement>(null);
+
+  const page = previews[current];
+  const pageBoxes = boxes.filter(b => b.pageIndex === current);
+  const markedPages = new Set(boxes.map(b => b.pageIndex)).size;
+
+  const reset = () => {
+    setFiles([]); setPreviews([]); setBoxes([]); setSelectedPages(new Set());
+    setCurrent(0); setResult(null); setError(null);
+  };
 
   useEffect(() => {
-    if (files.length === 0) { setThumbs([]); setSelectedPages(new Set()); return; }
+    if (files.length === 0) return; // reset() clears previews when the file is removed
     let cancelled = false;
     (async () => {
-      setLoadingThumbs(true);
-      setThumbError(null);
+      setLoadingPreviews(true);
+      setPreviewError(null);
+      setBoxes([]);
+      setSelectedPages(new Set());
+      setCurrent(0);
       try {
-        const arrayBuffer = await readFileAsArrayBuffer(files[0]);
-        const pdfjsLib = await getPdfJs();
-        const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
-        const pageThumbs: PageThumb[] = [];
-        for (let i = 1; i <= pdf.numPages; i++) {
-          if (cancelled) return;
-          const page = await pdf.getPage(i);
-          const scale = 150 / page.getViewport({ scale: 1 }).width;
-          const viewport = page.getViewport({ scale });
-          const canvas = document.createElement('canvas');
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-          await page.render({ canvasContext: canvas.getContext('2d') as any, viewport, canvas }).promise;
-          pageThumbs.push({ pageIndex: i, dataUrl: canvas.toDataURL('image/png'), width: viewport.width, height: viewport.height });
-        }
-        if (!cancelled) setThumbs(pageThumbs);
+        const rendered = await renderPdfPreviews(files[0], { scale: 1.5 }, (p, t) => {
+          if (!cancelled) setPreviewProgress(`Rendering page ${p} of ${t}…`);
+        });
+        if (!cancelled) setPreviews(rendered);
       } catch {
-        if (!cancelled) setThumbError('Could not render thumbnails. The file may be corrupted.');
+        if (!cancelled) setPreviewError('Could not render the pages. The file may be corrupted or password-protected.');
       } finally {
-        if (!cancelled) setLoadingThumbs(false);
+        if (!cancelled) { setLoadingPreviews(false); setPreviewProgress(''); }
       }
     })();
     return () => { cancelled = true; };
   }, [files]);
+
+  const relative = (e: React.PointerEvent) => {
+    const rect = surface.current!.getBoundingClientRect();
+    return {
+      x: Math.min(Math.max(e.clientX - rect.left, 0), rect.width),
+      y: Math.min(Math.max(e.clientY - rect.top, 0), rect.height),
+    };
+  };
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (!page || processing) return;
+    e.preventDefault();
+    (e.target as Element).setPointerCapture?.(e.pointerId);
+    const p = relative(e);
+    setDrag({ x0: p.x, y0: p.y, x1: p.x, y1: p.y });
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!drag) return;
+    const p = relative(e);
+    setDrag(d => (d ? { ...d, x1: p.x, y1: p.y } : d));
+  };
+
+  const onPointerUp = () => {
+    if (!drag || !page || !surface.current) { setDrag(null); return; }
+    const rect = surface.current.getBoundingClientRect();
+    const left = Math.min(drag.x0, drag.x1);
+    const top = Math.min(drag.y0, drag.y1);
+    const width = Math.abs(drag.x1 - drag.x0);
+    const height = Math.abs(drag.y1 - drag.y0);
+    setDrag(null);
+    if (width < MIN_BOX_PX || height < MIN_BOX_PX) return; // a stray click, not a box
+
+    // Screen pixels to PDF points; the PDF's origin is the bottom-left corner.
+    const sx = page.pointWidth / rect.width;
+    const sy = page.pointHeight / rect.height;
+    setBoxes(prev => [...prev, {
+      pageIndex: current,
+      x: left * sx,
+      y: page.pointHeight - (top + height) * sy,
+      width: width * sx,
+      height: height * sy,
+    }]);
+  };
+
+  const undo = useCallback(() => {
+    setBoxes(prev => {
+      const fromEnd = [...prev].reverse().findIndex(b => b.pageIndex === current);
+      if (fromEnd === -1) return prev;
+      const index = prev.length - 1 - fromEnd;
+      return prev.filter((_, i) => i !== index);
+    });
+  }, [current]);
+
+  useEffect(() => {
+    if (mode !== 'areas') return;
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') { e.preventDefault(); undo(); }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [undo, mode]);
 
   const togglePage = (pageIndex: number) => {
     setSelectedPages(prev => {
@@ -71,34 +138,37 @@ export default function RedactPdfTool() {
     });
   };
 
+  const ready = mode === 'areas' ? boxes.length > 0 : selectedPages.size > 0;
+
   const handleRedact = useCallback(async () => {
-    if (files.length === 0 || selectedPages.size === 0) return;
+    if (files.length === 0 || !ready) return;
     setProcessing(true);
     setError(null);
-    setResult(null);
     try {
-      const arrayBuffer = await readFileAsArrayBuffer(files[0]);
-      const pdfjsLib = await getPdfJs();
-      const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
-      const redactions: { x: number; y: number; width: number; height: number; pageIndex: number }[] = [];
-
-      for (const pageNum of selectedPages) {
-        const page = await pdf.getPage(pageNum);
-        const vp = page.getViewport({ scale: 1 });
-        redactions.push({ x: 0, y: 0, width: vp.width, height: vp.height, pageIndex: pageNum - 1 });
-      }
-
+      const redactions = mode === 'areas'
+        ? boxes
+        : [...selectedPages].map(i => ({ pageIndex: i, x: 0, y: 0, width: previews[i].pointWidth, height: previews[i].pointHeight }));
       const blob = await redactPdf(files[0], redactions);
       downloadBlob(blob, getOutputFilename('redact-pdf', '-redacted.pdf'));
-      setResult({ size: blob.size, redacted: selectedPages.size });
-      setSelectedPages(new Set());
-    } catch (err: any) {
+      const summary = mode === 'areas'
+        ? `${boxes.length} area${boxes.length !== 1 ? 's' : ''} removed on ${markedPages} page${markedPages !== 1 ? 's' : ''}`
+        : `${selectedPages.size} page${selectedPages.size !== 1 ? 's' : ''} blacked out`;
+      setResult({ size: blob.size, summary });
+    } catch (err: unknown) {
       setError(friendlyError(err));
     } finally {
       setProcessing(false);
-      setProgress('');
     }
-  }, [files, selectedPages]);
+  }, [files, ready, mode, boxes, selectedPages, previews, markedPages]);
+
+  const modeButton = (m: Mode, label: string) => (
+    <button
+      onClick={() => setMode(m)}
+      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${mode === m ? 'bg-white text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
+    >
+      {label}
+    </button>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50/50">
@@ -112,7 +182,7 @@ export default function RedactPdfTool() {
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-red-50"><Scissors className="w-6 h-6 text-red-500" /></div>
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Redact PDF</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Permanently black out whole pages of your PDF document</p>
+              <p className="text-muted-foreground text-sm sm:text-base">Black out text, images or whole pages permanently — in your browser, nothing uploaded</p>
             </div>
           </div>
         </div>
@@ -123,55 +193,132 @@ export default function RedactPdfTool() {
             multiple={false}
             files={files}
             onFilesSelected={(f) => { setFiles(f); setResult(null); setError(null); }}
-            onRemoveFile={() => { setFiles([]); setThumbs([]); setSelectedPages(new Set()); }}
+            onRemoveFile={reset}
           />
 
           {files.length > 0 && !result && (
             <div className="mt-6 space-y-5">
-              <div className="p-4 bg-gray-50 rounded-xl border border-border space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">File</span>
-                  <span className="text-sm font-medium text-foreground">{files[0].name}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Pages</span>
-                  <span className="text-sm font-medium text-foreground">{thumbs.length || '...'}</span>
-                </div>
-              </div>
-
               <div className="p-3 bg-red-50/60 border border-red-200 rounded-xl flex items-start gap-2.5">
                 <AlertTriangle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <p className="text-xs text-red-800 leading-relaxed">
-                  Redaction permanently blacks out the selected pages: they stay in the PDF as solid black pages and their original text and images are discarded. To black out only part of a page, use the Redact tab in <Link href="/tools/pdf-workspace" className="underline font-medium">PDF Workspace</Link>. Only use this on documents you own or have permission to modify.
+                  This is true redaction, not a black box drawn on top: every page you mark is rebuilt as an image with the boxes burned in, so the hidden text cannot be selected, copied or recovered. The rest of a marked page also becomes an image (not selectable text); unmarked pages are left untouched. Only redact documents you own or have permission to modify.
                 </p>
               </div>
 
-              {loadingThumbs && (
+              <div className="inline-flex p-1 bg-gray-100 rounded-xl">
+                {modeButton('areas', 'Draw boxes')}
+                {modeButton('pages', 'Whole pages')}
+              </div>
+
+              {loadingPreviews && (
                 <div className="flex items-center justify-center py-12 gap-3 text-muted-foreground">
-                  <Loader2 className="w-5 h-5 animate-spin" /> Rendering page thumbnails...
+                  <Loader2 className="w-5 h-5 animate-spin" /> {previewProgress || 'Rendering pages…'}
                 </div>
               )}
 
-              {thumbError && (
+              {previewError && (
                 <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-amber-600 shrink-0" />
-                  <p className="text-sm text-amber-800">{thumbError}</p>
+                  <p className="text-sm text-amber-800">{previewError}</p>
                 </div>
               )}
 
-              {!loadingThumbs && !thumbError && thumbs.length > 0 && (
+              {!loadingPreviews && !previewError && page && mode === 'areas' && (
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setCurrent(c => Math.max(0, c - 1))}
+                        disabled={current === 0}
+                        className="w-8 h-8 rounded-lg border border-border flex items-center justify-center hover:bg-gray-50 disabled:opacity-40 transition-colors"
+                        aria-label="Previous page"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                      </button>
+                      <span className="text-sm text-muted-foreground tabular-nums">
+                        Page {current + 1} of {previews.length}
+                        {pageBoxes.length > 0 && ` · ${pageBoxes.length} marked`}
+                      </span>
+                      <button
+                        onClick={() => setCurrent(c => Math.min(previews.length - 1, c + 1))}
+                        disabled={current >= previews.length - 1}
+                        className="w-8 h-8 rounded-lg border border-border flex items-center justify-center hover:bg-gray-50 disabled:opacity-40 transition-colors"
+                        aria-label="Next page"
+                      >
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                    {boxes.length > 0 && (
+                      <div className="flex items-center gap-2">
+                        <button onClick={undo} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-border hover:bg-gray-50 transition-colors">
+                          <Undo2 className="w-3.5 h-3.5" /> Undo box
+                        </button>
+                        <button onClick={() => setBoxes([])} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-border hover:bg-gray-50 transition-colors">
+                          <Trash2 className="w-3.5 h-3.5" /> Clear all
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="bg-gray-100 rounded-xl p-3 sm:p-6 flex justify-center overflow-auto">
+                    <div
+                      ref={surface}
+                      onPointerDown={onPointerDown}
+                      onPointerMove={onPointerMove}
+                      onPointerUp={onPointerUp}
+                      className="relative inline-block shadow-lg cursor-crosshair select-none touch-none max-w-full"
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={page.url} alt={`Page ${current + 1}`} draggable={false} className="block max-w-full h-auto" />
+
+                      {pageBoxes.map((box, i) => (
+                        <div
+                          key={i}
+                          className="absolute bg-black/85 border border-black"
+                          style={{
+                            left: `${(box.x / page.pointWidth) * 100}%`,
+                            top: `${((page.pointHeight - box.y - box.height) / page.pointHeight) * 100}%`,
+                            width: `${(box.width / page.pointWidth) * 100}%`,
+                            height: `${(box.height / page.pointHeight) * 100}%`,
+                          }}
+                        />
+                      ))}
+
+                      {drag && (
+                        <div
+                          className="absolute bg-black/40 border-2 border-dashed border-black pointer-events-none"
+                          style={{
+                            left: Math.min(drag.x0, drag.x1),
+                            top: Math.min(drag.y0, drag.y1),
+                            width: Math.abs(drag.x1 - drag.x0),
+                            height: Math.abs(drag.y1 - drag.y0),
+                          }}
+                        />
+                      )}
+                    </div>
+                  </div>
+
+                  <p className="flex items-center justify-center gap-2 text-xs text-muted-foreground text-center">
+                    <MousePointerSquareDashed className="w-3.5 h-3.5 shrink-0" />
+                    Drag across a name, number, signature or image to mark it. Use the arrows to mark other pages.
+                  </p>
+                </div>
+              )}
+
+              {!loadingPreviews && !previewError && previews.length > 0 && mode === 'pages' && (
                 <div>
-                  <p className="text-sm font-semibold text-foreground mb-6">Click pages to select for redaction ({selectedPages.size} selected)</p>
+                  <p className="text-sm font-semibold text-foreground mb-4">Click pages to black out completely ({selectedPages.size} selected)</p>
                   <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
-                    {thumbs.map((t) => (
-                      <button key={t.pageIndex} onClick={() => togglePage(t.pageIndex)}
-                        className={`relative rounded-xl overflow-hidden border-2 transition-all group ${selectedPages.has(t.pageIndex) ? 'border-red-500 ring-2 ring-red-500/20 bg-red-50/30' : 'border-border hover:border-gray-300'}`}>
-                        <img src={t.dataUrl} alt={`Page ${t.pageIndex}`} className="w-full h-auto block" />
-                        <div className={`absolute inset-0 transition-colors ${selectedPages.has(t.pageIndex) ? 'bg-red-500/20' : 'group-hover:bg-black/5'}`} />
+                    {previews.map((p, i) => (
+                      <button key={p.page} onClick={() => togglePage(i)}
+                        className={`relative rounded-xl overflow-hidden border-2 transition-all group ${selectedPages.has(i) ? 'border-red-500 ring-2 ring-red-500/20 bg-red-50/30' : 'border-border hover:border-gray-300'}`}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={p.url} alt={`Page ${p.page}`} className="w-full h-auto block" />
+                        <div className={`absolute inset-0 transition-colors ${selectedPages.has(i) ? 'bg-red-500/20' : 'group-hover:bg-black/5'}`} />
                         <div className="absolute bottom-0 left-0 right-0 py-1 px-1.5 bg-gradient-to-t from-black/60 to-transparent">
-                          <span className="text-[10px] font-medium text-white">{t.pageIndex}</span>
+                          <span className="text-[10px] font-medium text-white">{p.page}</span>
                         </div>
-                        {selectedPages.has(t.pageIndex) && (
+                        {selectedPages.has(i) && (
                           <div className="absolute top-1 right-1 w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
                             <Scissors className="w-2.5 h-2.5 text-white" />
                           </div>
@@ -189,16 +336,13 @@ export default function RedactPdfTool() {
                 </div>
               )}
 
-              {processing && (
-                <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3 animate-fade-in">
-                  <Loader2 className="w-4 h-4 animate-spin text-red-600" />
-                  <p className="text-sm font-medium text-red-800">Redacting pages...</p>
-                </div>
-              )}
-
-              <button onClick={handleRedact} disabled={processing || selectedPages.size === 0}
+              <button onClick={handleRedact} disabled={processing || !ready || loadingPreviews}
                 className="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white hover:shadow-lg hover:shadow-red-500/25 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
-                {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> Redacting...</> : <><Scissors className="w-4 h-4" /> Redact {selectedPages.size} page{selectedPages.size !== 1 ? 's' : ''}</>}
+                {processing
+                  ? <><Loader2 className="w-4 h-4 animate-spin" /> Redacting…</>
+                  : <><Scissors className="w-4 h-4" /> {mode === 'areas'
+                      ? `Redact ${boxes.length} area${boxes.length !== 1 ? 's' : ''}`
+                      : `Redact ${selectedPages.size} page${selectedPages.size !== 1 ? 's' : ''}`}</>}
               </button>
             </div>
           )}
@@ -207,9 +351,9 @@ export default function RedactPdfTool() {
             <div className="mt-6 space-y-4 animate-fade-in">
               <div className="p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-                <p className="text-sm text-green-800"><span className="font-semibold">PDF redacted</span> — {result.redacted} page{result.redacted !== 1 ? 's' : ''} blacked out ({formatBytes(result.size)}).</p>
+                <p className="text-sm text-green-800"><span className="font-semibold">PDF redacted</span> — {result.summary} ({formatBytes(result.size)}).</p>
               </div>
-              <button onClick={() => { setResult(null); setFiles([]); setThumbs([]); setSelectedPages(new Set()); }}
+              <button onClick={reset}
                 className="px-5 py-2.5 rounded-xl text-sm font-medium border border-border hover:bg-gray-50 transition-colors">
                 Redact Another
               </button>
