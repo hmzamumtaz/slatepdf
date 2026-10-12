@@ -59,9 +59,9 @@
   "Zoom in": "ซูมเข้า",
   "Zoom out": "ซูมออก",
   "first to turn the picture into text, or use Add text or Add image to write or place pictures on top.": "ก่อน เพื่อเปลี่ยนรูปภาพเป็นข้อความ หรือใช้เพิ่มข้อความหรือเพิ่มรูปภาพเพื่อเขียนหรือวางรูปไว้ด้านบน",
-  "{chars} can't be drawn by any available font and will be dropped when saved.": "{chars} ไม่มีฟอนต์ใดที่ใช้ได้วาดได้ และจะถูกตัดออกเมื่อบันทึก",
-  "{count} change": "{count} การเปลี่ยนแปลง",
-  "{count} changes": "{count} การเปลี่ยนแปลง",
+  "{chars} can't be drawn by any available font and will be dropped when saved.": "ไม่มีฟอนต์ที่ใช้ได้ฟอนต์ใดแสดง {chars} ได้ ตัวอักษรเหล่านี้จะถูกตัดออกเมื่อบันทึก",
+  "{count} change": "เปลี่ยนแปลง {count} รายการ",
+  "{count} changes": "เปลี่ยนแปลง {count} รายการ",
   "{text} text · {images} image": "ข้อความ {text} · รูปภาพ {images}",
   "{text} text · {images} images": "ข้อความ {text} · รูปภาพ {images}"
 }
