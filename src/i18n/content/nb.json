@@ -550,7 +550,7 @@
       "slug": "powerpoint-til-pdf",
       "name": "PowerPoint til PDF",
       "description": "Gjør lysbilder (PPTX) om til PDF",
-      "seoTitle": "PowerPoint til PDF – konverter PPTX til PDF gratis",
+      "seoTitle": "PowerPoint til PDF – gjør PPTX om til PDF gratis",
       "metaDescription": "Konverter PowerPoint-presentasjoner (PPTX) til PDF, én side per lysbilde, med tekst, bilder og tabeller. Gratis, uten registrering og uten opplasting.",
       "faqs": [
         {
@@ -581,7 +581,7 @@
       "slug": "excel-til-pdf",
       "name": "Excel til PDF",
       "description": "Gjør et regneark (XLSX) om til PDF",
-      "seoTitle": "Excel til PDF – konverter regneark til PDF gratis",
+      "seoTitle": "Excel til PDF – gjør regneark om til PDF gratis",
       "metaDescription": "Konverter Excel-regneark (XLSX eller CSV) til PDF, med hvert ark tilpasset sidebredden. Gratis, i nettleseren, uten registrering og uten opplasting.",
       "faqs": [
         {
@@ -851,7 +851,7 @@
       "slug": "pdf-til-word",
       "name": "PDF til Word",
       "description": "Gjør en PDF om til et redigerbart dokument (DOCX)",
-      "seoTitle": "PDF til Word – konverter PDF til redigerbar DOCX gratis",
+      "seoTitle": "PDF til Word – gjør PDF om til redigerbar DOCX gratis",
       "metaDescription": "Gjør teksten i en PDF om til en redigerbar Word-fil (DOCX), side for side. Gratis, i nettleseren, uten registrering og uten opplasting.",
       "faqs": [
         {
@@ -882,7 +882,7 @@
       "slug": "pdf-til-powerpoint",
       "name": "PDF til PowerPoint",
       "description": "Gjør en PDF om til redigerbare lysbilder (PPTX)",
-      "seoTitle": "PDF til PowerPoint – konverter PDF til redigerbar PPTX",
+      "seoTitle": "PDF til PowerPoint – gjør PDF om til redigerbar PPTX",
       "metaDescription": "Gjør en PDF om til redigerbare PowerPoint-lysbilder (PPTX): overskrifter blir titler og avsnitt blir punkter. Gratis, uten registrering og opplasting.",
       "faqs": [
         {
@@ -913,7 +913,7 @@
       "slug": "pdf-til-excel",
       "name": "PDF til Excel",
       "description": "Eksporter PDF-tekst til et regneark, én linje per rad (XLSX)",
-      "seoTitle": "PDF til Excel – eksporter PDF-tekst til et regneark",
+      "seoTitle": "PDF til Excel – hent PDF-tekst ut i et regneark",
       "metaDescription": "Eksporter teksten i en PDF til en Excel-arbeidsbok (XLSX): ett ark per side, én tekstlinje per rad. Gratis, i nettleseren, uten registrering.",
       "faqs": [
         {
