@@ -270,13 +270,15 @@ const toolSeo: Record<string, {
     ],
   },
   'redact-pdf': {
-    title: 'Redact PDF — Black Out Whole Pages Free',
-    description: 'Permanently black out whole pages of a PDF. Selected pages stay in place as solid black pages; their text and images are discarded. Free, no upload.',
-    keywords: ['redact pdf', 'black out pdf', 'censor pdf', 'redact sensitive information'],
+    title: 'Redact PDF Free — Black Out Text, No Upload',
+    description: 'Redact a PDF free in your browser: draw boxes over names, numbers or signatures and they are permanently removed. No upload, no account, no watermark.',
+    keywords: ['redact pdf', 'redact pdf free', 'black out pdf', 'censor pdf', 'pdf redaction tool', 'redact pdf without uploading'],
     faqs: [
-      { q: 'Is redaction permanent?', a: 'Yes. Each selected page is re-drawn as a flat image that is fully blacked out, so its original text, images and hidden layers are not carried into the new file. The page itself stays in the document, so page count and numbering do not change.' },
-      { q: 'Can redacted content be recovered?', a: 'No. Unlike drawing a black rectangle over text, which leaves the text underneath, the redacted pages are rebuilt from a blacked-out image and the original page content is discarded.' },
-      { q: 'Can I black out just part of a page?', a: 'Not in this tool — it redacts whole pages. To draw boxes over specific text or images, use the Redact tab in PDF Workspace, which burns your boxes into the page the same permanent way.' },
+      { q: 'Is redaction permanent?', a: 'Yes. Every page you mark is re-drawn as a flat image with your black boxes burned in, so the text, images and hidden layers underneath are not carried into the new file. Pages you do not mark are copied across untouched.' },
+      { q: 'Can redacted content be recovered?', a: 'No. Unlike drawing a black rectangle over text, which leaves the text underneath selectable, the marked pages are rebuilt from a blacked-out image and the original page content is discarded. Test it: try to copy from a redacted area — nothing comes back.' },
+      { q: 'Is my document uploaded anywhere?', a: 'No. The redaction runs entirely in your browser tab, so the file never leaves your device. That matters most for exactly the documents people redact: IDs, medical records, contracts and bank statements.' },
+      { q: 'Will the rest of a redacted page still be selectable text?', a: 'No. A page you mark becomes an image as a whole, so its remaining text can no longer be selected or searched. Run OCR afterwards if you need it searchable again; unmarked pages keep their text.' },
+      { q: 'Can I black out an entire page?', a: 'Yes. Switch to "Whole pages" and click each page that must go. It stays in the document as a solid black page, so page count and numbering do not change.' },
     ],
   },
   'unlock-pdf': {
@@ -356,10 +358,10 @@ const toolSeo: Record<string, {
   },
   'svg-to-pdf': {
     title: 'SVG to PDF — Convert SVG Vector Images to PDF Free',
-    description: 'Convert SVG vector graphics to PDF documents in your browser. Free, no upload, no sign-up. Preserves vector quality and design fidelity.',
+    description: 'Convert SVG files to PDF in your browser. Free, no upload, no sign-up — your SVG files never leave your device. Sharp high-res output, one or many files.',
     keywords: ['svg to pdf', 'convert svg to pdf', 'svg to pdf converter', 'svg image to pdf', 'vector to pdf'],
     faqs: [
-      { q: 'Does converting SVG to PDF preserve vector quality?', a: 'The SVG is rendered at your screen resolution and embedded as a high-quality image in the PDF. For true vector output, use a dedicated vector editor.' },
+      { q: 'Does converting SVG to PDF preserve vector quality?', a: 'No — the SVG is rendered to a high-resolution image (up to 3x its own size) and placed on a page of the original dimensions, so it stays sharp on screen and in print but is no longer editable vector art. For true vector output, export to PDF from a vector editor such as Inkscape or Illustrator.' },
       { q: 'Can I convert SVG files with external resources?', a: 'SVGs that reference external images or fonts may not render completely. Self-contained SVGs with embedded resources work best.' },
       { q: 'Is this free to use?', a: 'Yes. SVG to PDF conversion is completely free with no limits, no watermarks, and no sign-up required.' },
     ],

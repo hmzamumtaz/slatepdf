@@ -2705,19 +2705,26 @@ export async function svgToPdf(files: File[]): Promise<Blob> {
         img.onerror = () => reject(new Error('Failed to load SVG'));
         img.src = url;
       });
+      // The page keeps the SVG's own size in points; the raster behind it is
+      // drawn at up to 3x so lines and text stay sharp when zoomed or printed,
+      // capped at ~16 megapixels (iOS Safari's canvas limit) so big SVGs don't
+      // come out blank.
+      const width = img.naturalWidth || 800;
+      const height = img.naturalHeight || 600;
+      const scale = Math.min(3, Math.sqrt(16_000_000 / (width * height)));
       const canvas = document.createElement('canvas');
-      canvas.width = img.naturalWidth || 800;
-      canvas.height = img.naturalHeight || 600;
+      canvas.width = Math.round(width * scale);
+      canvas.height = Math.round(height * scale);
       const ctx = canvas.getContext('2d')!;
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
       URL.revokeObjectURL(url);
       const dataUrl = canvas.toDataURL('image/png');
       const pngBytes = Uint8Array.from(atob(dataUrl.split(',')[1]), c => c.charCodeAt(0));
       const image = await merged.embedPng(pngBytes);
-      const page = merged.addPage([image.width, image.height]);
-      page.drawImage(image, { x: 0, y: 0, width: image.width, height: image.height });
+      const page = merged.addPage([width, height]);
+      page.drawImage(image, { x: 0, y: 0, width, height });
     } catch {
       throw new Error(`"${file.name}" could not be rendered as an SVG. It may be malformed or contain external resources.`);
     }
