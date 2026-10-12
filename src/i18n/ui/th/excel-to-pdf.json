@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "อ่าน \"{name}\" เป็นเวิร์กบุ๊ก Excel ไม่ได้ ตรวจสอบให้แน่ใจว่าเป็นไฟล์ .xlsx ที่ถูกต้อง",
+  "Convert to PDF": "แปลงเป็น PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "ไม่รองรับไฟล์ .xls รุ่นเก่า บันทึกไฟล์เป็น .xlsx ใน Excel แล้วลองอีกครั้ง",
+  "No data found in this workbook.": "ไม่พบข้อมูลในเวิร์กบุ๊กนี้"
+}

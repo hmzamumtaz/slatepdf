@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Omzetten naar PDF",
+  "Converted {slides} slide including {images} image.": "{slides} dia omgezet, inclusief {images} afbeelding.",
+  "Converted {slides} slide including {images} images.": "{slides} dia omgezet, inclusief {images} afbeeldingen.",
+  "Converted {slides} slide.": "{slides} dia omgezet.",
+  "Converted {slides} slides including {images} image.": "{slides} dia's omgezet, inclusief {images} afbeelding.",
+  "Converted {slides} slides including {images} images.": "{slides} dia's omgezet, inclusief {images} afbeeldingen.",
+  "Converted {slides} slides.": "{slides} dia's omgezet.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Elke dia wordt op een witte pagina op het oorspronkelijke formaat opnieuw getekend — tekst met de echte positie, grootte en kleur, plus afbeeldingen, tabellen en gegroepeerde vormen.",
+  "Rendering slide {current} of {total}...": "Dia {current} van {total} weergeven..."
+}

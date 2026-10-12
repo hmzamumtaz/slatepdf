@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "สร้างสไลด์ {slides} สไลด์จาก {pages} หน้า",
+  "Built {slides} slide from {pages} pages.": "สร้างสไลด์ {slides} สไลด์จาก {pages} หน้า",
+  "Built {slides} slides from {pages} page.": "สร้างสไลด์ {slides} สไลด์จาก {pages} หน้า",
+  "Built {slides} slides from {pages} pages.": "สร้างสไลด์ {slides} สไลด์จาก {pages} หน้า",
+  "Convert to PowerPoint": "แปลงเป็น PowerPoint",
+  "Reading page {current} of {total}...": "กำลังอ่านหน้า {current} จาก {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "อ่านโครงสร้างของเอกสาร — หัวข้อกลายเป็นชื่อสไลด์ และย่อหน้ากลายเป็นบูลเล็ต — แทนการวางข้อความดิบ หน้าที่ยาวจะต่อไปยังสไลด์เพิ่มเติม"
+}

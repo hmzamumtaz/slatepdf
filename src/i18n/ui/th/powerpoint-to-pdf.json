@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "แปลงเป็น PDF",
+  "Converted {slides} slide including {images} image.": "แปลง {slides} สไลด์ รวมรูปภาพ {images} รูป",
+  "Converted {slides} slide including {images} images.": "แปลง {slides} สไลด์ รวมรูปภาพ {images} รูป",
+  "Converted {slides} slide.": "แปลง {slides} สไลด์",
+  "Converted {slides} slides including {images} image.": "แปลง {slides} สไลด์ รวมรูปภาพ {images} รูป",
+  "Converted {slides} slides including {images} images.": "แปลง {slides} สไลด์ รวมรูปภาพ {images} รูป",
+  "Converted {slides} slides.": "แปลง {slides} สไลด์",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "แต่ละสไลด์จะถูกวาดใหม่บนหน้าสีขาวในขนาดเดิม — ข้อความอยู่ในตำแหน่ง ขนาด และสีจริง พร้อมรูปภาพ ตาราง และรูปทรงที่จัดกลุ่มไว้",
+  "Rendering slide {current} of {total}...": "กำลังแสดงผลสไลด์ {current} จาก {total}..."
+}

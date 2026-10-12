@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{slides} dia gemaakt van {pages} pagina.",
+  "Built {slides} slide from {pages} pages.": "{slides} dia gemaakt van {pages} pagina's.",
+  "Built {slides} slides from {pages} page.": "{slides} dia's gemaakt van {pages} pagina.",
+  "Built {slides} slides from {pages} pages.": "{slides} dia's gemaakt van {pages} pagina's.",
+  "Convert to PowerPoint": "Omzetten naar PowerPoint",
+  "Reading page {current} of {total}...": "Pagina {current} van {total} lezen...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Leest de structuur van het document — koppen worden diatitels en alinea's worden opsommingstekens — in plaats van ruwe tekst te plakken. Lange pagina's lopen door op extra dia's."
+}

@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "กลับไปที่เครื่องมือทั้งหมด",
+  "Enter the PDF password (leave empty if none)": "ใส่รหัสผ่าน PDF (เว้นว่างไว้หากไม่มี)",
+  "File": "ไฟล์",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "ควรใช้เฉพาะกับ PDF ที่คุณเป็นเจ้าของหรือได้รับอนุญาตให้แก้ไขเท่านั้น การลบการป้องกันออกจาก PDF ของผู้อื่นอาจละเมิดกฎหมายลิขสิทธิ์หรือกฎหมายความเป็นส่วนตัว",
+  "PDF unlocked and downloaded": "ปลดล็อกและดาวน์โหลด PDF แล้ว",
+  "Password (if required)": "รหัสผ่าน (หากจำเป็น)",
+  "Remove password protection from a PDF file": "ลบการป้องกันด้วยรหัสผ่านออกจากไฟล์ PDF",
+  "Size": "ขนาด",
+  "Unlock PDF": "ปลดล็อก PDF",
+  "Unlocking...": "กำลังปลดล็อก..."
+}

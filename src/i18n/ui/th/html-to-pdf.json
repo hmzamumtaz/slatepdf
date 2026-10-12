@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "กลับไปที่เครื่องมือทั้งหมด",
+  "Convert to PDF": "แปลงเป็น PDF",
+  "Converting...": "กำลังแปลง...",
+  "Design preview": "ตัวอย่างดีไซน์",
+  "Exact design": "ดีไซน์ตรงตามต้นฉบับ",
+  "HTML code": "โค้ด HTML",
+  "HTML design preview": "ตัวอย่างดีไซน์ HTML",
+  "HTML to PDF": "แปลง HTML เป็น PDF",
+  "Live preview — this is the design that will be converted": "ตัวอย่างสด — นี่คือดีไซน์ที่จะถูกแปลง",
+  "PDF downloaded": "ดาวน์โหลด PDF แล้ว",
+  "PDF output": "รูปแบบ PDF ที่ได้",
+  "Paste some HTML or upload an .html file first.": "วางโค้ด HTML หรืออัปโหลดไฟล์ .html ก่อน",
+  "Paste your HTML here, or upload an .html file above...": "วางโค้ด HTML ที่นี่ หรืออัปโหลดไฟล์ .html ด้านบน...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "จัดเรียงเนื้อหาใหม่เป็นข้อความ PDF จริงที่เลือกและค้นหาได้ โดยใช้สไตล์ที่เรียบง่ายขึ้น",
+  "Render the HTML design first, then convert it to PDF": "แสดงผลดีไซน์ HTML ก่อน แล้วแปลงเป็น PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "แสดงผลหน้าด้วย CSS เต็มรูปแบบ — สี ฟอนต์ พื้นหลัง เลย์เอาต์ — ตรงตามตัวอย่างทุกอย่าง แนะนำ",
+  "Selectable text": "ข้อความที่เลือกได้",
+  "Upload .html file": "อัปโหลดไฟล์ .html",
+  "Upload an .html file above, or switch to the": "อัปโหลดไฟล์ .html ด้านบน หรือสลับไปที่แท็บ",
+  "Your design preview will appear here": "ตัวอย่างดีไซน์ของคุณจะแสดงที่นี่",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "แล้ววางมาร์กอัปของคุณ หน้าจะแสดงผลที่นี่พร้อมดีไซน์ครบถ้วน — เหมือนกับ PDF ที่คุณจะได้ทุกอย่าง"
+}
