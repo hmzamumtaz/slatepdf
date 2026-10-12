@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "「{name}」をExcelブックとして読み込めませんでした。有効な.xlsxファイルか確認してください。",
+  "Convert to PDF": "PDFに変換",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "旧形式の.xlsファイルには対応していません。Excelで.xlsx形式で保存してから、もう一度お試しください。",
+  "No data found in this workbook.": "このブックにはデータがありません。"
+}

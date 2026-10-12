@@ -1,0 +1,1407 @@
+{
+  "site": {
+    "homeTitle": "Ingyenes PDF eszközök a böngésződben",
+    "homeDescription": "PDF egyesítés, szétválasztás, tömörítés, konvertálás, aláírás és szerkesztés a böngésződben. Ingyenes, regisztráció nélkül, fájlfeltöltés nélkül.",
+    "heroBadge": "A fájlok sosem hagyják el az eszközödet",
+    "heroTitle": "Minden PDF eszköz, amire szükséged van,",
+    "heroHighlight": "ingyen és privát módon.",
+    "heroSubtitle": "Egyesíts, szétválassz, tömöríts, konvertálj, szerkessz és írj alá dokumentumokat a böngésződben. Feltöltés, regisztráció és vízjel nélkül.",
+    "heroCta": "Az összes PDF eszköz",
+    "popularTools": "Népszerű eszközök",
+    "whyTitle": "Miért a {site}?",
+    "why": [
+      {
+        "title": "A fájljaid privátak maradnak",
+        "text": "Minden a saját eszközödön történik. A dokumentumaid sosem kerülnek fel szerverre – ideális bizalmas munkához."
+      },
+      {
+        "title": "Azonnali eredmény",
+        "text": "Nincs feltöltés és nincs várakozási sor. A PDF-ed a kattintás pillanatában feldolgozásra kerül, lassú internetkapcsolat mellett is."
+      },
+      {
+        "title": "Ingyenes, vízjel nélkül",
+        "text": "Bármelyik eszközt annyiszor használhatod, ahányszor csak szeretnéd. Nincs fiók, nincs vízjel a fájljaidon és nincsenek rejtett díjak."
+      }
+    ],
+    "faqTitle": "Gyakori kérdések",
+    "homeFaqs": [
+      {
+        "q": "Tényleg ingyenes a {site}?",
+        "a": "Igen. Minden eszköz ingyenesen használható: nincs fiók, nincs vízjel a fájljaidon, és nincs fizetős csomag."
+      },
+      {
+        "q": "Feltöltődnek a fájljaim egy szerverre?",
+        "a": "Nem. Az eszközök a böngésződben futnak, így a fájljaid az eszközödön maradnak. Az egyetlen kivétel a PDF fordítás, amely a szöveget egy fordítószolgáltatásnak küldi el – és ezt előtte jelzi is."
+      },
+      {
+        "q": "Kell bármit telepítenem?",
+        "a": "Nem. Bármely modern böngészőben működik – Chrome, Edge, Firefox vagy Safari –, Windowson, Macen, Linuxon, Androidon és iPhone-on."
+      },
+      {
+        "q": "Létre kell hoznom egy fiókot?",
+        "a": "Nem. Nyiss meg egy eszközt, és azonnal kezdheted is a munkát."
+      }
+    ],
+    "hubTitle": "Összes PDF eszköz – {count} ingyenes eszköz, feltöltés nélkül",
+    "hubDescription": "Minden {site} eszköz egy helyen: PDF egyesítés, szétválasztás, tömörítés, konvertálás, szerkesztés, aláírás és védelem. Ingyenes, fiók és feltöltés nélkül.",
+    "hubH1": "Minden PDF eszköz, amire szükséged van, egy helyen",
+    "hubIntro": "{count} ingyenes PDF eszköz a dokumentumaid egyesítéséhez, szétválasztásához, tömörítéséhez, konvertálásához, szerkesztéséhez, aláírásához és védelméhez. Mindegyik a böngésződben fut, így a fájljaid sosem töltődnek fel – fiók és vízjel nélkül.",
+    "navWorkspace": "Munkaterület",
+    "navAllTools": "Összes eszköz",
+    "navGuides": "Útmutatók (angol nyelvű)",
+    "language": "Nyelv",
+    "menu": "Menü",
+    "footerTagline": "Ingyenes PDF eszközök, amelyek a böngésződben futnak. Szerkessz, konvertálj, egyesíts és tömöríts PDF-eket feltöltés nélkül.",
+    "footerPrivate": "100%-ban privát. A fájlok sosem hagyják el az eszközödet.",
+    "footerAllTools": "Az összes PDF eszköz ({count})",
+    "footerNoSignup": "Regisztráció nélkül",
+    "footerNoWatermark": "Vízjel nélkül",
+    "footerAbout": "Rólunk (angol nyelvű)",
+    "footerPrivacy": "Adatvédelem (angol nyelvű)",
+    "footerTerms": "Felhasználási feltételek (angol nyelvű)",
+    "breadcrumbHome": "Főoldal",
+    "breadcrumbTools": "PDF eszközök",
+    "whyToolHeading": "{tool} – miért érdemes itt használni?",
+    "faqHeading": "{tool} – gyakori kérdések",
+    "continueHeading": "Folytasd egy másik eszközzel",
+    "seeAllTools": "Az összes PDF eszköz megtekintése ({count})"
+  },
+  "categories": {
+    "All-in-one": {
+      "name": "Minden egyben",
+      "blurb": "Több műveletet is elvégezhetsz egy dokumentumon, köztes letöltések nélkül."
+    },
+    "Organize PDF": {
+      "name": "PDF rendezése",
+      "blurb": "PDF-ek egyesítése, szétválasztása, oldalaik átrendezése és törlése."
+    },
+    "Optimize PDF": {
+      "name": "PDF optimalizálása",
+      "blurb": "Kisebb, gyorsabban megnyíló, kereshető vagy újra olvasható PDF-ek."
+    },
+    "Create PDF": {
+      "name": "PDF létrehozása",
+      "blurb": "Képek, Office-fájlok, weboldalak és e-könyvek átalakítása PDF-fé."
+    },
+    "Export PDF": {
+      "name": "PDF exportálása",
+      "blurb": "A PDF tartalmának kinyerése Word, Excel, diák, képek vagy szöveg formájában."
+    },
+    "Modify PDF": {
+      "name": "PDF módosítása",
+      "blurb": "Szöveg szerkesztése, aláírás, oldalszámozás, vízjel, körbevágás, forgatás és kitakarás."
+    },
+    "PDF Security": {
+      "name": "PDF biztonság",
+      "blurb": "Jelszavas védelem hozzáadása vagy eltávolítása."
+    },
+    "PDF Intelligence": {
+      "name": "PDF elemzés",
+      "blurb": "Egy PDF tartalmának összehasonlítása, összefoglalása és fordítása."
+    }
+  },
+  "tools": {
+    "pdf-workspace": {
+      "slug": "pdf-munkaterulet",
+      "name": "PDF munkaterület",
+      "description": "Szerkessz, takarj ki, írj alá, bélyegezz és védj le egy dokumentumot az oldal elhagyása nélkül",
+      "seoTitle": "PDF munkaterület – szerkesztés, aláírás, kitakarás online",
+      "metaDescription": "Egy PDF munkaterület szöveg szerkesztéséhez, kitakarásához, aláíráshoz, vízjelhez és jelszavas védelemhez. Minden a böngésződben történik.",
+      "faqs": [
+        {
+          "q": "Mit tudok csinálni a PDF munkaterületen?",
+          "a": "Szerkesztheted a szöveget, kitakarhatod az érzékeny adatokat, átrendezheted az oldalakat, aláírást és vízjelet adhatsz hozzá, módosíthatod az oldalakat, jelszóval védheted a dokumentumot, majd letöltheted az eredményt – mindezt az oldal elhagyása nélkül."
+        },
+        {
+          "q": "Feltöltődik a dokumentumom egy szerverre?",
+          "a": "Nem. Minden művelet a böngésződben fut. A dokumentumod sosem hagyja el az eszközödet, így a munkaterület ideális bizalmas és érzékeny anyagokhoz."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan szerkessz, írj alá és védj le egy PDF-et egy helyen",
+        "intro": "A PDF munkaterület egyetlen képernyőn kínálja a szerkesztést, a kitakarást, az oldaleszközöket, az aláírást, a bélyegzőket és a jelszavakat, visszavonással és újra végrehajtással, így egy menetben elkészülhetsz a dokumentummal, és csak egyszer kell letöltened.",
+        "steps": [
+          "Nyisd meg a PDF-et a fenti munkaterületen (ha jelszóval védett, előbb oldd fel)",
+          "Használd a Szerkesztés, Kitakarás, Oldalak, Aláírás, Bélyegző, Beállítás és Védelem lapokat tetszőleges sorrendben",
+          "Ha meggondolod magad, lépj vissza vagy előre az előzményekben",
+          "Kattints a Letöltés gombra a kész PDF mentéséhez"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "merge-pdf": {
+      "slug": "pdf-egyesitese",
+      "name": "PDF egyesítés",
+      "description": "Több PDF egyesítése egyetlen fájlba",
+      "seoTitle": "PDF egyesítés – több PDF összefűzése egybe (ingyen)",
+      "metaDescription": "Fűzz össze két vagy több PDF fájlt egyetlen dokumentummá. Ingyenes, regisztráció és vízjel nélkül. Az egyesítés a böngésződben történik, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Hány PDF-et tudok egyszerre egyesíteni?",
+          "a": "Egyszerre legfeljebb 20 fájlt, az eszközöd memóriáján túl nincs méretkorlát. Ha többre van szükséged, egyesítsd őket 20-as csoportokban, majd az eredményeket fűzd össze."
+        },
+        {
+          "q": "Romlik a PDF minősége az egyesítéstől?",
+          "a": "Nem. A helyes egyesítés minden oldalobjektumot átmásol egy új dokumentumba, a képek és a szöveg újrakódolása nélkül. Az oldalak megegyeznek az eredetiekkel."
+        },
+        {
+          "q": "Egyesíthetek jelszóval védett PDF-eket?",
+          "a": "Előbb fel kell oldanod őket. A jelszóval védett PDF-ek nem olvashatók, amíg a jelszót el nem távolítod."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PDF fájlokat egyesíteni",
+        "intro": "A PDF egyesítés két vagy több PDF-et fűz össze egyetlen dokumentummá, a kiválasztás sorrendjében. Az oldalak változatlanul másolódnak át, így a szöveg kijelölhető marad, a képek pedig megtartják a felbontásukat.",
+        "steps": [
+          "Válassz ki vagy húzz ide legalább két PDF fájlt (egyszerre legfeljebb 20-at) a kívánt sorrendben",
+          "Ellenőrizd a listát, és távolítsd el a tévedésből hozzáadott fájlokat",
+          "Kattints a PDF-ek egyesítése gombra",
+          "Töltsd le az egyesített PDF-et"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Veszteségmentes – az oldalak átmásolódnak, nem renderelődnek újra"
+        ]
+      }
+    },
+    "split-pdf": {
+      "slug": "pdf-szetvalasztasa",
+      "name": "PDF szétválasztás",
+      "description": "PDF szétválasztása különálló oldalakra",
+      "seoTitle": "PDF szétválasztás – PDF felosztása külön oldalakra",
+      "metaDescription": "Bonts fel egy PDF-et egyes oldalakra vagy egyéni oldaltartományokra. Ingyenes, böngészőben fut, feltöltés nélkül. Töltsd le az oldalakat azonnal.",
+      "faqs": [
+        {
+          "q": "Hogyan oszthatok fel egy PDF-et adott oldaltartományokra?",
+          "a": "Adj meg tartományokat, például 1-5, 10, 15-20. Az eszköz minden tartományból külön fájlt készít."
+        },
+        {
+          "q": "Romlik a minőség a szétválasztástól?",
+          "a": "Nem. A szétválasztás teljes oldalobjektumokat másol át új dokumentumokba. A szöveg kijelölhető marad, a képek megtartják eredeti felbontásukat."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy PDF-et szétválasztani",
+        "intro": "A PDF szétválasztás oldaltartományok szerint több fájlra vág egy dokumentumot. Minden beírt tartományból külön PDF lesz.",
+        "steps": [
+          "Válaszd ki a szétválasztandó PDF-et",
+          "Írd be az oldaltartományokat, például 1-3, 5, 7-10, és ellenőrizd az előnézetet",
+          "Kattints a PDF szétválasztása gombra",
+          "Töltsd le egyenként a részeket, vagy az Összes letöltése gombbal mindet egy ZIP-ben"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Veszteségmentes – minden oldal megtartja eredeti szövegét és képeit"
+        ]
+      }
+    },
+    "remove-pages": {
+      "slug": "pdf-oldalak-torlese",
+      "name": "Oldalak törlése",
+      "description": "Adott oldalak törlése egy PDF-ből",
+      "seoTitle": "PDF oldalak törlése – felesleges oldalak eltávolítása",
+      "metaDescription": "Törölj adott oldalakat egy PDF dokumentumból. Válaszd ki az eltávolítandó oldalakat, és töltsd le a frissített fájlt. Ingyenes, regisztráció nélkül.",
+      "faqs": [
+        {
+          "q": "Törölhetek egyszerre több oldalt?",
+          "a": "Igen. Adj meg több oldalszámot vagy tartományt, és az összes kiválasztott oldal egy lépésben törlődik."
+        },
+        {
+          "q": "Ez ugyanaz, mint a szétválasztás?",
+          "a": "Nem. A szétválasztás külön fájlokat hoz létre a kiválasztott oldalakból. A törlés eltávolítja az oldalakat a dokumentumból, a többit pedig egyetlen fájlban hagyja."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet oldalakat törölni egy PDF-ből",
+        "intro": "Az Oldalak törlése eltávolítja a megadott oldalakat, minden mást pedig egyetlen PDF-ben, az eredeti sorrendben megtart.",
+        "steps": [
+          "Válaszd ki a PDF-et",
+          "Írd be a törlendő oldalakat, például 1, 3, 5-8",
+          "Ellenőrizd a megmaradó oldalak előnézetét",
+          "Kattints az Oldalak törlése gombra, és töltsd le a rövidebb PDF-et"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "extract-pages": {
+      "slug": "pdf-oldalak-kinyerese",
+      "name": "Oldalak kinyerése",
+      "description": "Adott oldalak kinyerése új PDF-be",
+      "seoTitle": "PDF oldalak kinyerése – adott oldalak kimentése",
+      "metaDescription": "Nyerj ki adott oldalakat egy PDF-ből egy új dokumentumba. Választhatsz egyes oldalakat, tartományokat vagy ezek keverékét. Az eredeti PDF változatlan marad.",
+      "faqs": [
+        {
+          "q": "Megváltozik az eredeti PDF a kinyeréstől?",
+          "a": "Nem. A kinyerés beolvassa a forrást, és egy új fájlt ír. Az eredeti fájl érintetlen marad a lemezen."
+        },
+        {
+          "q": "Kinyerhetem az oldalakat más sorrendben?",
+          "a": "Igen. Sorold fel az oldalakat a kívánt sorrendben. Ha például 9, 3, 5-öt adsz meg, a fájl ebben a sorrendben fogja tartalmazni az oldalakat."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet oldalakat kinyerni egy PDF-ből",
+        "intro": "Az Oldalak kinyerése a kiválasztott oldalakat egy új PDF-be másolja, az eredeti fájlt pedig érintetlenül hagyja.",
+        "steps": [
+          "Válaszd ki a PDF-et",
+          "Írd be a kívánt oldalakat, például 1, 3, 5-8, és ellenőrizd a bélyegképeket",
+          "Kattints az Oldalak kinyerése gombra",
+          "Töltsd le az új PDF-et, amely csak ezeket az oldalakat tartalmazza"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "organize-pdf": {
+      "slug": "pdf-rendezese",
+      "name": "PDF rendezés",
+      "description": "Oldalak átrendezése, forgatása és kezelése",
+      "seoTitle": "PDF rendezés – oldalak átrendezése és törlése ingyen",
+      "metaDescription": "Rakd tetszőleges sorrendbe egy PDF oldalait, és hagyd ki a feleslegeseket, egyetlen lépésben. Ingyenes, regisztráció nélkül, a fájl a böngésződben marad.",
+      "faqs": [
+        {
+          "q": "Hogyan adhatom meg az új oldalsorrendet?",
+          "a": "Írd be az oldalszámokat a kívánt sorrendben, például 3, 1, 2, 4. A jelenlegi sorrend előre ki van töltve, mentés előtt pedig előnézet mutatja az eredményt."
+        },
+        {
+          "q": "Forgathatok itt oldalakat?",
+          "a": "Nem. Ehhez használd a PDF forgatás eszközt, amely az összes vagy csak a megadott oldalakat forgatja el 90°-kal, 180°-kal vagy 270°-kal."
+        },
+        {
+          "q": "Keverhetek oldalakat különböző PDF-ekből?",
+          "a": "A rendezés egyetlen PDF-en működik. Ha különböző fájlok oldalait szeretnéd kombinálni, nyerd ki a szükséges oldalakat, majd használd a PDF egyesítés eszközt."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet átrendezni egy PDF oldalait",
+        "intro": "A PDF rendezés a beírt oldalsorrend szerint építi újra a dokumentumot. A listából kihagyott oldalak kimaradnak, így egy lépésben rendezheted át és rövidítheted le a fájlt.",
+        "steps": [
+          "Válaszd ki a PDF-et – a jelenlegi sorrend (1, 2, 3 …) előre ki van töltve",
+          "Írd át a listát a kívánt sorrendre, például 3, 1, 2, 4",
+          "Ellenőrizd az új sorrend előnézetét",
+          "Kattints a PDF rendezése gombra, és töltsd le az eredményt"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "compress-pdf": {
+      "slug": "pdf-tomoritese",
+      "name": "PDF tömörítés",
+      "description": "Fájlméret csökkentése a minőség megőrzésével",
+      "seoTitle": "PDF tömörítés – fájlméret csökkentése minőségromlás nélkül",
+      "metaDescription": "Csökkentsd a PDF fájlméretét akár 80%-kal, látható minőségromlás nélkül. Ingyenes tömörítés a böngészőben, feltöltés, vízjel és regisztráció nélkül.",
+      "faqs": [
+        {
+          "q": "Romlik a PDF minősége a tömörítéstől?",
+          "a": "Az ajánlott tömörítési szinten a képek 150 DPI-vel kódolódnak újra – képernyőn és normál nyomtatásban vizuálisan megegyeznek az eredetivel."
+        },
+        {
+          "q": "Mennyivel lesz kisebb a PDF-em?",
+          "a": "A sok fényképet tartalmazó PDF-ek 60–80%-kal, a csak szöveges fájlok 10–30%-kal lesznek kisebbek. A szkennelt dokumentumok akár 90%-kal is zsugorodhatnak."
+        },
+        {
+          "q": "Tömöríthetek jelszóval védett PDF-et?",
+          "a": "Előbb fel kell oldanod. A tömörítő eszközök nem tudják olvasni a titkosított fájlokat, amíg a jelszót el nem távolítod."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy PDF-et adott méretre tömöríteni",
+        "intro": "A PDF tömörítés egy általad megadott célméret felé dolgozik MB-ban vagy KB-ban, homályos „alacsony / közepes / magas” szintek helyett – hasznos, ha egy feltöltési űrlapnak vagy e-mailnek szigorú korlátja van.",
+        "steps": [
+          "Válaszd ki a kicsinyítendő PDF-et",
+          "Írj be egy célméretet, vagy válassz gyors beállítást: az eredeti 50, 25, 10 vagy 5%-a",
+          "Kattints a Tömörítés gombra",
+          "Ellenőrizd az új méretet, majd töltsd le a tömörített PDF-et"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Őszinte a kompromisszumokról: figyelmeztet, ha a célméret olyan kicsi, hogy az oldalakat képpé kell alakítani"
+        ]
+      }
+    },
+    "optimize-pdf": {
+      "slug": "pdf-optimalizalasa",
+      "name": "PDF optimalizálás",
+      "description": "PDF optimalizálása webre és gyorsabb betöltésre",
+      "seoTitle": "PDF optimalizálás – gyorsabb betöltés webre",
+      "metaDescription": "Optimalizáld a PDF fájlokat webes közzétételre és gyorsabb betöltésre. Rövidebb megjelenítési idő, egyesített rétegek és letisztult dokumentumszerkezet.",
+      "faqs": [
+        {
+          "q": "Mit csinál a PDF optimalizálás?",
+          "a": "Az optimalizálás eltávolítja a nem használt objektumokat, egyesíti az interaktív rétegeket, részhalmazra szűkíti a betűtípusokat, és letisztítja a belső szerkezetet a gyorsabb megjelenítés érdekében."
+        },
+        {
+          "q": "Az optimalizálás ugyanaz, mint a tömörítés?",
+          "a": "A tömörítés a képek újrakódolásával csökkenti a fájlméretet. Az optimalizálás a szerkezeti javításokra fókuszál, amelyek gyorsítják a betöltést és a megjelenítést."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy PDF-et minőségvesztés nélkül optimalizálni",
+        "intro": "A PDF optimalizálás újracsomagolja a fájl szerkezetét – objektumfolyamok, nem használt objektumok – anélkül, hogy a képekhez vagy a szöveghez nyúlna. Ha nincs mit nyerni, változatlanul adja vissza a fájlt, és ezt jelzi is.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Jelöld be a „Dokumentum metaadatainak eltávolítása” lehetőséget, ha a címet, a szerzőt és a hasonló mezőket is törölni szeretnéd",
+          "Kattints a PDF optimalizálása gombra",
+          "Töltsd le az optimalizált fájlt, vagy használd a PDF tömörítés eszközt, ha nagyobb méretcsökkentésre van szükséged"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "repair-pdf": {
+      "slug": "pdf-javitasa",
+      "name": "PDF javítás",
+      "description": "Sérült vagy hibás PDF fájlok javítása",
+      "seoTitle": "PDF javítás – sérült vagy hibás PDF fájlok helyreállítása",
+      "metaDescription": "Javítsd meg a sérült vagy hibás PDF fájlokat. Javítsd a hibás fejléceket, mentsd meg az olvasható tartalmat, és állítsd helyre a dokumentumot. Ingyenes.",
+      "faqs": [
+        {
+          "q": "Mitől sérül meg egy PDF?",
+          "a": "Gyakori okok a félbeszakadt letöltés, az adathordozó hibái, a mentés közbeni programösszeomlás és a vírusok okozta károk."
+        },
+        {
+          "q": "Minden tartalom helyreállítható a javítással?",
+          "a": "A javítás a PDF szerkezetének újraépítésével működik. Az, hogy mi állítható helyre, attól függ, mennyi maradt épen az eredeti adatokból."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy sérült PDF-et megjavítani",
+        "intro": "A PDF javítás újraépíti a sérült fájl kereszthivatkozási tábláját, objektumszámozását és záró részét (trailer). Ha a szerkezet nem állítható helyre, az oldalakat újrarendereli egy új, kereshető szövegréteggel ellátott PDF-be.",
+        "steps": [
+          "Válaszd ki a PDF-et, amely nem nyílik meg vagy hibát jelez",
+          "Kattints a PDF javítása gombra",
+          "Töltsd le a javított fájlt, és nyisd meg, hogy minden oldalt ellenőrizz"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "ocr-pdf": {
+      "slug": "pdf-szovegfelismeres",
+      "name": "OCR PDF",
+      "description": "Szöveg kinyerése szkennelt dokumentumokból",
+      "seoTitle": "OCR PDF – szövegfelismerés szkennelt dokumentumokban",
+      "metaDescription": "Alakítsd a szkennelt dokumentumokat kereshető, kijelölhető szöveggé OCR-rel. Kereshető és szerkeszthető szkennelt PDF-ek. Ingyenes, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Mi az az OCR?",
+          "a": "Az optikai karakterfelismerés (OCR) elemzi a szövegről készült képeket, és valódi karakterekké alakítja őket, így a szkennelt dokumentumok kereshetővé és kijelölhetővé válnak."
+        },
+        {
+          "q": "Mennyire pontos az OCR?",
+          "a": "A pontosság a szkennelés minőségétől függ. Tiszta, nagy felbontású szkenneknél jellemzően 95–99%. Gyenge minőségű szkenneknél több hiba előfordulhat."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan tehető kereshetővé egy szkennelt PDF OCR-rel",
+        "intro": "Az OCR PDF felismeri a szkennelt oldalakon lévő szöveget, és hozzáadja a PDF-hez, így kereshetsz benne, kijelölheted és másolhatod. 44 nyelv közül legfeljebb hármat választhatsz ki a dokumentumhoz.",
+        "steps": [
+          "Válaszd ki a szkennelt PDF-et",
+          "Keresd meg és válaszd ki a dokumentum nyelvét – vegyes nyelvű fájloknál legfeljebb hármat",
+          "Kattints az OCR indítása gombra, és várd meg, amíg minden oldal feldolgozásra kerül",
+          "Töltsd le a kereshető PDF-et"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "A felismerés a saját eszközödön fut, így az érzékeny szkennek nálad maradnak"
+        ]
+      }
+    },
+    "jpg-to-pdf": {
+      "slug": "jpg-pdf-konvertalas",
+      "name": "JPG PDF konvertálás",
+      "description": "Képek konvertálása PDF dokumentummá",
+      "seoTitle": "JPG PDF konvertálás – képek átalakítása PDF-be ingyen",
+      "metaDescription": "Alakítsd JPG képeidet PDF dokumentummá az eredeti képminőség megőrzésével. Több képet is egyesíthetsz egy PDF-be. Ingyenes, regisztráció nélkül.",
+      "faqs": [
+        {
+          "q": "Romlik a képminőség a JPG PDF konvertálás során?",
+          "a": "Nem. A képadatok újratömörítés nélkül kerülnek be a PDF-be. A képeid pixelre pontosan megegyeznek az eredetiekkel."
+        },
+        {
+          "q": "Egyesíthetek több képet egy PDF-be?",
+          "a": "Igen. Töltsd be az összes JPG-t, rendezd sorba őket, és konvertáld. Minden képből egy oldal lesz az elkészült PDF-ben."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet JPG-t PDF-be konvertálni",
+        "intro": "A JPG PDF konvertálás JPEG, PNG és WebP képeket fűz össze egyetlen PDF-be, oldalanként egy képpel, a hozzáadás sorrendjében.",
+        "steps": [
+          "Válaszd ki vagy húzd ide a képeidet (egyszerre legfeljebb 20-at) az oldalak kívánt sorrendjében",
+          "Kattints a Konvertálás PDF-be gombra",
+          "Töltsd le az összes képet tartalmazó PDF-et"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "scan-pdf": {
+      "slug": "pdf-szkenneles",
+      "name": "PDF szkennelés",
+      "description": "Dokumentumok szkennelése kamerával és mentése PDF-ként",
+      "seoTitle": "Szkennelés PDF-be online ingyen – kamerás, app nélkül",
+      "metaDescription": "Szkennelj dokumentumokat PDF-be a telefonod kamerájával: automatikus élfelismerés, vágás, szűrők, OCR, igazolvány- és könyvmód. Ingyenes, app nélkül.",
+      "faqs": [
+        {
+          "q": "Kell alkalmazás vagy szkenner a PDF készítéséhez?",
+          "a": "Nem. Nyisd meg ezt az oldalt a telefonodon, és irányítsd a kamerát a lapra. Az eszköz megtalálja a széleket, rögzíti az oldalt, amikor stabilan tartod, kiegyenesíti, és eltünteti az árnyékokat. A már elkészült fotóidat is importálhatod."
+        },
+        {
+          "q": "Feltöltődik a szkennelt dokumentumom egy szerverre?",
+          "a": "Nem. A kamerakép, az oldalfelismerés, a szűrők és a PDF létrehozása is a böngésződben fut. Az oldalak ezen az eszközön maradnak, így egy újratöltéskor sem vesznek el. Az egyetlen letöltés a szövegfelismerő nyelvi modell, amelyet egyszer tölt le az oldal, ha bekapcsolod az OCR-t."
+        },
+        {
+          "q": "Kereshetővé tehetem a szkennelt PDF-et?",
+          "a": "Igen. Mentéskor hagyd bekapcsolva a „Szövegfelismerés (OCR)” opciót. A felismert szöveg láthatatlanul kerül az egyes oldalképek fölé, így kereshetsz benne, kijelölheted és másolhatod. A pontosság attól függ, mennyire éles és jól megvilágított a fotó."
+        },
+        {
+          "q": "Mire valók a Könyv, Igazolvány és Tábla módok?",
+          "a": "A Könyv mód egy nyitott könyvet bal és jobb oldalra bont. Az Igazolvány mód beszkenneli egy kártya elejét, majd a hátulját, és mindkettőt valós méretben egy oldalra helyezi. A Tábla mód kifehéríti a tükröződést, és felerősíti a filctoll színeit."
+        },
+        {
+          "q": "Javíthatok egy oldalt a szkennelés után?",
+          "a": "Igen. Az Áttekintés nézetben a sarkok húzásával újra levághatod az oldalt, elforgathatod, szűrőt válthatsz, állíthatsz a fényerőn és a kontraszton, kiradírozhatsz foltokat, rajzolhatsz, kiemelhetsz, szöveget adhatsz hozzá vagy aláírhatsz, újrafotózhatsz, átrendezhetsz vagy törölhetsz bármely oldalt, és bármely módosítást visszavonhatsz. A módosítások az eredeti fotón érvényesülnek, így semmi sem veszít a minőségéből."
+        },
+        {
+          "q": "Beszkennelhetek egy névjegykártyát a névjegyeim közé?",
+          "a": "Igen. Használd a Névjegykártya módot, majd koppints a Névjegy gombra: a név, a beosztás, a cég, a telefonszám, az e-mail-cím és a weboldal kiolvasásra kerül a kártyáról, hogy ellenőrizhesd, majd egy .vcf névjegyfájlba mentődik, amelyet a telefonod importálni tud."
+        },
+        {
+          "q": "Védhetem jelszóval a szkennelt fájlt, vagy menthetem JPG-ként?",
+          "a": "Igen. Mentéskor jelöld be a „Védelem jelszóval” lehetőséget a PDF zárolásához, vagy válaszd a JPG-t, hogy oldalanként egy képet kapj. A mentett PDF-ek a Legutóbbi szkennek között is megmaradnak ezen az eszközön, így később újra letöltheted vagy megoszthatod őket."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet dokumentumot PDF-be szkennelni telefonnal",
+        "intro": "A PDF szkennelés dokumentumszkennerré alakítja a telefonod vagy laptopod kameráját: megtalálja az oldal széleit, kiegyenesíti és megtisztítja az oldalt, majd PDF-be menti, amelyet kereshetővé is tehetsz.",
+        "steps": [
+          "Engedélyezd a kamera-hozzáférést, vagy add hozzá a már elkészült fotóidat",
+          "Tartsd a lapot a képben – az eszköz felismeri a széleket, majd levágja és kiegyenesíti az oldalt",
+          "Nézd át az oldalakat: vágd újra, forgasd el, válassz szűrőt (például Fekete-fehér vagy Tábla), vagy fotózd újra",
+          "Válaszd ki az oldalméretet és a fájlméretet, kapcsold be a szövegfelismerést (OCR), ha szeretnéd, és mentsd PDF-ként vagy JPG-ként"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "A szkennek az eszközödön maradnak, a Legutóbbi szkennek között tárolt másolatokkal együtt"
+        ]
+      }
+    },
+    "word-to-pdf": {
+      "slug": "word-pdf-konvertalas",
+      "name": "Word PDF konvertálás",
+      "description": "Dokumentum (DOCX) átalakítása PDF-fé",
+      "seoTitle": "Word PDF konvertálás – DOCX átalakítása PDF-be ingyen",
+      "metaDescription": "Alakítsd Word dokumentumaidat (DOCX) PDF-fé a böngésződben. Megmarad a szöveg, a címsorok, a listák és a táblázatok. Ingyenes, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Megmarad a formázásom?",
+          "a": "A szöveg, a címsorok, a listák és a táblázatok átkerülnek, de a dokumentum újraszedésre kerül, nem pixelre pontosan másolódik, így az egyéni betűtípusok és az összetett oldalelrendezések nem fognak pontosan egyezni. Pixelpontos másolathoz használd magában a Wordben a Fájl → Mentés PDF-ként parancsot."
+        },
+        {
+          "q": "Telepítve kell lennie a Microsoft Wordnek?",
+          "a": "Nem. Az átalakítás a böngésződben történik. Nincs szükség szoftvertelepítésre."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet Wordöt PDF-be konvertálni",
+        "intro": "A Word PDF konvertálás a böngésződben alakítja PDF-fé a .docx fájlokat. Megtartja a szöveget, a címsorokat, a listákat és a táblázatokat, de újraszedi őket, így az összetett elrendezések és az egyéni betűtípusok nem fognak pontosan egyezni az eredetivel.",
+        "steps": [
+          "Válassz ki egy vagy több .docx fájlt",
+          "Kattints a Konvertálás PDF-be gombra",
+          "Töltsd le egyenként a PDF-eket, vagy az Összes letöltése gombbal egy ZIP-ben"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "powerpoint-to-pdf": {
+      "slug": "powerpoint-pdf-konvertalas",
+      "name": "PowerPoint PDF konvertálás",
+      "description": "Diák (PPTX) átalakítása PDF-fé",
+      "seoTitle": "PowerPoint PDF konvertálás – PPTX PDF-be ingyen",
+      "metaDescription": "Alakítsd PowerPoint bemutatóidat (PPTX) PDF-fé, diánként egy oldallal, szöveggel, képekkel és táblázatokkal. Ingyenes, regisztráció és feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Megmaradnak az animációk?",
+          "a": "Az animációk statikus oldalakká alakulnak, mivel a PDF nem támogatja az animációkat. Minden dia végső állapota kerül rögzítésre."
+        },
+        {
+          "q": "Átalakíthatok csak bizonyos diákat?",
+          "a": "Az átalakítás a teljes bemutatót feldolgozza. Ha csak bizonyos diákra van szükséged, az átalakítás után nyerd ki őket az Oldalak kinyerése eszközzel."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PowerPointot PDF-be konvertálni",
+        "intro": "A PowerPoint PDF konvertálás egy .pptx fájl minden diáját külön oldalra rajzolja újra, a szövegével, képeivel, táblázataival és csoportosított alakzataival együtt.",
+        "steps": [
+          "Válassz ki egy vagy több .pptx fájlt",
+          "Kattints a Konvertálás PDF-be gombra",
+          "Töltsd le a PDF-et – diánként egy oldallal"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "excel-to-pdf": {
+      "slug": "excel-pdf-konvertalas",
+      "name": "Excel PDF konvertálás",
+      "description": "Táblázat (XLSX) átalakítása PDF-fé",
+      "seoTitle": "Excel PDF konvertálás – táblázatok PDF-be ingyen",
+      "metaDescription": "Alakítsd Excel táblázataidat (XLSX vagy CSV) PDF-fé, minden munkalapot az oldal szélességéhez igazítva. Ingyenes, böngészőben fut, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Megmaradnak a képleteim?",
+          "a": "A képletek kiszámításra kerülnek, és az eredményül kapott értékek mentődnek a PDF-be. Maguk a képletek nem maradnak meg, mivel a PDF statikus formátum."
+        },
+        {
+          "q": "Átalakíthatok csak bizonyos munkalapokat?",
+          "a": "Az átalakítás a teljes munkafüzetet feldolgozza. Ha csak bizonyos munkalapokra van szükséged, előbb mentsd őket külön fájlba."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet Excelt PDF-be konvertálni",
+        "intro": "Az Excel PDF konvertálás PDF-fé alakítja az .xlsx és .csv fájlokat. Minden látható munkalap az oldal szélességéhez igazodik, az álló vagy fekvő tájolást pedig az eszköz választja ki helyetted.",
+        "steps": [
+          "Válassz ki egy vagy több .xlsx vagy .csv fájlt (a régi .xls fájlokat előbb mentsd .xlsx formátumban)",
+          "Kattints a Konvertálás PDF-be gombra",
+          "Töltsd le a PDF-et; a nagyon nagy munkalapok első 3000 sora jelenik meg"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "html-to-pdf": {
+      "slug": "html-pdf-konvertalas",
+      "name": "HTML PDF konvertálás",
+      "description": "Weboldalak átalakítása PDF-fé",
+      "seoTitle": "HTML PDF konvertálás – weboldalak PDF-be ingyen",
+      "metaDescription": "Alakíts bármilyen weboldalt PDF-fé. Mentsd el a cikkeket, nyugtákat és online tartalmakat PDF dokumentumként. Ingyenes, böngészőben fut, telepítés nélkül.",
+      "faqs": [
+        {
+          "q": "Bármilyen weboldalt átalakíthatok?",
+          "a": "Igen. Add meg bármely nyilvánosan elérhető weboldal URL-jét, és az PDF formátumba alakul."
+        },
+        {
+          "q": "Úgy fog kinézni a PDF, mint a weboldal?",
+          "a": "A PDF az oldal megjelenített tartalmát rögzíti. Az összetett elrendezések kissé eltérhetnek az eredetitől."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet HTML-t PDF-be konvertálni",
+        "intro": "A HTML PDF konvertálás beillesztett HTML kódból vagy feltöltött .html fájlból készít PDF-et – vagy a dizájnt követve, vagy egyszerűsített, kijelölhető szövegként.",
+        "steps": [
+          "Illeszd be a HTML kódot, vagy tölts fel egy .html fájlt",
+          "Ellenőrizd a dizájn előnézetét",
+          "Válaszd a Pontos dizájn vagy a Kijelölhető szöveg lehetőséget",
+          "Kattints a Konvertálás PDF-be gombra a letöltéshez"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "heic-to-pdf": {
+      "slug": "heic-pdf-konvertalas",
+      "name": "HEIC PDF konvertálás",
+      "description": "Apple HEIC képek átalakítása PDF-fé",
+      "seoTitle": "HEIC PDF konvertálás – iPhone fotók PDF-be ingyen",
+      "metaDescription": "Alakítsd iPhone és iPad HEIC és HEIF fotóidat PDF dokumentummá. Ingyenes, böngészőben fut, feltöltés nélkül. Megőrzi az eredeti képminőséget.",
+      "faqs": [
+        {
+          "q": "Mi az a HEIC fájl?",
+          "a": "A HEIC (High Efficiency Image Container) az iPhone-ok és iPadek alapértelmezett képformátuma az iOS 11 óta. Jobb tömörítést kínál, mint a JPEG, de nem minden szoftver támogatja."
+        },
+        {
+          "q": "Átalakíthatom a HEIC-et PDF-be a telefonomon?",
+          "a": "Igen. A böngészőben futó eszköz iPhone-on és Androidon is működik. Nyisd meg Safariban vagy Chrome-ban, válaszd ki a HEIC fotóidat, és töltsd le a PDF-et."
+        },
+        {
+          "q": "Romlik a képminőség az átalakítás során?",
+          "a": "Nem. A HEIC kép dekódolás után eredeti felbontásában kerül be a PDF-be. A vizuális minőség megmarad."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet HEIC-et PDF-be konvertálni",
+        "intro": "A HEIC PDF konvertálás PDF-fé alakítja a HEIC vagy HEIF formátumban mentett iPhone- és iPad-fotókat, telepítés nélkül, és anélkül, hogy a fotóidat bárhová elküldené.",
+        "steps": [
+          "Válaszd ki a HEIC vagy HEIF fotóidat",
+          "Kattints a Konvertálás PDF-be gombra – minden fotóból külön PDF lesz",
+          "Töltsd le őket egyenként, vagy egyszerre egy ZIP-ben"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "webp-to-pdf": {
+      "slug": "webp-pdf-konvertalas",
+      "name": "WebP PDF konvertálás",
+      "description": "WebP képek átalakítása PDF dokumentummá",
+      "seoTitle": "WebP PDF konvertálás – WebP képek PDF-be ingyen",
+      "metaDescription": "Alakítsd WebP képeidet PDF dokumentummá a böngésződben. Ingyenes, regisztráció és vízjel nélkül. Több fájlt is átalakíthatsz az eredeti minőségben.",
+      "faqs": [
+        {
+          "q": "Mi az a WebP fájl?",
+          "a": "A WebP a Google által fejlesztett modern képformátum, amely kiváló tömörítést nyújt a webes képekhez. Széles körben használják a webdizájnban és az online tartalmakban."
+        },
+        {
+          "q": "Romlik a minőség a WebP PDF konvertálás során?",
+          "a": "Nem. A WebP kép dekódolás után, újratömörítés nélkül, eredeti felbontásában kerül be a PDF-be."
+        },
+        {
+          "q": "Átalakíthatok egyszerre több WebP fájlt?",
+          "a": "Igen. Válassz ki több WebP képet, és ezek egyetlen többoldalas PDF-be kerülnek, oldalanként egy képpel."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet WebP-t PDF-be konvertálni",
+        "intro": "A WebP PDF konvertálás PDF-fé alakítja a WebP képeket – azt a formátumot, amelyet ma már sok weboldal használ –, képenként egy PDF-fel.",
+        "steps": [
+          "Válassz ki egy vagy több WebP képet",
+          "Kattints a Konvertálás PDF-be gombra",
+          "Töltsd le egyenként a PDF-eket, vagy az Összes letöltése gombbal egy ZIP-ben"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "tiff-to-pdf": {
+      "slug": "tiff-pdf-konvertalas",
+      "name": "TIFF PDF konvertálás",
+      "description": "TIFF képek átalakítása PDF dokumentummá",
+      "seoTitle": "TIFF PDF konvertálás – TIFF képek PDF-be ingyen",
+      "metaDescription": "Alakítsd TIFF és TIF képeidet PDF dokumentummá, a többoldalas TIFF fájlokat is. Ingyenes, böngészőben futó feldolgozás, fájlfeltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Támogatja a többoldalas TIFF fájlokat?",
+          "a": "Igen. A többoldalas TIFF fájlok különálló oldalakra bomlanak, és mindegyik külön oldal lesz az elkészült PDF-ben."
+        },
+        {
+          "q": "Milyen TIFF tömörítési típusok támogatottak?",
+          "a": "Az eszköz kezeli a tömörítetlen, az LZW és a PackBits TIFF fájlokat. A JPEG-tömörítésű TIFF-ek is támogatottak."
+        },
+        {
+          "q": "Átalakíthatok egyszerre több TIFF fájlt?",
+          "a": "Igen. Válassz ki több TIFF fájlt, és mindegyik átalakításra kerül, az összes oldal pedig egyetlen PDF-be kerül."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet TIFF-et PDF-be konvertálni",
+        "intro": "A TIFF PDF konvertálás PDF-fé alakítja a szkennerekből és faxprogramokból gyakran származó TIFF képeket, fájlonként egy PDF-fel.",
+        "steps": [
+          "Válassz ki egy vagy több TIFF fájlt",
+          "Kattints a Konvertálás PDF-be gombra",
+          "Töltsd le egyenként a PDF-eket, vagy az Összes letöltése gombbal egy ZIP-ben"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "svg-to-pdf": {
+      "slug": "svg-pdf-konvertalas",
+      "name": "SVG PDF konvertálás",
+      "description": "SVG vektorgrafikák átalakítása PDF-fé",
+      "seoTitle": "SVG PDF konvertálás – SVG vektorképek PDF-be ingyen",
+      "metaDescription": "Alakítsd SVG fájljaidat PDF-fé a böngésződben. Ingyenes, feltöltés és regisztráció nélkül – az SVG fájlok el sem hagyják az eszközödet. Éles, nagy felbontás.",
+      "faqs": [
+        {
+          "q": "Megmarad a vektoros minőség az SVG PDF konvertálás során?",
+          "a": "Nem – az SVG egy nagy felbontású képpé renderelődik (a saját méretének legfeljebb háromszorosára), és az eredeti méretű oldalra kerül, így képernyőn és nyomtatásban is éles marad, de már nem szerkeszthető vektorgrafika. Valódi vektoros kimenethez exportálj PDF-be egy vektorgrafikus szerkesztőből, például az Inkscape-ből vagy az Illustratorból."
+        },
+        {
+          "q": "Átalakíthatok külső erőforrásokat használó SVG fájlokat?",
+          "a": "A külső képekre vagy betűtípusokra hivatkozó SVG-k nem feltétlenül jelennek meg teljesen. A beágyazott erőforrásokat tartalmazó, önálló SVG-k működnek a legjobban."
+        },
+        {
+          "q": "Ingyenesen használható?",
+          "a": "Igen. Az SVG PDF konvertálás teljesen ingyenes, korlátok, vízjel és regisztráció nélkül."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet SVG-t PDF-be konvertálni",
+        "intro": "Az SVG PDF konvertálás PDF-fé alakítja az SVG grafikákat, fájlonként egy PDF-fel – praktikus, ha logókat és ábrákat küldesz olyanoknak, akik nem tudják megnyitni az SVG-t.",
+        "steps": [
+          "Válassz ki egy vagy több SVG fájlt",
+          "Kattints a Konvertálás PDF-be gombra",
+          "Töltsd le egyenként a PDF-eket, vagy az Összes letöltése gombbal egy ZIP-ben"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "epub-to-pdf": {
+      "slug": "epub-pdf-konvertalas",
+      "name": "EPUB PDF konvertálás",
+      "description": "EPUB e-könyvek átalakítása PDF dokumentummá",
+      "seoTitle": "EPUB PDF konvertálás – e-könyvek PDF-be ingyen",
+      "metaDescription": "Alakítsd EPUB e-könyveidet PDF dokumentummá a böngésződben. Választhatsz képalapú elrendezést vagy kijelölhető szöveget. Ingyenes, telepítés nélkül.",
+      "faqs": [
+        {
+          "q": "Mi az az EPUB fájl?",
+          "a": "Az EPUB (Electronic Publication) egy széles körben használt e-könyv-formátum, amelyet a legtöbb e-olvasó és olvasóalkalmazás támogat. HTML-alapú tartalmat és CSS-formázást tartalmaz."
+        },
+        {
+          "q": "Mi a különbség a dizájn és a szöveg mód között?",
+          "a": "A Pontos dizájn mód minden fejezetet képként renderel, megtartva az elrendezést, a képeket és a beágyazott stílusokat; a csatolt stíluslapok és a beágyazott egyéni betűtípusok nem töltődnek be, így ezek a részek alapértelmezett betűtípusokra és stílusokra váltanak. A Kijelölhető szöveg mód kinyeri a szöveges tartalmat, és egy tiszta, kijelölhető szövegű PDF-be tördeli újra."
+        },
+        {
+          "q": "Működik DRM-védett EPUB fájlokkal?",
+          "a": "Nem. A DRM-védett EPUB fájlok nem alakíthatók át. Csak a védelem nélküli EPUB fájlok támogatottak."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet EPUB-ot PDF-be konvertálni",
+        "intro": "Az EPUB PDF konvertálás egy e-könyvet olyan PDF-fé alakít, amelyet kinyomtathatsz vagy bárhol elolvashatsz. Választhatsz pontos dizájnú másolatot vagy egy egyszerűbbet, kijelölhető szöveggel.",
+        "steps": [
+          "Válaszd ki az .epub fájlt (csak DRM-mentes e-könyvek)",
+          "Válaszd a Pontos dizájn vagy a Kijelölhető szöveg lehetőséget",
+          "Kattints a Konvertálás PDF-be gombra a letöltéshez"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "pdf-to-jpg": {
+      "slug": "pdf-jpg-konvertalas",
+      "name": "PDF JPG konvertálás",
+      "description": "PDF oldalak átalakítása JPG képekké",
+      "seoTitle": "PDF JPG konvertálás – PDF oldalak képpé alakítása ingyen",
+      "metaDescription": "Alakítsd a PDF oldalakat jó minőségű JPG képekké. Az összes oldalt vagy csak bizonyos oldalakat mentheted képként. Ingyenes, regisztráció és vízjel nélkül.",
+      "faqs": [
+        {
+          "q": "Milyen felbontásúak lesznek a képek?",
+          "a": "A képek a PDF-ben található legnagyobb felbontásban kerülnek kinyerésre, a forrástól függően jellemzően 150–300 DPI-vel."
+        },
+        {
+          "q": "Átalakíthatok csak bizonyos oldalakat?",
+          "a": "Igen. Választhatod az összes oldal átalakítását, vagy megadhatsz egy oldaltartományt, hogy csak a szükséges oldalakat nyerd ki."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PDF-et JPG-be konvertálni",
+        "intro": "A PDF JPG konvertálás egy PDF minden oldalát képként menti JPEG vagy PNG formátumban, normál (144 DPI) vagy nagy (216 DPI) felbontásban.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Válaszd a JPEG vagy a PNG formátumot, valamint a Normál vagy a Nagy felbontást",
+          "Kattints a Konvertálás képekké gombra",
+          "Töltsd le az oldalakat egyenként, vagy az összeset együtt egy ZIP-ben"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "pdf-to-word": {
+      "slug": "pdf-word-konvertalas",
+      "name": "PDF Word konvertálás",
+      "description": "PDF átalakítása szerkeszthető dokumentummá (DOCX)",
+      "seoTitle": "PDF Word konvertálás – PDF-ből szerkeszthető DOCX ingyen",
+      "metaDescription": "Alakítsd egy PDF szövegét szerkeszthető Word fájllá (DOCX), oldalról oldalra. Ingyenes, böngészőben fut, regisztráció és feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Megmarad az elrendezés és a képek a Word fájlban?",
+          "a": "Nem. Az eszköz a szöveget szerkeszthető címsorokként és bekezdésekként viszi át, minden oldalhoz egy címsorral; a képek és az összetett elrendezések nem épülnek újra. A szöveg újrafelhasználására készült, nem az eredetire hasonlító másolat készítésére."
+        },
+        {
+          "q": "Működik szkennelt PDF-ekkel?",
+          "a": "A szkennelt PDF-eknél előbb OCR-re van szükség a szöveg kinyeréséhez. A legjobb eredményért futtasd le az OCR-t, majd az eredményt alakítsd Word fájllá."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PDF-et Wordbe konvertálni",
+        "intro": "A PDF Word konvertálás kinyeri egy PDF szövegét egy szerkeszthető .docx fájlba, minden oldalhoz egy címsorral. A szöveget viszi át, nem az elrendezést: a képek és az összetett formázás nem kerülnek át.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et (szkennelt dokumentumoknál előbb futtasd az OCR PDF eszközt)",
+          "Kattints a Konvertálás Wordbe gombra",
+          "Töltsd le a .docx fájlt, és nyisd meg Wordben, Google Dokumentumokban vagy LibreOffice-ban"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "pdf-to-powerpoint": {
+      "slug": "pdf-powerpoint-konvertalas",
+      "name": "PDF PowerPoint konvertálás",
+      "description": "PDF átalakítása szerkeszthető diákká (PPTX)",
+      "seoTitle": "PDF PowerPoint konvertálás – szerkeszthető PPTX",
+      "metaDescription": "Alakíts egy PDF-et szerkeszthető PowerPoint diákká (PPTX): a címsorokból diacímek, a bekezdésekből felsorolások lesznek. Ingyenes, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Minden PDF oldalból egy dia lesz?",
+          "a": "Általában igen. Minden oldal új diát kezd, a sok szöveget tartalmazó oldalak pedig további diákon folytatódnak, így semmi sem vágódik le. A címsorokból diacímek, a bekezdésekből felsorolások lesznek."
+        },
+        {
+          "q": "Szerkeszthetem az elkészült diákat?",
+          "a": "Igen. A kimenet egy szabványos PPTX fájl, amelyet bármely PowerPoint-kompatibilis alkalmazásban szerkeszthetsz."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PDF-et PowerPointba konvertálni",
+        "intro": "A PDF PowerPoint konvertálás szerkeszthető diákká alakít egy PDF-et: a címsorokból diacímek, a bekezdésekből felsorolások lesznek, a hosszú oldalak pedig további diákon folytatódnak.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Kattints a Konvertálás PowerPointba gombra",
+          "Töltsd le a .pptx fájlt, és finomítsd a diákat PowerPointban, Keynote-ban vagy Google Diákban"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "pdf-to-excel": {
+      "slug": "pdf-excel-konvertalas",
+      "name": "PDF Excel konvertálás",
+      "description": "PDF szövegének exportálása táblázatba, soronként egy sorral (XLSX)",
+      "seoTitle": "PDF Excel konvertálás – PDF szöveg exportálása táblázatba",
+      "metaDescription": "Exportáld egy PDF szövegét Excel munkafüzetbe (XLSX): oldalanként egy munkalap, szövegsoronként egy sor. Ingyenes, böngészőben fut, regisztráció nélkül.",
+      "faqs": [
+        {
+          "q": "Oszlopokba rendezi újra a táblázatokat?",
+          "a": "Nem. Az oldal minden szövegsora egyetlen cellába kerül, így a táblázatsorok egy cellába kerülnek, nem külön oszlopokba. Utána az Excel Szövegből oszlopok funkciójával (vagy Power Queryvel) bonthatod szét őket."
+        },
+        {
+          "q": "Hogyan épül fel a munkafüzet?",
+          "a": "Kapsz egy Összesítés munkalapot oldalankénti sor- és karakterszámmal, majd minden PDF oldalhoz egy munkalapot, ahol minden szövegsor külön sorba kerül."
+        },
+        {
+          "q": "Működik szkennelt PDF-ekkel?",
+          "a": "Csak ha a PDF-ben van szövegréteg. Szkennelt oldalaknál előbb futtasd az OCR PDF eszközt, hogy legyen exportálható szöveg."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PDF-et Excelbe konvertálni",
+        "intro": "A PDF Excel konvertálás egy .xlsx munkafüzetbe exportálja a PDF szövegét: egy összesítő munkalapot, majd oldalanként egy munkalapot, szövegsoronként egy sorral. A táblázatok oszlopait nem építi újra.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Kattints a Konvertálás Excelbe gombra",
+          "Töltsd le az .xlsx fájlt, majd az Excel Szövegből oszlopok funkciójával bontsd cellákra a sorokat"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "pdf-to-pdfa": {
+      "slug": "pdf-pdfa-konvertalas",
+      "name": "PDF PDF/A konvertálás",
+      "description": "PDF átalakítása archiválási PDF/A formátumba",
+      "seoTitle": "PDF PDF/A konvertálás – archiválási PDF formátum",
+      "metaDescription": "Alakítsd a hagyományos PDF fájlokat PDF/A archiválási formátumba a hosszú távú megőrzés és a megfelelőség érdekében. Ingyenes, böngészőben fut.",
+      "faqs": [
+        {
+          "q": "Mi az a PDF/A?",
+          "a": "A PDF/A a PDF ISO-szabványosított változata, amelyet hosszú távú archiválásra terveztek. Biztosítja, hogy a dokumentumok a jövőben is pontosan reprodukálhatók legyenek."
+        },
+        {
+          "q": "Miért érdemes PDF/A-ba konvertálni?",
+          "a": "Sok iparág előírja a PDF/A használatát a dokumentumok megőrzéséhez. Biztosítja, hogy a betűtípusok beágyazottak, a színek definiáltak legyenek, és a dokumentum önálló legyen."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PDF-et PDF/A-ba konvertálni",
+        "intro": "A PDF PDF/A konvertálás egy új dokumentumba másolja az oldalaidat, és archiváláshoz szükséges PDF/A-azonosító metaadatokat ad hozzá. Ha egy archívumnak szigorú megfelelőséget kell igazolnia, ellenőrizd az eredményt egy validátorral, például a veraPDF-fel.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Kattints a Konvertálás PDF/A-ba gombra",
+          "Töltsd le az archiválási másolatot"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "pdf-to-markdown": {
+      "slug": "pdf-markdown-konvertalas",
+      "name": "PDF Markdown konvertálás",
+      "description": "PDF tartalom átalakítása Markdown szöveggé",
+      "seoTitle": "PDF Markdown konvertálás – PDF-ből Markdown szöveg",
+      "metaDescription": "Alakítsd egy PDF szövegét tiszta Markdown (.md) fájllá jegyzetekhez, dokumentációhoz és AI eszközökhöz. Ingyenes, böngészőben fut, regisztráció nélkül.",
+      "faqs": [
+        {
+          "q": "Megmarad a formázás a Markdownban?",
+          "a": "A szöveg olvasási sorrendben, egyszerű Markdownként kerül át. Az összetett elrendezések, táblázatok és képek egyszerűsödnek, ezért ellenőrizd az előnézetet, mielőtt a szerkezetre hagyatkoznál."
+        },
+        {
+          "q": "Átalakíthatok csak bizonyos oldalakat?",
+          "a": "A teljes dokumentum átalakításra kerül. Ha csak néhány oldalt szeretnél átalakítani, előbb futtasd az Oldalak kinyerése eszközt, és azt a fájlt alakítsd át."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet PDF-et Markdownba konvertálni",
+        "intro": "A PDF Markdown konvertálás .md fájlként nyeri ki egy PDF szövegét – tiszta bemenet jegyzetalkalmazásokhoz, dokumentációhoz és AI eszközökhöz.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Kattints a Konvertálás Markdownba gombra",
+          "Nézd meg és másold ki a szöveget az oldalon, vagy töltsd le az .md fájlt"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "edit-pdf": {
+      "slug": "pdf-szerkesztese",
+      "name": "PDF szerkesztés",
+      "description": "Szöveg, címsorok és számok módosítása egy PDF-ben",
+      "seoTitle": "PDF szerkesztés – szöveg, címsorok és számok módosítása",
+      "metaDescription": "Szerkeszd a PDF szövegét, címsorait és számait közvetlenül a böngésződben. Javíts elírásokat, frissíts dátumokat Word-konvertálás nélkül.",
+      "faqs": [
+        {
+          "q": "Bármilyen PDF-et szerkeszthetek?",
+          "a": "Minden digitálisan létrehozott, kijelölhető szöveget tartalmazó PDF szerkeszthető. A szkennelt PDF-eknél előbb OCR-re van szükség, hogy a szöveg szerkeszthetővé váljon."
+        },
+        {
+          "q": "Megváltozik a formázás a szerkesztéstől?",
+          "a": "A közvetlen szerkesztés megőrzi az eredeti formázást. Csak a módosított szöveg változik – a betűtípusok, a térközök és az elrendezés érintetlen marad."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet szöveget szerkeszteni egy PDF-ben",
+        "intro": "A PDF szerkesztéssel módosíthatod az oldalon lévő szavakat, címsorokat és számokat: kattints egy sorra, és gépelj, akár egy szövegszerkesztőben.",
+        "steps": [
+          "Válaszd ki a PDF-et",
+          "Kattints az oldal bármely szövegsorára",
+          "Írd be a módosításokat",
+          "Kattints a Szerkesztett PDF mentése gombra a letöltéshez"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "rotate-pdf": {
+      "slug": "pdf-forgatasa",
+      "name": "PDF forgatás",
+      "description": "PDF oldalak elforgatása tetszőleges szögben",
+      "seoTitle": "PDF forgatás – PDF oldalak elforgatása ingyen",
+      "metaDescription": "Forgasd el egy PDF egyes vagy összes oldalát. Javítsd ki az oldalra fordult szkenneket, és állítsd be a helyes tájolást. Ingyenes, regisztráció nélkül.",
+      "faqs": [
+        {
+          "q": "Elforgathatok egyes oldalakat külön?",
+          "a": "Igen. Minden oldal külön is elforgatható – 90°-kal, 180°-kal vagy 270°-kal –, a többi oldal pedig változatlan marad."
+        },
+        {
+          "q": "Befolyásolja a forgatás a nyomtatási minőséget?",
+          "a": "Nem. A forgatás csak egy metaadat-módosítás, amely megmondja a megjelenítőnek, hogyan mutassa az oldalt. A tartalom nem renderelődik újra."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy PDF-et elforgatni és elmenteni",
+        "intro": "A PDF forgatás 90°-kal, 180°-kal vagy 270°-kal forgatja el az oldalakat, és a fájlba menti az elforgatást, így az minden megjelenítőben megmarad.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Válaszd ki a szöget: 90°, 180° vagy 270°",
+          "Alkalmazd az összes oldalra, vagy írd be a kívánt oldalakat",
+          "Kattints a PDF forgatása gombra, és töltsd le az eredményt"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "add-page-numbers": {
+      "slug": "pdf-oldalszamozas",
+      "name": "PDF oldalszámozás",
+      "description": "Oldalszámok beszúrása a PDF-be",
+      "seoTitle": "PDF oldalszámozás – oldalszámok beszúrása ingyen",
+      "metaDescription": "Adj oldalszámokat a PDF-hez tetszőleges pozícióban. Válaszd ki a formátumot, a helyet és a kezdőszámot. Ingyenes, böngészőben fut, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Hová helyezhetem az oldalszámokat?",
+          "a": "Választhatsz a bal felső, felső középső, jobb felső, bal alsó, alsó középső és jobb alsó pozíció közül."
+        },
+        {
+          "q": "Kihagyhatom a számozást az első oldalon?",
+          "a": "Igen. Válaszd azt a lehetőséget, hogy a számozás egy adott oldaltól, például a 2. vagy 3. oldaltól induljon, így kihagyhatod a borítóoldalakat."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet oldalszámot tenni egy PDF-be",
+        "intro": "A PDF oldalszámozás minden oldalra számot nyomtat, hat pozíció egyikében, az általad választott stílusban.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Válaszd ki a pozíciót – fent vagy lent, balra, középen vagy jobbra",
+          "Válaszd ki a formátumot („1”, „1. oldal” vagy „1 / N”) és a kezdőszámot",
+          "Kattints az Oldalszámok hozzáadása gombra, és töltsd le az eredményt"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "add-watermark": {
+      "slug": "pdf-vizjel",
+      "name": "Vízjel hozzáadása",
+      "description": "Szöveges vagy képes vízjel hozzáadása",
+      "seoTitle": "Vízjel hozzáadása PDF-hez – ingyenes szöveges vízjel",
+      "metaDescription": "Helyezz szöveges vízjelet, például BIZALMAS vagy TERVEZET feliratot egy PDF minden oldalára. Állítsd be az átlátszóságot és a méretet. Ingyenes, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Beállíthatom a vízjel átlátszóságát?",
+          "a": "Igen. A vízjel átlátszóságát a teljesen fedőtől a szinte láthatatlanig szabályozhatod."
+        },
+        {
+          "q": "Elláthatom vízjellel egyszerre az összes oldalt?",
+          "a": "Igen. A vízjel egyszerre kerül a dokumentum minden oldalára."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet vízjelet tenni egy PDF-re",
+        "intro": "A Vízjel hozzáadása szöveges vízjelet, például BIZALMAS vagy TERVEZET feliratot helyez az oldalaidra, az általad megadott átlátszósággal és mérettel.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Írd be a vízjel szövegét",
+          "Állítsd be az átlátszóságot és a betűméretet",
+          "Kattints a Vízjel hozzáadása gombra, és töltsd le az eredményt"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "crop-pdf": {
+      "slug": "pdf-korbevagasa",
+      "name": "PDF körbevágás",
+      "description": "PDF oldalak körbevágása és átméretezése",
+      "seoTitle": "PDF körbevágás – PDF oldalak vágása és átméretezése",
+      "metaDescription": "Vágd körbe és méretezd át a PDF oldalakat. Távolítsd el a margókat, módosítsd az oldalméretet, és vágd le a tartalmat. Ingyenes, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Körbevághatom egyszerre az összes oldalt?",
+          "a": "Igen. Alkalmazd ugyanazt a vágási területet minden oldalra, vagy állíts be eltérő vágást az egyes oldalakhoz."
+        },
+        {
+          "q": "Töröl tartalmat a körbevágás?",
+          "a": "A körbevágás elrejti a vágási területen kívüli tartalmat. Az elrejtett tartalom nem törlődik, és később visszaállítható."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy PDF-et körbevágni",
+        "intro": "A PDF körbevágás minden oldal tetejéről, aljáról, bal és jobb oldaláról ugyanakkora margót vág le – ideális a fehér területek vagy a szkenner által hagyott keretek eltávolítására.",
+        "steps": [
+          "Válassz ki egy vagy több PDF-et",
+          "Add meg, hány pontot vágjon le az eszköz az egyes szélekről",
+          "Kattints a PDF körbevágása gombra",
+          "Töltsd le a körbevágott fájlt"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "sign-pdf": {
+      "slug": "pdf-alairasa",
+      "name": "PDF aláírás",
+      "description": "Digitális aláírás hozzáadása PDF-ekhez",
+      "seoTitle": "PDF aláírás – elektronikus aláírás online ingyen",
+      "metaDescription": "Adj elektronikus aláírást PDF dokumentumokhoz. Rajzold meg, gépeld be vagy töltsd fel az aláírásodat. Jogilag érvényes, ingyenes, regisztráció nélkül.",
+      "faqs": [
+        {
+          "q": "Jogilag érvényesek az elektronikus aláírások?",
+          "a": "Igen. Az elektronikus aláírások az amerikai ESIGN törvény és az uniós eIDAS rendelet szerint gyakorlatilag minden dokumentumnál jogilag érvényesek."
+        },
+        {
+          "q": "Aláírhatok jelszóval védett PDF-et?",
+          "a": "Előbb fel kell oldanod. A jelszóval védett PDF-ek nem szerkeszthetők, amíg a jelszót el nem távolítod."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet aláírni egy PDF-et",
+        "intro": "A PDF aláírás bármely oldalra elhelyezi az aláírásodat. Rajzold meg, gépeld be kézírásos betűtípussal, vagy tölts fel egy képet a valódi aláírásodról.",
+        "steps": [
+          "Válaszd ki az aláírandó PDF-et",
+          "Hozd létre az aláírásodat: rajzold meg, gépeld be, vagy tölts fel egy képet",
+          "Válaszd ki az oldalt, kattints oda, ahová az aláírást szeretnéd, majd állítsd be a méretét",
+          "Kattints az Aláírás és PDF letöltése gombra"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Az aláírásod képe sosem kerül tárolásra szerveren"
+        ]
+      }
+    },
+    "redact-pdf": {
+      "slug": "pdf-kitakarasa",
+      "name": "PDF kitakarás",
+      "description": "Szöveg, képek vagy oldalak végleges kitakarása",
+      "seoTitle": "PDF kitakarás ingyen – szöveg feketítése feltöltés nélkül",
+      "metaDescription": "Takarj ki egy PDF-et ingyen a böngésződben: rajzolj téglalapot a nevek, számok vagy aláírások fölé, és véglegesen eltűnnek. Feltöltés és fiók nélkül.",
+      "faqs": [
+        {
+          "q": "Végleges a kitakarás?",
+          "a": "Igen. Minden megjelölt oldal lapos képként rajzolódik újra, a fekete téglalapokkal beleégetve, így az alattuk lévő szöveg, képek és rejtett rétegek nem kerülnek át az új fájlba. A meg nem jelölt oldalak változatlanul másolódnak át."
+        },
+        {
+          "q": "Visszaállítható a kitakart tartalom?",
+          "a": "Nem. Ellentétben azzal, ha csak egy fekete téglalapot rajzolsz a szöveg fölé – ami alatt a szöveg kijelölhető marad –, a megjelölt oldalak egy kifeketített képből épülnek újra, az eredeti oldaltartalom pedig elvész. Próbáld ki: másolj ki valamit egy kitakart területről – semmi sem jön vissza."
+        },
+        {
+          "q": "Feltöltődik valahová a dokumentumom?",
+          "a": "Nem. A kitakarás teljes egészében a böngészőlapodon fut, így a fájl sosem hagyja el az eszközödet. Ez éppen azoknál a dokumentumoknál számít a legtöbbet, amelyeket kitakarni szoktak: személyi igazolványok, orvosi leletek, szerződések és bankszámlakivonatok."
+        },
+        {
+          "q": "Kijelölhető szöveg marad a kitakart oldal többi része?",
+          "a": "Nem. A megjelölt oldal egészében képpé válik, így a maradék szövege már nem jelölhető ki és nem kereshető. Ha újra kereshetővé kell tenned, futtasd utána az OCR-t; a meg nem jelölt oldalak megtartják a szövegüket."
+        },
+        {
+          "q": "Kitakarhatok egy teljes oldalt?",
+          "a": "Igen. Válts a „Teljes oldalak” módra, és kattints minden eltávolítandó oldalra. Az oldal tömör fekete oldalként a dokumentumban marad, így az oldalszám és a számozás nem változik."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet kitakarni egy PDF-et",
+        "intro": "A PDF kitakarás véglegesen kifeketíti, amit megjelölsz. Minden megjelölt oldal képként épül újra, így a rejtett szöveg eltűnik a fájlból – nem csak egy téglalap takarja.",
+        "steps": [
+          "Válaszd ki a PDF-et",
+          "Rajzolj téglalapokat az elrejtendő szöveg vagy képek fölé, vagy jelölj ki teljes oldalakat",
+          "Kattints a Kitakarás gombra",
+          "Töltsd le a kitakart PDF-et, és megosztás előtt ellenőrizd"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Valódi kitakarás: a rejtett tartalom nem másolható vissza"
+        ]
+      }
+    },
+    "unlock-pdf": {
+      "slug": "pdf-feloldasa",
+      "name": "PDF feloldás",
+      "description": "Jelszavas védelem eltávolítása PDF-ből",
+      "seoTitle": "PDF feloldás – jelszavas védelem eltávolítása ingyen",
+      "metaDescription": "Távolítsd el a jelszavas védelmet PDF dokumentumokról. Oldd fel a titkosított PDF-eket szerkesztéshez, nyomtatáshoz vagy megosztáshoz. Ingyenes.",
+      "faqs": [
+        {
+          "q": "Kell a jelszó egy PDF feloldásához?",
+          "a": "Igen. Ismerned kell a jelenlegi jelszót az eltávolításához. A PDF titkosítás jelszó nélkül nem kerülhető meg."
+        },
+        {
+          "q": "Megváltozik a PDF tartalma a feloldástól?",
+          "a": "Nem. A feloldás csak a jelszavas védelmet távolítja el. A dokumentum tartalma változatlan marad."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet eltávolítani a jelszót egy PDF-ből",
+        "intro": "A PDF feloldás egy védett PDF jelszó és korlátozások nélküli másolatát menti el. Jogosultnak kell lenned a fájl feloldására, és ismerned kell a jelszót, ha a megnyitáshoz kér egyet.",
+        "steps": [
+          "Válaszd ki a védett PDF-et",
+          "Add meg a jelszót, ha a fájl megnyitásához szükséges",
+          "Kattints a PDF feloldása gombra a feloldott másolat letöltéséhez"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "protect-pdf": {
+      "slug": "pdf-jelszavas-vedelem",
+      "name": "PDF jelszavas védelem",
+      "description": "Jelszavas védelem hozzáadása PDF-hez",
+      "seoTitle": "PDF jelszavas védelem – PDF levédése jelszóval ingyen",
+      "metaDescription": "Adj jelszavas védelmet PDF dokumentumokhoz. Titkosítsd a fájljaidat AES-256 titkosítással. Ingyenes, böngészőben fut, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Mennyire erős a PDF jelszavas védelme?",
+          "a": "A modern PDF titkosítás AES-256-ot használ, ugyanazt a szabványt, amelyet bankok és kormányok is alkalmaznak. Egy erős jelszó mellett a nyers erővel végzett próbálgatás gyakorlatilag kivitelezhetetlen."
+        },
+        {
+          "q": "Mi történik, ha elfelejtem a jelszót?",
+          "a": "Nincs helyreállítási lehetőség. A fájl jelszó nélkül végleg hozzáférhetetlen. Mindig tárold a jelszót biztonságos helyen."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet jelszóval védeni egy PDF-et",
+        "intro": "A PDF jelszavas védelem jelszóval titkosít egy PDF-et: megnyitási jelszóval, az engedélyek módosításához szükséges jelszóval vagy mindkettővel – és letilthatja a nyomtatást, a másolást vagy a szerkesztést.",
+        "steps": [
+          "Válaszd ki a PDF-et",
+          "Adj meg egy megnyitási jelszót, egy tulajdonosi jelszót vagy mindkettőt",
+          "Ha szeretnéd, nyisd meg az engedélybeállításokat a nyomtatás, a másolás és a szerkesztés korlátozásához",
+          "Kattints a PDF védelme gombra a titkosított fájl letöltéséhez"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "A jelszavad sosem hagyja el az eszközödet"
+        ]
+      }
+    },
+    "compare-pdf": {
+      "slug": "pdf-osszehasonlitasa",
+      "name": "PDF összehasonlítás",
+      "description": "Két PDF fájl összehasonlítása az eltérések megtalálásához",
+      "seoTitle": "PDF összehasonlítás – két PDF közötti eltérések",
+      "metaDescription": "Ellenőrizd, hogy két PDF egyezik-e: kapsz egy hasonlósági pontszámot és a pontosan eltérő oldalakat. Ingyenes, böngészőben fut, feltöltés nélkül.",
+      "faqs": [
+        {
+          "q": "Mit mutat az összehasonlítás?",
+          "a": "Azt, hogy a két fájl azonos-e, a hasonlóság százalékos arányát, az eltérő oldalak számát, valamint mindkét fájl oldalszámát, méretét és dokumentumadatait. A megváltozott oldalakra irányít, nem az egyes szavakat jelöli meg."
+        },
+        {
+          "q": "Összehasonlíthatok szkennelt PDF-eket?",
+          "a": "Előbb futtasd az OCR PDF eszközt mindkét szkennen. Az összehasonlítás a fájlokban lévő szövegen dolgozik, így a csak képet tartalmazó szkennekben nincs mit összehasonlítani."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet két PDF-et összehasonlítani",
+        "intro": "A PDF összehasonlítás egy eredeti fájlt vet össze egy módosított változattal, és megmutatja, hogy egyeznek-e, mennyire hasonlítanak, és mely oldalak térnek el.",
+        "steps": [
+          "Válassz ki két PDF-et: előbb az eredetit, majd a módosított változatot",
+          "Kattints a PDF-ek összehasonlítása gombra",
+          "Olvasd el az eredményt: a hasonlóságot, az eltérő oldalak listáját és a fájlok adatait"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "ai-summarizer": {
+      "slug": "pdf-osszefoglalo",
+      "name": "Összefoglaló",
+      "description": "PDF tartalmának összefoglalása",
+      "seoTitle": "PDF összefoglaló – PDF összefoglalása ingyen, feltöltés nélkül",
+      "metaDescription": "Kapd meg egy PDF fő pontjait és témáit másodpercek alatt. Az összefoglaló a saját eszközödön készül, így a dokumentum sosem töltődik fel. Ingyenes.",
+      "faqs": [
+        {
+          "q": "Hogyan működik az összefoglaló?",
+          "a": "Minden mondatot pontoz aszerint, hogy hány kulcskifejezést tartalmaz a dokumentumból, és a legerősebbeket fő pontokként megtartja. A szavak a szerzőtől származnak, nem egy chatbot fogalmazta át őket – fontos dokumentumoknál mindig vesd össze az eredetivel."
+        },
+        {
+          "q": "Elküldésre kerül a dokumentumom egy szerverre?",
+          "a": "Nem. Az összefoglaló a böngésződben készül, és a PDF sosem hagyja el az eszközödet."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy PDF-et összefoglalni",
+        "intro": "Az Összefoglaló kiválogatja egy PDF legfontosabb mondatait, és felsorolja a fő pontjait és témáit. Teljes egészében a saját eszközödön működik – egyetlen AI szolgáltatás sem látja a dokumentumodat.",
+        "steps": [
+          "Válaszd ki a PDF-et",
+          "Kattints az Összefoglaló készítése gombra",
+          "Olvasd el a fő pontokat és témákat, és másold ki őket, ha máshol is szükséged van rájuk"
+        ],
+        "benefits": [
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    },
+    "translate-pdf": {
+      "slug": "pdf-forditasa",
+      "name": "PDF fordítás",
+      "description": "PDF tartalmának lefordítása bármilyen nyelvre",
+      "seoTitle": "PDF fordítás – PDF tartalom lefordítása más nyelvre",
+      "metaDescription": "Fordítsd le egy PDF szövegét 42 nyelvre, és töltsd le új PDF-ként. Ingyenes, regisztráció nélkül. A szöveg egy fordítószolgáltatáshoz kerül elküldésre.",
+      "faqs": [
+        {
+          "q": "Hány nyelv támogatott?",
+          "a": "42, a forrásnyelv automatikus felismerésével."
+        },
+        {
+          "q": "Megmarad a formázás?",
+          "a": "Nem. A lefordított szöveget a képernyőn és egy új, csak szöveget tartalmazó PDF-ként kapod meg; az eredeti elrendezés és a képek nem épülnek újra."
+        },
+        {
+          "q": "Feltöltődik a dokumentumom?",
+          "a": "Ez az egyetlen Slate PDF eszköz, amely adatot küld az internetre: a kinyert szöveg egy ingyenes, nyilvános fordítószolgáltatáshoz kerül. Ne használd bizalmas dokumentumokhoz."
+        }
+      ],
+      "howTo": {
+        "title": "Hogyan lehet egy PDF-et lefordítani",
+        "intro": "A PDF fordítás 42 nyelv egyikére fordítja le egy PDF szövegét, és a fordítást a képernyőn vagy egy új, csak szöveget tartalmazó PDF-ként adja meg. A többi eszközünkkel ellentétben a szöveget egy ingyenes online fordítószolgáltatásnak küldi el – az oldal ezt még a kezdés előtt jelzi.",
+        "steps": [
+          "Válassz egy valódi szöveget tartalmazó PDF-et (szkenneknél előbb futtasd az OCR PDF eszközt)",
+          "Válaszd ki a forrásnyelvet, vagy hagyd Automatikus felismerésen, majd a célnyelvet",
+          "Kattints a Fordítás gombra",
+          "Másold ki a fordítást, vagy töltsd le PDF-ként"
+        ],
+        "benefits": [
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Nyílt az adatvédelemről: ez az egyetlen eszköz, amely szöveget küld az internetre, és ezt jelzi is",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
+        ]
+      }
+    }
+  }
+}

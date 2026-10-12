@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "PDFに変換",
+  "Converted {slides} slide including {images} image.": "{slides}枚のスライドを変換しました（画像{images}点を含む）。",
+  "Converted {slides} slide including {images} images.": "{slides}枚のスライドを変換しました（画像{images}点を含む）。",
+  "Converted {slides} slide.": "{slides}枚のスライドを変換しました。",
+  "Converted {slides} slides including {images} image.": "{slides}枚のスライドを変換しました（画像{images}点を含む）。",
+  "Converted {slides} slides including {images} images.": "{slides}枚のスライドを変換しました（画像{images}点を含む）。",
+  "Converted {slides} slides.": "{slides}枚のスライドを変換しました。",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "各スライドを元のサイズの白いページに描き直します。テキストは実際の位置・サイズ・色のまま、画像・表・グループ化された図形も再現されます。",
+  "Rendering slide {current} of {total}...": "スライドを描画中（{current} / {total}）..."
+}

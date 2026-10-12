@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "新しいページ順を入力（カンマ区切り、例：3,1,2,4,5）",
+  "Organize PDF": "PDFを整理",
+  "Please enter a page order": "ページ順を入力してください",
+  "Preview in new order:": "新しい順番でのプレビュー：",
+  "Total pages: {total} | Reordered: {count}": "総ページ数：{total} | 並べ替え：{count}",
+  "e.g., 3,1,2,4,5": "例：3,1,2,4,5"
+}

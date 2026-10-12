@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "すべてのツールに戻る",
+  "Convert to PDF": "PDFに変換",
+  "Converting...": "変換中...",
+  "Design preview": "デザインのプレビュー",
+  "Exact design": "デザインどおり",
+  "HTML code": "HTMLコード",
+  "HTML design preview": "HTMLデザインのプレビュー",
+  "HTML to PDF": "HTML PDF 変換",
+  "Live preview — this is the design that will be converted": "ライブプレビュー：このデザインが変換されます",
+  "PDF downloaded": "PDFをダウンロードしました",
+  "PDF output": "PDFの出力",
+  "Paste some HTML or upload an .html file first.": "先にHTMLを貼り付けるか、.htmlファイルをアップロードしてください。",
+  "Paste your HTML here, or upload an .html file above...": "ここにHTMLを貼り付けるか、上から.htmlファイルをアップロードしてください...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "内容を選択・検索できる本物のPDFテキストとして組み直します。スタイルは簡略化されます。",
+  "Render the HTML design first, then convert it to PDF": "HTMLのデザインを表示してから、PDFに変換します",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "色・フォント・背景・レイアウトなどCSSをすべて反映し、プレビューどおりにページを描画します。おすすめです。",
+  "Selectable text": "選択可能なテキスト",
+  "Upload .html file": ".htmlファイルをアップロード",
+  "Upload an .html file above, or switch to the": "上から.htmlファイルをアップロードするか、",
+  "Your design preview will appear here": "ここにデザインのプレビューが表示されます",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "タブに切り替えてマークアップを貼り付けてください。ページがデザインどおりにここに表示されます。これがPDFの仕上がりです。"
+}

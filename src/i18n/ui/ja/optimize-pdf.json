@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "圧縮オブジェクトストリームを使ってPDFを劣化なく再構築し、未使用のオブジェクトや古いリビジョンを破棄します。テキストは選択可能なまま、画像もそのままです。",
+  "Optimize PDF": "PDFを最適化",
+  "Remove document metadata (title, author, etc.)": "ドキュメントのメタデータを削除（タイトル、作成者など）",
+  "Saved {size} KB ({percent}% smaller).": "{size} KB削減しました（{percent}%縮小）。",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "このPDFはすでに最適化されているため、変更せずに返しました。さらに小さくするには「PDF圧縮」ツールをお試しください。"
+}
