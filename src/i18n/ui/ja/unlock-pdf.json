@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "すべてのツールに戻る",
+  "Enter the PDF password (leave empty if none)": "PDFのパスワードを入力（ない場合は空欄）",
+  "File": "ファイル",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "ご自身が所有するPDF、または変更の許可を得たPDFにのみ使用してください。他人のPDFのセキュリティを解除すると、著作権法やプライバシーに関する法律に違反するおそれがあります。",
+  "PDF unlocked and downloaded": "PDFのロックを解除してダウンロードしました",
+  "Password (if required)": "パスワード（必要な場合）",
+  "Remove password protection from a PDF file": "PDFファイルのパスワード保護を解除します",
+  "Size": "サイズ",
+  "Unlock PDF": "PDFのロックを解除",
+  "Unlocking...": "ロックを解除しています..."
+}

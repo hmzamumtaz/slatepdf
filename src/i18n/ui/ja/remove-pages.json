@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "削除するページ（カンマ区切り、例：1, 3, 5-8）",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "削除するページを入力してください（例：1, 3, 5-8）",
+  "Preview after removal:": "削除後のプレビュー：",
+  "Remove Pages": "ページを削除",
+  "Total pages: {total} | Remaining: {count}": "総ページ数：{total} | 残り：{count}",
+  "e.g., 1, 3, 5, 7": "例：1, 3, 5, 7"
+}
