@@ -2,8 +2,8 @@
   "Crop PDF": "Ritaglia PDF",
   "Margins (points)": "Margini (punti)",
   "Values in points (1 inch = 72 points). This crops from each edge.": "Valori in punti (1 pollice = 72 punti). Il ritaglio viene applicato da ogni bordo.",
-  "bottom": "in basso",
-  "left": "a sinistra",
-  "right": "a destra",
-  "top": "in alto"
+  "bottom": "inferiore",
+  "left": "sinistro",
+  "right": "destro",
+  "top": "superiore"
 }
