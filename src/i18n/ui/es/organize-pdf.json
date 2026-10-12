@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Escribe el nuevo orden de páginas (separado por comas, p. ej., 3,1,2,4,5)",
+  "Organize PDF": "Organizar PDF",
+  "Please enter a page order": "Escribe un orden de páginas",
+  "Preview in new order:": "Vista previa en el nuevo orden:",
+  "Total pages: {total} | Reordered: {count}": "Total de páginas: {total} | Reordenadas: {count}",
+  "e.g., 3,1,2,4,5": "p. ej., 3,1,2,4,5"
+}
