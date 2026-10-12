@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Poistettavat sivut (pilkuilla erotettuna, esim. 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Anna poistettavat sivut (esim. 1, 3, 5-8)",
+  "Preview after removal:": "Esikatselu poiston jälkeen:",
+  "Remove Pages": "Poista sivut",
+  "Total pages: {total} | Remaining: {count}": "Sivuja yhteensä: {total} | Jäljellä: {count}",
+  "e.g., 1, 3, 5, 7": "esim. 1, 3, 5, 7"
+}

@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Luotiin {slides} dia {pages} sivusta.",
+  "Built {slides} slide from {pages} pages.": "Luotiin {slides} dia {pages} sivusta.",
+  "Built {slides} slides from {pages} page.": "Luotiin {slides} diaa {pages} sivusta.",
+  "Built {slides} slides from {pages} pages.": "Luotiin {slides} diaa {pages} sivusta.",
+  "Convert to PowerPoint": "Muunna PowerPointiksi",
+  "Reading page {current} of {total}...": "Luetaan sivua {current}/{total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Lukee asiakirjan rakenteen – otsikoista tulee diojen otsikoita ja kappaleista luettelomerkittyjä kohtia – sen sijaan, että liittäisi raakatekstiä. Pitkät sivut jatkuvat lisädioille."
+}
