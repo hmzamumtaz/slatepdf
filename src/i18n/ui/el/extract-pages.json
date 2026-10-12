@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Εξαγωγή σελίδων",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Σελίδες προς εξαγωγή (π.χ. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Εισαγάγετε τις σελίδες προς εξαγωγή (π.χ. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Προεπισκόπηση των σελίδων που εξάγονται:",
+  "Total pages: {total} | Extracting: {count}": "Σύνολο σελίδων: {total} | Εξάγονται: {count}",
+  "e.g., 1, 3, 5": "π.χ. 1, 3, 5"
+}

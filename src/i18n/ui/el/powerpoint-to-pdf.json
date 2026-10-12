@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Μετατροπή σε PDF",
+  "Converted {slides} slide including {images} image.": "Μετατράπηκε {slides} διαφάνεια με {images} εικόνα.",
+  "Converted {slides} slide including {images} images.": "Μετατράπηκε {slides} διαφάνεια με {images} εικόνες.",
+  "Converted {slides} slide.": "Μετατράπηκε {slides} διαφάνεια.",
+  "Converted {slides} slides including {images} image.": "Μετατράπηκαν {slides} διαφάνειες με {images} εικόνα.",
+  "Converted {slides} slides including {images} images.": "Μετατράπηκαν {slides} διαφάνειες με {images} εικόνες.",
+  "Converted {slides} slides.": "Μετατράπηκαν {slides} διαφάνειες.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Κάθε διαφάνεια σχεδιάζεται ξανά σε λευκή σελίδα στο αρχικό της μέγεθος — το κείμενο με την πραγματική του θέση, μέγεθος και χρώμα, καθώς και εικόνες, πίνακες και ομαδοποιημένα σχήματα.",
+  "Rendering slide {current} of {total}...": "Απόδοση διαφάνειας {current} από {total}..."
+}

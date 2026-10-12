@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "Το «{name}» δεν ήταν δυνατό να διαβαστεί ως βιβλίο εργασίας Excel. Βεβαιωθείτε ότι είναι έγκυρο αρχείο .xlsx.",
+  "Convert to PDF": "Μετατροπή σε PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Τα παλιά αρχεία .xls δεν υποστηρίζονται. Αποθηκεύστε το αρχείο ως .xlsx στο Excel και δοκιμάστε ξανά.",
+  "No data found in this workbook.": "Δεν βρέθηκαν δεδομένα σε αυτό το βιβλίο εργασίας."
+}

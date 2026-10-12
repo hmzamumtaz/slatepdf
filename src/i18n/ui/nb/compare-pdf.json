@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Forfatter: {value}",
+  "Back to all tools": "Tilbake til alle verktøy",
+  "Changed": "Endret",
+  "Compare Another": "Sammenlign flere",
+  "Compare PDF": "Sammenlign PDF",
+  "Compare PDFs": "Sammenlign PDF-er",
+  "Compare two PDFs and see the differences": "Sammenlign to PDF-er og se forskjellene",
+  "Comparing...": "Sammenligner …",
+  "Comparison complete": "Sammenligningen er ferdig",
+  "Creator: {value}": "Laget med: {value}",
+  "Differing pages": "Sider som er forskjellige",
+  "File 1": "Fil 1",
+  "File 2": "Fil 2",
+  "Files are identical": "Filene er identiske",
+  "Original": "Original",
+  "Page {page}": "Side {page}",
+  "Pages: {pages} | Size: {size}": "Sider: {pages} | Størrelse: {size}",
+  "Title: {value}": "Tittel: {value}",
+  "similarity: {value}%": "likhet: {value} %",
+  "{count} page differ": "{count} side er forskjellig",
+  "{count} pages differ": "{count} sider er forskjellige"
+}

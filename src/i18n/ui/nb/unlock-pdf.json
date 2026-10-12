@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Tilbake til alle verktøy",
+  "Enter the PDF password (leave empty if none)": "Skriv inn PDF-passordet (la feltet stå tomt hvis det ikke finnes)",
+  "File": "Fil",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "Bruk bare PDF-er du eier eller har tillatelse til å endre. Å fjerne sikkerheten fra andres PDF-er kan bryte lover om opphavsrett eller personvern.",
+  "PDF unlocked and downloaded": "PDF-en er låst opp og lastet ned",
+  "Password (if required)": "Passord (hvis det kreves)",
+  "Remove password protection from a PDF file": "Fjern passordbeskyttelsen fra en PDF-fil",
+  "Size": "Størrelse",
+  "Unlock PDF": "Lås opp PDF",
+  "Unlocking...": "Låser opp …"
+}

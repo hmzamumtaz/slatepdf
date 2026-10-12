@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Πίσω σε όλα τα εργαλεία",
+  "Enter the PDF password (leave empty if none)": "Εισαγάγετε τον κωδικό του PDF (αφήστε το κενό αν δεν υπάρχει)",
+  "File": "Αρχείο",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "Χρησιμοποιήστε μόνο PDF που σας ανήκουν ή που έχετε άδεια να τροποποιήσετε. Η αφαίρεση της προστασίας από PDF άλλου μπορεί να παραβιάζει νόμους περί πνευματικών δικαιωμάτων ή προστασίας προσωπικών δεδομένων.",
+  "PDF unlocked and downloaded": "Το PDF ξεκλειδώθηκε και έγινε λήψη",
+  "Password (if required)": "Κωδικός (αν απαιτείται)",
+  "Remove password protection from a PDF file": "Αφαιρέστε την προστασία με κωδικό από ένα αρχείο PDF",
+  "Size": "Μέγεθος",
+  "Unlock PDF": "Ξεκλείδωμα PDF",
+  "Unlocking...": "Ξεκλείδωμα..."
+}

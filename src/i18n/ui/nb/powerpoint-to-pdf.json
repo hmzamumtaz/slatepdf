@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Konverter til PDF",
+  "Converted {slides} slide including {images} image.": "Konverterte {slides} lysbilde med {images} bilde.",
+  "Converted {slides} slide including {images} images.": "Konverterte {slides} lysbilde med {images} bilder.",
+  "Converted {slides} slide.": "Konverterte {slides} lysbilde.",
+  "Converted {slides} slides including {images} image.": "Konverterte {slides} lysbilder med {images} bilde.",
+  "Converted {slides} slides including {images} images.": "Konverterte {slides} lysbilder med {images} bilder.",
+  "Converted {slides} slides.": "Konverterte {slides} lysbilder.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Hvert lysbilde tegnes på nytt på en hvit side i opprinnelig størrelse – tekst med riktig plassering, størrelse og farge, i tillegg til bilder, tabeller og grupperte figurer.",
+  "Rendering slide {current} of {total}...": "Gjengir lysbilde {current} av {total} …"
+}

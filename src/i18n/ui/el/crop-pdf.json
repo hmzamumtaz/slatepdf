@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Περικοπή PDF",
+  "Margins (points)": "Περιθώρια (points)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Τιμές σε points (1 ίντσα = 72 points). Η περικοπή γίνεται από κάθε άκρη.",
+  "bottom": "κάτω",
+  "left": "αριστερά",
+  "right": "δεξιά",
+  "top": "πάνω"
+}
