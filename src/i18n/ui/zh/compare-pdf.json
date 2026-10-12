@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "作者：{value}",
+  "Back to all tools": "返回全部工具",
+  "Changed": "修改后",
+  "Compare Another": "再对比一组",
+  "Compare PDF": "对比PDF",
+  "Compare PDFs": "对比PDF",
+  "Compare two PDFs and see the differences": "对比两个PDF，查看差异",
+  "Comparing...": "正在对比……",
+  "Comparison complete": "对比完成",
+  "Creator: {value}": "创建工具：{value}",
+  "Differing pages": "存在差异的页面",
+  "File 1": "文件1",
+  "File 2": "文件2",
+  "Files are identical": "两个文件完全相同",
+  "Original": "原始版本",
+  "Page {page}": "第{page}页",
+  "Pages: {pages} | Size: {size}": "页数：{pages} | 大小：{size}",
+  "Title: {value}": "标题：{value}",
+  "similarity: {value}%": "相似度：{value}%",
+  "{count} page differ": "{count}页存在差异",
+  "{count} pages differ": "{count}页存在差异"
+}

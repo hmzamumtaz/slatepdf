@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "裁剪PDF",
+  "Margins (points)": "页边距（点）",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "单位为点（1英寸 = 72点），将从每条边向内裁剪。",
+  "bottom": "下",
+  "left": "左",
+  "right": "右",
+  "top": "上"
+}

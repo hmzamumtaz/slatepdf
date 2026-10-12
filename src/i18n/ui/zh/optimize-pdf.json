@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "使用压缩对象流无损重建PDF，并丢弃未使用的对象和旧版本修订。文字仍可选中，图片不受影响。",
+  "Optimize PDF": "优化PDF",
+  "Remove document metadata (title, author, etc.)": "删除文档元数据（标题、作者等）",
+  "Saved {size} KB ({percent}% smaller).": "节省了{size} KB（减小{percent}%）。",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "此PDF已是最优结构，未做更改。如需更大幅度地缩小，请使用“压缩PDF”工具。"
+}

@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "返回全部工具",
+  "Convert to PDF": "转换为PDF",
+  "Converting...": "正在转换……",
+  "Design preview": "设计预览",
+  "Exact design": "精确设计",
+  "HTML code": "HTML代码",
+  "HTML design preview": "HTML设计预览",
+  "HTML to PDF": "HTML转PDF",
+  "Live preview — this is the design that will be converted": "实时预览：这就是将被转换的设计",
+  "PDF downloaded": "PDF已下载",
+  "PDF output": "PDF输出方式",
+  "Paste some HTML or upload an .html file first.": "请先粘贴HTML或上传.html文件。",
+  "Paste your HTML here, or upload an .html file above...": "在此粘贴HTML，或在上方上传.html文件……",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "将内容重新排版为可选中、可搜索的真正PDF文字，样式会有所简化。",
+  "Render the HTML design first, then convert it to PDF": "先渲染HTML设计，再转换为PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "使用完整CSS渲染页面（颜色、字体、背景、布局），与预览完全一致。推荐。",
+  "Selectable text": "可选中文字",
+  "Upload .html file": "上传.html文件",
+  "Upload an .html file above, or switch to the": "在上方上传.html文件，或切换到",
+  "Your design preview will appear here": "设计预览将显示在这里",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "标签页并粘贴代码。页面会在这里以完整设计渲染，与生成的PDF效果完全一致。"
+}

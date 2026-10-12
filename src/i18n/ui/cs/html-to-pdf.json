@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Zpět na všechny nástroje",
+  "Convert to PDF": "Převést do PDF",
+  "Converting...": "Převádím...",
+  "Design preview": "Náhled vzhledu",
+  "Exact design": "Přesný vzhled",
+  "HTML code": "Kód HTML",
+  "HTML design preview": "Náhled vzhledu HTML",
+  "HTML to PDF": "HTML do PDF",
+  "Live preview — this is the design that will be converted": "Živý náhled – takto bude vypadat převedený vzhled",
+  "PDF downloaded": "PDF staženo",
+  "PDF output": "Výstup PDF",
+  "Paste some HTML or upload an .html file first.": "Nejprve vložte kód HTML nebo vyberte soubor .html.",
+  "Paste your HTML here, or upload an .html file above...": "Sem vložte svůj kód HTML, nebo výše vyberte soubor .html...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Znovu vysází obsah jako skutečný text PDF, který lze označit a vyhledávat, se zjednodušenými styly.",
+  "Render the HTML design first, then convert it to PDF": "Nejprve vykreslete vzhled HTML, potom ho převeďte do PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Vykreslí stránku s úplným CSS – barvami, písmy, pozadím a rozvržením – přesně jako v náhledu. Doporučeno.",
+  "Selectable text": "Označitelný text",
+  "Upload .html file": "Vybrat soubor .html",
+  "Upload an .html file above, or switch to the": "Výše vyberte soubor .html, nebo přepněte na kartu",
+  "Your design preview will appear here": "Zde se zobrazí náhled vašeho vzhledu",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "a vložte svůj kód. Stránka se zde vykreslí v plném vzhledu – přesně tak bude vypadat vaše PDF."
+}

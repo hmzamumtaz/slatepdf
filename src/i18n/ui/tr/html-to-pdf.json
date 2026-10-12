@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Tüm araçlara dön",
+  "Convert to PDF": "PDF'ye Dönüştür",
+  "Converting...": "Dönüştürülüyor...",
+  "Design preview": "Tasarım önizlemesi",
+  "Exact design": "Birebir tasarım",
+  "HTML code": "HTML kodu",
+  "HTML design preview": "HTML tasarım önizlemesi",
+  "HTML to PDF": "HTML'den PDF'ye",
+  "Live preview — this is the design that will be converted": "Canlı önizleme — dönüştürülecek tasarım budur",
+  "PDF downloaded": "PDF indirildi",
+  "PDF output": "PDF çıktısı",
+  "Paste some HTML or upload an .html file first.": "Önce HTML yapıştırın veya bir .html dosyası yükleyin.",
+  "Paste your HTML here, or upload an .html file above...": "HTML kodunuzu buraya yapıştırın veya yukarıdan bir .html dosyası yükleyin...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "İçeriği, seçip arayabileceğiniz gerçek PDF metni olarak sadeleştirilmiş stillerle yeniden dizer.",
+  "Render the HTML design first, then convert it to PDF": "Önce HTML tasarımını işleyin, ardından PDF'ye dönüştürün",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Sayfayı tam CSS ile — renkler, yazı tipleri, arka planlar, düzen — önizlemede göründüğü gibi işler. Önerilir.",
+  "Selectable text": "Seçilebilir metin",
+  "Upload .html file": ".html dosyası yükle",
+  "Upload an .html file above, or switch to the": "Yukarıdan bir .html dosyası yükleyin veya",
+  "Your design preview will appear here": "Tasarım önizlemeniz burada görünecek",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "sekmesine geçip kodunuzu yapıştırın. Sayfa burada tam tasarımıyla işlenir — PDF'niz tam olarak böyle görünecek."
+}

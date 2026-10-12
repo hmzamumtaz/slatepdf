@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "无法将“{name}”作为Excel工作簿读取，请确认它是有效的.xlsx文件。",
+  "Convert to PDF": "转换为PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "不支持旧版.xls文件。请在Excel中将其另存为.xlsx后重试。",
+  "No data found in this workbook.": "此工作簿中没有数据。"
+}

@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "要删除的页面（用逗号分隔，例如：1, 3, 5-8）",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "请输入要删除的页面（例如：1, 3, 5-8）",
+  "Preview after removal:": "删除后预览：",
+  "Remove Pages": "删除页面",
+  "Total pages: {total} | Remaining: {count}": "总页数：{total} | 剩余：{count}",
+  "e.g., 1, 3, 5, 7": "例如：1, 3, 5, 7"
+}

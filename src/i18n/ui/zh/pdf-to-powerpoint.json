@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "已从{pages}页生成{slides}张幻灯片。",
+  "Built {slides} slide from {pages} pages.": "已从{pages}页生成{slides}张幻灯片。",
+  "Built {slides} slides from {pages} page.": "已从{pages}页生成{slides}张幻灯片。",
+  "Built {slides} slides from {pages} pages.": "已从{pages}页生成{slides}张幻灯片。",
+  "Convert to PowerPoint": "转换为PowerPoint",
+  "Reading page {current} of {total}...": "正在读取第{current}页，共{total}页……",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "读取文档结构，而不是直接粘贴原始文字：标题变成幻灯片标题，段落变成项目符号。较长的页面会延续到额外的幻灯片上。"
+}

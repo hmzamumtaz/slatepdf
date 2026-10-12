@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "转换为PDF",
+  "Converted {slides} slide including {images} image.": "已转换{slides}张幻灯片，包含{images}张图片。",
+  "Converted {slides} slide including {images} images.": "已转换{slides}张幻灯片，包含{images}张图片。",
+  "Converted {slides} slide.": "已转换{slides}张幻灯片。",
+  "Converted {slides} slides including {images} image.": "已转换{slides}张幻灯片，包含{images}张图片。",
+  "Converted {slides} slides including {images} images.": "已转换{slides}张幻灯片，包含{images}张图片。",
+  "Converted {slides} slides.": "已转换{slides}张幻灯片。",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "每张幻灯片都会按原始尺寸重新绘制在白色页面上：文字保留真实的位置、大小和颜色，图片、表格和组合形状也一并保留。",
+  "Rendering slide {current} of {total}...": "正在渲染第{current}张幻灯片，共{total}张……"
+}

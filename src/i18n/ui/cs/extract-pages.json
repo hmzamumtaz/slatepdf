@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Extrahovat stránky",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Stránky k extrahování (např. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Zadejte stránky k extrahování (např. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Náhled extrahovaných stránek:",
+  "Total pages: {total} | Extracting: {count}": "Celkem stránek: {total} | Extrahuje se: {count}",
+  "e.g., 1, 3, 5": "např. 1, 3, 5"
+}

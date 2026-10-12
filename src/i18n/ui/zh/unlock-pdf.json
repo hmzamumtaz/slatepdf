@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "返回全部工具",
+  "Enter the PDF password (leave empty if none)": "输入PDF密码（没有密码则留空）",
+  "File": "文件",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "请只处理你拥有或有权修改的PDF。移除他人PDF的安全保护可能违反版权法或隐私法。",
+  "PDF unlocked and downloaded": "PDF已解锁并下载",
+  "Password (if required)": "密码（如需要）",
+  "Remove password protection from a PDF file": "移除PDF文件的密码保护",
+  "Size": "大小",
+  "Unlock PDF": "解锁PDF",
+  "Unlocking...": "正在解锁……"
+}

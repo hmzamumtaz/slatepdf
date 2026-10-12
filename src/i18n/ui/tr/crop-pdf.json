@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "PDF Kırp",
+  "Margins (points)": "Kenar boşlukları (punto)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Değerler punto cinsindendir (1 inç = 72 punto). Her kenardan bu kadar kırpılır.",
+  "bottom": "alt",
+  "left": "sol",
+  "right": "sağ",
+  "top": "üst"
+}
