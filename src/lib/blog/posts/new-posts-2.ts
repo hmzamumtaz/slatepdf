@@ -150,7 +150,7 @@ export const newPosts2: BlogPost[] = [
   // Article 4: How to Extract Text from a Scanned PDF Without Software
   {
     slug: 'how-to-extract-text-from-scanned-pdf-without-software',
-    title: 'How to Extract Text from a Scanned PDF Without Software (Free OCR)',
+    title: 'How to Extract Text from a Scanned PDF Without Software',
     description: 'Copy text from scanned PDFs and images for free using browser-based OCR. No Adobe, no installation, no account — just paste your file and extract.',
     keyword: 'how to extract text from scanned pdf without software',
     category: 'Converting',

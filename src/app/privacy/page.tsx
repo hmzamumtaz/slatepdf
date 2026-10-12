@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: `How ${SITE_NAME} handles your data. Files are processed locally in your browser and never uploaded.`,
     url: '/privacy',
     siteName: SITE_NAME,
+    images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: 'summary',
