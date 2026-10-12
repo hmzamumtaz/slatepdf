@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, pageTitle } from './site';
 import { getToolBySlug, tools } from './tools-data';
 import { languageAlternates } from '@/i18n/alternates';
+import { toolOgImage } from '@/i18n/og';
 
 /** SEO data for every tool, keyed by slug. Only overrides where we need something specific. */
 const toolSeo: Record<string, {
@@ -406,13 +407,13 @@ export function generateToolMetadata(slug: string): Metadata {
       description: seo.description,
       url,
       siteName: SITE_NAME,
-      images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: `${SITE_NAME} — ${tool.name}` }],
+      images: [{ url: toolOgImage('en', slug), width: 1200, height: 630, alt: `${SITE_NAME} — ${tool.name}` }],
     },
     twitter: {
       card: 'summary_large_image',
       title: seo.title,
       description: seo.description,
-      images: [`${SITE_URL}/og-home.png`],
+      images: [toolOgImage('en', slug)],
     },
   };
 }

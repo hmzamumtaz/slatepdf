@@ -64,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Trust / entity pages
     { url: `${SITE_URL}/about`, lastModified: SITE_LAUNCH, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${SITE_URL}/verify-no-upload`, lastModified: TOOL_DATE, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE_URL}/privacy`, lastModified: SITE_LAUNCH, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${SITE_URL}/terms`, lastModified: SITE_LAUNCH, changeFrequency: 'yearly', priority: 0.3 },
     // Tool pages - these are the money pages

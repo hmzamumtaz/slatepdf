@@ -11,7 +11,7 @@ import { hrefFor, homeHref, pageFromPath } from '@/i18n/paths';
  * Links to the current page in every language. Pages that only exist in
  * English (blog, legal) link to each language's homepage instead.
  */
-export default function LanguageSwitcher({ label, dropUp }: { label: string; dropUp?: boolean }) {
+export default function LanguageSwitcher({ label, dropUp, dark }: { label: string; dropUp?: boolean; dark?: boolean }) {
   const pathname = usePathname() ?? '/';
   const current = pageFromPath(pathname);
   const locale = current?.locale ?? DEFAULT_LOCALE;
@@ -33,7 +33,7 @@ export default function LanguageSwitcher({ label, dropUp }: { label: string; dro
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
         aria-label={label}
-        className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+        className={`flex items-center gap-1.5 rounded-lg transition-colors ${dark ? 'text-xs text-gray-400 hover:text-white' : 'px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted'}`}
       >
         <Globe className="w-4 h-4" />
         <span>{LOCALE_NAMES[locale]}</span>

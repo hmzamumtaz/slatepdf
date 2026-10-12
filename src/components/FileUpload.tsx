@@ -145,7 +145,7 @@ export default function FileUpload({
               <p className="text-lg font-semibold text-foreground">{label ?? t('Drop your files here')}</p>
               <p className="text-sm text-muted-foreground mt-1">{description ?? t('or click to browse')}</p>
             </div>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <div className="flex items-center gap-2 text-xs text-gray-600">
               <span className="px-2 py-1 bg-muted rounded-md font-medium">{friendlyAcceptLabel(accept)}</span>
               {multiple && <span>{t('Up to {count} files', { count: maxFiles })}</span>}
             </div>

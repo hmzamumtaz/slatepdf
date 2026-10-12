@@ -32,6 +32,7 @@ export interface NavData {
     allTools: string;
     guides: string;
     language: string;
+    menu: string;
     footerTagline: string;
     footerPrivate: string;
     footerAllTools: string;
@@ -68,6 +69,7 @@ export async function getNav(locale: AnyLocale): Promise<NavData> {
       // The blog and legal pages are English-only; translated pages say so.
       guides: english ? 'Blog' : s.navGuides,
       language: s.language,
+      menu: s.menu,
       footerTagline: s.footerTagline,
       footerPrivate: s.footerPrivate,
       footerAllTools: fill(s.footerAllTools, { count: tools.length }),

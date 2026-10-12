@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown, LayoutGrid } from 'lucide-react';
 import BrandMark from './BrandMark';
-import * as LucideIcons from 'lucide-react';
+import { toolIcon } from '@/components/tool-icons';
 import { SITE_NAME } from '@/lib/site';
 import LanguageSwitcher from './LanguageSwitcher';
 import type { NavCategory, NavData } from '@/i18n/nav';
@@ -36,7 +36,7 @@ function DropdownMenu({ category, alignRight }: { category: NavCategory; alignRi
       {open && (
         <div className={`absolute top-full mt-1 w-80 bg-white border border-border rounded-xl shadow-xl py-2 animate-fade-in z-50 ${alignRight ? 'right-0' : 'left-0'}`}>
           {tools.map((tool) => {
-            const IconComp = (LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>)[tool.icon] || LucideIcons.FileText;
+            const IconComp = toolIcon(tool.icon);
             return (
               <Link
                 key={tool.slug}
@@ -110,6 +110,8 @@ export default function Header({ nav }: { nav: NavData }) {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={nav.labels.menu}
+            aria-expanded={mobileOpen}
             className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
