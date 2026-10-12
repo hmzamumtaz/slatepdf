@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import { ArrowRight, BookOpenText } from 'lucide-react';
 import Breadcrumbs from './Breadcrumbs';
+import RateTool from './RateTool';
 import type { ReactNode } from 'react';
 import { categoryAnchor, getNextTools, getToolBySlug, tools } from '@/lib/tools-data';
 import { getToolFaqs } from '@/lib/tool-seo';
 import { getToolHowTo } from '@/lib/tool-howto';
 import { posts } from '@/lib/blog';
-import { generateBreadcrumbSchema } from '@/lib/schema';
+import { generateBreadcrumbSchema, generateToolRatingSchema } from '@/lib/schema';
+import { getPageRating, MIN_PUBLIC_VOTES } from '@/lib/ratings';
 import { SITE_URL } from '@/lib/site';
 
 /**
@@ -15,7 +17,7 @@ import { SITE_URL } from '@/lib/site';
  * A server component on purpose — it reads blog data, which must never be
  * shipped to the browser. `guide` replaces the how-to with bespoke content.
  */
-export default function ToolPageSEO({ slug, guide }: { slug: string; guide?: ReactNode }) {
+export default async function ToolPageSEO({ slug, guide }: { slug: string; guide?: ReactNode }) {
   const tool = getToolBySlug(slug);
   if (!tool) return null;
 
@@ -33,10 +35,16 @@ export default function ToolPageSEO({ slug, guide }: { slug: string; guide?: Rea
   const howTo = getToolHowTo(slug);
   const guides = posts.filter((p) => p.tool === slug);
   const nextTools = getNextTools(slug, 4);
+  // Prerendered and refreshed hourly; the widget also fetches the live figure.
+  const rating = await getPageRating(slug);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {rating.count >= MIN_PUBLIC_VOTES && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateToolRatingSchema(tool, rating)) }} />
+      )}
+      <RateTool slug={slug} toolName={tool.name} initial={rating} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4">
         <Breadcrumbs
           items={[
