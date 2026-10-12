@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "ผู้เขียน: {value}",
+  "Back to all tools": "กลับไปที่เครื่องมือทั้งหมด",
+  "Changed": "ฉบับแก้ไข",
+  "Compare Another": "เปรียบเทียบไฟล์อื่น",
+  "Compare PDF": "เปรียบเทียบ PDF",
+  "Compare PDFs": "เปรียบเทียบ PDF",
+  "Compare two PDFs and see the differences": "เปรียบเทียบ PDF สองไฟล์และดูความแตกต่าง",
+  "Comparing...": "กำลังเปรียบเทียบ...",
+  "Comparison complete": "เปรียบเทียบเสร็จแล้ว",
+  "Creator: {value}": "โปรแกรมที่สร้าง: {value}",
+  "Differing pages": "หน้าที่แตกต่าง",
+  "File 1": "ไฟล์ 1",
+  "File 2": "ไฟล์ 2",
+  "Files are identical": "ไฟล์เหมือนกันทุกประการ",
+  "Original": "ต้นฉบับ",
+  "Page {page}": "หน้า {page}",
+  "Pages: {pages} | Size: {size}": "จำนวนหน้า: {pages} | ขนาด: {size}",
+  "Title: {value}": "ชื่อเรื่อง: {value}",
+  "similarity: {value}%": "ความเหมือน: {value}%",
+  "{count} page differ": "แตกต่าง {count} หน้า",
+  "{count} pages differ": "แตกต่าง {count} หน้า"
+}

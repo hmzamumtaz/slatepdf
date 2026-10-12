@@ -1,0 +1,16 @@
+{
+  "Analyzing...": "กำลังวิเคราะห์...",
+  "Back to all tools": "กลับไปที่เครื่องมือทั้งหมด",
+  "Copied": "คัดลอกแล้ว",
+  "Copy": "คัดลอก",
+  "File": "ไฟล์",
+  "Generate Summary": "สร้างสรุป",
+  "Get an intelligent summary of your PDF document": "รับบทสรุปอัจฉริยะของเอกสาร PDF ของคุณ",
+  "Key points": "ประเด็นสำคัญ",
+  "Size": "ขนาด",
+  "Summarize Again": "สรุปอีกครั้ง",
+  "Summarizer": "เครื่องมือสรุป",
+  "Summary generated": "สร้างสรุปแล้ว",
+  "Top topics": "หัวข้อหลัก",
+  "{words} words from {original} original words ({percent}% reduction)": "{words} คำ จากต้นฉบับ {original} คำ (ลดลง {percent}%)"
+}

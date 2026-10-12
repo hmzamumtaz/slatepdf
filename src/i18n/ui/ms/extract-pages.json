@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Ekstrak Halaman",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Halaman untuk diekstrak (cth., 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Sila masukkan halaman untuk diekstrak (cth., 1, 3, 5-8)",
+  "Preview of extracted pages:": "Pratonton halaman yang diekstrak:",
+  "Total pages: {total} | Extracting: {count}": "Jumlah halaman: {total} | Diekstrak: {count}",
+  "e.g., 1, 3, 5": "cth., 1, 3, 5"
+}

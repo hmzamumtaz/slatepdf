@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Halaman untuk dipadam (dipisahkan koma, cth., 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Sila masukkan halaman untuk dipadam (cth., 1, 3, 5-8)",
+  "Preview after removal:": "Pratonton selepas pemadaman:",
+  "Remove Pages": "Padam Halaman",
+  "Total pages: {total} | Remaining: {count}": "Jumlah halaman: {total} | Tinggal: {count}",
+  "e.g., 1, 3, 5, 7": "cth., 1, 3, 5, 7"
+}

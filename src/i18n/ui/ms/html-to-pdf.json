@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Kembali ke semua alat",
+  "Convert to PDF": "Tukar ke PDF",
+  "Converting...": "Menukar...",
+  "Design preview": "Pratonton reka bentuk",
+  "Exact design": "Reka bentuk tepat",
+  "HTML code": "Kod HTML",
+  "HTML design preview": "Pratonton reka bentuk HTML",
+  "HTML to PDF": "HTML ke PDF",
+  "Live preview — this is the design that will be converted": "Pratonton langsung — inilah reka bentuk yang akan ditukar",
+  "PDF downloaded": "PDF dimuat turun",
+  "PDF output": "Output PDF",
+  "Paste some HTML or upload an .html file first.": "Tampal HTML atau muat naik fail .html dahulu.",
+  "Paste your HTML here, or upload an .html file above...": "Tampal HTML anda di sini, atau muat naik fail .html di atas...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Mengatur semula kandungan sebagai teks PDF sebenar yang boleh dipilih dan dicari, dengan gaya yang dipermudahkan.",
+  "Render the HTML design first, then convert it to PDF": "Paparkan reka bentuk HTML dahulu, kemudian tukarkannya ke PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Memaparkan halaman dengan CSS penuh — warna, fon, latar belakang, susun atur — tepat seperti dalam pratonton. Disyorkan.",
+  "Selectable text": "Teks boleh dipilih",
+  "Upload .html file": "Muat naik fail .html",
+  "Upload an .html file above, or switch to the": "Muat naik fail .html di atas, atau beralih ke tab",
+  "Your design preview will appear here": "Pratonton reka bentuk anda akan muncul di sini",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "dan tampal markup anda. Halaman dipaparkan di sini dengan reka bentuk penuhnya — tepat seperti rupa PDF anda nanti."
+}

@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Angiv ny siderækkefølge (kommasepareret, f.eks. 3,1,2,4,5)",
+  "Organize PDF": "Organiser PDF",
+  "Please enter a page order": "Angiv en siderækkefølge",
+  "Preview in new order:": "Forhåndsvisning i ny rækkefølge:",
+  "Total pages: {total} | Reordered: {count}": "Sider i alt: {total} | Omarrangeret: {count}",
+  "e.g., 3,1,2,4,5": "f.eks. 3,1,2,4,5"
+}

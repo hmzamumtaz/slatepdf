@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" kon niet als Excel-werkmap worden gelezen. Controleer of het een geldig .xlsx-bestand is.",
+  "Convert to PDF": "Omzetten naar PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Oude .xls-bestanden worden niet ondersteund. Sla het bestand in Excel op als .xlsx en probeer het opnieuw.",
+  "No data found in this workbook.": "Geen gegevens gevonden in deze werkmap."
+}
