@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{pages}টি পেজ থেকে {slides}টি স্লাইড তৈরি হয়েছে।",
+  "Built {slides} slide from {pages} pages.": "{pages}টি পেজ থেকে {slides}টি স্লাইড তৈরি হয়েছে।",
+  "Built {slides} slides from {pages} page.": "{pages}টি পেজ থেকে {slides}টি স্লাইড তৈরি হয়েছে।",
+  "Built {slides} slides from {pages} pages.": "{pages}টি পেজ থেকে {slides}টি স্লাইড তৈরি হয়েছে।",
+  "Convert to PowerPoint": "PowerPoint-এ কনভার্ট করুন",
+  "Reading page {current} of {total}...": "{total}টির মধ্যে {current} নম্বর পেজ পড়া হচ্ছে...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "কাঁচা টেক্সট বসিয়ে দেওয়ার বদলে ডকুমেন্টের কাঠামো পড়ে — হেডিং হয় স্লাইডের শিরোনাম আর অনুচ্ছেদ হয় বুলেট পয়েন্ট। লম্বা পেজ অতিরিক্ত স্লাইডে চলতে থাকে।"
+}

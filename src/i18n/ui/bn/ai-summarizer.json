@@ -1,0 +1,16 @@
+{
+  "Analyzing...": "বিশ্লেষণ হচ্ছে...",
+  "Back to all tools": "সব টুলে ফিরে যান",
+  "Copied": "কপি হয়েছে",
+  "Copy": "কপি",
+  "File": "ফাইল",
+  "Generate Summary": "সারসংক্ষেপ তৈরি করুন",
+  "Get an intelligent summary of your PDF document": "আপনার PDF ডকুমেন্টের একটি বুদ্ধিদীপ্ত সারসংক্ষেপ পান",
+  "Key points": "মূল বিষয়গুলো",
+  "Size": "আকার",
+  "Summarize Again": "আবার সারসংক্ষেপ করুন",
+  "Summarizer": "সারসংক্ষেপ টুল",
+  "Summary generated": "সারসংক্ষেপ তৈরি হয়েছে",
+  "Top topics": "প্রধান বিষয়",
+  "{words} words from {original} original words ({percent}% reduction)": "মূল {original}টি শব্দ থেকে {words}টি শব্দ ({percent}% কম)"
+}

@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "কম্প্রেস করা অবজেক্ট স্ট্রিম দিয়ে PDF-কে লসলেসভাবে নতুন করে তৈরি করে এবং অব্যবহৃত অবজেক্ট ও পুরোনো রিভিশন বাদ দেয়। টেক্সট সিলেক্টযোগ্য থাকে আর ছবিতে কোনো পরিবর্তন হয় না।",
+  "Optimize PDF": "PDF অপ্টিমাইজ করুন",
+  "Remove document metadata (title, author, etc.)": "ডকুমেন্টের মেটাডেটা সরান (শিরোনাম, লেখক ইত্যাদি)",
+  "Saved {size} KB ({percent}% smaller).": "{size} KB সাশ্রয় হয়েছে ({percent}% ছোট)।",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "এই PDF ইতিমধ্যেই সর্বোত্তমভাবে সাজানো — অপরিবর্তিত অবস্থায় ফেরত দেওয়া হলো। আরও বেশি কমাতে PDF কম্প্রেস টুল ব্যবহার করে দেখুন।"
+}

@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "পেজের রেঞ্জ (যেমন: 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "অনুগ্রহ করে বৈধ পেজ রেঞ্জ লিখুন",
+  "Preview of pages in ranges:": "রেঞ্জের পেজগুলোর প্রিভিউ:",
+  "Split PDF": "PDF স্প্লিট করুন",
+  "Total pages: {total} | Pages in ranges: {count}": "মোট পেজ: {total} | রেঞ্জের পেজ: {count}"
+}

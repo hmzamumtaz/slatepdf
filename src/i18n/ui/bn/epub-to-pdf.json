@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "সব টুলে ফিরে যান",
+  "Convert EPUB ebooks to PDF documents": "EPUB ই-বুককে PDF ডকুমেন্টে কনভার্ট করুন",
+  "Convert to PDF": "PDF-এ কনভার্ট করুন",
+  "Converting...": "কনভার্ট হচ্ছে...",
+  "EPUB to PDF": "EPUB থেকে PDF",
+  "Exact design": "হুবহু ডিজাইন",
+  "Extracting EPUB content...": "EPUB কনটেন্ট এক্সট্র্যাক্ট করা হচ্ছে...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "টেক্সট কনটেন্ট বের করে একটি পরিচ্ছন্ন, সার্চযোগ্য PDF-এ নতুন করে সাজায়। উপন্যাস ও লেখাপ্রধান বইয়ের জন্য সবচেয়ে ভালো।",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "প্রতিটি অধ্যায়ের লেআউট, ছবি ও ইনলাইন স্টাইলিং বজায় রাখে। লিংক করা স্টাইলশিট ও এম্বেড করা কাস্টম ফন্ট লোড হয় না, তাই সেগুলোর জায়গায় ডিফল্ট স্টাইল ব্যবহার হয়। ছবিসহ বইয়ের জন্য সবচেয়ে ভালো।",
+  "PDF downloaded": "PDF ডাউনলোড হয়েছে",
+  "PDF output": "PDF আউটপুট",
+  "Selectable text": "সিলেক্টযোগ্য টেক্সট",
+  "Upload .epub file": ".epub ফাইল আপলোড করুন",
+  "Upload an EPUB file first.": "আগে একটি EPUB ফাইল আপলোড করুন।"
+}

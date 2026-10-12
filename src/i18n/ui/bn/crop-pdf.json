@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "PDF ক্রপ করুন",
+  "Margins (points)": "মার্জিন (পয়েন্ট)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "মানগুলো পয়েন্টে (1 ইঞ্চি = 72 পয়েন্ট)। প্রতিটি কিনারা থেকে এতটা ক্রপ হবে।",
+  "bottom": "নিচে",
+  "left": "বাঁয়ে",
+  "right": "ডানে",
+  "top": "উপরে"
+}

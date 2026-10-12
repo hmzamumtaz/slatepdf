@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "PDF-এ কনভার্ট করুন",
+  "Converted {slides} slide including {images} image.": "{images}টি ছবিসহ {slides}টি স্লাইড কনভার্ট হয়েছে।",
+  "Converted {slides} slide including {images} images.": "{images}টি ছবিসহ {slides}টি স্লাইড কনভার্ট হয়েছে।",
+  "Converted {slides} slide.": "{slides}টি স্লাইড কনভার্ট হয়েছে।",
+  "Converted {slides} slides including {images} image.": "{images}টি ছবিসহ {slides}টি স্লাইড কনভার্ট হয়েছে।",
+  "Converted {slides} slides including {images} images.": "{images}টি ছবিসহ {slides}টি স্লাইড কনভার্ট হয়েছে।",
+  "Converted {slides} slides.": "{slides}টি স্লাইড কনভার্ট হয়েছে।",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "প্রতিটি স্লাইড তার মূল আকারে একটি সাদা পেজে নতুন করে আঁকা হয় — টেক্সট তার আসল অবস্থান, আকার ও রংসহ, সঙ্গে ছবি, টেবিল ও গ্রুপ করা শেপ।",
+  "Rendering slide {current} of {total}...": "{total}টির মধ্যে {current} নম্বর স্লাইড রেন্ডার হচ্ছে..."
+}

@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "সব টুলে ফিরে যান",
+  "Convert to PDF": "PDF-এ কনভার্ট করুন",
+  "Converting...": "কনভার্ট হচ্ছে...",
+  "Design preview": "ডিজাইন প্রিভিউ",
+  "Exact design": "হুবহু ডিজাইন",
+  "HTML code": "HTML কোড",
+  "HTML design preview": "HTML ডিজাইন প্রিভিউ",
+  "HTML to PDF": "HTML থেকে PDF",
+  "Live preview — this is the design that will be converted": "লাইভ প্রিভিউ — এই ডিজাইনটিই কনভার্ট হবে",
+  "PDF downloaded": "PDF ডাউনলোড হয়েছে",
+  "PDF output": "PDF আউটপুট",
+  "Paste some HTML or upload an .html file first.": "আগে কিছু HTML পেস্ট করুন বা একটি .html ফাইল আপলোড করুন।",
+  "Paste your HTML here, or upload an .html file above...": "আপনার HTML এখানে পেস্ট করুন, অথবা উপরে একটি .html ফাইল আপলোড করুন...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "কনটেন্টকে সরল স্টাইলিংসহ আসল PDF টেক্সট হিসেবে নতুন করে সাজায়, যা সিলেক্ট ও সার্চ করা যায়।",
+  "Render the HTML design first, then convert it to PDF": "আগে HTML ডিজাইন রেন্ডার করুন, তারপর PDF-এ কনভার্ট করুন",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "পূর্ণ CSS-সহ পেজটি রেন্ডার করে — রং, ফন্ট, ব্যাকগ্রাউন্ড, লেআউট — ঠিক প্রিভিউর মতো। প্রস্তাবিত।",
+  "Selectable text": "সিলেক্টযোগ্য টেক্সট",
+  "Upload .html file": ".html ফাইল আপলোড করুন",
+  "Upload an .html file above, or switch to the": "উপরে একটি .html ফাইল আপলোড করুন, অথবা",
+  "Your design preview will appear here": "আপনার ডিজাইনের প্রিভিউ এখানে দেখা যাবে",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "ট্যাবে গিয়ে আপনার মার্কআপ পেস্ট করুন। পেজটি পূর্ণ ডিজাইনসহ এখানে রেন্ডার হবে — আপনার PDF ঠিক এমনই দেখাবে।"
+}
