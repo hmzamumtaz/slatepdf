@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "العودة إلى كل الأدوات",
+  "Enter the PDF password (leave empty if none)": "أدخل كلمة مرور PDF (اتركها فارغة إن لم توجد)",
+  "File": "الملف",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "لا تستخدم إلا ملفات PDF التي تملكها أو لديك إذن بتعديلها. قد تنتهك إزالة الحماية من ملف PDF يخص شخصًا آخر قوانين حقوق النشر أو الخصوصية.",
+  "PDF unlocked and downloaded": "تم فك حماية PDF وتنزيله",
+  "Password (if required)": "كلمة المرور (إن لزم الأمر)",
+  "Remove password protection from a PDF file": "أزل الحماية بكلمة المرور من ملف PDF",
+  "Size": "الحجم",
+  "Unlock PDF": "فك حماية PDF",
+  "Unlocking...": "جارٍ فك الحماية..."
+}

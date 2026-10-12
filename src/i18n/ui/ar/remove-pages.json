@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "الصفحات المراد حذفها (مفصولة بفواصل، مثال: 1، 3، 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "يُرجى إدخال الصفحات المراد حذفها (مثال: 1، 3، 5-8)",
+  "Preview after removal:": "المعاينة بعد الحذف:",
+  "Remove Pages": "حذف الصفحات",
+  "Total pages: {total} | Remaining: {count}": "إجمالي الصفحات: {total} | المتبقية: {count}",
+  "e.g., 1, 3, 5, 7": "مثال: 1، 3، 5، 7"
+}

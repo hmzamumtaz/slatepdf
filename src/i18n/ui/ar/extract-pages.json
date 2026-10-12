@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "استخراج الصفحات",
+  "Pages to extract (e.g., 1, 3, 5-8)": "الصفحات المراد استخراجها (مثال: 1، 3، 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "يُرجى إدخال الصفحات المراد استخراجها (مثال: 1، 3، 5-8)",
+  "Preview of extracted pages:": "معاينة الصفحات المستخرجة:",
+  "Total pages: {total} | Extracting: {count}": "إجمالي الصفحات: {total} | المستخرجة: {count}",
+  "e.g., 1, 3, 5": "مثال: 1، 3، 5"
+}

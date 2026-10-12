@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "يعيد بناء ملف PDF دون فقدان الجودة باستخدام تدفقات كائنات مضغوطة، ويتخلص من الكائنات غير المستخدمة والمراجعات القديمة. يبقى النص قابلًا للتحديد والصور دون تغيير.",
+  "Optimize PDF": "تحسين PDF",
+  "Remove document metadata (title, author, etc.)": "إزالة بيانات المستند الوصفية (العنوان والمؤلف وغيرهما)",
+  "Saved {size} KB ({percent}% smaller).": "تم توفير {size} KB (أصغر بنسبة {percent}%).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "ملف PDF هذا محزوم بالفعل على النحو الأمثل، لذا أُعيد دون تغيير. لتقليل أكبر في الحجم، جرّب أداة ضغط PDF."
+}
