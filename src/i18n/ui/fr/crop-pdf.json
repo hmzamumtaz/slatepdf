@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Rogner le PDF",
+  "Margins (points)": "Marges (points)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Valeurs en points (1 pouce = 72 points). Cette marge est retirée de chaque bord.",
+  "bottom": "bas",
+  "left": "gauche",
+  "right": "droite",
+  "top": "haut"
+}

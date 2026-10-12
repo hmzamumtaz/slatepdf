@@ -191,7 +191,7 @@ export default function ReviewScreen(props: Props) {
     <div className="fixed inset-0 z-[75] flex flex-col bg-gray-950 text-white" style={{ height: '100dvh' }}>
       {/* Header */}
       <div className="flex items-center gap-2 px-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-2">
-        <button onClick={onBack} className="p-2.5 rounded-full hover:bg-white/10" aria-label={t('Back')}><ArrowLeft className="w-5 h-5" /></button>
+        <button onClick={onBack} className="p-2.5 rounded-full hover:bg-white/10" aria-label={t('Go back')}><ArrowLeft className="w-5 h-5" /></button>
         <div className="flex-1 min-w-0">
           {renaming ? (
             <input

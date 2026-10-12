@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "« {name} » n’a pas pu être lu comme un classeur Excel. Vérifiez qu’il s’agit d’un fichier .xlsx valide.",
+  "Convert to PDF": "Convertir en PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Les anciens fichiers .xls ne sont pas pris en charge. Enregistrez le fichier au format .xlsx dans Excel et réessayez.",
+  "No data found in this workbook.": "Aucune donnée trouvée dans ce classeur."
+}

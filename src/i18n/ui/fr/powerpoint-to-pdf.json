@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Convertir en PDF",
+  "Converted {slides} slide including {images} image.": "{slides} diapositive convertie, dont {images} image.",
+  "Converted {slides} slide including {images} images.": "{slides} diapositive convertie, dont {images} images.",
+  "Converted {slides} slide.": "{slides} diapositive convertie.",
+  "Converted {slides} slides including {images} image.": "{slides} diapositives converties, dont {images} image.",
+  "Converted {slides} slides including {images} images.": "{slides} diapositives converties, dont {images} images.",
+  "Converted {slides} slides.": "{slides} diapositives converties.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Chaque diapositive est redessinée sur une page blanche à sa taille d’origine — le texte avec sa position, sa taille et sa couleur réelles, ainsi que les images, les tableaux et les formes groupées.",
+  "Rendering slide {current} of {total}...": "Rendu de la diapositive {current} sur {total}..."
+}

@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "Reconstruit la structure interne du PDF (table de références croisées, numérotation des objets, trailer) pour réparer les fichiers tronqués ou corrompus. Si la structure est irrécupérable, les pages sont redessinées dans un nouveau PDF doté d’une couche de texte consultable.",
+  "Repair PDF": "Réparer le PDF"
+}
