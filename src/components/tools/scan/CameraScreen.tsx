@@ -7,6 +7,8 @@ import {
   refineCorners, signatureDistance, splitBookQuad,
   type Corner, type PixelPoint, type ScanFilter,
 } from '@/lib/document-scanner';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 import { blobToCanvas, canvasToJpeg, FULL_QUAD, type PageLayout, type PagePart } from '@/lib/scan-session';
 
 export type ScanMode = 'whiteboard' | 'book' | 'document' | 'id-card' | 'business-card';
@@ -20,12 +22,14 @@ export interface CapturedPage {
 }
 
 const MODES: { value: ScanMode; label: string; filter: ScanFilter }[] = [
-  { value: 'whiteboard', label: 'Whiteboard', filter: 'whiteboard' },
-  { value: 'book', label: 'Book', filter: 'enhance' },
-  { value: 'document', label: 'Document', filter: 'enhance' },
-  { value: 'id-card', label: 'ID card', filter: 'enhance' },
-  { value: 'business-card', label: 'Business card', filter: 'enhance' },
+  { value: 'whiteboard', label: msg('Whiteboard'), filter: 'whiteboard' },
+  { value: 'book', label: msg('Book'), filter: 'enhance' },
+  { value: 'document', label: msg('Document'), filter: 'enhance' },
+  { value: 'id-card', label: msg('ID card'), filter: 'enhance' },
+  { value: 'business-card', label: msg('Business card'), filter: 'enhance' },
 ];
+
+const CAMERA_FAILED = msg('Camera access was denied or is unavailable. You can still add photos from your gallery.');
 
 const STEADY_STROKE = '#22c55e';
 const TRACKING_STROKE = '#fbbf24';
@@ -86,6 +90,7 @@ async function takeFullResPhoto(track: MediaStreamTrack | null): Promise<HTMLCan
 }
 
 export default function CameraScreen({ initialStream, pageCount, lastThumb, retakeMode, onCapture, onImport, onReview, onClose }: Props) {
+  const t = useT();
   const retake = !!retakeMode;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const overlayRef = useRef<HTMLCanvasElement | null>(null);
@@ -126,7 +131,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
   /* ----------------------------- camera ----------------------------- */
 
   const stopStream = useCallback(() => {
-    streamRef.current?.getTracks().forEach(t => t.stop());
+    streamRef.current?.getTracks().forEach(track => track.stop());
     streamRef.current = null;
   }, []);
 
@@ -150,11 +155,11 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
     setTorch(false);
     try {
       const stream = await openCameraStream(face);
-      if (!mountedRef.current) { stream.getTracks().forEach(t => t.stop()); return; }
+      if (!mountedRef.current) { stream.getTracks().forEach(track => track.stop()); return; }
       attachStream(stream);
     } catch {
       if (mountedRef.current) {
-        setFailed('Camera access was denied or is unavailable. You can still add photos from your gallery.');
+        setFailed(CAMERA_FAILED);
         setStarting(false);
       }
     }
@@ -162,17 +167,17 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
 
   useEffect(() => {
     mountedRef.current = true;
-    const t = window.setTimeout(() => {
+    const timer = window.setTimeout(() => {
       if (initialStream) attachStream(initialStream);
       else {
-        setFailed('Camera access was denied or is unavailable. You can still add photos from your gallery.');
+        setFailed(CAMERA_FAILED);
         setStarting(false);
       }
     }, 0);
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
-      window.clearTimeout(t);
+      window.clearTimeout(timer);
       mountedRef.current = false;
       document.body.style.overflow = prevOverflow;
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
@@ -191,7 +196,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
     if (!track) return;
     try {
       await track.applyConstraints({ advanced: [{ torch: !torch } as MediaTrackConstraintSet] });
-      setTorch(t => !t);
+      setTorch(on => !on);
     } catch {
       setTorchAvailable(false);
     }
@@ -369,14 +374,14 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
 
   const effMode = retakeMode ?? mode;
   const status =
-    detect === 'capturing' ? 'Capturing…'
-      : dark && detect === 'searching' ? (torchAvailable && !torch ? 'Too dark — turn on the flash' : 'Too dark — find more light')
-      : effMode === 'business-card' && detect === 'searching' ? 'Fit the business card inside the frame'
-      : effMode === 'id-card' ? (frontDone ? 'Now turn the card over and scan the back' : 'Scan the front of the card')
-        : detect === 'steady' ? (auto ? 'Hold steady…' : 'Page found — tap the shutter')
-          : detect === 'found' ? (auto ? 'Page found — hold steady' : 'Page found — tap the shutter')
-            : mode === 'book' && !retake ? 'Line up the spine with the center line'
-              : 'Looking for a document';
+    detect === 'capturing' ? t('Capturing…')
+      : dark && detect === 'searching' ? (torchAvailable && !torch ? t('Too dark — turn on the flash') : t('Too dark — find more light'))
+      : effMode === 'business-card' && detect === 'searching' ? t('Fit the business card inside the frame')
+      : effMode === 'id-card' ? (frontDone ? t('Now turn the card over and scan the back') : t('Scan the front of the card'))
+        : detect === 'steady' ? (auto ? t('Hold steady…') : t('Page found — tap the shutter'))
+          : detect === 'found' ? (auto ? t('Page found — hold steady') : t('Page found — tap the shutter'))
+            : mode === 'book' && !retake ? t('Line up the spine with the center line')
+              : t('Looking for a document');
 
   return (
     <div className="fixed inset-0 z-[70] bg-black text-white select-none overflow-hidden" style={{ height: '100dvh', touchAction: 'none', overscrollBehavior: 'none' }}>
@@ -397,10 +402,10 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
 
       {(starting || failed) && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-8 text-center">
-          {starting ? <><Loader2 className="w-8 h-8 animate-spin" /><p className="text-sm">Starting camera…</p></> : (
+          {starting ? <><Loader2 className="w-8 h-8 animate-spin" /><p className="text-sm">{t('Starting camera…')}</p></> : (
             <>
-              <p className="text-sm">{failed}</p>
-              <button onClick={() => fileRef.current?.click()} className="px-5 py-3 rounded-xl bg-violet-600 font-semibold text-sm">Choose photos</button>
+              <p className="text-sm">{t(failed ?? '')}</p>
+              <button onClick={() => fileRef.current?.click()} className="px-5 py-3 rounded-xl bg-violet-600 font-semibold text-sm">{t('Choose photos')}</button>
             </>
           )}
         </div>
@@ -408,17 +413,17 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
 
       {/* Top bar */}
       <div className="absolute top-0 inset-x-0 px-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-8 bg-gradient-to-b from-black/60 to-transparent flex items-center justify-between">
-        <button onClick={onClose} className="p-2.5 rounded-full bg-black/40" aria-label="Close camera"><X className="w-5 h-5" /></button>
+        <button onClick={onClose} className="p-2.5 rounded-full bg-black/40" aria-label={t('Close camera')}><X className="w-5 h-5" /></button>
         <div className="flex items-center gap-2">
           {torchAvailable && (
-            <button onClick={toggleTorch} className={`p-2.5 rounded-full ${torch ? 'bg-yellow-400 text-black' : 'bg-black/40'}`} aria-label={torch ? 'Turn flash off' : 'Turn flash on'}>
+            <button onClick={toggleTorch} className={`p-2.5 rounded-full ${torch ? 'bg-yellow-400 text-black' : 'bg-black/40'}`} aria-label={torch ? t('Turn flash off') : t('Turn flash on')}>
               {torch ? <Zap className="w-5 h-5" /> : <ZapOff className="w-5 h-5" />}
             </button>
           )}
           <button onClick={() => setAuto(a => !a)} className={`px-3 py-2 rounded-full text-xs font-semibold ${auto ? 'bg-green-500 text-white' : 'bg-black/40 text-white/80'}`} aria-pressed={auto}>
-            Auto capture {auto ? 'on' : 'off'}
+            {auto ? t('Auto capture on') : t('Auto capture off')}
           </button>
-          <button onClick={flip} className="p-2.5 rounded-full bg-black/40" aria-label="Switch camera"><RefreshCw className="w-5 h-5" /></button>
+          <button onClick={flip} className="p-2.5 rounded-full bg-black/40" aria-label={t('Switch camera')}><RefreshCw className="w-5 h-5" /></button>
         </div>
       </div>
 
@@ -426,11 +431,11 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
       <div className="absolute bottom-0 inset-x-0 pt-16 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] bg-gradient-to-t from-black/85 via-black/60 to-transparent">
         <p className="text-center text-sm font-medium mb-3 px-4 flex items-center justify-center gap-2">
           <span className={`inline-block w-2 h-2 rounded-full ${detect === 'steady' ? 'bg-green-400' : detect === 'found' ? 'bg-amber-400' : 'bg-white/40'}`} />
-          {retake ? `Retake page · ${status}` : status}
+          {retake ? t('Retake page · {status}', { status }) : status}
         </p>
         {effMode === 'id-card' && frontDone && (
           <div className="flex justify-center mb-3">
-            <button onClick={skipBack} className="px-4 py-1.5 rounded-full bg-white/15 text-xs font-semibold">Front only — skip the back</button>
+            <button onClick={skipBack} className="px-4 py-1.5 rounded-full bg-white/15 text-xs font-semibold">{t('Front only — skip the back')}</button>
           </div>
         )}
 
@@ -442,7 +447,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
                 onClick={() => { setMode(m.value); frontRef.current = null; setFrontDone(false); }}
                 className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors ${mode === m.value ? 'bg-white text-gray-900' : 'text-white/75'}`}
               >
-                {m.label}
+                {t(m.label)}
               </button>
             ))}
           </div>
@@ -450,7 +455,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
 
         <div className="max-w-md mx-auto flex items-center justify-between px-8">
           {/* Thumbnail stack → review */}
-          <button onClick={onReview} disabled={pageCount === 0} className="relative w-14 h-14 rounded-lg overflow-hidden ring-2 ring-white/70 bg-white/10 disabled:opacity-40" aria-label="Review scanned pages">
+          <button onClick={onReview} disabled={pageCount === 0} className="relative w-14 h-14 rounded-lg overflow-hidden ring-2 ring-white/70 bg-white/10 disabled:opacity-40" aria-label={t('Review scanned pages')}>
             {lastThumb && (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={lastThumb} alt="" className="w-full h-full object-cover" />
@@ -462,7 +467,7 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
             onClick={() => { armedRef.current = false; void capture(); }}
             disabled={starting || !!failed}
             className="relative w-20 h-20 rounded-full bg-white ring-4 ring-white/30 active:scale-95 transition-transform flex items-center justify-center disabled:opacity-40"
-            aria-label="Capture page"
+            aria-label={t('Capture page')}
           >
             <span className="w-16 h-16 rounded-full border-[3px] border-gray-900/80" />
             {auto && steady > 0 && (
@@ -472,8 +477,8 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
             )}
           </button>
 
-          <button onClick={() => fileRef.current?.click()} className="w-14 h-14 rounded-lg bg-white/10 flex flex-col items-center justify-center gap-0.5 text-[10px] font-semibold" aria-label="Import photos">
-            <ImagePlus className="w-5 h-5" /> Photos
+          <button onClick={() => fileRef.current?.click()} className="w-14 h-14 rounded-lg bg-white/10 flex flex-col items-center justify-center gap-0.5 text-[10px] font-semibold" aria-label={t('Import photos')}>
+            <ImagePlus className="w-5 h-5" /> {t('Photos')}
           </button>
         </div>
       </div>

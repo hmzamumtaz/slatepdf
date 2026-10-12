@@ -1,6 +1,7 @@
 'use client';
 
 import { extractTextFromPdf, tokenize, cjkFraction } from './pdf-engine';
+import { msg } from '@/i18n/format';
 
 const STOPWORDS = new Set([
   'the','and','for','are','but','not','you','all','can','had','her','was','one','our','out','has','his','how','its','may',
@@ -35,15 +36,15 @@ export async function summarizePdf(
   onProgress?: (msg: string) => void,
   options?: { maxSentences?: number },
 ): Promise<SummaryResult> {
-  onProgress?.('Extracting text...');
+  onProgress?.(msg('Extracting text...'));
   const pages = await extractTextFromPdf(file);
   const fullText = pages.join('\n\n');
 
   if (!fullText.trim()) {
-    throw new Error('No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.');
+    throw new Error(msg('No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.'));
   }
 
-  onProgress?.('Analyzing document...');
+  onProgress?.(msg('Analyzing document...'));
   const allWords = tokenize(fullText);
   const originalWordCount = allWords.length;
 
@@ -59,12 +60,12 @@ export async function summarizePdf(
 
   if (sentences.length === 0) {
     if (cjkFraction(fullText) > 0.2) {
-      throw new Error('This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and ".!?" punctuation, so it can\'t segment this text yet.');
+      throw new Error(msg('This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and ".!?" punctuation, so it can\'t segment this text yet.'));
     }
-    throw new Error('The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).');
+    throw new Error(msg('The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).'));
   }
 
-  onProgress?.('Scoring sentences...');
+  onProgress?.(msg('Scoring sentences...'));
 
   // Term frequencies over meaningful words.
   const freq: Record<string, number> = {};

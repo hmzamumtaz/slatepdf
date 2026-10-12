@@ -5,6 +5,8 @@ import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, FileDown, BookOpen, Pale
 import Link from 'next/link';
 import { epubToPdf, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -13,6 +15,7 @@ function formatBytes(bytes: number): string {
 }
 
 export default function EpubToPdfTool() {
+  const t = useT();
   const [file, setFile] = useState<File | null>(null);
   const [mode, setMode] = useState<'visual' | 'text'>('visual');
   const [processing, setProcessing] = useState(false);
@@ -30,11 +33,11 @@ export default function EpubToPdfTool() {
   }, []);
 
   const handleConvert = useCallback(async () => {
-    if (!file) { setError('Upload an EPUB file first.'); return; }
+    if (!file) { setError(msg('Upload an EPUB file first.')); return; }
     setProcessing(true);
     setError(null);
     setResultSize(null);
-    setProgress('Extracting EPUB content...');
+    setProgress(msg('Extracting EPUB content...'));
     try {
       const blob = await epubToPdf(file, mode);
       downloadBlob(blob, getOutputFilename('epub-to-pdf', '.pdf'));
@@ -51,15 +54,15 @@ export default function EpubToPdfTool() {
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-orange-50"><BookOpen className="w-6 h-6 text-orange-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">EPUB to PDF</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Convert EPUB ebooks to PDF documents</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('EPUB to PDF')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base">{t('Convert EPUB ebooks to PDF documents')}</p>
             </div>
           </div>
         </div>
@@ -68,7 +71,7 @@ export default function EpubToPdfTool() {
           {/* File upload */}
           <div>
             <label className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 border-dashed border-border text-sm font-medium text-muted-foreground hover:border-primary hover:text-primary cursor-pointer transition-all">
-              <FileDown className="w-4 h-4 rotate-180" /> {file ? file.name : 'Upload .epub file'}
+              <FileDown className="w-4 h-4 rotate-180" /> {file ? file.name : t('Upload .epub file')}
               <input type="file" accept=".epub" onChange={handleFileUpload} className="hidden" />
             </label>
             {file && (
@@ -78,15 +81,15 @@ export default function EpubToPdfTool() {
 
           {/* Output mode */}
           <div>
-            <label className="block text-sm font-semibold text-foreground mb-2">PDF output</label>
+            <label className="block text-sm font-semibold text-foreground mb-2">{t('PDF output')}</label>
             <div className="grid sm:grid-cols-2 gap-3">
               <button onClick={() => setMode('visual')} className={`text-left p-4 rounded-xl border-2 transition-all ${mode === 'visual' ? 'border-primary bg-primary/5' : 'border-border hover:border-gray-300'}`}>
-                <div className="flex items-center gap-2 mb-1"><Palette className={`w-4 h-4 ${mode === 'visual' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">Exact design</span></div>
-                <p className="text-xs text-muted-foreground">Keeps each chapter&apos;s layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.</p>
+                <div className="flex items-center gap-2 mb-1"><Palette className={`w-4 h-4 ${mode === 'visual' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">{t('Exact design')}</span></div>
+                <p className="text-xs text-muted-foreground">{t("Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.")}</p>
               </button>
               <button onClick={() => setMode('text')} className={`text-left p-4 rounded-xl border-2 transition-all ${mode === 'text' ? 'border-primary bg-primary/5' : 'border-border hover:border-gray-300'}`}>
-                <div className="flex items-center gap-2 mb-1"><Type className={`w-4 h-4 ${mode === 'text' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">Selectable text</span></div>
-                <p className="text-xs text-muted-foreground">Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.</p>
+                <div className="flex items-center gap-2 mb-1"><Type className={`w-4 h-4 ${mode === 'text' ? 'text-primary' : 'text-muted-foreground'}`} /><span className="text-sm font-semibold">{t('Selectable text')}</span></div>
+                <p className="text-xs text-muted-foreground">{t('Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.')}</p>
               </button>
             </div>
           </div>
@@ -94,27 +97,27 @@ export default function EpubToPdfTool() {
           {error && (
             <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
               <AlertCircle className="w-5 h-5 text-destructive shrink-0" />
-              <p className="text-sm text-destructive">{error}</p>
+              <p className="text-sm text-destructive">{t(error)}</p>
             </div>
           )}
 
           {processing && progress && (
             <div className="p-4 bg-orange-50 border border-orange-200 rounded-xl flex items-center gap-3 animate-fade-in">
               <Loader2 className="w-4 h-4 animate-spin text-orange-600" />
-              <p className="text-sm font-medium text-orange-800">{progress}</p>
+              <p className="text-sm font-medium text-orange-800">{t(progress)}</p>
             </div>
           )}
 
           {resultSize !== null && !processing && (
             <div className="p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3 animate-fade-in">
               <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-              <p className="text-sm text-green-800"><span className="font-semibold">PDF downloaded</span> ({formatBytes(resultSize)}).</p>
+              <p className="text-sm text-green-800"><span className="font-semibold">{t('PDF downloaded')}</span> ({formatBytes(resultSize)}).</p>
             </div>
           )}
 
           <button onClick={handleConvert} disabled={processing || !file}
             className="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white hover:shadow-lg hover:shadow-orange-500/25 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
-            {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> Converting...</> : <><FileDown className="w-4 h-4" /> Convert to PDF</>}
+            {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('Converting...')}</> : <><FileDown className="w-4 h-4" /> {t('Convert to PDF')}</>}
           </button>
         </div>
       </div>

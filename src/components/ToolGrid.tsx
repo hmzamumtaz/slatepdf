@@ -2,9 +2,17 @@
 
 import Link from 'next/link';
 import * as LucideIcons from 'lucide-react';
-import { ToolInfo } from '@/lib/tools-data';
+/** A tool card; `href` defaults to the English tool page. */
+export interface ToolCard {
+  slug: string;
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  href?: string;
+}
 
-export default function ToolGrid({ tools }: { tools: ToolInfo[] }) {
+export default function ToolGrid({ tools }: { tools: ToolCard[] }) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {tools.map((tool) => {
@@ -12,7 +20,7 @@ export default function ToolGrid({ tools }: { tools: ToolInfo[] }) {
         return (
           <Link
             key={tool.slug}
-            href={`/tools/${tool.slug}`}
+            href={tool.href ?? `/tools/${tool.slug}`}
             className="tool-card group p-4 bg-white border border-border rounded-xl hover:border-primary/30 transition-all"
           >
             <div

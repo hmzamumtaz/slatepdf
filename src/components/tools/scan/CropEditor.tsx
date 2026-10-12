@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Check, Loader2, Maximize, ScanSearch, X } from 'lucide-react';
 import { detectDocumentCornersInImage, refineCorners, type Corner } from '@/lib/document-scanner';
 import { blobToCanvas, FULL_QUAD } from '@/lib/scan-session';
+import { useT } from '@/i18n/I18nProvider';
 
 interface Props {
   source: Blob;
@@ -39,7 +40,8 @@ const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
  * Adjust a page's borders: drag the four corners (or the middle of an edge to
  * move a whole side). A magnifier shows the exact spot under your finger.
  */
-export default function CropEditor({ source, quad, title = 'Adjust borders', tabs, onCancel, onDone }: Props) {
+export default function CropEditor({ source, quad, title, tabs, onCancel, onDone }: Props) {
+  const t = useT();
   const boxRef = useRef<HTMLDivElement>(null);
   const [url, setUrl] = useState<string | null>(null);
   const [natural, setNatural] = useState<{ w: number; h: number } | null>(null);
@@ -136,21 +138,21 @@ export default function CropEditor({ source, quad, title = 'Adjust borders', tab
   return (
     <div className="absolute inset-0 z-30 flex flex-col bg-gray-950 text-white">
       <div className="flex items-center justify-between px-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-2">
-        <button onClick={onCancel} className="p-2.5 rounded-full hover:bg-white/10" aria-label="Cancel crop"><X className="w-6 h-6" /></button>
-        <p className="text-sm font-semibold">{title}</p>
+        <button onClick={onCancel} className="p-2.5 rounded-full hover:bg-white/10" aria-label={t('Cancel crop')}><X className="w-6 h-6" /></button>
+        <p className="text-sm font-semibold">{title ?? t('Adjust borders')}</p>
         <button
           onClick={() => valid && onDone(pts)}
           disabled={!valid}
           className="px-4 py-2 rounded-xl bg-violet-600 font-semibold text-sm flex items-center gap-1.5 disabled:opacity-40"
         >
-          <Check className="w-4 h-4" /> Done
+          <Check className="w-4 h-4" /> {t('Done')}
         </button>
       </div>
 
       {tabs && (
         <div className="flex justify-center gap-1.5 pb-2">
-          {tabs.map(t => (
-            <button key={t.label} onClick={t.onSelect} className={`px-3 py-1.5 rounded-lg text-xs font-semibold ${t.active ? 'bg-white text-gray-900' : 'bg-white/10 text-white/80'}`}>{t.label}</button>
+          {tabs.map(tab => (
+            <button key={tab.label} onClick={tab.onSelect} className={`px-3 py-1.5 rounded-lg text-xs font-semibold ${tab.active ? 'bg-white text-gray-900' : 'bg-white/10 text-white/80'}`}>{tab.label}</button>
           ))}
         </div>
       )}
@@ -166,7 +168,7 @@ export default function CropEditor({ source, quad, title = 'Adjust borders', tab
         {url && fit ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={url} alt="Page photo" draggable={false} className="absolute pointer-events-none" style={{ left: fit.x, top: fit.y, width: fit.w, height: fit.h }} />
+            <img src={url} alt={t('Page photo')} draggable={false} className="absolute pointer-events-none" style={{ left: fit.x, top: fit.y, width: fit.w, height: fit.h }} />
             <svg className="absolute inset-0 w-full h-full" width={box.w} height={box.h}>
               <defs>
                 <mask id="crop-mask">
@@ -226,16 +228,16 @@ export default function CropEditor({ source, quad, title = 'Adjust borders', tab
       </div>
 
       <p className="text-center text-xs text-white/70 px-6 pt-3 min-h-[1.5rem]">
-        {!valid ? 'The corners cross over — drag them back into a four-sided shape.'
-          : notFound ? 'No page edges found in this photo. Drag the corners yourself.'
-            : 'Drag the corners or edges to the edge of the page.'}
+        {!valid ? t('The corners cross over — drag them back into a four-sided shape.')
+          : notFound ? t('No page edges found in this photo. Drag the corners yourself.')
+            : t('Drag the corners or edges to the edge of the page.')}
       </p>
       <div className="flex justify-center gap-3 px-4 pt-3 pb-[calc(env(safe-area-inset-bottom)+1rem)]">
         <button onClick={autoDetect} disabled={detecting} className="flex-1 max-w-[11rem] px-4 py-3 rounded-xl bg-white/10 text-sm font-semibold flex items-center justify-center gap-2 disabled:opacity-50">
-          {detecting ? <Loader2 className="w-4 h-4 animate-spin" /> : <ScanSearch className="w-4 h-4" />} Auto-detect
+          {detecting ? <Loader2 className="w-4 h-4 animate-spin" /> : <ScanSearch className="w-4 h-4" />} {t('Auto-detect')}
         </button>
         <button onClick={() => { setPts(FULL_QUAD); setNotFound(false); }} className="flex-1 max-w-[11rem] px-4 py-3 rounded-xl bg-white/10 text-sm font-semibold flex items-center justify-center gap-2">
-          <Maximize className="w-4 h-4" /> Full photo
+          <Maximize className="w-4 h-4" /> {t('Full photo')}
         </button>
       </div>
     </div>

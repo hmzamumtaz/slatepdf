@@ -6,6 +6,7 @@ import Link from 'next/link';
 import FileUpload from '@/components/FileUpload';
 import { renderPdfPreviews, redactPdf, downloadBlob, getOutputFilename, type PagePreview } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
+import { useT } from '@/i18n/I18nProvider';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -21,6 +22,7 @@ type Mode = 'areas' | 'pages';
 const MIN_BOX_PX = 4;
 
 export default function RedactPdfTool() {
+  const t = useT();
   const [files, setFiles] = useState<File[]>([]);
   const [previews, setPreviews] = useState<PagePreview[]>([]);
   const [loadingPreviews, setLoadingPreviews] = useState(false);
@@ -55,18 +57,18 @@ export default function RedactPdfTool() {
       setSelectedPages(new Set());
       setCurrent(0);
       try {
-        const rendered = await renderPdfPreviews(files[0], { scale: 1.5 }, (p, t) => {
-          if (!cancelled) setPreviewProgress(`Rendering page ${p} of ${t}…`);
+        const rendered = await renderPdfPreviews(files[0], { scale: 1.5 }, (p, total) => {
+          if (!cancelled) setPreviewProgress(t('Rendering page {page} of {total}…', { page: p, total }));
         });
         if (!cancelled) setPreviews(rendered);
       } catch {
-        if (!cancelled) setPreviewError('Could not render the pages. The file may be corrupted or password-protected.');
+        if (!cancelled) setPreviewError(t('Could not render the pages. The file may be corrupted or password-protected.'));
       } finally {
         if (!cancelled) { setLoadingPreviews(false); setPreviewProgress(''); }
       }
     })();
     return () => { cancelled = true; };
-  }, [files]);
+  }, [files, t]);
 
   const relative = (e: React.PointerEvent) => {
     const rect = surface.current!.getBoundingClientRect();
@@ -151,15 +153,23 @@ export default function RedactPdfTool() {
       const blob = await redactPdf(files[0], redactions);
       downloadBlob(blob, getOutputFilename('redact-pdf', '-redacted.pdf'));
       const summary = mode === 'areas'
-        ? `${boxes.length} area${boxes.length !== 1 ? 's' : ''} removed on ${markedPages} page${markedPages !== 1 ? 's' : ''}`
-        : `${selectedPages.size} page${selectedPages.size !== 1 ? 's' : ''} blacked out`;
+        ? (boxes.length !== 1
+          ? (markedPages !== 1
+            ? t('{areas} areas removed on {pages} pages', { areas: boxes.length, pages: markedPages })
+            : t('{areas} areas removed on {pages} page', { areas: boxes.length, pages: markedPages }))
+          : (markedPages !== 1
+            ? t('{areas} area removed on {pages} pages', { areas: boxes.length, pages: markedPages })
+            : t('{areas} area removed on {pages} page', { areas: boxes.length, pages: markedPages })))
+        : (selectedPages.size !== 1
+          ? t('{count} pages blacked out', { count: selectedPages.size })
+          : t('{count} page blacked out', { count: selectedPages.size }));
       setResult({ size: blob.size, summary });
     } catch (err: unknown) {
       setError(friendlyError(err));
     } finally {
       setProcessing(false);
     }
-  }, [files, ready, mode, boxes, selectedPages, previews, markedPages]);
+  }, [files, ready, mode, boxes, selectedPages, previews, markedPages, t]);
 
   const modeButton = (m: Mode, label: string) => (
     <button
@@ -174,15 +184,15 @@ export default function RedactPdfTool() {
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-red-50"><Scissors className="w-6 h-6 text-red-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Redact PDF</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">Black out text, images or whole pages permanently — in your browser, nothing uploaded</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Redact PDF')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base">{t('Black out text, images or whole pages permanently — in your browser, nothing uploaded')}</p>
             </div>
           </div>
         </div>
@@ -201,18 +211,18 @@ export default function RedactPdfTool() {
               <div className="p-3 bg-red-50/60 border border-red-200 rounded-xl flex items-start gap-2.5">
                 <AlertTriangle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <p className="text-xs text-red-800 leading-relaxed">
-                  This is true redaction, not a black box drawn on top: every page you mark is rebuilt as an image with the boxes burned in, so the hidden text cannot be selected, copied or recovered. The rest of a marked page also becomes an image (not selectable text); unmarked pages are left untouched. Only redact documents you own or have permission to modify.
+                  {t('This is true redaction, not a black box drawn on top: every page you mark is rebuilt as an image with the boxes burned in, so the hidden text cannot be selected, copied or recovered. The rest of a marked page also becomes an image (not selectable text); unmarked pages are left untouched. Only redact documents you own or have permission to modify.')}
                 </p>
               </div>
 
               <div className="inline-flex p-1 bg-gray-100 rounded-xl">
-                {modeButton('areas', 'Draw boxes')}
-                {modeButton('pages', 'Whole pages')}
+                {modeButton('areas', t('Draw boxes'))}
+                {modeButton('pages', t('Whole pages'))}
               </div>
 
               {loadingPreviews && (
                 <div className="flex items-center justify-center py-12 gap-3 text-muted-foreground">
-                  <Loader2 className="w-5 h-5 animate-spin" /> {previewProgress || 'Rendering pages…'}
+                  <Loader2 className="w-5 h-5 animate-spin" /> {previewProgress || t('Rendering pages…')}
                 </div>
               )}
 
@@ -231,19 +241,19 @@ export default function RedactPdfTool() {
                         onClick={() => setCurrent(c => Math.max(0, c - 1))}
                         disabled={current === 0}
                         className="w-8 h-8 rounded-lg border border-border flex items-center justify-center hover:bg-gray-50 disabled:opacity-40 transition-colors"
-                        aria-label="Previous page"
+                        aria-label={t('Previous page')}
                       >
                         <ChevronLeft className="w-4 h-4" />
                       </button>
                       <span className="text-sm text-muted-foreground tabular-nums">
-                        Page {current + 1} of {previews.length}
-                        {pageBoxes.length > 0 && ` · ${pageBoxes.length} marked`}
+                        {t('Page {page} of {total}', { page: current + 1, total: previews.length })}
+                        {pageBoxes.length > 0 && ` · ${t('{count} marked', { count: pageBoxes.length })}`}
                       </span>
                       <button
                         onClick={() => setCurrent(c => Math.min(previews.length - 1, c + 1))}
                         disabled={current >= previews.length - 1}
                         className="w-8 h-8 rounded-lg border border-border flex items-center justify-center hover:bg-gray-50 disabled:opacity-40 transition-colors"
-                        aria-label="Next page"
+                        aria-label={t('Next page')}
                       >
                         <ChevronRight className="w-4 h-4" />
                       </button>
@@ -251,10 +261,10 @@ export default function RedactPdfTool() {
                     {boxes.length > 0 && (
                       <div className="flex items-center gap-2">
                         <button onClick={undo} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-border hover:bg-gray-50 transition-colors">
-                          <Undo2 className="w-3.5 h-3.5" /> Undo box
+                          <Undo2 className="w-3.5 h-3.5" /> {t('Undo box')}
                         </button>
                         <button onClick={() => setBoxes([])} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-border hover:bg-gray-50 transition-colors">
-                          <Trash2 className="w-3.5 h-3.5" /> Clear all
+                          <Trash2 className="w-3.5 h-3.5" /> {t('Clear all')}
                         </button>
                       </div>
                     )}
@@ -269,7 +279,7 @@ export default function RedactPdfTool() {
                       className="relative inline-block shadow-lg cursor-crosshair select-none touch-none max-w-full"
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={page.url} alt={`Page ${current + 1}`} draggable={false} className="block max-w-full h-auto" />
+                      <img src={page.url} alt={t('Page {page}', { page: current + 1 })} draggable={false} className="block max-w-full h-auto" />
 
                       {pageBoxes.map((box, i) => (
                         <div
@@ -300,20 +310,20 @@ export default function RedactPdfTool() {
 
                   <p className="flex items-center justify-center gap-2 text-xs text-muted-foreground text-center">
                     <MousePointerSquareDashed className="w-3.5 h-3.5 shrink-0" />
-                    Drag across a name, number, signature or image to mark it. Use the arrows to mark other pages.
+                    {t('Drag across a name, number, signature or image to mark it. Use the arrows to mark other pages.')}
                   </p>
                 </div>
               )}
 
               {!loadingPreviews && !previewError && previews.length > 0 && mode === 'pages' && (
                 <div>
-                  <p className="text-sm font-semibold text-foreground mb-4">Click pages to black out completely ({selectedPages.size} selected)</p>
+                  <p className="text-sm font-semibold text-foreground mb-4">{t('Click pages to black out completely ({count} selected)', { count: selectedPages.size })}</p>
                   <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
                     {previews.map((p, i) => (
                       <button key={p.page} onClick={() => togglePage(i)}
                         className={`relative rounded-xl overflow-hidden border-2 transition-all group ${selectedPages.has(i) ? 'border-red-500 ring-2 ring-red-500/20 bg-red-50/30' : 'border-border hover:border-gray-300'}`}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={p.url} alt={`Page ${p.page}`} className="w-full h-auto block" />
+                        <img src={p.url} alt={t('Page {page}', { page: p.page })} className="w-full h-auto block" />
                         <div className={`absolute inset-0 transition-colors ${selectedPages.has(i) ? 'bg-red-500/20' : 'group-hover:bg-black/5'}`} />
                         <div className="absolute bottom-0 left-0 right-0 py-1 px-1.5 bg-gradient-to-t from-black/60 to-transparent">
                           <span className="text-[10px] font-medium text-white">{p.page}</span>
@@ -332,17 +342,17 @@ export default function RedactPdfTool() {
               {error && (
                 <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-destructive shrink-0" />
-                  <p className="text-sm text-destructive">{error}</p>
+                  <p className="text-sm text-destructive">{t(error)}</p>
                 </div>
               )}
 
               <button onClick={handleRedact} disabled={processing || !ready || loadingPreviews}
                 className="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white hover:shadow-lg hover:shadow-red-500/25 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
                 {processing
-                  ? <><Loader2 className="w-4 h-4 animate-spin" /> Redacting…</>
+                  ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('Redacting…')}</>
                   : <><Scissors className="w-4 h-4" /> {mode === 'areas'
-                      ? `Redact ${boxes.length} area${boxes.length !== 1 ? 's' : ''}`
-                      : `Redact ${selectedPages.size} page${selectedPages.size !== 1 ? 's' : ''}`}</>}
+                      ? (boxes.length !== 1 ? t('Redact {count} areas', { count: boxes.length }) : t('Redact {count} area', { count: boxes.length }))
+                      : (selectedPages.size !== 1 ? t('Redact {count} pages', { count: selectedPages.size }) : t('Redact {count} page', { count: selectedPages.size }))}</>}
               </button>
             </div>
           )}
@@ -351,11 +361,11 @@ export default function RedactPdfTool() {
             <div className="mt-6 space-y-4 animate-fade-in">
               <div className="p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-                <p className="text-sm text-green-800"><span className="font-semibold">PDF redacted</span> — {result.summary} ({formatBytes(result.size)}).</p>
+                <p className="text-sm text-green-800"><span className="font-semibold">{t('PDF redacted')}</span> — {result.summary} ({formatBytes(result.size)}).</p>
               </div>
               <button onClick={reset}
                 className="px-5 py-2.5 rounded-xl text-sm font-medium border border-border hover:bg-gray-50 transition-colors">
-                Redact Another
+                {t('Redact Another')}
               </button>
             </div>
           )}

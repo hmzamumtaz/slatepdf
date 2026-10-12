@@ -3,8 +3,11 @@
 import ToolPage from '@/components/ToolPage';
 import { rotatePages, getPdfInfo, parsePageSpec } from '@/lib/pdf-engine';
 import { useState } from 'react';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 export default function RotatePdfTool() {
+  const t = useT();
   const [angle, setAngle] = useState<90 | 180 | 270>(90);
   const [allPages, setAllPages] = useState(true);
   const [pageInput, setPageInput] = useState('');
@@ -13,11 +16,11 @@ export default function RotatePdfTool() {
     <ToolPage
       slug="rotate-pdf"
       accept=".pdf"
-      processLabel="Rotate PDF"
+      processLabel={t('Rotate PDF')}
       options={
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Rotation angle</label>
+            <label className="block text-sm font-medium text-foreground mb-2">{t('Rotation angle')}</label>
             <div className="flex gap-2">
               {[90, 180, 270].map((a) => (
                 <button
@@ -33,7 +36,7 @@ export default function RotatePdfTool() {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Apply to</label>
+            <label className="block text-sm font-medium text-foreground mb-2">{t('Apply to')}</label>
             <div className="flex gap-2">
               <button
                 onClick={() => setAllPages(true)}
@@ -41,7 +44,7 @@ export default function RotatePdfTool() {
                   allPages ? 'bg-primary text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80'
                 }`}
               >
-                All pages
+                {t('All pages')}
               </button>
               <button
                 onClick={() => setAllPages(false)}
@@ -49,7 +52,7 @@ export default function RotatePdfTool() {
                   !allPages ? 'bg-primary text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80'
                 }`}
               >
-                Specific pages
+                {t('Specific pages')}
               </button>
             </div>
           </div>
@@ -58,7 +61,7 @@ export default function RotatePdfTool() {
               type="text"
               value={pageInput}
               onChange={(e) => setPageInput(e.target.value)}
-              placeholder="e.g., 1, 3, 5-8"
+              placeholder={t('e.g., 1, 3, 5-8')}
               className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
             />
           )}
@@ -70,7 +73,7 @@ export default function RotatePdfTool() {
         const pages = allPages
           ? Array.from({ length: totalPages }, (_, i) => i + 1)
           : parsePageSpec(pageInput, totalPages);
-        if (pages.length === 0) throw new Error('No valid pages selected (e.g., 1, 3, 5-8)');
+        if (pages.length === 0) throw new Error(msg('No valid pages selected (e.g., 1, 3, 5-8)'));
         return rotatePages(files[0], pages, angle);
       }}
     />

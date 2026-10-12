@@ -10,6 +10,7 @@
  * shape fills. Placeholder geometry missing from a slide is inherited from its
  * layout and then the master, the way PowerPoint resolves it.
  */
+import { msg } from '@/i18n/format';
 import { PDFDocument, rgb, StandardFonts, type PDFFont, type PDFPage, type RGB } from 'pdf-lib';
 import { SITE_NAME } from './site';
 import { needsUnicodeFallback, isRenderable, embedUnicodeFallback } from './unicode-font';
@@ -434,7 +435,7 @@ export async function renderPptxToPdf(
   const zip = await JSZip.loadAsync(await file.arrayBuffer());
 
   const presEntry = zip.file('ppt/presentation.xml');
-  if (!presEntry) throw new Error('This file does not look like a PowerPoint presentation (.pptx).');
+  if (!presEntry) throw new Error(msg('This file does not look like a PowerPoint presentation (.pptx).'));
   const presDoc = parseXml(await presEntry.async('text'));
 
   const sldSz = presDoc.getElementsByTagName('p:sldSz')[0];
@@ -457,7 +458,7 @@ export async function renderPptxToPdf(
       .filter(k => /^ppt\/slides\/slide\d+\.xml$/.test(k))
       .sort((a, b) => parseInt(a.match(/(\d+)/)![1], 10) - parseInt(b.match(/(\d+)/)![1], 10));
   }
-  if (slidePaths.length === 0) throw new Error('No slides found in this presentation.');
+  if (slidePaths.length === 0) throw new Error(msg('No slides found in this presentation.'));
 
   const pdf = await PDFDocument.create();
   pdf.setTitle(file.name.replace(/\.pptx$/i, ''));

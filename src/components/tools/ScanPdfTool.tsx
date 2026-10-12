@@ -17,6 +17,8 @@ import ExportPanel from './scan/ExportPanel';
 import RecentScans from './scan/RecentScans';
 import ScanErrorBoundary from './scan/ScanErrorBoundary';
 import { terminateOcr } from '@/lib/scan-ocr';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 type View = 'home' | 'camera' | 'review';
 
@@ -31,20 +33,21 @@ type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness
 const HISTORY_LIMIT = 30;
 
 const FEATURES = [
-  { icon: FileSearch, title: 'Auto page detection', text: 'Finds the page edges and captures it when you hold steady.' },
-  { icon: Crop, title: 'Crop & straighten', text: 'Drag the corners; skewed photos come out flat and square.' },
-  { icon: Palette, title: 'Scan filters', text: 'Auto color, Grayscale, B&W and Whiteboard remove shadows.' },
-  { icon: BookOpen, title: 'Book mode', text: 'Splits an open book into two separate pages.' },
-  { icon: IdCard, title: 'ID card mode', text: 'Front and back of a card on one page, at real size.' },
-  { icon: Contact, title: 'Business cards', text: 'Reads the card and saves it as a contact.' },
-  { icon: Presentation, title: 'Whiteboard mode', text: 'Whitens glare and boosts marker colours.' },
-  { icon: PenLine, title: 'Markup & sign', text: 'Draw, highlight, add text and your signature.' },
-  { icon: Eraser, title: 'Cleanup', text: 'Brush away stains, marks and fingers.' },
-  { icon: CheckCircle2, title: 'Searchable PDF', text: 'Text recognition (OCR) so you can search and copy.' },
-  { icon: Lock, title: 'Password & JPG', text: 'Lock the PDF with a password, or save pages as JPG.' },
+  { icon: FileSearch, title: msg('Auto page detection'), text: msg('Finds the page edges and captures it when you hold steady.') },
+  { icon: Crop, title: msg('Crop & straighten'), text: msg('Drag the corners; skewed photos come out flat and square.') },
+  { icon: Palette, title: msg('Scan filters'), text: msg('Auto color, Grayscale, B&W and Whiteboard remove shadows.') },
+  { icon: BookOpen, title: msg('Book mode'), text: msg('Splits an open book into two separate pages.') },
+  { icon: IdCard, title: msg('ID card mode'), text: msg('Front and back of a card on one page, at real size.') },
+  { icon: Contact, title: msg('Business cards'), text: msg('Reads the card and saves it as a contact.') },
+  { icon: Presentation, title: msg('Whiteboard mode'), text: msg('Whitens glare and boosts marker colours.') },
+  { icon: PenLine, title: msg('Markup & sign'), text: msg('Draw, highlight, add text and your signature.') },
+  { icon: Eraser, title: msg('Cleanup'), text: msg('Brush away stains, marks and fingers.') },
+  { icon: CheckCircle2, title: msg('Searchable PDF'), text: msg('Text recognition (OCR) so you can search and copy.') },
+  { icon: Lock, title: msg('Password & JPG'), text: msg('Lock the PDF with a password, or save pages as JPG.') },
 ];
 
 function Scanner() {
+  const t = useT();
   const [pages, setPages] = useState<ScanPage[]>([]);
   const [docName, setDocName] = useState('');
   const [view, setView] = useState<View>('home');
@@ -101,10 +104,10 @@ function Scanner() {
         urls.current.set(page.id, url);
         commit(pagesRef.current.map(p => (p.id === page.id ? { ...p, out, url } : p)));
       } catch {
-        setError('A page could not be processed. Try cropping it again or retake it.');
+        setError(t('A page could not be processed. Try cropping it again or retake it.'));
       }
     });
-  }, [commit]);
+  }, [commit, t]);
 
   const newPage = useCallback((c: Omit<ScanPage, 'id' | 'out' | 'url' | keyof typeof DEFAULT_EDITS> & { filter: ScanFilter }): ScanPage => ({
     ...DEFAULT_EDITS,
@@ -131,18 +134,20 @@ function Scanner() {
       const list = saved.pages.map(p => ({ ...p, marks: p.marks ?? [], id: nextId.current++, out: null, url: null }));
       commit(list);
       setDocName(saved.docName || defaultDocName());
-      setNotice(`Restored ${list.length} scanned page${list.length === 1 ? '' : 's'} from your last session.`);
+      setNotice(list.length === 1
+        ? t('Restored {count} scanned page from your last session.', { count: list.length })
+        : t('Restored {count} scanned pages from your last session.', { count: list.length }));
       list.forEach(schedule);
     });
     return () => { cancelled = true; };
-  }, [commit, schedule]);
+  }, [commit, schedule, t]);
 
   useEffect(() => {
     if (!restored.current) return;
-    const t = window.setTimeout(() => {
+    const timer = window.setTimeout(() => {
       void saveSession({ docName, pages: pages.map(({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks }) => ({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks, out: null })) });
     }, 700);
-    return () => window.clearTimeout(t);
+    return () => window.clearTimeout(timer);
   }, [pages, docName]);
 
   useEffect(() => {
@@ -158,7 +163,7 @@ function Scanner() {
   const openCamera = useCallback(async (retake: number | null = null) => {
     setError(null);
     if (!navigator.mediaDevices?.getUserMedia) {
-      setError('This browser cannot use the camera. Add photos instead.');
+      setError(t('This browser cannot use the camera. Add photos instead.'));
       return;
     }
     setOpening(true);
@@ -172,10 +177,10 @@ function Scanner() {
     setStream(s);
     setRetakeId(retake);
     setView('camera');
-  }, []);
+  }, [t]);
 
   const closeCamera = useCallback((to: View) => {
-    stream?.getTracks().forEach(t => t.stop());
+    stream?.getTracks().forEach(track => track.stop());
     setStream(null);
     setRetakeId(null);
     setView(to);
@@ -209,7 +214,7 @@ function Scanner() {
 
   const importFiles = useCallback(async (files: FileList | File[]) => {
     const list = Array.from(files).filter(f => f.type.startsWith('image/') || /\.(heic|heif)$/i.test(f.name));
-    if (list.length === 0) { setError('Only image files can be added as pages.'); return; }
+    if (list.length === 0) { setError(t('Only image files can be added as pages.')); return; }
     setError(null);
     setImporting(true);
     const made: ScanPage[] = [];
@@ -221,7 +226,7 @@ function Scanner() {
         const source = await canvasToJpeg(canvas, 0.92);
         made.push(newPage({ parts: [{ source, quad, autoQuad: found ? quad : undefined }], layout: 'single', filter: 'enhance' }));
       } catch {
-        setError(`"${file.name}" could not be read as an image.`);
+        setError(t('"{name}" could not be read as an image.', { name: file.name }));
       }
     }
     setImporting(false);
@@ -243,7 +248,7 @@ function Scanner() {
     setReviewIndex(start);
     if (view === 'camera') closeCamera('review');
     else if (isMobile) setView('review');
-  }, [retakeId, newPage, commit, schedule, closeCamera, view, isMobile, remember]);
+  }, [retakeId, newPage, commit, schedule, closeCamera, view, isMobile, remember, t]);
 
   /* ----------------------------- editing ----------------------------- */
 
@@ -336,10 +341,10 @@ function Scanner() {
 
   const copyLink = useCallback(async () => {
     const url = 'https://slatepdf.space/tools/scan-pdf';
-    try { await navigator.clipboard.writeText(url); } catch { window.prompt('Copy this link:', url); }
+    try { await navigator.clipboard.writeText(url); } catch { window.prompt(t('Copy this link:'), url); }
     setCopied(true);
     window.setTimeout(() => setCopied(false), 2000);
-  }, []);
+  }, [t]);
 
   const lastThumb = pages.length ? pages[pages.length - 1].url : null;
 
@@ -349,14 +354,14 @@ function Scanner() {
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="flex items-center gap-3 mb-4">
           <div className="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center"><Camera className="w-6 h-6 text-violet-600" /></div>
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Scan to PDF Online</h1>
-            <p className="text-muted-foreground text-sm sm:text-base">Free camera scanner — scan documents with your phone and save them as a PDF. No app, nothing uploaded.</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Scan to PDF Online')}</h1>
+            <p className="text-muted-foreground text-sm sm:text-base">{t('Free camera scanner — scan documents with your phone and save them as a PDF. No app, nothing uploaded.')}</p>
           </div>
         </div>
 
@@ -364,18 +369,18 @@ function Scanner() {
           {isMobile ? (
             <div className="rounded-2xl bg-gradient-to-br from-violet-600 to-violet-800 text-white p-6 text-center">
               <Camera className="w-10 h-10 mx-auto mb-3" />
-              <p className="text-lg font-bold">{pages.length ? 'Keep scanning' : 'Scan documents to PDF'}</p>
-              <p className="text-sm text-violet-200 mt-1">Auto-detects the page, straightens it and cleans it up — on your phone, with nothing uploaded.</p>
+              <p className="text-lg font-bold">{pages.length ? t('Keep scanning') : t('Scan documents to PDF')}</p>
+              <p className="text-sm text-violet-200 mt-1">{t('Auto-detects the page, straightens it and cleans it up — on your phone, with nothing uploaded.')}</p>
               <div className="flex flex-col gap-2.5 mt-5">
                 <button onClick={() => openCamera()} disabled={opening} className="w-full py-3.5 rounded-xl bg-white text-violet-700 font-semibold text-sm flex items-center justify-center gap-2 active:scale-[0.98] disabled:opacity-70">
-                  {opening ? <Loader2 className="w-4 h-4 animate-spin" /> : <Camera className="w-4 h-4" />} {opening ? 'Starting camera…' : 'Open camera'}
+                  {opening ? <Loader2 className="w-4 h-4 animate-spin" /> : <Camera className="w-4 h-4" />} {opening ? t('Starting camera…') : t('Open camera')}
                 </button>
                 <button onClick={() => fileRef.current?.click()} disabled={importing} className="w-full py-3.5 rounded-xl bg-white/15 font-semibold text-sm flex items-center justify-center gap-2">
-                  {importing ? <Loader2 className="w-4 h-4 animate-spin" /> : <ImagePlus className="w-4 h-4" />} Import from photos
+                  {importing ? <Loader2 className="w-4 h-4 animate-spin" /> : <ImagePlus className="w-4 h-4" />} {t('Import from photos')}
                 </button>
                 {pages.length > 0 && (
                   <button onClick={() => { setReviewIndex(0); setView('review'); }} className="w-full py-3 rounded-xl border border-white/30 font-semibold text-sm">
-                    Review {pages.length} page{pages.length === 1 ? '' : 's'}
+                    {pages.length === 1 ? t('Review {count} page', { count: pages.length }) : t('Review {count} pages', { count: pages.length })}
                   </button>
                 )}
               </div>
@@ -385,19 +390,19 @@ function Scanner() {
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                 <div className="w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center shrink-0"><Smartphone className="w-9 h-9" /></div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-xl sm:text-2xl font-bold">Best on your phone</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold">{t('Best on your phone')}</h2>
                   <p className="text-sm text-violet-200 mt-1.5 leading-relaxed">
-                    Open this page on your phone to scan with its camera. On this computer you can import photos — they get the same page detection, crop, filters and OCR — or use a webcam.
+                    {t('Open this page on your phone to scan with its camera. On this computer you can import photos — they get the same page detection, crop, filters and OCR — or use a webcam.')}
                   </p>
                   <div className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4">
                     <button onClick={() => fileRef.current?.click()} disabled={importing} className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white text-violet-700 text-sm font-semibold">
-                      {importing ? <Loader2 className="w-4 h-4 animate-spin" /> : <ImagePlus className="w-4 h-4" />} Import photos
+                      {importing ? <Loader2 className="w-4 h-4 animate-spin" /> : <ImagePlus className="w-4 h-4" />} {t('Import photos')}
                     </button>
                     <button onClick={copyLink} className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 text-sm font-medium">
-                      {copied ? <CheckCircle2 className="w-4 h-4" /> : <Link2 className="w-4 h-4" />} {copied ? 'Link copied!' : 'Copy link for your phone'}
+                      {copied ? <CheckCircle2 className="w-4 h-4" /> : <Link2 className="w-4 h-4" />} {copied ? t('Link copied!') : t('Copy link for your phone')}
                     </button>
                     <button onClick={() => openCamera()} disabled={opening} className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 text-sm font-medium">
-                      {opening ? <Loader2 className="w-4 h-4 animate-spin" /> : <Camera className="w-4 h-4" />} Use webcam
+                      {opening ? <Loader2 className="w-4 h-4 animate-spin" /> : <Camera className="w-4 h-4" />} {t('Use webcam')}
                     </button>
                   </div>
                 </div>
@@ -409,7 +414,7 @@ function Scanner() {
           {notice && (
             <div className="mt-4 p-3 bg-violet-50 border border-violet-200 rounded-xl flex items-center justify-between gap-3">
               <p className="text-xs text-violet-900">{notice}</p>
-              <button onClick={() => setNotice(null)} className="text-xs font-semibold text-violet-700">OK</button>
+              <button onClick={() => setNotice(null)} className="text-xs font-semibold text-violet-700">{t('OK')}</button>
             </div>
           )}
           {error && (
@@ -422,17 +427,17 @@ function Scanner() {
           {pages.length > 0 && (
             <div className="mt-6">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-sm font-semibold text-foreground">{pages.length} page{pages.length === 1 ? '' : 's'} · tap a page to edit</h3>
+                <h3 className="text-sm font-semibold text-foreground">{pages.length === 1 ? t('{count} page · tap a page to edit', { count: pages.length }) : t('{count} pages · tap a page to edit', { count: pages.length })}</h3>
                 <button onClick={startOver} className="px-3 py-1.5 rounded-lg text-xs font-medium text-destructive border border-red-200 hover:bg-red-50 flex items-center gap-1.5">
-                  <Trash2 className="w-3.5 h-3.5" /> Start over
+                  <Trash2 className="w-3.5 h-3.5" /> {t('Start over')}
                 </button>
               </div>
               <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-3">
                 {pages.map((p, i) => (
-                  <button key={p.id} onClick={() => { setReviewIndex(i); setView('review'); }} className="relative aspect-[3/4] rounded-xl overflow-hidden bg-gray-100 border border-border hover:ring-2 hover:ring-violet-400" title={`Edit page ${i + 1}`}>
+                  <button key={p.id} onClick={() => { setReviewIndex(i); setView('review'); }} className="relative aspect-[3/4] rounded-xl overflow-hidden bg-gray-100 border border-border hover:ring-2 hover:ring-violet-400" title={t('Edit page {number}', { number: i + 1 })}>
                     {p.url ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={p.url} alt={`Page ${i + 1}`} className="absolute inset-0 w-full h-full object-cover" />
+                      <img src={p.url} alt={t('Page {number}', { number: i + 1 })} className="absolute inset-0 w-full h-full object-cover" />
                     ) : <Loader2 className="absolute inset-0 m-auto w-5 h-5 animate-spin text-muted-foreground" />}
                     <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded-md bg-black/60 text-white text-[10px] font-medium">{i + 1}</span>
                   </button>
@@ -451,8 +456,8 @@ function Scanner() {
               {FEATURES.map(f => (
                 <div key={f.title} className="rounded-xl bg-gray-50 p-3">
                   <f.icon className="w-5 h-5 text-violet-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-foreground">{f.title}</p>
-                  <p className="text-[11px] text-muted-foreground mt-0.5 leading-snug">{f.text}</p>
+                  <p className="text-xs font-semibold text-foreground">{t(f.title)}</p>
+                  <p className="text-[11px] text-muted-foreground mt-0.5 leading-snug">{t(f.text)}</p>
                 </div>
               ))}
             </div>
@@ -463,8 +468,8 @@ function Scanner() {
       {opening && (
         <div className="fixed inset-0 z-[80] flex flex-col items-center justify-center gap-3 bg-black text-white" role="status">
           <Loader2 className="w-8 h-8 animate-spin" />
-          <p className="text-sm">Starting camera…</p>
-          <p className="text-xs text-white/60 px-8 text-center">If your browser asks, allow camera access.</p>
+          <p className="text-sm">{t('Starting camera…')}</p>
+          <p className="text-xs text-white/60 px-8 text-center">{t('If your browser asks, allow camera access.')}</p>
         </div>
       )}
 

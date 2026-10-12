@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, Trash2, Undo2, MousePointerSquareDashed } from 'lucide-react';
 import { renderPdfPreviews, redactPdf, type PagePreview } from '@/lib/pdf-engine';
+import { useT } from '@/i18n/I18nProvider';
 import { PanelHeader, ApplyButton, Loading, type PanelProps } from './shared';
 
 /** A drawn box, stored in PDF points with a bottom-left origin. */
@@ -15,6 +16,7 @@ const MIN_BOX_PX = 4;
  * not covered — the same routine the standalone tool uses.
  */
 export default function RedactPanel({ file, busy, apply }: PanelProps) {
+  const t = useT();
   const [previews, setPreviews] = useState<PagePreview[]>([]);
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState('');
@@ -32,8 +34,8 @@ export default function RedactPanel({ file, busy, apply }: PanelProps) {
       setLoading(true);
       setBoxes([]);
       try {
-        const rendered = await renderPdfPreviews(file, { scale: 2 }, (p, t) => {
-          if (!cancelled) setProgress(`Rendering page ${p} of ${t}…`);
+        const rendered = await renderPdfPreviews(file, { scale: 2 }, (p, total) => {
+          if (!cancelled) setProgress(t('Rendering page {page} of {total}…', { page: p, total }));
         });
         if (!cancelled) {
           setPreviews(rendered);
@@ -44,7 +46,7 @@ export default function RedactPanel({ file, busy, apply }: PanelProps) {
       }
     })();
     return () => { cancelled = true; };
-  }, [file]);
+  }, [file, t]);
 
   const relative = (e: React.PointerEvent) => {
     const rect = surface.current!.getBoundingClientRect();
@@ -109,28 +111,28 @@ export default function RedactPanel({ file, busy, apply }: PanelProps) {
 
   const run = () => apply(
     () => redactPdf(file, boxes),
-    `Redacted ${boxes.length} area${boxes.length === 1 ? '' : 's'}`,
+    boxes.length === 1 ? t('Redacted {count} area', { count: boxes.length }) : t('Redacted {count} areas', { count: boxes.length }),
   );
 
   return (
     <>
       <PanelHeader
-        title="Redact"
-        hint="Drag over anything that should go. The text underneath is removed from the file, not painted over."
+        title={t('Redact')}
+        hint={t('Drag over anything that should go. The text underneath is removed from the file, not painted over.')}
         action={
           <div className="flex items-center gap-2">
             {boxes.length > 0 && (
               <>
                 <button onClick={undo} className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[12px] font-medium border border-border hover:bg-muted transition-colors">
-                  <Undo2 className="w-3 h-3" /> Undo box
+                  <Undo2 className="w-3 h-3" /> {t('Undo box')}
                 </button>
                 <button onClick={() => setBoxes([])} className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[12px] font-medium border border-border hover:bg-muted transition-colors">
-                  <Trash2 className="w-3 h-3" /> Clear
+                  <Trash2 className="w-3 h-3" /> {t('Clear')}
                 </button>
               </>
             )}
             <ApplyButton onClick={run} disabled={boxes.length === 0} busy={busy}>
-              Redact {boxes.length || ''}
+              {boxes.length ? t('Redact {count}', { count: boxes.length }) : t('Redact')}
             </ApplyButton>
           </div>
         }
@@ -142,19 +144,19 @@ export default function RedactPanel({ file, busy, apply }: PanelProps) {
             onClick={() => setCurrent(c => Math.max(0, c - 1))}
             disabled={current === 0}
             className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
-            aria-label="Previous page"
+            aria-label={t('Previous page')}
           >
             <ChevronLeft className="w-3.5 h-3.5" />
           </button>
           <span className="text-xs text-muted-foreground tabular-nums">
-            Page {current + 1} of {previews.length}
-            {pageBoxes.length > 0 && ` · ${pageBoxes.length} marked`}
+            {t('Page {n} of {total}', { n: current + 1, total: previews.length })}
+            {pageBoxes.length > 0 && ` · ${t('{count} marked', { count: pageBoxes.length })}`}
           </span>
           <button
             onClick={() => setCurrent(c => Math.min(previews.length - 1, c + 1))}
             disabled={current >= previews.length - 1}
             className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
-            aria-label="Next page"
+            aria-label={t('Next page')}
           >
             <ChevronRight className="w-3.5 h-3.5" />
           </button>
@@ -163,7 +165,7 @@ export default function RedactPanel({ file, busy, apply }: PanelProps) {
 
       <div className="flex-1 min-h-0 overflow-auto bg-gray-200/70 p-6">
         {loading ? (
-          <Loading message={progress || 'Rendering the document…'} />
+          <Loading message={progress || t('Rendering the document…')} />
         ) : page ? (
           <div className="flex flex-col items-center gap-3">
             <div
@@ -174,7 +176,7 @@ export default function RedactPanel({ file, busy, apply }: PanelProps) {
               className="relative inline-block shadow-xl cursor-crosshair select-none touch-none max-w-full"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={page.url} alt={`Page ${current + 1}`} draggable={false} className="block max-w-full h-auto" />
+              <img src={page.url} alt={t('Page {n}', { n: current + 1 })} draggable={false} className="block max-w-full h-auto" />
 
               {pageBoxes.map((box, i) => (
                 <div
@@ -205,8 +207,8 @@ export default function RedactPanel({ file, busy, apply }: PanelProps) {
             <p className="inline-flex items-center gap-2 text-xs text-muted-foreground text-center max-w-lg">
               <MousePointerSquareDashed className="w-3.5 h-3.5 shrink-0" />
               {boxes.length === 0
-                ? 'Drag across the page to mark something for removal.'
-                : 'Redacted pages become pictures with the marked text gone for good — do the text editing first.'}
+                ? t('Drag across the page to mark something for removal.')
+                : t('Redacted pages become pictures with the marked text gone for good — do the text editing first.')}
             </p>
           </div>
         ) : null}

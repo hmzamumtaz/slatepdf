@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { categories, categoryAnchor, categoryBlurbs, getToolsByCategory, tools } from '@/lib/tools-data';
 import { SITE_NAME, SITE_URL, pageTitle } from '@/lib/site';
 import { generateBreadcrumbSchema } from '@/lib/schema';
+import { languageAlternates } from '@/i18n/alternates';
 
 const TITLE = `All PDF Tools — ${tools.length} Free Tools, No Upload`;
 const DESCRIPTION = `Every ${SITE_NAME} tool in one place: merge, split, compress, convert, edit, sign and protect PDFs. Free, no account, and your files never leave your browser.`;
@@ -12,7 +13,7 @@ const DESCRIPTION = `Every ${SITE_NAME} tool in one place: merge, split, compres
 export const metadata: Metadata = {
   title: pageTitle(TITLE),
   description: DESCRIPTION,
-  alternates: { canonical: '/tools' },
+  alternates: { canonical: '/tools', languages: languageAlternates({ kind: 'hub' }) },
   openGraph: {
     type: 'website',
     title: TITLE,

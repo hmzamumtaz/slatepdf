@@ -310,7 +310,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">Why {SITE_NAME}?</h2>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto">Built for speed. Designed for privacy. Trusted by millions.</p>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">Built for speed. Designed for privacy.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

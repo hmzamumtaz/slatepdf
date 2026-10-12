@@ -5,6 +5,7 @@ import { PDFDocument, degrees, rgb, StandardFonts, type PDFFont } from 'pdf-lib'
 import { saveAs } from 'file-saver';
 import { SITE_NAME, SITE_SLUG } from './site';
 import { SERVICE_BUSY_MESSAGE } from './errors';
+import { msg } from '@/i18n/format';
 import { needsUnicodeFallback, isRenderable, unsupportedCharacters, embedUnicodeFallback } from './unicode-font';
 
 export function getOutputFilename(slug: string, ext: string, seq?: number): string {
@@ -56,7 +57,7 @@ export async function loadPdf(data: ArrayBuffer): Promise<PDFDocument> {
     return await PDFDocument.load(data, { ignoreEncryption: true });
   } catch (err: any) {
     console.error(err);
-    throw new Error('This file could not be read as a PDF. It may be corrupted or not a valid PDF.');
+    throw new Error(msg('This file could not be read as a PDF. It may be corrupted or not a valid PDF.'));
   }
 }
 
@@ -132,7 +133,7 @@ function assertValidPageNumbers(pageNumbers: number[], totalPages: number, what 
 }
 
 export async function mergePdfs(files: File[]): Promise<Blob> {
-  if (files.length < 2) throw new Error('Select at least 2 PDF files to merge.');
+  if (files.length < 2) throw new Error(msg('Select at least 2 PDF files to merge.'));
   const merged = await PDFDocument.create();
   for (const file of files) {
     const buf = await readFileAsArrayBuffer(file);
@@ -174,7 +175,7 @@ export async function removePagesFromFile(file: File, pageNumbers: number[]): Pr
   const total = src.getPageCount();
   assertValidPageNumbers(pageNumbers, total);
   const keepIndices = Array.from({ length: total }, (_, i) => i).filter(i => !pageNumbers.includes(i + 1));
-  if (keepIndices.length === 0) throw new Error('Cannot remove every page — the PDF would be empty.');
+  if (keepIndices.length === 0) throw new Error(msg('Cannot remove every page — the PDF would be empty.'));
   const newDoc = await PDFDocument.create();
   const pages = await newDoc.copyPages(src, keepIndices);
   pages.forEach(p => newDoc.addPage(p));
@@ -316,24 +317,24 @@ export async function repairPdf(file: File, onProgress?: (msg: string) => void):
   }
 
   try {
-    onProgress?.('Attempting structural repair...');
+    onProgress?.(msg('Attempting structural repair...'));
     const src = await PDFDocument.load(buf, { ignoreEncryption: true, throwOnInvalidObject: false });
     const pageCount = src.getPageCount();
     if (pageCount === 0) throw new Error('no pages');
     const bytes = await src.save({ useObjectStreams: true, addDefaultPage: false });
-    onProgress?.('Verifying the repaired pages...');
+    onProgress?.(msg('Verifying the repaired pages...'));
     if (!(await pagesLookIntact(bytes, pageCount))) throw new Error('repaired pages are empty or unreadable');
     return {
       blob: toBlob(bytes),
       pages: pageCount,
       mode: 'structure',
-      message: 'Rebuilt the PDF structure (cross-reference table, object numbering and trailer). All content preserved.',
+      message: msg('Rebuilt the PDF structure (cross-reference table, object numbering and trailer). All content preserved.'),
     };
   } catch {
     // fall through to full rebuild
   }
 
-  onProgress?.('Structure unreadable — rebuilding page by page...');
+  onProgress?.(msg('Structure unreadable — rebuilding page by page...'));
   const pdfjsLib = await getPdfJs();
   const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf), stopAtErrors: false }).promise;
   const rebuilt = await PDFDocument.create();
@@ -425,7 +426,7 @@ export async function compressToTargetSize(file: File, targetBytes: number, onPr
     // Pass 1 — lossless: rebuild with compressed object streams. If this alone
     // hits the target the text stays fully selectable and nothing is rasterized.
     try {
-      onProgress?.('Trying lossless compression...');
+      onProgress?.(msg('Trying lossless compression...'));
       const lossless = await optimizePdf(file);
       if (lossless.blob.size <= targetBytes) {
         return { blob: lossless.blob, originalSize, compressedSize: lossless.blob.size, targetSize: targetBytes, achieved: true, quality: 1, pages: numPages };
@@ -747,7 +748,7 @@ export async function protectPdf(file: File, userPassword: string, ownerPassword
 }
 
 export async function jpgToPdf(files: File[]): Promise<Blob> {
-  if (files.length === 0) throw new Error('Select at least one image.');
+  if (files.length === 0) throw new Error(msg('Select at least one image.'));
   const A4_W = 595.28;
   const A4_H = 841.89;
   const MARGIN = 24;
@@ -807,7 +808,7 @@ export interface ScanPdfOptions {
  * sizes the page to the image's aspect ratio instead of a fixed paper size.
  */
 export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions = {}): Promise<Blob> {
-  if (images.length === 0) throw new Error('Add at least one page to convert.');
+  if (images.length === 0) throw new Error(msg('Add at least one page to convert.'));
   const sizes = {
     a4: { w: 595.28, h: 841.89 },
     'a4-landscape': { w: 841.89, h: 595.28 },
@@ -824,7 +825,7 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
   let font: PDFFont | null = null;
   let unicodeFont: PDFFont | null = null;
   if (languages.length > 0) {
-    options.onProgress?.('Loading text recognition…');
+    options.onProgress?.(msg('Loading text recognition…'));
     const Tesseract = await import('tesseract.js');
     worker = await Tesseract.createWorker(languages.join('+'));
     // Silence Tesseract's internal diagnostics ("Line cannot be recognized!!").
@@ -842,7 +843,7 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
       try {
         img = await merged.embedJpg(buf);
       } catch {
-        throw new Error('A scanned page could not be read as an image. Try scanning again.');
+        throw new Error(msg('A scanned page could not be read as an image. Try scanning again.'));
       }
       let pw: number;
       let ph: number;
@@ -911,7 +912,7 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
   } finally {
     await worker?.terminate();
   }
-  options.onProgress?.('Saving PDF…');
+  options.onProgress?.(msg('Saving PDF…'));
   return toBlob(await merged.save());
 }
 
@@ -1305,7 +1306,7 @@ export async function htmlToPdfVisual(
   // Lay out at A4 width in CSS pixels (96 dpi) so the design paginates like print.
   const CSS_WIDTH = Math.round((printableW / 72) * 96); // ≈ 730px
 
-  onProgress?.('Rendering HTML design...');
+  onProgress?.(msg('Rendering HTML design...'));
 
   // Sandbox without allow-scripts: the document lays out with full CSS but
   // cannot run JS; allow-same-origin lets html2canvas read the DOM.
@@ -1334,7 +1335,7 @@ export async function htmlToPdfVisual(
     });
 
     const idoc = iframe.contentDocument;
-    if (!idoc || !idoc.body) throw new Error('Could not render the HTML content.');
+    if (!idoc || !idoc.body) throw new Error(msg('Could not render the HTML content.'));
 
     // Wait for fonts and images inside the frame so the capture is complete.
     try { await (idoc as any).fonts?.ready; } catch { /* older browsers */ }
@@ -1348,7 +1349,7 @@ export async function htmlToPdfVisual(
     const contentHeight = Math.max(idoc.body.scrollHeight, idoc.documentElement?.scrollHeight || 0, 1);
     iframe.style.height = `${contentHeight}px`;
 
-    onProgress?.('Capturing the rendered design...');
+    onProgress?.(msg('Capturing the rendered design...'));
     // Cap capture scale so very long documents don't exhaust canvas memory.
     const pageHeightPx = CSS_WIDTH * (printableH / printableW);
     const scale = Math.min(2, 16000 / Math.max(contentHeight, 1));
@@ -1362,7 +1363,7 @@ export async function htmlToPdfVisual(
       logging: false,
     });
 
-    onProgress?.('Building PDF pages...');
+    onProgress?.(msg('Building PDF pages...'));
     const pdf = await PDFDocument.create();
     const sliceHeightPx = Math.floor(pageHeightPx * scale);
     const totalPages = Math.max(1, Math.ceil(canvas.height / sliceHeightPx));
@@ -1414,7 +1415,7 @@ export async function wordToPdf(file: File): Promise<Blob> {
  * Pages without redactions are kept untouched (vector text intact).
  */
 export async function redactPdf(file: File, redactions: { x: number; y: number; width: number; height: number; pageIndex: number }[]): Promise<Blob> {
-  if (redactions.length === 0) throw new Error('No redaction areas specified.');
+  if (redactions.length === 0) throw new Error(msg('No redaction areas specified.'));
   const buf = await readFileAsArrayBuffer(file);
   const src = await loadPdf(buf);
   const total = src.getPageCount();
@@ -2631,7 +2632,7 @@ export async function ocrPdf(file: File, languages: string[], onProgress?: (page
 /* ------------------------------------------------------------------ */
 
 export async function heicToPdf(files: File[]): Promise<Blob> {
-  if (files.length === 0) throw new Error('Select at least one HEIC image.');
+  if (files.length === 0) throw new Error(msg('Select at least one HEIC image.'));
   const heic2any = (await import('heic2any')).default;
   const merged = await PDFDocument.create();
   for (const file of files) {
@@ -2653,7 +2654,7 @@ export async function heicToPdf(files: File[]): Promise<Blob> {
 /* ------------------------------------------------------------------ */
 
 export async function tiffToPdf(files: File[]): Promise<Blob> {
-  if (files.length === 0) throw new Error('Select at least one TIFF image.');
+  if (files.length === 0) throw new Error(msg('Select at least one TIFF image.'));
   const UTIF = await import('utif');
   const merged = await PDFDocument.create();
   for (const file of files) {
@@ -2692,7 +2693,7 @@ export async function tiffToPdf(files: File[]): Promise<Blob> {
 /* ------------------------------------------------------------------ */
 
 export async function svgToPdf(files: File[]): Promise<Blob> {
-  if (files.length === 0) throw new Error('Select at least one SVG image.');
+  if (files.length === 0) throw new Error(msg('Select at least one SVG image.'));
   const merged = await PDFDocument.create();
   for (const file of files) {
     try {

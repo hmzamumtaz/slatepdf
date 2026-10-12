@@ -10,6 +10,8 @@ import LivePreviewModal from './LivePreviewModal';
 import { downloadBlob, downloadBlobsAsZip, renderPdfPages, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 import { trackConversion } from '@/lib/stats';
+import { useT } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 interface ToolPageProps {
   slug: string;
@@ -57,12 +59,13 @@ function outputNameFor(slug: string, results: ProcessedResult[], index: number) 
 }
 
 function ViewToggle({ mode, onChange }: { mode: 'list' | 'grid'; onChange: (m: 'list' | 'grid') => void }) {
+  const t = useT();
   return (
     <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-0.5">
-      <button onClick={() => onChange('list')} className={`p-1.5 rounded-md transition-colors ${mode === 'list' ? 'bg-white text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`} title="List view">
+      <button onClick={() => onChange('list')} className={`p-1.5 rounded-md transition-colors ${mode === 'list' ? 'bg-white text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`} title={t('List view')}>
         <List className="w-4 h-4" />
       </button>
-      <button onClick={() => onChange('grid')} className={`p-1.5 rounded-md transition-colors ${mode === 'grid' ? 'bg-white text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`} title="Grid view">
+      <button onClick={() => onChange('grid')} className={`p-1.5 rounded-md transition-colors ${mode === 'grid' ? 'bg-white text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`} title={t('Grid view')}>
         <LayoutGrid className="w-4 h-4" />
       </button>
     </div>
@@ -70,6 +73,7 @@ function ViewToggle({ mode, onChange }: { mode: 'list' | 'grid'; onChange: (m: '
 }
 
 function FileGridPreview({ files, currentIndex, onPrev, onNext }: { files: File[]; currentIndex: number; onPrev: () => void; onNext: () => void }) {
+  const t = useT();
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const file = files[currentIndex];
   const isPdf = file.type === 'application/pdf' || file.name.endsWith('.pdf');
@@ -95,7 +99,7 @@ function FileGridPreview({ files, currentIndex, onPrev, onNext }: { files: File[
     <div className="flex flex-col items-center gap-4">
       <div className="w-full bg-gray-50 rounded-xl border border-border overflow-hidden flex items-center justify-center" style={{ minHeight: 300, maxHeight: 400 }}>
         {isPdf && previewUrl ? (
-          <img src={previewUrl} alt="Preview" className="max-w-full max-h-[400px] object-contain" />
+          <img src={previewUrl} alt={t('Preview')} className="max-w-full max-h-[400px] object-contain" />
         ) : (
           <div className="flex flex-col items-center gap-2 py-12 text-muted-foreground">
             <FileText className="w-10 h-10" />
@@ -106,11 +110,11 @@ function FileGridPreview({ files, currentIndex, onPrev, onNext }: { files: File[
       </div>
       <p className="text-sm font-medium text-foreground truncate max-w-full">{file.name}</p>
       <div className="flex items-center gap-3">
-        <button onClick={onPrev} disabled={currentIndex === 0} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title="Previous">
+        <button onClick={onPrev} disabled={currentIndex === 0} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title={t('Previous')}>
           <ChevronLeft className="w-4 h-4" />
         </button>
         <span className="text-xs text-muted-foreground font-medium tabular-nums">{currentIndex + 1} / {files.length}</span>
-        <button onClick={onNext} disabled={currentIndex === files.length - 1} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title="Next">
+        <button onClick={onNext} disabled={currentIndex === files.length - 1} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title={t('Next')}>
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>
@@ -121,6 +125,7 @@ function FileGridPreview({ files, currentIndex, onPrev, onNext }: { files: File[
 function ResultGridPreview({ results, currentIndex, onPrev, onNext, onDownload, onDelete }: {
   results: ProcessedResult[]; currentIndex: number; onPrev: () => void; onNext: () => void; onDownload: () => void; onDelete: () => void;
 }) {
+  const t = useT();
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [textContent, setTextContent] = useState<string | null>(null);
   const r = results[currentIndex];
@@ -169,34 +174,34 @@ function ResultGridPreview({ results, currentIndex, onPrev, onNext, onDownload, 
     <div className="flex flex-col items-center gap-4">
       <div className="w-full bg-gray-50 rounded-xl border border-border overflow-hidden flex items-center justify-center" style={{ minHeight: 300, maxHeight: 400 }}>
         {previewUrl && r.result.type === 'application/pdf' && <iframe src={previewUrl} className="w-full h-[400px]" />}
-        {previewUrl && r.result.type.startsWith('image/') && <img src={previewUrl} alt="Preview" className="max-w-full max-h-[400px] object-contain" />}
+        {previewUrl && r.result.type.startsWith('image/') && <img src={previewUrl} alt={t('Preview')} className="max-w-full max-h-[400px] object-contain" />}
         {previewUrl && !r.result.type.startsWith('image/') && r.result.type !== 'application/pdf' && (
-          <img src={previewUrl} alt="Preview" className="max-w-full max-h-[400px] object-contain" />
+          <img src={previewUrl} alt={t('Preview')} className="max-w-full max-h-[400px] object-contain" />
         )}
         {textContent && (
           <pre className="text-xs text-foreground whitespace-pre-wrap font-mono leading-relaxed p-4 max-h-[400px] overflow-auto w-full">
-            {textContent}{textContent.length >= 5000 && '\n\n... (truncated)'}
+            {textContent}{textContent.length >= 5000 && `\n\n${t('... (truncated)')}`}
           </pre>
         )}
         {!hasPreview && (
           <div className="flex flex-col items-center gap-2 py-12 text-muted-foreground">
             <Loader2 className="w-6 h-6 animate-spin" />
-            <p className="text-xs">Loading preview...</p>
+            <p className="text-xs">{t('Loading preview...')}</p>
           </div>
         )}
       </div>
       <div className="flex items-center gap-3">
-        <button onClick={onDelete} className="p-2.5 rounded-xl border border-border hover:bg-red-50 hover:border-red-200 hover:text-red-600 text-muted-foreground transition-colors" title="Delete">
+        <button onClick={onDelete} className="p-2.5 rounded-xl border border-border hover:bg-red-50 hover:border-red-200 hover:text-red-600 text-muted-foreground transition-colors" title={t('Delete')}>
           <Trash2 className="w-4 h-4" />
         </button>
-        <button onClick={onPrev} disabled={currentIndex === 0} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title="Previous">
+        <button onClick={onPrev} disabled={currentIndex === 0} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title={t('Previous')}>
           <ChevronLeft className="w-4 h-4" />
         </button>
         <span className="text-xs text-muted-foreground font-medium tabular-nums">{currentIndex + 1} / {results.length}</span>
-        <button onClick={onNext} disabled={currentIndex === results.length - 1} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title="Next">
+        <button onClick={onNext} disabled={currentIndex === results.length - 1} className="p-2.5 rounded-xl border border-border hover:bg-gray-50 text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title={t('Next')}>
           <ChevronRight className="w-4 h-4" />
         </button>
-        <button onClick={onDownload} className="p-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white transition-colors" title="Download">
+        <button onClick={onDownload} className="p-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white transition-colors" title={t('Download')}>
           <Download className="w-4 h-4" />
         </button>
       </div>
@@ -205,6 +210,7 @@ function ResultGridPreview({ results, currentIndex, onPrev, onNext, onDownload, 
 }
 
 function ResultCard({ name, result, onDownload, onDelete }: { name: string; result: Blob; onDownload: () => void; onDelete: () => void }) {
+  const t = useT();
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1048576) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -220,10 +226,10 @@ function ResultCard({ name, result, onDownload, onDelete }: { name: string; resu
         <p className="text-xs text-muted-foreground">{formatSize(result.size)}</p>
       </div>
       <div className="flex items-center gap-1 shrink-0">
-        <button onClick={onDownload} className="p-2 rounded-lg hover:bg-green-50 text-muted-foreground hover:text-green-600 transition-colors" title="Download">
+        <button onClick={onDownload} className="p-2 rounded-lg hover:bg-green-50 text-muted-foreground hover:text-green-600 transition-colors" title={t('Download')}>
           <Download className="w-4 h-4" />
         </button>
-        <button onClick={onDelete} className="p-2 rounded-lg hover:bg-red-50 text-muted-foreground hover:text-red-600 transition-colors" title="Delete">
+        <button onClick={onDelete} className="p-2 rounded-lg hover:bg-red-50 text-muted-foreground hover:text-red-600 transition-colors" title={t('Delete')}>
           <Trash2 className="w-4 h-4" />
         </button>
       </div>
@@ -238,12 +244,13 @@ export default function ToolPage({
   multiple = true,
   accept = '.pdf',
   onProcess,
-  processLabel = 'Process PDF',
+  processLabel,
   processAllTogether = false,
   onFilesSelected,
   minFiles,
   minFilesMessage,
 }: ToolPageProps) {
+  const t = useT();
   const tool = getToolBySlug(slug);
   const [files, setFiles] = useState<File[]>([]);
   const [selected, setSelected] = useState<Set<number>>(new Set());
@@ -317,7 +324,7 @@ export default function ToolPage({
     const newResults: ProcessedResult[] = [];
     try {
       if (processAllTogether) {
-        setProgress({ current: 1, total: 1, currentFile: `${selectedFiles.length} files` });
+        setProgress({ current: 1, total: 1, currentFile: t('{count} files', { count: selectedFiles.length }) });
         const result = await onProcess(selectedFiles, processOptions);
         if (Array.isArray(result)) result.forEach(blob => newResults.push({ sourceFile: selectedFiles[0], result: blob }));
         else newResults.push({ sourceFile: selectedFiles[0], result });
@@ -340,7 +347,7 @@ export default function ToolPage({
     } finally {
       setProcessing(false);
     }
-  }, [files, selected, onProcess, processOptions, processAllTogether]);
+  }, [files, selected, onProcess, processOptions, processAllTogether, t]);
 
   const bumpOptions = useCallback(() => setOptionsVersion(v => v + 1), []);
 
@@ -349,7 +356,7 @@ export default function ToolPage({
   const runPreview = useCallback(async () => {
     const indices = Array.from(selected).sort((a, b) => a - b);
     const chosen = indices.map(i => files[i]).filter(Boolean);
-    if (chosen.length === 0) throw new Error('Select a file to preview.');
+    if (chosen.length === 0) throw new Error(msg('Select a file to preview.'));
     return onProcess(processAllTogether ? chosen : [chosen[0]], processOptions);
   }, [files, selected, onProcess, processOptions, processAllTogether]);
 
@@ -377,7 +384,7 @@ export default function ToolPage({
     setLeftGridIdx(0); setRightGridIdx(0); setLeftView('list'); setRightView('list');
   }, []);
 
-  if (!tool) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">Tool not found.</p></div>;
+  if (!tool) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">{t('Tool not found.')}</p></div>;
 
   const IconComponent = (LucideIcons as any)[tool.icon] || LucideIcons.FileText;
   const showTwoCol = files.length > 0;
@@ -386,7 +393,7 @@ export default function ToolPage({
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
-          <ArrowLeft className="w-4 h-4" /> Back to all tools
+          <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
         <div className="mb-4">
@@ -395,8 +402,8 @@ export default function ToolPage({
               <IconComponent className="w-6 h-6" style={{ color: tool.color }} />
             </div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{tool.name}</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">{tool.description}</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t(tool.name)}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base">{t(tool.description)}</p>
             </div>
           </div>
         </div>
@@ -404,21 +411,21 @@ export default function ToolPage({
         {!showTwoCol && (
           <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 shadow-sm">
             <FileUpload accept={accept} multiple={multiple} files={files} onFilesSelected={handleFilesSelected} onRemoveFile={results.length === 0 ? handleRemoveFile : undefined} selectable={false} selected={selected} onToggleFile={toggleFile} onToggleAll={toggleSelectAll} allSelected={allSelected} someSelected={someSelected} />
-            {error && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3 animate-fade-in"><AlertCircle className="w-5 h-5 text-destructive shrink-0" /><p className="text-sm text-destructive">{error}</p></div>}
+            {error && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3 animate-fade-in"><AlertCircle className="w-5 h-5 text-destructive shrink-0" /><p className="text-sm text-destructive">{t(error)}</p></div>}
             {progress && (
               <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl animate-fade-in">
-                <div className="flex items-center gap-3 mb-3"><Loader2 className="w-4 h-4 animate-spin text-blue-600" /><p className="text-sm font-medium text-blue-800">Processing {progress.current} of {progress.total}: {progress.currentFile}</p></div>
+                <div className="flex items-center gap-3 mb-3"><Loader2 className="w-4 h-4 animate-spin text-blue-600" /><p className="text-sm font-medium text-blue-800">{t('Processing {current} of {total}: {file}', { current: progress.current, total: progress.total, file: progress.currentFile })}</p></div>
                 <div className="w-full bg-blue-200 rounded-full h-2"><div className="bg-blue-600 h-2 rounded-full transition-all duration-300" style={{ width: `${(progress.current / progress.total) * 100}%` }} /></div>
               </div>
             )}
             {results.length > 0 && !processing && (
               <div className="mt-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-sm font-semibold text-foreground flex items-center gap-2"><Check className="w-4 h-4 text-green-500" />{results.length} file{results.length > 1 ? 's' : ''} ready</h3>
+                  <h3 className="text-sm font-semibold text-foreground flex items-center gap-2"><Check className="w-4 h-4 text-green-500" />{results.length > 1 ? t('{count} files ready', { count: results.length }) : t('{count} file ready', { count: results.length })}</h3>
                   <div className="flex items-center gap-2">
                     {multiple && <ViewToggle mode={rightView} onChange={setRightView} />}
-                    {results.length > 1 && <button onClick={handleDownloadAll} className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors flex items-center gap-1.5 whitespace-nowrap"><FileDown className="w-3.5 h-3.5" /> Download All</button>}
-                    <button onClick={handleReset} className="px-4 py-2 bg-muted text-foreground rounded-lg text-sm font-medium hover:bg-muted/80 transition-colors whitespace-nowrap">Delete All</button>
+                    {results.length > 1 && <button onClick={handleDownloadAll} className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors flex items-center gap-1.5 whitespace-nowrap"><FileDown className="w-3.5 h-3.5" /> {t('Download All')}</button>}
+                    <button onClick={handleReset} className="px-4 py-2 bg-muted text-foreground rounded-lg text-sm font-medium hover:bg-muted/80 transition-colors whitespace-nowrap">{t('Delete All')}</button>
                   </div>
                 </div>
                 {rightView === 'list' || !multiple ? (
@@ -436,7 +443,7 @@ export default function ToolPage({
             {/* Left: Original files */}
             <div className="flex-1 min-w-0 bg-white rounded-2xl border border-border p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-semibold text-foreground">{files.length} original file{files.length > 1 ? 's' : ''}</h3>
+                <h3 className="text-sm font-semibold text-foreground">{files.length > 1 ? t('{count} original files', { count: files.length }) : t('{count} original file', { count: files.length })}</h3>
                 {multiple && files.length > 1 && <ViewToggle mode={leftView} onChange={setLeftView} />}
               </div>
               {leftView === 'list' || !multiple ? (
@@ -456,7 +463,7 @@ export default function ToolPage({
                     </div>
                   )}
                   {children && <div className="mb-4">{children}</div>}
-                  {error && <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3 animate-fade-in"><AlertCircle className="w-4 h-4 text-destructive shrink-0" /><p className="text-xs text-destructive">{error}</p></div>}
+                  {error && <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3 animate-fade-in"><AlertCircle className="w-4 h-4 text-destructive shrink-0" /><p className="text-xs text-destructive">{t(error)}</p></div>}
                   {progress && (
                     <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-xl animate-fade-in overflow-hidden">
                       <div className="flex items-center gap-2 mb-2 min-w-0"><Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600 shrink-0" /><p className="text-xs font-medium text-blue-800 min-w-0">{progress.current}/{progress.total}: <span className="block truncate">{progress.currentFile}</span></p></div>
@@ -466,12 +473,12 @@ export default function ToolPage({
 
                   {!minFilesMet ? (
                     <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-center">
-                      <p className="text-sm text-amber-700 font-medium">{minFilesMessage || `Upload at least ${minFiles} files.`}</p>
+                      <p className="text-sm text-amber-700 font-medium">{minFilesMessage || t('Upload at least {count} files.', { count: minFiles ?? 0 })}</p>
                     </div>
                   ) : results.length > 0 && !processing ? (
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-semibold text-foreground flex items-center gap-2"><Check className="w-4 h-4 text-green-500" />{results.length} ready</h3>
+                        <h3 className="text-sm font-semibold text-foreground flex items-center gap-2"><Check className="w-4 h-4 text-green-500" />{t('{count} ready', { count: results.length })}</h3>
                         {multiple && <ViewToggle mode={rightView} onChange={setRightView} />}
                       </div>
                       {rightView === 'list' || !multiple ? (
@@ -482,19 +489,19 @@ export default function ToolPage({
                         <ResultGridPreview results={results} currentIndex={rightGridIdx} onPrev={() => setRightGridIdx(i => Math.max(0, i - 1))} onNext={() => setRightGridIdx(i => Math.min(results.length - 1, i + 1))} onDownload={() => handleDownloadResult(results[rightGridIdx])} onDelete={() => { handleDeleteResult(rightGridIdx); setRightGridIdx(i => Math.min(i, results.length - 2)); }} />
                       )}
                       <div className="flex gap-2 mt-4">
-                        {results.length > 1 && <button onClick={handleDownloadAll} className="flex-1 px-4 py-2.5 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors flex items-center justify-center gap-1.5"><FileDown className="w-3.5 h-3.5" /> Download All</button>}
-                        <button onClick={handleReset} className="flex-1 px-4 py-2.5 bg-muted text-foreground rounded-lg text-sm font-medium hover:bg-muted/80 transition-colors">Delete All</button>
+                        {results.length > 1 && <button onClick={handleDownloadAll} className="flex-1 px-4 py-2.5 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors flex items-center justify-center gap-1.5"><FileDown className="w-3.5 h-3.5" /> {t('Download All')}</button>}
+                        <button onClick={handleReset} className="flex-1 px-4 py-2.5 bg-muted text-foreground rounded-lg text-sm font-medium hover:bg-muted/80 transition-colors">{t('Delete All')}</button>
                       </div>
                     </div>
                   ) : (
                     <div className="space-y-2">
                       <button onClick={handleProcess} disabled={selected.size === 0 || processing || !minFilesMet} className={`w-full px-6 py-3 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2 ${selected.size > 0 && !processing && minFilesMet ? 'bg-primary hover:bg-primary-hover text-white hover:shadow-lg hover:shadow-primary/25 active:scale-[0.98]' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}>
                         {processing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                        {processLabel} {selected.size > 0 && `(${selected.size})`}
+                        {processLabel ?? t('Process PDF')} {selected.size > 0 && `(${selected.size})`}
                       </button>
                       <button onClick={() => setPreviewOpen(true)} disabled={selected.size === 0 || processing || !minFilesMet}
                         className="w-full px-6 py-2.5 rounded-xl font-medium text-sm border border-border text-foreground hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
-                        <Eye className="w-4 h-4" /> Live preview
+                        <Eye className="w-4 h-4" /> {t('Live preview')}
                       </button>
                     </div>
                   )}
@@ -509,7 +516,7 @@ export default function ToolPage({
       <LivePreviewModal
         open={previewOpen}
         onClose={() => setPreviewOpen(false)}
-        toolName={tool.name}
+        toolName={t(tool.name)}
         run={runPreview}
         version={optionsVersion}
       />

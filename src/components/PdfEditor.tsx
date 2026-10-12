@@ -16,6 +16,8 @@ import {
   type EditorSession, type LoadedPage, type TextBlock, type ImageObject, type FontFamily, type Rgb, type TextAlign,
 } from '@/lib/pdf-editor';
 import { unsupportedCharacters } from '@/lib/unicode-font';
+import { useT, useToolHref } from '@/i18n/I18nProvider';
+import { msg } from '@/i18n/format';
 
 /**
  * The document is the editor.
@@ -34,9 +36,9 @@ const FALLBACKS: Record<FontFamily, string> = {
 };
 
 const FAMILY_LABELS: { value: FontFamily; label: string }[] = [
-  { value: 'Helvetica', label: 'Sans' },
-  { value: 'Times', label: 'Serif' },
-  { value: 'Courier', label: 'Mono' },
+  { value: 'Helvetica', label: msg('Sans') },
+  { value: 'Times', label: msg('Serif') },
+  { value: 'Courier', label: msg('Mono') },
 ];
 
 const SWATCHES = ['#000000', '#404040', '#b91c1c', '#c2410c', '#047857', '#1d4ed8', '#6d28d9', '#ffffff'];
@@ -157,11 +159,13 @@ export interface PdfEditorProps {
 export default function PdfEditor({
   file,
   onSave,
-  saveLabel = 'Save edited PDF',
-  savedLabel = 'Downloaded',
+  saveLabel,
+  savedLabel,
   toolbarExtra,
   heightClass = 'h-[calc(100vh-11rem)]',
 }: PdfEditorProps) {
+  const t = useT();
+  const toolHref = useToolHref();
   const [session, setSession] = useState<EditorSession | null>(null);
   const [pageIndex, setPageIndex] = useState(0);
   const [page, setPage] = useState<LoadedPage | null>(null);
@@ -211,8 +215,8 @@ export default function PdfEditor({
     : 1;
   // PDF user space to pixels on screen, including whatever /Rotate the page has.
   const view = useMemo<M>(() => {
-    const t = page?.transform ?? [1, 0, 0, -1, 0, 0];
-    return [t[0] * scale, t[1] * scale, t[2] * scale, t[3] * scale, t[4] * scale, t[5] * scale];
+    const tr = page?.transform ?? [1, 0, 0, -1, 0, 0];
+    return [tr[0] * scale, tr[1] * scale, tr[2] * scale, tr[3] * scale, tr[4] * scale, tr[5] * scale];
   }, [page, scale]);
 
   useEffect(() => {
@@ -225,7 +229,7 @@ export default function PdfEditor({
         if (cancelled) { opened.destroy(); return; }
         setSession(opened);
       } catch (err) {
-        if (!cancelled) setError(messageOf(err, 'Could not open this PDF for editing.'));
+        if (!cancelled) setError(messageOf(err, msg('Could not open this PDF for editing.')));
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -260,7 +264,7 @@ export default function PdfEditor({
           }
         }
       } catch (err) {
-        if (!cancelled) setError(messageOf(err, 'Could not read that page.'));
+        if (!cancelled) setError(messageOf(err, msg('Could not read that page.')));
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -293,7 +297,7 @@ export default function PdfEditor({
         setPreviewUrl(canvas.toDataURL('image/jpeg', 0.92));
         setError(null);
       } catch (err) {
-        if (token === previewToken.current) setError(messageOf(err, 'Could not render the page.'));
+        if (token === previewToken.current) setError(messageOf(err, msg('Could not render the page.')));
       } finally {
         if (token === previewToken.current) setPreviewBusy(false);
       }
@@ -367,7 +371,7 @@ export default function PdfEditor({
     const block: TextBlock = {
       id: `new-${addedCount.current++}`,
       page: pageIndex,
-      text: 'New text',
+      text: t('New text'),
       original: '',
       x: px,
       y: py,
@@ -389,7 +393,7 @@ export default function PdfEditor({
     setSelectedId(block.id);
     setPlacing(false);
     setDone(false);
-  }, [placing, page, pageIndex, view]);
+  }, [placing, page, pageIndex, view, t]);
 
   // Dragging a picture moves or resizes it, in page points.
   const onPointerDown = useCallback((e: React.PointerEvent, image: ImageObject, kind: Drag['kind']) => {
@@ -406,7 +410,7 @@ export default function PdfEditor({
     e.target.value = '';
     if (!file || !id) return;
     if (!/^image\/(png|jpeg|jpg)$/.test(file.type)) {
-      setError('Replacement images need to be a PNG or a JPEG.');
+      setError(msg('Replacement images need to be a PNG or a JPEG.'));
       return;
     }
     const reader = new FileReader();
@@ -420,7 +424,7 @@ export default function PdfEditor({
     e.target.value = '';
     if (!file || !page) return;
     if (!/^image\/(png|jpeg|jpg)$/.test(file.type)) {
-      setError('Added pictures need to be a PNG or a JPEG.');
+      setError(msg('Added pictures need to be a PNG or a JPEG.'));
       return;
     }
     const reader = new FileReader();
@@ -460,7 +464,7 @@ export default function PdfEditor({
         setError(null);
         setDone(false);
       };
-      img.onerror = () => setError('That picture could not be read — try a PNG or a JPEG.');
+      img.onerror = () => setError(msg('That picture could not be read — try a PNG or a JPEG.'));
       img.src = dataUrl;
     };
     reader.readAsDataURL(file);
@@ -474,7 +478,7 @@ export default function PdfEditor({
       await onSave(result.bytes);
       setDone(true);
     } catch (err) {
-      setError(messageOf(err, 'Could not save the edited PDF.'));
+      setError(messageOf(err, msg('Could not save the edited PDF.')));
     } finally {
       setProcessing(false);
     }
@@ -624,7 +628,7 @@ export default function PdfEditor({
                   onClick={() => { setPageIndex(i => Math.max(0, i - 1)); setSelectedId(null); }}
                   disabled={pageIndex === 0}
                   className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
-                  aria-label="Previous page"
+                  aria-label={t('Previous page')}
                 >
                   <ChevronLeft className="w-3.5 h-3.5" />
                 </button>
@@ -635,7 +639,7 @@ export default function PdfEditor({
                   onClick={() => { setPageIndex(i => Math.min((session?.numPages ?? 1) - 1, i + 1)); setSelectedId(null); }}
                   disabled={!session || pageIndex >= session.numPages - 1}
                   className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
-                  aria-label="Next page"
+                  aria-label={t('Next page')}
                 >
                   <ChevronRight className="w-3.5 h-3.5" />
                 </button>
@@ -645,21 +649,21 @@ export default function PdfEditor({
                 <button
                   onClick={() => setZoom(z => Math.max(0.5, round(z - 0.15)))}
                   className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted transition-colors"
-                  aria-label="Zoom out"
+                  aria-label={t('Zoom out')}
                 >
                   <Minus className="w-3.5 h-3.5" />
                 </button>
                 <button
                   onClick={() => setZoom(1)}
                   className="text-xs text-muted-foreground tabular-nums px-1 hover:text-foreground transition-colors"
-                  aria-label="Fit page"
+                  aria-label={t('Fit page')}
                 >
                   {Math.round(zoom * 100)}%
                 </button>
                 <button
                   onClick={() => setZoom(z => Math.min(2.5, round(z + 0.15)))}
                   className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted transition-colors"
-                  aria-label="Zoom in"
+                  aria-label={t('Zoom in')}
                 >
                   <Plus className="w-3.5 h-3.5" />
                 </button>
@@ -674,30 +678,32 @@ export default function PdfEditor({
                 }`}
               >
                 <Plus className="w-3.5 h-3.5" />
-                {placing ? 'Click the page' : 'Add text'}
+                {placing ? t('Click the page') : t('Add text')}
               </button>
 
               <button
                 onClick={() => addImageInput.current?.click()}
                 className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[13px] font-medium border border-border text-foreground hover:bg-muted transition-colors"
-                title="Add a PNG or JPEG picture, then drag it anywhere and resize it"
+                title={t('Add a PNG or JPEG picture, then drag it anywhere and resize it')}
               >
                 <ImagePlus className="w-3.5 h-3.5" />
-                Add image
+                {t('Add image')}
               </button>
 
               <span className="text-xs text-muted-foreground hidden lg:inline tabular-nums">
-                {pageBlocks.length} text · {pageImages.length} image{pageImages.length === 1 ? '' : 's'}
+                {pageImages.length === 1
+                  ? t('{text} text · {images} image', { text: pageBlocks.length, images: pageImages.length })
+                  : t('{text} text · {images} images', { text: pageBlocks.length, images: pageImages.length })}
               </span>
 
               <div className="ml-auto flex items-center gap-3">
                 {(previewBusy || loading) && (
                   <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <Loader2 className="w-3.5 h-3.5 animate-spin" /> Updating
+                    <Loader2 className="w-3.5 h-3.5 animate-spin" /> {t('Updating')}
                   </span>
                 )}
                 <span className="text-xs text-muted-foreground">
-                  {changeCount === 0 ? 'No changes' : `${changeCount} change${changeCount === 1 ? '' : 's'}`}
+                  {changeCount === 0 ? t('No changes') : changeCount === 1 ? t('{count} change', { count: changeCount }) : t('{count} changes', { count: changeCount })}
                 </span>
                 {changeCount > 0 && (
                   <button
@@ -713,7 +719,7 @@ export default function PdfEditor({
                     }}
                     className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    Discard all
+                    {t('Discard all')}
                   </button>
                 )}
                 <button
@@ -723,9 +729,9 @@ export default function PdfEditor({
                     done ? 'bg-green-500 text-white' : 'bg-primary hover:bg-primary-hover text-white'
                   } disabled:opacity-50 disabled:cursor-not-allowed`}
                 >
-                  {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> Saving…</> :
-                   done ? <><Check className="w-4 h-4" /> {savedLabel}</> :
-                   <><Download className="w-4 h-4" /> {saveLabel}</>}
+                  {processing ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('Saving…')}</> :
+                   done ? <><Check className="w-4 h-4" /> {savedLabel ?? t('Downloaded')}</> :
+                   <><Download className="w-4 h-4" /> {saveLabel ?? t('Save edited PDF')}</>}
                 </button>
               </div>
             </div>
@@ -736,12 +742,12 @@ export default function PdfEditor({
             }`}>
               {(selectedBlock || selectedImage) && (
                 <span className="text-[11px] uppercase tracking-wide text-white/50 mr-1 shrink-0">
-                  {selectedBlock ? 'Text' : 'Picture'}
+                  {selectedBlock ? t('Text') : t('Picture')}
                 </span>
               )}
               {!selectedBlock && !selectedImage ? (
                 <span className="text-[12px] text-muted-foreground">
-                  Click a line on the page to edit it, or a picture to replace, move or delete it. Use Add text or Add image to place new content.
+                  {t('Click a line on the page to edit it, or a picture to replace, move or delete it. Use Add text or Add image to place new content.')}
                 </span>
               ) : selectedBlock ? (
                 <>
@@ -750,7 +756,7 @@ export default function PdfEditor({
                     className={`w-7 h-7 rounded-md flex items-center justify-center transition-colors ${
                       selectedBlock.bold ? 'bg-white text-foreground' : 'hover:bg-white/20'
                     }`}
-                    aria-label="Bold"
+                    aria-label={t('Bold')}
                     aria-pressed={selectedBlock.bold}
                   >
                     <Bold className="w-3.5 h-3.5" />
@@ -760,7 +766,7 @@ export default function PdfEditor({
                     className={`w-7 h-7 rounded-md flex items-center justify-center transition-colors ${
                       selectedBlock.italic ? 'bg-white text-foreground' : 'hover:bg-white/20'
                     }`}
-                    aria-label="Italic"
+                    aria-label={t('Italic')}
                     aria-pressed={selectedBlock.italic}
                   >
                     <Italic className="w-3.5 h-3.5" />
@@ -775,18 +781,18 @@ export default function PdfEditor({
                       fontSize: Math.min(96, Math.max(4, Number(e.target.value) || 12)),
                     })}
                     className="w-12 h-7 px-1.5 rounded-md bg-white/15 text-[12px] tabular-nums outline-none focus:bg-white/25"
-                    aria-label="Font size"
+                    aria-label={t('Font size')}
                   />
                   <select
                     value={selectedBlock.family}
                     onChange={(e) => updateBlock(selectedBlock.id, { family: e.target.value as FontFamily })}
                     className="h-7 px-1 rounded-md bg-white/15 text-[12px] outline-none focus:bg-white/25 [&>option]:text-foreground"
-                    aria-label="Font"
+                    aria-label={t('Font')}
                     title={selectedBlock.sourceFont
-                      ? `Used when ${selectedBlock.sourceFont} cannot be reused`
-                      : 'Font'}
+                      ? t('Used when {font} cannot be reused', { font: selectedBlock.sourceFont })
+                      : t('Font')}
                   >
-                    {FAMILY_LABELS.map(f => <option key={f.value} value={f.value}>{f.label}</option>)}
+                    {FAMILY_LABELS.map(f => <option key={f.value} value={f.value}>{t(f.label)}</option>)}
                   </select>
 
                   <span className="w-px h-5 bg-white/25" />
@@ -801,7 +807,7 @@ export default function PdfEditor({
                           : 'border-white/40'
                       }`}
                       style={{ backgroundColor: hex }}
-                      aria-label={`Colour ${hex}`}
+                      aria-label={t('Colour {hex}', { hex })}
                     />
                   ))}
                   <input
@@ -809,15 +815,15 @@ export default function PdfEditor({
                     value={rgbToHex(selectedBlock.color)}
                     onChange={(e) => updateBlock(selectedBlock.id, { color: hexToRgb(e.target.value) })}
                     className="w-6 h-5 rounded border border-white/40 cursor-pointer bg-transparent"
-                    aria-label="Custom colour"
+                    aria-label={t('Custom colour')}
                   />
 
                   <span className="w-px h-5 bg-white/25" />
 
                   {([
-                    { align: 'left' as TextAlign, Icon: AlignLeft, label: 'Align left' },
-                    { align: 'center' as TextAlign, Icon: AlignCenter, label: 'Centre' },
-                    { align: 'right' as TextAlign, Icon: AlignRight, label: 'Align right' },
+                    { align: 'left' as TextAlign, Icon: AlignLeft, label: t('Align left') },
+                    { align: 'center' as TextAlign, Icon: AlignCenter, label: t('Centre') },
+                    { align: 'right' as TextAlign, Icon: AlignRight, label: t('Align right') },
                   ]).map(({ align, Icon, label }) => (
                     <button
                       key={align}
@@ -842,14 +848,14 @@ export default function PdfEditor({
                           : 'border-white/40'
                       }`}
                       style={{ backgroundColor: hex, opacity: 0.85 }}
-                      aria-label={`Highlight ${hex}`}
+                      aria-label={t('Highlight {hex}', { hex })}
                     />
                   ))}
                   {selectedBlock.highlight && (
                     <button
                       onClick={() => { updateBlock(selectedBlock.id, { highlight: null }); keepCaret(selectedBlock.id); }}
                       className="w-7 h-7 rounded-md flex items-center justify-center hover:bg-white/20 transition-colors"
-                      aria-label="Clear highlight"
+                      aria-label={t('Clear highlight')}
                     >
                       <Minus className="w-3.5 h-3.5" />
                     </button>
@@ -861,7 +867,7 @@ export default function PdfEditor({
                     <button
                       onClick={() => { setBlocks(prev => prev.filter(b => b.id !== selectedBlock.id)); setSelectedId(null); }}
                       className="w-7 h-7 rounded-md flex items-center justify-center hover:bg-white/20 transition-colors"
-                      aria-label="Remove"
+                      aria-label={t('Remove')}
                     >
                       <Trash2 className="w-3.5 h-3.5" />
                     </button>
@@ -871,7 +877,7 @@ export default function PdfEditor({
                       className={`w-7 h-7 rounded-md flex items-center justify-center transition-colors ${
                         selectedBlock.deleted ? 'bg-white text-foreground' : 'hover:bg-white/20'
                       }`}
-                      aria-label={selectedBlock.deleted ? 'Restore' : 'Delete'}
+                      aria-label={selectedBlock.deleted ? t('Restore') : t('Delete')}
                     >
                       {selectedBlock.deleted ? <Undo2 className="w-3.5 h-3.5" /> : <Trash2 className="w-3.5 h-3.5" />}
                     </button>
@@ -883,7 +889,7 @@ export default function PdfEditor({
                         x: selectedBlock.ox, y: selectedBlock.oy,
                       })}
                       className="w-7 h-7 rounded-md flex items-center justify-center hover:bg-white/20 transition-colors"
-                      aria-label="Revert"
+                      aria-label={t('Revert')}
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                     </button>
@@ -891,12 +897,12 @@ export default function PdfEditor({
                   {dropped.length > 0 && (
                     <span
                       className="inline-flex items-center text-amber-300"
-                      title={`${dropped.join(' ')} can't be drawn by any available font and will be dropped when saved.`}
+                      title={t("{chars} can't be drawn by any available font and will be dropped when saved.", { chars: dropped.join(' ') })}
                     >
                       <AlertTriangle className="w-3.5 h-3.5" />
                     </span>
                   )}
-                  <span className="ml-auto text-[11px] tabular-nums text-white/70 whitespace-nowrap" title="Position on the page, in points">
+                  <span className="ml-auto text-[11px] tabular-nums text-white/70 whitespace-nowrap" title={t('Position on the page, in points')}>
                     {round(selectedBlock.x)} · {round(selectedBlock.y)} pt
                   </span>
                 </>
@@ -906,14 +912,14 @@ export default function PdfEditor({
                     onClick={() => { replaceTarget.current = selectedImage.id; replaceInput.current?.click(); }}
                     className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
                   >
-                    <Replace className="w-3.5 h-3.5" /> Replace
+                    <Replace className="w-3.5 h-3.5" /> {t('Replace')}
                   </button>
                   {selectedImage.opIndex < 0 ? (
                     <button
                       onClick={() => { setImages(prev => prev.filter(i => i.id !== selectedImage.id)); setSelectedId(null); }}
                       className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
                     >
-                      <Trash2 className="w-3.5 h-3.5" /> Remove
+                      <Trash2 className="w-3.5 h-3.5" /> {t('Remove')}
                     </button>
                   ) : (
                     <>
@@ -923,7 +929,7 @@ export default function PdfEditor({
                           selectedImage.deleted ? 'bg-white text-foreground' : 'hover:bg-white/20'
                         }`}
                       >
-                        {selectedImage.deleted ? <><Undo2 className="w-3.5 h-3.5" /> Restore</> : <><Trash2 className="w-3.5 h-3.5" /> Delete</>}
+                        {selectedImage.deleted ? <><Undo2 className="w-3.5 h-3.5" /> {t('Restore')}</> : <><Trash2 className="w-3.5 h-3.5" /> {t('Delete')}</>}
                       </button>
                       {isImageChanged(selectedImage) && (
                         <button
@@ -934,7 +940,7 @@ export default function PdfEditor({
                           })}
                           className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
                         >
-                          <RotateCcw className="w-3.5 h-3.5" /> Revert
+                          <RotateCcw className="w-3.5 h-3.5" /> {t('Revert')}
                         </button>
                       )}
                     </>
@@ -946,7 +952,7 @@ export default function PdfEditor({
                   {selectedImage.rotated && (
                     <span
                       className="inline-flex items-center text-amber-300"
-                      title="This picture is rotated on the page — a replacement is placed upright."
+                      title={t('This picture is rotated on the page — a replacement is placed upright.')}
                     >
                       <AlertTriangle className="w-3.5 h-3.5" />
                     </span>
@@ -958,7 +964,7 @@ export default function PdfEditor({
             {error && (
               <div className="px-4 py-2.5 bg-red-50 border-b border-red-200 flex items-start gap-2">
                 <AlertCircle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
-                <p className="text-[13px] text-destructive">{error}</p>
+                <p className="text-[13px] text-destructive">{t(error)}</p>
               </div>
             )}
 
@@ -966,9 +972,9 @@ export default function PdfEditor({
               <div className="px-4 py-2.5 bg-amber-50 border-b border-amber-200 flex items-start gap-2">
                 <ScanText className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
                 <p className="text-[13px] text-amber-800">
-                  No editable text on this page — it is probably a scan. Run{' '}
-                  <Link href="/tools/ocr-pdf" className="underline">OCR PDF</Link>{' '}
-                  first to turn the picture into text, or use Add text or Add image to write or place pictures on top.
+                  {t('No editable text on this page — it is probably a scan. Run')}{' '}
+                  <Link href={toolHref('ocr-pdf')} className="underline">{t('OCR PDF')}</Link>{' '}
+                  {t('first to turn the picture into text, or use Add text or Add image to write or place pictures on top.')}
                 </p>
               </div>
             )}
@@ -988,7 +994,7 @@ export default function PdfEditor({
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={previewUrl}
-                    alt={`Page ${pageIndex + 1}`}
+                    alt={t('Page {page}', { page: pageIndex + 1 })}
                     data-paper=""
                     draggable={false}
                     className="absolute inset-0 w-full h-full select-none"
@@ -1002,7 +1008,7 @@ export default function PdfEditor({
                       <div
                         key={image.id}
                         onPointerDown={(e) => onPointerDown(e, image, 'move')}
-                        title="Drag to move · corner to resize"
+                        title={t('Drag to move · corner to resize')}
                         className={`absolute top-0 left-0 origin-top-left transition-colors ${
                           placing ? 'pointer-events-none' : 'cursor-move'
                         } ${image.id === selectedId && !image.deleted ? 'bg-primary/10' : 'hover:bg-primary/10'}`}
@@ -1068,8 +1074,8 @@ export default function PdfEditor({
                         }
                         e.stopPropagation();
                       },
-                      title: block.deleted ? 'Deleted — restore it to edit' : block.text,
-                      'aria-label': `Edit: ${block.original || block.text}`,
+                      title: block.deleted ? t('Deleted — restore it to edit') : block.text,
+                      'aria-label': t('Edit: {text}', { text: block.original || block.text }),
                       className: `absolute top-0 left-0 origin-top-left p-0 m-0 border-0 bg-transparent ${
                         placing ? 'pointer-events-none'
                           : block.added ? 'cursor-move' : 'cursor-text'
@@ -1149,7 +1155,7 @@ export default function PdfEditor({
               ) : (
                 <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground py-24">
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  Opening the document…
+                  {t('Opening the document…')}
                 </div>
               )}
             </div>
@@ -1158,14 +1164,13 @@ export default function PdfEditor({
               {notes.rebuilt.includes(pageIndex) && (
                 <p className="text-[11px] text-amber-700 flex items-start gap-1.5">
                   <AlertTriangle className="w-3 h-3 shrink-0 mt-0.5" />
-                  <span>This page&apos;s text had to be redrawn in full — check it over before saving.</span>
+                  <span>{t("This page's text had to be redrawn in full — check it over before saving.")}</span>
                 </p>
               )}
               <p className="text-[11px] text-muted-foreground leading-relaxed">
-                The page above is rendered from the edited PDF itself, so it is exactly what downloads.
-                Edited words are set in the document&apos;s own font wherever it can be reused.
-                {notes.substituted && ' Some runs fell back to a standard font, which you can see on the page.'}
-                {' '}Only the pages you change are rewritten; the rest of the file is copied through untouched.
+                {t("The page above is rendered from the edited PDF itself, so it is exactly what downloads. Edited words are set in the document's own font wherever it can be reused.")}
+                {notes.substituted && ` ${t('Some runs fell back to a standard font, which you can see on the page.')}`}
+                {' '}{t('Only the pages you change are rewritten; the rest of the file is copied through untouched.')}
               </p>
             </div>
       </div>
