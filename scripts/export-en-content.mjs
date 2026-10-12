@@ -1,7 +1,8 @@
 // Writes src/i18n/content/en.json: the English source for every translated
 // page. Re-run after changing tool copy, then update the other languages.
+// With --check it only verifies en.json is up to date (exit 1 if not).
 import { createJiti } from 'jiti';
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 const jiti = createJiti(import.meta.url, { alias: { '@': new URL('../src', import.meta.url).pathname } });
 const { tools, categories, categoryBlurbs } = await jiti.import('../src/lib/tools-data.ts');
@@ -25,5 +26,15 @@ const content = {
     }];
   })),
 };
-writeFileSync(new URL('../src/i18n/content/en.json', import.meta.url), JSON.stringify(content, null, 2) + '\n');
-console.log('wrote en.json:', Object.keys(content.tools).length, 'tools');
+const target = new URL('../src/i18n/content/en.json', import.meta.url);
+const json = JSON.stringify(content, null, 2) + '\n';
+if (process.argv.includes('--check')) {
+  if (readFileSync(target, 'utf8') !== json) {
+    console.error('src/i18n/content/en.json is out of date: run node scripts/export-en-content.mjs, then update every language.');
+    process.exit(1);
+  }
+  console.log('en.json is up to date');
+} else {
+  writeFileSync(target, json);
+  console.log('wrote en.json:', Object.keys(content.tools).length, 'tools');
+}

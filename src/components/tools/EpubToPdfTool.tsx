@@ -5,7 +5,7 @@ import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, FileDown, BookOpen, Pale
 import Link from 'next/link';
 import { epubToPdf, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
-import { useT } from '@/i18n/I18nProvider';
+import { useT, useHomeHref } from '@/i18n/I18nProvider';
 import { msg } from '@/i18n/format';
 
 function formatBytes(bytes: number): string {
@@ -16,6 +16,7 @@ function formatBytes(bytes: number): string {
 
 export default function EpubToPdfTool() {
   const t = useT();
+  const homeHref = useHomeHref();
   const [file, setFile] = useState<File | null>(null);
   const [mode, setMode] = useState<'visual' | 'text'>('visual');
   const [processing, setProcessing] = useState(false);
@@ -53,7 +54,7 @@ export default function EpubToPdfTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
+        <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 

@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "PDF zuschneiden",
+  "Margins (points)": "Ränder (Punkt)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Werte in Punkt (1 Zoll = 72 Punkt). Es wird an jeder Kante abgeschnitten.",
+  "bottom": "unten",
+  "left": "links",
+  "right": "rechts",
+  "top": "oben"
+}

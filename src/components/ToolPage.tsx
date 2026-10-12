@@ -10,7 +10,7 @@ import LivePreviewModal from './LivePreviewModal';
 import { downloadBlob, downloadBlobsAsZip, renderPdfPages, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 import { trackConversion } from '@/lib/stats';
-import { useT } from '@/i18n/I18nProvider';
+import { useT, useHomeHref } from '@/i18n/I18nProvider';
 import { msg } from '@/i18n/format';
 
 interface ToolPageProps {
@@ -251,6 +251,7 @@ export default function ToolPage({
   minFilesMessage,
 }: ToolPageProps) {
   const t = useT();
+  const homeHref = useHomeHref();
   const tool = getToolBySlug(slug);
   const [files, setFiles] = useState<File[]>([]);
   const [selected, setSelected] = useState<Set<number>>(new Set());
@@ -392,7 +393,7 @@ export default function ToolPage({
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
+        <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 

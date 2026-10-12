@@ -5,7 +5,7 @@ import { ArrowLeft, Loader2, AlertCircle, CheckCircle2, FileDown, Code2, Eye, Pa
 import Link from 'next/link';
 import { htmlToPdf, htmlToPdfVisual, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
-import { useT } from '@/i18n/I18nProvider';
+import { useT, useHomeHref } from '@/i18n/I18nProvider';
 import { msg } from '@/i18n/format';
 
 function formatBytes(bytes: number): string {
@@ -16,6 +16,7 @@ function formatBytes(bytes: number): string {
 
 export default function HtmlToPdfTool() {
   const t = useT();
+  const homeHref = useHomeHref();
   const [html, setHtml] = useState('');
   const [mode, setMode] = useState<'design' | 'text'>('design');
   const [tab, setTab] = useState<'code' | 'preview'>('preview');
@@ -62,7 +63,7 @@ export default function HtmlToPdfTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
+        <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-3">
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
