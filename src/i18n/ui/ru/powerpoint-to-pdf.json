@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Конвертировать в PDF",
+  "Converted {slides} slide including {images} image.": "Сконвертирован {slides} слайд, включая {images} изображение.",
+  "Converted {slides} slide including {images} images.": "Сконвертирован {slides} слайд (изображений: {images}).",
+  "Converted {slides} slide.": "Сконвертирован {slides} слайд.",
+  "Converted {slides} slides including {images} image.": "Сконвертировано слайдов: {slides}, включая {images} изображение.",
+  "Converted {slides} slides including {images} images.": "Сконвертировано слайдов: {slides} (изображений: {images}).",
+  "Converted {slides} slides.": "Сконвертировано слайдов: {slides}.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Каждый слайд перерисовывается на белой странице в исходном размере — текст с реальным положением, размером и цветом, а также изображения, таблицы и сгруппированные фигуры.",
+  "Rendering slide {current} of {total}...": "Отрисовка слайда {current} из {total}..."
+}

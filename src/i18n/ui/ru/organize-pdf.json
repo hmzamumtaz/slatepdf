@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Введите новый порядок страниц (через запятую, например 3,1,2,4,5)",
+  "Organize PDF": "Упорядочить PDF",
+  "Please enter a page order": "Введите порядок страниц",
+  "Preview in new order:": "Предпросмотр в новом порядке:",
+  "Total pages: {total} | Reordered: {count}": "Всего страниц: {total} | В новом порядке: {count}",
+  "e.g., 3,1,2,4,5": "например, 3,1,2,4,5"
+}

@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Ко всем инструментам",
+  "Convert EPUB ebooks to PDF documents": "Конвертируйте электронные книги EPUB в документы PDF",
+  "Convert to PDF": "Конвертировать в PDF",
+  "Converting...": "Конвертация...",
+  "EPUB to PDF": "EPUB в PDF",
+  "Exact design": "Точный дизайн",
+  "Extracting EPUB content...": "Извлечение содержимого EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Извлекает текст и заново верстает его в аккуратный PDF с поиском. Лучше всего подходит для романов и книг, где в основном текст.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Сохраняет макет каждой главы, изображения и встроенные стили. Подключаемые таблицы стилей и встроенные пользовательские шрифты не загружаются, поэтому вместо них используются стандартные стили. Лучше всего подходит для иллюстрированных книг.",
+  "PDF downloaded": "PDF скачан",
+  "PDF output": "Вид PDF",
+  "Selectable text": "Выделяемый текст",
+  "Upload .epub file": "Загрузить файл .epub",
+  "Upload an EPUB file first.": "Сначала загрузите файл EPUB."
+}

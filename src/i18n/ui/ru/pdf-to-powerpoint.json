@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Создан {slides} слайд из {pages} страницы.",
+  "Built {slides} slide from {pages} pages.": "Создан {slides} слайд (страниц в документе: {pages}).",
+  "Built {slides} slides from {pages} page.": "Создано слайдов: {slides} из {pages} страницы.",
+  "Built {slides} slides from {pages} pages.": "Создано слайдов: {slides} (страниц в документе: {pages}).",
+  "Convert to PowerPoint": "Конвертировать в PowerPoint",
+  "Reading page {current} of {total}...": "Чтение страницы {current} из {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Считывает структуру документа — заголовки становятся заголовками слайдов, а абзацы — пунктами списка — вместо простой вставки текста. Длинные страницы продолжаются на дополнительных слайдах."
+}

@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "Не удалось прочитать «{name}» как книгу Excel. Убедитесь, что это корректный файл .xlsx.",
+  "Convert to PDF": "Конвертировать в PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Старые файлы .xls не поддерживаются. Сохраните файл в Excel как .xlsx и попробуйте снова.",
+  "No data found in this workbook.": "В этой книге не найдено данных."
+}
