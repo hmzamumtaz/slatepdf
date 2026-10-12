@@ -1,0 +1,1407 @@
+{
+  "site": {
+    "homeTitle": "Gratis PDF-tools in je browser",
+    "homeDescription": "PDF samenvoegen, splitsen, verkleinen, omzetten, ondertekenen en bewerken in je browser. Gratis, zonder account, en je bestanden worden nooit geüpload.",
+    "heroBadge": "Bestanden verlaten nooit je apparaat",
+    "heroTitle": "Alle PDF-tools die je nodig hebt,",
+    "heroHighlight": "gratis en privé.",
+    "heroSubtitle": "Documenten samenvoegen, splitsen, comprimeren, omzetten, bewerken en ondertekenen in je browser. Geen uploads, geen account en geen watermerken.",
+    "heroCta": "Bekijk alle PDF-tools",
+    "popularTools": "Populaire tools",
+    "whyTitle": "Waarom {site}?",
+    "why": [
+      {
+        "title": "Je bestanden blijven privé",
+        "text": "Alles gebeurt op je eigen apparaat. Je documenten worden nooit naar een server geüpload — ideaal voor vertrouwelijk werk."
+      },
+      {
+        "title": "Direct resultaat",
+        "text": "Geen uploads en geen wachtrijen. Je PDF wordt verwerkt zodra je klikt, ook met een trage verbinding."
+      },
+      {
+        "title": "Gratis, zonder watermerk",
+        "text": "Gebruik elke tool zo vaak als je wilt. Geen account, geen watermerk op je bestanden en geen verborgen kosten."
+      }
+    ],
+    "faqTitle": "Veelgestelde vragen",
+    "homeFaqs": [
+      {
+        "q": "Is {site} echt gratis?",
+        "a": "Ja. Elke tool is gratis te gebruiken, zonder account, zonder watermerk op je bestanden en zonder betaald abonnement."
+      },
+      {
+        "q": "Worden mijn bestanden naar een server geüpload?",
+        "a": "Nee. De tools werken in je browser, dus je bestanden blijven op je apparaat. De enige uitzondering is PDF vertalen: die stuurt de tekst naar een vertaaldienst en meldt dat vooraf."
+      },
+      {
+        "q": "Moet ik iets installeren?",
+        "a": "Nee. Het werkt in elke moderne browser — Chrome, Edge, Firefox of Safari — op Windows, Mac, Linux, Android en iPhone."
+      },
+      {
+        "q": "Moet ik een account aanmaken?",
+        "a": "Nee. Open een tool en ga meteen aan de slag."
+      }
+    ],
+    "hubTitle": "Alle PDF-tools — {count} gratis tools, zonder upload",
+    "hubDescription": "Alle tools van {site} op één plek: PDF samenvoegen, splitsen, verkleinen, omzetten, bewerken, ondertekenen en beveiligen. Gratis, zonder account en upload.",
+    "hubH1": "Alle PDF-tools die je nodig hebt, op één plek",
+    "hubIntro": "{count} gratis PDF-tools om je documenten samen te voegen, te splitsen, te comprimeren, om te zetten, te bewerken, te ondertekenen en te beveiligen. Ze werken allemaal in je browser, dus je bestanden worden nooit geüpload — geen account, geen watermerk.",
+    "navWorkspace": "Werkruimte",
+    "navAllTools": "Alle tools",
+    "navGuides": "Handleidingen (Engels)",
+    "language": "Taal",
+    "menu": "Menu",
+    "footerTagline": "Gratis PDF-tools die in je browser werken. PDF's bewerken, omzetten, samenvoegen en comprimeren zonder ze te uploaden.",
+    "footerPrivate": "100% privé. Bestanden verlaten nooit je apparaat.",
+    "footerAllTools": "Alle {count} PDF-tools",
+    "footerNoSignup": "Geen account nodig",
+    "footerNoWatermark": "Geen watermerken",
+    "footerAbout": "Over ons (Engels)",
+    "footerPrivacy": "Privacy (Engels)",
+    "footerTerms": "Voorwaarden (Engels)",
+    "breadcrumbHome": "Home",
+    "breadcrumbTools": "PDF-tools",
+    "whyToolHeading": "Waarom {tool} hier gebruiken?",
+    "faqHeading": "{tool} — veelgestelde vragen",
+    "continueHeading": "Ga verder met een andere tool",
+    "seeAllTools": "Bekijk alle {count} PDF-tools"
+  },
+  "categories": {
+    "All-in-one": {
+      "name": "Alles-in-één",
+      "blurb": "Voer meerdere bewerkingen uit op één document zonder tussendoor te downloaden."
+    },
+    "Organize PDF": {
+      "name": "PDF ordenen",
+      "blurb": "Pagina's van je PDF's samenvoegen, splitsen, herschikken en inkorten."
+    },
+    "Optimize PDF": {
+      "name": "PDF optimaliseren",
+      "blurb": "Maak PDF's kleiner, sneller te openen, doorzoekbaar of weer leesbaar."
+    },
+    "Create PDF": {
+      "name": "PDF maken",
+      "blurb": "Zet afbeeldingen, Office-bestanden, webpagina's en e-books om naar PDF."
+    },
+    "Export PDF": {
+      "name": "PDF exporteren",
+      "blurb": "Haal je inhoud uit een PDF als Word, Excel, dia's, afbeeldingen of tekst."
+    },
+    "Modify PDF": {
+      "name": "PDF aanpassen",
+      "blurb": "Tekst bewerken, ondertekenen, nummeren, watermerken, bijsnijden, draaien en zwartlakken."
+    },
+    "PDF Security": {
+      "name": "PDF-beveiliging",
+      "blurb": "Wachtwoordbeveiliging toevoegen of verwijderen."
+    },
+    "PDF Intelligence": {
+      "name": "Slimme PDF-tools",
+      "blurb": "Vergelijk, vat samen en vertaal wat er in een PDF staat."
+    }
+  },
+  "tools": {
+    "pdf-workspace": {
+      "slug": "pdf-werkruimte",
+      "name": "PDF-werkruimte",
+      "description": "Eén document bewerken, zwartlakken, ondertekenen, stempelen en beveiligen zonder de pagina te verlaten",
+      "seoTitle": "PDF-werkruimte — PDF bewerken, ondertekenen en beveiligen",
+      "metaDescription": "Eén PDF-werkruimte om tekst te bewerken, gevoelige info zwart te lakken, te ondertekenen, te watermerken en te beveiligen. Alles gebeurt in je browser.",
+      "faqs": [
+        {
+          "q": "Wat kan ik doen in de PDF-werkruimte?",
+          "a": "Je kunt tekst bewerken, gevoelige informatie zwartlakken, pagina's herschikken, handtekeningen toevoegen, watermerken stempelen, pagina's aanpassen, het document met een wachtwoord beveiligen en het resultaat downloaden — allemaal zonder de pagina te verlaten."
+        },
+        {
+          "q": "Wordt mijn document naar een server geüpload?",
+          "a": "Nee. Elke handeling wordt in je browser uitgevoerd. Je document verlaat nooit je apparaat, waardoor de werkruimte ideaal is voor vertrouwelijk en gevoelig werk."
+        }
+      ],
+      "howTo": {
+        "title": "Zo bewerk, onderteken en beveilig je een PDF op één plek",
+        "intro": "De PDF-werkruimte zet bewerken, zwartlakken, paginatools, handtekeningen, stempels en wachtwoorden op één scherm, met ongedaan maken en opnieuw uitvoeren, zodat je een document in één keer afmaakt en maar één keer downloadt.",
+        "steps": [
+          "Open je PDF in de werkruimte hierboven (ontgrendel hem eerst als er een wachtwoord op zit)",
+          "Gebruik de tabbladen Bewerken, Zwartlakken, Pagina's, Ondertekenen, Stempel, Aanpassen en Beveiligen in elke gewenste volgorde",
+          "Ga terug of vooruit in je geschiedenis als je van gedachten verandert",
+          "Klik op Downloaden om de afgewerkte PDF op te slaan"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "merge-pdf": {
+      "slug": "pdf-samenvoegen",
+      "name": "PDF samenvoegen",
+      "description": "Meerdere PDF's samenvoegen tot één bestand",
+      "seoTitle": "PDF samenvoegen — Meerdere PDF's tot één (gratis online)",
+      "metaDescription": "Voeg twee of meer PDF-bestanden samen tot één document. Gratis, zonder account, zonder watermerk. Samenvoegen gebeurt in je browser — geen upload.",
+      "faqs": [
+        {
+          "q": "Hoeveel PDF's kan ik tegelijk samenvoegen?",
+          "a": "Tot 20 bestanden per keer, zonder groottelimiet behalve het geheugen van je apparaat. Heb je er meer? Voeg ze dan samen in groepjes van 20 en voeg daarna de resultaten samen."
+        },
+        {
+          "q": "Gaat de kwaliteit van een PDF achteruit door samenvoegen?",
+          "a": "Nee. Bij correct samenvoegen wordt elk paginaobject naar een nieuw document gekopieerd zonder afbeeldingen of tekst opnieuw te coderen. Je pagina's blijven identiek aan de originelen."
+        },
+        {
+          "q": "Kan ik PDF's met een wachtwoord samenvoegen?",
+          "a": "Dan moet je ze eerst ontgrendelen. Een PDF met een wachtwoord kan pas worden gelezen als het wachtwoord is verwijderd."
+        }
+      ],
+      "howTo": {
+        "title": "Zo voeg je PDF-bestanden samen",
+        "intro": "PDF samenvoegen voegt twee of meer PDF's samen tot één document, in de volgorde waarin je ze kiest. Pagina's worden ongewijzigd gekopieerd, dus tekst blijft selecteerbaar en afbeeldingen behouden hun resolutie.",
+        "steps": [
+          "Kies of sleep minstens twee PDF-bestanden, tot 20 tegelijk, in de gewenste volgorde",
+          "Controleer de lijst en verwijder bestanden die je per ongeluk hebt toegevoegd",
+          "Klik op PDF's samenvoegen",
+          "Download de samengevoegde PDF"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Zonder kwaliteitsverlies — pagina's worden gekopieerd, niet opnieuw opgebouwd"
+        ]
+      }
+    },
+    "split-pdf": {
+      "slug": "pdf-splitsen",
+      "name": "PDF splitsen",
+      "description": "Een PDF opsplitsen in losse pagina's",
+      "seoTitle": "PDF splitsen — PDF opsplitsen in losse pagina's (gratis)",
+      "metaDescription": "Splits een PDF in losse pagina's of eigen paginabereiken. Gratis, in je browser, zonder upload. Download losse pagina's of groepen direct.",
+      "faqs": [
+        {
+          "q": "Hoe splits ik een PDF in specifieke paginabereiken?",
+          "a": "Typ bereiken zoals 1-5, 10, 15-20. De tool splitst het document in een apart bestand per bereik."
+        },
+        {
+          "q": "Gaat de kwaliteit achteruit door splitsen?",
+          "a": "Nee. Bij splitsen worden complete paginaobjecten naar nieuwe documenten gekopieerd. Tekst blijft selecteerbaar en afbeeldingen behouden hun oorspronkelijke resolutie."
+        }
+      ],
+      "howTo": {
+        "title": "Zo splits je een PDF",
+        "intro": "PDF splitsen knipt één document op in meerdere bestanden per paginabereik. Elk bereik dat je typt wordt een eigen PDF.",
+        "steps": [
+          "Kies de PDF die je wilt splitsen",
+          "Typ de paginabereiken, bijvoorbeeld 1-3, 5, 7-10, en bekijk het voorbeeld",
+          "Klik op PDF splitsen",
+          "Download elk deel apart, of gebruik Alles downloaden om alle delen in één ZIP te krijgen"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Zonder kwaliteitsverlies — elke pagina behoudt de originele tekst en afbeeldingen"
+        ]
+      }
+    },
+    "remove-pages": {
+      "slug": "pdf-paginas-verwijderen",
+      "name": "Pagina's verwijderen",
+      "description": "Specifieke pagina's uit een PDF verwijderen",
+      "seoTitle": "Pagina's uit PDF verwijderen — gratis en zonder upload",
+      "metaDescription": "Verwijder specifieke pagina's uit een PDF. Kies de pagina's die weg moeten en download het bijgewerkte bestand. Gratis, zonder account.",
+      "faqs": [
+        {
+          "q": "Kan ik meerdere pagina's tegelijk verwijderen?",
+          "a": "Ja. Typ meerdere paginanummers of bereiken, dan worden alle gekozen pagina's in één keer verwijderd."
+        },
+        {
+          "q": "Is dit hetzelfde als splitsen?",
+          "a": "Nee. Splitsen maakt aparte bestanden van gekozen pagina's. Verwijderen haalt pagina's uit het document en houdt de rest bij elkaar in één bestand."
+        }
+      ],
+      "howTo": {
+        "title": "Zo verwijder je pagina's uit een PDF",
+        "intro": "Pagina's verwijderen schrapt de pagina's die je opgeeft en houdt de rest bij elkaar in één PDF, in de oorspronkelijke volgorde.",
+        "steps": [
+          "Kies je PDF",
+          "Typ de pagina's die weg moeten, bijvoorbeeld 1, 3, 5-8",
+          "Bekijk het voorbeeld van de pagina's die overblijven",
+          "Klik op Pagina's verwijderen en download de kortere PDF"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "extract-pages": {
+      "slug": "pdf-paginas-extraheren",
+      "name": "Pagina's extraheren",
+      "description": "Specifieke pagina's opslaan als nieuwe PDF",
+      "seoTitle": "Pagina's uit PDF halen — specifieke pagina's extraheren",
+      "metaDescription": "Haal specifieke pagina's uit een PDF en sla ze op als nieuw document. Kies losse pagina's, bereiken of een mix. De originele PDF blijft ongewijzigd.",
+      "faqs": [
+        {
+          "q": "Verandert extraheren de originele PDF?",
+          "a": "Nee. Er wordt alleen uit het bronbestand gelezen en een nieuw bestand geschreven. Je origineel blijft onaangeroerd op je schijf staan."
+        },
+        {
+          "q": "Kan ik pagina's in een andere volgorde extraheren?",
+          "a": "Ja. Zet de pagina's in de volgorde die je wilt. Met 9, 3, 5 krijg je een bestand met de pagina's in precies die volgorde."
+        }
+      ],
+      "howTo": {
+        "title": "Zo haal je pagina's uit een PDF",
+        "intro": "Pagina's extraheren kopieert de pagina's die je kiest naar een nieuwe PDF en laat het originele bestand onaangeroerd.",
+        "steps": [
+          "Kies je PDF",
+          "Typ de pagina's die je wilt, bijvoorbeeld 1, 3, 5-8, en controleer de miniaturen",
+          "Klik op Pagina's extraheren",
+          "Download de nieuwe PDF met alleen die pagina's"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "organize-pdf": {
+      "slug": "pdf-paginas-ordenen",
+      "name": "PDF ordenen",
+      "description": "Pagina's herschikken, draaien en beheren",
+      "seoTitle": "PDF-pagina's ordenen — volgorde wijzigen, gratis",
+      "metaDescription": "Zet de pagina's van een PDF in elke gewenste volgorde en laat overbodige pagina's weg, in één stap. Gratis, zonder account, en het bestand blijft in je browser.",
+      "faqs": [
+        {
+          "q": "Hoe stel ik de nieuwe paginavolgorde in?",
+          "a": "Typ de paginanummers in de volgorde die je wilt, bijvoorbeeld 3, 1, 2, 4. De huidige volgorde is al ingevuld, en een voorbeeld toont het resultaat voordat je opslaat."
+        },
+        {
+          "q": "Kan ik hier pagina's draaien?",
+          "a": "Nee. Gebruik PDF draaien: daarmee draai je alle pagina's of alleen de pagina's die je opgeeft 90°, 180° of 270°."
+        },
+        {
+          "q": "Kan ik pagina's uit verschillende PDF's combineren?",
+          "a": "Deze tool werkt met één PDF tegelijk. Wil je pagina's uit verschillende bestanden combineren, haal dan eerst de pagina's eruit die je nodig hebt en gebruik daarna PDF samenvoegen."
+        }
+      ],
+      "howTo": {
+        "title": "Zo verander je de volgorde van pagina's in een PDF",
+        "intro": "PDF ordenen bouwt een document opnieuw op in de paginavolgorde die je typt. Elke pagina die je niet in de lijst zet, valt weg, zodat je in één stap herschikt en inkort.",
+        "steps": [
+          "Kies je PDF — de huidige volgorde (1, 2, 3 …) is al ingevuld",
+          "Herschrijf de lijst in de gewenste volgorde, bijvoorbeeld 3, 1, 2, 4",
+          "Bekijk het voorbeeld van de nieuwe volgorde",
+          "Klik op PDF ordenen en download het resultaat"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "compress-pdf": {
+      "slug": "pdf-verkleinen",
+      "name": "PDF verkleinen",
+      "description": "Bestandsgrootte verkleinen met behoud van kwaliteit",
+      "seoTitle": "PDF verkleinen — PDF comprimeren zonder kwaliteitsverlies",
+      "metaDescription": "Maak je PDF tot 80% kleiner zonder zichtbaar kwaliteitsverlies. Gratis comprimeren in je browser. Geen uploads, geen watermerken, geen account.",
+      "faqs": [
+        {
+          "q": "Gaat de kwaliteit achteruit als ik een PDF verklein?",
+          "a": "Op het aanbevolen compressieniveau worden afbeeldingen opnieuw gecodeerd op 150 DPI — op het scherm en bij normaal afdrukken niet van het origineel te onderscheiden."
+        },
+        {
+          "q": "Hoeveel kleiner wordt mijn PDF?",
+          "a": "PDF's met veel foto's worden 60-80% kleiner. Bestanden met alleen tekst 10-30%. Gescande documenten kunnen tot 90% kleiner worden."
+        },
+        {
+          "q": "Kan ik een PDF met een wachtwoord comprimeren?",
+          "a": "Dan moet je hem eerst ontgrendelen. Compressietools kunnen versleutelde bestanden pas lezen als het wachtwoord is verwijderd."
+        }
+      ],
+      "howTo": {
+        "title": "Zo verklein je een PDF naar een bepaalde grootte",
+        "intro": "PDF verkleinen werkt naar een doelgrootte die je zelf instelt, in MB of KB, in plaats van vage niveaus als ‘laag / gemiddeld / hoog’ — handig als een uploadformulier of e-mail een harde limiet heeft.",
+        "steps": [
+          "Kies de PDF die kleiner moet",
+          "Typ een doelgrootte, of kies een snelle voorinstelling van 50%, 25%, 10% of 5% van het origineel",
+          "Klik op Comprimeren",
+          "Controleer de nieuwe grootte en download de gecomprimeerde PDF"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Eerlijk over de nadelen: de tool waarschuwt je als een doel zo klein is dat pagina's afbeeldingen moeten worden"
+        ]
+      }
+    },
+    "optimize-pdf": {
+      "slug": "pdf-optimaliseren",
+      "name": "PDF optimaliseren",
+      "description": "PDF optimaliseren voor het web en sneller laden",
+      "seoTitle": "PDF optimaliseren — sneller laden en geschikt voor het web",
+      "metaDescription": "Optimaliseer PDF-bestanden voor het web en sneller laden. Verkort de weergavetijd, maak lagen plat en stroomlijn de documentstructuur.",
+      "faqs": [
+        {
+          "q": "Wat doet PDF-optimalisatie?",
+          "a": "Optimalisatie verwijdert ongebruikte objecten, maakt interactieve lagen plat, neemt alleen de gebruikte tekens van lettertypen op en stroomlijnt de interne structuur voor snellere weergave."
+        },
+        {
+          "q": "Is optimaliseren hetzelfde als comprimeren?",
+          "a": "Comprimeren verkleint het bestand door afbeeldingen opnieuw te coderen. Optimaliseren richt zich op verbeteringen in de structuur die laden en weergeven versnellen."
+        }
+      ],
+      "howTo": {
+        "title": "Zo optimaliseer je een PDF zonder kwaliteitsverlies",
+        "intro": "PDF optimaliseren verpakt de bestandsstructuur opnieuw — objectstreams, ongebruikte objecten — zonder afbeeldingen of tekst aan te raken. Valt er niets te winnen, dan krijg je je bestand ongewijzigd terug en meldt de tool dat.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Vink ‘Documentmetadata verwijderen’ aan als je ook titel, auteur en vergelijkbare velden wilt wissen",
+          "Klik op PDF optimaliseren",
+          "Download het geoptimaliseerde bestand, of gebruik PDF verkleinen als je een grotere besparing nodig hebt"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "repair-pdf": {
+      "slug": "pdf-repareren",
+      "name": "PDF repareren",
+      "description": "Beschadigde of corrupte PDF-bestanden herstellen",
+      "seoTitle": "PDF repareren — beschadigde of corrupte PDF herstellen",
+      "metaDescription": "Repareer corrupte of beschadigde PDF-bestanden. Herstel kapotte headers, red leesbare inhoud en herstel beschadigde documenten. Gratis online tool.",
+      "faqs": [
+        {
+          "q": "Hoe raakt een PDF beschadigd?",
+          "a": "Veelvoorkomende oorzaken zijn onvolledige downloads, fouten op opslagmedia, software die crasht tijdens het opslaan en schade door virussen."
+        },
+        {
+          "q": "Kan repareren alle inhoud terughalen?",
+          "a": "Repareren werkt door de PDF-structuur opnieuw op te bouwen. Hoeveel er terugkomt, hangt af van hoeveel van de oorspronkelijke gegevens nog intact is."
+        }
+      ],
+      "howTo": {
+        "title": "Zo repareer je een beschadigde PDF",
+        "intro": "PDF repareren bouwt de kruisverwijzingstabel, objectnummering en trailer van een beschadigd bestand opnieuw op. Lukt het niet om de structuur te herstellen, dan worden de pagina's opnieuw weergegeven in een nieuwe PDF met een doorzoekbare tekstlaag.",
+        "steps": [
+          "Kies de PDF die niet opent of foutmeldingen geeft",
+          "Klik op PDF repareren",
+          "Download het gerepareerde bestand en open het om elke pagina te controleren"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "ocr-pdf": {
+      "slug": "ocr-pdf",
+      "name": "OCR PDF",
+      "description": "Tekst uit gescande documenten halen",
+      "seoTitle": "OCR PDF — tekst herkennen in gescande documenten",
+      "metaDescription": "Zet gescande documenten met OCR om in doorzoekbare, selecteerbare tekst. Maak gescande PDF's doorzoekbaar en bewerkbaar. Gratis, zonder upload.",
+      "faqs": [
+        {
+          "q": "Wat is OCR?",
+          "a": "Optische tekenherkenning (OCR) analyseert afbeeldingen van tekst en zet die om in echte teksttekens, zodat gescande documenten doorzoekbaar en selecteerbaar worden."
+        },
+        {
+          "q": "Hoe nauwkeurig is OCR?",
+          "a": "De nauwkeurigheid hangt af van de kwaliteit van de scan. Heldere scans met een hoge resolutie halen meestal 95-99% nauwkeurigheid. Scans van slechte kwaliteit kunnen meer fouten bevatten."
+        }
+      ],
+      "howTo": {
+        "title": "Zo maak je een gescande PDF doorzoekbaar met OCR",
+        "intro": "OCR PDF herkent de tekst op gescande pagina's en voegt die toe aan de PDF, zodat je hem kunt doorzoeken, selecteren en kopiëren. Je kiest tot drie documenttalen uit 44.",
+        "steps": [
+          "Kies je gescande PDF",
+          "Zoek en kies de taal van het document — tot drie voor bestanden met meerdere talen",
+          "Klik op OCR starten en wacht terwijl elke pagina wordt gelezen",
+          "Download de doorzoekbare PDF"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "De herkenning draait op je eigen apparaat, dus gevoelige scans blijven bij jou"
+        ]
+      }
+    },
+    "jpg-to-pdf": {
+      "slug": "jpg-naar-pdf",
+      "name": "JPG naar PDF",
+      "description": "Afbeeldingen omzetten naar PDF-documenten",
+      "seoTitle": "JPG naar PDF — afbeeldingen gratis omzetten naar PDF",
+      "metaDescription": "Zet JPG-afbeeldingen om naar PDF met behoud van de originele beeldkwaliteit. Combineer meerdere afbeeldingen in één PDF. Gratis, zonder account.",
+      "faqs": [
+        {
+          "q": "Gaat de beeldkwaliteit achteruit als ik JPG naar PDF omzet?",
+          "a": "Nee. De beeldgegevens worden zonder nieuwe compressie in de PDF opgenomen. Je afbeeldingen blijven pixel voor pixel identiek aan de originelen."
+        },
+        {
+          "q": "Kan ik meerdere afbeeldingen combineren in één PDF?",
+          "a": "Ja. Laad al je JPG's, zet ze in de juiste volgorde en zet ze om. Elke afbeelding wordt één pagina in de PDF."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je JPG om naar PDF",
+        "intro": "JPG naar PDF combineert JPEG-, PNG- en WebP-afbeeldingen in één PDF, één afbeelding per pagina, in de volgorde waarin je ze toevoegt.",
+        "steps": [
+          "Kies of sleep je afbeeldingen, tot 20 tegelijk, in de volgorde van de pagina's",
+          "Klik op Omzetten naar PDF",
+          "Download één PDF met alle afbeeldingen"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "scan-pdf": {
+      "slug": "pdf-scannen",
+      "name": "PDF scannen",
+      "description": "Documenten scannen met je camera en opslaan als PDF",
+      "seoTitle": "Scannen naar PDF gratis online — camerascanner, geen app",
+      "metaDescription": "Scan documenten naar PDF met je telefooncamera: automatische randdetectie, bijsnijden, filters, OCR, ID- en boekmodus. Gratis, geen app, geen upload.",
+      "faqs": [
+        {
+          "q": "Heb ik een app of scanner nodig om een PDF te maken?",
+          "a": "Nee. Open deze pagina op je telefoon en richt de camera op de pagina. De randen worden gevonden, de pagina wordt vastgelegd zodra je stilhoudt, rechtgezet en van schaduwen ontdaan. Je kunt ook foto's importeren die je al hebt gemaakt."
+        },
+        {
+          "q": "Wordt mijn gescande document naar een server geüpload?",
+          "a": "Nee. De camerabeelden, paginaherkenning, filters en het maken van de PDF gebeuren allemaal in je browser. Pagina's worden op dit apparaat bewaard, zodat je ze niet kwijtraakt als je de pagina herlaadt. De enige download is het taalmodel voor tekstherkenning, dat één keer wordt opgehaald als je OCR aanzet."
+        },
+        {
+          "q": "Kan ik de gescande PDF doorzoekbaar maken?",
+          "a": "Ja. Laat ‘Tekst herkennen (OCR)’ aan staan bij het opslaan. De herkende tekst wordt onzichtbaar over elke paginafoto gelegd, zodat je hem kunt doorzoeken, selecteren en kopiëren. De nauwkeurigheid hangt af van hoe scherp en goed belicht de foto is."
+        },
+        {
+          "q": "Wat doen de modi Boek, ID-kaart en Whiteboard?",
+          "a": "Boek splitst een opengeslagen boek in een linker- en een rechterpagina. ID-kaart scant eerst de voorkant en dan de achterkant van een kaart en zet beide op ware grootte op één pagina. Whiteboard maakt schittering wit en versterkt de kleuren van markers."
+        },
+        {
+          "q": "Kan ik een pagina na het scannen nog aanpassen?",
+          "a": "Ja. In Controleren kun je de hoeken verslepen om opnieuw bij te snijden, draaien, het filter wijzigen, helderheid en contrast aanpassen, vlekken wegpoetsen, tekenen, markeren, tekst toevoegen of ondertekenen, en elke pagina opnieuw maken, verplaatsen of verwijderen — en elke wijziging ongedaan maken. Bewerkingen worden op de originele foto toegepast, dus er gaat geen kwaliteit verloren."
+        },
+        {
+          "q": "Kan ik een visitekaartje scannen naar mijn contacten?",
+          "a": "Ja. Gebruik de modus Visitekaartje en tik op Contact: naam, functie, bedrijf, telefoon, e-mail en website worden van de kaart gelezen zodat je ze kunt controleren, en opgeslagen als .vcf-contactbestand dat je telefoon kan importeren."
+        },
+        {
+          "q": "Kan ik de scan met een wachtwoord beveiligen of als JPG opslaan?",
+          "a": "Ja. Vink bij het opslaan ‘Beveiligen met een wachtwoord’ aan om de PDF te vergrendelen, of kies JPG om één afbeelding per pagina te krijgen. Opgeslagen PDF's worden ook bewaard in Recente scans op dit apparaat, zodat je ze opnieuw kunt downloaden of delen."
+        }
+      ],
+      "howTo": {
+        "title": "Zo scan je een document naar PDF met je telefoon",
+        "intro": "PDF scannen maakt van de camera van je telefoon of laptop een documentscanner: de paginaranden worden gevonden, de pagina wordt rechtgezet en opgeschoond, en daarna sla je een PDF op die je doorzoekbaar kunt maken.",
+        "steps": [
+          "Geef toegang tot de camera, of voeg foto's toe die je al hebt gemaakt",
+          "Houd de pagina in beeld — de randen worden herkend en de pagina wordt bijgesneden en rechtgezet",
+          "Controleer elke pagina: opnieuw bijsnijden, draaien, een filter kiezen zoals Z/W of Whiteboard, of opnieuw maken",
+          "Kies het paginaformaat en de bestandsgrootte, zet tekstherkenning (OCR) aan als je die wilt, en sla op als PDF of JPG"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Scans blijven op je apparaat, ook de kopieën in Recente scans"
+        ]
+      }
+    },
+    "word-to-pdf": {
+      "slug": "word-naar-pdf",
+      "name": "Word naar PDF",
+      "description": "Een document (DOCX) omzetten naar PDF",
+      "seoTitle": "Word naar PDF — DOCX gratis online omzetten naar PDF",
+      "metaDescription": "Zet Word-documenten (DOCX) om naar PDF in je browser. Je tekst, koppen, lijsten en tabellen blijven behouden. Gratis, zonder account en zonder upload.",
+      "faqs": [
+        {
+          "q": "Blijft mijn opmaak behouden?",
+          "a": "Je tekst, koppen, lijsten en tabellen komen mee, maar het document wordt opnieuw opgemaakt in plaats van pixel voor pixel gekopieerd, dus eigen lettertypen en complexe pagina-indelingen komen niet exact overeen. Wil je een pixelperfecte kopie, gebruik dan Bestand → Opslaan als PDF in Word zelf."
+        },
+        {
+          "q": "Moet Microsoft Word geïnstalleerd zijn?",
+          "a": "Nee. De conversie gebeurt in je browser. Je hoeft geen software te installeren."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je Word om naar PDF",
+        "intro": "Word naar PDF zet .docx-bestanden om naar PDF's in je browser. Je tekst, koppen, lijsten en tabellen blijven behouden, maar worden opnieuw opgemaakt, dus complexe indelingen en eigen lettertypen komen niet exact overeen met het origineel.",
+        "steps": [
+          "Kies een of meer .docx-bestanden",
+          "Klik op Omzetten naar PDF",
+          "Download elke PDF, of gebruik Alles downloaden voor een ZIP"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "powerpoint-to-pdf": {
+      "slug": "powerpoint-naar-pdf",
+      "name": "PowerPoint naar PDF",
+      "description": "Dia's (PPTX) omzetten naar PDF",
+      "seoTitle": "PowerPoint naar PDF — PPTX gratis omzetten naar PDF",
+      "metaDescription": "Zet PowerPoint-presentaties (PPTX) om naar PDF, één pagina per dia, met tekst, afbeeldingen en tabellen. Gratis, zonder account en zonder upload.",
+      "faqs": [
+        {
+          "q": "Blijven animaties behouden?",
+          "a": "Animaties worden statische pagina's, omdat PDF geen animaties ondersteunt. De eindtoestand van elke dia wordt vastgelegd."
+        },
+        {
+          "q": "Kan ik specifieke dia's omzetten?",
+          "a": "De hele presentatie wordt omgezet. Wil je alleen bepaalde dia's, haal die dan na de conversie eruit met de tool Pagina's extraheren."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je PowerPoint om naar PDF",
+        "intro": "PowerPoint naar PDF tekent elke dia van een .pptx-bestand opnieuw op een eigen pagina, met tekst, afbeeldingen, tabellen en gegroepeerde vormen.",
+        "steps": [
+          "Kies een of meer .pptx-bestanden",
+          "Klik op Omzetten naar PDF",
+          "Download de PDF — één pagina per dia"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "excel-to-pdf": {
+      "slug": "excel-naar-pdf",
+      "name": "Excel naar PDF",
+      "description": "Een spreadsheet (XLSX) omzetten naar PDF",
+      "seoTitle": "Excel naar PDF — spreadsheets gratis omzetten naar PDF",
+      "metaDescription": "Zet Excel-spreadsheets (XLSX of CSV) om naar PDF, elk werkblad passend op de paginabreedte. Gratis, in je browser, zonder account en zonder upload.",
+      "faqs": [
+        {
+          "q": "Blijven mijn formules behouden?",
+          "a": "Formules worden berekend en als uitkomst in de PDF opgeslagen. De formules zelf blijven niet behouden, omdat PDF een statisch formaat is."
+        },
+        {
+          "q": "Kan ik specifieke werkbladen omzetten?",
+          "a": "De hele werkmap wordt omgezet. Voor specifieke werkbladen moet je die mogelijk eerst als apart bestand opslaan."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je Excel om naar PDF",
+        "intro": "Excel naar PDF zet .xlsx- en .csv-bestanden om naar PDF's. Elk zichtbaar werkblad wordt passend gemaakt op de paginabreedte, en staand of liggend wordt automatisch gekozen.",
+        "steps": [
+          "Kies een of meer .xlsx- of .csv-bestanden (sla oude .xls-bestanden eerst op als .xlsx)",
+          "Klik op Omzetten naar PDF",
+          "Download de PDF; van zeer grote werkbladen worden de eerste 3.000 rijen getoond"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "html-to-pdf": {
+      "slug": "html-naar-pdf",
+      "name": "HTML naar PDF",
+      "description": "Webpagina's omzetten naar PDF",
+      "seoTitle": "HTML naar PDF — webpagina's gratis omzetten naar PDF",
+      "metaDescription": "Zet elke webpagina om naar PDF. Sla artikelen, bonnen en online content op als PDF-document. Gratis, in je browser, zonder installatie.",
+      "faqs": [
+        {
+          "q": "Kan ik elke webpagina omzetten?",
+          "a": "Ja. Voer de URL in van een openbaar toegankelijke webpagina en die wordt omgezet naar PDF."
+        },
+        {
+          "q": "Ziet de PDF eruit als de webpagina?",
+          "a": "De PDF legt de weergegeven inhoud van de pagina vast. Complexe indelingen kunnen iets afwijken van het origineel."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je HTML om naar PDF",
+        "intro": "HTML naar PDF maakt van geplakte HTML of een geüpload .html-bestand een PDF, met het ontwerp intact of als vereenvoudigde, selecteerbare tekst.",
+        "steps": [
+          "Plak je HTML-code of upload een .html-bestand",
+          "Bekijk het voorbeeld van het ontwerp",
+          "Kies Exact ontwerp of Selecteerbare tekst",
+          "Klik op Omzetten naar PDF om hem te downloaden"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "heic-to-pdf": {
+      "slug": "heic-naar-pdf",
+      "name": "HEIC naar PDF",
+      "description": "Apple HEIC-afbeeldingen omzetten naar PDF",
+      "seoTitle": "HEIC naar PDF — iPhone-foto's gratis omzetten naar PDF",
+      "metaDescription": "Zet HEIC- en HEIF-foto's van iPhone en iPad om naar PDF. Gratis, in je browser, zonder upload. De originele beeldkwaliteit blijft behouden.",
+      "faqs": [
+        {
+          "q": "Wat is een HEIC-bestand?",
+          "a": "HEIC (High Efficiency Image Container) is sinds iOS 11 het standaard fotoformaat van iPhones en iPads. Het comprimeert beter dan JPEG, maar wordt niet door alle software ondersteund."
+        },
+        {
+          "q": "Kan ik HEIC op mijn telefoon omzetten naar PDF?",
+          "a": "Ja. De tool werkt in de browser op iPhone en Android. Open hem in Safari of Chrome, kies je HEIC-foto's en download de PDF."
+        },
+        {
+          "q": "Gaat de beeldkwaliteit achteruit door de conversie?",
+          "a": "Nee. De HEIC-afbeelding wordt gedecodeerd en op de originele resolutie in de PDF opgenomen. De beeldkwaliteit blijft behouden."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je HEIC om naar PDF",
+        "intro": "HEIC naar PDF zet foto's van je iPhone en iPad die als HEIC of HEIF zijn opgeslagen om naar PDF's, zonder iets te installeren of je foto's ergens naartoe te sturen.",
+        "steps": [
+          "Kies je HEIC- of HEIF-foto's",
+          "Klik op Omzetten naar PDF — elke foto wordt een eigen PDF",
+          "Download ze één voor één, of allemaal tegelijk als ZIP"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "webp-to-pdf": {
+      "slug": "webp-naar-pdf",
+      "name": "WebP naar PDF",
+      "description": "WebP-afbeeldingen omzetten naar PDF-documenten",
+      "seoTitle": "WebP naar PDF — WebP-afbeeldingen gratis online omzetten",
+      "metaDescription": "Zet WebP-afbeeldingen om naar PDF in je browser. Gratis, zonder account, zonder watermerk. Meerdere bestanden tegelijk, met behoud van de kwaliteit.",
+      "faqs": [
+        {
+          "q": "Wat is een WebP-bestand?",
+          "a": "WebP is een modern afbeeldingsformaat van Google dat afbeeldingen op het web sterker comprimeert. Het wordt veel gebruikt in webdesign en online content."
+        },
+        {
+          "q": "Gaat de kwaliteit achteruit als ik WebP naar PDF omzet?",
+          "a": "Nee. De WebP-afbeelding wordt gedecodeerd en zonder nieuwe compressie op de originele resolutie in de PDF opgenomen."
+        },
+        {
+          "q": "Kan ik meerdere WebP-bestanden tegelijk omzetten?",
+          "a": "Ja. Kies meerdere WebP-afbeeldingen en ze worden gecombineerd in één PDF met meerdere pagina's, één afbeelding per pagina."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je WebP om naar PDF",
+        "intro": "WebP naar PDF zet WebP-afbeeldingen — het formaat dat veel websites tegenwoordig gebruiken — om naar PDF's, één PDF per afbeelding.",
+        "steps": [
+          "Kies een of meer WebP-afbeeldingen",
+          "Klik op Omzetten naar PDF",
+          "Download elke PDF, of gebruik Alles downloaden voor een ZIP"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "tiff-to-pdf": {
+      "slug": "tiff-naar-pdf",
+      "name": "TIFF naar PDF",
+      "description": "TIFF-afbeeldingen omzetten naar PDF-documenten",
+      "seoTitle": "TIFF naar PDF — TIFF-afbeeldingen gratis online omzetten",
+      "metaDescription": "Zet TIFF- en TIF-afbeeldingen om naar PDF. Ondersteunt TIFF's met meerdere pagina's. Gratis verwerking in je browser, zonder bestandsupload.",
+      "faqs": [
+        {
+          "q": "Worden TIFF-bestanden met meerdere pagina's ondersteund?",
+          "a": "Ja. TIFF-bestanden met meerdere pagina's worden opgesplitst, en elke pagina wordt een aparte pagina in de PDF."
+        },
+        {
+          "q": "Welke TIFF-compressietypen worden ondersteund?",
+          "a": "De tool verwerkt ongecomprimeerde, LZW- en PackBits-TIFF-bestanden. TIFF's met JPEG-compressie worden ook ondersteund."
+        },
+        {
+          "q": "Kan ik meerdere TIFF-bestanden tegelijk omzetten?",
+          "a": "Ja. Kies meerdere TIFF-bestanden en ze worden allemaal omgezet, waarbij alle pagina's in één PDF worden gecombineerd."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je TIFF om naar PDF",
+        "intro": "TIFF naar PDF zet TIFF-afbeeldingen, veelgebruikt door scanners en faxsoftware, om naar PDF's, één PDF per bestand.",
+        "steps": [
+          "Kies een of meer TIFF-bestanden",
+          "Klik op Omzetten naar PDF",
+          "Download elke PDF, of gebruik Alles downloaden voor een ZIP"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "svg-to-pdf": {
+      "slug": "svg-naar-pdf",
+      "name": "SVG naar PDF",
+      "description": "SVG-vectorafbeeldingen omzetten naar PDF",
+      "seoTitle": "SVG naar PDF — SVG-bestanden gratis omzetten naar PDF",
+      "metaDescription": "Zet SVG-bestanden om naar PDF in je browser. Gratis, zonder upload en account — je SVG's verlaten nooit je apparaat. Scherp resultaat, één of meer bestanden.",
+      "faqs": [
+        {
+          "q": "Blijft de vectorkwaliteit behouden als ik SVG naar PDF omzet?",
+          "a": "Nee — de SVG wordt weergegeven als afbeelding met een hoge resolutie (tot 3x de eigen grootte) en op een pagina met de originele afmetingen geplaatst. Zo blijft hij scherp op het scherm en bij afdrukken, maar is hij geen bewerkbare vectorafbeelding meer. Wil je echte vectoruitvoer, exporteer dan naar PDF vanuit een vectorprogramma zoals Inkscape of Illustrator."
+        },
+        {
+          "q": "Kan ik SVG-bestanden met externe bronnen omzetten?",
+          "a": "SVG's die naar externe afbeeldingen of lettertypen verwijzen, worden mogelijk niet volledig weergegeven. Op zichzelf staande SVG's met ingesloten bronnen werken het best."
+        },
+        {
+          "q": "Is dit gratis?",
+          "a": "Ja. SVG naar PDF omzetten is helemaal gratis, zonder limieten, zonder watermerken en zonder account."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je SVG om naar PDF",
+        "intro": "SVG naar PDF zet SVG-afbeeldingen om naar PDF's, één PDF per bestand — handig om logo's en diagrammen te sturen naar mensen die geen SVG kunnen openen.",
+        "steps": [
+          "Kies een of meer SVG-bestanden",
+          "Klik op Omzetten naar PDF",
+          "Download elke PDF, of gebruik Alles downloaden voor een ZIP"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "epub-to-pdf": {
+      "slug": "epub-naar-pdf",
+      "name": "EPUB naar PDF",
+      "description": "EPUB-e-books omzetten naar PDF-documenten",
+      "seoTitle": "EPUB naar PDF — e-books gratis online omzetten naar PDF",
+      "metaDescription": "Zet EPUB-e-books om naar PDF in je browser. Kies tussen een opmaak als afbeelding of selecteerbare tekst. Gratis, zonder software te installeren.",
+      "faqs": [
+        {
+          "q": "Wat is een EPUB-bestand?",
+          "a": "EPUB (Electronic Publication) is een veelgebruikt e-bookformaat dat door de meeste e-readers en lees-apps wordt ondersteund. Het bevat inhoud op basis van HTML met CSS-opmaak."
+        },
+        {
+          "q": "Wat is het verschil tussen de ontwerp- en de tekstmodus?",
+          "a": "De modus Exact ontwerp geeft elk hoofdstuk weer als afbeelding, met behoud van indeling, afbeeldingen en inline-opmaak; gekoppelde stylesheets en ingesloten eigen lettertypen worden niet geladen, dus die delen vallen terug op standaardlettertypen en -stijlen. De modus Selecteerbare tekst haalt de tekstinhoud eruit en zet die opnieuw op in een overzichtelijke PDF met selecteerbare tekst."
+        },
+        {
+          "q": "Werkt dit met EPUB's met DRM-beveiliging?",
+          "a": "Nee. EPUB's met DRM-beveiliging kunnen niet worden omgezet. Alleen onbeveiligde EPUB-bestanden worden ondersteund."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je EPUB om naar PDF",
+        "intro": "EPUB naar PDF maakt van een e-book een PDF die je overal kunt afdrukken of lezen. Kies een kopie met exact ontwerp of een eenvoudigere met selecteerbare tekst.",
+        "steps": [
+          "Kies je .epub-bestand (alleen e-books zonder DRM)",
+          "Kies Exact ontwerp of Selecteerbare tekst",
+          "Klik op Omzetten naar PDF om hem te downloaden"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "pdf-to-jpg": {
+      "slug": "pdf-naar-jpg",
+      "name": "PDF naar JPG",
+      "description": "PDF-pagina's omzetten naar JPG-afbeeldingen",
+      "seoTitle": "PDF naar JPG — PDF-pagina's gratis omzetten naar afbeelding",
+      "metaDescription": "Zet PDF-pagina's om naar JPG-afbeeldingen van hoge kwaliteit. Sla alle pagina's of specifieke pagina's op als afbeelding. Gratis, zonder account of watermerk.",
+      "faqs": [
+        {
+          "q": "Welke resolutie krijgen de afbeeldingen?",
+          "a": "Afbeeldingen worden opgeslagen in de hoogste resolutie die in de PDF zit, meestal 150-300 DPI, afhankelijk van de bron."
+        },
+        {
+          "q": "Kan ik specifieke pagina's omzetten?",
+          "a": "Ja. Zet alle pagina's om of geef een paginabereik op om alleen de pagina's te krijgen die je nodig hebt."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je PDF om naar JPG",
+        "intro": "PDF naar JPG slaat elke pagina van een PDF op als afbeelding, in JPEG of PNG, in standaard (144 DPI) of hoge (216 DPI) resolutie.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Kies JPEG of PNG, en Standaard of Hoge resolutie",
+          "Klik op Omzetten naar afbeeldingen",
+          "Download losse pagina's, of alle pagina's samen als ZIP"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "pdf-to-word": {
+      "slug": "pdf-naar-word",
+      "name": "PDF naar Word",
+      "description": "Een PDF omzetten naar een bewerkbaar document (DOCX)",
+      "seoTitle": "PDF naar Word — PDF gratis omzetten naar bewerkbare DOCX",
+      "metaDescription": "Zet de tekst van een PDF om naar een bewerkbaar Word-bestand (DOCX), pagina voor pagina. Gratis, in je browser, zonder account en zonder upload.",
+      "faqs": [
+        {
+          "q": "Behoudt het Word-bestand de opmaak en afbeeldingen?",
+          "a": "Nee. De tekst komt mee als bewerkbare koppen en alinea's, met een kop voor elke pagina; afbeeldingen en complexe indelingen worden niet nagebouwd. De tool is bedoeld om de tekst opnieuw te gebruiken, niet om een kopie te maken die er hetzelfde uitziet."
+        },
+        {
+          "q": "Werkt dit met gescande PDF's?",
+          "a": "Gescande PDF's hebben eerst OCR nodig om de tekst eruit te halen. Voer OCR uit en zet het resultaat daarna om naar Word voor het beste resultaat."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je PDF om naar Word",
+        "intro": "PDF naar Word haalt de tekst uit een PDF en zet die in een bewerkbaar .docx-bestand, met een kop voor elke pagina. Alleen de tekst gaat mee, niet de opmaak: afbeeldingen en complexe opmaak worden niet overgenomen.",
+        "steps": [
+          "Kies een of meer PDF's (gebruik eerst OCR PDF bij gescande documenten)",
+          "Klik op Omzetten naar Word",
+          "Download het .docx-bestand en open het in Word, Google Docs of LibreOffice"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "pdf-to-powerpoint": {
+      "slug": "pdf-naar-powerpoint",
+      "name": "PDF naar PowerPoint",
+      "description": "Een PDF omzetten naar bewerkbare dia's (PPTX)",
+      "seoTitle": "PDF naar PowerPoint — PDF omzetten naar bewerkbare PPTX",
+      "metaDescription": "Zet een PDF om naar bewerkbare PowerPoint-dia's (PPTX): koppen worden titels, alinea's worden opsommingstekens. Gratis, zonder account of upload.",
+      "faqs": [
+        {
+          "q": "Wordt elke PDF-pagina een dia?",
+          "a": "Meestal wel. Elke pagina begint een nieuwe dia, en een pagina met veel tekst loopt door op extra dia's, zodat er niets wegvalt. Koppen worden diatitels en alinea's worden opsommingstekens."
+        },
+        {
+          "q": "Kan ik de dia's daarna bewerken?",
+          "a": "Ja. Je krijgt een standaard PPTX-bestand dat je in elk programma kunt bewerken dat met PowerPoint overweg kan."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je PDF om naar PowerPoint",
+        "intro": "PDF naar PowerPoint maakt van een PDF bewerkbare dia's: koppen worden diatitels, alinea's worden opsommingstekens en lange pagina's lopen door op extra dia's.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Klik op Omzetten naar PowerPoint",
+          "Download het .pptx-bestand en werk de dia's bij in PowerPoint, Keynote of Google Presentaties"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "pdf-to-excel": {
+      "slug": "pdf-naar-excel",
+      "name": "PDF naar Excel",
+      "description": "PDF-tekst exporteren naar een spreadsheet, één regel per rij (XLSX)",
+      "seoTitle": "PDF naar Excel — PDF-tekst exporteren naar een spreadsheet",
+      "metaDescription": "Exporteer de tekst van een PDF naar een Excel-werkmap (XLSX): één werkblad per pagina, één tekstregel per rij. Gratis, in je browser, zonder account.",
+      "faqs": [
+        {
+          "q": "Worden tabellen opnieuw in kolommen opgebouwd?",
+          "a": "Nee. Elke tekstregel van een pagina komt in één cel, dus tabelrijen belanden in één cel in plaats van in aparte kolommen. Gebruik daarna Tekst naar kolommen (of Power Query) in Excel om ze te splitsen."
+        },
+        {
+          "q": "Hoe is de werkmap ingedeeld?",
+          "a": "Je krijgt een werkblad Samenvatting met het aantal regels en tekens per pagina, en daarna één werkblad per PDF-pagina met elke tekstregel in een eigen rij."
+        },
+        {
+          "q": "Werkt het met gescande PDF's?",
+          "a": "Alleen als de PDF een tekstlaag heeft. Gebruik bij gescande pagina's eerst OCR PDF, zodat er tekst is om te exporteren."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je PDF om naar Excel",
+        "intro": "PDF naar Excel exporteert de tekst van een PDF naar een .xlsx-werkmap: een samenvattingsblad en daarna één werkblad per pagina met één tekstregel per rij. Tabelkolommen worden niet opnieuw opgebouwd.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Klik op Omzetten naar Excel",
+          "Download het .xlsx-bestand en gebruik Tekst naar kolommen in Excel om rijen over cellen te verdelen"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "pdf-to-pdfa": {
+      "slug": "pdf-naar-pdfa",
+      "name": "PDF naar PDF/A",
+      "description": "PDF omzetten naar het archiefformaat PDF/A",
+      "seoTitle": "PDF naar PDF/A — omzetten naar archiefformaat",
+      "metaDescription": "Zet gewone PDF-bestanden om naar het archiefformaat PDF/A, voor bewaring op lange termijn en archiefeisen. Gratis conversie in je browser.",
+      "faqs": [
+        {
+          "q": "Wat is PDF/A?",
+          "a": "PDF/A is een ISO-gestandaardiseerde versie van PDF voor archivering op lange termijn. Het zorgt ervoor dat documenten in de toekomst exact kunnen worden weergegeven."
+        },
+        {
+          "q": "Waarom zou ik naar PDF/A omzetten?",
+          "a": "Veel sectoren vereisen PDF/A voor het bewaren van documenten. Het zorgt ervoor dat lettertypen zijn ingesloten, kleuren zijn vastgelegd en het document op zichzelf staat."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je PDF om naar PDF/A",
+        "intro": "PDF naar PDF/A kopieert je pagina's naar een nieuw document en voegt PDF/A-identificatiemetadata toe voor archivering. Moet een archief strikte conformiteit kunnen bevestigen, controleer het resultaat dan met een validator zoals veraPDF.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Klik op Omzetten naar PDF/A",
+          "Download de archiefkopie"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "pdf-to-markdown": {
+      "slug": "pdf-naar-markdown",
+      "name": "PDF naar Markdown",
+      "description": "PDF-inhoud omzetten naar Markdown-tekst",
+      "seoTitle": "PDF naar Markdown — PDF-inhoud omzetten naar Markdown",
+      "metaDescription": "Zet de tekst van een PDF om naar een overzichtelijk Markdown-bestand (.md) voor notities, documentatie en AI-tools. Gratis, in je browser, zonder account.",
+      "faqs": [
+        {
+          "q": "Blijft de opmaak behouden in Markdown?",
+          "a": "De tekst komt in leesvolgorde mee als eenvoudige Markdown. Complexe indelingen, tabellen en afbeeldingen worden vereenvoudigd, dus bekijk het voorbeeld voordat je op de structuur vertrouwt."
+        },
+        {
+          "q": "Kan ik specifieke pagina's omzetten?",
+          "a": "Het hele document wordt omgezet. Wil je maar een paar pagina's omzetten, gebruik dan eerst Pagina's extraheren en zet dat bestand om."
+        }
+      ],
+      "howTo": {
+        "title": "Zo zet je PDF om naar Markdown",
+        "intro": "PDF naar Markdown haalt de tekst uit een PDF als .md-bestand — schone invoer voor notitie-apps, documentatie en AI-tools.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Klik op Omzetten naar Markdown",
+          "Bekijk en kopieer de tekst op de pagina, of download het .md-bestand"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "edit-pdf": {
+      "slug": "pdf-bewerken",
+      "name": "PDF bewerken",
+      "description": "De tekst, koppen en cijfers in een PDF wijzigen",
+      "seoTitle": "PDF bewerken — tekst, koppen en cijfers gratis wijzigen",
+      "metaDescription": "Bewerk tekst, koppen en cijfers in een PDF rechtstreeks in je browser. Verbeter typfouten, werk datums bij en pas dingen aan zonder om te zetten naar Word.",
+      "faqs": [
+        {
+          "q": "Kan ik elke PDF bewerken?",
+          "a": "Elke digitaal gemaakte PDF met selecteerbare tekst kan worden bewerkt. Gescande PDF's hebben eerst OCR nodig om de tekst bewerkbaar te maken."
+        },
+        {
+          "q": "Verandert de opmaak door het bewerken?",
+          "a": "Rechtstreeks bewerken behoudt de oorspronkelijke opmaak. Alleen de tekst die je wijzigt verandert — lettertypen, afstanden en indeling blijven intact."
+        }
+      ],
+      "howTo": {
+        "title": "Zo bewerk je tekst in een PDF",
+        "intro": "Met PDF bewerken pas je bestaande woorden, koppen en cijfers op een pagina aan: klik op een regel en typ, net als in een tekstverwerker.",
+        "steps": [
+          "Kies je PDF",
+          "Klik op een tekstregel op de pagina",
+          "Typ je wijzigingen",
+          "Klik op Bewerkte PDF opslaan om hem te downloaden"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "rotate-pdf": {
+      "slug": "pdf-draaien",
+      "name": "PDF draaien",
+      "description": "PDF-pagina's in elke hoek draaien",
+      "seoTitle": "PDF draaien — PDF-pagina's gratis roteren en opslaan",
+      "metaDescription": "Draai losse pagina's of alle pagina's in een PDF. Zet scheve scans recht, corrigeer de stand en pas de paginarichting aan. Gratis, zonder account.",
+      "faqs": [
+        {
+          "q": "Kan ik losse pagina's draaien?",
+          "a": "Ja. Elke pagina kan apart worden gedraaid — 90°, 180° of 270° — terwijl de andere pagina's ongewijzigd blijven."
+        },
+        {
+          "q": "Heeft draaien invloed op de afdrukkwaliteit?",
+          "a": "Nee. Draaien is een wijziging in de metadata die de viewer vertelt hoe de pagina moet worden weergegeven. De inhoud wordt niet opnieuw opgebouwd."
+        }
+      ],
+      "howTo": {
+        "title": "Zo draai je een PDF en sla je hem op",
+        "intro": "PDF draaien draait pagina's 90°, 180° of 270° en slaat de draaiing op in het bestand, zodat die in elke viewer blijft staan.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Kies de hoek: 90°, 180° of 270°",
+          "Pas hem toe op alle pagina's, of typ specifieke pagina's",
+          "Klik op PDF draaien en download het resultaat"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "add-page-numbers": {
+      "slug": "paginanummers-toevoegen",
+      "name": "Paginanummers toevoegen",
+      "description": "Paginanummers in je PDF zetten",
+      "seoTitle": "Paginanummers toevoegen aan PDF — gratis en zonder upload",
+      "metaDescription": "Zet paginanummers op elke gewenste plek in je PDF. Kies de notatie, de positie en het startnummer. Gratis, in je browser, zonder upload.",
+      "faqs": [
+        {
+          "q": "Waar kan ik paginanummers plaatsen?",
+          "a": "Kies uit linksboven, midden boven, rechtsboven, linksonder, midden onder of rechtsonder."
+        },
+        {
+          "q": "Kan ik de eerste pagina overslaan bij het nummeren?",
+          "a": "Ja. Kies de optie om vanaf een bepaalde pagina te beginnen, zoals pagina 2 of 3, om voorbladen over te slaan."
+        }
+      ],
+      "howTo": {
+        "title": "Zo voeg je paginanummers toe aan een PDF",
+        "intro": "Paginanummers toevoegen zet op elke pagina een nummer op een van zes posities, in de stijl die je kiest.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Kies de positie — boven of onder, links, midden of rechts",
+          "Kies de notatie: ‘1’, ‘Pagina 1’ of ‘1 van N’, en het startnummer",
+          "Klik op Paginanummers toevoegen en download het resultaat"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "add-watermark": {
+      "slug": "pdf-watermerk-toevoegen",
+      "name": "Watermerk toevoegen",
+      "description": "Tekst- of afbeeldingswatermerken toevoegen",
+      "seoTitle": "Watermerk toevoegen aan PDF — gratis tekstwatermerk",
+      "metaDescription": "Zet een tekstwatermerk zoals VERTROUWELIJK of CONCEPT op elke pagina van een PDF. Stel dekking en grootte in. Gratis, zonder account en zonder upload.",
+      "faqs": [
+        {
+          "q": "Kan ik de dekking van het watermerk aanpassen?",
+          "a": "Ja. Stel de transparantie van je watermerk in, van volledig dekkend tot bijna onzichtbaar."
+        },
+        {
+          "q": "Kan ik alle pagina's tegelijk van een watermerk voorzien?",
+          "a": "Ja. Het watermerk wordt in één keer op elke pagina van het document gezet."
+        }
+      ],
+      "howTo": {
+        "title": "Zo voeg je een watermerk toe aan een PDF",
+        "intro": "Watermerk toevoegen zet een tekstwatermerk, zoals VERTROUWELIJK of CONCEPT, over je pagina's, met de dekking en grootte die je instelt.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Typ de tekst van je watermerk",
+          "Stel de dekking en de lettergrootte in",
+          "Klik op Watermerk toevoegen en download het resultaat"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "crop-pdf": {
+      "slug": "pdf-bijsnijden",
+      "name": "PDF bijsnijden",
+      "description": "PDF-pagina's bijsnijden en van formaat veranderen",
+      "seoTitle": "PDF bijsnijden — PDF-pagina's gratis bijsnijden",
+      "metaDescription": "Snijd PDF-pagina's bij en verander hun formaat. Verwijder marges, pas de paginagrootte aan en knip inhoud bij. Gratis, in je browser, zonder upload.",
+      "faqs": [
+        {
+          "q": "Kan ik alle pagina's tegelijk bijsnijden?",
+          "a": "Ja. Pas hetzelfde bijsnijgebied toe op elke pagina, of stel per pagina een ander bijsnijgebied in."
+        },
+        {
+          "q": "Wordt er inhoud verwijderd door bijsnijden?",
+          "a": "Bijsnijden verbergt de inhoud buiten het bijsnijgebied. De verborgen inhoud wordt niet verwijderd en kan later weer zichtbaar worden gemaakt."
+        }
+      ],
+      "howTo": {
+        "title": "Zo snijd je een PDF bij",
+        "intro": "PDF bijsnijden haalt dezelfde marge weg van de boven-, onder-, linker- en rechterkant van elke pagina — ideaal om witruimte of scannerranden weg te knippen.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Stel in hoeveel punten er van elke rand af moet",
+          "Klik op PDF bijsnijden",
+          "Download het bijgesneden bestand"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "sign-pdf": {
+      "slug": "pdf-ondertekenen",
+      "name": "PDF ondertekenen",
+      "description": "Digitale handtekeningen toevoegen aan PDF's",
+      "seoTitle": "PDF ondertekenen — gratis online elektronisch ondertekenen",
+      "metaDescription": "Zet een elektronische handtekening op PDF-documenten. Teken, typ of upload je handtekening. Rechtsgeldig, gratis, zonder account.",
+      "faqs": [
+        {
+          "q": "Zijn elektronische handtekeningen rechtsgeldig?",
+          "a": "Ja. Elektronische handtekeningen zijn rechtsgeldig onder de Amerikaanse ESIGN Act en de Europese eIDAS-verordening, voor vrijwel alle documenten."
+        },
+        {
+          "q": "Kan ik een PDF met een wachtwoord ondertekenen?",
+          "a": "Dan moet je hem eerst ontgrendelen. Een PDF met een wachtwoord kan pas worden bewerkt als het wachtwoord is verwijderd."
+        }
+      ],
+      "howTo": {
+        "title": "Zo onderteken je een PDF",
+        "intro": "PDF ondertekenen zet je handtekening op elke gewenste pagina. Teken hem, typ hem in een handschriftlettertype of upload een afbeelding van je echte handtekening.",
+        "steps": [
+          "Kies de PDF die je moet ondertekenen",
+          "Maak je handtekening: teken, typ of upload een afbeelding",
+          "Kies de pagina, klik waar de handtekening moet komen en pas de grootte aan",
+          "Klik op Ondertekenen en PDF downloaden"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Je handtekening wordt nooit op een server opgeslagen"
+        ]
+      }
+    },
+    "redact-pdf": {
+      "slug": "pdf-zwartlakken",
+      "name": "PDF zwartlakken",
+      "description": "Tekst, afbeeldingen of pagina's permanent zwart maken",
+      "seoTitle": "PDF zwartlakken gratis — tekst onleesbaar maken, geen upload",
+      "metaDescription": "Lak een PDF gratis zwart in je browser: teken vakken over namen, nummers of handtekeningen en ze worden permanent verwijderd. Geen upload, geen account.",
+      "faqs": [
+        {
+          "q": "Is zwartlakken permanent?",
+          "a": "Ja. Elke pagina die je markeert, wordt opnieuw opgebouwd als platte afbeelding met je zwarte vakken erin gebrand, dus de tekst, afbeeldingen en verborgen lagen eronder komen niet in het nieuwe bestand terecht. Pagina's die je niet markeert, worden ongewijzigd overgenomen."
+        },
+        {
+          "q": "Kan zwartgelakte inhoud worden teruggehaald?",
+          "a": "Nee. Anders dan een zwarte rechthoek over tekst tekenen, waarbij de tekst eronder selecteerbaar blijft, worden de gemarkeerde pagina's opnieuw opgebouwd uit een zwartgemaakte afbeelding en wordt de oorspronkelijke pagina-inhoud weggegooid. Test het zelf: probeer iets te kopiëren uit een zwartgelakt gebied — er komt niets terug."
+        },
+        {
+          "q": "Wordt mijn document ergens naartoe geüpload?",
+          "a": "Nee. Het zwartlakken gebeurt volledig in je browsertabblad, dus het bestand verlaat nooit je apparaat. Dat is vooral belangrijk voor precies de documenten die mensen zwartlakken: identiteitsbewijzen, medische dossiers, contracten en bankafschriften."
+        },
+        {
+          "q": "Blijft de rest van een zwartgelakte pagina selecteerbare tekst?",
+          "a": "Nee. Een pagina die je markeert, wordt als geheel een afbeelding, dus de overige tekst kan niet meer worden geselecteerd of doorzocht. Gebruik daarna OCR als je hem weer doorzoekbaar wilt maken; niet-gemarkeerde pagina's behouden hun tekst."
+        },
+        {
+          "q": "Kan ik een hele pagina zwartlakken?",
+          "a": "Ja. Schakel over naar ‘Hele pagina's’ en klik op elke pagina die weg moet. Die blijft als volledig zwarte pagina in het document staan, dus het aantal pagina's en de nummering veranderen niet."
+        }
+      ],
+      "howTo": {
+        "title": "Zo lak je een PDF zwart",
+        "intro": "PDF zwartlakken maakt wat je markeert permanent zwart. Elke gemarkeerde pagina wordt opnieuw opgebouwd als afbeelding, dus de verborgen tekst is echt uit het bestand verdwenen — niet alleen afgedekt met een vak.",
+        "steps": [
+          "Kies je PDF",
+          "Teken vakken over de tekst of afbeeldingen die weg moeten, of kies hele pagina's",
+          "Klik op Zwartlakken",
+          "Download de zwartgelakte PDF en controleer hem voordat je hem deelt"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Echt zwartlakken: de verborgen inhoud kan er niet meer uit worden gekopieerd"
+        ]
+      }
+    },
+    "unlock-pdf": {
+      "slug": "pdf-ontgrendelen",
+      "name": "PDF ontgrendelen",
+      "description": "Wachtwoordbeveiliging van een PDF verwijderen",
+      "seoTitle": "PDF ontgrendelen — wachtwoord gratis verwijderen",
+      "metaDescription": "Verwijder de wachtwoordbeveiliging van PDF-documenten. Ontgrendel versleutelde PDF's om ze te bewerken, af te drukken of te delen. Gratis, zonder account.",
+      "faqs": [
+        {
+          "q": "Heb ik het wachtwoord nodig om een PDF te ontgrendelen?",
+          "a": "Ja. Je moet het huidige wachtwoord kennen om het te verwijderen. PDF-versleuteling is niet te omzeilen zonder het wachtwoord."
+        },
+        {
+          "q": "Verandert ontgrendelen de inhoud van de PDF?",
+          "a": "Nee. Ontgrendelen verwijdert alleen de wachtwoordbeveiliging. De inhoud van het document blijft ongewijzigd."
+        }
+      ],
+      "howTo": {
+        "title": "Zo verwijder je een wachtwoord van een PDF",
+        "intro": "PDF ontgrendelen slaat een kopie van een beveiligde PDF op zonder wachtwoord of beperkingen. Je moet het recht hebben om het bestand te ontgrendelen, en het wachtwoord als het bestand daar bij het openen om vraagt.",
+        "steps": [
+          "Kies de beveiligde PDF",
+          "Voer het wachtwoord in als het bestand er een nodig heeft om te openen",
+          "Klik op PDF ontgrendelen om een ontgrendelde kopie te downloaden"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "protect-pdf": {
+      "slug": "pdf-beveiligen",
+      "name": "PDF beveiligen",
+      "description": "Wachtwoordbeveiliging toevoegen aan een PDF",
+      "seoTitle": "PDF beveiligen met wachtwoord — gratis en zonder upload",
+      "metaDescription": "Beveilig PDF-documenten met een wachtwoord. Versleutel je bestanden met AES-256. Gratis, in je browser, zonder upload.",
+      "faqs": [
+        {
+          "q": "Hoe sterk is wachtwoordbeveiliging van een PDF?",
+          "a": "Moderne PDF-versleuteling gebruikt AES-256, dezelfde standaard die banken en overheden gebruiken. Met een sterk wachtwoord zijn brute-force-aanvallen niet haalbaar."
+        },
+        {
+          "q": "Wat gebeurt er als ik het wachtwoord vergeet?",
+          "a": "Er is geen manier om het te herstellen. Zonder het wachtwoord is het bestand voorgoed ontoegankelijk. Bewaar het dus altijd op een veilige plek."
+        }
+      ],
+      "howTo": {
+        "title": "Zo beveilig je een PDF met een wachtwoord",
+        "intro": "PDF beveiligen versleutelt een PDF met een wachtwoord om hem te openen, een wachtwoord om de rechten te wijzigen, of allebei — en kan afdrukken, kopiëren of bewerken blokkeren.",
+        "steps": [
+          "Kies je PDF",
+          "Voer een openingswachtwoord, een eigenaarswachtwoord of allebei in",
+          "Open eventueel de rechteninstellingen om afdrukken, kopiëren en bewerken te beperken",
+          "Klik op PDF beveiligen om het versleutelde bestand te downloaden"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Je wachtwoord verlaat nooit je apparaat"
+        ]
+      }
+    },
+    "compare-pdf": {
+      "slug": "pdf-vergelijken",
+      "name": "PDF vergelijken",
+      "description": "Twee PDF-bestanden vergelijken op verschillen",
+      "seoTitle": "PDF vergelijken — verschillen tussen twee PDF's vinden",
+      "metaDescription": "Controleer of twee PDF's overeenkomen: krijg een gelijkenisscore en precies de pagina's die verschillen. Gratis, in je browser, zonder upload.",
+      "faqs": [
+        {
+          "q": "Wat laat de vergelijking zien?",
+          "a": "Of de twee bestanden identiek zijn, een gelijkenispercentage, welke paginanummers verschillen, en per bestand het aantal pagina's, de grootte en de documentgegevens. De tool wijst je de gewijzigde pagina's aan, maar markeert geen losse woorden."
+        },
+        {
+          "q": "Kan ik gescande PDF's vergelijken?",
+          "a": "Gebruik eerst OCR PDF op beide scans. De vergelijking werkt op de tekst in de bestanden, dus scans die alleen uit afbeeldingen bestaan, hebben niets om te vergelijken."
+        }
+      ],
+      "howTo": {
+        "title": "Zo vergelijk je twee PDF's",
+        "intro": "PDF vergelijken legt een origineel naast een gewijzigde versie en vertelt je of ze overeenkomen, hoe vergelijkbaar ze zijn en welke pagina's verschillen.",
+        "steps": [
+          "Kies twee PDF's: eerst het origineel, dan de gewijzigde versie",
+          "Klik op PDF's vergelijken",
+          "Lees het resultaat: de gelijkenis, de lijst met verschillende pagina's en de gegevens van elk bestand"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "ai-summarizer": {
+      "slug": "pdf-samenvatten",
+      "name": "Samenvatter",
+      "description": "PDF-inhoud samenvatten",
+      "seoTitle": "PDF samenvatten — gratis samenvatting, zonder upload",
+      "metaDescription": "Krijg in een paar seconden de kernpunten en hoofdonderwerpen van een PDF. De samenvatting wordt op je apparaat gemaakt, dus het document wordt nooit geüpload.",
+      "faqs": [
+        {
+          "q": "Hoe werkt de samenvatter?",
+          "a": "Elke zin krijgt een score op basis van hoeveel kernbegrippen van het document erin staan, en de sterkste zinnen worden bewaard als kernpunten. De woorden zijn die van de auteur zelf, niet herschreven door een chatbot — controleer belangrijke documenten altijd aan de hand van het origineel."
+        },
+        {
+          "q": "Wordt mijn document naar een server gestuurd?",
+          "a": "Nee. De samenvatting wordt in je browser berekend en de PDF verlaat nooit je apparaat."
+        }
+      ],
+      "howTo": {
+        "title": "Zo vat je een PDF samen",
+        "intro": "De samenvatter kiest de belangrijkste zinnen uit een PDF en zet de kernpunten en hoofdonderwerpen op een rij. Alles gebeurt op je eigen apparaat — geen enkele AI-dienst krijgt je document te zien.",
+        "steps": [
+          "Kies je PDF",
+          "Klik op Samenvatting maken",
+          "Lees de kernpunten en onderwerpen, en kopieer ze als je ze ergens anders nodig hebt"
+        ],
+        "benefits": [
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    },
+    "translate-pdf": {
+      "slug": "pdf-vertalen",
+      "name": "PDF vertalen",
+      "description": "PDF-inhoud vertalen naar elke taal",
+      "seoTitle": "PDF vertalen — PDF-tekst gratis vertalen naar 42 talen",
+      "metaDescription": "Vertaal de tekst van een PDF naar 42 talen en download hem als nieuwe PDF. Gratis, zonder account. De tekst wordt naar een vertaaldienst gestuurd.",
+      "faqs": [
+        {
+          "q": "Hoeveel talen worden ondersteund?",
+          "a": "42, met automatische herkenning van de brontaal."
+        },
+        {
+          "q": "Blijft de opmaak behouden?",
+          "a": "Nee. Je krijgt de vertaalde tekst op het scherm en als nieuwe PDF met alleen tekst; de oorspronkelijke indeling en afbeeldingen worden niet nagebouwd."
+        },
+        {
+          "q": "Wordt mijn document geüpload?",
+          "a": "Dit is de enige tool van Slate PDF die gegevens online verstuurt: de uitgelezen tekst gaat naar een gratis openbare vertaaldienst. Gebruik hem niet voor vertrouwelijke documenten."
+        }
+      ],
+      "howTo": {
+        "title": "Zo vertaal je een PDF",
+        "intro": "PDF vertalen vertaalt de tekst van een PDF naar een van 42 talen en geeft je de vertaling op het scherm of als nieuwe PDF met alleen tekst. Anders dan onze andere tools stuurt deze de tekst naar een gratis online vertaaldienst — de pagina meldt dat voordat je begint.",
+        "steps": [
+          "Kies een PDF met echte tekst (gebruik eerst OCR PDF bij scans)",
+          "Kies de brontaal, of laat die op Automatisch herkennen staan, en kies de doeltaal",
+          "Klik op Vertalen",
+          "Kopieer de vertaling, of download hem als PDF"
+        ],
+        "benefits": [
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Eerlijk over privacy: dit is de enige tool die tekst online verstuurt, en dat staat er ook bij",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ]
+      }
+    }
+  }
+}
