@@ -12,5 +12,5 @@
   "Summarizer": "أداة التلخيص",
   "Summary generated": "تم إنشاء الملخص",
   "Top topics": "أبرز الموضوعات",
-  "{words} words from {original} original words ({percent}% reduction)": "عدد الكلمات: {words} من أصل {original} كلمة ({percent}% تقليص)"
+  "{words} words from {original} original words ({percent}% reduction)": "عدد الكلمات: {words} من أصل {original} في النص الأصلي (تقليص بنسبة {percent}%)"
 }
