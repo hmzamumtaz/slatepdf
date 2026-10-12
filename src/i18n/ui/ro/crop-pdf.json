@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Decupează PDF",
+  "Margins (points)": "Margini (puncte)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Valori în puncte (1 inch = 72 de puncte). Se taie de la fiecare margine.",
+  "bottom": "jos",
+  "left": "stânga",
+  "right": "dreapta",
+  "top": "sus"
+}

@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "A fost creat {slides} diapozitiv din {pages} pagină.",
+  "Built {slides} slide from {pages} pages.": "A fost creat {slides} diapozitiv (pagini sursă: {pages}).",
+  "Built {slides} slides from {pages} page.": "Diapozitive create: {slides} din {pages} pagină.",
+  "Built {slides} slides from {pages} pages.": "Diapozitive create: {slides} (pagini sursă: {pages}).",
+  "Convert to PowerPoint": "Convertește în PowerPoint",
+  "Reading page {current} of {total}...": "Se citește pagina {current} din {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Citește structura documentului — titlurile devin titluri de diapozitive, iar paragrafele devin puncte de listă — în loc să lipească text brut. Paginile lungi continuă pe diapozitive suplimentare."
+}

@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "חזרה לכל הכלים",
+  "Enter the PDF password (leave empty if none)": "הזנת סיסמת ה-PDF (להשאיר ריק אם אין)",
+  "File": "קובץ",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "יש להשתמש רק בקובצי PDF שבבעלותכם או שיש לכם הרשאה לשנות. הסרת אבטחה מ-PDF של מישהו אחר עלולה להפר את חוקי זכויות היוצרים או הפרטיות.",
+  "PDF unlocked and downloaded": "נעילת ה-PDF בוטלה והקובץ הורד",
+  "Password (if required)": "סיסמה (אם נדרשת)",
+  "Remove password protection from a PDF file": "הסרת הגנת סיסמה מקובץ PDF",
+  "Size": "גודל",
+  "Unlock PDF": "ביטול נעילת PDF",
+  "Unlocking...": "מבטל נעילה..."
+}

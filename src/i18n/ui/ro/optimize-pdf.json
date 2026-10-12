@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Reconstruiește PDF-ul fără pierderi, cu fluxuri de obiecte comprimate, și elimină obiectele nefolosite și reviziile vechi. Textul rămâne selectabil, iar imaginile nu sunt atinse.",
+  "Optimize PDF": "Optimizează PDF",
+  "Remove document metadata (title, author, etc.)": "Elimină metadatele documentului (titlu, autor etc.)",
+  "Saved {size} KB ({percent}% smaller).": "Economisit: {size} KB (cu {percent}% mai mic).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Acest PDF este deja optimizat — a fost returnat neschimbat. Pentru o reducere mai mare, încearcă instrumentul Comprimare PDF."
+}

@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "עמודים למחיקה (מופרדים בפסיקים, למשל 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "יש להזין את העמודים למחיקה (למשל 1, 3, 5-8)",
+  "Preview after removal:": "תצוגה מקדימה אחרי המחיקה:",
+  "Remove Pages": "מחיקת עמודים",
+  "Total pages: {total} | Remaining: {count}": "סך הכול עמודים: {total} | נשארים: {count}",
+  "e.g., 1, 3, 5, 7": "למשל 1, 3, 5, 7"
+}

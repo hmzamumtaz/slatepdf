@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Introdu noua ordine a paginilor (separate prin virgulă, de ex. 3,1,2,4,5)",
+  "Organize PDF": "Organizează PDF",
+  "Please enter a page order": "Introdu o ordine a paginilor",
+  "Preview in new order:": "Previzualizare în noua ordine:",
+  "Total pages: {total} | Reordered: {count}": "Total pagini: {total} | Reordonate: {count}",
+  "e.g., 3,1,2,4,5": "de ex. 3,1,2,4,5"
+}

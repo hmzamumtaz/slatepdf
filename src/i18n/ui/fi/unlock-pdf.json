@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Takaisin kaikkiin työkaluihin",
+  "Enter the PDF password (leave empty if none)": "Anna PDF:n salasana (jätä tyhjäksi, jos sitä ei ole)",
+  "File": "Tiedosto",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "Käytä vain PDF-tiedostoja, jotka omistat tai joiden muokkaamiseen sinulla on lupa. Suojauksen poistaminen jonkun toisen PDF:stä voi rikkoa tekijänoikeus- tai tietosuojalakeja.",
+  "PDF unlocked and downloaded": "PDF:n lukitus avattu ja ladattu",
+  "Password (if required)": "Salasana (tarvittaessa)",
+  "Remove password protection from a PDF file": "Poista salasanasuojaus PDF-tiedostosta",
+  "Size": "Koko",
+  "Unlock PDF": "Avaa PDF:n lukitus",
+  "Unlocking...": "Avataan lukitusta..."
+}
