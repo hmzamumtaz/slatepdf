@@ -209,7 +209,7 @@ export const newPosts3: BlogPost[] = [
   // Article 5: How to Convert TIFF to PDF
   {
     slug: 'how-to-convert-tiff-to-pdf',
-    title: 'How to Convert TIFF to PDF (Scans, Faxes and Multi-Page Files)',
+    title: 'How to Convert TIFF to PDF (Scans, Faxes, Multi-Page)',
     description: 'Turn TIFF scans and faxes into PDF documents for free. Handles single and multi-page TIFFs, keeping resolution and clarity.',
     keyword: 'how to convert tiff to pdf',
     category: 'Converting',
