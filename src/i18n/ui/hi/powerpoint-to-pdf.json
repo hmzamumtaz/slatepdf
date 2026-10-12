@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "PDF में बदलें",
+  "Converted {slides} slide including {images} image.": "{images} इमेज सहित {slides} स्लाइड बदली गई।",
+  "Converted {slides} slide including {images} images.": "{images} इमेज सहित {slides} स्लाइड बदली गई।",
+  "Converted {slides} slide.": "{slides} स्लाइड बदली गई।",
+  "Converted {slides} slides including {images} image.": "{images} इमेज सहित {slides} स्लाइड बदली गईं।",
+  "Converted {slides} slides including {images} images.": "{images} इमेज सहित {slides} स्लाइड बदली गईं।",
+  "Converted {slides} slides.": "{slides} स्लाइड बदली गईं।",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "हर स्लाइड को उसके मूल साइज़ में सफ़ेद पेज पर दोबारा बनाया जाता है — टेक्स्ट अपनी असली जगह, साइज़ और रंग के साथ, और साथ में तस्वीरें, टेबल और ग्रुप किए गए आकार।",
+  "Rendering slide {current} of {total}...": "स्लाइड {current} / {total} रेंडर हो रही है..."
+}

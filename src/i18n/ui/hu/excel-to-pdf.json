@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "A(z) „{name}” fájl nem olvasható Excel-munkafüzetként. Ellenőrizd, hogy érvényes .xlsx fájl-e.",
+  "Convert to PDF": "Konvertálás PDF-be",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "A régi .xls fájlok nem támogatottak. Mentsd el a fájlt .xlsx formátumban az Excelben, és próbáld újra.",
+  "No data found in this workbook.": "Ebben a munkafüzetben nincs adat."
+}

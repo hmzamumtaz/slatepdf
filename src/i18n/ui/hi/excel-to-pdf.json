@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" को Excel वर्कबुक के रूप में नहीं पढ़ा जा सका। पक्का करें कि यह सही .xlsx फ़ाइल है।",
+  "Convert to PDF": "PDF में बदलें",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "पुरानी .xls फ़ाइलें सपोर्ट नहीं हैं। Excel में फ़ाइल को .xlsx के रूप में सेव करें और फिर से कोशिश करें।",
+  "No data found in this workbook.": "इस वर्कबुक में कोई डेटा नहीं मिला।"
+}

@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "पेज निकालें",
+  "Pages to extract (e.g., 1, 3, 5-8)": "निकालने वाले पेज (जैसे, 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "कृपया निकालने वाले पेज लिखें (जैसे, 1, 3, 5-8)",
+  "Preview of extracted pages:": "निकाले गए पेजों का प्रीव्यू:",
+  "Total pages: {total} | Extracting: {count}": "कुल पेज: {total} | निकाले जा रहे: {count}",
+  "e.g., 1, 3, 5": "जैसे, 1, 3, 5"
+}

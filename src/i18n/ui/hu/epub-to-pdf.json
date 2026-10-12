@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Vissza az összes eszközhöz",
+  "Convert EPUB ebooks to PDF documents": "EPUB e-könyvek konvertálása PDF dokumentummá",
+  "Convert to PDF": "Konvertálás PDF-be",
+  "Converting...": "Konvertálás...",
+  "EPUB to PDF": "EPUB PDF konvertálás",
+  "Exact design": "Pontos dizájn",
+  "Extracting EPUB content...": "Az EPUB tartalmának kinyerése...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Kinyeri a szöveges tartalmat, és letisztult, kereshető PDF-be tördeli újra. Regényekhez és szövegközpontú könyvekhez a legjobb.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Megtartja minden fejezet elrendezését, képeit és beágyazott stílusait. A hivatkozott stíluslapok és a beágyazott egyéni betűtípusok nem töltődnek be, ezek helyett alapértelmezett stílusok jelennek meg. Illusztrált könyvekhez a legjobb.",
+  "PDF downloaded": "PDF letöltve",
+  "PDF output": "PDF kimenet",
+  "Selectable text": "Kijelölhető szöveg",
+  "Upload .epub file": ".epub fájl feltöltése",
+  "Upload an EPUB file first.": "Előbb tölts fel egy EPUB fájlt."
+}

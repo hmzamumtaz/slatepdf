@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Szerző: {value}",
+  "Back to all tools": "Vissza az összes eszközhöz",
+  "Changed": "Módosított",
+  "Compare Another": "Újabb összehasonlítás",
+  "Compare PDF": "PDF összehasonlítás",
+  "Compare PDFs": "PDF-ek összehasonlítása",
+  "Compare two PDFs and see the differences": "Hasonlíts össze két PDF-et, és nézd meg az eltéréseket",
+  "Comparing...": "Összehasonlítás...",
+  "Comparison complete": "Az összehasonlítás kész",
+  "Creator: {value}": "Létrehozó: {value}",
+  "Differing pages": "Eltérő oldalak",
+  "File 1": "1. fájl",
+  "File 2": "2. fájl",
+  "Files are identical": "A fájlok azonosak",
+  "Original": "Eredeti",
+  "Page {page}": "{page}. oldal",
+  "Pages: {pages} | Size: {size}": "Oldalak: {pages} | Méret: {size}",
+  "Title: {value}": "Cím: {value}",
+  "similarity: {value}%": "hasonlóság: {value}%",
+  "{count} page differ": "{count} oldal eltér",
+  "{count} pages differ": "{count} oldal eltér"
+}

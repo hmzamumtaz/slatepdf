@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Add meg az új oldalsorrendet (vesszővel elválasztva, pl. 3,1,2,4,5)",
+  "Organize PDF": "PDF rendezése",
+  "Please enter a page order": "Adj meg egy oldalsorrendet",
+  "Preview in new order:": "Előnézet az új sorrendben:",
+  "Total pages: {total} | Reordered: {count}": "Összes oldal: {total} | Átrendezve: {count}",
+  "e.g., 3,1,2,4,5": "pl. 3,1,2,4,5"
+}

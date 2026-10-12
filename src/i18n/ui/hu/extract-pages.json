@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Oldalak kinyerése",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Kinyerendő oldalak (pl. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Add meg a kinyerendő oldalakat (pl. 1, 3, 5-8)",
+  "Preview of extracted pages:": "A kinyert oldalak előnézete:",
+  "Total pages: {total} | Extracting: {count}": "Összes oldal: {total} | Kinyerés: {count}",
+  "e.g., 1, 3, 5": "pl. 1, 3, 5"
+}

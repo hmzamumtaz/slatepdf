@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Oldaltartományok (pl. 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Adj meg érvényes oldaltartományokat",
+  "Preview of pages in ranges:": "A tartományokba eső oldalak előnézete:",
+  "Split PDF": "PDF szétválasztása",
+  "Total pages: {total} | Pages in ranges: {count}": "Összes oldal: {total} | Tartományokban: {count}"
+}

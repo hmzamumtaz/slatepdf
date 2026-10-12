@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "पेजों का नया क्रम लिखें (कॉमा से अलग, जैसे, 3,1,2,4,5)",
+  "Organize PDF": "PDF व्यवस्थित करें",
+  "Please enter a page order": "कृपया पेजों का क्रम लिखें",
+  "Preview in new order:": "नए क्रम में प्रीव्यू:",
+  "Total pages: {total} | Reordered: {count}": "कुल पेज: {total} | क्रम बदला गया: {count}",
+  "e.g., 3,1,2,4,5": "जैसे, 3,1,2,4,5"
+}

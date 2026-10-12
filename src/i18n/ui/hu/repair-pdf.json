@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "Újraépíti a PDF belső szerkezetét (kereszthivatkozási tábla, objektumszámozás, trailer), hogy helyreállítsa a csonka vagy sérült fájlokat. Ha a szerkezet nem menthető, az oldalak újrarenderelve egy új PDF-be kerülnek, kereshető szövegréteggel.",
+  "Repair PDF": "PDF javítása"
+}

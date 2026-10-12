@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Veszteségmentesen újraépíti a PDF-et tömörített objektumfolyamokkal, és elveti a nem használt objektumokat és a régi változatokat. A szöveg kijelölhető marad, a képek érintetlenek.",
+  "Optimize PDF": "PDF optimalizálása",
+  "Remove document metadata (title, author, etc.)": "Dokumentum metaadatainak eltávolítása (cím, szerző stb.)",
+  "Saved {size} KB ({percent}% smaller).": "{size} KB megtakarítva ({percent}%-kal kisebb).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Ez a PDF már optimálisan van tömörítve – változatlanul adtuk vissza. Nagyobb méretcsökkentéshez próbáld ki a PDF tömörítés eszközt."
+}
