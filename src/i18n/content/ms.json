@@ -43,7 +43,7 @@
       }
     ],
     "hubTitle": "Semua Alat PDF — {count} Alat Percuma, Tanpa Muat Naik",
-    "hubDescription": "Semua alat {site} di satu tempat: gabung, pisah, mampatkan, tukar, edit, tandatangan dan lindungi PDF. Percuma, tanpa akaun, fail kekal dalam pelayar anda.",
+    "hubDescription": "Semua alat {site} di satu tempat: gabung, pisah, mampatkan, tukar, edit, tandatangan dan lindungi PDF. Percuma, tanpa akaun, fail kekal di pelayar anda.",
     "hubH1": "Semua alat PDF yang anda perlukan, di satu tempat",
     "hubIntro": "{count} alat PDF percuma untuk menggabung, memisah, memampatkan, menukar, mengedit, menandatangani dan melindungi dokumen anda. Setiap satu berjalan dalam pelayar anda, jadi fail anda tidak pernah dimuat naik — tanpa akaun, tanpa tera air.",
     "navWorkspace": "Ruang Kerja",
@@ -555,7 +555,7 @@
       "faqs": [
         {
           "q": "Adakah animasi akan dikekalkan?",
-          "a": "Animasi ditukar menjadi halaman statik kerana PDF tidak menyokong animasi. Keadaan akhir setiap slaid yang ditangkap."
+          "a": "Animasi ditukar menjadi halaman statik kerana PDF tidak menyokong animasi. Keadaan akhir setiap slaid akan ditangkap."
         },
         {
           "q": "Bolehkah saya menukar slaid tertentu sahaja?",
@@ -912,7 +912,7 @@
     "pdf-to-excel": {
       "slug": "pdf-ke-excel",
       "name": "PDF ke Excel",
-      "description": "Eksport teks PDF ke hamparan, satu baris bagi setiap row (XLSX)",
+      "description": "Eksport teks PDF ke hamparan, satu baris teks setiap baris (XLSX)",
       "seoTitle": "PDF ke Excel — Eksport Teks PDF ke Hamparan",
       "metaDescription": "Eksport teks PDF ke buku kerja Excel (XLSX): satu helaian bagi setiap halaman, satu baris teks bagi setiap baris. Percuma, dalam pelayar, tanpa daftar.",
       "faqs": [

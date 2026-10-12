@@ -43,7 +43,7 @@
       }
     ],
     "hubTitle": "Tüm PDF Araçları — {count} Ücretsiz Araç, Yükleme Yok",
-    "hubDescription": "Tüm {site} araçları tek yerde: PDF birleştirme, bölme, sıkıştırma, dönüştürme, düzenleme, imzalama, şifreleme. Ücretsiz, hesapsız, dosyalar tarayıcıda kalır.",
+    "hubDescription": "{site} araçları tek yerde: PDF birleştirme, bölme, sıkıştırma, dönüştürme, düzenleme, imzalama, şifreleme. Ücretsiz, hesapsız, dosyalar tarayıcıda kalır.",
     "hubH1": "İhtiyacınız olan tüm PDF araçları tek yerde",
     "hubIntro": "Belgelerinizi birleştirmek, bölmek, sıkıştırmak, dönüştürmek, düzenlemek, imzalamak ve korumak için {count} ücretsiz PDF aracı. Her biri tarayıcınızda çalışır, bu yüzden dosyalarınız asla yüklenmez; hesap yok, filigran yok.",
     "navWorkspace": "Çalışma Alanı",
