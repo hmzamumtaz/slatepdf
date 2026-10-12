@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Membangun ulang PDF tanpa penurunan kualitas dengan aliran objek terkompresi, serta membuang objek yang tidak terpakai dan revisi lama. Teks tetap bisa dipilih dan gambar tidak diubah.",
+  "Optimize PDF": "Optimalkan PDF",
+  "Remove document metadata (title, author, etc.)": "Hapus metadata dokumen (judul, penulis, dll.)",
+  "Saved {size} KB ({percent}% smaller).": "Hemat {size} KB ({percent}% lebih kecil).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "PDF ini sudah dikemas secara optimal — dikembalikan tanpa perubahan. Untuk pengurangan yang lebih besar, coba alat Kompres PDF."
+}

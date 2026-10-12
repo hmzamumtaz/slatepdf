@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Intervalos de páginas (ex.: 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Digite intervalos de páginas válidos",
+  "Preview of pages in ranges:": "Pré-visualização das páginas nos intervalos:",
+  "Split PDF": "Dividir PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "Total de páginas: {total} | Páginas nos intervalos: {count}"
+}
