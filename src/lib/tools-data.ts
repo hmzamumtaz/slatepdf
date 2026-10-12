@@ -86,6 +86,83 @@ export const categories = [
   'PDF Intelligence',
 ];
 
+/** One-line summary of each category, shown on the /tools hub. */
+export const categoryBlurbs: Record<string, string> = {
+  'All-in-one': 'Do several jobs on one document without downloading in between.',
+  'Organize PDF': 'Combine, split, reorder and trim the pages of your PDFs.',
+  'Optimize PDF': 'Make PDFs smaller, faster to open, searchable, or readable again.',
+  'Create PDF': 'Turn images, Office files, web pages and ebooks into PDF.',
+  'Export PDF': 'Get your content out of a PDF as Word, Excel, slides, images or text.',
+  'Modify PDF': 'Edit text, sign, number, watermark, crop, rotate and redact.',
+  'PDF Security': 'Add or remove password protection.',
+  'PDF Intelligence': 'Compare, summarize and translate what a PDF says.',
+};
+
+/** URL fragment for a category, e.g. "Organize PDF" → "organize-pdf". */
+export function categoryAnchor(category: string): string {
+  return category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+/**
+ * What people usually do next after each tool. Drives the "next step" links
+ * on tool pages, so link equity follows real workflows instead of whatever
+ * happens to share a category.
+ */
+const nextSteps: Record<string, string[]> = {
+  'pdf-workspace': ['edit-pdf', 'sign-pdf', 'redact-pdf', 'protect-pdf'],
+  'merge-pdf': ['compress-pdf', 'organize-pdf', 'add-page-numbers', 'split-pdf'],
+  'split-pdf': ['extract-pages', 'remove-pages', 'merge-pdf', 'organize-pdf'],
+  'remove-pages': ['organize-pdf', 'extract-pages', 'merge-pdf', 'compress-pdf'],
+  'extract-pages': ['split-pdf', 'merge-pdf', 'remove-pages', 'pdf-to-jpg'],
+  'organize-pdf': ['rotate-pdf', 'remove-pages', 'merge-pdf', 'add-page-numbers'],
+  'compress-pdf': ['optimize-pdf', 'merge-pdf', 'protect-pdf', 'pdf-to-pdfa'],
+  'optimize-pdf': ['compress-pdf', 'repair-pdf', 'pdf-to-pdfa', 'ocr-pdf'],
+  'repair-pdf': ['compress-pdf', 'unlock-pdf', 'pdf-to-pdfa', 'merge-pdf'],
+  'ocr-pdf': ['scan-pdf', 'pdf-to-word', 'compress-pdf', 'pdf-to-excel'],
+  'jpg-to-pdf': ['merge-pdf', 'compress-pdf', 'scan-pdf', 'heic-to-pdf'],
+  'scan-pdf': ['ocr-pdf', 'compress-pdf', 'sign-pdf', 'merge-pdf'],
+  'word-to-pdf': ['merge-pdf', 'compress-pdf', 'protect-pdf', 'sign-pdf'],
+  'powerpoint-to-pdf': ['compress-pdf', 'merge-pdf', 'add-watermark', 'pdf-to-powerpoint'],
+  'excel-to-pdf': ['merge-pdf', 'compress-pdf', 'pdf-to-excel', 'protect-pdf'],
+  'html-to-pdf': ['merge-pdf', 'compress-pdf', 'add-page-numbers', 'pdf-to-word'],
+  'heic-to-pdf': ['jpg-to-pdf', 'merge-pdf', 'compress-pdf', 'webp-to-pdf'],
+  'webp-to-pdf': ['jpg-to-pdf', 'merge-pdf', 'compress-pdf', 'svg-to-pdf'],
+  'tiff-to-pdf': ['ocr-pdf', 'merge-pdf', 'compress-pdf', 'jpg-to-pdf'],
+  'svg-to-pdf': ['merge-pdf', 'webp-to-pdf', 'jpg-to-pdf', 'compress-pdf'],
+  'epub-to-pdf': ['compress-pdf', 'split-pdf', 'pdf-to-word', 'add-page-numbers'],
+  'pdf-to-jpg': ['jpg-to-pdf', 'extract-pages', 'compress-pdf', 'pdf-to-powerpoint'],
+  'pdf-to-word': ['ocr-pdf', 'edit-pdf', 'word-to-pdf', 'pdf-to-excel'],
+  'pdf-to-powerpoint': ['powerpoint-to-pdf', 'pdf-to-jpg', 'pdf-to-word', 'compress-pdf'],
+  'pdf-to-excel': ['excel-to-pdf', 'ocr-pdf', 'pdf-to-word', 'pdf-to-markdown'],
+  'pdf-to-pdfa': ['compress-pdf', 'repair-pdf', 'ocr-pdf', 'protect-pdf'],
+  'pdf-to-markdown': ['pdf-to-word', 'ocr-pdf', 'ai-summarizer', 'pdf-to-excel'],
+  'edit-pdf': ['sign-pdf', 'redact-pdf', 'add-watermark', 'pdf-workspace'],
+  'rotate-pdf': ['organize-pdf', 'crop-pdf', 'merge-pdf', 'compress-pdf'],
+  'add-page-numbers': ['merge-pdf', 'add-watermark', 'organize-pdf', 'protect-pdf'],
+  'add-watermark': ['protect-pdf', 'add-page-numbers', 'sign-pdf', 'redact-pdf'],
+  'crop-pdf': ['rotate-pdf', 'organize-pdf', 'compress-pdf', 'pdf-to-jpg'],
+  'sign-pdf': ['protect-pdf', 'merge-pdf', 'edit-pdf', 'compress-pdf'],
+  'redact-pdf': ['protect-pdf', 'compress-pdf', 'edit-pdf', 'add-watermark'],
+  'unlock-pdf': ['edit-pdf', 'merge-pdf', 'compress-pdf', 'protect-pdf'],
+  'protect-pdf': ['add-watermark', 'redact-pdf', 'unlock-pdf', 'sign-pdf'],
+  'compare-pdf': ['edit-pdf', 'ai-summarizer', 'pdf-to-word', 'merge-pdf'],
+  'ai-summarizer': ['translate-pdf', 'pdf-to-markdown', 'compare-pdf', 'ocr-pdf'],
+  'translate-pdf': ['ai-summarizer', 'pdf-to-word', 'ocr-pdf', 'pdf-to-markdown'],
+};
+
+/** Tools to suggest after `slug`: curated next steps, topped up from its category. */
+export function getNextTools(slug: string, count = 4): ToolInfo[] {
+  const tool = getToolBySlug(slug);
+  if (!tool) return [];
+  const out: ToolInfo[] = [];
+  const add = (t?: ToolInfo) => {
+    if (t && t.slug !== slug && !out.includes(t) && out.length < count) out.push(t);
+  };
+  for (const s of nextSteps[slug] ?? []) add(getToolBySlug(s));
+  for (const t of getToolsByCategory(tool.category)) add(t);
+  return out;
+}
+
 export function getToolsByCategory(category: string): ToolInfo[] {
   return tools.filter(t => t.category === category);
 }

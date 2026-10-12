@@ -14,8 +14,9 @@ import { SITE_URL } from '@/lib/site';
 export const dynamic = 'force-static';
 
 const SITE_LAUNCH = new Date('2025-11-01');
-// Last real change to every tool page: FAQs made visible (2026-10-04).
-const TOOL_DATE = new Date('2026-10-04');
+// Last real change to every tool page: tool-specific how-to steps, guide links
+// and the /tools hub (2026-10-12).
+const TOOL_DATE = new Date('2026-10-12');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const newest = posts[0]?.updated ?? posts[0]?.published;
@@ -34,6 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: newest ? new Date(newest) : SITE_LAUNCH,
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    // All-tools hub
+    {
+      url: `${SITE_URL}/tools`,
+      lastModified: TOOL_DATE,
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
     // Trust / entity pages
     { url: `${SITE_URL}/about`, lastModified: SITE_LAUNCH, changeFrequency: 'monthly', priority: 0.6 },

@@ -21,6 +21,7 @@ export function GET() {
     'Slate PDF is a free PDF toolkit that runs entirely in the browser: files are processed on the user\'s own device and are never uploaded. No account, no watermark. The one exception is Translate PDF, which sends text to a translation service and says so in its interface. Text recognition (OCR) downloads its language model once, then runs on the device.',
     '',
   ];
+  lines.push(`All tools on one page: ${SITE_URL}/tools`, '');
   for (const [category, list] of byCategory) {
     lines.push(`## ${category}`, '');
     for (const t of list) lines.push(`- [${t.name}](${SITE_URL}/tools/${t.slug}): ${t.description}`);
