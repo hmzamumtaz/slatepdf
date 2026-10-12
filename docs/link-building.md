@@ -34,6 +34,19 @@ themselves pass link value.
 > confidential documents. No account, no watermark. Available in English,
 > Spanish, Portuguese, French, German, Italian, Indonesian, Russian and Arabic.
 
+### Highest-value targets found in the October 2026 competitor research
+
+- **AlternativeTo list "Browser-based tools that never upload your files"**
+  (alternativeto.net/lists/44944/) — ask to be added; it ranks for "pdf tool
+  that doesn't upload files" and is exactly SlatePDF's category.
+- **Filozy's "We tested 11 online PDF tools: which upload your file?"**
+  (filozy.com/pdf-upload-test/) — every big brand failed. Email the author
+  with a link to /verify-no-upload and ask them to include SlatePDF in the
+  next round of testing.
+- **Comparison pages already on the site:** /blog/smallpdf-alternative-free-no-limit,
+  /blog/ilovepdf-alternative-no-upload and /blog/sejda-alternative-free-no-limit
+  are the pages to link from listings and answers about alternatives.
+
 ## 2. Privacy and open-web communities (the differentiator)
 
 "No upload" is the angle big brands cannot copy. Lead with it.

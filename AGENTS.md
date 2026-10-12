@@ -17,7 +17,7 @@ Live at https://slatepdf.space/ (GitHub `hmzamumtaz/slatepdf`). Next.js 16.3.1, 
 - Commit + push to `origin main` only when the user asks. Vercel deploys on push.
 
 ## Languages (i18n)
-- English lives at the root (`/tools/merge-pdf`); es, pt, fr, de, it, id, ru, ar live under `/<lang>/` with translated slugs (`/es/unir-pdf`). Config: `src/i18n/config.ts`. Every home/hub/tool page carries hreflang for all languages + x-default (`src/i18n/alternates.ts`), and the sitemap lists every version.
+- English lives at the root (`/tools/merge-pdf`); 29 other languages (list in `src/i18n/config.ts`) live under `/<lang>/`. Latin-script languages use translated slugs (`/es/unir-pdf`); the others keep the English slug (`/ja/merge-pdf`). Config: `src/i18n/config.ts`. Every home/hub/tool page carries hreflang for all languages + x-default (`src/i18n/alternates.ts`), and the sitemap lists every version.
 - Translated page content: `src/i18n/content/<lang>.json`, generated from English by `node scripts/export-en-content.mjs` (sources: `tools-data.ts`, `tool-seo.ts`, `tool-howto.ts`, `src/i18n/site-en.ts`). Tool interfaces wrap text in `t('…')` (components) or `msg('…')` (lib code); `node scripts/check-i18n.mjs --write-en` extracts them to `src/i18n/ui/en/`, and each language needs `src/i18n/ui/<lang>/`.
 - **Whenever you change tool copy or UI text:** re-run both scripts, translate the new/changed strings in every language, and make `npm run check:i18n` pass before finishing. Never ship a language with missing strings; never use `${}` inside `t()` — use `{placeholders}`.
 - The blog and legal pages are English-only; translated pages label links to them "(English)".

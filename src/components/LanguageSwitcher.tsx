@@ -41,7 +41,7 @@ export default function LanguageSwitcher({ label, dropUp, dark }: { label: strin
       </button>
       {open && (
         <ul
-          className={`absolute z-50 w-48 bg-white border border-border rounded-xl shadow-xl py-2 end-0 ${dropUp ? 'bottom-full mb-1' : 'top-full mt-1'}`}
+          className={`absolute z-50 w-52 max-h-80 overflow-y-auto bg-white border border-border rounded-xl shadow-xl py-2 end-0 ${dropUp ? 'bottom-full mb-1' : 'top-full mt-1'}`}
         >
           {ALL_LOCALES.map(l => (
             <li key={l}>

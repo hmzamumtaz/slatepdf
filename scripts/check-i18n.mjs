@@ -17,8 +17,9 @@ import { join, relative } from 'node:path';
 const ROOT = new URL('..', import.meta.url).pathname;
 const SRC = join(ROOT, 'src');
 const I18N = join(SRC, 'i18n');
-const LOCALES = ['es', 'pt', 'fr', 'de', 'it', 'id', 'ru', 'ar'];
-const LATIN_SLUG_LOCALES = new Set(['es', 'pt', 'fr', 'de', 'it', 'id']);
+const LOCALES = ['es', 'pt', 'fr', 'de', 'it', 'id', 'ru', 'ar', 'zh', 'ja', 'ko', 'hi', 'tr', 'nl', 'pl', 'vi', 'th', 'uk', 'sv', 'cs', 'ro', 'hu', 'el', 'he', 'ms', 'bn', 'da', 'fi', 'nb'];
+// Latin-script languages get translated slugs; the rest keep the English ones.
+const LATIN_SLUG_LOCALES = new Set(['es', 'pt', 'fr', 'de', 'it', 'id', 'tr', 'nl', 'pl', 'vi', 'sv', 'cs', 'ro', 'hu', 'ms', 'da', 'fi', 'nb']);
 
 // Which namespace a source file's strings belong to. First match wins.
 const NAMESPACE_RULES = [
