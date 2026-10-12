@@ -53,6 +53,20 @@ export function generateToolPageSchema(tool: {
     url: `${SITE_URL}/tools/${tool.slug}`,
     inLanguage: 'en',
     isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
+    // The tool itself, described as a free browser app so search and answer
+    // engines can tell this page *is* the tool, not an article about one.
+    mainEntity: {
+      '@type': 'WebApplication',
+      name: tool.name,
+      description: tool.description,
+      url: `${SITE_URL}/tools/${tool.slug}`,
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Any (runs in a web browser)',
+      browserRequirements: 'Requires JavaScript and a modern web browser.',
+      isAccessibleForFree: true,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    },
   };
 }
 

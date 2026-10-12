@@ -6,7 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
+import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
 import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/schema";
 
 const geistSans = Geist({
@@ -19,10 +19,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Leads with what people search for ("free PDF tools") and the one thing that
+// sets the site apart; the brand stays first for navigational queries.
+const HOME_TITLE = `${SITE_NAME} — Free PDF Tools That Never Upload Your Files`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    default: HOME_TITLE,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    title: HOME_TITLE,
     description: SITE_DESCRIPTION,
     url: '/',
     images: [
@@ -56,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    title: HOME_TITLE,
     description: SITE_DESCRIPTION,
     images: [`${SITE_URL}/og-home.png`],
   },

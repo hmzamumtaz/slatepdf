@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown, LayoutGrid } from 'lucide-react';
 import BrandMark from './BrandMark';
-import * as LucideIcons from 'lucide-react';
+import { toolIcon } from '@/lib/tool-icons';
 import { categories, getToolsByCategory, type ToolInfo } from '@/lib/tools-data';
 import { SITE_NAME } from '@/lib/site';
 
@@ -34,7 +34,7 @@ function DropdownMenu({ category, tools, alignRight }: { category: string; tools
       {open && (
         <div className={`absolute top-full mt-1 w-80 bg-white border border-border rounded-xl shadow-xl py-2 animate-fade-in z-50 ${alignRight ? 'right-0' : 'left-0'}`}>
           {tools.map((tool) => {
-            const IconComp = (LucideIcons as any)[tool.icon] || LucideIcons.FileText;
+            const IconComp = toolIcon(tool.icon);
             return (
               <Link
                 key={tool.slug}

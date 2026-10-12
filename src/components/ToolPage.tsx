@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { ArrowLeft, Download, Loader2, Check, AlertCircle, FileText, Trash2, FileDown, List, LayoutGrid, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
+import { ToolIcon } from '@/lib/tool-icons';
 import Link from 'next/link';
 import { getToolBySlug } from '@/lib/tools-data';
 import FileUpload from './FileUpload';
@@ -379,7 +379,6 @@ export default function ToolPage({
 
   if (!tool) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">Tool not found.</p></div>;
 
-  const IconComponent = (LucideIcons as any)[tool.icon] || LucideIcons.FileText;
   const showTwoCol = files.length > 0;
 
   return (
@@ -392,7 +391,7 @@ export default function ToolPage({
         <div className="mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ backgroundColor: `${tool.color}15` }}>
-              <IconComponent className="w-6 h-6" style={{ color: tool.color }} />
+              <ToolIcon name={tool.icon} className="w-6 h-6" style={{ color: tool.color }} />
             </div>
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{tool.name}</h1>

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     `How ${SITE_NAME} handles your data. Files are processed locally in your browser and never uploaded.`,
   alternates: { canonical: '/privacy' },
   openGraph: {
+    images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: SITE_NAME }],
     type: 'website',
     title: `Privacy Policy | ${SITE_NAME}`,
     description: `How ${SITE_NAME} handles your data. Files are processed locally in your browser and never uploaded.`,

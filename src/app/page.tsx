@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
+import { toolIcon } from '@/lib/tool-icons';
 import { categories, getToolsByCategory, featuredTool, getToolBySlug } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
@@ -129,7 +129,7 @@ export default function Home() {
                   </div>
                   <div className="p-3">
                     {popularTools.map((tool) => {
-                      const IconComp = (LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>>)[tool.icon] || LucideIcons.FileText;
+                      const IconComp = toolIcon(tool.icon);
                       return (
                         <Link
                           key={tool.slug}

@@ -73,7 +73,7 @@ export const newPosts: BlogPost[] = [
   // Article 3: How to Convert JPG to PDF Without Losing Quality
   {
     slug: 'how-to-convert-jpg-to-pdf-without-losing-quality',
-    title: 'How to Convert JPG to PDF Without Losing Quality (Free Online)',
+    title: 'How to Convert JPG to PDF Without Losing Quality (Free)',
     description: 'Turn images into crisp, print-ready PDFs in your browser. Supports multiple JPGs, maintains original resolution, and requires no signup.',
     keyword: 'convert jpg to pdf without losing quality',
     category: 'Converting',

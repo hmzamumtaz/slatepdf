@@ -1,6 +1,3 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumbs from './Breadcrumbs';
@@ -8,13 +5,13 @@ import type { ReactNode } from 'react';
 import { getToolBySlug, tools } from '@/lib/tools-data';
 import { getToolFaqs } from '@/lib/tool-seo';
 import { SITE_URL } from '@/lib/site';
+import { posts } from '@/lib/blog';
 
 /**
- * Client-side SEO wrapper for tool pages. Adds breadcrumbs, related tools, and SEO content.
+ * Server-rendered SEO wrapper for tool pages. Adds breadcrumbs, guides, related tools, and SEO content.
  * `guide` replaces the generic explainer with tool-specific content.
  */
 export default function ToolPageSEO({ slug, guide }: { slug: string; guide?: ReactNode }) {
-  const pathname = usePathname();
   const tool = getToolBySlug(slug);
   if (!tool) return null;
 
@@ -34,6 +31,10 @@ export default function ToolPageSEO({ slug, guide }: { slug: string; guide?: Rea
   const relatedTools = tools
     .filter((t) => t.slug !== slug && t.category === tool.category)
     .slice(0, 4);
+
+  // Every guide that sends readers to this tool, so each article gets a link
+  // from the page it is about (rendered on the server; no blog data ships to the client).
+  const guides = posts.filter((p) => p.tool === slug);
 
   const moreTools = tools
     .filter((t) => t.slug !== slug && t.category !== tool.category)
@@ -110,6 +111,25 @@ export default function ToolPageSEO({ slug, guide }: { slug: string; guide?: Rea
               </details>
             ))}
           </div>
+        </section>
+      )}
+
+      {guides.length > 0 && (
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <h2 className="text-xl font-bold text-foreground mb-4">{tool.name} guides</h2>
+          <ul className="grid sm:grid-cols-2 gap-3">
+            {guides.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={`/blog/${p.slug}`}
+                  className="flex h-full items-start gap-2 rounded-xl border border-border bg-white p-4 hover:border-gray-300 hover:shadow-md transition-all"
+                >
+                  <ArrowRight className="w-4 h-4 mt-0.5 text-muted-foreground shrink-0" />
+                  <span className="font-medium text-foreground leading-snug">{p.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 

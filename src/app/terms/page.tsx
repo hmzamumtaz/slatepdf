@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     `The terms governing your use of ${SITE_NAME}, the free browser-based PDF toolkit.`,
   alternates: { canonical: '/terms' },
   openGraph: {
+    images: [{ url: `${SITE_URL}/og-home.png`, width: 1200, height: 630, alt: SITE_NAME }],
     type: 'website',
     title: `Terms of Service | ${SITE_NAME}`,
     description: `The terms governing your use of ${SITE_NAME}, the free browser-based PDF toolkit.`,

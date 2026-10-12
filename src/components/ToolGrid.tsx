@@ -1,14 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import * as LucideIcons from 'lucide-react';
+import { toolIcon } from '@/lib/tool-icons';
 import { ToolInfo } from '@/lib/tools-data';
 
 export default function ToolGrid({ tools }: { tools: ToolInfo[] }) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {tools.map((tool) => {
-        const IconComponent = (LucideIcons as any)[tool.icon] || LucideIcons.FileText;
+        const IconComponent = toolIcon(tool.icon);
         return (
           <Link
             key={tool.slug}

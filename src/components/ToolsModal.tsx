@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { X, Search } from 'lucide-react';
-import * as LucideIcons from 'lucide-react';
+import { toolIcon } from '@/lib/tool-icons';
 import { tools, categories, getToolsByCategory } from '@/lib/tools-data';
 
 interface ToolsModalProps {
@@ -65,7 +65,7 @@ export default function ToolsModal({ isOpen, onClose }: ToolsModalProps) {
                 <p className="col-span-2 text-center text-muted-foreground py-8">No tools found</p>
               )}
               {filtered.map((tool) => {
-                const IconComp = (LucideIcons as any)[tool.icon] || LucideIcons.FileText;
+                const IconComp = toolIcon(tool.icon);
                 return (
                   <Link
                     key={tool.slug}
@@ -91,7 +91,7 @@ export default function ToolsModal({ isOpen, onClose }: ToolsModalProps) {
                   <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">{category}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {getToolsByCategory(category).map((tool) => {
-                      const IconComp = (LucideIcons as any)[tool.icon] || LucideIcons.FileText;
+                      const IconComp = toolIcon(tool.icon);
                       return (
                         <Link
                           key={tool.slug}
