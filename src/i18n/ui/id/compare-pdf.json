@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Penulis: {value}",
+  "Back to all tools": "Kembali ke semua alat",
+  "Changed": "Diubah",
+  "Compare Another": "Bandingkan File Lain",
+  "Compare PDF": "Bandingkan PDF",
+  "Compare PDFs": "Bandingkan PDF",
+  "Compare two PDFs and see the differences": "Bandingkan dua PDF dan lihat perbedaannya",
+  "Comparing...": "Membandingkan...",
+  "Comparison complete": "Perbandingan selesai",
+  "Creator: {value}": "Pembuat: {value}",
+  "Differing pages": "Halaman yang berbeda",
+  "File 1": "File 1",
+  "File 2": "File 2",
+  "Files are identical": "File identik",
+  "Original": "Asli",
+  "Page {page}": "Halaman {page}",
+  "Pages: {pages} | Size: {size}": "Halaman: {pages} | Ukuran: {size}",
+  "Title: {value}": "Judul: {value}",
+  "similarity: {value}%": "kemiripan: {value}%",
+  "{count} page differ": "{count} halaman berbeda",
+  "{count} pages differ": "{count} halaman berbeda"
+}
