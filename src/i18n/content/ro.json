@@ -1,0 +1,1407 @@
+{
+  "site": {
+    "homeTitle": "Instrumente PDF gratuite în browser",
+    "homeDescription": "Unește, împarte, comprimă, convertește, semnează și editează PDF-uri în browser. Gratuit, fără cont, iar fișierele nu se încarcă.",
+    "heroBadge": "Fișierele nu părăsesc dispozitivul tău",
+    "heroTitle": "Toate instrumentele PDF de care ai nevoie,",
+    "heroHighlight": "gratuite și private.",
+    "heroSubtitle": "Unește, împarte, comprimă, convertește, editează și semnează documente în browser. Fără încărcare, fără cont și fără filigran.",
+    "heroCta": "Vezi toate instrumentele PDF",
+    "popularTools": "Instrumente populare",
+    "whyTitle": "De ce {site}?",
+    "why": [
+      {
+        "title": "Fișierele tale rămân private",
+        "text": "Totul se întâmplă pe dispozitivul tău. Documentele nu sunt încărcate niciodată pe un server — ideal pentru lucrări confidențiale."
+      },
+      {
+        "title": "Rezultate imediat",
+        "text": "Fără încărcare și fără cozi de așteptare. PDF-ul este procesat în clipa în care apeși, chiar și pe o conexiune lentă."
+      },
+      {
+        "title": "Gratuit, fără filigran",
+        "text": "Folosește fiecare instrument ori de câte ori vrei. Fără cont, fără filigran pe fișiere și fără costuri ascunse."
+      }
+    ],
+    "faqTitle": "Întrebări frecvente",
+    "homeFaqs": [
+      {
+        "q": "Este {site} chiar gratuit?",
+        "a": "Da. Toate instrumentele sunt gratuite, fără cont, fără filigran pe fișiere și fără vreo variantă plătită."
+      },
+      {
+        "q": "Fișierele mele sunt încărcate pe un server?",
+        "a": "Nu. Instrumentele rulează în browser, așa că fișierele rămân pe dispozitivul tău. Singura excepție este Traducere PDF, care trimite textul unui serviciu de traducere și te anunță înainte să o facă."
+      },
+      {
+        "q": "Trebuie să instalez ceva?",
+        "a": "Nu. Funcționează în orice browser modern — Chrome, Edge, Firefox sau Safari — pe Windows, Mac, Linux, Android și iPhone."
+      },
+      {
+        "q": "Trebuie să îmi creez un cont?",
+        "a": "Nu. Deschide un instrument și începe imediat."
+      }
+    ],
+    "hubTitle": "Toate instrumentele PDF — {count} gratuite, fără încărcare",
+    "hubDescription": "Toate instrumentele {site}: unește, împarte, comprimă, convertește, editează, semnează și protejează PDF-uri. Gratuit, fără cont, totul în browser.",
+    "hubH1": "Toate instrumentele PDF de care ai nevoie, într-un singur loc",
+    "hubIntro": "{count} instrumente PDF gratuite pentru a uni, împărți, comprima, converti, edita, semna și proteja documentele. Fiecare rulează în browser, așa că fișierele nu sunt încărcate niciodată — fără cont, fără filigran.",
+    "navWorkspace": "Spațiu de lucru",
+    "navAllTools": "Toate instrumentele",
+    "navGuides": "Ghiduri (în engleză)",
+    "language": "Limbă",
+    "menu": "Meniu",
+    "footerTagline": "Instrumente PDF gratuite care rulează în browser. Editează, convertește, unește și comprimă PDF-uri fără să le încarci.",
+    "footerPrivate": "100% privat. Fișierele nu părăsesc dispozitivul tău.",
+    "footerAllTools": "Toate cele {count} instrumente PDF",
+    "footerNoSignup": "Fără cont",
+    "footerNoWatermark": "Fără filigran",
+    "footerAbout": "Despre noi (în engleză)",
+    "footerPrivacy": "Confidențialitate (în engleză)",
+    "footerTerms": "Termeni (în engleză)",
+    "breadcrumbHome": "Acasă",
+    "breadcrumbTools": "Instrumente PDF",
+    "whyToolHeading": "De ce să folosești {tool} aici?",
+    "faqHeading": "{tool} — întrebări frecvente",
+    "continueHeading": "Continuă cu alt instrument",
+    "seeAllTools": "Vezi toate cele {count} instrumente PDF"
+  },
+  "categories": {
+    "All-in-one": {
+      "name": "Totul într-unul",
+      "blurb": "Fă mai multe operațiuni pe același document, fără să descarci între ele."
+    },
+    "Organize PDF": {
+      "name": "Organizare PDF",
+      "blurb": "Combină, împarte, reordonează și elimină paginile din PDF-uri."
+    },
+    "Optimize PDF": {
+      "name": "Optimizare PDF",
+      "blurb": "Fă PDF-urile mai mici, mai rapide la deschidere, căutabile sau din nou lizibile."
+    },
+    "Create PDF": {
+      "name": "Creare PDF",
+      "blurb": "Transformă imagini, fișiere Office, pagini web și cărți electronice în PDF."
+    },
+    "Export PDF": {
+      "name": "Export din PDF",
+      "blurb": "Scoate conținutul dintr-un PDF ca Word, Excel, prezentare, imagini sau text."
+    },
+    "Modify PDF": {
+      "name": "Modificare PDF",
+      "blurb": "Editează text, semnează, numerotează, adaugă filigran, decupează, rotește și cenzurează."
+    },
+    "PDF Security": {
+      "name": "Securitate PDF",
+      "blurb": "Adaugă sau elimină protecția cu parolă."
+    },
+    "PDF Intelligence": {
+      "name": "Analiză PDF",
+      "blurb": "Compară, rezumă și tradu conținutul unui PDF."
+    }
+  },
+  "tools": {
+    "pdf-workspace": {
+      "slug": "spatiu-de-lucru-pdf",
+      "name": "Spațiu de lucru PDF",
+      "description": "Editează, cenzurează, semnează, ștampilează și securizează un document fără să părăsești pagina",
+      "seoTitle": "Spațiu de lucru PDF — editare, semnare și protejare",
+      "metaDescription": "Un singur spațiu de lucru PDF: editezi text, ascunzi date sensibile, semnezi, adaugi filigran și pui parolă. Totul se procesează în browser.",
+      "faqs": [
+        {
+          "q": "Ce pot face în Spațiul de lucru PDF?",
+          "a": "Poți edita text, cenzura informații sensibile, reordona pagini, adăuga semnături, aplica filigrane, ajusta paginile, proteja documentul cu parolă și descărca rezultatul — totul fără să părăsești pagina."
+        },
+        {
+          "q": "Documentul meu este încărcat pe un server?",
+          "a": "Nu. Fiecare acțiune rulează în browser. Documentul nu părăsește niciodată dispozitivul tău, așa că spațiul de lucru este ideal pentru documente confidențiale și sensibile."
+        }
+      ],
+      "howTo": {
+        "title": "Cum editezi, semnezi și protejezi un PDF într-un singur loc",
+        "intro": "Spațiul de lucru PDF adună pe un singur ecran editarea, cenzurarea, instrumentele pentru pagini, semnăturile, ștampilele și parolele, cu anulare și refacere, ca să termini documentul dintr-o singură trecere și să îl descarci o singură dată.",
+        "steps": [
+          "Deschide PDF-ul în spațiul de lucru de mai sus (dacă are parolă, deblochează-l mai întâi)",
+          "Folosește filele Editare, Cenzurare, Pagini, Semnare, Ștampilă, Ajustare și Protejare în orice ordine",
+          "Mergi înapoi sau înainte prin istoric dacă te răzgândești",
+          "Apasă Descarcă pentru a salva PDF-ul final"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "merge-pdf": {
+      "slug": "unire-pdf",
+      "name": "Unire PDF",
+      "description": "Combină mai multe PDF-uri într-un singur fișier",
+      "seoTitle": "Unire PDF — combină mai multe PDF-uri într-unul gratuit",
+      "metaDescription": "Unește două sau mai multe fișiere PDF într-un singur document. Gratuit, fără cont, fără filigran. Unirea se face în browser — fișierele nu se încarcă.",
+      "faqs": [
+        {
+          "q": "Câte PDF-uri pot uni deodată?",
+          "a": "Până la 20 de fișiere la o unire, fără altă limită de dimensiune decât memoria dispozitivului. Pentru mai multe, unește-le în loturi de câte 20, apoi unește rezultatele între ele."
+        },
+        {
+          "q": "Unirea scade calitatea PDF-ului?",
+          "a": "Nu. O unire corectă copiază fiecare pagină într-un document nou, fără să recodeze imaginile sau textul. Paginile rămân identice cu originalele."
+        },
+        {
+          "q": "Pot uni PDF-uri protejate cu parolă?",
+          "a": "Trebuie să le deblochezi mai întâi. PDF-urile protejate cu parolă nu pot fi citite până când parola nu este eliminată."
+        }
+      ],
+      "howTo": {
+        "title": "Cum unești fișiere PDF",
+        "intro": "Unire PDF îmbină două sau mai multe PDF-uri într-un singur document, în ordinea în care le selectezi. Paginile sunt copiate exact așa cum sunt, deci textul rămâne selectabil, iar imaginile își păstrează rezoluția.",
+        "steps": [
+          "Selectează sau trage cel puțin două fișiere PDF, până la 20 deodată, în ordinea dorită",
+          "Verifică lista și elimină orice fișier adăugat din greșeală",
+          "Apasă Unește PDF-urile",
+          "Descarcă PDF-ul combinat"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Fără pierderi — paginile sunt copiate, nu redesenate"
+        ]
+      }
+    },
+    "split-pdf": {
+      "slug": "impartire-pdf",
+      "name": "Împărțire PDF",
+      "description": "Separă un PDF în pagini individuale",
+      "seoTitle": "Împărțire PDF — separă un PDF în pagini individuale",
+      "metaDescription": "Împarte un PDF în pagini separate sau în intervale de pagini alese de tine. Gratuit, în browser, fără încărcare. Descarcă imediat paginile sau grupurile.",
+      "faqs": [
+        {
+          "q": "Cum împart un PDF pe anumite intervale de pagini?",
+          "a": "Introdu intervale precum 1-5, 10, 15-20. Instrumentul împarte documentul în fișiere separate, câte unul pentru fiecare interval."
+        },
+        {
+          "q": "Împărțirea scade calitatea?",
+          "a": "Nu. Împărțirea copiază paginile întregi în documente noi. Textul rămâne selectabil, iar imaginile își păstrează rezoluția originală."
+        }
+      ],
+      "howTo": {
+        "title": "Cum împarți un PDF",
+        "intro": "Împărțire PDF taie un document în mai multe fișiere, după intervale de pagini. Fiecare interval pe care îl scrii devine un PDF separat.",
+        "steps": [
+          "Alege PDF-ul pe care vrei să îl împarți",
+          "Scrie intervalele de pagini, de exemplu 1-3, 5, 7-10, și verifică previzualizarea",
+          "Apasă Împarte PDF",
+          "Descarcă fiecare parte sau folosește Descarcă tot pentru a primi toate părțile într-o arhivă ZIP"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Fără pierderi — fiecare pagină își păstrează textul și imaginile originale"
+        ]
+      }
+    },
+    "remove-pages": {
+      "slug": "stergere-pagini-pdf",
+      "name": "Ștergere pagini",
+      "description": "Șterge anumite pagini dintr-un PDF",
+      "seoTitle": "Ștergere pagini din PDF — elimină pagini gratuit",
+      "metaDescription": "Șterge anumite pagini dintr-un document PDF. Alege paginile de eliminat și descarcă fișierul actualizat. Gratuit, fără cont.",
+      "faqs": [
+        {
+          "q": "Pot elimina mai multe pagini deodată?",
+          "a": "Da. Introdu mai multe numere de pagină sau intervale, iar toate paginile selectate vor fi eliminate dintr-un singur pas."
+        },
+        {
+          "q": "Este același lucru cu împărțirea?",
+          "a": "Nu. Împărțirea creează fișiere separate din paginile selectate. Ștergerea elimină pagini din document și păstrează restul într-un singur fișier."
+        }
+      ],
+      "howTo": {
+        "title": "Cum ștergi pagini dintr-un PDF",
+        "intro": "Ștergere pagini elimină paginile pe care le enumeri și păstrează restul într-un singur PDF, în ordinea originală.",
+        "steps": [
+          "Alege PDF-ul",
+          "Scrie paginile de șters, de exemplu 1, 3, 5-8",
+          "Verifică previzualizarea paginilor care rămân",
+          "Apasă Șterge paginile și descarcă PDF-ul mai scurt"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "extract-pages": {
+      "slug": "extragere-pagini-pdf",
+      "name": "Extragere pagini",
+      "description": "Extrage anumite pagini într-un PDF nou",
+      "seoTitle": "Extragere pagini din PDF — scoate doar paginile dorite",
+      "metaDescription": "Extrage anumite pagini dintr-un PDF într-un document nou. Alege pagini individuale, intervale sau o combinație. PDF-ul original rămâne neschimbat.",
+      "faqs": [
+        {
+          "q": "Extragerea modifică PDF-ul original?",
+          "a": "Nu. Extragerea citește fișierul sursă și scrie un fișier nou. Originalul rămâne neatins pe disc."
+        },
+        {
+          "q": "Pot extrage paginile într-o altă ordine?",
+          "a": "Da. Enumeră paginile în ordinea dorită. Dacă introduci 9, 3, 5, obții un fișier cu paginile în această succesiune."
+        }
+      ],
+      "howTo": {
+        "title": "Cum extragi pagini dintr-un PDF",
+        "intro": "Extragere pagini copiază paginile alese într-un PDF nou și lasă fișierul original neatins.",
+        "steps": [
+          "Alege PDF-ul",
+          "Scrie paginile dorite, de exemplu 1, 3, 5-8, și verifică miniaturile",
+          "Apasă Extrage paginile",
+          "Descarcă noul PDF, care conține doar acele pagini"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "organize-pdf": {
+      "slug": "organizare-pdf",
+      "name": "Organizare PDF",
+      "description": "Reordonează, rotește și gestionează paginile",
+      "seoTitle": "Organizare PDF — reordonează și elimină pagini gratuit",
+      "metaDescription": "Pune paginile unui PDF în orice ordine și elimină-le pe cele de care nu ai nevoie, dintr-un singur pas. Gratuit, fără cont, fișierul rămâne în browser.",
+      "faqs": [
+        {
+          "q": "Cum stabilesc noua ordine a paginilor?",
+          "a": "Scrie numerele paginilor în ordinea dorită, de exemplu 3, 1, 2, 4. Ordinea actuală este completată automat, iar o previzualizare îți arată rezultatul înainte să salvezi."
+        },
+        {
+          "q": "Pot roti paginile aici?",
+          "a": "Nu. Folosește Rotire PDF, care rotește toate paginile sau doar pe cele pe care le enumeri cu 90°, 180° sau 270°."
+        },
+        {
+          "q": "Pot combina pagini din PDF-uri diferite?",
+          "a": "Instrumentul de organizare lucrează pe un singur PDF. Pentru a combina pagini din fișiere diferite, folosește Unire PDF după ce extragi paginile de care ai nevoie."
+        }
+      ],
+      "howTo": {
+        "title": "Cum schimbi ordinea paginilor într-un PDF",
+        "intro": "Organizare PDF reconstruiește documentul în ordinea paginilor pe care o scrii. Orice pagină pe care o lași în afara listei este eliminată, așa că poți reordona și scurta documentul dintr-un singur pas.",
+        "steps": [
+          "Alege PDF-ul — ordinea actuală (1, 2, 3 …) este completată automat",
+          "Rescrie lista în ordinea dorită, de exemplu 3, 1, 2, 4",
+          "Verifică previzualizarea noii ordini",
+          "Apasă Organizează PDF și descarcă rezultatul"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "compress-pdf": {
+      "slug": "comprimare-pdf",
+      "name": "Comprimare PDF",
+      "description": "Reduce dimensiunea fișierului păstrând calitatea",
+      "seoTitle": "Comprimare PDF — reduce dimensiunea fără pierderi vizibile",
+      "metaDescription": "Micșorează un PDF cu până la 80% fără pierderi vizibile de calitate. Comprimare gratuită în browser. Fără încărcare, fără filigran, fără cont.",
+      "faqs": [
+        {
+          "q": "Comprimarea unui PDF îi scade calitatea?",
+          "a": "La nivelul de comprimare recomandat, imaginile sunt recodate la 150 DPI — identice vizual cu originalul pentru vizualizare pe ecran și tipărire obișnuită."
+        },
+        {
+          "q": "Cu cât se micșorează PDF-ul?",
+          "a": "PDF-urile cu multe fotografii scad cu 60–80%. Fișierele doar cu text scad cu 10–30%. Documentele scanate pot scădea cu până la 90%."
+        },
+        {
+          "q": "Pot comprima un PDF protejat cu parolă?",
+          "a": "Trebuie să îl deblochezi mai întâi. Instrumentele de comprimare nu pot citi fișierele criptate până când parola nu este eliminată."
+        }
+      ],
+      "howTo": {
+        "title": "Cum comprimi un PDF la o anumită dimensiune",
+        "intro": "Comprimare PDF țintește dimensiunea pe care o stabilești, în MB sau KB, în loc de niveluri vagi de tip „scăzut / mediu / ridicat” — util când un formular de încărcare sau un e-mail are o limită strictă.",
+        "steps": [
+          "Alege PDF-ul pe care vrei să îl micșorezi",
+          "Scrie dimensiunea dorită sau alege o variantă rapidă: 50%, 25%, 10% sau 5% din original",
+          "Apasă Comprimă",
+          "Verifică noua dimensiune, apoi descarcă PDF-ul comprimat"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Sincer în privința compromisurilor: te avertizează când ținta e atât de mică încât paginile trebuie transformate în imagini"
+        ]
+      }
+    },
+    "optimize-pdf": {
+      "slug": "optimizare-pdf",
+      "name": "Optimizare PDF",
+      "description": "Optimizează PDF-ul pentru web și încărcare mai rapidă",
+      "seoTitle": "Optimizare PDF — PDF mai rapid pentru web",
+      "metaDescription": "Optimizează fișiere PDF pentru web și încărcare mai rapidă. Reduce timpul de afișare, aplatizează straturile și simplifică structura documentului.",
+      "faqs": [
+        {
+          "q": "Ce face optimizarea unui PDF?",
+          "a": "Optimizarea elimină obiectele nefolosite, aplatizează straturile interactive, păstrează doar caracterele folosite din fonturi și simplifică structura internă pentru o afișare mai rapidă."
+        },
+        {
+          "q": "Optimizarea este același lucru cu comprimarea?",
+          "a": "Comprimarea reduce dimensiunea fișierului prin recodarea imaginilor. Optimizarea se concentrează pe îmbunătățiri de structură care accelerează încărcarea și afișarea."
+        }
+      ],
+      "howTo": {
+        "title": "Cum optimizezi un PDF fără pierderi de calitate",
+        "intro": "Optimizare PDF reîmpachetează structura fișierului — fluxuri de obiecte, obiecte nefolosite — fără să atingă imaginile sau textul. Dacă nu se poate câștiga nimic, îți returnează fișierul neschimbat și îți spune acest lucru.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Bifează „Elimină metadatele documentului” dacă vrei să ștergi și titlul, autorul și alte câmpuri similare",
+          "Apasă Optimizează PDF",
+          "Descarcă fișierul optimizat sau folosește Comprimare PDF dacă ai nevoie de o reducere mai mare"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "repair-pdf": {
+      "slug": "reparare-pdf",
+      "name": "Reparare PDF",
+      "description": "Repară fișiere PDF corupte sau deteriorate",
+      "seoTitle": "Reparare PDF — repară fișiere PDF corupte gratuit",
+      "metaDescription": "Repară fișiere PDF corupte sau deteriorate. Corectează anteturile stricate, recuperează conținutul lizibil și refă documentele. Instrument online gratuit.",
+      "faqs": [
+        {
+          "q": "De ce se corupe un PDF?",
+          "a": "Cauze frecvente: descărcări incomplete, erori ale mediului de stocare, blocări ale programului în timpul salvării și viruși."
+        },
+        {
+          "q": "Repararea recuperează tot conținutul?",
+          "a": "Repararea reconstruiește structura PDF-ului. Cât se poate recupera depinde de cât din datele originale au rămas intacte."
+        }
+      ],
+      "howTo": {
+        "title": "Cum repari un PDF corupt",
+        "intro": "Reparare PDF reconstruiește tabelul de referințe încrucișate, numerotarea obiectelor și secțiunea finală (trailer) a unui fișier deteriorat. Dacă structura nu poate fi recuperată, redesenează paginile într-un PDF nou, cu un strat de text căutabil.",
+        "steps": [
+          "Alege PDF-ul care nu se deschide sau afișează erori",
+          "Apasă Repară PDF",
+          "Descarcă fișierul reparat și deschide-l pentru a verifica fiecare pagină"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "ocr-pdf": {
+      "slug": "ocr-pdf",
+      "name": "OCR PDF",
+      "description": "Extrage textul din documente scanate",
+      "seoTitle": "OCR PDF — extrage textul din documente scanate",
+      "metaDescription": "Transformă documentele scanate în text căutabil și selectabil cu OCR. Fă PDF-urile scanate căutabile și editabile. Gratuit, fără încărcare.",
+      "faqs": [
+        {
+          "q": "Ce este OCR?",
+          "a": "Recunoașterea optică a caracterelor (OCR) analizează imaginile cu text și le transformă în caractere reale, astfel încât documentele scanate devin căutabile și selectabile."
+        },
+        {
+          "q": "Cât de precis este OCR-ul?",
+          "a": "Precizia depinde de calitatea scanării. Scanările clare, la rezoluție mare, ating de obicei o precizie de 95–99%. Scanările slabe pot avea mai multe erori."
+        }
+      ],
+      "howTo": {
+        "title": "Cum faci un PDF scanat căutabil cu OCR",
+        "intro": "OCR PDF recunoaște textul din paginile scanate și îl adaugă în PDF, ca să îl poți căuta, selecta și copia. Poți alege până la trei limbi ale documentului din 44 disponibile.",
+        "steps": [
+          "Alege PDF-ul scanat",
+          "Caută și selectează limba documentului — până la trei pentru fișiere în mai multe limbi",
+          "Apasă Pornește OCR și așteaptă cât timp este citită fiecare pagină",
+          "Descarcă PDF-ul căutabil"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Recunoașterea rulează pe dispozitivul tău, așa că scanările sensibile rămân la tine"
+        ]
+      }
+    },
+    "jpg-to-pdf": {
+      "slug": "jpg-in-pdf",
+      "name": "JPG în PDF",
+      "description": "Convertește imagini în documente PDF",
+      "seoTitle": "JPG în PDF — convertește imagini în PDF gratuit",
+      "metaDescription": "Convertește imagini JPG în documente PDF, cu calitatea originală a imaginii. Combină mai multe imagini într-un singur PDF. Gratuit, fără cont.",
+      "faqs": [
+        {
+          "q": "Conversia JPG în PDF scade calitatea imaginii?",
+          "a": "Nu. Datele imaginii sunt incluse în PDF fără recomprimare. Imaginile rămân identice, pixel cu pixel, cu originalele."
+        },
+        {
+          "q": "Pot combina mai multe imagini într-un singur PDF?",
+          "a": "Da. Încarcă toate fișierele JPG, aranjează-le în ordine și convertește. Fiecare imagine devine o pagină în PDF-ul rezultat."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești JPG în PDF",
+        "intro": "JPG în PDF combină imagini JPEG, PNG și WebP într-un singur PDF, câte o imagine pe pagină, în ordinea în care le adaugi.",
+        "steps": [
+          "Selectează sau trage imaginile, până la 20 deodată, în ordinea dorită a paginilor",
+          "Apasă Convertește în PDF",
+          "Descarcă un singur PDF care conține toate imaginile"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "scan-pdf": {
+      "slug": "scanare-pdf",
+      "name": "Scanare PDF",
+      "description": "Scanează documente cu camera și salvează-le ca PDF",
+      "seoTitle": "Scanare în PDF online gratuit — cu camera, fără aplicație",
+      "metaDescription": "Scanează documente în PDF cu camera telefonului: detectare margini, decupare, filtre, OCR, moduri carte și act. Gratuit, fără aplicație, cont sau încărcare.",
+      "faqs": [
+        {
+          "q": "Am nevoie de o aplicație sau de un scanner pentru a face un PDF?",
+          "a": "Nu. Deschide această pagină pe telefon și îndreaptă camera spre pagină. Detectează marginile, capturează pagina când ții telefonul nemișcat, o îndreaptă și curăță umbrele. Poți importa și fotografii făcute deja."
+        },
+        {
+          "q": "Documentul scanat este încărcat pe un server?",
+          "a": "Nu. Fluxul camerei, detectarea paginii, filtrele și crearea PDF-ului rulează în browser. Paginile sunt păstrate pe acest dispozitiv, ca să nu le pierzi la o reîncărcare. Singura descărcare este modelul de limbă pentru recunoașterea textului, preluat o singură dată dacă activezi OCR."
+        },
+        {
+          "q": "Pot face PDF-ul scanat căutabil?",
+          "a": "Da. Lasă activată opțiunea „Recunoaște textul (OCR)” când salvezi. Textul recunoscut este așezat invizibil peste imaginea fiecărei pagini, ca să îl poți căuta, selecta și copia. Precizia depinde de cât de clară și bine luminată este fotografia."
+        },
+        {
+          "q": "Ce fac modurile Carte, Act de identitate și Tablă albă?",
+          "a": "Carte împarte o carte deschisă în pagina din stânga și cea din dreapta. Act de identitate scanează fața și apoi spatele unui card și le așază pe amândouă pe aceeași pagină, la dimensiunea reală. Tablă albă albește reflexiile și intensifică culorile markerelor."
+        },
+        {
+          "q": "Pot corecta o pagină după ce am scanat-o?",
+          "a": "Da. În Revizuire poți trage colțurile pentru a decupa din nou, poți roti, schimba filtrul, ajusta luminozitatea și contrastul, șterge pete cu pensula, desena, evidenția, adăuga text sau semnătură, reface, reordona sau șterge orice pagină și anula orice modificare. Modificările se aplică pe fotografia originală, deci nimic nu pierde din calitate."
+        },
+        {
+          "q": "Pot scana o carte de vizită în contacte?",
+          "a": "Da. Folosește modul Carte de vizită, apoi atinge Contact: numele, funcția, compania, telefonul, e-mailul și site-ul sunt citite de pe card ca să le verifici și sunt salvate ca fișier de contact .vcf pe care telefonul îl poate importa."
+        },
+        {
+          "q": "Pot proteja scanarea cu parolă sau o pot salva ca JPG?",
+          "a": "Da. La salvare, bifează „Protejează cu parolă” pentru a bloca PDF-ul sau alege JPG pentru a obține câte o imagine pe pagină. PDF-urile salvate sunt păstrate și în Scanări recente pe acest dispozitiv, ca să le poți descărca sau trimite din nou."
+        }
+      ],
+      "howTo": {
+        "title": "Cum scanezi un document în PDF cu telefonul",
+        "intro": "Scanare PDF transformă camera telefonului sau a laptopului într-un scanner de documente: găsește marginile paginii, o îndreaptă și o curăță, apoi salvează un PDF pe care îl poți face căutabil.",
+        "steps": [
+          "Permite accesul la cameră sau adaugă fotografii făcute deja",
+          "Ține pagina în cadru — marginile sunt detectate, iar pagina este decupată și îndreptată",
+          "Revizuiește fiecare pagină: decupeaz-o din nou, rotește-o, alege un filtru precum Alb-negru sau Tablă albă ori refă fotografia",
+          "Alege dimensiunea paginii și a fișierului, activează recunoașterea textului (OCR) dacă vrei și salvează ca PDF sau JPG"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Scanările rămân pe dispozitivul tău, inclusiv copiile păstrate în Scanări recente"
+        ]
+      }
+    },
+    "word-to-pdf": {
+      "slug": "word-in-pdf",
+      "name": "Word în PDF",
+      "description": "Transformă un document (DOCX) în PDF",
+      "seoTitle": "Word în PDF — convertește DOCX în PDF online gratuit",
+      "metaDescription": "Convertește documente Word (DOCX) în PDF direct în browser. Păstrează textul, titlurile, listele și tabelele. Gratuit, fără cont și fără încărcare.",
+      "faqs": [
+        {
+          "q": "Se va păstra formatarea?",
+          "a": "Textul, titlurile, listele și tabelele sunt preluate, dar documentul este reasamblat, nu copiat pixel cu pixel, așa că fonturile personalizate și aspectele complexe nu vor fi identice. Pentru o copie perfectă, folosește Fișier → Salvare ca PDF chiar în Word."
+        },
+        {
+          "q": "Trebuie să am Microsoft Word instalat?",
+          "a": "Nu. Conversia se face în browser. Nu este nevoie să instalezi niciun program."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești Word în PDF",
+        "intro": "Word în PDF transformă fișierele .docx în PDF-uri direct în browser. Păstrează textul, titlurile, listele și tabelele, dar le reasamblează, așa că aspectele complexe și fonturile personalizate nu vor fi identice cu originalul.",
+        "steps": [
+          "Alege unul sau mai multe fișiere .docx",
+          "Apasă Convertește în PDF",
+          "Descarcă fiecare PDF sau folosește Descarcă tot pentru o arhivă ZIP"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "powerpoint-to-pdf": {
+      "slug": "powerpoint-in-pdf",
+      "name": "PowerPoint în PDF",
+      "description": "Transformă diapozitive (PPTX) în PDF",
+      "seoTitle": "PowerPoint în PDF — convertește PPTX în PDF gratuit",
+      "metaDescription": "Convertește prezentări PowerPoint (PPTX) în PDF, câte o pagină pe diapozitiv, cu text, imagini și tabele. Gratuit, fără cont și fără încărcare.",
+      "faqs": [
+        {
+          "q": "Se păstrează animațiile?",
+          "a": "Animațiile devin pagini statice, deoarece PDF-ul nu acceptă animații. Este capturată starea finală a fiecărui diapozitiv."
+        },
+        {
+          "q": "Pot converti doar anumite diapozitive?",
+          "a": "Conversia procesează întreaga prezentare. Pentru anumite diapozitive, extrage-le după conversie cu instrumentul Extragere pagini."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești PowerPoint în PDF",
+        "intro": "PowerPoint în PDF redesenează fiecare diapozitiv dintr-un fișier .pptx pe propria pagină, cu textul, imaginile, tabelele și formele grupate.",
+        "steps": [
+          "Alege unul sau mai multe fișiere .pptx",
+          "Apasă Convertește în PDF",
+          "Descarcă PDF-ul — câte o pagină pentru fiecare diapozitiv"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "excel-to-pdf": {
+      "slug": "excel-in-pdf",
+      "name": "Excel în PDF",
+      "description": "Transformă o foaie de calcul (XLSX) în PDF",
+      "seoTitle": "Excel în PDF — convertește foi de calcul în PDF gratuit",
+      "metaDescription": "Convertește foi de calcul Excel (XLSX sau CSV) în PDF, fiecare foaie potrivită la lățimea paginii. Gratuit, în browser, fără cont și fără încărcare.",
+      "faqs": [
+        {
+          "q": "Se păstrează formulele?",
+          "a": "Formulele sunt calculate și salvate în PDF ca valori rezultate. Formulele propriu-zise nu se păstrează, deoarece PDF-ul este un format static."
+        },
+        {
+          "q": "Pot converti doar anumite foi de lucru?",
+          "a": "Conversia procesează întregul registru. Pentru anumite foi, s-ar putea să fie nevoie să le salvezi mai întâi într-un fișier separat."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești Excel în PDF",
+        "intro": "Excel în PDF transformă fișierele .xlsx și .csv în PDF-uri. Fiecare foaie vizibilă este potrivită la lățimea paginii, iar orientarea portret sau peisaj este aleasă automat.",
+        "steps": [
+          "Alege unul sau mai multe fișiere .xlsx sau .csv (salvează mai întâi fișierele vechi .xls ca .xlsx)",
+          "Apasă Convertește în PDF",
+          "Descarcă PDF-ul; la foile foarte mari apar primele 3.000 de rânduri"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "html-to-pdf": {
+      "slug": "html-in-pdf",
+      "name": "HTML în PDF",
+      "description": "Convertește pagini web în PDF",
+      "seoTitle": "HTML în PDF — convertește pagini web în PDF gratuit",
+      "metaDescription": "Convertește orice pagină web în PDF. Salvează articole, chitanțe și conținut online ca documente PDF. Gratuit, în browser, fără instalare.",
+      "faqs": [
+        {
+          "q": "Pot converti orice pagină web?",
+          "a": "Da. Introdu adresa URL a oricărei pagini web accesibile public, iar aceasta va fi convertită în format PDF."
+        },
+        {
+          "q": "PDF-ul va arăta ca pagina web?",
+          "a": "PDF-ul captează conținutul afișat al paginii. Aspectele complexe pot diferi ușor de original."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești HTML în PDF",
+        "intro": "HTML în PDF preia cod HTML lipit sau un fișier .html încărcat și creează un PDF, fie cu designul original, fie ca text simplificat și selectabil.",
+        "steps": [
+          "Lipește codul HTML sau încarcă un fișier .html",
+          "Verifică previzualizarea designului",
+          "Alege Design exact sau Text selectabil",
+          "Apasă Convertește în PDF pentru a-l descărca"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "heic-to-pdf": {
+      "slug": "heic-in-pdf",
+      "name": "HEIC în PDF",
+      "description": "Convertește imagini Apple HEIC în PDF",
+      "seoTitle": "HEIC în PDF — convertește poze HEIC de pe iPhone gratuit",
+      "metaDescription": "Convertește fotografii HEIC și HEIF de pe iPhone și iPad în documente PDF. Gratuit, în browser, fără încărcare. Păstrează calitatea originală a imaginii.",
+      "faqs": [
+        {
+          "q": "Ce este un fișier HEIC?",
+          "a": "HEIC (High Efficiency Image Container) este formatul de imagine implicit al iPhone-urilor și iPad-urilor începând cu iOS 11. Oferă o comprimare mai bună decât JPEG, dar nu este acceptat de toate programele."
+        },
+        {
+          "q": "Pot converti HEIC în PDF pe telefon?",
+          "a": "Da. Instrumentul din browser funcționează pe iPhone și Android. Deschide-l în Safari sau Chrome, selectează fotografiile HEIC și descarcă PDF-ul."
+        },
+        {
+          "q": "Conversia scade calitatea imaginii?",
+          "a": "Nu. Imaginea HEIC este decodată și inclusă în PDF la rezoluția originală. Calitatea vizuală se păstrează."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești HEIC în PDF",
+        "intro": "HEIC în PDF transformă fotografiile de pe iPhone și iPad salvate ca HEIC sau HEIF în PDF-uri, fără să instalezi nimic și fără să trimiți pozele undeva.",
+        "steps": [
+          "Selectează fotografiile HEIC sau HEIF",
+          "Apasă Convertește în PDF — fiecare fotografie devine un PDF separat",
+          "Descarcă-le pe rând sau pe toate deodată într-o arhivă ZIP"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "webp-to-pdf": {
+      "slug": "webp-in-pdf",
+      "name": "WebP în PDF",
+      "description": "Convertește imagini WebP în documente PDF",
+      "seoTitle": "WebP în PDF — convertește imagini WebP în PDF gratuit",
+      "metaDescription": "Convertește imagini WebP în documente PDF direct în browser. Gratuit, fără cont, fără filigran. Conversie în lot, cu păstrarea calității originale.",
+      "faqs": [
+        {
+          "q": "Ce este un fișier WebP?",
+          "a": "WebP este un format de imagine modern, dezvoltat de Google, care oferă o comprimare superioară pentru imaginile de pe web. Este folosit pe scară largă în designul web și în conținutul online."
+        },
+        {
+          "q": "Conversia WebP în PDF scade calitatea?",
+          "a": "Nu. Imaginea WebP este decodată și inclusă în PDF la rezoluția originală, fără recomprimare."
+        },
+        {
+          "q": "Pot converti mai multe fișiere WebP deodată?",
+          "a": "Da. Selectează mai multe imagini WebP, iar acestea vor fi combinate într-un singur PDF cu mai multe pagini, câte o imagine pe pagină."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești WebP în PDF",
+        "intro": "WebP în PDF transformă imaginile WebP — formatul folosit acum de multe site-uri — în PDF-uri, câte un PDF pentru fiecare imagine.",
+        "steps": [
+          "Selectează una sau mai multe imagini WebP",
+          "Apasă Convertește în PDF",
+          "Descarcă fiecare PDF sau folosește Descarcă tot pentru o arhivă ZIP"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "tiff-to-pdf": {
+      "slug": "tiff-in-pdf",
+      "name": "TIFF în PDF",
+      "description": "Convertește imagini TIFF în documente PDF",
+      "seoTitle": "TIFF în PDF — convertește imagini TIFF în PDF gratuit",
+      "metaDescription": "Convertește imagini TIFF și TIF în documente PDF. Acceptă fișiere TIFF cu mai multe pagini. Gratuit, procesare în browser, fără încărcarea fișierelor.",
+      "faqs": [
+        {
+          "q": "Sunt acceptate fișierele TIFF cu mai multe pagini?",
+          "a": "Da. Fișierele TIFF cu mai multe pagini sunt împărțite în pagini individuale, fiecare devenind o pagină separată în PDF-ul rezultat."
+        },
+        {
+          "q": "Ce tipuri de comprimare TIFF sunt acceptate?",
+          "a": "Instrumentul procesează fișiere TIFF necomprimate, LZW și PackBits. Sunt acceptate și fișierele TIFF comprimate JPEG."
+        },
+        {
+          "q": "Pot converti mai multe fișiere TIFF deodată?",
+          "a": "Da. Selectează mai multe fișiere TIFF și fiecare va fi convertit, cu toate paginile combinate într-un singur PDF."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești TIFF în PDF",
+        "intro": "TIFF în PDF convertește imaginile TIFF, frecvente la scanere și programele de fax, în PDF-uri, câte un PDF pentru fiecare fișier.",
+        "steps": [
+          "Selectează unul sau mai multe fișiere TIFF",
+          "Apasă Convertește în PDF",
+          "Descarcă fiecare PDF sau folosește Descarcă tot pentru o arhivă ZIP"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "svg-to-pdf": {
+      "slug": "svg-in-pdf",
+      "name": "SVG în PDF",
+      "description": "Convertește imagini vectoriale SVG în PDF",
+      "seoTitle": "SVG în PDF — convertește imagini SVG în PDF gratuit",
+      "metaDescription": "Convertește fișiere SVG în PDF în browser. Gratuit, fără încărcare și fără cont — SVG-urile rămân pe dispozitiv. Rezultat clar, unul sau mai multe fișiere.",
+      "faqs": [
+        {
+          "q": "Conversia SVG în PDF păstrează calitatea vectorială?",
+          "a": "Nu — fișierul SVG este redat ca imagine de înaltă rezoluție (până la de 3 ori dimensiunea proprie) și plasat pe o pagină cu dimensiunile originale, așa că rămâne clar pe ecran și la tipărire, dar nu mai este grafică vectorială editabilă. Pentru un rezultat cu adevărat vectorial, exportă în PDF dintr-un editor vectorial precum Inkscape sau Illustrator."
+        },
+        {
+          "q": "Pot converti fișiere SVG cu resurse externe?",
+          "a": "Fișierele SVG care trimit la imagini sau fonturi externe s-ar putea să nu fie redate complet. Cel mai bine funcționează SVG-urile autonome, cu resursele incluse."
+        },
+        {
+          "q": "Este gratuit?",
+          "a": "Da. Conversia SVG în PDF este complet gratuită, fără limite, fără filigran și fără cont."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești SVG în PDF",
+        "intro": "SVG în PDF transformă grafica SVG în PDF-uri, câte un PDF pentru fiecare fișier — util când trimiți logouri și diagrame cuiva care nu poate deschide SVG.",
+        "steps": [
+          "Selectează unul sau mai multe fișiere SVG",
+          "Apasă Convertește în PDF",
+          "Descarcă fiecare PDF sau folosește Descarcă tot pentru o arhivă ZIP"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "epub-to-pdf": {
+      "slug": "epub-in-pdf",
+      "name": "EPUB în PDF",
+      "description": "Convertește cărți electronice EPUB în documente PDF",
+      "seoTitle": "EPUB în PDF — convertește cărți EPUB în PDF gratuit",
+      "metaDescription": "Convertește cărți electronice EPUB în PDF direct în browser. Alege un aspect bazat pe imagini sau text selectabil. Gratuit, fără instalare de programe.",
+      "faqs": [
+        {
+          "q": "Ce este un fișier EPUB?",
+          "a": "EPUB (Electronic Publication) este un format de carte electronică foarte răspândit, acceptat de majoritatea cititoarelor și aplicațiilor de lectură. Conține conținut bazat pe HTML, stilizat cu CSS."
+        },
+        {
+          "q": "Care este diferența dintre modul design și modul text?",
+          "a": "Modul Design exact redă fiecare capitol ca imagine, păstrând aspectul, imaginile și stilurile din text; foile de stil legate și fonturile personalizate încorporate nu sunt încărcate, așa că acele părți revin la fonturile și stilurile implicite. Modul Text selectabil extrage textul și îl rearanjează într-un PDF curat, cu text selectabil."
+        },
+        {
+          "q": "Funcționează cu fișiere EPUB protejate prin DRM?",
+          "a": "Nu. Fișierele EPUB protejate prin DRM nu pot fi convertite. Sunt acceptate doar fișierele EPUB neprotejate."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești EPUB în PDF",
+        "intro": "EPUB în PDF transformă o carte electronică într-un PDF pe care îl poți tipări sau citi oriunde. Alege o copie cu design exact sau una mai simplă, cu text selectabil.",
+        "steps": [
+          "Alege fișierul .epub (doar cărți fără DRM)",
+          "Alege Design exact sau Text selectabil",
+          "Apasă Convertește în PDF pentru a-l descărca"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "pdf-to-jpg": {
+      "slug": "pdf-in-jpg",
+      "name": "PDF în JPG",
+      "description": "Convertește paginile PDF în imagini JPG",
+      "seoTitle": "PDF în JPG — convertește pagini PDF în imagini gratuit",
+      "metaDescription": "Convertește paginile unui PDF în imagini JPG de înaltă calitate. Extrage toate paginile sau doar anumite pagini ca imagini. Gratuit, fără cont, fără filigran.",
+      "faqs": [
+        {
+          "q": "Ce rezoluție vor avea imaginile?",
+          "a": "Imaginile sunt extrase la cea mai mare rezoluție conținută în PDF, de obicei 150–300 DPI, în funcție de sursă."
+        },
+        {
+          "q": "Pot converti doar anumite pagini?",
+          "a": "Da. Alege să convertești toate paginile sau specifică un interval pentru a extrage doar paginile de care ai nevoie."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești PDF în JPG",
+        "intro": "PDF în JPG salvează fiecare pagină a unui PDF ca imagine, în JPEG sau PNG, la rezoluție standard (144 DPI) sau mare (216 DPI).",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Alege JPEG sau PNG și rezoluția Standard sau Mare",
+          "Apasă Convertește în imagini",
+          "Descarcă pagini individuale sau toate paginile împreună într-o arhivă ZIP"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "pdf-to-word": {
+      "slug": "pdf-in-word",
+      "name": "PDF în Word",
+      "description": "Transformă un PDF într-un document editabil (DOCX)",
+      "seoTitle": "PDF în Word — convertește PDF în DOCX editabil gratuit",
+      "metaDescription": "Transformă textul unui PDF într-un fișier Word (DOCX) editabil, pagină cu pagină. Gratuit, în browser, fără cont și fără încărcare.",
+      "faqs": [
+        {
+          "q": "Fișierul Word păstrează aspectul și imaginile?",
+          "a": "Nu. Preia textul sub formă de titluri și paragrafe editabile, cu un titlu pentru fiecare pagină; imaginile și aspectele complexe nu sunt reconstruite. Este gândit pentru refolosirea textului, nu pentru o copie identică vizual."
+        },
+        {
+          "q": "Funcționează cu PDF-uri scanate?",
+          "a": "PDF-urile scanate au nevoie mai întâi de OCR pentru extragerea textului. Rulează OCR, apoi convertește rezultatul în Word pentru cele mai bune rezultate."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești PDF în Word",
+        "intro": "PDF în Word scoate textul dintr-un PDF într-un fișier .docx editabil, cu un titlu pentru fiecare pagină. Mută textul, nu aspectul: imaginile și formatarea complexă nu sunt preluate.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri (pentru documente scanate, rulează mai întâi OCR PDF)",
+          "Apasă Convertește în Word",
+          "Descarcă fișierul .docx și deschide-l în Word, Google Docs sau LibreOffice"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "pdf-to-powerpoint": {
+      "slug": "pdf-in-powerpoint",
+      "name": "PDF în PowerPoint",
+      "description": "Transformă un PDF în diapozitive editabile (PPTX)",
+      "seoTitle": "PDF în PowerPoint — convertește PDF în PPTX editabil",
+      "metaDescription": "Transformă un PDF în diapozitive PowerPoint (PPTX) editabile: titlurile devin titluri de diapozitiv, paragrafele devin liste. Gratuit, fără cont și încărcare.",
+      "faqs": [
+        {
+          "q": "Fiecare pagină PDF devine un diapozitiv?",
+          "a": "De obicei, da. Fiecare pagină începe un diapozitiv nou, iar o pagină cu mult text continuă pe diapozitive suplimentare, ca să nu se piardă nimic. Titlurile devin titluri de diapozitiv, iar paragrafele devin puncte de listă."
+        },
+        {
+          "q": "Pot edita diapozitivele rezultate?",
+          "a": "Da. Rezultatul este un fișier PPTX standard pe care îl poți edita în orice aplicație compatibilă cu PowerPoint."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești PDF în PowerPoint",
+        "intro": "PDF în PowerPoint transformă un PDF în diapozitive editabile: titlurile devin titluri de diapozitiv, paragrafele devin puncte de listă, iar paginile lungi continuă pe diapozitive suplimentare.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Apasă Convertește în PowerPoint",
+          "Descarcă fișierul .pptx și ajustează diapozitivele în PowerPoint, Keynote sau Google Slides"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "pdf-to-excel": {
+      "slug": "pdf-in-excel",
+      "name": "PDF în Excel",
+      "description": "Exportă textul PDF într-o foaie de calcul, câte un rând de text pe rând (XLSX)",
+      "seoTitle": "PDF în Excel — exportă textul PDF într-o foaie de calcul",
+      "metaDescription": "Exportă textul unui PDF într-un registru Excel (XLSX): o foaie pentru fiecare pagină, un rând de text pe rând. Gratuit, în browser, fără cont.",
+      "faqs": [
+        {
+          "q": "Reconstruiește tabelele pe coloane?",
+          "a": "Nu. Fiecare rând de text de pe pagină ajunge într-o singură celulă, așa că rândurile de tabel apar într-o celulă, nu în coloane separate. Folosește apoi funcția Text în coloane din Excel (sau Power Query) pentru a le împărți."
+        },
+        {
+          "q": "Cum este organizat registrul?",
+          "a": "Primești o foaie Rezumat cu numărul de rânduri și de caractere pentru fiecare pagină, apoi câte o foaie pentru fiecare pagină PDF, cu fiecare rând de text pe propriul rând."
+        },
+        {
+          "q": "Funcționează cu PDF-uri scanate?",
+          "a": "Doar dacă PDF-ul are un strat de text. Pentru paginile scanate, rulează mai întâi OCR PDF, ca să existe text de exportat."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești PDF în Excel",
+        "intro": "PDF în Excel exportă textul unui PDF într-un registru .xlsx: o foaie de rezumat, apoi câte o foaie pentru fiecare pagină, cu un rând de text pe rând. Nu reconstruiește coloanele tabelelor.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Apasă Convertește în Excel",
+          "Descarcă fișierul .xlsx, apoi folosește Text în coloane în Excel pentru a împărți rândurile în celule"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "pdf-to-pdfa": {
+      "slug": "pdf-in-pdfa",
+      "name": "PDF în PDF/A",
+      "description": "Convertește PDF în formatul de arhivare PDF/A",
+      "seoTitle": "PDF în PDF/A — convertește în formatul de arhivare",
+      "metaDescription": "Convertește fișiere PDF standard în formatul de arhivare PDF/A, pentru păstrare pe termen lung și conformitate. Conversie gratuită, în browser.",
+      "faqs": [
+        {
+          "q": "Ce este PDF/A?",
+          "a": "PDF/A este o versiune de PDF standardizată ISO, concepută pentru arhivarea pe termen lung. Asigură că documentele pot fi reproduse exact și în viitor."
+        },
+        {
+          "q": "De ce să convertesc în PDF/A?",
+          "a": "Multe domenii cer PDF/A pentru păstrarea documentelor. Formatul asigură că fonturile sunt încorporate, culorile sunt definite, iar documentul este autonom."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești PDF în PDF/A",
+        "intro": "PDF în PDF/A copiază paginile într-un document nou și adaugă metadatele de identificare PDF/A pentru arhivare. Dacă o arhivă trebuie să certifice conformitatea strictă, verifică rezultatul cu un validator precum veraPDF.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Apasă Convertește în PDF/A",
+          "Descarcă copia pentru arhivare"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "pdf-to-markdown": {
+      "slug": "pdf-in-markdown",
+      "name": "PDF în Markdown",
+      "description": "Convertește conținutul PDF în text Markdown",
+      "seoTitle": "PDF în Markdown — convertește conținutul PDF în Markdown",
+      "metaDescription": "Convertește textul unui PDF într-un fișier Markdown (.md) curat, pentru notițe, documentație și instrumente AI. Gratuit, în browser, fără cont.",
+      "faqs": [
+        {
+          "q": "Se păstrează formatarea în Markdown?",
+          "a": "Textul este preluat în ordinea de citire, ca Markdown simplu. Aspectele complexe, tabelele și imaginile sunt simplificate, așa că verifică previzualizarea înainte să te bazezi pe structură."
+        },
+        {
+          "q": "Pot converti doar anumite pagini?",
+          "a": "Este convertit întregul document. Pentru a converti doar unele pagini, folosește mai întâi Extragere pagini și convertește fișierul obținut."
+        }
+      ],
+      "howTo": {
+        "title": "Cum convertești PDF în Markdown",
+        "intro": "PDF în Markdown extrage textul unui PDF într-un fișier .md — un punct de plecare curat pentru aplicații de notițe, documentație și instrumente AI.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Apasă Convertește în Markdown",
+          "Previzualizează și copiază textul din pagină sau descarcă fișierul .md"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "edit-pdf": {
+      "slug": "editare-pdf",
+      "name": "Editare PDF",
+      "description": "Modifică textul, titlurile și cifrele dintr-un PDF",
+      "seoTitle": "Editare PDF — modifică text, titluri și cifre gratuit",
+      "metaDescription": "Editează textul, titlurile și cifrele dintr-un PDF direct în browser. Corectează greșeli, actualizează date și fă modificări fără conversie în Word.",
+      "faqs": [
+        {
+          "q": "Pot edita orice PDF?",
+          "a": "Orice PDF creat digital, cu text selectabil, poate fi editat. PDF-urile scanate au nevoie mai întâi de OCR pentru ca textul să devină editabil."
+        },
+        {
+          "q": "Editarea schimbă formatarea?",
+          "a": "Editarea directă păstrează formatarea originală. Este afectat doar textul pe care îl modifici — fonturile, spațierea și aspectul rămân intacte."
+        }
+      ],
+      "howTo": {
+        "title": "Cum editezi textul dintr-un PDF",
+        "intro": "Editare PDF îți permite să schimbi cuvintele, titlurile și cifrele existente pe o pagină: dai clic pe un rând și scrii, ca într-un editor de text.",
+        "steps": [
+          "Alege PDF-ul",
+          "Dă clic pe orice rând de text de pe pagină",
+          "Scrie modificările",
+          "Apasă Salvează PDF-ul editat pentru a-l descărca"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "rotate-pdf": {
+      "slug": "rotire-pdf",
+      "name": "Rotire PDF",
+      "description": "Rotește paginile PDF la orice unghi",
+      "seoTitle": "Rotire PDF — rotește paginile PDF gratuit",
+      "metaDescription": "Rotește pagini individuale sau toate paginile unui PDF. Corectează scanările întoarse, orientarea și unghiul paginilor. Gratuit, fără cont.",
+      "faqs": [
+        {
+          "q": "Pot roti pagini individuale?",
+          "a": "Da. Fiecare pagină poate fi rotită separat — cu 90°, 180° sau 270° — fără să le afecteze pe celelalte."
+        },
+        {
+          "q": "Rotirea afectează calitatea la tipărire?",
+          "a": "Nu. Rotirea este o modificare de metadate care îi spune vizualizatorului cum să afișeze pagina. Conținutul nu este redesenat."
+        }
+      ],
+      "howTo": {
+        "title": "Cum rotești un PDF și îl salvezi",
+        "intro": "Rotire PDF rotește paginile cu 90°, 180° sau 270° și salvează rotirea în fișier, așa că rămâne fixă în orice vizualizator.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Alege unghiul: 90°, 180° sau 270°",
+          "Aplică-l tuturor paginilor sau scrie anumite pagini",
+          "Apasă Rotește PDF și descarcă rezultatul"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "add-page-numbers": {
+      "slug": "numerotare-pagini-pdf",
+      "name": "Numerotare pagini",
+      "description": "Adaugă numere de pagină în PDF",
+      "seoTitle": "Numerotare pagini PDF — adaugă numere de pagină gratuit",
+      "metaDescription": "Adaugă numere de pagină oriunde în PDF. Alege formatul, poziția și numărul de început. Gratuit, în browser, fără încărcare.",
+      "faqs": [
+        {
+          "q": "Unde pot plasa numerele de pagină?",
+          "a": "Alege una dintre pozițiile: sus-stânga, sus-centru, sus-dreapta, jos-stânga, jos-centru sau jos-dreapta."
+        },
+        {
+          "q": "Pot sări peste numerotarea primei pagini?",
+          "a": "Da. Alege opțiunea de a începe numerotarea de la o anumită pagină, cum ar fi pagina 2 sau 3, ca să sari peste paginile de copertă."
+        }
+      ],
+      "howTo": {
+        "title": "Cum numerotezi paginile unui PDF",
+        "intro": "Numerotare pagini adaugă numere pe fiecare pagină, în una dintre cele șase poziții, în stilul pe care îl alegi.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Alege poziția — sus sau jos, la stânga, la centru sau la dreapta",
+          "Alege formatul: „1”, „Pagina 1” sau „1 din N” și numărul de început",
+          "Apasă Adaugă numere de pagină și descarcă rezultatul"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "add-watermark": {
+      "slug": "filigran-pdf",
+      "name": "Adăugare filigran",
+      "description": "Adaugă filigran text sau imagine",
+      "seoTitle": "Filigran PDF — adaugă un filigran text gratuit",
+      "metaDescription": "Aplică un filigran text, cum ar fi CONFIDENȚIAL sau CIORNĂ, pe fiecare pagină a unui PDF. Setează opacitatea și mărimea. Gratuit, fără cont și fără încărcare.",
+      "faqs": [
+        {
+          "q": "Pot ajusta opacitatea filigranului?",
+          "a": "Da. Controlezi transparența filigranului, de la complet opac până la aproape invizibil."
+        },
+        {
+          "q": "Pot aplica filigranul pe toate paginile deodată?",
+          "a": "Da. Filigranul se aplică simultan pe toate paginile documentului."
+        }
+      ],
+      "howTo": {
+        "title": "Cum adaugi un filigran într-un PDF",
+        "intro": "Adăugare filigran aplică pe pagini un filigran text, cum ar fi CONFIDENȚIAL sau CIORNĂ, cu opacitatea și mărimea pe care le alegi.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Scrie textul filigranului",
+          "Setează opacitatea și mărimea fontului",
+          "Apasă Adaugă filigran și descarcă rezultatul"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "crop-pdf": {
+      "slug": "decupare-pdf",
+      "name": "Decupare PDF",
+      "description": "Decupează și redimensionează paginile PDF",
+      "seoTitle": "Decupare PDF — decupează și redimensionează pagini gratuit",
+      "metaDescription": "Decupează și redimensionează paginile PDF. Elimină marginile, ajustează dimensiunile paginii și taie conținutul. Gratuit, în browser, fără încărcare.",
+      "faqs": [
+        {
+          "q": "Pot decupa toate paginile deodată?",
+          "a": "Da. Aplică aceeași zonă de decupare pe toate paginile sau setează decupări diferite pentru pagini individuale."
+        },
+        {
+          "q": "Decuparea șterge conținut?",
+          "a": "Decuparea ascunde conținutul din afara zonei de decupare. Conținutul ascuns nu este șters și poate fi readus ulterior."
+        }
+      ],
+      "howTo": {
+        "title": "Cum decupezi un PDF",
+        "intro": "Decupare PDF taie aceeași margine din partea de sus, de jos, din stânga și din dreapta fiecărei pagini — ideal pentru a elimina spațiile albe sau marginile lăsate de scaner.",
+        "steps": [
+          "Alege unul sau mai multe PDF-uri",
+          "Setează câte puncte să fie tăiate de la fiecare margine",
+          "Apasă Decupează PDF",
+          "Descarcă fișierul decupat"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "sign-pdf": {
+      "slug": "semnare-pdf",
+      "name": "Semnare PDF",
+      "description": "Adaugă semnături digitale în PDF-uri",
+      "seoTitle": "Semnare PDF — adaugă semnătură electronică gratuit",
+      "metaDescription": "Adaugă semnături electronice în documente PDF. Desenează, scrie sau încarcă semnătura. Valabilă legal, gratuit, fără cont.",
+      "faqs": [
+        {
+          "q": "Semnăturile electronice sunt valabile legal?",
+          "a": "Da. Semnăturile electronice sunt valabile legal, conform legii ESIGN din SUA și regulamentului eIDAS din UE, pentru aproape toate documentele."
+        },
+        {
+          "q": "Pot semna un PDF protejat cu parolă?",
+          "a": "Trebuie să îl deblochezi mai întâi. PDF-urile protejate cu parolă nu pot fi modificate până când parola nu este eliminată."
+        }
+      ],
+      "howTo": {
+        "title": "Cum semnezi un PDF",
+        "intro": "Semnare PDF îți plasează semnătura pe orice pagină. Desenează-o, scrie-o cu un font de tip scris de mână sau încarcă o imagine a semnăturii tale reale.",
+        "steps": [
+          "Alege PDF-ul pe care trebuie să îl semnezi",
+          "Creează semnătura: desenează, scrie sau încarcă o imagine",
+          "Alege pagina și dă clic unde trebuie să apară semnătura, apoi ajustează-i mărimea",
+          "Apasă Semnează și descarcă PDF-ul"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Imaginea semnăturii nu este stocată niciodată pe un server"
+        ]
+      }
+    },
+    "redact-pdf": {
+      "slug": "cenzurare-pdf",
+      "name": "Cenzurare PDF",
+      "description": "Acoperă definitiv cu negru text, imagini sau pagini",
+      "seoTitle": "Cenzurare PDF gratuit — acoperă textul, fără încărcare",
+      "metaDescription": "Cenzurează un PDF gratuit în browser: desenează casete peste nume, numere sau semnături și sunt eliminate definitiv. Fără încărcare, cont sau filigran.",
+      "faqs": [
+        {
+          "q": "Cenzurarea este definitivă?",
+          "a": "Da. Fiecare pagină pe care o marchezi este redesenată ca imagine plată, cu casetele negre imprimate în ea, așa că textul, imaginile și straturile ascunse de dedesubt nu ajung în noul fișier. Paginile nemarcate sunt copiate neatinse."
+        },
+        {
+          "q": "Conținutul cenzurat poate fi recuperat?",
+          "a": "Nu. Spre deosebire de un dreptunghi negru desenat peste text, care lasă textul de dedesubt selectabil, paginile marcate sunt reconstruite dintr-o imagine acoperită cu negru, iar conținutul original al paginii este eliminat. Testează: încearcă să copiezi dintr-o zonă cenzurată — nu obții nimic."
+        },
+        {
+          "q": "Documentul meu este încărcat undeva?",
+          "a": "Nu. Cenzurarea rulează în întregime în fila browserului, așa că fișierul nu părăsește dispozitivul tău. Asta contează cel mai mult tocmai pentru documentele pe care oamenii le cenzurează: acte de identitate, dosare medicale, contracte și extrase bancare."
+        },
+        {
+          "q": "Restul unei pagini cenzurate rămâne text selectabil?",
+          "a": "Nu. O pagină pe care o marchezi devine în întregime imagine, așa că textul rămas nu mai poate fi selectat sau căutat. Rulează OCR după aceea dacă ai nevoie ca pagina să fie din nou căutabilă; paginile nemarcate își păstrează textul."
+        },
+        {
+          "q": "Pot acoperi cu negru o pagină întreagă?",
+          "a": "Da. Treci la „Pagini întregi” și dă clic pe fiecare pagină care trebuie ascunsă. Rămâne în document ca pagină complet neagră, așa că numărul de pagini și numerotarea nu se schimbă."
+        }
+      ],
+      "howTo": {
+        "title": "Cum cenzurezi un PDF",
+        "intro": "Cenzurare PDF acoperă definitiv cu negru ce marchezi. Fiecare pagină marcată este reconstruită ca imagine, așa că textul ascuns dispare din fișier — nu este doar acoperit de o casetă.",
+        "steps": [
+          "Alege PDF-ul",
+          "Desenează casete peste textul sau imaginile de ascuns ori selectează pagini întregi",
+          "Apasă Cenzurează",
+          "Descarcă PDF-ul cenzurat și verifică-l înainte să îl trimiți"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Cenzurare reală: conținutul ascuns nu mai poate fi copiat înapoi"
+        ]
+      }
+    },
+    "unlock-pdf": {
+      "slug": "deblocare-pdf",
+      "name": "Deblocare PDF",
+      "description": "Elimină protecția cu parolă dintr-un PDF",
+      "seoTitle": "Deblocare PDF — elimină parola din PDF gratuit",
+      "metaDescription": "Elimină protecția cu parolă din documente PDF. Deblochează PDF-uri criptate pentru editare, tipărire sau trimitere. Gratuit, fără cont.",
+      "faqs": [
+        {
+          "q": "Am nevoie de parolă pentru a debloca un PDF?",
+          "a": "Da. Trebuie să știi parola actuală pentru a o elimina. Criptarea PDF nu poate fi ocolită fără parolă."
+        },
+        {
+          "q": "Deblocarea modifică conținutul PDF-ului?",
+          "a": "Nu. Deblocarea elimină doar protecția cu parolă. Conținutul documentului rămâne neschimbat."
+        }
+      ],
+      "howTo": {
+        "title": "Cum elimini parola dintr-un PDF",
+        "intro": "Deblocare PDF salvează o copie a unui PDF protejat, fără parolă sau restricții. Trebuie să ai dreptul de a debloca fișierul și parola, dacă ți se cere una la deschidere.",
+        "steps": [
+          "Alege PDF-ul protejat",
+          "Introdu parola dacă fișierul o cere la deschidere",
+          "Apasă Deblochează PDF pentru a descărca o copie deblocată"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "protect-pdf": {
+      "slug": "protejare-pdf",
+      "name": "Protejare PDF",
+      "description": "Adaugă protecție cu parolă unui PDF",
+      "seoTitle": "Protejare PDF — pune parolă pe PDF gratuit",
+      "metaDescription": "Adaugă protecție cu parolă documentelor PDF. Criptează fișierele cu AES-256. Gratuit, în browser, fără încărcare.",
+      "faqs": [
+        {
+          "q": "Cât de puternică este protecția cu parolă a unui PDF?",
+          "a": "Criptarea PDF modernă folosește AES-256, același standard folosit de bănci și guverne. O parolă puternică face atacurile de tip forță brută nepractice."
+        },
+        {
+          "q": "Ce se întâmplă dacă uit parola?",
+          "a": "Nu există nicio metodă de recuperare. Fără parolă, fișierul rămâne inaccesibil definitiv. Păstreaz-o mereu într-un loc sigur."
+        }
+      ],
+      "howTo": {
+        "title": "Cum pui parolă pe un PDF",
+        "intro": "Protejare PDF criptează un PDF cu o parolă de deschidere, cu o parolă pentru modificarea permisiunilor sau cu amândouă — și poate bloca tipărirea, copierea sau editarea.",
+        "steps": [
+          "Alege PDF-ul",
+          "Introdu o parolă de deschidere, o parolă de proprietar sau pe amândouă",
+          "Opțional, deschide setările de permisiuni pentru a restricționa tipărirea, copierea și editarea",
+          "Apasă Protejează PDF pentru a descărca fișierul criptat"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Parola nu părăsește niciodată dispozitivul tău"
+        ]
+      }
+    },
+    "compare-pdf": {
+      "slug": "comparare-pdf",
+      "name": "Comparare PDF",
+      "description": "Compară două fișiere PDF pentru a găsi diferențele",
+      "seoTitle": "Comparare PDF — găsește diferențele dintre două PDF-uri",
+      "metaDescription": "Verifică dacă două PDF-uri sunt identice: primești un scor de similitudine și paginile exacte care diferă. Gratuit, în browser, fără încărcare.",
+      "faqs": [
+        {
+          "q": "Ce arată comparația?",
+          "a": "Dacă cele două fișiere sunt identice, un procent de similitudine, numerele paginilor care diferă, precum și numărul de pagini, dimensiunea și detaliile fiecărui document. Îți indică paginile modificate, fără să marcheze cuvintele individuale."
+        },
+        {
+          "q": "Pot compara PDF-uri scanate?",
+          "a": "Rulează mai întâi OCR PDF pe ambele scanări. Comparația lucrează cu textul din fișiere, așa că scanările care conțin doar imagini nu au ce compara."
+        }
+      ],
+      "howTo": {
+        "title": "Cum compari două PDF-uri",
+        "intro": "Comparare PDF verifică un original față de o versiune modificată și îți spune dacă sunt identice, cât de asemănătoare sunt și care pagini diferă.",
+        "steps": [
+          "Alege două PDF-uri: mai întâi originalul, apoi versiunea modificată",
+          "Apasă Compară PDF-urile",
+          "Citește rezultatul: similitudinea, lista paginilor diferite și detaliile fiecărui fișier"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "ai-summarizer": {
+      "slug": "rezumat-pdf",
+      "name": "Rezumat PDF",
+      "description": "Rezumă conținutul unui PDF",
+      "seoTitle": "Rezumat PDF — rezumă un PDF gratuit, fără încărcare",
+      "metaDescription": "Află în câteva secunde ideile principale și temele unui PDF. Rezumatul este calculat pe dispozitivul tău, deci documentul nu se încarcă. Gratuit.",
+      "faqs": [
+        {
+          "q": "Cum funcționează rezumatul?",
+          "a": "Punctează fiecare propoziție în funcție de câți termeni-cheie ai documentului conține și le păstrează pe cele mai relevante ca idei principale. Cuvintele sunt ale autorului, nu reformulate de un chatbot — verifică întotdeauna documentele importante cu originalul."
+        },
+        {
+          "q": "Documentul meu este trimis pe un server?",
+          "a": "Nu. Rezumatul este calculat în browser, iar PDF-ul nu părăsește niciodată dispozitivul tău."
+        }
+      ],
+      "howTo": {
+        "title": "Cum faci rezumatul unui PDF",
+        "intro": "Rezumat PDF alege cele mai importante propoziții dintr-un PDF și îi enumeră ideile principale și temele de bază. Funcționează în întregime pe dispozitivul tău — niciun serviciu AI nu îți vede documentul.",
+        "steps": [
+          "Alege PDF-ul",
+          "Apasă Generează rezumatul",
+          "Citește ideile principale și temele și copiază-le dacă ai nevoie de ele în altă parte"
+        ],
+        "benefits": [
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    },
+    "translate-pdf": {
+      "slug": "traducere-pdf",
+      "name": "Traducere PDF",
+      "description": "Tradu conținutul unui PDF în orice limbă",
+      "seoTitle": "Traducere PDF — tradu un PDF în altă limbă",
+      "metaDescription": "Tradu textul unui PDF în 42 de limbi și descarcă-l ca PDF nou. Gratuit, fără cont. Textul este trimis unui serviciu de traducere.",
+      "faqs": [
+        {
+          "q": "Câte limbi sunt disponibile?",
+          "a": "42, cu detectarea automată a limbii sursă."
+        },
+        {
+          "q": "Se păstrează formatarea?",
+          "a": "Nu. Primești textul tradus pe ecran și ca PDF nou, doar cu text; aspectul original și imaginile nu sunt reconstruite."
+        },
+        {
+          "q": "Documentul meu este încărcat?",
+          "a": "Acesta este singurul instrument Slate PDF care trimite date online: textul extras ajunge la un serviciu public gratuit de traducere. Nu îl folosi pentru documente confidențiale."
+        }
+      ],
+      "howTo": {
+        "title": "Cum traduci un PDF",
+        "intro": "Traducere PDF traduce textul unui PDF în una dintre cele 42 de limbi și îți oferă traducerea pe ecran sau ca PDF nou, doar cu text. Spre deosebire de celelalte instrumente ale noastre, trimite textul unui serviciu online gratuit de traducere — pagina te anunță înainte să începi.",
+        "steps": [
+          "Alege un PDF cu text real (pentru scanări, rulează mai întâi OCR PDF)",
+          "Alege limba sursă sau las-o pe Detectare automată, apoi limba țintă",
+          "Apasă Tradu",
+          "Copiază traducerea sau descarc-o ca PDF"
+        ],
+        "benefits": [
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Transparent în privința confidențialității: este singurul instrument care trimite text online și îți spune acest lucru",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
+        ]
+      }
+    }
+  }
+}
