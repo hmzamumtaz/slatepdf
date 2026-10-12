@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Tüm araçlara dön",
+  "Convert EPUB ebooks to PDF documents": "EPUB e-kitaplarını PDF belgelerine dönüştürün",
+  "Convert to PDF": "PDF'ye Dönüştür",
+  "Converting...": "Dönüştürülüyor...",
+  "EPUB to PDF": "EPUB'dan PDF'ye",
+  "Exact design": "Birebir tasarım",
+  "Extracting EPUB content...": "EPUB içeriği çıkarılıyor...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Metin içeriğini çıkarır ve temiz, aranabilir bir PDF'de yeniden akıtır. Romanlar ve metin ağırlıklı kitaplar için en iyisidir.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Her bölümün sayfa düzenini, görsellerini ve satır içi stillerini korur. Bağlantılı stil sayfaları ve gömülü özel yazı tipleri yüklenmez; bunların yerine varsayılan stiller kullanılır. Resimli kitaplar için en iyisidir.",
+  "PDF downloaded": "PDF indirildi",
+  "PDF output": "PDF çıktısı",
+  "Selectable text": "Seçilebilir metin",
+  "Upload .epub file": ".epub dosyası yükle",
+  "Upload an EPUB file first.": "Önce bir EPUB dosyası yükleyin."
+}

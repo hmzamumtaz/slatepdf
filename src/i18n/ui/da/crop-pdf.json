@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Beskær PDF",
+  "Margins (points)": "Margener (punkter)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Værdier i punkter (1 tomme = 72 punkter). Der skæres af fra hver kant.",
+  "bottom": "nederst",
+  "left": "venstre",
+  "right": "højre",
+  "top": "øverst"
+}

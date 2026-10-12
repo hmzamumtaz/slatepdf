@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "作成者：{value}",
+  "Back to all tools": "すべてのツールに戻る",
+  "Changed": "変更後",
+  "Compare Another": "別のファイルを比較",
+  "Compare PDF": "PDFを比較",
+  "Compare PDFs": "PDFを比較",
+  "Compare two PDFs and see the differences": "2つのPDFを比較して違いを確認します",
+  "Comparing...": "比較中...",
+  "Comparison complete": "比較が完了しました",
+  "Creator: {value}": "作成アプリ：{value}",
+  "Differing pages": "違いのあるページ",
+  "File 1": "ファイル1",
+  "File 2": "ファイル2",
+  "Files are identical": "ファイルは同一です",
+  "Original": "元のファイル",
+  "Page {page}": "{page}ページ",
+  "Pages: {pages} | Size: {size}": "ページ数：{pages} | サイズ：{size}",
+  "Title: {value}": "タイトル：{value}",
+  "similarity: {value}%": "類似度：{value}%",
+  "{count} page differ": "{count}ページに違いがあります",
+  "{count} pages differ": "{count}ページに違いがあります"
+}

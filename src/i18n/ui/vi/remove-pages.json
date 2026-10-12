@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Các trang cần xóa (cách nhau bằng dấu phẩy, ví dụ: 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Vui lòng nhập các trang cần xóa (ví dụ: 1, 3, 5-8)",
+  "Preview after removal:": "Xem trước sau khi xóa:",
+  "Remove Pages": "Xóa trang",
+  "Total pages: {total} | Remaining: {count}": "Tổng số trang: {total} | Còn lại: {count}",
+  "e.g., 1, 3, 5, 7": "ví dụ: 1, 3, 5, 7"
+}

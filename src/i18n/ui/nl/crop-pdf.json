@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "PDF bijsnijden",
+  "Margins (points)": "Marges (punten)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Waarden in punten (1 inch = 72 punten). Er wordt van elke rand afgesneden.",
+  "bottom": "onder",
+  "left": "links",
+  "right": "rechts",
+  "top": "boven"
+}

@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Voer de nieuwe paginavolgorde in (gescheiden door komma's, bijv. 3,1,2,4,5)",
+  "Organize PDF": "PDF ordenen",
+  "Please enter a page order": "Voer een paginavolgorde in",
+  "Preview in new order:": "Voorbeeld in de nieuwe volgorde:",
+  "Total pages: {total} | Reordered: {count}": "Totaal aantal pagina's: {total} | Herschikt: {count}",
+  "e.g., 3,1,2,4,5": "bijv. 3,1,2,4,5"
+}

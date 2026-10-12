@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "Nie udało się odczytać „{name}” jako skoroszytu Excel. Upewnij się, że to prawidłowy plik .xlsx.",
+  "Convert to PDF": "Konwertuj na PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Starsze pliki .xls nie są obsługiwane. Zapisz plik jako .xlsx w Excelu i spróbuj ponownie.",
+  "No data found in this workbook.": "W tym skoroszycie nie znaleziono danych."
+}

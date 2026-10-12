@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "Vissza az összes eszközhöz",
+  "Enter the PDF password (leave empty if none)": "Add meg a PDF jelszavát (hagyd üresen, ha nincs)",
+  "File": "Fájl",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "Csak olyan PDF-eket használj, amelyek a tieid, vagy amelyek módosítására engedélyed van. Más PDF-jének védelmét eltávolítani sértheti a szerzői jogi vagy adatvédelmi jogszabályokat.",
+  "PDF unlocked and downloaded": "PDF feloldva és letöltve",
+  "Password (if required)": "Jelszó (ha szükséges)",
+  "Remove password protection from a PDF file": "Jelszavas védelem eltávolítása egy PDF fájlról",
+  "Size": "Méret",
+  "Unlock PDF": "PDF feloldása",
+  "Unlocking...": "Feloldás..."
+}

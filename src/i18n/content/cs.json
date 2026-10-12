@@ -1,0 +1,1407 @@
+{
+  "site": {
+    "homeTitle": "PDF nástroje zdarma přímo v prohlížeči",
+    "homeDescription": "Spojujte, rozdělujte, zmenšujte, převádějte, podepisujte a upravujte PDF přímo v prohlížeči. Zdarma, bez registrace a bez nahrávání souborů.",
+    "heroBadge": "Soubory nikdy neopustí vaše zařízení",
+    "heroTitle": "Všechny PDF nástroje, které potřebujete,",
+    "heroHighlight": "zdarma a soukromě.",
+    "heroSubtitle": "Spojujte, rozdělujte, zmenšujte, převádějte, upravujte a podepisujte dokumenty v prohlížeči. Bez nahrávání, bez registrace a bez vodoznaků.",
+    "heroCta": "Zobrazit všechny PDF nástroje",
+    "popularTools": "Oblíbené nástroje",
+    "whyTitle": "Proč {site}?",
+    "why": [
+      {
+        "title": "Vaše soubory zůstanou soukromé",
+        "text": "Vše probíhá ve vašem zařízení. Vaše dokumenty se nikdy nenahrávají na server – ideální pro důvěrnou práci."
+      },
+      {
+        "title": "Okamžité výsledky",
+        "text": "Žádné nahrávání ani fronty. Vaše PDF se zpracuje hned po kliknutí, i při pomalém připojení."
+      },
+      {
+        "title": "Zdarma a bez vodoznaku",
+        "text": "Používejte všechny nástroje, jak často chcete. Bez účtu, bez vodoznaku ve vašich souborech a bez skrytých poplatků."
+      }
+    ],
+    "faqTitle": "Časté dotazy",
+    "homeFaqs": [
+      {
+        "q": "Je {site} opravdu zdarma?",
+        "a": "Ano. Všechny nástroje jsou zdarma, bez účtu, bez vodoznaku ve vašich souborech a bez placené verze."
+      },
+      {
+        "q": "Nahrávají se moje soubory na server?",
+        "a": "Ne. Nástroje běží ve vašem prohlížeči, takže soubory zůstávají ve vašem zařízení. Jedinou výjimkou je Přeložit PDF, který odesílá text překladové službě a předem vás na to upozorní."
+      },
+      {
+        "q": "Musím něco instalovat?",
+        "a": "Ne. Funguje v každém moderním prohlížeči – Chrome, Edge, Firefox nebo Safari – na Windows, Macu, Linuxu, Androidu i iPhonu."
+      },
+      {
+        "q": "Musím si vytvořit účet?",
+        "a": "Ne. Otevřete nástroj a můžete hned začít."
+      }
+    ],
+    "hubTitle": "Všechny PDF nástroje – {count} nástrojů zdarma, bez nahrávání",
+    "hubDescription": "Všechny nástroje {site} na jednom místě: spojení, rozdělení, zmenšení, převod, úpravy, podpis a ochrana PDF. Zdarma, bez účtu a bez nahrávání.",
+    "hubH1": "Všechny PDF nástroje, které potřebujete, na jednom místě",
+    "hubIntro": "{count} bezplatných PDF nástrojů pro spojení, rozdělení, zmenšení, převod, úpravy, podpis a ochranu dokumentů. Každý běží ve vašem prohlížeči, takže se vaše soubory nikdy nenahrávají – bez účtu a bez vodoznaku.",
+    "navWorkspace": "Pracovní prostor",
+    "navAllTools": "Všechny nástroje",
+    "navGuides": "Návody (anglicky)",
+    "language": "Jazyk",
+    "menu": "Menu",
+    "footerTagline": "PDF nástroje zdarma, které běží ve vašem prohlížeči. Upravujte, převádějte, spojujte a zmenšujte PDF bez nahrávání.",
+    "footerPrivate": "100% soukromí. Soubory nikdy neopustí vaše zařízení.",
+    "footerAllTools": "Všech {count} PDF nástrojů",
+    "footerNoSignup": "Bez registrace",
+    "footerNoWatermark": "Bez vodoznaků",
+    "footerAbout": "O nás (anglicky)",
+    "footerPrivacy": "Ochrana soukromí (anglicky)",
+    "footerTerms": "Podmínky použití (anglicky)",
+    "breadcrumbHome": "Domů",
+    "breadcrumbTools": "PDF nástroje",
+    "whyToolHeading": "Proč použít {tool} právě zde?",
+    "faqHeading": "{tool} – časté dotazy",
+    "continueHeading": "Pokračujte dalším nástrojem",
+    "seeAllTools": "Zobrazit všech {count} PDF nástrojů"
+  },
+  "categories": {
+    "All-in-one": {
+      "name": "Vše v jednom",
+      "blurb": "Proveďte s jedním dokumentem více úkonů, aniž byste ho mezitím stahovali."
+    },
+    "Organize PDF": {
+      "name": "Uspořádat PDF",
+      "blurb": "Spojujte, rozdělujte, přeskupujte a prořezávejte stránky svých PDF."
+    },
+    "Optimize PDF": {
+      "name": "Optimalizovat PDF",
+      "blurb": "Zmenšete PDF, zrychlete jejich otevírání, zpřístupněte v nich vyhledávání nebo je znovu zprovozněte."
+    },
+    "Create PDF": {
+      "name": "Vytvořit PDF",
+      "blurb": "Převeďte obrázky, soubory Office, webové stránky a e-knihy do PDF."
+    },
+    "Export PDF": {
+      "name": "Exportovat PDF",
+      "blurb": "Získejte obsah z PDF jako Word, Excel, prezentaci, obrázky nebo text."
+    },
+    "Modify PDF": {
+      "name": "Upravit PDF",
+      "blurb": "Upravujte text, podepisujte, číslujte, přidávejte vodoznak, ořezávejte, otáčejte a začerňujte."
+    },
+    "PDF Security": {
+      "name": "Zabezpečení PDF",
+      "blurb": "Přidejte nebo odstraňte ochranu heslem."
+    },
+    "PDF Intelligence": {
+      "name": "Chytré funkce PDF",
+      "blurb": "Porovnávejte, shrnujte a překládejte obsah PDF."
+    }
+  },
+  "tools": {
+    "pdf-workspace": {
+      "slug": "pracovni-prostor-pdf",
+      "name": "Pracovní prostor PDF",
+      "description": "Upravte, začerněte, podepište, orazítkujte a zabezpečte dokument na jedné stránce",
+      "seoTitle": "Pracovní prostor PDF – upravit, podepsat a zabezpečit PDF",
+      "metaDescription": "Jeden pracovní prostor pro úpravu textu, začernění citlivých údajů, podpisy, vodoznaky a ochranu PDF heslem. Vše se zpracuje ve vašem prohlížeči.",
+      "faqs": [
+        {
+          "q": "Co mohu v pracovním prostoru PDF dělat?",
+          "a": "Můžete upravovat text, začerňovat citlivé údaje, měnit pořadí stránek, přidávat podpisy, razítkovat vodoznaky, upravovat stránky, chránit dokument heslem a stáhnout výsledek – to vše bez opuštění stránky."
+        },
+        {
+          "q": "Nahrává se můj dokument na server?",
+          "a": "Ne. Každý úkon probíhá ve vašem prohlížeči. Váš dokument nikdy neopustí vaše zařízení, takže je pracovní prostor ideální pro důvěrnou a citlivou práci."
+        }
+      ],
+      "howTo": {
+        "title": "Jak upravit, podepsat a zabezpečit PDF na jednom místě",
+        "intro": "Pracovní prostor PDF spojuje úpravy, začernění, práci se stránkami, podpisy, razítka a hesla na jedné obrazovce, včetně funkcí zpět a znovu. Dokument tak dokončíte najednou a stáhnete jen jednou.",
+        "steps": [
+          "Otevřete své PDF v pracovním prostoru výše (pokud má heslo, nejprve ho odemkněte)",
+          "Používejte karty Upravit, Začernit, Stránky, Podepsat, Razítko, Přizpůsobit a Chránit v libovolném pořadí",
+          "Pokud si to rozmyslíte, vraťte se v historii zpět nebo vpřed",
+          "Kliknutím na Stáhnout uložte hotové PDF"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "merge-pdf": {
+      "slug": "spojit-pdf",
+      "name": "Spojit PDF",
+      "description": "Spojte více PDF do jednoho souboru",
+      "seoTitle": "Spojit PDF – sloučit více PDF do jednoho (zdarma online)",
+      "metaDescription": "Spojte dva nebo více souborů PDF do jednoho dokumentu. Zdarma, bez registrace a bez vodoznaků. Spojení probíhá v prohlížeči – soubory se nenahrávají.",
+      "faqs": [
+        {
+          "q": "Kolik PDF mohu spojit najednou?",
+          "a": "Až 20 souborů v jednom spojení, bez omezení velikosti kromě paměti vašeho zařízení. Pokud jich máte víc, spojujte je po dávkách po 20 a pak spojte výsledky dohromady."
+        },
+        {
+          "q": "Snižuje spojení kvalitu PDF?",
+          "a": "Ne. Správné spojení zkopíruje každý objekt stránky do nového dokumentu bez překódování obrázků nebo textu. Vaše stránky zůstanou totožné s originálem."
+        },
+        {
+          "q": "Mohu spojit PDF chráněná heslem?",
+          "a": "Nejprve je musíte odemknout. PDF chráněná heslem nelze přečíst, dokud heslo neodstraníte."
+        }
+      ],
+      "howTo": {
+        "title": "Jak spojit soubory PDF",
+        "intro": "Spojit PDF sloučí dva nebo více PDF do jednoho dokumentu v pořadí, v jakém je vyberete. Stránky se kopírují beze změny, takže text zůstane označitelný a obrázky si zachovají rozlišení.",
+        "steps": [
+          "Vyberte nebo přetáhněte alespoň dva soubory PDF, nejvýše 20 najednou, v požadovaném pořadí",
+          "Zkontrolujte seznam a odeberte soubory přidané omylem",
+          "Klikněte na Spojit PDF",
+          "Stáhněte spojené PDF"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Bezztrátové – stránky se kopírují, nevykreslují se znovu"
+        ]
+      }
+    },
+    "split-pdf": {
+      "slug": "rozdelit-pdf",
+      "name": "Rozdělit PDF",
+      "description": "Rozdělte PDF na jednotlivé stránky",
+      "seoTitle": "Rozdělit PDF – rozdělení PDF na jednotlivé stránky",
+      "metaDescription": "Rozdělte PDF na jednotlivé stránky nebo vlastní rozsahy stránek. Zdarma, v prohlížeči, bez nahrávání. Stáhněte jednotlivé stránky nebo skupiny ihned.",
+      "faqs": [
+        {
+          "q": "Jak rozdělím PDF podle konkrétních rozsahů stránek?",
+          "a": "Zadejte rozsahy, například 1-5, 10, 15-20. Nástroj rozdělí dokument na samostatné soubory pro každý rozsah."
+        },
+        {
+          "q": "Snižuje rozdělení kvalitu?",
+          "a": "Ne. Rozdělení kopíruje celé objekty stránek do nových dokumentů. Text zůstane označitelný a obrázky si zachovají původní rozlišení."
+        }
+      ],
+      "howTo": {
+        "title": "Jak rozdělit PDF",
+        "intro": "Rozdělit PDF rozřízne jeden dokument na několik souborů podle rozsahů stránek. Z každého zadaného rozsahu vznikne samostatné PDF.",
+        "steps": [
+          "Vyberte PDF, které chcete rozdělit",
+          "Zadejte rozsahy stránek, například 1-3, 5, 7-10, a zkontrolujte náhled",
+          "Klikněte na Rozdělit PDF",
+          "Stáhněte jednotlivé části, nebo použijte Stáhnout vše a získejte všechny části v jednom ZIPu"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Bezztrátové – každá stránka si zachová původní text a obrázky"
+        ]
+      }
+    },
+    "remove-pages": {
+      "slug": "odstranit-stranky-z-pdf",
+      "name": "Odstranit stránky",
+      "description": "Smažte vybrané stránky z PDF",
+      "seoTitle": "Odstranit stránky z PDF – smazat nechtěné stránky zdarma",
+      "metaDescription": "Smažte vybrané stránky z dokumentu PDF. Zvolte stránky, které chcete odstranit, a stáhněte upravený soubor. Zdarma, bez registrace.",
+      "faqs": [
+        {
+          "q": "Mohu odstranit více stránek najednou?",
+          "a": "Ano. Zadejte více čísel stránek nebo rozsahů a všechny vybrané stránky se odstraní v jednom kroku."
+        },
+        {
+          "q": "Je to totéž jako rozdělení?",
+          "a": "Ne. Rozdělení vytvoří z vybraných stránek samostatné soubory. Odstranění stránky z dokumentu smaže a zbytek ponechá v jednom souboru."
+        }
+      ],
+      "howTo": {
+        "title": "Jak odstranit stránky z PDF",
+        "intro": "Odstranit stránky smaže stránky, které uvedete, a vše ostatní ponechá v jednom PDF v původním pořadí.",
+        "steps": [
+          "Vyberte své PDF",
+          "Zadejte stránky ke smazání, například 1, 3, 5-8",
+          "Zkontrolujte náhled stránek, které zůstanou",
+          "Klikněte na Odstranit stránky a stáhněte kratší PDF"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "extract-pages": {
+      "slug": "extrahovat-stranky-z-pdf",
+      "name": "Extrahovat stránky",
+      "description": "Vyjměte vybrané stránky jako nové PDF",
+      "seoTitle": "Extrahovat stránky z PDF – vyjmout vybrané stránky",
+      "metaDescription": "Vyjměte vybrané stránky z PDF do nového dokumentu. Zvolte jednotlivé stránky, rozsahy nebo jejich kombinaci. Původní PDF zůstane beze změny.",
+      "faqs": [
+        {
+          "q": "Změní extrakce původní PDF?",
+          "a": "Ne. Extrakce čte zdrojový soubor a zapisuje nový. Váš originál na disku zůstane nedotčen."
+        },
+        {
+          "q": "Mohu stránky extrahovat v jiném pořadí?",
+          "a": "Ano. Uveďte stránky v požadovaném pořadí. Zadáním 9, 3, 5 vznikne soubor se stránkami právě v tomto pořadí."
+        }
+      ],
+      "howTo": {
+        "title": "Jak extrahovat stránky z PDF",
+        "intro": "Extrahovat stránky zkopíruje vybrané stránky do nového PDF a původní soubor ponechá nedotčený.",
+        "steps": [
+          "Vyberte své PDF",
+          "Zadejte požadované stránky, například 1, 3, 5-8, a zkontrolujte náhledy",
+          "Klikněte na Extrahovat stránky",
+          "Stáhněte nové PDF, které obsahuje pouze tyto stránky"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "organize-pdf": {
+      "slug": "seradit-stranky-pdf",
+      "name": "Uspořádat PDF",
+      "description": "Měňte pořadí stránek a spravujte je",
+      "seoTitle": "Uspořádat PDF – změnit pořadí a odstranit stránky zdarma",
+      "metaDescription": "Seřaďte stránky PDF v libovolném pořadí a v jednom kroku vynechte ty, které nepotřebujete. Zdarma, bez registrace, soubor neopustí váš prohlížeč.",
+      "faqs": [
+        {
+          "q": "Jak nastavím nové pořadí stránek?",
+          "a": "Zadejte čísla stránek v požadovaném pořadí, například 3, 1, 2, 4. Aktuální pořadí je předvyplněné a náhled vám ukáže výsledek ještě před uložením."
+        },
+        {
+          "q": "Mohu zde stránky otáčet?",
+          "a": "Ne. Použijte Otočit PDF, který otočí všechny stránky nebo jen ty, které uvedete, o 90°, 180° nebo 270°."
+        },
+        {
+          "q": "Mohu kombinovat stránky z různých PDF?",
+          "a": "Nástroj pro uspořádání pracuje s jedním PDF. Chcete-li zkombinovat stránky z různých souborů, extrahujte potřebné stránky a pak použijte Spojit PDF."
+        }
+      ],
+      "howTo": {
+        "title": "Jak změnit pořadí stránek v PDF",
+        "intro": "Uspořádat PDF sestaví dokument znovu v pořadí stránek, které zadáte. Každá stránka, kterou v seznamu vynecháte, se odstraní, takže můžete pořadí měnit a zkracovat v jednom kroku.",
+        "steps": [
+          "Vyberte své PDF – aktuální pořadí (1, 2, 3 …) je předvyplněné",
+          "Přepište seznam do požadovaného pořadí, například 3, 1, 2, 4",
+          "Zkontrolujte náhled nového pořadí",
+          "Klikněte na Uspořádat PDF a stáhněte výsledek"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "compress-pdf": {
+      "slug": "zmensit-pdf",
+      "name": "Zmenšit PDF",
+      "description": "Zmenšete velikost souboru se zachováním kvality",
+      "seoTitle": "Zmenšit PDF – komprimace PDF bez ztráty kvality",
+      "metaDescription": "Zmenšete velikost PDF až o 80 % bez viditelné ztráty kvality. Komprimace zdarma v prohlížeči. Bez nahrávání, bez vodoznaků a bez registrace.",
+      "faqs": [
+        {
+          "q": "Sníží komprimace kvalitu PDF?",
+          "a": "Při doporučené úrovni komprimace se obrázky překódují na 150 DPI – při prohlížení na obrazovce a běžném tisku vypadají stejně jako originál."
+        },
+        {
+          "q": "O kolik se moje PDF zmenší?",
+          "a": "PDF s mnoha fotografiemi se zmenší o 60–80 %. Čistě textové soubory o 10–30 %. Naskenované dokumenty se mohou zmenšit až o 90 %."
+        },
+        {
+          "q": "Mohu zmenšit PDF chráněné heslem?",
+          "a": "Nejprve ho musíte odemknout. Nástroje pro komprimaci nemohou číst šifrované soubory, dokud se heslo neodstraní."
+        }
+      ],
+      "howTo": {
+        "title": "Jak zmenšit PDF na konkrétní velikost",
+        "intro": "Zmenšit PDF pracuje s cílovou velikostí, kterou zadáte v MB nebo kB, místo vágních úrovní „nízká / střední / vysoká“ – užitečné, když má formulář pro nahrání nebo e-mail pevný limit.",
+        "steps": [
+          "Vyberte PDF, které chcete zmenšit",
+          "Zadejte cílovou velikost, nebo zvolte rychlou předvolbu 50 %, 25 %, 10 % nebo 5 % původní velikosti",
+          "Klikněte na Komprimovat",
+          "Zkontrolujte novou velikost a stáhněte zmenšené PDF"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Poctivě o kompromisech: nástroj vás upozorní, když je cíl tak malý, že se stránky musí převést na obrázky"
+        ]
+      }
+    },
+    "optimize-pdf": {
+      "slug": "optimalizovat-pdf",
+      "name": "Optimalizovat PDF",
+      "description": "Optimalizujte PDF pro web a rychlejší načítání",
+      "seoTitle": "Optimalizovat PDF – rychlejší načítání PDF na webu",
+      "metaDescription": "Optimalizujte soubory PDF pro web a rychlejší načítání. Zkraťte dobu vykreslení, slučte vrstvy a zjednodušte strukturu dokumentu.",
+      "faqs": [
+        {
+          "q": "Co dělá optimalizace PDF?",
+          "a": "Optimalizace odstraní nepoužívané objekty, sloučí interaktivní vrstvy, vytvoří podmnožiny písem a zjednoduší vnitřní strukturu pro rychlejší vykreslování."
+        },
+        {
+          "q": "Je optimalizace totéž co komprimace?",
+          "a": "Komprimace zmenšuje velikost souboru překódováním obrázků. Optimalizace se zaměřuje na úpravy struktury, které zrychlují načítání a vykreslování."
+        }
+      ],
+      "howTo": {
+        "title": "Jak optimalizovat PDF bez ztráty kvality",
+        "intro": "Optimalizovat PDF znovu zabalí strukturu souboru – proudy objektů, nepoužívané objekty – aniž by sahal na obrázky nebo text. Pokud není co zlepšit, vrátí váš soubor beze změny a řekne vám to.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Zaškrtněte „Odstranit metadata dokumentu“, pokud chcete vymazat také název, autora a podobná pole",
+          "Klikněte na Optimalizovat PDF",
+          "Stáhněte optimalizovaný soubor, nebo použijte Zmenšit PDF, pokud potřebujete větší zmenšení"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "repair-pdf": {
+      "slug": "opravit-pdf",
+      "name": "Opravit PDF",
+      "description": "Opravte poškozené soubory PDF",
+      "seoTitle": "Opravit PDF – oprava poškozených souborů PDF",
+      "metaDescription": "Opravte poškozené soubory PDF. Napravte chybné hlavičky, obnovte čitelný obsah a zachraňte poškozené dokumenty. Nástroj zdarma online.",
+      "faqs": [
+        {
+          "q": "Proč se PDF poškodí?",
+          "a": "Mezi běžné příčiny patří nedokončené stahování, chyby úložiště, pád programu během ukládání a poškození virem."
+        },
+        {
+          "q": "Obnoví oprava veškerý obsah?",
+          "a": "Oprava funguje tak, že znovu sestaví strukturu PDF. Úspěšnost obnovy závisí na tom, kolik původních dat zůstalo nedotčeno."
+        }
+      ],
+      "howTo": {
+        "title": "Jak opravit poškozené PDF",
+        "intro": "Opravit PDF znovu sestaví tabulku křížových odkazů, číslování objektů a trailer poškozeného souboru. Pokud strukturu nelze obnovit, vykreslí stránky do nového PDF s prohledávatelnou textovou vrstvou.",
+        "steps": [
+          "Vyberte PDF, které nejde otevřít nebo hlásí chyby",
+          "Klikněte na Opravit PDF",
+          "Stáhněte opravený soubor a otevřete ho, abyste zkontrolovali všechny stránky"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "ocr-pdf": {
+      "slug": "ocr-pdf",
+      "name": "OCR PDF",
+      "description": "Získejte text z naskenovaných dokumentů",
+      "seoTitle": "OCR PDF – převod naskenovaného PDF na text zdarma",
+      "metaDescription": "Převeďte naskenované dokumenty pomocí OCR na prohledávatelný a označitelný text. Naskenovaná PDF lze prohledávat a upravovat. Zdarma, bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Co je OCR?",
+          "a": "Optické rozpoznávání znaků (OCR) analyzuje obrázky textu a převádí je na skutečné znaky, takže v naskenovaných dokumentech lze vyhledávat a text označovat."
+        },
+        {
+          "q": "Jak přesné je OCR?",
+          "a": "Přesnost závisí na kvalitě skenu. Ostré skeny ve vysokém rozlišení obvykle dosahují přesnosti 95–99 %. U nekvalitních skenů může být chyb více."
+        }
+      ],
+      "howTo": {
+        "title": "Jak udělat z naskenovaného PDF prohledávatelné pomocí OCR",
+        "intro": "OCR PDF rozpozná text na naskenovaných stránkách a přidá ho do PDF, takže ho můžete vyhledávat, označovat a kopírovat. Ze 44 jazyků můžete vybrat až tři jazyky dokumentu.",
+        "steps": [
+          "Vyberte naskenované PDF",
+          "Vyhledejte a vyberte jazyk dokumentu – u vícejazyčných souborů až tři",
+          "Klikněte na Spustit OCR a počkejte, než se přečte každá stránka",
+          "Stáhněte prohledávatelné PDF"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Rozpoznávání probíhá přímo ve vašem zařízení, takže citlivé skeny zůstávají u vás"
+        ]
+      }
+    },
+    "jpg-to-pdf": {
+      "slug": "jpg-do-pdf",
+      "name": "JPG do PDF",
+      "description": "Převeďte obrázky na dokumenty PDF",
+      "seoTitle": "JPG do PDF – převod obrázků do PDF zdarma",
+      "metaDescription": "Převeďte obrázky JPG na dokumenty PDF se zachováním původní kvality. Spojte více obrázků do jednoho PDF. Zdarma, bez registrace.",
+      "faqs": [
+        {
+          "q": "Sníží převod JPG do PDF kvalitu obrázků?",
+          "a": "Ne. Obrazová data se vloží do PDF bez opětovné komprese. Vaše obrázky zůstanou pixel po pixelu totožné s originály."
+        },
+        {
+          "q": "Mohu spojit více obrázků do jednoho PDF?",
+          "a": "Ano. Načtěte všechny JPG, seřaďte je a převeďte. Každý obrázek se stane jednou stránkou výsledného PDF."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést JPG do PDF",
+        "intro": "JPG do PDF spojí obrázky JPEG, PNG a WebP do jednoho PDF, jeden obrázek na stránku, v pořadí, v jakém je přidáte.",
+        "steps": [
+          "Vyberte nebo přetáhněte obrázky, nejvýše 20 najednou, v požadovaném pořadí stránek",
+          "Klikněte na Převést do PDF",
+          "Stáhněte jedno PDF, které obsahuje všechny obrázky"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "scan-pdf": {
+      "slug": "skenovat-do-pdf",
+      "name": "Skenovat do PDF",
+      "description": "Naskenujte dokumenty fotoaparátem a uložte je jako PDF",
+      "seoTitle": "Skenovat do PDF online zdarma – skener v mobilu bez aplikace",
+      "metaDescription": "Skenujte dokumenty do PDF fotoaparátem telefonu: detekce okrajů, ořez, filtry, OCR, režim průkazu i knihy. Zdarma, bez aplikace, registrace a nahrávání.",
+      "faqs": [
+        {
+          "q": "Potřebuji k vytvoření PDF aplikaci nebo skener?",
+          "a": "Ne. Otevřete tuto stránku v telefonu a namiřte fotoaparát na stránku. Najde okraje, vyfotí stránku, když telefon podržíte v klidu, narovná ji a odstraní stíny. Můžete také importovat fotky, které už máte."
+        },
+        {
+          "q": "Nahrává se můj naskenovaný dokument na server?",
+          "a": "Ne. Obraz z kamery, detekce stránky, filtry i vytvoření PDF probíhají ve vašem prohlížeči. Stránky se ukládají v tomto zařízení, takže se po obnovení stránky neztratí. Jediné, co se stahuje, je jazykový model pro rozpoznávání textu, a to jednou, pokud zapnete OCR."
+        },
+        {
+          "q": "Mohu naskenované PDF udělat prohledávatelné?",
+          "a": "Ano. Při ukládání ponechte zapnuté „Rozpoznat text (OCR)“. Rozpoznaný text se neviditelně umístí přes obrázek každé stránky, takže ho můžete vyhledávat, označovat a kopírovat. Přesnost závisí na ostrosti a osvětlení fotky."
+        },
+        {
+          "q": "K čemu slouží režimy Kniha, Průkaz a Tabule?",
+          "a": "Kniha rozdělí otevřenou knihu na levou a pravou stránku. Průkaz naskenuje přední a poté zadní stranu karty a umístí obě na jednu stránku ve skutečné velikosti. Tabule vybělí odlesky a zvýrazní barvy fixů."
+        },
+        {
+          "q": "Mohu stránku po naskenování opravit?",
+          "a": "Ano. V Kontrole můžete tažením rohů znovu oříznout, otáčet, měnit filtr, upravit jas a kontrast, vygumovat skvrny, kreslit, zvýrazňovat, přidat text nebo podpis, stránku znovu vyfotit, změnit pořadí či ji smazat a jakoukoli změnu vrátit zpět. Úpravy se aplikují na původní fotku, takže nic neztrácí na kvalitě."
+        },
+        {
+          "q": "Mohu naskenovat vizitku do kontaktů?",
+          "a": "Ano. Použijte režim Vizitka a pak klepněte na Kontakt: jméno, pracovní pozice, firma, telefon, e-mail a web se z vizitky načtou, abyste je zkontrolovali, a uloží se jako kontaktní soubor .vcf, který může telefon importovat."
+        },
+        {
+          "q": "Mohu sken chránit heslem nebo uložit jako JPG?",
+          "a": "Ano. Při ukládání zaškrtněte „Chránit heslem“ a PDF se zamkne, nebo zvolte JPG a získáte jeden obrázek na stránku. Uložená PDF se také uchovávají v Nedávných skenech v tomto zařízení, takže je můžete znovu stáhnout nebo sdílet."
+        }
+      ],
+      "howTo": {
+        "title": "Jak naskenovat dokument do PDF mobilem",
+        "intro": "Skenovat do PDF promění fotoaparát telefonu nebo notebooku ve skener dokumentů: najde okraje stránky, narovná ji a vyčistí a pak uloží PDF, které můžete udělat prohledávatelné.",
+        "steps": [
+          "Povolte přístup k fotoaparátu, nebo přidejte fotky, které už máte",
+          "Držte stránku v záběru – okraje se rozpoznají a stránka se ořízne a narovná",
+          "Zkontrolujte každou stránku: znovu ořízněte, otočte, zvolte filtr jako Č/B nebo Tabule, nebo ji vyfoťte znovu",
+          "Zvolte velikost stránky a souboru, případně zapněte rozpoznávání textu (OCR) a uložte jako PDF nebo JPG"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Skeny zůstávají ve vašem zařízení, včetně kopií uložených v Nedávných skenech"
+        ]
+      }
+    },
+    "word-to-pdf": {
+      "slug": "word-do-pdf",
+      "name": "Word do PDF",
+      "description": "Převeďte dokument (DOCX) do PDF",
+      "seoTitle": "Word do PDF – převod DOCX do PDF zdarma online",
+      "metaDescription": "Převeďte dokumenty Word (DOCX) do PDF v prohlížeči. Zachová text, nadpisy, seznamy a tabulky. Zdarma, bez registrace a bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Zachová se moje formátování?",
+          "a": "Text, nadpisy, seznamy a tabulky se převedou, ale dokument se sází znovu, nekopíruje se pixel po pixelu, takže vlastní písma a složitá rozvržení stránek nebudou přesně odpovídat. Pro věrnou kopii použijte přímo ve Wordu Soubor → Uložit jako PDF."
+        },
+        {
+          "q": "Musím mít nainstalovaný Microsoft Word?",
+          "a": "Ne. Převod probíhá ve vašem prohlížeči. Není potřeba instalovat žádný software."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést Word do PDF",
+        "intro": "Word do PDF převádí soubory .docx na PDF ve vašem prohlížeči. Zachová text, nadpisy, seznamy a tabulky, ale sází je znovu, takže složitá rozvržení a vlastní písma nebudou přesně odpovídat originálu.",
+        "steps": [
+          "Vyberte jeden nebo více souborů .docx",
+          "Klikněte na Převést do PDF",
+          "Stáhněte jednotlivá PDF, nebo použijte Stáhnout vše a získejte ZIP"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "powerpoint-to-pdf": {
+      "slug": "powerpoint-do-pdf",
+      "name": "PowerPoint do PDF",
+      "description": "Převeďte prezentaci (PPTX) do PDF",
+      "seoTitle": "PowerPoint do PDF – převod PPTX do PDF zdarma",
+      "metaDescription": "Převeďte prezentace PowerPoint (PPTX) do PDF, jeden snímek na stránku, s textem, obrázky a tabulkami. Zdarma, bez registrace a bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Zachovají se animace?",
+          "a": "Animace se převedou na statické stránky, protože PDF animace nepodporuje. Zachytí se konečný stav každého snímku."
+        },
+        {
+          "q": "Mohu převést jen vybrané snímky?",
+          "a": "Převod zpracuje celou prezentaci. Chcete-li jen určité snímky, extrahujte je po převodu nástrojem Extrahovat stránky."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést PowerPoint do PDF",
+        "intro": "PowerPoint do PDF překreslí každý snímek souboru .pptx na samostatnou stránku, včetně textu, obrázků, tabulek a seskupených tvarů.",
+        "steps": [
+          "Vyberte jeden nebo více souborů .pptx",
+          "Klikněte na Převést do PDF",
+          "Stáhněte PDF – jeden snímek na stránku"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "excel-to-pdf": {
+      "slug": "excel-do-pdf",
+      "name": "Excel do PDF",
+      "description": "Převeďte tabulku (XLSX) do PDF",
+      "seoTitle": "Excel do PDF – převod tabulek do PDF zdarma",
+      "metaDescription": "Převeďte tabulky Excel (XLSX nebo CSV) do PDF, každý list přizpůsobený šířce stránky. Zdarma, v prohlížeči, bez registrace a bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Zachovají se moje vzorce?",
+          "a": "Vzorce se vypočítají a do PDF se uloží jejich výsledné hodnoty. Samotné vzorce se nezachovají, protože PDF je statický formát."
+        },
+        {
+          "q": "Mohu převést jen vybrané listy?",
+          "a": "Převod zpracuje celý sešit. Pro konkrétní listy je možná budete muset nejprve uložit jako samostatný soubor."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést Excel do PDF",
+        "intro": "Excel do PDF převádí soubory .xlsx a .csv na PDF. Každý viditelný list se přizpůsobí šířce stránky a orientace na výšku či na šířku se zvolí automaticky.",
+        "steps": [
+          "Vyberte jeden nebo více souborů .xlsx nebo .csv (starší soubory .xls nejprve uložte jako .xlsx)",
+          "Klikněte na Převést do PDF",
+          "Stáhněte PDF; u velmi velkých listů se zobrazí prvních 3 000 řádků"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "html-to-pdf": {
+      "slug": "html-do-pdf",
+      "name": "HTML do PDF",
+      "description": "Převeďte webové stránky do PDF",
+      "seoTitle": "HTML do PDF – převod webových stránek do PDF zdarma",
+      "metaDescription": "Převeďte libovolnou webovou stránku do PDF. Uložte články, účtenky a online obsah jako dokumenty PDF. Zdarma, v prohlížeči, bez instalace.",
+      "faqs": [
+        {
+          "q": "Mohu převést jakoukoli webovou stránku?",
+          "a": "Ano. Zadejte URL libovolné veřejně dostupné webové stránky a ta se převede do formátu PDF."
+        },
+        {
+          "q": "Bude PDF vypadat jako webová stránka?",
+          "a": "PDF zachytí vykreslený obsah stránky. Složitá rozvržení se mohou od originálu mírně lišit."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést HTML do PDF",
+        "intro": "HTML do PDF vezme vložený kód HTML nebo nahraný soubor .html a vytvoří PDF – buď s věrným vzhledem, nebo jako zjednodušený označitelný text.",
+        "steps": [
+          "Vložte svůj kód HTML, nebo vyberte soubor .html",
+          "Zkontrolujte náhled vzhledu",
+          "Zvolte Přesný vzhled nebo Označitelný text",
+          "Klikněte na Převést do PDF a stáhněte ho"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "heic-to-pdf": {
+      "slug": "heic-do-pdf",
+      "name": "HEIC do PDF",
+      "description": "Převeďte obrázky Apple HEIC do PDF",
+      "seoTitle": "HEIC do PDF – převod fotek HEIC z iPhonu do PDF zdarma",
+      "metaDescription": "Převeďte fotky HEIC a HEIF z iPhonu a iPadu na dokumenty PDF. Zdarma, v prohlížeči, bez nahrávání. Zachová původní kvalitu obrázků.",
+      "faqs": [
+        {
+          "q": "Co je soubor HEIC?",
+          "a": "HEIC (High Efficiency Image Container) je výchozí formát obrázků v iPhonech a iPadech od iOS 11. Nabízí lepší kompresi než JPEG, ale ne všechny programy ho podporují."
+        },
+        {
+          "q": "Mohu převést HEIC do PDF v telefonu?",
+          "a": "Ano. Nástroj běží v prohlížeči a funguje na iPhonu i Androidu. Otevřete ho v Safari nebo Chromu, vyberte fotky HEIC a stáhněte PDF."
+        },
+        {
+          "q": "Sníží převod kvalitu obrázku?",
+          "a": "Ne. Obrázek HEIC se dekóduje a vloží do PDF v původním rozlišení. Vizuální kvalita se zachová."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést HEIC do PDF",
+        "intro": "HEIC do PDF převádí fotky z iPhonu a iPadu uložené jako HEIC nebo HEIF na PDF, bez instalace čehokoli a bez odesílání fotek kamkoli.",
+        "steps": [
+          "Vyberte své fotky HEIC nebo HEIF",
+          "Klikněte na Převést do PDF – z každé fotky vznikne samostatné PDF",
+          "Stáhněte je jednotlivě, nebo všechny najednou jako ZIP"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "webp-to-pdf": {
+      "slug": "webp-do-pdf",
+      "name": "WebP do PDF",
+      "description": "Převeďte obrázky WebP na dokumenty PDF",
+      "seoTitle": "WebP do PDF – převod obrázků WebP do PDF zdarma online",
+      "metaDescription": "Převeďte obrázky WebP na dokumenty PDF v prohlížeči. Zdarma, bez registrace a bez vodoznaků. Hromadný převod se zachováním původní kvality.",
+      "faqs": [
+        {
+          "q": "Co je soubor WebP?",
+          "a": "WebP je moderní formát obrázků vyvinutý společností Google, který poskytuje lepší kompresi obrázků na webu. Hojně se používá ve webdesignu a online obsahu."
+        },
+        {
+          "q": "Sníží převod WebP do PDF kvalitu?",
+          "a": "Ne. Obrázek WebP se dekóduje a vloží do PDF v původním rozlišení bez opětovné komprese."
+        },
+        {
+          "q": "Mohu převést více souborů WebP najednou?",
+          "a": "Ano. Vyberte více obrázků WebP a ty se spojí do jednoho vícestránkového PDF s jedním obrázkem na stránku."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést WebP do PDF",
+        "intro": "WebP do PDF převádí obrázky WebP – formát, který dnes používá mnoho webů – na PDF, jedno PDF na každý obrázek.",
+        "steps": [
+          "Vyberte jeden nebo více obrázků WebP",
+          "Klikněte na Převést do PDF",
+          "Stáhněte jednotlivá PDF, nebo použijte Stáhnout vše a získejte ZIP"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "tiff-to-pdf": {
+      "slug": "tiff-do-pdf",
+      "name": "TIFF do PDF",
+      "description": "Převeďte obrázky TIFF na dokumenty PDF",
+      "seoTitle": "TIFF do PDF – převod obrázků TIFF do PDF zdarma online",
+      "metaDescription": "Převeďte obrázky TIFF a TIF na dokumenty PDF. Podporuje vícestránkové TIFF. Zpracování zdarma v prohlížeči, bez nahrávání souborů.",
+      "faqs": [
+        {
+          "q": "Podporuje nástroj vícestránkové soubory TIFF?",
+          "a": "Ano. Vícestránkové soubory TIFF se rozdělí na jednotlivé stránky a každá se stane samostatnou stránkou výsledného PDF."
+        },
+        {
+          "q": "Jaké typy komprese TIFF jsou podporovány?",
+          "a": "Nástroj zpracuje nekomprimované soubory TIFF a soubory s kompresí LZW a PackBits. Podporovány jsou také soubory TIFF s kompresí JPEG."
+        },
+        {
+          "q": "Mohu převést více souborů TIFF najednou?",
+          "a": "Ano. Vyberte více souborů TIFF a každý se převede, přičemž všechny stránky se spojí do jednoho PDF."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést TIFF do PDF",
+        "intro": "TIFF do PDF převádí obrázky TIFF, běžné u skenerů a faxového softwaru, na PDF, jedno PDF na každý soubor.",
+        "steps": [
+          "Vyberte jeden nebo více souborů TIFF",
+          "Klikněte na Převést do PDF",
+          "Stáhněte jednotlivá PDF, nebo použijte Stáhnout vše a získejte ZIP"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "svg-to-pdf": {
+      "slug": "svg-do-pdf",
+      "name": "SVG do PDF",
+      "description": "Převeďte vektorové obrázky SVG do PDF",
+      "seoTitle": "SVG do PDF – převod vektorových obrázků SVG zdarma",
+      "metaDescription": "Převeďte soubory SVG do PDF v prohlížeči. Zdarma, bez nahrávání a registrace – SVG neopustí vaše zařízení. Ostrý výstup ve vysokém rozlišení.",
+      "faqs": [
+        {
+          "q": "Zachová převod SVG do PDF vektorovou kvalitu?",
+          "a": "Ne – SVG se vykreslí jako obrázek ve vysokém rozlišení (až trojnásobek své velikosti) a umístí se na stránku původních rozměrů. Zůstane tedy ostré na obrazovce i v tisku, ale už to není upravitelná vektorová grafika. Pro skutečně vektorový výstup exportujte do PDF z vektorového editoru, jako je Inkscape nebo Illustrator."
+        },
+        {
+          "q": "Mohu převést soubory SVG s externími zdroji?",
+          "a": "SVG, které odkazují na externí obrázky nebo písma, se nemusí vykreslit úplně. Nejlépe fungují samostatné SVG s vloženými zdroji."
+        },
+        {
+          "q": "Je používání zdarma?",
+          "a": "Ano. Převod SVG do PDF je zcela zdarma, bez omezení, bez vodoznaků a bez registrace."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést SVG do PDF",
+        "intro": "SVG do PDF převádí grafiku SVG na PDF, jedno PDF na každý soubor – praktické pro posílání log a diagramů lidem, kteří SVG neotevřou.",
+        "steps": [
+          "Vyberte jeden nebo více souborů SVG",
+          "Klikněte na Převést do PDF",
+          "Stáhněte jednotlivá PDF, nebo použijte Stáhnout vše a získejte ZIP"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "epub-to-pdf": {
+      "slug": "epub-do-pdf",
+      "name": "EPUB do PDF",
+      "description": "Převeďte e-knihy EPUB na dokumenty PDF",
+      "seoTitle": "EPUB do PDF – převod e-knih EPUB do PDF zdarma online",
+      "metaDescription": "Převeďte e-knihy EPUB na dokumenty PDF v prohlížeči. Vyberte si výstup jako obrázky s rozvržením, nebo s označitelným textem. Zdarma, bez instalace.",
+      "faqs": [
+        {
+          "q": "Co je soubor EPUB?",
+          "a": "EPUB (Electronic Publication) je rozšířený formát e-knih, který podporuje většina čteček a čtecích aplikací. Obsahuje obsah založený na HTML se styly CSS."
+        },
+        {
+          "q": "Jaký je rozdíl mezi režimem vzhledu a textu?",
+          "a": "Režim Přesný vzhled vykreslí každou kapitolu jako obrázek a zachová její rozvržení, obrázky a vložené styly; propojené šablony stylů a vložená vlastní písma se nenačítají, takže tyto části použijí výchozí písma a styly. Režim Označitelný text vyjme textový obsah a přeskládá ho do čistého PDF s označitelným textem."
+        },
+        {
+          "q": "Funguje to s EPUB chráněnými DRM?",
+          "a": "Ne. EPUB chráněné DRM nelze převést. Podporovány jsou pouze nechráněné soubory EPUB."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést EPUB do PDF",
+        "intro": "EPUB do PDF převede e-knihu na PDF, které můžete vytisknout nebo číst kdekoli. Zvolte kopii s přesným vzhledem, nebo jednodušší verzi s označitelným textem.",
+        "steps": [
+          "Vyberte soubor .epub (pouze e-knihy bez DRM)",
+          "Zvolte Přesný vzhled nebo Označitelný text",
+          "Klikněte na Převést do PDF a stáhněte ho"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "pdf-to-jpg": {
+      "slug": "pdf-do-jpg",
+      "name": "PDF do JPG",
+      "description": "Převeďte stránky PDF na obrázky JPG",
+      "seoTitle": "PDF do JPG – převod stránek PDF na obrázky zdarma",
+      "metaDescription": "Převeďte stránky PDF na kvalitní obrázky JPG. Uložte jako obrázky všechny stránky nebo jen vybrané. Zdarma, bez registrace a bez vodoznaků.",
+      "faqs": [
+        {
+          "q": "Jaké rozlišení budou obrázky mít?",
+          "a": "Obrázky se extrahují v nejvyšším rozlišení obsaženém v PDF, obvykle 150–300 DPI podle zdroje."
+        },
+        {
+          "q": "Mohu převést jen vybrané stránky?",
+          "a": "Ano. Zvolte převod všech stránek, nebo zadejte rozsah stránek a extrahujte jen ty, které potřebujete."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést PDF do JPG",
+        "intro": "PDF do JPG uloží každou stránku PDF jako obrázek ve formátu JPEG nebo PNG, ve standardním (144 DPI) nebo vysokém (216 DPI) rozlišení.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Zvolte JPEG nebo PNG a standardní nebo vysoké rozlišení",
+          "Klikněte na Převést na obrázky",
+          "Stáhněte jednotlivé stránky, nebo všechny stránky najednou jako ZIP"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "pdf-to-word": {
+      "slug": "pdf-do-wordu",
+      "name": "PDF do Wordu",
+      "description": "Převeďte PDF na upravitelný dokument (DOCX)",
+      "seoTitle": "PDF do Wordu – převod PDF na upravitelný DOCX zdarma",
+      "metaDescription": "Převeďte text PDF do upravitelného souboru Word (DOCX), stránku po stránce. Zdarma, v prohlížeči, bez registrace a bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Zachová soubor Word rozvržení a obrázky?",
+          "a": "Ne. Přenese text jako upravitelné nadpisy a odstavce, s nadpisem pro každou stránku; obrázky a složitá rozvržení se neobnovují. Je určen k dalšímu využití textu, ne k vytvoření věrné kopie."
+        },
+        {
+          "q": "Funguje to s naskenovanými PDF?",
+          "a": "U naskenovaných PDF je potřeba nejprve získat text pomocí OCR. Pro nejlepší výsledek spusťte OCR a výsledek pak převeďte do Wordu."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést PDF do Wordu",
+        "intro": "PDF do Wordu vytáhne text z PDF do upravitelného souboru .docx, s nadpisem pro každou stránku. Přenáší text, ne rozvržení: obrázky a složité formátování se nepřenesou.",
+        "steps": [
+          "Vyberte jedno nebo více PDF (u naskenovaných dokumentů nejprve spusťte OCR PDF)",
+          "Klikněte na Převést do Wordu",
+          "Stáhněte soubor .docx a otevřete ho ve Wordu, Dokumentech Google nebo LibreOffice"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "pdf-to-powerpoint": {
+      "slug": "pdf-do-powerpointu",
+      "name": "PDF do PowerPointu",
+      "description": "Převeďte PDF na upravitelné snímky (PPTX)",
+      "seoTitle": "PDF do PowerPointu – převod PDF na upravitelný PPTX",
+      "metaDescription": "Převeďte PDF na upravitelné snímky PowerPoint (PPTX): z nadpisů se stanou názvy, z odstavců odrážky. Zdarma, bez registrace a bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Stane se z každé stránky PDF snímek?",
+          "a": "Obvykle ano. Každá stránka začíná nový snímek a stránka s množstvím textu pokračuje na dalších snímcích, aby se nic neořízlo. Z nadpisů se stanou názvy snímků a z odstavců odrážky."
+        },
+        {
+          "q": "Mohu výsledné snímky upravovat?",
+          "a": "Ano. Výstupem je standardní soubor PPTX, který můžete upravit v jakékoli aplikaci kompatibilní s PowerPointem."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést PDF do PowerPointu",
+        "intro": "PDF do PowerPointu převede PDF na upravitelné snímky: z nadpisů se stanou názvy snímků, z odstavců odrážky a dlouhé stránky pokračují na dalších snímcích.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Klikněte na Převést do PowerPointu",
+          "Stáhněte soubor .pptx a dolaďte snímky v PowerPointu, Keynote nebo Prezentacích Google"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "pdf-to-excel": {
+      "slug": "pdf-do-excelu",
+      "name": "PDF do Excelu",
+      "description": "Exportujte text PDF do tabulky, jeden řádek textu na řádek (XLSX)",
+      "seoTitle": "PDF do Excelu – export textu PDF do tabulky",
+      "metaDescription": "Exportujte text PDF do sešitu Excel (XLSX): jeden list na stránku, jeden řádek textu na řádek tabulky. Zdarma, v prohlížeči, bez registrace.",
+      "faqs": [
+        {
+          "q": "Obnoví nástroj tabulky do sloupců?",
+          "a": "Ne. Každý řádek textu na stránce se vloží do jedné buňky, takže řádky tabulek skončí v jedné buňce, ne v samostatných sloupcích. Rozdělte je poté funkcí Text do sloupců (nebo Power Query) v Excelu."
+        },
+        {
+          "q": "Jak je sešit uspořádaný?",
+          "a": "Získáte list Souhrn s počty řádků a znaků pro každou stránku a pak jeden list na každou stránku PDF, kde je každý řádek textu na vlastním řádku."
+        },
+        {
+          "q": "Funguje to s naskenovanými PDF?",
+          "a": "Jen pokud má PDF textovou vrstvu. U naskenovaných stránek nejprve spusťte OCR PDF, aby bylo co exportovat."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést PDF do Excelu",
+        "intro": "PDF do Excelu exportuje text PDF do sešitu .xlsx: list se souhrnem a pak jeden list na stránku s jedním řádkem textu na řádek. Sloupce tabulek neobnovuje.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Klikněte na Převést do Excelu",
+          "Stáhněte soubor .xlsx a v Excelu rozdělte řádky do buněk funkcí Text do sloupců"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "pdf-to-pdfa": {
+      "slug": "pdf-do-pdfa",
+      "name": "PDF do PDF/A",
+      "description": "Převeďte PDF do archivního formátu PDF/A",
+      "seoTitle": "PDF do PDF/A – převod do archivního formátu PDF",
+      "metaDescription": "Převeďte běžné soubory PDF do archivního formátu PDF/A pro dlouhodobé uchování a splnění požadavků. Převod zdarma v prohlížeči.",
+      "faqs": [
+        {
+          "q": "Co je PDF/A?",
+          "a": "PDF/A je normou ISO standardizovaná verze PDF určená k dlouhodobé archivaci. Zajišťuje, že dokumenty půjde i v budoucnu přesně zobrazit."
+        },
+        {
+          "q": "Proč převádět do PDF/A?",
+          "a": "Mnoho odvětví vyžaduje pro uchovávání dokumentů PDF/A. Zajišťuje, že písma jsou vložená, barvy definované a dokument je soběstačný."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést PDF do PDF/A",
+        "intro": "PDF do PDF/A zkopíruje vaše stránky do nového dokumentu a přidá identifikační metadata PDF/A pro archivaci. Pokud archiv vyžaduje potvrzení přísné shody, zkontrolujte výsledek validátorem, jako je veraPDF.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Klikněte na Převést do PDF/A",
+          "Stáhněte archivní kopii"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "pdf-to-markdown": {
+      "slug": "pdf-do-markdown",
+      "name": "PDF do Markdown",
+      "description": "Převeďte obsah PDF na text Markdown",
+      "seoTitle": "PDF do Markdown – převod obsahu PDF na text Markdown",
+      "metaDescription": "Převeďte text PDF do čistého souboru Markdown (.md) pro poznámky, dokumentaci a nástroje AI. Zdarma, v prohlížeči, bez registrace.",
+      "faqs": [
+        {
+          "q": "Zachová se v Markdownu formátování?",
+          "a": "Text se přenese v pořadí čtení jako prostý Markdown. Složitá rozvržení, tabulky a obrázky se zjednoduší, proto si před spoléháním na strukturu prohlédněte náhled."
+        },
+        {
+          "q": "Mohu převést jen vybrané stránky?",
+          "a": "Převede se celý dokument. Chcete-li převést jen některé stránky, nejprve použijte Extrahovat stránky a převeďte výsledný soubor."
+        }
+      ],
+      "howTo": {
+        "title": "Jak převést PDF do Markdown",
+        "intro": "PDF do Markdown vyjme text PDF jako soubor .md – čistý vstup pro aplikace na poznámky, dokumentaci a nástroje AI.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Klikněte na Převést do Markdown",
+          "Prohlédněte si a zkopírujte text přímo na stránce, nebo stáhněte soubor .md"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "edit-pdf": {
+      "slug": "upravit-pdf",
+      "name": "Upravit PDF",
+      "description": "Změňte text, nadpisy a čísla v PDF",
+      "seoTitle": "Upravit PDF – změna textu, nadpisů a čísel zdarma",
+      "metaDescription": "Upravujte text, nadpisy a čísla v PDF přímo v prohlížeči. Opravte překlepy, aktualizujte data a provádějte změny bez převodu do Wordu.",
+      "faqs": [
+        {
+          "q": "Mohu upravit jakékoli PDF?",
+          "a": "Upravit lze jakékoli digitálně vytvořené PDF s označitelným textem. U naskenovaných PDF je nejprve potřeba OCR, aby byl text upravitelný."
+        },
+        {
+          "q": "Změní úpravy formátování?",
+          "a": "Přímé úpravy zachovávají původní formátování. Změní se jen text, který upravíte – písma, mezery a rozvržení zůstanou zachovány."
+        }
+      ],
+      "howTo": {
+        "title": "Jak upravit text v PDF",
+        "intro": "Upravit PDF vám umožní měnit stávající slova, nadpisy a čísla na stránce: klikněte na řádek a pište, stejně jako v textovém editoru.",
+        "steps": [
+          "Vyberte své PDF",
+          "Klikněte na libovolný řádek textu na stránce",
+          "Napište své změny",
+          "Klikněte na Uložit upravené PDF a stáhněte ho"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "rotate-pdf": {
+      "slug": "otocit-pdf",
+      "name": "Otočit PDF",
+      "description": "Otočte stránky PDF o libovolný úhel",
+      "seoTitle": "Otočit PDF – otočení stránek PDF zdarma",
+      "metaDescription": "Otočte jednotlivé nebo všechny stránky PDF. Opravte naskenované stránky ležící na boku a orientaci stránek. Zdarma, bez registrace.",
+      "faqs": [
+        {
+          "q": "Mohu otočit jednotlivé stránky?",
+          "a": "Ano. Každou stránku lze otočit samostatně – o 90°, 180° nebo 270° – a ostatní stránky zůstanou beze změny."
+        },
+        {
+          "q": "Ovlivní otočení kvalitu tisku?",
+          "a": "Ne. Otočení je změna metadat, která prohlížeči říká, jak má stránku zobrazit. Obsah se znovu nevykresluje."
+        }
+      ],
+      "howTo": {
+        "title": "Jak otočit PDF a uložit ho",
+        "intro": "Otočit PDF otočí stránky o 90°, 180° nebo 270° a uloží otočení do souboru, takže zůstane zachováno v každém prohlížeči.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Zvolte úhel: 90°, 180° nebo 270°",
+          "Použijte ho na všechny stránky, nebo zadejte konkrétní stránky",
+          "Klikněte na Otočit PDF a stáhněte výsledek"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "add-page-numbers": {
+      "slug": "cislovani-stranek-pdf",
+      "name": "Očíslovat stránky",
+      "description": "Vložte do PDF čísla stránek",
+      "seoTitle": "Číslování stránek PDF – vložit čísla stránek zdarma",
+      "metaDescription": "Přidejte čísla stránek na libovolné místo v PDF. Zvolte formát, pozici a počáteční číslo. Zdarma, v prohlížeči, bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Kam mohu čísla stránek umístit?",
+          "a": "Vyberte si z pozic vlevo nahoře, uprostřed nahoře, vpravo nahoře, vlevo dole, uprostřed dole nebo vpravo dole."
+        },
+        {
+          "q": "Mohu vynechat číslování první stránky?",
+          "a": "Ano. Zvolte možnost začít číslovat od určité stránky, například od 2. nebo 3., a titulní strany tak přeskočíte."
+        }
+      ],
+      "howTo": {
+        "title": "Jak očíslovat stránky v PDF",
+        "intro": "Očíslovat stránky vloží čísla na každou stránku na jednu ze šesti pozic, ve stylu, který zvolíte.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Zvolte pozici – nahoře nebo dole, vlevo, uprostřed nebo vpravo",
+          "Zvolte formát: „1“, „Strana 1“ nebo „1 z N“ a počáteční číslo",
+          "Klikněte na Přidat čísla stránek a stáhněte výsledek"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "add-watermark": {
+      "slug": "vodoznak-pdf",
+      "name": "Přidat vodoznak",
+      "description": "Přidejte textový nebo obrázkový vodoznak",
+      "seoTitle": "Vodoznak do PDF – přidat textový vodoznak zdarma",
+      "metaDescription": "Vložte na každou stránku PDF textový vodoznak, například DŮVĚRNÉ nebo KONCEPT. Nastavte průhlednost a velikost. Zdarma, bez registrace a nahrávání.",
+      "faqs": [
+        {
+          "q": "Mohu nastavit průhlednost vodoznaku?",
+          "a": "Ano. Průhlednost vodoznaku můžete nastavit od zcela neprůhledného po téměř neviditelný."
+        },
+        {
+          "q": "Mohu přidat vodoznak na všechny stránky najednou?",
+          "a": "Ano. Vodoznak se použije na všechny stránky dokumentu současně."
+        }
+      ],
+      "howTo": {
+        "title": "Jak přidat vodoznak do PDF",
+        "intro": "Přidat vodoznak vloží přes vaše stránky textový vodoznak, například DŮVĚRNÉ nebo KONCEPT, s nastavenou průhledností a velikostí.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Napište text vodoznaku",
+          "Nastavte průhlednost a velikost písma",
+          "Klikněte na Přidat vodoznak a stáhněte výsledek"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "crop-pdf": {
+      "slug": "oriznout-pdf",
+      "name": "Oříznout PDF",
+      "description": "Ořízněte stránky PDF a změňte jejich velikost",
+      "seoTitle": "Oříznout PDF – ořez a změna velikosti stránek zdarma",
+      "metaDescription": "Ořízněte stránky PDF a změňte jejich velikost. Odstraňte okraje, upravte rozměry stránek a zkraťte obsah. Zdarma, v prohlížeči, bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Mohu oříznout všechny stránky najednou?",
+          "a": "Ano. Použijte stejnou oblast ořezu na všechny stránky, nebo nastavte různé ořezy pro jednotlivé stránky."
+        },
+        {
+          "q": "Smaže ořez obsah?",
+          "a": "Ořez skryje obsah mimo oblast ořezu. Skrytý obsah se nesmaže a ořez lze později zrušit."
+        }
+      ],
+      "howTo": {
+        "title": "Jak oříznout PDF",
+        "intro": "Oříznout PDF odřízne stejný okraj shora, zdola, zleva a zprava každé stránky – ideální pro odstranění prázdného místa nebo okrajů ze skeneru.",
+        "steps": [
+          "Vyberte jedno nebo více PDF",
+          "Nastavte, kolik bodů se má z každého okraje odříznout",
+          "Klikněte na Oříznout PDF",
+          "Stáhněte oříznutý soubor"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "sign-pdf": {
+      "slug": "podepsat-pdf",
+      "name": "Podepsat PDF",
+      "description": "Přidejte do PDF elektronický podpis",
+      "seoTitle": "Podepsat PDF – elektronický podpis zdarma online",
+      "metaDescription": "Přidejte do dokumentů PDF elektronický podpis. Nakreslete, napište nebo nahrajte svůj podpis. Právně platné, zdarma, bez registrace.",
+      "faqs": [
+        {
+          "q": "Jsou elektronické podpisy právně platné?",
+          "a": "Ano. Elektronické podpisy jsou právně platné podle amerického zákona ESIGN Act a evropského nařízení eIDAS prakticky u všech dokumentů."
+        },
+        {
+          "q": "Mohu podepsat PDF chráněné heslem?",
+          "a": "Nejprve ho musíte odemknout. PDF chráněná heslem nelze upravovat, dokud heslo neodstraníte."
+        }
+      ],
+      "howTo": {
+        "title": "Jak podepsat PDF",
+        "intro": "Podepsat PDF umístí váš podpis na libovolnou stránku. Nakreslete ho, napište ho písmem napodobujícím rukopis, nebo nahrajte obrázek svého skutečného podpisu.",
+        "steps": [
+          "Vyberte PDF, které potřebujete podepsat",
+          "Vytvořte podpis: nakreslete ho, napište ho, nebo nahrajte obrázek",
+          "Zvolte stránku, klikněte tam, kde má podpis být, a upravte jeho velikost",
+          "Klikněte na Podepsat a stáhnout PDF"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Obrázek vašeho podpisu se nikdy neukládá na server"
+        ]
+      }
+    },
+    "redact-pdf": {
+      "slug": "zacernit-pdf",
+      "name": "Začernit PDF",
+      "description": "Trvale začerněte text, obrázky nebo stránky",
+      "seoTitle": "Začernit PDF zdarma – anonymizace textu bez nahrávání",
+      "metaDescription": "Začerněte PDF zdarma v prohlížeči: označte jména, čísla nebo podpisy a ty se trvale odstraní. Bez nahrávání, bez účtu a bez vodoznaku.",
+      "faqs": [
+        {
+          "q": "Je začernění trvalé?",
+          "a": "Ano. Každá označená stránka se znovu vykreslí jako plochý obrázek s natrvalo vpálenými černými obdélníky, takže text, obrázky a skryté vrstvy pod nimi se do nového souboru nepřenesou. Neoznačené stránky se zkopírují beze změny."
+        },
+        {
+          "q": "Lze začerněný obsah obnovit?",
+          "a": "Ne. Na rozdíl od nakreslení černého obdélníku přes text, pod kterým zůstane text označitelný, se označené stránky sestaví znovu ze začerněného obrázku a původní obsah stránky se zahodí. Vyzkoušejte to: zkuste zkopírovat text ze začerněné oblasti – nic se nevrátí."
+        },
+        {
+          "q": "Nahrává se můj dokument někam?",
+          "a": "Ne. Začernění probíhá celé v kartě vašeho prohlížeče, takže soubor nikdy neopustí vaše zařízení. Nejvíc to záleží právě u dokumentů, které lidé začerňují: průkazů, zdravotní dokumentace, smluv a bankovních výpisů."
+        },
+        {
+          "q": "Zůstane zbytek začerněné stránky označitelným textem?",
+          "a": "Ne. Označená stránka se celá stane obrázkem, takže její zbývající text už nelze označit ani vyhledat. Pokud potřebujete, aby byl znovu prohledávatelný, spusťte poté OCR; neoznačené stránky si text ponechají."
+        },
+        {
+          "q": "Mohu začernit celou stránku?",
+          "a": "Ano. Přepněte na „Celé stránky“ a klikněte na každou stránku, která musí zmizet. V dokumentu zůstane jako plně černá stránka, takže se počet stránek ani číslování nezmění."
+        }
+      ],
+      "howTo": {
+        "title": "Jak začernit text v PDF",
+        "intro": "Začernit PDF trvale začerní, co označíte. Každá označená stránka se znovu sestaví jako obrázek, takže skrytý text ze souboru zmizí – není jen zakrytý obdélníkem.",
+        "steps": [
+          "Vyberte své PDF",
+          "Nakreslete obdélníky přes text nebo obrázky, které chcete skrýt, nebo vyberte celé stránky",
+          "Klikněte na Začernit",
+          "Stáhněte začerněné PDF a před sdílením ho zkontrolujte"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Skutečné začernění: skrytý obsah nelze zpětně zkopírovat"
+        ]
+      }
+    },
+    "unlock-pdf": {
+      "slug": "odemknout-pdf",
+      "name": "Odemknout PDF",
+      "description": "Odstraňte z PDF ochranu heslem",
+      "seoTitle": "Odemknout PDF – odstranit heslo z PDF zdarma",
+      "metaDescription": "Odstraňte ochranu heslem z dokumentů PDF. Odemkněte šifrovaná PDF pro úpravy, tisk nebo sdílení. Zdarma, bez registrace.",
+      "faqs": [
+        {
+          "q": "Potřebuji k odemčení PDF heslo?",
+          "a": "Ano. Abyste heslo mohli odstranit, musíte ho znát. Šifrování PDF nelze bez hesla obejít."
+        },
+        {
+          "q": "Změní odemčení obsah PDF?",
+          "a": "Ne. Odemčení odstraní pouze ochranu heslem. Obsah dokumentu zůstane beze změny."
+        }
+      ],
+      "howTo": {
+        "title": "Jak odstranit heslo z PDF",
+        "intro": "Odemknout PDF uloží kopii chráněného PDF bez hesla a omezení. Musíte mít právo soubor odemknout a znát heslo, pokud ho soubor při otevření vyžaduje.",
+        "steps": [
+          "Vyberte chráněné PDF",
+          "Zadejte heslo, pokud ho soubor k otevření vyžaduje",
+          "Klikněte na Odemknout PDF a stáhněte odemčenou kopii"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "protect-pdf": {
+      "slug": "zaheslovat-pdf",
+      "name": "Zaheslovat PDF",
+      "description": "Chraňte PDF heslem",
+      "seoTitle": "Zaheslovat PDF – ochrana PDF heslem zdarma",
+      "metaDescription": "Chraňte dokumenty PDF heslem. Zašifrujte soubory pomocí AES-256. Zdarma, v prohlížeči, bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Jak silná je ochrana PDF heslem?",
+          "a": "Moderní šifrování PDF používá AES-256, stejný standard, jaký používají banky a státní instituce. Silné heslo činí útoky hrubou silou nepraktickými."
+        },
+        {
+          "q": "Co se stane, když heslo zapomenu?",
+          "a": "Neexistuje žádný způsob obnovy. Bez hesla je soubor trvale nepřístupný. Heslo si vždy uložte na bezpečné místo."
+        }
+      ],
+      "howTo": {
+        "title": "Jak zaheslovat PDF",
+        "intro": "Zaheslovat PDF zašifruje PDF heslem pro otevření, heslem pro změnu oprávnění, nebo obojím – a může zakázat tisk, kopírování nebo úpravy.",
+        "steps": [
+          "Vyberte své PDF",
+          "Zadejte heslo pro otevření, heslo vlastníka, nebo obojí",
+          "Volitelně otevřete nastavení oprávnění a omezte tisk, kopírování a úpravy",
+          "Klikněte na Zaheslovat PDF a stáhněte zašifrovaný soubor"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Vaše heslo nikdy neopustí vaše zařízení"
+        ]
+      }
+    },
+    "compare-pdf": {
+      "slug": "porovnat-pdf",
+      "name": "Porovnat PDF",
+      "description": "Porovnejte dva soubory PDF a najděte rozdíly",
+      "seoTitle": "Porovnat PDF – najít rozdíly mezi dvěma PDF",
+      "metaDescription": "Zjistěte, zda se dvě PDF shodují: získáte míru podobnosti a přesné stránky, které se liší. Zdarma, v prohlížeči, bez nahrávání.",
+      "faqs": [
+        {
+          "q": "Co porovnání ukáže?",
+          "a": "Zda jsou oba soubory totožné, procento podobnosti, čísla stránek, které se liší, a u každého souboru počet stránek, velikost a údaje o dokumentu. Ukáže vám změněné stránky, nevyznačuje jednotlivá slova."
+        },
+        {
+          "q": "Mohu porovnat naskenovaná PDF?",
+          "a": "Nejprve na oba skeny spusťte OCR PDF. Porovnání pracuje s textem uvnitř souborů, takže u skenů, které obsahují jen obrázky, není co porovnávat."
+        }
+      ],
+      "howTo": {
+        "title": "Jak porovnat dvě PDF",
+        "intro": "Porovnat PDF porovná originál se změněnou verzí a řekne vám, zda se shodují, jak moc jsou si podobné a které stránky se liší.",
+        "steps": [
+          "Vyberte dvě PDF: nejprve originál, potom změněnou verzi",
+          "Klikněte na Porovnat PDF",
+          "Přečtěte si výsledek: podobnost, seznam odlišných stránek a údaje o každém souboru"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "ai-summarizer": {
+      "slug": "shrnuti-pdf",
+      "name": "Shrnutí PDF",
+      "description": "Shrňte obsah PDF",
+      "seoTitle": "Shrnutí PDF – shrnout PDF zdarma, bez nahrávání",
+      "metaDescription": "Získejte během pár sekund hlavní body a témata PDF. Shrnutí se vytváří ve vašem zařízení, takže se dokument nikdy nenahrává. Zdarma.",
+      "faqs": [
+        {
+          "q": "Jak shrnutí funguje?",
+          "a": "Ohodnotí každou větu podle toho, kolik klíčových pojmů dokumentu obsahuje, a ty nejsilnější ponechá jako hlavní body. Slova jsou autorova, nepřepisuje je chatbot – důležité dokumenty vždy porovnejte s originálem."
+        },
+        {
+          "q": "Odesílá se můj dokument na server?",
+          "a": "Ne. Shrnutí se počítá ve vašem prohlížeči a PDF nikdy neopustí vaše zařízení."
+        }
+      ],
+      "howTo": {
+        "title": "Jak shrnout PDF",
+        "intro": "Shrnutí PDF vybere nejdůležitější věty PDF a vypíše jeho hlavní body a nejčastější témata. Funguje celé ve vašem zařízení – váš dokument nevidí žádná služba AI.",
+        "steps": [
+          "Vyberte své PDF",
+          "Klikněte na Vytvořit shrnutí",
+          "Přečtěte si hlavní body a témata a v případě potřeby je zkopírujte jinam"
+        ],
+        "benefits": [
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    },
+    "translate-pdf": {
+      "slug": "prelozit-pdf",
+      "name": "Přeložit PDF",
+      "description": "Přeložte obsah PDF do jiného jazyka",
+      "seoTitle": "Přeložit PDF – překlad obsahu PDF do jiného jazyka",
+      "metaDescription": "Přeložte text PDF do 42 jazyků a stáhněte ho jako nové PDF. Zdarma, bez registrace. Text se odesílá překladové službě.",
+      "faqs": [
+        {
+          "q": "Kolik jazyků je podporováno?",
+          "a": "42, s automatickým rozpoznáním zdrojového jazyka."
+        },
+        {
+          "q": "Zachová se formátování?",
+          "a": "Ne. Přeložený text získáte na obrazovce a jako nové PDF obsahující pouze text; původní rozvržení a obrázky se neobnovují."
+        },
+        {
+          "q": "Nahrává se můj dokument?",
+          "a": "Toto je jediný nástroj Slate PDF, který odesílá data online: vyjmutý text putuje do bezplatné veřejné překladové služby. Nepoužívejte ho pro důvěrné dokumenty."
+        }
+      ],
+      "howTo": {
+        "title": "Jak přeložit PDF",
+        "intro": "Přeložit PDF přeloží text PDF do jednoho ze 42 jazyků a předá vám překlad na obrazovce nebo jako nové PDF obsahující pouze text. Na rozdíl od našich ostatních nástrojů odesílá text do bezplatné online překladové služby – stránka vás na to upozorní ještě předtím, než začnete.",
+        "steps": [
+          "Vyberte PDF se skutečným textem (u skenů nejprve spusťte OCR PDF)",
+          "Zvolte zdrojový jazyk, nebo ponechte Automaticky rozpoznat, a cílový jazyk",
+          "Klikněte na Přeložit",
+          "Zkopírujte překlad, nebo ho stáhněte jako PDF"
+        ],
+        "benefits": [
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Otevřeně o soukromí: je to jediný nástroj, který odesílá text online, a říká to",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
+        ]
+      }
+    }
+  }
+}

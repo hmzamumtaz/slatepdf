@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "PDFをトリミング",
+  "Margins (points)": "余白（pt）",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "値の単位はポイントです（1インチ = 72pt）。各辺からこの分だけトリミングします。",
+  "bottom": "下",
+  "left": "左",
+  "right": "右",
+  "top": "上"
+}

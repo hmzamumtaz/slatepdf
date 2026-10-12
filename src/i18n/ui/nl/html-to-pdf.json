@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Terug naar alle tools",
+  "Convert to PDF": "Omzetten naar PDF",
+  "Converting...": "Omzetten...",
+  "Design preview": "Voorbeeld van het ontwerp",
+  "Exact design": "Exact ontwerp",
+  "HTML code": "HTML-code",
+  "HTML design preview": "Voorbeeld van het HTML-ontwerp",
+  "HTML to PDF": "HTML naar PDF",
+  "Live preview — this is the design that will be converted": "Live voorbeeld — dit ontwerp wordt omgezet",
+  "PDF downloaded": "PDF gedownload",
+  "PDF output": "PDF-uitvoer",
+  "Paste some HTML or upload an .html file first.": "Plak eerst wat HTML of upload een .html-bestand.",
+  "Paste your HTML here, or upload an .html file above...": "Plak hier je HTML, of upload hierboven een .html-bestand...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Zet de inhoud opnieuw op als echte PDF-tekst die je kunt selecteren en doorzoeken, met vereenvoudigde opmaak.",
+  "Render the HTML design first, then convert it to PDF": "Geef eerst het HTML-ontwerp weer en zet het daarna om naar PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Geeft de pagina weer met volledige CSS — kleuren, lettertypen, achtergronden, opmaak — precies zoals in het voorbeeld. Aanbevolen.",
+  "Selectable text": "Selecteerbare tekst",
+  "Upload .html file": ".html-bestand uploaden",
+  "Upload an .html file above, or switch to the": "Upload hierboven een .html-bestand, of ga naar het tabblad",
+  "Your design preview will appear here": "Hier verschijnt het voorbeeld van je ontwerp",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "en plak je opmaakcode. De pagina wordt hier met het volledige ontwerp weergegeven — precies zoals je PDF eruit zal zien."
+}

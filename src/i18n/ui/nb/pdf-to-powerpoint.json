@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Laget {slides} lysbilde fra {pages} side.",
+  "Built {slides} slide from {pages} pages.": "Laget {slides} lysbilde fra {pages} sider.",
+  "Built {slides} slides from {pages} page.": "Laget {slides} lysbilder fra {pages} side.",
+  "Built {slides} slides from {pages} pages.": "Laget {slides} lysbilder fra {pages} sider.",
+  "Convert to PowerPoint": "Konverter til PowerPoint",
+  "Reading page {current} of {total}...": "Leser side {current} av {total} …",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Leser dokumentets struktur – overskrifter blir lysbildetitler og avsnitt blir punkter – i stedet for å lime inn rå tekst. Lange sider fortsetter på ekstra lysbilder."
+}

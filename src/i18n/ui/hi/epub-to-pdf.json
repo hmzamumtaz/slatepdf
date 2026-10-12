@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "सभी टूल पर वापस जाएँ",
+  "Convert EPUB ebooks to PDF documents": "EPUB ई-बुक को PDF दस्तावेज़ में बदलें",
+  "Convert to PDF": "PDF में बदलें",
+  "Converting...": "बदला जा रहा है...",
+  "EPUB to PDF": "EPUB से PDF",
+  "Exact design": "हूबहू डिज़ाइन",
+  "Extracting EPUB content...": "EPUB कंटेंट निकाला जा रहा है...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "टेक्स्ट निकालकर उसे साफ़, सर्च करने योग्य PDF में दोबारा व्यवस्थित करता है। उपन्यासों और ज़्यादा टेक्स्ट वाली किताबों के लिए सबसे अच्छा।",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "हर अध्याय का लेआउट, इमेज और इनलाइन स्टाइलिंग बनाए रखता है। लिंक की गई स्टाइलशीट और एम्बेड किए गए कस्टम फ़ॉन्ट लोड नहीं होते, इसलिए उनकी जगह डिफ़ॉल्ट स्टाइल इस्तेमाल होती है। चित्रों वाली किताबों के लिए सबसे अच्छा।",
+  "PDF downloaded": "PDF डाउनलोड हो गई",
+  "PDF output": "PDF आउटपुट",
+  "Selectable text": "सिलेक्ट करने योग्य टेक्स्ट",
+  "Upload .epub file": ".epub फ़ाइल अपलोड करें",
+  "Upload an EPUB file first.": "पहले EPUB फ़ाइल अपलोड करें।"
+}

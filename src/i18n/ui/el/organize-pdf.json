@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Εισαγάγετε τη νέα σειρά σελίδων (χωρισμένες με κόμμα, π.χ. 3,1,2,4,5)",
+  "Organize PDF": "Οργάνωση PDF",
+  "Please enter a page order": "Εισαγάγετε μια σειρά σελίδων",
+  "Preview in new order:": "Προεπισκόπηση με τη νέα σειρά:",
+  "Total pages: {total} | Reordered: {count}": "Σύνολο σελίδων: {total} | Αναδιατάχθηκαν: {count}",
+  "e.g., 3,1,2,4,5": "π.χ. 3,1,2,4,5"
+}

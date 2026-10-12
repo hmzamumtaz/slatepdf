@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "ใส่ลำดับหน้าใหม่ (คั่นด้วยจุลภาค เช่น 3,1,2,4,5)",
+  "Organize PDF": "จัดเรียง PDF",
+  "Please enter a page order": "โปรดใส่ลำดับหน้า",
+  "Preview in new order:": "ตัวอย่างตามลำดับใหม่:",
+  "Total pages: {total} | Reordered: {count}": "จำนวนหน้าทั้งหมด: {total} | จัดเรียงใหม่: {count}",
+  "e.g., 3,1,2,4,5": "เช่น 3,1,2,4,5"
+}

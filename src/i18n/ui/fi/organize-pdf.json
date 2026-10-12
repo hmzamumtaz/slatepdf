@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Anna uusi sivujärjestys (pilkuilla erotettuna, esim. 3,1,2,4,5)",
+  "Organize PDF": "Järjestä PDF",
+  "Please enter a page order": "Anna sivujärjestys",
+  "Preview in new order:": "Esikatselu uudessa järjestyksessä:",
+  "Total pages: {total} | Reordered: {count}": "Sivuja yhteensä: {total} | Järjestetty: {count}",
+  "e.g., 3,1,2,4,5": "esim. 3,1,2,4,5"
+}

@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "সব টুলে ফিরে যান",
+  "Enter the PDF password (leave empty if none)": "PDF-এর পাসওয়ার্ড লিখুন (না থাকলে খালি রাখুন)",
+  "File": "ফাইল",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "শুধু সেসব PDF ব্যবহার করুন যেগুলোর মালিক আপনি বা যেগুলো পরিবর্তনের অনুমতি আপনার আছে। অন্য কারও PDF থেকে সুরক্ষা সরানো কপিরাইট বা গোপনীয়তা আইন লঙ্ঘন করতে পারে।",
+  "PDF unlocked and downloaded": "PDF আনলক ও ডাউনলোড হয়েছে",
+  "Password (if required)": "পাসওয়ার্ড (প্রয়োজন হলে)",
+  "Remove password protection from a PDF file": "PDF ফাইল থেকে পাসওয়ার্ড সুরক্ষা সরান",
+  "Size": "আকার",
+  "Unlock PDF": "PDF আনলক করুন",
+  "Unlocking...": "আনলক হচ্ছে..."
+}

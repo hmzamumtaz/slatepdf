@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Ανακατασκευάζει το PDF χωρίς απώλειες, με συμπιεσμένες ροές αντικειμένων, και απορρίπτει αχρησιμοποίητα αντικείμενα και παλιές αναθεωρήσεις. Το κείμενο παραμένει επιλέξιμο και οι εικόνες ανέπαφες.",
+  "Optimize PDF": "Βελτιστοποίηση PDF",
+  "Remove document metadata (title, author, etc.)": "Αφαίρεση μεταδεδομένων εγγράφου (τίτλος, συντάκτης κ.λπ.)",
+  "Saved {size} KB ({percent}% smaller).": "Εξοικονομήθηκαν {size} KB ({percent}% μικρότερο).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Αυτό το PDF είναι ήδη βέλτιστα οργανωμένο — επιστράφηκε αμετάβλητο. Για μεγαλύτερη μείωση δοκιμάστε το εργαλείο Συμπίεση PDF."
+}

@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Sider, der skal fjernes (kommasepareret, f.eks. 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Angiv de sider, der skal fjernes (f.eks. 1, 3, 5-8)",
+  "Preview after removal:": "Forhåndsvisning efter fjernelse:",
+  "Remove Pages": "Fjern sider",
+  "Total pages: {total} | Remaining: {count}": "Sider i alt: {total} | Tilbage: {count}",
+  "e.g., 1, 3, 5, 7": "f.eks. 1, 3, 5, 7"
+}

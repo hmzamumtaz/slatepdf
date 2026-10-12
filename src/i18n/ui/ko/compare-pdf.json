@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "작성자: {value}",
+  "Back to all tools": "모든 도구로 돌아가기",
+  "Changed": "수정본",
+  "Compare Another": "다른 파일 비교",
+  "Compare PDF": "PDF 비교",
+  "Compare PDFs": "PDF 비교",
+  "Compare two PDFs and see the differences": "PDF 두 개를 비교하고 차이점을 확인하세요",
+  "Comparing...": "비교 중...",
+  "Comparison complete": "비교 완료",
+  "Creator: {value}": "작성 프로그램: {value}",
+  "Differing pages": "서로 다른 페이지",
+  "File 1": "파일 1",
+  "File 2": "파일 2",
+  "Files are identical": "두 파일이 동일합니다",
+  "Original": "원본",
+  "Page {page}": "{page}페이지",
+  "Pages: {pages} | Size: {size}": "페이지: {pages} | 크기: {size}",
+  "Title: {value}": "제목: {value}",
+  "similarity: {value}%": "유사도: {value}%",
+  "{count} page differ": "{count}개 페이지가 다릅니다",
+  "{count} pages differ": "{count}개 페이지가 다릅니다"
+}

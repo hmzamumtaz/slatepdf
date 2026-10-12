@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" Excel ওয়ার্কবুক হিসেবে পড়া যায়নি। নিশ্চিত করুন যে এটি একটি বৈধ .xlsx ফাইল।",
+  "Convert to PDF": "PDF-এ কনভার্ট করুন",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "পুরোনো .xls ফাইল সমর্থিত নয়। Excel-এ ফাইলটি .xlsx হিসেবে সেভ করে আবার চেষ্টা করুন।",
+  "No data found in this workbook.": "এই ওয়ার্কবুকে কোনো ডেটা পাওয়া যায়নি।"
+}

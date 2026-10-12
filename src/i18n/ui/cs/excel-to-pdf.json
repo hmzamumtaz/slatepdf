@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "Soubor „{name}“ se nepodařilo načíst jako sešit Excelu. Ujistěte se, že jde o platný soubor .xlsx.",
+  "Convert to PDF": "Převést do PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Starší soubory .xls nejsou podporovány. Uložte soubor v Excelu jako .xlsx a zkuste to znovu.",
+  "No data found in this workbook.": "V tomto sešitu nebyla nalezena žádná data."
+}

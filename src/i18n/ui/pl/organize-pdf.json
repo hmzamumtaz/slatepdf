@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Wpisz nową kolejność stron (oddzieloną przecinkami, np. 3,1,2,4,5)",
+  "Organize PDF": "Uporządkuj PDF",
+  "Please enter a page order": "Wpisz kolejność stron",
+  "Preview in new order:": "Podgląd w nowej kolejności:",
+  "Total pages: {total} | Reordered: {count}": "Liczba stron: {total} | Przestawione: {count}",
+  "e.g., 3,1,2,4,5": "np. 3,1,2,4,5"
+}

@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Rajaa PDF",
+  "Margins (points)": "Marginaalit (pt)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Arvot pisteinä (1 tuuma = 72 pistettä). Rajaus tehdään jokaisesta reunasta.",
+  "bottom": "alareuna",
+  "left": "vasen reuna",
+  "right": "oikea reuna",
+  "top": "yläreuna"
+}

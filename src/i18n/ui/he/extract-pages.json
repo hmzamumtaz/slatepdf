@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "חילוץ עמודים",
+  "Pages to extract (e.g., 1, 3, 5-8)": "עמודים לחילוץ (למשל 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "יש להזין את העמודים לחילוץ (למשל 1, 3, 5-8)",
+  "Preview of extracted pages:": "תצוגה מקדימה של העמודים שיחולצו:",
+  "Total pages: {total} | Extracting: {count}": "סך הכול עמודים: {total} | מחלצים: {count}",
+  "e.g., 1, 3, 5": "למשל 1, 3, 5"
+}

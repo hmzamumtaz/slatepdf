@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "すべてのツールに戻る",
+  "Convert EPUB ebooks to PDF documents": "EPUB電子書籍をPDFドキュメントに変換します",
+  "Convert to PDF": "PDFに変換",
+  "Converting...": "変換中...",
+  "EPUB to PDF": "EPUB PDF 変換",
+  "Exact design": "デザインどおり",
+  "Extracting EPUB content...": "EPUBの内容を抽出しています...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "テキストを抽出し、検索可能な見やすいPDFに組み直します。小説や文字中心の本に最適です。",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "各章のレイアウト、画像、インラインのスタイルを保持します。リンクされたスタイルシートや埋め込みのカスタムフォントは読み込まれないため、その部分は既定のスタイルになります。挿絵の多い本に最適です。",
+  "PDF downloaded": "PDFをダウンロードしました",
+  "PDF output": "PDFの出力",
+  "Selectable text": "選択可能なテキスト",
+  "Upload .epub file": ".epubファイルをアップロード",
+  "Upload an EPUB file first.": "先にEPUBファイルをアップロードしてください。"
+}

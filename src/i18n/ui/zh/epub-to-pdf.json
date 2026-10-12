@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "返回全部工具",
+  "Convert EPUB ebooks to PDF documents": "将EPUB电子书转换为PDF文档",
+  "Convert to PDF": "转换为PDF",
+  "Converting...": "正在转换……",
+  "EPUB to PDF": "EPUB转PDF",
+  "Exact design": "精确设计",
+  "Extracting EPUB content...": "正在提取EPUB内容……",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "提取文字内容并重新排版为整洁、可搜索的PDF。最适合小说和以文字为主的书籍。",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "保留每章的版式、图片和内联样式。不会加载外链样式表和内嵌的自定义字体，这些部分会改用默认样式。最适合带插图的书籍。",
+  "PDF downloaded": "PDF已下载",
+  "PDF output": "PDF输出方式",
+  "Selectable text": "可选中文字",
+  "Upload .epub file": "上传.epub文件",
+  "Upload an EPUB file first.": "请先上传EPUB文件。"
+}

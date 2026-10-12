@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "חזרה לכל הכלים",
+  "Convert EPUB ebooks to PDF documents": "המרת ספרים אלקטרוניים בפורמט EPUB למסמכי PDF",
+  "Convert to PDF": "המרה ל-PDF",
+  "Converting...": "ממיר...",
+  "EPUB to PDF": "EPUB ל-PDF",
+  "Exact design": "עיצוב מדויק",
+  "Extracting EPUB content...": "מחלץ את תוכן ה-EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "מחלץ את הטקסט ומסדר אותו מחדש ב-PDF נקי שאפשר לחפש בו. מתאים במיוחד לרומנים ולספרים עתירי טקסט.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "שומר על הפריסה, התמונות והעיצוב המוטבע של כל פרק. גיליונות סגנון מקושרים וגופנים מותאמים מוטמעים לא נטענים, ולכן הם מוחלפים בסגנונות ברירת המחדל. מתאים במיוחד לספרים מאוירים.",
+  "PDF downloaded": "ה-PDF הורד",
+  "PDF output": "פלט PDF",
+  "Selectable text": "טקסט שאפשר לסמן",
+  "Upload .epub file": "טעינת קובץ .epub",
+  "Upload an EPUB file first.": "יש לטעון קודם קובץ EPUB."
+}

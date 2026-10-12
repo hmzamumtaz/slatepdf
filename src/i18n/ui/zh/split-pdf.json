@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "页码范围（例如：1-3, 5, 7-10）",
+  "Please enter valid page ranges": "请输入有效的页码范围",
+  "Preview of pages in ranges:": "范围内页面预览：",
+  "Split PDF": "拆分PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "总页数：{total} | 范围内页数：{count}"
+}

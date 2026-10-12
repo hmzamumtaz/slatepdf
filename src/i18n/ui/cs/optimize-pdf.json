@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Bezztrátově znovu sestaví PDF s komprimovanými proudy objektů a zahodí nepoužité objekty a staré revize. Text zůstane označitelný a obrázky nedotčené.",
+  "Optimize PDF": "Optimalizovat PDF",
+  "Remove document metadata (title, author, etc.)": "Odstranit metadata dokumentu (název, autor atd.)",
+  "Saved {size} KB ({percent}% smaller).": "Ušetřeno {size} KB (o {percent} % menší).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Toto PDF je už optimálně zabalené – vráceno beze změny. Pro větší zmenšení vyzkoušejte nástroj Zmenšit PDF."
+}

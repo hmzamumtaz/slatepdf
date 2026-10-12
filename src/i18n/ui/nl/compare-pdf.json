@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Auteur: {value}",
+  "Back to all tools": "Terug naar alle tools",
+  "Changed": "Gewijzigd",
+  "Compare Another": "Andere vergelijken",
+  "Compare PDF": "PDF vergelijken",
+  "Compare PDFs": "PDF's vergelijken",
+  "Compare two PDFs and see the differences": "Vergelijk twee PDF's en bekijk de verschillen",
+  "Comparing...": "Vergelijken...",
+  "Comparison complete": "Vergelijking voltooid",
+  "Creator: {value}": "Maker: {value}",
+  "Differing pages": "Verschillende pagina's",
+  "File 1": "Bestand 1",
+  "File 2": "Bestand 2",
+  "Files are identical": "De bestanden zijn identiek",
+  "Original": "Origineel",
+  "Page {page}": "Pagina {page}",
+  "Pages: {pages} | Size: {size}": "Pagina's: {pages} | Grootte: {size}",
+  "Title: {value}": "Titel: {value}",
+  "similarity: {value}%": "gelijkenis: {value}%",
+  "{count} page differ": "{count} pagina verschilt",
+  "{count} pages differ": "{count} pagina's verschillen"
+}

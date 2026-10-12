@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Törlendő oldalak (vesszővel elválasztva, pl. 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Add meg a törlendő oldalakat (pl. 1, 3, 5-8)",
+  "Preview after removal:": "Előnézet a törlés után:",
+  "Remove Pages": "Oldalak törlése",
+  "Total pages: {total} | Remaining: {count}": "Összes oldal: {total} | Megmarad: {count}",
+  "e.g., 1, 3, 5, 7": "pl. 1, 3, 5, 7"
+}

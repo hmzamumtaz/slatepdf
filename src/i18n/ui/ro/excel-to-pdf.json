@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "„{name}” nu a putut fi citit ca registru Excel. Asigură-te că este un fișier .xlsx valid.",
+  "Convert to PDF": "Convertește în PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Fișierele vechi .xls nu sunt acceptate. Salvează fișierul ca .xlsx în Excel și încearcă din nou.",
+  "No data found in this workbook.": "Nu s-au găsit date în acest registru."
+}

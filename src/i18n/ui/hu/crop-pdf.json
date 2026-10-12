@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "PDF körbevágása",
+  "Margins (points)": "Margók (pont)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Az értékek pontban értendők (1 hüvelyk = 72 pont). Ennyit vág le az eszköz az egyes szélekről.",
+  "bottom": "lent",
+  "left": "bal",
+  "right": "jobb",
+  "top": "fent"
+}

@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Đã tạo {slides} slide từ {pages} trang.",
+  "Built {slides} slide from {pages} pages.": "Đã tạo {slides} slide từ {pages} trang.",
+  "Built {slides} slides from {pages} page.": "Đã tạo {slides} slide từ {pages} trang.",
+  "Built {slides} slides from {pages} pages.": "Đã tạo {slides} slide từ {pages} trang.",
+  "Convert to PowerPoint": "Chuyển sang PowerPoint",
+  "Reading page {current} of {total}...": "Đang đọc trang {current}/{total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Đọc cấu trúc tài liệu — tiêu đề thành tên slide và đoạn văn thành gạch đầu dòng — thay vì dán văn bản thô. Trang dài được chuyển tiếp sang slide bổ sung."
+}

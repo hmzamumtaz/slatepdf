@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "লেখক: {value}",
+  "Back to all tools": "সব টুলে ফিরে যান",
+  "Changed": "পরিবর্তিত",
+  "Compare Another": "আরেকটি তুলনা করুন",
+  "Compare PDF": "PDF তুলনা",
+  "Compare PDFs": "PDF তুলনা করুন",
+  "Compare two PDFs and see the differences": "দুটি PDF তুলনা করে পার্থক্যগুলো দেখুন",
+  "Comparing...": "তুলনা করা হচ্ছে...",
+  "Comparison complete": "তুলনা সম্পন্ন",
+  "Creator: {value}": "নির্মাতা: {value}",
+  "Differing pages": "যেসব পেজে পার্থক্য আছে",
+  "File 1": "ফাইল 1",
+  "File 2": "ফাইল 2",
+  "Files are identical": "ফাইল দুটি হুবহু এক",
+  "Original": "মূল",
+  "Page {page}": "পেজ {page}",
+  "Pages: {pages} | Size: {size}": "পেজ: {pages} | আকার: {size}",
+  "Title: {value}": "শিরোনাম: {value}",
+  "similarity: {value}%": "মিল: {value}%",
+  "{count} page differ": "{count}টি পেজে পার্থক্য আছে",
+  "{count} pages differ": "{count}টি পেজে পার্থক্য আছে"
+}

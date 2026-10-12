@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{slides} dia készült {pages} oldalból.",
+  "Built {slides} slide from {pages} pages.": "{slides} dia készült {pages} oldalból.",
+  "Built {slides} slides from {pages} page.": "{slides} dia készült {pages} oldalból.",
+  "Built {slides} slides from {pages} pages.": "{slides} dia készült {pages} oldalból.",
+  "Convert to PowerPoint": "Konvertálás PowerPointba",
+  "Reading page {current} of {total}...": "{current}/{total}. oldal beolvasása...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Beolvassa a dokumentum szerkezetét – a címsorokból diacímek, a bekezdésekből felsoroláspontok lesznek – ahelyett, hogy nyers szöveget illesztene be. A hosszú oldalak további diákon folytatódnak."
+}

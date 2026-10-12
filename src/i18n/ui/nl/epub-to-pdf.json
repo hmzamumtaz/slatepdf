@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Terug naar alle tools",
+  "Convert EPUB ebooks to PDF documents": "Zet EPUB-e-books om naar PDF-documenten",
+  "Convert to PDF": "Omzetten naar PDF",
+  "Converting...": "Omzetten...",
+  "EPUB to PDF": "EPUB naar PDF",
+  "Exact design": "Exact ontwerp",
+  "Extracting EPUB content...": "EPUB-inhoud extraheren...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Haalt de tekst eruit en zet die opnieuw op in een overzichtelijke, doorzoekbare PDF. Het best voor romans en boeken met veel tekst.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Behoudt de opmaak, afbeeldingen en inline stijlen van elk hoofdstuk. Gekoppelde stylesheets en ingesloten eigen lettertypen worden niet geladen; daarvoor worden standaardstijlen gebruikt. Het best voor geïllustreerde boeken.",
+  "PDF downloaded": "PDF gedownload",
+  "PDF output": "PDF-uitvoer",
+  "Selectable text": "Selecteerbare tekst",
+  "Upload .epub file": ".epub-bestand uploaden",
+  "Upload an EPUB file first.": "Upload eerst een EPUB-bestand."
+}

@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{slides} slaid dibina daripada {pages} halaman.",
+  "Built {slides} slide from {pages} pages.": "{slides} slaid dibina daripada {pages} halaman.",
+  "Built {slides} slides from {pages} page.": "{slides} slaid dibina daripada {pages} halaman.",
+  "Built {slides} slides from {pages} pages.": "{slides} slaid dibina daripada {pages} halaman.",
+  "Convert to PowerPoint": "Tukar ke PowerPoint",
+  "Reading page {current} of {total}...": "Membaca halaman {current} daripada {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Membaca struktur dokumen — tajuk menjadi tajuk slaid dan perenggan menjadi titik peluru — bukannya menampal teks mentah. Halaman yang panjang bersambung ke slaid tambahan."
+}

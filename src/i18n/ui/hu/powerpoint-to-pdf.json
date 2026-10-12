@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Konvertálás PDF-be",
+  "Converted {slides} slide including {images} image.": "{slides} dia konvertálva, {images} képpel.",
+  "Converted {slides} slide including {images} images.": "{slides} dia konvertálva, {images} képpel.",
+  "Converted {slides} slide.": "{slides} dia konvertálva.",
+  "Converted {slides} slides including {images} image.": "{slides} dia konvertálva, {images} képpel.",
+  "Converted {slides} slides including {images} images.": "{slides} dia konvertálva, {images} képpel.",
+  "Converted {slides} slides.": "{slides} dia konvertálva.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Minden dia eredeti méretben, fehér oldalra rajzolódik újra – a szöveg valódi helyével, méretével és színével, a képekkel, táblázatokkal és csoportosított alakzatokkal együtt.",
+  "Rendering slide {current} of {total}...": "{current}/{total}. dia renderelése..."
+}

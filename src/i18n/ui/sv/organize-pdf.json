@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Ange ny sidordning (kommaseparerad, t.ex. 3,1,2,4,5)",
+  "Organize PDF": "Sortera PDF",
+  "Please enter a page order": "Ange en sidordning",
+  "Preview in new order:": "Förhandsvisning i ny ordning:",
+  "Total pages: {total} | Reordered: {count}": "Totalt antal sidor: {total} | Omordnade: {count}",
+  "e.g., 3,1,2,4,5": "t.ex. 3,1,2,4,5"
+}

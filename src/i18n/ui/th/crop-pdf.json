@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "ครอป PDF",
+  "Margins (points)": "ระยะขอบ (พอยต์)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "ค่าเป็นพอยต์ (1 นิ้ว = 72 พอยต์) ระบบจะตัดออกจากแต่ละขอบ",
+  "bottom": "ล่าง",
+  "left": "ซ้าย",
+  "right": "ขวา",
+  "top": "บน"
+}

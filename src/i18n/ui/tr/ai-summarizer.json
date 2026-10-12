@@ -1,0 +1,16 @@
+{
+  "Analyzing...": "Analiz ediliyor...",
+  "Back to all tools": "Tüm araçlara dön",
+  "Copied": "Kopyalandı",
+  "Copy": "Kopyala",
+  "File": "Dosya",
+  "Generate Summary": "Özet Oluştur",
+  "Get an intelligent summary of your PDF document": "PDF belgenizin akıllı bir özetini alın",
+  "Key points": "Önemli noktalar",
+  "Size": "Boyut",
+  "Summarize Again": "Yeniden Özetle",
+  "Summarizer": "Özetleyici",
+  "Summary generated": "Özet oluşturuldu",
+  "Top topics": "Başlıca konular",
+  "{words} words from {original} original words ({percent}% reduction)": "{original} orijinal kelimeden {words} kelime (%{percent} azalma)"
+}

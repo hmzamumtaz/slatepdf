@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "กลับไปที่เครื่องมือทั้งหมด",
+  "Convert EPUB ebooks to PDF documents": "แปลงอีบุ๊ก EPUB เป็นเอกสาร PDF",
+  "Convert to PDF": "แปลงเป็น PDF",
+  "Converting...": "กำลังแปลง...",
+  "EPUB to PDF": "แปลง EPUB เป็น PDF",
+  "Exact design": "ดีไซน์ตรงตามต้นฉบับ",
+  "Extracting EPUB content...": "กำลังดึงเนื้อหา EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "ดึงเนื้อหาข้อความออกมาและจัดเรียงใหม่เป็น PDF ที่สะอาดตาและค้นหาข้อความได้ เหมาะกับนิยายและหนังสือที่มีข้อความเป็นหลัก",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "คงเลย์เอาต์ รูปภาพ และสไตล์แบบอินไลน์ของแต่ละบทไว้ สไตล์ชีตที่ลิงก์ไว้และฟอนต์ที่ฝังมาจะไม่ถูกโหลด จึงใช้สไตล์เริ่มต้นแทน เหมาะกับหนังสือที่มีภาพประกอบ",
+  "PDF downloaded": "ดาวน์โหลด PDF แล้ว",
+  "PDF output": "รูปแบบ PDF ที่ได้",
+  "Selectable text": "ข้อความที่เลือกได้",
+  "Upload .epub file": "อัปโหลดไฟล์ .epub",
+  "Upload an EPUB file first.": "อัปโหลดไฟล์ EPUB ก่อน"
+}

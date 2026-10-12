@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Tukar ke PDF",
+  "Converted {slides} slide including {images} image.": "{slides} slaid ditukar termasuk {images} imej.",
+  "Converted {slides} slide including {images} images.": "{slides} slaid ditukar termasuk {images} imej.",
+  "Converted {slides} slide.": "{slides} slaid ditukar.",
+  "Converted {slides} slides including {images} image.": "{slides} slaid ditukar termasuk {images} imej.",
+  "Converted {slides} slides including {images} images.": "{slides} slaid ditukar termasuk {images} imej.",
+  "Converted {slides} slides.": "{slides} slaid ditukar.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Setiap slaid dilukis semula pada halaman putih mengikut saiz asalnya — teks dengan kedudukan, saiz dan warna sebenar, serta gambar, jadual dan bentuk berkumpulan.",
+  "Rendering slide {current} of {total}...": "Memaparkan slaid {current} daripada {total}..."
+}

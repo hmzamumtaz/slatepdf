@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Πίσω σε όλα τα εργαλεία",
+  "Convert to PDF": "Μετατροπή σε PDF",
+  "Converting...": "Μετατροπή...",
+  "Design preview": "Προεπισκόπηση σχεδίασης",
+  "Exact design": "Ακριβής σχεδίαση",
+  "HTML code": "Κώδικας HTML",
+  "HTML design preview": "Προεπισκόπηση σχεδίασης HTML",
+  "HTML to PDF": "HTML σε PDF",
+  "Live preview — this is the design that will be converted": "Ζωντανή προεπισκόπηση — αυτή είναι η σχεδίαση που θα μετατραπεί",
+  "PDF downloaded": "Η λήψη του PDF ολοκληρώθηκε",
+  "PDF output": "Αποτέλεσμα PDF",
+  "Paste some HTML or upload an .html file first.": "Επικολλήστε πρώτα κώδικα HTML ή ανεβάστε ένα αρχείο .html.",
+  "Paste your HTML here, or upload an .html file above...": "Επικολλήστε εδώ τον κώδικα HTML ή ανεβάστε ένα αρχείο .html παραπάνω...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Στοιχειοθετεί ξανά το περιεχόμενο ως πραγματικό κείμενο PDF που μπορείτε να επιλέξετε και να αναζητήσετε, με απλοποιημένη μορφοποίηση.",
+  "Render the HTML design first, then convert it to PDF": "Αποδώστε πρώτα τη σχεδίαση HTML και μετά μετατρέψτε τη σε PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Αποδίδει τη σελίδα με πλήρες CSS — χρώματα, γραμματοσειρές, φόντα, διάταξη — ακριβώς όπως στην προεπισκόπηση. Συνιστάται.",
+  "Selectable text": "Επιλέξιμο κείμενο",
+  "Upload .html file": "Ανέβασμα αρχείου .html",
+  "Upload an .html file above, or switch to the": "Ανεβάστε ένα αρχείο .html παραπάνω ή μεταβείτε στην καρτέλα",
+  "Your design preview will appear here": "Η προεπισκόπηση της σχεδίασής σας θα εμφανιστεί εδώ",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "και επικολλήστε τον κώδικά σας. Η σελίδα αποδίδεται εδώ με την πλήρη σχεδίασή της — ακριβώς όπως θα είναι το PDF σας."
+}

@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "हटाने वाले पेज (कॉमा से अलग, जैसे, 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "कृपया हटाने वाले पेज लिखें (जैसे, 1, 3, 5-8)",
+  "Preview after removal:": "हटाने के बाद प्रीव्यू:",
+  "Remove Pages": "पेज हटाएँ",
+  "Total pages: {total} | Remaining: {count}": "कुल पेज: {total} | बचे हुए: {count}",
+  "e.g., 1, 3, 5, 7": "जैसे, 1, 3, 5, 7"
+}

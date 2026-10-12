@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "सभी टूल पर वापस जाएँ",
+  "Convert to PDF": "PDF में बदलें",
+  "Converting...": "बदला जा रहा है...",
+  "Design preview": "डिज़ाइन प्रीव्यू",
+  "Exact design": "हूबहू डिज़ाइन",
+  "HTML code": "HTML कोड",
+  "HTML design preview": "HTML डिज़ाइन प्रीव्यू",
+  "HTML to PDF": "HTML से PDF",
+  "Live preview — this is the design that will be converted": "लाइव प्रीव्यू — यही डिज़ाइन बदला जाएगा",
+  "PDF downloaded": "PDF डाउनलोड हो गई",
+  "PDF output": "PDF आउटपुट",
+  "Paste some HTML or upload an .html file first.": "पहले कुछ HTML पेस्ट करें या .html फ़ाइल अपलोड करें।",
+  "Paste your HTML here, or upload an .html file above...": "अपना HTML यहाँ पेस्ट करें, या ऊपर .html फ़ाइल अपलोड करें...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "कंटेंट को असली PDF टेक्स्ट के रूप में दोबारा सेट करता है, जिसे आप सिलेक्ट और सर्च कर सकते हैं; स्टाइलिंग सरल हो जाती है।",
+  "Render the HTML design first, then convert it to PDF": "पहले HTML डिज़ाइन रेंडर करें, फिर उसे PDF में बदलें",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "पेज को पूरे CSS के साथ रेंडर करता है — रंग, फ़ॉन्ट, बैकग्राउंड, लेआउट — बिल्कुल प्रीव्यू जैसा। सुझाया गया।",
+  "Selectable text": "सिलेक्ट करने योग्य टेक्स्ट",
+  "Upload .html file": ".html फ़ाइल अपलोड करें",
+  "Upload an .html file above, or switch to the": "ऊपर .html फ़ाइल अपलोड करें, या",
+  "Your design preview will appear here": "आपका डिज़ाइन प्रीव्यू यहाँ दिखेगा",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "टैब पर जाकर अपना मार्कअप पेस्ट करें। पेज यहाँ अपने पूरे डिज़ाइन के साथ रेंडर होता है — ठीक वैसा ही जैसी आपकी PDF दिखेगी।"
+}

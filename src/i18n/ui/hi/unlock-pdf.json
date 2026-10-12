@@ -1,0 +1,12 @@
+{
+  "Back to all tools": "सभी टूल पर वापस जाएँ",
+  "Enter the PDF password (leave empty if none)": "PDF का पासवर्ड डालें (न हो तो खाली छोड़ें)",
+  "File": "फ़ाइल",
+  "Only PDFs you own or have permission to modify should be used. Removing security from someone else's PDF may violate copyright or privacy laws.": "सिर्फ़ वही PDF इस्तेमाल करें जो आपकी हैं या जिन्हें बदलने की आपको अनुमति है। किसी और की PDF से सुरक्षा हटाना कॉपीराइट या प्राइवेसी कानूनों का उल्लंघन हो सकता है।",
+  "PDF unlocked and downloaded": "PDF अनलॉक हुई और डाउनलोड हो गई",
+  "Password (if required)": "पासवर्ड (अगर ज़रूरी हो)",
+  "Remove password protection from a PDF file": "PDF फ़ाइल से पासवर्ड सुरक्षा हटाएँ",
+  "Size": "साइज़",
+  "Unlock PDF": "PDF अनलॉक करें",
+  "Unlocking...": "अनलॉक हो रही है..."
+}

@@ -1,0 +1,1407 @@
+{
+  "site": {
+    "homeTitle": "Tarayıcınızda Çalışan Ücretsiz PDF Araçları",
+    "homeDescription": "PDF'leri tarayıcınızda birleştirin, bölün, sıkıştırın, dönüştürün, imzalayın ve düzenleyin. Ücretsiz, kayıt yok, dosyalarınız asla yüklenmez.",
+    "heroBadge": "Dosyalar cihazınızdan asla çıkmaz",
+    "heroTitle": "İhtiyacınız olan tüm PDF araçları,",
+    "heroHighlight": "ücretsiz ve gizli.",
+    "heroSubtitle": "Belgeleri tarayıcınızda birleştirin, bölün, sıkıştırın, dönüştürün, düzenleyin ve imzalayın. Yükleme yok, kayıt yok, filigran yok.",
+    "heroCta": "Tüm PDF araçlarını görün",
+    "popularTools": "Popüler araçlar",
+    "whyTitle": "Neden {site}?",
+    "why": [
+      {
+        "title": "Dosyalarınız gizli kalır",
+        "text": "Her şey cihazınızda gerçekleşir. Belgeleriniz hiçbir zaman bir sunucuya yüklenmez; gizli çalışmalar için idealdir."
+      },
+      {
+        "title": "Anında sonuç",
+        "text": "Yükleme yok, sıra beklemek yok. PDF'niz, yavaş bir bağlantıda bile tıkladığınız anda işlenir."
+      },
+      {
+        "title": "Ücretsiz ve filigransız",
+        "text": "Tüm araçları dilediğiniz kadar kullanın. Hesap yok, dosyalarınızda filigran yok, gizli ücret yok."
+      }
+    ],
+    "faqTitle": "Sıkça sorulan sorular",
+    "homeFaqs": [
+      {
+        "q": "{site} gerçekten ücretsiz mi?",
+        "a": "Evet. Tüm araçlar ücretsizdir; hesap gerekmez, dosyalarınıza filigran eklenmez ve ücretli bir paket yoktur."
+      },
+      {
+        "q": "Dosyalarım bir sunucuya yükleniyor mu?",
+        "a": "Hayır. Araçlar tarayıcınızda çalışır, bu yüzden dosyalarınız cihazınızda kalır. Tek istisna PDF Çeviri aracıdır: metni bir çeviri hizmetine gönderir ve bunu yapmadan önce size bildirir."
+      },
+      {
+        "q": "Herhangi bir şey yüklemem gerekiyor mu?",
+        "a": "Hayır. Windows, Mac, Linux, Android ve iPhone'da Chrome, Edge, Firefox veya Safari gibi her modern tarayıcıda çalışır."
+      },
+      {
+        "q": "Hesap oluşturmam gerekiyor mu?",
+        "a": "Hayır. Bir aracı açın ve hemen çalışmaya başlayın."
+      }
+    ],
+    "hubTitle": "Tüm PDF Araçları — {count} Ücretsiz Araç, Yükleme Yok",
+    "hubDescription": "{site} araçları tek yerde: PDF birleştirme, bölme, sıkıştırma, dönüştürme, düzenleme, imzalama, şifreleme. Ücretsiz, hesapsız, dosyalar tarayıcıda kalır.",
+    "hubH1": "İhtiyacınız olan tüm PDF araçları tek yerde",
+    "hubIntro": "Belgelerinizi birleştirmek, bölmek, sıkıştırmak, dönüştürmek, düzenlemek, imzalamak ve korumak için {count} ücretsiz PDF aracı. Her biri tarayıcınızda çalışır, bu yüzden dosyalarınız asla yüklenmez; hesap yok, filigran yok.",
+    "navWorkspace": "Çalışma Alanı",
+    "navAllTools": "Tüm araçlar",
+    "navGuides": "Rehberler (İngilizce)",
+    "language": "Dil",
+    "menu": "Menü",
+    "footerTagline": "Tarayıcınızda çalışan ücretsiz PDF araçları. PDF'leri yüklemeden düzenleyin, dönüştürün, birleştirin ve sıkıştırın.",
+    "footerPrivate": "%100 gizli. Dosyalar cihazınızdan asla çıkmaz.",
+    "footerAllTools": "{count} PDF aracının tümü",
+    "footerNoSignup": "Kayıt gerekmez",
+    "footerNoWatermark": "Filigran yok",
+    "footerAbout": "Hakkımızda (İngilizce)",
+    "footerPrivacy": "Gizlilik (İngilizce)",
+    "footerTerms": "Kullanım Koşulları (İngilizce)",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbTools": "PDF Araçları",
+    "whyToolHeading": "{tool} için neden burayı kullanmalısınız?",
+    "faqHeading": "{tool} — sıkça sorulan sorular",
+    "continueHeading": "Başka bir araçla devam edin",
+    "seeAllTools": "{count} PDF aracının tümünü görün"
+  },
+  "categories": {
+    "All-in-one": {
+      "name": "Hepsi bir arada",
+      "blurb": "Arada indirme yapmadan tek bir belge üzerinde birden fazla işlem yapın."
+    },
+    "Organize PDF": {
+      "name": "PDF düzenleme",
+      "blurb": "PDF'lerinizin sayfalarını birleştirin, bölün, yeniden sıralayın ve ayıklayın."
+    },
+    "Optimize PDF": {
+      "name": "PDF optimizasyonu",
+      "blurb": "PDF'leri küçültün, daha hızlı açılır, aranabilir veya yeniden okunabilir hale getirin."
+    },
+    "Create PDF": {
+      "name": "PDF oluşturma",
+      "blurb": "Görselleri, Office dosyalarını, web sayfalarını ve e-kitapları PDF'ye dönüştürün."
+    },
+    "Export PDF": {
+      "name": "PDF dışa aktarma",
+      "blurb": "PDF içeriğinizi Word, Excel, slayt, görsel veya metin olarak dışa aktarın."
+    },
+    "Modify PDF": {
+      "name": "PDF değiştirme",
+      "blurb": "Metni düzenleyin, imzalayın, numaralandırın, filigran ekleyin, kırpın, döndürün ve karartın."
+    },
+    "PDF Security": {
+      "name": "PDF güvenliği",
+      "blurb": "Parola koruması ekleyin veya kaldırın."
+    },
+    "PDF Intelligence": {
+      "name": "PDF analizi",
+      "blurb": "Bir PDF'nin içeriğini karşılaştırın, özetleyin ve çevirin."
+    }
+  },
+  "tools": {
+    "pdf-workspace": {
+      "slug": "pdf-calisma-alani",
+      "name": "PDF Çalışma Alanı",
+      "description": "Tek bir belgeyi sayfadan ayrılmadan düzenleyin, karartın, imzalayın, damgalayın ve koruyun",
+      "seoTitle": "PDF Çalışma Alanı — PDF Düzenle, İmzala, Karart, Koru",
+      "metaDescription": "Metin düzenleme, hassas bilgileri karartma, imza, filigran ve parola koruması tek PDF çalışma alanında. Tüm işlemler tarayıcınızda yapılır.",
+      "faqs": [
+        {
+          "q": "PDF Çalışma Alanı'nda neler yapabilirim?",
+          "a": "Metni düzenleyebilir, hassas bilgileri karartabilir, sayfaları yeniden sıralayabilir, imza ekleyebilir, filigran damgalayabilir, sayfaları ayarlayabilir, belgeyi parolayla koruyabilir ve sonucu indirebilirsiniz; hepsi sayfadan ayrılmadan."
+        },
+        {
+          "q": "Belgem bir sunucuya yükleniyor mu?",
+          "a": "Hayır. Her işlem tarayıcınızda çalışır. Belgeniz cihazınızdan asla çıkmaz; bu da çalışma alanını gizli ve hassas işler için ideal kılar."
+        }
+      ],
+      "howTo": {
+        "title": "PDF tek yerde nasıl düzenlenir, imzalanır ve korunur",
+        "intro": "PDF Çalışma Alanı; düzenleme, karartma, sayfa araçları, imza, damga ve parolayı geri al ve yinele desteğiyle tek ekranda toplar. Böylece belgeyi tek seferde bitirir ve bir kez indirirsiniz.",
+        "steps": [
+          "PDF'nizi yukarıdaki çalışma alanında açın (parolalıysa önce kilidini açın)",
+          "Düzenle, Karart, Sayfalar, İmzala, Damga, Ayarla ve Koru sekmelerini istediğiniz sırayla kullanın",
+          "Fikrinizi değiştirirseniz geçmişinizde geri veya ileri gidin",
+          "Bitmiş PDF'yi kaydetmek için İndir'e tıklayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "merge-pdf": {
+      "slug": "pdf-birlestir",
+      "name": "PDF Birleştir",
+      "description": "Birden fazla PDF'yi tek bir dosyada birleştirin",
+      "seoTitle": "PDF Birleştirme — PDF'leri Tek Dosyada Birleştirin, Ücretsiz",
+      "metaDescription": "İki veya daha fazla PDF dosyasını tek bir belgede birleştirin. Ücretsiz, kayıt yok, filigran yok. Birleştirme tarayıcınızda yapılır, dosyalar yüklenmez.",
+      "faqs": [
+        {
+          "q": "Aynı anda kaç PDF birleştirebilirim?",
+          "a": "Birleştirme başına 20 dosyaya kadar; cihazınızın belleği dışında boyut sınırı yoktur. Daha fazlası için 20'lik gruplar halinde birleştirin, ardından sonuçları birleştirin."
+        },
+        {
+          "q": "Birleştirme PDF kalitesini düşürür mü?",
+          "a": "Hayır. Doğru bir birleştirme, görselleri veya metni yeniden kodlamadan her sayfa nesnesini yeni bir belgeye kopyalar. Sayfalarınız orijinalleriyle aynı kalır."
+        },
+        {
+          "q": "Parola korumalı PDF'leri birleştirebilir miyim?",
+          "a": "Önce kilitlerini açmanız gerekir. Parola korumalı PDF'ler, parola kaldırılana kadar okunamaz."
+        }
+      ],
+      "howTo": {
+        "title": "PDF dosyaları nasıl birleştirilir",
+        "intro": "PDF Birleştir, iki veya daha fazla PDF'yi seçtiğiniz sırayla tek bir belgede birleştirir. Sayfalar olduğu gibi kopyalanır; böylece metin seçilebilir kalır ve görseller çözünürlüklerini korur.",
+        "steps": [
+          "En az iki PDF dosyasını, tek seferde en fazla 20 adet olmak üzere, istediğiniz sırayla seçin veya sürükleyip bırakın",
+          "Listeyi kontrol edin ve yanlışlıkla eklediğiniz dosyaları kaldırın",
+          "PDF'leri Birleştir'e tıklayın",
+          "Birleştirilmiş PDF'yi indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Kayıpsız — sayfalar yeniden oluşturulmaz, kopyalanır"
+        ]
+      }
+    },
+    "split-pdf": {
+      "slug": "pdf-bol",
+      "name": "PDF Böl",
+      "description": "Bir PDF'yi tek tek sayfalara ayırın",
+      "seoTitle": "PDF Bölme — PDF'yi Sayfalara Ayırın (Ücretsiz)",
+      "metaDescription": "Bir PDF'yi tek sayfalara veya özel sayfa aralıklarına bölün. Ücretsiz, tarayıcı tabanlı, yükleme gerekmez. Sayfaları veya grupları anında indirin.",
+      "faqs": [
+        {
+          "q": "Bir PDF'yi belirli sayfa aralıklarına nasıl bölerim?",
+          "a": "1-5, 10, 15-20 gibi aralıklar girin. Araç, belgeyi her aralık için ayrı bir dosyaya böler."
+        },
+        {
+          "q": "Bölme kaliteyi düşürür mü?",
+          "a": "Hayır. Bölme, sayfa nesnelerini bütün halinde yeni belgelere kopyalar. Metin seçilebilir kalır ve görseller orijinal çözünürlüklerini korur."
+        }
+      ],
+      "howTo": {
+        "title": "PDF nasıl bölünür",
+        "intro": "PDF Böl, bir belgeyi sayfa aralıklarına göre birkaç dosyaya ayırır. Yazdığınız her aralık ayrı bir PDF olur.",
+        "steps": [
+          "Bölmek istediğiniz PDF'yi seçin",
+          "Sayfa aralıklarını yazın, örneğin 1-3, 5, 7-10, ve önizlemeyi kontrol edin",
+          "PDF'yi Böl'e tıklayın",
+          "Her parçayı ayrı ayrı indirin veya tüm parçaları tek bir ZIP'te almak için Tümünü İndir'i kullanın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Kayıpsız — her sayfa orijinal metnini ve görsellerini korur"
+        ]
+      }
+    },
+    "remove-pages": {
+      "slug": "pdf-sayfa-sil",
+      "name": "PDF Sayfa Sil",
+      "description": "Bir PDF'den belirli sayfaları silin",
+      "seoTitle": "PDF Sayfa Silme — İstenmeyen Sayfaları Ücretsiz Silin",
+      "metaDescription": "Bir PDF belgesinden belirli sayfaları silin. Kaldırmak istediğiniz sayfaları seçin ve güncellenmiş dosyayı indirin. Ücretsiz, kayıt gerekmez.",
+      "faqs": [
+        {
+          "q": "Aynı anda birden fazla sayfayı silebilir miyim?",
+          "a": "Evet. Birden fazla sayfa numarası veya aralık girin; seçilen tüm sayfalar tek adımda silinir."
+        },
+        {
+          "q": "Bu, bölme ile aynı şey mi?",
+          "a": "Hayır. Bölme, seçilen sayfalardan ayrı dosyalar oluşturur. Silme ise sayfaları belgeden kaldırır ve geri kalanını tek bir dosya olarak tutar."
+        }
+      ],
+      "howTo": {
+        "title": "PDF'den sayfa nasıl silinir",
+        "intro": "PDF Sayfa Sil, listelediğiniz sayfaları siler ve geri kalan her şeyi orijinal sırasıyla tek bir PDF'de tutar.",
+        "steps": [
+          "PDF'nizi seçin",
+          "Silinecek sayfaları yazın, örneğin 1, 3, 5-8",
+          "Kalacak sayfaların önizlemesini kontrol edin",
+          "Sayfaları Sil'e tıklayın ve kısalan PDF'yi indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "extract-pages": {
+      "slug": "pdf-sayfa-ayikla",
+      "name": "PDF Sayfa Ayıkla",
+      "description": "Belirli sayfaları yeni bir PDF olarak çıkarın",
+      "seoTitle": "PDF Sayfa Ayıklama — Belirli Sayfaları Ayrı PDF Yapın",
+      "metaDescription": "Bir PDF'deki belirli sayfaları yeni bir belgeye ayıklayın. Tek sayfaları, aralıkları veya ikisini birlikte seçin. Orijinal PDF değişmeden kalır.",
+      "faqs": [
+        {
+          "q": "Ayıklama orijinal PDF'yi değiştirir mi?",
+          "a": "Hayır. Ayıklama kaynak dosyayı okur ve yeni bir dosya yazar. Orijinal dosyanız diskte olduğu gibi kalır."
+        },
+        {
+          "q": "Sayfaları farklı bir sırayla ayıklayabilir miyim?",
+          "a": "Evet. Sayfaları istediğiniz sırayla listeleyin. 9, 3, 5 girerseniz sayfalar bu sırayla yer alan bir dosya oluşur."
+        }
+      ],
+      "howTo": {
+        "title": "PDF'den sayfa nasıl ayıklanır",
+        "intro": "PDF Sayfa Ayıkla, seçtiğiniz sayfaları yeni bir PDF'ye kopyalar ve orijinal dosyaya dokunmaz.",
+        "steps": [
+          "PDF'nizi seçin",
+          "İstediğiniz sayfaları yazın, örneğin 1, 3, 5-8, ve küçük resimleri kontrol edin",
+          "Sayfaları Ayıkla'ya tıklayın",
+          "Yalnızca bu sayfaları içeren yeni PDF'yi indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "organize-pdf": {
+      "slug": "pdf-sayfa-duzenle",
+      "name": "PDF Sayfalarını Düzenle",
+      "description": "Sayfaları yeniden sıralayın, döndürün ve yönetin",
+      "seoTitle": "PDF Sayfa Sıralama — Sayfaları Düzenleyin ve Silin",
+      "metaDescription": "Bir PDF'nin sayfalarını istediğiniz sıraya koyun ve gereksiz olanları tek adımda çıkarın. Ücretsiz, kayıt yok, dosya tarayıcınızdan çıkmaz.",
+      "faqs": [
+        {
+          "q": "Yeni sayfa sırasını nasıl belirlerim?",
+          "a": "Sayfa numaralarını istediğiniz sırayla yazın, örneğin 3, 1, 2, 4. Mevcut sıra sizin için önceden doldurulur ve kaydetmeden önce bir önizleme sonucu gösterir."
+        },
+        {
+          "q": "Sayfaları burada döndürebilir miyim?",
+          "a": "Hayır. Tüm sayfaları veya yalnızca listelediğiniz sayfaları 90°, 180° ya da 270° döndüren PDF Döndür aracını kullanın."
+        },
+        {
+          "q": "Farklı PDF'lerdeki sayfaları karıştırabilir miyim?",
+          "a": "Bu araç tek bir PDF üzerinde çalışır. Farklı dosyalardaki sayfaları bir araya getirmek için ihtiyacınız olan sayfaları ayıkladıktan sonra PDF Birleştir'i kullanın."
+        }
+      ],
+      "howTo": {
+        "title": "PDF sayfaları nasıl yeniden sıralanır",
+        "intro": "PDF Sayfalarını Düzenle, belgeyi yazdığınız sayfa sırasına göre yeniden oluşturur. Listeye eklemediğiniz sayfalar çıkarılır; böylece tek adımda hem sıralar hem ayıklarsınız.",
+        "steps": [
+          "PDF'nizi seçin — mevcut sıra (1, 2, 3 …) sizin için doldurulur",
+          "Listeyi istediğiniz sırayla yeniden yazın, örneğin 3, 1, 2, 4",
+          "Yeni sıranın önizlemesini kontrol edin",
+          "PDF'yi Düzenle'ye tıklayın ve sonucu indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "compress-pdf": {
+      "slug": "pdf-sikistir",
+      "name": "PDF Sıkıştır",
+      "description": "Kaliteyi koruyarak dosya boyutunu küçültün",
+      "seoTitle": "PDF Sıkıştırma — Kaliteyi Bozmadan Boyut Küçültme",
+      "metaDescription": "PDF dosya boyutunu gözle görülür kalite kaybı olmadan %80'e kadar küçültün. Ücretsiz, tarayıcıda sıkıştırma. Yükleme, filigran ve kayıt yok.",
+      "faqs": [
+        {
+          "q": "PDF sıkıştırmak kaliteyi düşürür mü?",
+          "a": "Önerilen sıkıştırma düzeyinde görseller 150 DPI ile yeniden kodlanır; ekranda görüntüleme ve standart baskı için orijinalinden ayırt edilemez."
+        },
+        {
+          "q": "PDF'm ne kadar küçülür?",
+          "a": "Fotoğraf ağırlıklı PDF'ler %60-80 küçülür. Yalnızca metin içeren dosyalar %10-30 küçülür. Taranmış belgeler %90'a kadar küçülebilir."
+        },
+        {
+          "q": "Parola korumalı bir PDF'yi sıkıştırabilir miyim?",
+          "a": "Önce kilidini açmanız gerekir. Sıkıştırma araçları, parola kaldırılana kadar şifreli dosyaları okuyamaz."
+        }
+      ],
+      "howTo": {
+        "title": "PDF belirli bir boyuta nasıl sıkıştırılır",
+        "intro": "PDF Sıkıştır, belirsiz “düşük / orta / yüksek” düzeyleri yerine MB veya KB olarak belirlediğiniz hedef boyuta göre çalışır; bir yükleme formunun veya e-postanın kesin bir sınırı olduğunda işinize yarar.",
+        "steps": [
+          "Küçültmek istediğiniz PDF'yi seçin",
+          "Bir hedef boyut yazın veya orijinalin %50, %25, %10 ya da %5'i gibi hazır bir seçenek belirleyin",
+          "Sıkıştır'a tıklayın",
+          "Yeni boyutu kontrol edin, ardından sıkıştırılmış PDF'yi indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Ödünler konusunda dürüst: hedef, sayfaların görsele dönüşmesini gerektirecek kadar küçükse araç sizi uyarır"
+        ]
+      }
+    },
+    "optimize-pdf": {
+      "slug": "pdf-optimize-et",
+      "name": "PDF Optimize Et",
+      "description": "PDF'yi web ve daha hızlı yükleme için optimize edin",
+      "seoTitle": "PDF Optimize Etme — Web İçin Daha Hızlı Yüklenen PDF",
+      "metaDescription": "PDF dosyalarını web için ve daha hızlı yükleme için optimize edin. Görüntüleme süresini kısaltın, katmanları düzleştirin, belge yapısını sadeleştirin.",
+      "faqs": [
+        {
+          "q": "PDF optimizasyonu ne işe yarar?",
+          "a": "Optimizasyon kullanılmayan nesneleri kaldırır, etkileşimli katmanları düzleştirir, yazı tiplerinin yalnızca kullanılan karakterlerini tutar ve daha hızlı görüntüleme için iç yapıyı sadeleştirir."
+        },
+        {
+          "q": "Optimizasyon sıkıştırma ile aynı şey mi?",
+          "a": "Sıkıştırma, görselleri yeniden kodlayarak dosya boyutunu küçültür. Optimizasyon ise yüklemeyi ve görüntülemeyi hızlandıran yapısal iyileştirmelere odaklanır."
+        }
+      ],
+      "howTo": {
+        "title": "PDF kalite kaybı olmadan nasıl optimize edilir",
+        "intro": "PDF Optimize Et, görsellere veya metne dokunmadan dosya yapısını (nesne akışları, kullanılmayan nesneler) yeniden paketler. Kazanılacak bir şey yoksa dosyanızı değiştirmeden geri verir ve bunu belirtir.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "Başlık, yazar ve benzeri alanların da temizlenmesini istiyorsanız “Belge meta verilerini kaldır” seçeneğini işaretleyin",
+          "PDF'yi Optimize Et'e tıklayın",
+          "Optimize edilmiş dosyayı indirin; daha fazla küçültme gerekiyorsa PDF Sıkıştır'ı kullanın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "repair-pdf": {
+      "slug": "pdf-onar",
+      "name": "PDF Onar",
+      "description": "Bozuk veya hasarlı PDF dosyalarını onarın",
+      "seoTitle": "PDF Onarma — Bozuk veya Hasarlı PDF Dosyalarını Onarın",
+      "metaDescription": "Bozuk veya hasarlı PDF dosyalarını onarın. Bozuk başlıkları düzeltin, okunabilir içeriği kurtarın, hasarlı belgeleri geri getirin. Ücretsiz çevrimiçi araç.",
+      "faqs": [
+        {
+          "q": "Bir PDF neden bozulur?",
+          "a": "Yaygın nedenler arasında yarım kalan indirmeler, depolama ortamı hataları, kaydetme sırasında yazılımın çökmesi ve virüs hasarı bulunur."
+        },
+        {
+          "q": "Onarım tüm içeriği kurtarabilir mi?",
+          "a": "Onarım, PDF yapısını yeniden oluşturarak çalışır. Kurtarma, orijinal verilerin ne kadarının sağlam kaldığına bağlıdır."
+        }
+      ],
+      "howTo": {
+        "title": "Bozuk bir PDF nasıl onarılır",
+        "intro": "PDF Onar, hasarlı bir dosyanın çapraz başvuru tablosunu, nesne numaralandırmasını ve trailer bölümünü yeniden oluşturur. Yapı kurtarılamazsa sayfaları aranabilir bir metin katmanıyla yeni bir PDF'ye yeniden çizer.",
+        "steps": [
+          "Açılmayan veya hata veren PDF'yi seçin",
+          "PDF'yi Onar'a tıklayın",
+          "Onarılan dosyayı indirin ve her sayfayı kontrol etmek için açın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "ocr-pdf": {
+      "slug": "pdf-ocr",
+      "name": "OCR PDF",
+      "description": "Taranmış belgelerden metin çıkarın",
+      "seoTitle": "OCR PDF — Taranmış Belgelerden Metin Çıkarın",
+      "metaDescription": "Taranmış belgeleri OCR ile aranabilir ve seçilebilir metne dönüştürün. Taranmış PDF'leri aranabilir ve düzenlenebilir yapın. Ücretsiz, yükleme yok.",
+      "faqs": [
+        {
+          "q": "OCR nedir?",
+          "a": "Optik Karakter Tanıma (OCR), metin görüntülerini analiz ederek gerçek metin karakterlerine dönüştürür; böylece taranmış belgeler aranabilir ve seçilebilir hale gelir."
+        },
+        {
+          "q": "OCR ne kadar doğrudur?",
+          "a": "Doğruluk tarama kalitesine bağlıdır. Net ve yüksek çözünürlüklü taramalar genellikle %95-99 doğruluğa ulaşır. Düşük kaliteli taramalarda daha fazla hata olabilir."
+        }
+      ],
+      "howTo": {
+        "title": "Taranmış PDF OCR ile nasıl aranabilir yapılır",
+        "intro": "OCR PDF, taranmış sayfalardaki metni tanır ve PDF'ye ekler; böylece metni arayabilir, seçebilir ve kopyalayabilirsiniz. 44 dil arasından en fazla üç belge dili seçebilirsiniz.",
+        "steps": [
+          "Taranmış PDF'nizi seçin",
+          "Belge dilini arayıp seçin — karışık dilli dosyalar için en fazla üç dil",
+          "OCR'yi Başlat'a tıklayın ve her sayfa okunurken bekleyin",
+          "Aranabilir PDF'yi indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Tanıma kendi cihazınızda çalışır, böylece hassas taramalar sizde kalır"
+        ]
+      }
+    },
+    "jpg-to-pdf": {
+      "slug": "jpg-pdf-donustur",
+      "name": "JPG'den PDF'ye",
+      "description": "Görselleri PDF belgelerine dönüştürün",
+      "seoTitle": "JPG'yi PDF'ye Dönüştürme — Görselleri Ücretsiz PDF Yapın",
+      "metaDescription": "JPG görselleri PDF belgelerine dönüştürün. Orijinal görsel kalitesi korunur. Birden fazla görseli tek PDF'de birleştirin. Ücretsiz, kayıt gerekmez.",
+      "faqs": [
+        {
+          "q": "JPG'yi PDF'ye dönüştürmek görsel kalitesini düşürür mü?",
+          "a": "Hayır. Görsel verisi yeniden sıkıştırılmadan PDF'ye gömülür. Görselleriniz piksel piksel orijinalleriyle aynı kalır."
+        },
+        {
+          "q": "Birden fazla görseli tek bir PDF'de birleştirebilir miyim?",
+          "a": "Evet. Tüm JPG'lerinizi yükleyin, sıraya koyun ve dönüştürün. Her görsel, oluşan PDF'de bir sayfa olur."
+        }
+      ],
+      "howTo": {
+        "title": "JPG PDF'ye nasıl dönüştürülür",
+        "intro": "JPG'den PDF'ye; JPEG, PNG ve WebP görsellerini eklediğiniz sırayla, her sayfada bir görsel olacak şekilde tek bir PDF'de birleştirir.",
+        "steps": [
+          "Görsellerinizi, tek seferde en fazla 20 adet olmak üzere, sayfaların olmasını istediğiniz sırayla seçin veya sürükleyip bırakın",
+          "PDF'ye Dönüştür'e tıklayın",
+          "Tüm görselleri içeren tek PDF'yi indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "scan-pdf": {
+      "slug": "pdf-tara",
+      "name": "PDF Tara",
+      "description": "Belgeleri kameranızla tarayın ve PDF olarak kaydedin",
+      "seoTitle": "Çevrimiçi PDF Tarama — Kamerayla Tarayıcı, Uygulama Yok",
+      "metaDescription": "Belgeleri telefon kameranızla PDF'ye tarayın: otomatik kenar algılama, kırpma, filtreler, OCR, kimlik ve kitap modları. Ücretsiz, uygulama ve yükleme yok.",
+      "faqs": [
+        {
+          "q": "PDF oluşturmak için bir uygulamaya veya tarayıcı cihazına ihtiyacım var mı?",
+          "a": "Hayır. Bu sayfayı telefonunuzda açın ve kamerayı sayfaya doğrultun. Kenarları bulur, siz sabit tuttuğunuzda sayfayı yakalar, düzleştirir ve gölgeleri temizler. Daha önce çektiğiniz fotoğrafları da içe aktarabilirsiniz."
+        },
+        {
+          "q": "Taranan belgem bir sunucuya yükleniyor mu?",
+          "a": "Hayır. Kamera görüntüsü, sayfa algılama, filtreler ve PDF oluşturma tamamen tarayıcınızda çalışır. Sayfalar bu cihazda saklanır, böylece sayfayı yenilediğinizde kaybolmazlar. Tek indirme, OCR'yi açarsanız bir kez indirilen metin tanıma dil modelidir."
+        },
+        {
+          "q": "Taranan PDF'yi aranabilir yapabilir miyim?",
+          "a": "Evet. Kaydederken “Metni tanı (OCR)” seçeneğini açık bırakın. Tanınan metin her sayfa görselinin üzerine görünmez şekilde yerleştirilir; böylece metni arayabilir, seçebilir ve kopyalayabilirsiniz. Doğruluk, fotoğrafın ne kadar net ve iyi aydınlatılmış olduğuna bağlıdır."
+        },
+        {
+          "q": "Kitap, Kimlik kartı ve Beyaz tahta modları ne işe yarar?",
+          "a": "Kitap modu, açık bir kitabı sol ve sağ sayfa olarak ikiye ayırır. Kimlik kartı modu, bir kartın önce ön, sonra arka yüzünü tarar ve ikisini gerçek boyutunda tek sayfaya yerleştirir. Beyaz tahta modu parlamaları beyazlatır ve kalem renklerini belirginleştirir."
+        },
+        {
+          "q": "Taradıktan sonra bir sayfayı düzeltebilir miyim?",
+          "a": "Evet. İnceleme ekranında köşeleri sürükleyerek yeniden kırpabilir, döndürebilir, filtreyi değiştirebilir, parlaklık ve kontrastı ayarlayabilir, lekeleri fırçayla silebilir, çizim yapabilir, vurgulayabilir, metin ekleyebilir veya imza atabilir, herhangi bir sayfayı yeniden çekebilir, sıralayabilir veya silebilir ve her değişikliği geri alabilirsiniz. Düzenlemeler orijinal fotoğrafa uygulanır, bu yüzden kalite kaybı olmaz."
+        },
+        {
+          "q": "Bir kartviziti kişilerime tarayabilir miyim?",
+          "a": "Evet. Kartvizit modunu kullanın, ardından Kişi'ye dokunun: ad, unvan, şirket, telefon, e-posta ve web sitesi karttan okunur, siz kontrol edersiniz ve telefonunuzun içe aktarabileceği bir .vcf kişi dosyası olarak kaydedilir."
+        },
+        {
+          "q": "Taramayı parolayla koruyabilir veya JPG olarak kaydedebilir miyim?",
+          "a": "Evet. Kaydederken PDF'yi kilitlemek için “Parolayla koru” seçeneğini işaretleyin veya her sayfa için bir görsel almak üzere JPG'yi seçin. Kaydedilen PDF'ler ayrıca bu cihazdaki Son taramalar bölümünde tutulur, böylece onları yeniden indirebilir veya paylaşabilirsiniz."
+        }
+      ],
+      "howTo": {
+        "title": "Telefonla belge PDF olarak nasıl taranır",
+        "intro": "PDF Tara, telefonunuzun veya dizüstü bilgisayarınızın kamerasını bir belge tarayıcısına dönüştürür: sayfa kenarlarını bulur, sayfayı düzleştirir ve temizler, ardından aranabilir hale getirebileceğiniz bir PDF olarak kaydeder.",
+        "steps": [
+          "Kamera erişimine izin verin veya daha önce çektiğiniz fotoğrafları ekleyin",
+          "Sayfayı görüş alanında tutun — kenarlar algılanır, sayfa kırpılır ve düzleştirilir",
+          "Her sayfayı inceleyin: yeniden kırpın, döndürün, Siyah-Beyaz veya Beyaz tahta gibi bir filtre seçin ya da yeniden çekin",
+          "Sayfa boyutunu ve dosya boyutunu seçin, isterseniz metin tanımayı (OCR) açın ve PDF ya da JPG olarak kaydedin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Son taramalar'da tutulan kopyalar dahil taramalar cihazınızda kalır"
+        ]
+      }
+    },
+    "word-to-pdf": {
+      "slug": "word-pdf-donustur",
+      "name": "Word'den PDF'ye",
+      "description": "Bir belgeyi (DOCX) PDF'ye dönüştürün",
+      "seoTitle": "Word'ü PDF'ye Dönüştürme — DOCX'i Ücretsiz PDF Yapın",
+      "metaDescription": "Word belgelerini (DOCX) tarayıcınızda PDF'ye dönüştürün. Metniniz, başlıklarınız, listeleriniz ve tablolarınız korunur. Ücretsiz, kayıt ve yükleme yok.",
+      "faqs": [
+        {
+          "q": "Biçimlendirmem korunacak mı?",
+          "a": "Metniniz, başlıklarınız, listeleriniz ve tablolarınız aktarılır; ancak belge piksel piksel kopyalanmak yerine yeniden dizilir, bu yüzden özel yazı tipleri ve karmaşık sayfa düzenleri tam olarak eşleşmez. Birebir kopya için Word'ün kendisinde Dosya → PDF Olarak Kaydet'i kullanın."
+        },
+        {
+          "q": "Microsoft Word'ün yüklü olması gerekiyor mu?",
+          "a": "Hayır. Dönüştürme tarayıcınızda gerçekleşir. Herhangi bir yazılım yüklemeniz gerekmez."
+        }
+      ],
+      "howTo": {
+        "title": "Word PDF'ye nasıl dönüştürülür",
+        "intro": "Word'den PDF'ye, .docx dosyalarını tarayıcınızda PDF'ye dönüştürür. Metninizi, başlıklarınızı, listelerinizi ve tablolarınızı korur ancak yeniden dizer; bu yüzden karmaşık düzenler ve özel yazı tipleri orijinalle tam olarak eşleşmez.",
+        "steps": [
+          "Bir veya daha fazla .docx dosyası seçin",
+          "PDF'ye Dönüştür'e tıklayın",
+          "Her PDF'yi indirin veya ZIP için Tümünü İndir'i kullanın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "powerpoint-to-pdf": {
+      "slug": "powerpoint-pdf-donustur",
+      "name": "PowerPoint'ten PDF'ye",
+      "description": "Slaytları (PPTX) PDF'ye dönüştürün",
+      "seoTitle": "PowerPoint'i PDF'ye Dönüştürme — PPTX'i Ücretsiz PDF Yapın",
+      "metaDescription": "PowerPoint sunumlarını (PPTX) slayt başına bir sayfa olacak şekilde metin, resim ve tablolarıyla PDF'ye dönüştürün. Ücretsiz, kayıt ve yükleme yok.",
+      "faqs": [
+        {
+          "q": "Animasyonlar korunacak mı?",
+          "a": "PDF animasyonları desteklemediği için animasyonlar statik sayfalara dönüştürülür. Her slaydın son hali yakalanır."
+        },
+        {
+          "q": "Belirli slaytları dönüştürebilir miyim?",
+          "a": "Dönüştürme tüm sunumu işler. Belirli slaytları almak için dönüştürmeden sonra PDF Sayfa Ayıkla aracıyla onları ayıklayın."
+        }
+      ],
+      "howTo": {
+        "title": "PowerPoint PDF'ye nasıl dönüştürülür",
+        "intro": "PowerPoint'ten PDF'ye, bir .pptx dosyasının her slaydını metni, resimleri, tabloları ve gruplanmış şekilleriyle birlikte ayrı bir sayfada yeniden çizer.",
+        "steps": [
+          "Bir veya daha fazla .pptx dosyası seçin",
+          "PDF'ye Dönüştür'e tıklayın",
+          "PDF'yi indirin — her slayt için bir sayfa"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "excel-to-pdf": {
+      "slug": "excel-pdf-donustur",
+      "name": "Excel'den PDF'ye",
+      "description": "Bir elektronik tabloyu (XLSX) PDF'ye dönüştürün",
+      "seoTitle": "Excel'i PDF'ye Dönüştürme — Tabloları Ücretsiz PDF Yapın",
+      "metaDescription": "Excel tablolarını (XLSX veya CSV) her sayfa sayfa genişliğine sığacak şekilde PDF'ye dönüştürün. Ücretsiz, tarayıcıda, kayıt ve yükleme yok.",
+      "faqs": [
+        {
+          "q": "Formüllerim korunacak mı?",
+          "a": "Formüller hesaplanır ve PDF'ye sonuç değerleri olarak kaydedilir. PDF statik bir biçim olduğu için formüllerin kendisi korunmaz."
+        },
+        {
+          "q": "Belirli çalışma sayfalarını dönüştürebilir miyim?",
+          "a": "Dönüştürme tüm çalışma kitabını işler. Belirli sayfalar için önce onları ayrı bir dosya olarak kaydetmeniz gerekebilir."
+        }
+      ],
+      "howTo": {
+        "title": "Excel PDF'ye nasıl dönüştürülür",
+        "intro": "Excel'den PDF'ye, .xlsx ve .csv dosyalarını PDF'ye dönüştürür. Görünür her sayfa, sayfa genişliğine sığdırılır ve dikey veya yatay yönlendirme sizin için seçilir.",
+        "steps": [
+          "Bir veya daha fazla .xlsx veya .csv dosyası seçin (eski .xls dosyalarını önce .xlsx olarak kaydedin)",
+          "PDF'ye Dönüştür'e tıklayın",
+          "PDF'yi indirin; çok büyük sayfalarda ilk 3.000 satır gösterilir"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "html-to-pdf": {
+      "slug": "html-pdf-donustur",
+      "name": "HTML'den PDF'ye",
+      "description": "Web sayfalarını PDF'ye dönüştürün",
+      "seoTitle": "HTML'yi PDF'ye Dönüştürme — Web Sayfalarını PDF Yapın",
+      "metaDescription": "Herhangi bir web sayfasını PDF'ye dönüştürün. Makaleleri, makbuzları ve çevrimiçi içerikleri PDF belgesi olarak kaydedin. Ücretsiz, tarayıcıda, kurulum yok.",
+      "faqs": [
+        {
+          "q": "Herhangi bir web sayfasını dönüştürebilir miyim?",
+          "a": "Evet. Herkese açık herhangi bir web sayfasının URL'sini girin; sayfa PDF biçimine dönüştürülür."
+        },
+        {
+          "q": "PDF web sayfasına benzeyecek mi?",
+          "a": "PDF, sayfanın işlenmiş içeriğini yakalar. Karmaşık düzenler orijinalden biraz farklı olabilir."
+        }
+      ],
+      "howTo": {
+        "title": "HTML PDF'ye nasıl dönüştürülür",
+        "intro": "HTML'den PDF'ye, yapıştırılan HTML kodundan veya yüklenen bir .html dosyasından, tasarıma birebir uyan ya da sadeleştirilmiş, seçilebilir metin içeren bir PDF oluşturur.",
+        "steps": [
+          "HTML kodunuzu yapıştırın veya bir .html dosyası yükleyin",
+          "Tasarım önizlemesini kontrol edin",
+          "Birebir tasarım veya Seçilebilir metin seçeneğini belirleyin",
+          "İndirmek için PDF'ye Dönüştür'e tıklayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "heic-to-pdf": {
+      "slug": "heic-pdf-donustur",
+      "name": "HEIC'den PDF'ye",
+      "description": "Apple HEIC görsellerini PDF'ye dönüştürün",
+      "seoTitle": "HEIC'i PDF'ye Dönüştürme — iPhone Fotoğraflarını PDF Yapın",
+      "metaDescription": "iPhone ve iPad'deki HEIC ve HEIF fotoğrafları PDF belgelerine dönüştürün. Ücretsiz, tarayıcıda, yükleme gerekmez. Orijinal görsel kalitesi korunur.",
+      "faqs": [
+        {
+          "q": "HEIC dosyası nedir?",
+          "a": "HEIC (High Efficiency Image Container), iOS 11'den bu yana iPhone ve iPad'lerin kullandığı varsayılan görsel biçimidir. JPEG'den daha iyi sıkıştırma sunar ancak her yazılım tarafından desteklenmez."
+        },
+        {
+          "q": "HEIC'i telefonumda PDF'ye dönüştürebilir miyim?",
+          "a": "Evet. Tarayıcı tabanlı araç iPhone ve Android'de çalışır. Safari veya Chrome'da açın, HEIC fotoğraflarınızı seçin ve PDF'yi indirin."
+        },
+        {
+          "q": "Dönüştürme görsel kalitesini düşürür mü?",
+          "a": "Hayır. HEIC görseli çözülür ve orijinal çözünürlüğünde PDF'ye gömülür. Görsel kalite korunur."
+        }
+      ],
+      "howTo": {
+        "title": "HEIC PDF'ye nasıl dönüştürülür",
+        "intro": "HEIC'den PDF'ye, HEIC veya HEIF olarak kaydedilmiş iPhone ve iPad fotoğraflarını hiçbir şey yüklemeden ve fotoğraflarınızı hiçbir yere göndermeden PDF'ye dönüştürür.",
+        "steps": [
+          "HEIC veya HEIF fotoğraflarınızı seçin",
+          "PDF'ye Dönüştür'e tıklayın — her fotoğraf ayrı bir PDF olur",
+          "Bunları tek tek veya tümünü birden ZIP olarak indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "webp-to-pdf": {
+      "slug": "webp-pdf-donustur",
+      "name": "WebP'den PDF'ye",
+      "description": "WebP görsellerini PDF belgelerine dönüştürün",
+      "seoTitle": "WebP'yi PDF'ye Dönüştürme — Ücretsiz ve Çevrimiçi",
+      "metaDescription": "WebP görsellerini tarayıcınızda PDF belgelerine dönüştürün. Ücretsiz, kayıt ve filigran yok. Toplu dönüştürmeyi destekler, orijinal kalite korunur.",
+      "faqs": [
+        {
+          "q": "WebP dosyası nedir?",
+          "a": "WebP, Google tarafından geliştirilen ve web'deki görseller için üstün sıkıştırma sağlayan modern bir görsel biçimidir. Web tasarımında ve çevrimiçi içerikte yaygın olarak kullanılır."
+        },
+        {
+          "q": "WebP'yi PDF'ye dönüştürmek kaliteyi düşürür mü?",
+          "a": "Hayır. WebP görseli çözülür ve yeniden sıkıştırılmadan orijinal çözünürlüğünde PDF'ye gömülür."
+        },
+        {
+          "q": "Birden fazla WebP dosyasını aynı anda dönüştürebilir miyim?",
+          "a": "Evet. Birden fazla WebP görseli seçin; her sayfada bir görsel olacak şekilde çok sayfalı tek bir PDF'de birleştirilirler."
+        }
+      ],
+      "howTo": {
+        "title": "WebP PDF'ye nasıl dönüştürülür",
+        "intro": "WebP'den PDF'ye, artık pek çok web sitesinin kullandığı biçim olan WebP görsellerini her görsel için bir PDF olacak şekilde dönüştürür.",
+        "steps": [
+          "Bir veya daha fazla WebP görseli seçin",
+          "PDF'ye Dönüştür'e tıklayın",
+          "Her PDF'yi indirin veya ZIP için Tümünü İndir'i kullanın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "tiff-to-pdf": {
+      "slug": "tiff-pdf-donustur",
+      "name": "TIFF'ten PDF'ye",
+      "description": "TIFF görsellerini PDF belgelerine dönüştürün",
+      "seoTitle": "TIFF'i PDF'ye Dönüştürme — Ücretsiz ve Çevrimiçi",
+      "metaDescription": "TIFF ve TIF görsellerini PDF belgelerine dönüştürün. Çok sayfalı TIFF'leri destekler. Ücretsiz, tarayıcıda işlenir, dosya yüklemesi gerekmez.",
+      "faqs": [
+        {
+          "q": "Çok sayfalı TIFF dosyaları destekleniyor mu?",
+          "a": "Evet. Çok sayfalı TIFF dosyaları tek tek sayfalara ayrılır ve her biri oluşan PDF'de ayrı bir sayfa olur."
+        },
+        {
+          "q": "Hangi TIFF sıkıştırma türleri destekleniyor?",
+          "a": "Araç sıkıştırılmamış, LZW ve PackBits TIFF dosyalarını işler. JPEG ile sıkıştırılmış TIFF'ler de desteklenir."
+        },
+        {
+          "q": "Birden fazla TIFF dosyasını aynı anda dönüştürebilir miyim?",
+          "a": "Evet. Birden fazla TIFF dosyası seçin; her biri dönüştürülür ve tüm sayfalar tek bir PDF'de birleştirilir."
+        }
+      ],
+      "howTo": {
+        "title": "TIFF PDF'ye nasıl dönüştürülür",
+        "intro": "TIFF'ten PDF'ye, tarayıcı cihazlarından ve faks yazılımlarından sıkça çıkan TIFF görsellerini her dosya için bir PDF olacak şekilde dönüştürür.",
+        "steps": [
+          "Bir veya daha fazla TIFF dosyası seçin",
+          "PDF'ye Dönüştür'e tıklayın",
+          "Her PDF'yi indirin veya ZIP için Tümünü İndir'i kullanın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "svg-to-pdf": {
+      "slug": "svg-pdf-donustur",
+      "name": "SVG'den PDF'ye",
+      "description": "SVG vektör görsellerini PDF'ye dönüştürün",
+      "seoTitle": "SVG'yi PDF'ye Dönüştürme — Ücretsiz, Yükleme Yok",
+      "metaDescription": "SVG dosyalarını tarayıcınızda PDF'ye dönüştürün. Ücretsiz, yükleme ve kayıt yok; SVG'leriniz cihazınızdan çıkmaz. Net, yüksek çözünürlüklü çıktı.",
+      "faqs": [
+        {
+          "q": "SVG'yi PDF'ye dönüştürmek vektör kalitesini korur mu?",
+          "a": "Hayır — SVG, yüksek çözünürlüklü bir görsele (kendi boyutunun en fazla 3 katı) dönüştürülür ve orijinal boyutlardaki bir sayfaya yerleştirilir; ekranda ve baskıda net kalır ancak artık düzenlenebilir vektör çizim değildir. Gerçek vektör çıktı için Inkscape veya Illustrator gibi bir vektör düzenleyiciden PDF olarak dışa aktarın."
+        },
+        {
+          "q": "Harici kaynaklar içeren SVG dosyalarını dönüştürebilir miyim?",
+          "a": "Harici görsellere veya yazı tiplerine başvuran SVG'ler tam olarak görüntülenmeyebilir. Kaynakları gömülü, kendi içinde tam SVG'ler en iyi sonucu verir."
+        },
+        {
+          "q": "Kullanımı ücretsiz mi?",
+          "a": "Evet. SVG'den PDF'ye dönüştürme tamamen ücretsizdir; sınır, filigran veya kayıt yoktur."
+        }
+      ],
+      "howTo": {
+        "title": "SVG PDF'ye nasıl dönüştürülür",
+        "intro": "SVG'den PDF'ye, SVG grafiklerini her dosya için bir PDF olacak şekilde dönüştürür — logoları ve diyagramları SVG açamayan kişilere göndermek için kullanışlıdır.",
+        "steps": [
+          "Bir veya daha fazla SVG dosyası seçin",
+          "PDF'ye Dönüştür'e tıklayın",
+          "Her PDF'yi indirin veya ZIP için Tümünü İndir'i kullanın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "epub-to-pdf": {
+      "slug": "epub-pdf-donustur",
+      "name": "EPUB'dan PDF'ye",
+      "description": "EPUB e-kitaplarını PDF belgelerine dönüştürün",
+      "seoTitle": "EPUB'ı PDF'ye Dönüştürme — E-Kitapları Ücretsiz PDF Yapın",
+      "metaDescription": "EPUB e-kitaplarını tarayıcınızda PDF'ye dönüştürün. Görsel tabanlı düzen veya seçilebilir metin çıktısı arasında seçim yapın. Ücretsiz, kurulum yok.",
+      "faqs": [
+        {
+          "q": "EPUB dosyası nedir?",
+          "a": "EPUB (Electronic Publication), çoğu e-kitap okuyucusu ve okuma uygulaması tarafından desteklenen yaygın bir e-kitap biçimidir. CSS ile biçimlendirilmiş HTML tabanlı içerik barındırır."
+        },
+        {
+          "q": "Tasarım modu ile metin modu arasındaki fark nedir?",
+          "a": "Birebir tasarım modu her bölümü bir görsel olarak oluşturur; düzeni, görselleri ve satır içi stilleri korur. Bağlantılı stil sayfaları ve gömülü özel yazı tipleri yüklenmez, bu yüzden bu kısımlar varsayılan yazı tiplerine ve stillere döner. Seçilebilir metin modu metin içeriğini çıkarır ve temiz, metni seçilebilir bir PDF'de yeniden düzenler."
+        },
+        {
+          "q": "DRM korumalı EPUB'larla çalışır mı?",
+          "a": "Hayır. DRM korumalı EPUB'lar dönüştürülemez. Yalnızca korumasız EPUB dosyaları desteklenir."
+        }
+      ],
+      "howTo": {
+        "title": "EPUB PDF'ye nasıl dönüştürülür",
+        "intro": "EPUB'dan PDF'ye, bir e-kitabı her yerde yazdırabileceğiniz veya okuyabileceğiniz bir PDF'ye dönüştürür. Birebir tasarımlı bir kopya veya seçilebilir metinli daha sade bir kopya seçin.",
+        "steps": [
+          ".epub dosyanızı seçin (yalnızca DRM'siz e-kitaplar)",
+          "Birebir tasarım veya Seçilebilir metin seçeneğini belirleyin",
+          "İndirmek için PDF'ye Dönüştür'e tıklayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "pdf-to-jpg": {
+      "slug": "pdf-jpg-donustur",
+      "name": "PDF'den JPG'ye",
+      "description": "PDF sayfalarını JPG görsellerine dönüştürün",
+      "seoTitle": "PDF'yi JPG'ye Dönüştürme — Sayfaları Ücretsiz Görsel Yapın",
+      "metaDescription": "PDF sayfalarını yüksek kaliteli JPG görsellerine dönüştürün. Tüm sayfaları veya belirli sayfaları görsel olarak alın. Ücretsiz, kayıt ve filigran yok.",
+      "faqs": [
+        {
+          "q": "Görsellerin çözünürlüğü ne olacak?",
+          "a": "Görseller, PDF'deki en yüksek çözünürlükte, kaynağa bağlı olarak genellikle 150-300 DPI ile çıkarılır."
+        },
+        {
+          "q": "Belirli sayfaları dönüştürebilir miyim?",
+          "a": "Evet. Tüm sayfaları dönüştürmeyi seçin veya yalnızca ihtiyacınız olan sayfaları almak için bir sayfa aralığı belirtin."
+        }
+      ],
+      "howTo": {
+        "title": "PDF JPG'ye nasıl dönüştürülür",
+        "intro": "PDF'den JPG'ye, bir PDF'nin her sayfasını JPEG veya PNG olarak, standart (144 DPI) ya da yüksek (216 DPI) çözünürlükte görsel olarak kaydeder.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "JPEG veya PNG'yi ve Standart veya Yüksek çözünürlüğü seçin",
+          "Görsele Dönüştür'e tıklayın",
+          "Sayfaları tek tek veya tüm sayfaları birlikte ZIP olarak indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "pdf-to-word": {
+      "slug": "pdf-word-donustur",
+      "name": "PDF'den Word'e",
+      "description": "Bir PDF'yi düzenlenebilir bir belgeye (DOCX) dönüştürün",
+      "seoTitle": "PDF'yi Word'e Dönüştürme — Düzenlenebilir DOCX (Ücretsiz)",
+      "metaDescription": "Bir PDF'nin metnini sayfa sayfa düzenlenebilir bir Word dosyasına (DOCX) dönüştürün. Ücretsiz, tarayıcıda, kayıt ve yükleme yok.",
+      "faqs": [
+        {
+          "q": "Word dosyası düzeni ve görselleri koruyacak mı?",
+          "a": "Hayır. Metni düzenlenebilir başlıklar ve paragraflar olarak aktarır, her sayfa için bir başlık ekler; görseller ve karmaşık düzenler yeniden oluşturulmaz. Görünümü birebir kopyalamak için değil, metni yeniden kullanmak için tasarlanmıştır."
+        },
+        {
+          "q": "Taranmış PDF'lerde çalışır mı?",
+          "a": "Taranmış PDF'lerde metni çıkarmak için önce OCR gerekir. En iyi sonuç için önce OCR çalıştırın, ardından sonucu Word'e dönüştürün."
+        }
+      ],
+      "howTo": {
+        "title": "PDF Word'e nasıl dönüştürülür",
+        "intro": "PDF'den Word'e, bir PDF'deki metni her sayfa için bir başlık içeren düzenlenebilir bir .docx dosyasına aktarır. Düzeni değil metni taşır: görseller ve karmaşık biçimlendirme aktarılmaz.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin (taranmış belgelerde önce OCR PDF'yi çalıştırın)",
+          "Word'e Dönüştür'e tıklayın",
+          ".docx dosyasını indirin ve Word, Google Dokümanlar veya LibreOffice'te açın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "pdf-to-powerpoint": {
+      "slug": "pdf-powerpoint-donustur",
+      "name": "PDF'den PowerPoint'e",
+      "description": "Bir PDF'yi düzenlenebilir slaytlara (PPTX) dönüştürün",
+      "seoTitle": "PDF'yi PowerPoint'e Dönüştürme — Düzenlenebilir PPTX",
+      "metaDescription": "Bir PDF'yi düzenlenebilir PowerPoint slaytlarına (PPTX) dönüştürün: başlıklar slayt başlığı, paragraflar madde olur. Ücretsiz, kayıt ve yükleme yok.",
+      "faqs": [
+        {
+          "q": "Her PDF sayfası bir slayt olacak mı?",
+          "a": "Genellikle evet. Her sayfa yeni bir slayt başlatır; metin yoğun bir sayfa, hiçbir şey kesilmesin diye ek slaytlarda devam eder. Başlıklar slayt başlığı, paragraflar madde işareti olur."
+        },
+        {
+          "q": "Oluşan slaytları düzenleyebilir miyim?",
+          "a": "Evet. Çıktı, PowerPoint uyumlu herhangi bir uygulamada düzenleyebileceğiniz standart bir PPTX dosyasıdır."
+        }
+      ],
+      "howTo": {
+        "title": "PDF PowerPoint'e nasıl dönüştürülür",
+        "intro": "PDF'den PowerPoint'e, bir PDF'yi düzenlenebilir slaytlara dönüştürür: başlıklar slayt başlığı, paragraflar madde işareti olur ve uzun sayfalar ek slaytlarda devam eder.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "PowerPoint'e Dönüştür'e tıklayın",
+          ".pptx dosyasını indirin ve slaytları PowerPoint, Keynote veya Google Slaytlar'da ince ayarlayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "pdf-to-excel": {
+      "slug": "pdf-excel-donustur",
+      "name": "PDF'den Excel'e",
+      "description": "PDF metnini her satır bir hücreye gelecek şekilde tabloya aktarın (XLSX)",
+      "seoTitle": "PDF'yi Excel'e Dönüştürme — PDF Metnini Tabloya Aktarın",
+      "metaDescription": "Bir PDF'nin metnini Excel çalışma kitabına (XLSX) aktarın: her sayfa için bir sayfa, her metin satırı için bir satır. Ücretsiz, tarayıcıda, kayıt yok.",
+      "faqs": [
+        {
+          "q": "Tabloları sütunlara ayırarak yeniden oluşturur mu?",
+          "a": "Hayır. Bir sayfadaki her metin satırı tek bir hücreye gider; bu yüzden tablo satırları ayrı sütunlar yerine tek bir hücrede yer alır. Bunları sonradan ayırmak için Excel'in Metni Sütunlara Dönüştür özelliğini (veya Power Query'yi) kullanın."
+        },
+        {
+          "q": "Çalışma kitabı nasıl düzenlenir?",
+          "a": "Sayfa başına satır ve karakter sayılarını içeren bir Özet sayfası, ardından her metin satırının kendi satırında yer aldığı, her PDF sayfası için bir çalışma sayfası alırsınız."
+        },
+        {
+          "q": "Taranmış PDF'lerde çalışır mı?",
+          "a": "Yalnızca PDF'de bir metin katmanı varsa. Taranmış sayfalarda, aktarılacak metin olması için önce OCR PDF'yi çalıştırın."
+        }
+      ],
+      "howTo": {
+        "title": "PDF Excel'e nasıl dönüştürülür",
+        "intro": "PDF'den Excel'e, bir PDF'nin metnini bir .xlsx çalışma kitabına aktarır: bir özet sayfası, ardından her sayfa için her satıra bir metin satırı düşen bir çalışma sayfası. Tablo sütunlarını yeniden oluşturmaz.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "Excel'e Dönüştür'e tıklayın",
+          ".xlsx dosyasını indirin, ardından satırları hücrelere ayırmak için Excel'de Metni Sütunlara Dönüştür'ü kullanın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "pdf-to-pdfa": {
+      "slug": "pdf-pdfa-donustur",
+      "name": "PDF'den PDF/A'ya",
+      "description": "PDF'yi arşivleme biçimi PDF/A'ya dönüştürün",
+      "seoTitle": "PDF'yi PDF/A'ya Dönüştürme — Arşiv Biçimine Çevirin",
+      "metaDescription": "Standart PDF dosyalarını PDF/A arşiv biçimine dönüştürün. Uzun süreli saklama ve uyumluluk sağlayın. Ücretsiz, tarayıcıda dönüştürme.",
+      "faqs": [
+        {
+          "q": "PDF/A nedir?",
+          "a": "PDF/A, uzun süreli arşivleme için tasarlanmış, ISO tarafından standartlaştırılmış bir PDF sürümüdür. Belgelerin gelecekte birebir aynı şekilde görüntülenebilmesini sağlar."
+        },
+        {
+          "q": "Neden PDF/A'ya dönüştürmeliyim?",
+          "a": "Pek çok sektör, belge saklama için PDF/A gerektirir. PDF/A, yazı tiplerinin gömülmesini, renklerin tanımlanmasını ve belgenin kendi içinde eksiksiz olmasını sağlar."
+        }
+      ],
+      "howTo": {
+        "title": "PDF, PDF/A'ya nasıl dönüştürülür",
+        "intro": "PDF'den PDF/A'ya, sayfalarınızı yeni bir belgeye kopyalar ve arşivleme için PDF/A tanımlama meta verilerini ekler. Bir arşivin katı uyumluluğu onaylaması gerekiyorsa sonucu veraPDF gibi bir doğrulayıcıyla kontrol edin.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "PDF/A'ya Dönüştür'e tıklayın",
+          "Arşiv kopyasını indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "pdf-to-markdown": {
+      "slug": "pdf-markdown-donustur",
+      "name": "PDF'den Markdown'a",
+      "description": "PDF içeriğini Markdown metnine dönüştürün",
+      "seoTitle": "PDF'yi Markdown'a Dönüştürme — PDF İçeriğini .md Yapın",
+      "metaDescription": "Bir PDF'nin metnini notlar, dokümanlar ve yapay zeka araçları için temiz bir Markdown (.md) dosyasına dönüştürün. Ücretsiz, tarayıcıda, kayıt gerekmez.",
+      "faqs": [
+        {
+          "q": "Biçimlendirme Markdown'da korunacak mı?",
+          "a": "Metin, okuma sırasına göre düz Markdown olarak aktarılır. Karmaşık düzenler, tablolar ve görseller sadeleştirilir; bu yüzden yapıya güvenmeden önce önizlemeyi kontrol edin."
+        },
+        {
+          "q": "Belirli sayfaları dönüştürebilir miyim?",
+          "a": "Belgenin tamamı dönüştürülür. Yalnızca bazı sayfaları dönüştürmek için önce PDF Sayfa Ayıkla'yı çalıştırın ve o dosyayı dönüştürün."
+        }
+      ],
+      "howTo": {
+        "title": "PDF Markdown'a nasıl dönüştürülür",
+        "intro": "PDF'den Markdown'a, bir PDF'nin metnini bir .md dosyası olarak çıkarır — not uygulamaları, dokümantasyon ve yapay zeka araçları için temiz bir girdi.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "Markdown'a Dönüştür'e tıklayın",
+          "Metni sayfada önizleyip kopyalayın veya .md dosyasını indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "edit-pdf": {
+      "slug": "pdf-duzenle",
+      "name": "PDF Düzenle",
+      "description": "Bir PDF'deki metni, başlıkları ve sayıları değiştirin",
+      "seoTitle": "PDF Düzenleme — Metin, Başlık ve Sayıları Değiştirin",
+      "metaDescription": "Bir PDF'deki metni, başlıkları ve sayıları doğrudan tarayıcınızda düzenleyin. Yazım hatalarını düzeltin, tarihleri güncelleyin; Word'e dönüştürmeye gerek yok.",
+      "faqs": [
+        {
+          "q": "Her PDF'yi düzenleyebilir miyim?",
+          "a": "Seçilebilir metin içeren, dijital olarak oluşturulmuş her PDF düzenlenebilir. Taranmış PDF'lerde metni düzenlenebilir yapmak için önce OCR gerekir."
+        },
+        {
+          "q": "Düzenleme biçimlendirmeyi değiştirir mi?",
+          "a": "Doğrudan düzenleme orijinal biçimlendirmeyi korur. Yalnızca değiştirdiğiniz metin etkilenir; yazı tipleri, boşluklar ve düzen olduğu gibi kalır."
+        }
+      ],
+      "howTo": {
+        "title": "PDF'deki metin nasıl düzenlenir",
+        "intro": "PDF Düzenle, bir sayfadaki mevcut kelimeleri, başlıkları ve sayıları değiştirmenizi sağlar: tıpkı bir kelime işlemcide olduğu gibi bir satıra tıklayın ve yazın.",
+        "steps": [
+          "PDF'nizi seçin",
+          "Sayfadaki herhangi bir metin satırına tıklayın",
+          "Değişikliklerinizi yazın",
+          "İndirmek için Düzenlenen PDF'yi Kaydet'e tıklayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "rotate-pdf": {
+      "slug": "pdf-dondur",
+      "name": "PDF Döndür",
+      "description": "PDF sayfalarını istediğiniz açıyla döndürün",
+      "seoTitle": "PDF Döndürme — PDF Sayfalarını Ücretsiz Döndürün",
+      "metaDescription": "Bir PDF'de tek tek sayfaları veya tüm sayfaları döndürün. Yan duran taramaları düzeltin, yönü ve sayfa açılarını ayarlayın. Ücretsiz, kayıt gerekmez.",
+      "faqs": [
+        {
+          "q": "Sayfaları tek tek döndürebilir miyim?",
+          "a": "Evet. Her sayfa diğer sayfalara dokunulmadan bağımsız olarak 90°, 180° veya 270° döndürülebilir."
+        },
+        {
+          "q": "Döndürme baskı kalitesini etkiler mi?",
+          "a": "Hayır. Döndürme, görüntüleyiciye sayfanın nasıl gösterileceğini bildiren bir meta veri değişikliğidir. İçerik yeniden oluşturulmaz."
+        }
+      ],
+      "howTo": {
+        "title": "PDF nasıl döndürülür ve kaydedilir",
+        "intro": "PDF Döndür, sayfaları 90°, 180° veya 270° döndürür ve döndürmeyi dosyaya kaydeder; böylece her görüntüleyicide sabit kalır.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "Açıyı seçin: 90°, 180° veya 270°",
+          "Tüm sayfalara uygulayın veya belirli sayfaları yazın",
+          "PDF'yi Döndür'e tıklayın ve sonucu indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "add-page-numbers": {
+      "slug": "pdf-sayfa-numarasi-ekle",
+      "name": "Sayfa Numarası Ekle",
+      "description": "PDF'nize sayfa numaraları ekleyin",
+      "seoTitle": "PDF'ye Sayfa Numarası Ekleme — Ücretsiz Numaralandırın",
+      "metaDescription": "PDF'nizin istediğiniz konumuna sayfa numarası ekleyin. Biçimi, konumu ve başlangıç numarasını seçin. Ücretsiz, tarayıcıda, yükleme gerekmez.",
+      "faqs": [
+        {
+          "q": "Sayfa numaralarını nereye yerleştirebilirim?",
+          "a": "Sol üst, orta üst, sağ üst, sol alt, orta alt veya sağ alt konumlarından birini seçin."
+        },
+        {
+          "q": "İlk sayfada numaralandırmayı atlayabilir miyim?",
+          "a": "Evet. Kapak sayfalarını atlamak için numaralandırmayı 2. veya 3. sayfa gibi belirli bir sayfadan başlatma seçeneğini kullanın."
+        }
+      ],
+      "howTo": {
+        "title": "PDF'ye sayfa numarası nasıl eklenir",
+        "intro": "Sayfa Numarası Ekle, seçtiğiniz biçimde ve altı konumdan birinde her sayfaya numara basar.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "Konumu seçin — üst veya alt; sol, orta veya sağ",
+          "Biçimi seçin: “1”, “Sayfa 1” veya “1 / N” ve başlangıç numarasını belirleyin",
+          "Sayfa Numarası Ekle'ye tıklayın ve sonucu indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "add-watermark": {
+      "slug": "pdf-filigran-ekle",
+      "name": "Filigran Ekle",
+      "description": "Metin veya görsel filigran ekleyin",
+      "seoTitle": "PDF'ye Filigran Ekleme — Ücretsiz Metin Filigranı",
+      "metaDescription": "Bir PDF'nin her sayfasına GİZLİ veya TASLAK gibi bir metin filigranı basın. Opaklığı ve boyutu ayarlayın. Ücretsiz, kayıt ve yükleme yok.",
+      "faqs": [
+        {
+          "q": "Filigranın opaklığını ayarlayabilir miyim?",
+          "a": "Evet. Filigranınızın saydamlığını tamamen opaktan neredeyse görünmeze kadar ayarlayın."
+        },
+        {
+          "q": "Tüm sayfalara aynı anda filigran ekleyebilir miyim?",
+          "a": "Evet. Filigran, belgedeki tüm sayfalara aynı anda uygulanır."
+        }
+      ],
+      "howTo": {
+        "title": "PDF'ye filigran nasıl eklenir",
+        "intro": "Filigran Ekle, sayfalarınızın üzerine belirlediğiniz opaklık ve boyutta GİZLİ veya TASLAK gibi bir metin filigranı basar.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "Filigran metninizi yazın",
+          "Opaklığı ve yazı tipi boyutunu ayarlayın",
+          "Filigran Ekle'ye tıklayın ve sonucu indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "crop-pdf": {
+      "slug": "pdf-kirp",
+      "name": "PDF Kırp",
+      "description": "PDF sayfalarını kırpın ve yeniden boyutlandırın",
+      "seoTitle": "PDF Kırpma — PDF Sayfalarını Ücretsiz Kırpın",
+      "metaDescription": "PDF sayfalarını kırpın ve yeniden boyutlandırın. Kenar boşluklarını kaldırın, sayfa boyutlarını ayarlayın, içeriği kırpın. Ücretsiz, tarayıcıda, yükleme yok.",
+      "faqs": [
+        {
+          "q": "Tüm sayfaları aynı anda kırpabilir miyim?",
+          "a": "Evet. Aynı kırpma alanını her sayfaya uygulayın veya tek tek sayfalar için farklı kırpmalar belirleyin."
+        },
+        {
+          "q": "Kırpma içeriği siler mi?",
+          "a": "Kırpma, kırpma alanının dışındaki içeriği gizler. Gizlenen içerik silinmez ve daha sonra kırpma geri alınabilir."
+        }
+      ],
+      "howTo": {
+        "title": "PDF nasıl kırpılır",
+        "intro": "PDF Kırp, her sayfanın üst, alt, sol ve sağ kenarından aynı boşluğu kırpar — beyaz alanları veya tarayıcı kenarlıklarını kesmek için idealdir.",
+        "steps": [
+          "Bir veya daha fazla PDF seçin",
+          "Her kenardan kaç punto kırpılacağını belirleyin",
+          "PDF'yi Kırp'a tıklayın",
+          "Kırpılmış dosyayı indirin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "sign-pdf": {
+      "slug": "pdf-imzala",
+      "name": "PDF İmzala",
+      "description": "PDF'lere dijital imza ekleyin",
+      "seoTitle": "PDF İmzalama — Ücretsiz Elektronik İmza Ekleyin",
+      "metaDescription": "PDF belgelerine elektronik imza ekleyin. İmzanızı çizin, yazın veya yükleyin. Hukuken geçerli, ücretsiz, kayıt gerekmez.",
+      "faqs": [
+        {
+          "q": "Elektronik imzalar hukuken geçerli mi?",
+          "a": "Evet. Elektronik imzalar, ABD'de ESIGN Yasası ve AB'de eIDAS kapsamında neredeyse tüm belgeler için hukuken geçerlidir."
+        },
+        {
+          "q": "Parola korumalı bir PDF'yi imzalayabilir miyim?",
+          "a": "Önce kilidini açmanız gerekir. Parola korumalı PDF'ler, parola kaldırılana kadar düzenlenemez."
+        }
+      ],
+      "howTo": {
+        "title": "PDF nasıl imzalanır",
+        "intro": "PDF İmzala, imzanızı herhangi bir sayfaya yerleştirir. İmzanızı çizin, el yazısı yazı tipiyle yazın veya gerçek imzanızın bir görselini yükleyin.",
+        "steps": [
+          "İmzalamanız gereken PDF'yi seçin",
+          "İmzanızı oluşturun: çizin, yazın veya bir görsel yükleyin",
+          "Sayfayı seçin ve imzanın gideceği yere tıklayın, ardından boyutunu ayarlayın",
+          "İmzala ve PDF'yi İndir'e tıklayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "İmza görseliniz hiçbir zaman bir sunucuda saklanmaz"
+        ]
+      }
+    },
+    "redact-pdf": {
+      "slug": "pdf-karart",
+      "name": "PDF Karart",
+      "description": "Metni, görselleri veya sayfaları kalıcı olarak karartın",
+      "seoTitle": "PDF Karartma (Ücretsiz) — Metni Gizleyin, Yükleme Yok",
+      "metaDescription": "PDF'yi tarayıcınızda ücretsiz karartın: adların, numaraların veya imzaların üzerine kutu çizin, kalıcı olarak kaldırılsın. Yükleme, hesap ve filigran yok.",
+      "faqs": [
+        {
+          "q": "Karartma kalıcı mı?",
+          "a": "Evet. İşaretlediğiniz her sayfa, siyah kutularınız içine işlenmiş düz bir görsel olarak yeniden çizilir; böylece alttaki metin, görseller ve gizli katmanlar yeni dosyaya taşınmaz. İşaretlemediğiniz sayfalar olduğu gibi kopyalanır."
+        },
+        {
+          "q": "Karartılan içerik kurtarılabilir mi?",
+          "a": "Hayır. Metnin üzerine siyah bir dikdörtgen çizmek alttaki metni seçilebilir bırakır; burada ise işaretlenen sayfalar karartılmış bir görselden yeniden oluşturulur ve orijinal sayfa içeriği atılır. Deneyin: karartılmış bir alandan kopyalamayı deneyin — hiçbir şey gelmez."
+        },
+        {
+          "q": "Belgem herhangi bir yere yükleniyor mu?",
+          "a": "Hayır. Karartma tamamen tarayıcı sekmenizde çalışır, bu yüzden dosya cihazınızdan asla çıkmaz. Bu, insanların en çok kararttığı belgeler için çok önemlidir: kimlikler, sağlık kayıtları, sözleşmeler ve banka hesap özetleri."
+        },
+        {
+          "q": "Karartılan sayfanın geri kalanı seçilebilir metin olarak kalır mı?",
+          "a": "Hayır. İşaretlediğiniz sayfa bütünüyle bir görsele dönüşür, bu yüzden kalan metni artık seçilemez veya aranamaz. Yeniden aranabilir olması gerekiyorsa sonrasında OCR çalıştırın; işaretlenmemiş sayfalar metinlerini korur."
+        },
+        {
+          "q": "Bir sayfanın tamamını karartabilir miyim?",
+          "a": "Evet. “Tüm sayfalar” moduna geçin ve kaldırılması gereken her sayfaya tıklayın. Sayfa belgede tamamen siyah bir sayfa olarak kalır; böylece sayfa sayısı ve numaralandırma değişmez."
+        }
+      ],
+      "howTo": {
+        "title": "PDF nasıl karartılır",
+        "intro": "PDF Karart, işaretlediğiniz yerleri kalıcı olarak karartır. İşaretlenen her sayfa bir görsel olarak yeniden oluşturulur; böylece gizlenen metin yalnızca bir kutuyla örtülmekle kalmaz, dosyadan tamamen silinir.",
+        "steps": [
+          "PDF'nizi seçin",
+          "Gizlenecek metin veya görsellerin üzerine kutu çizin ya da sayfaların tamamını seçin",
+          "Karart'a tıklayın",
+          "Karartılmış PDF'yi indirin ve paylaşmadan önce kontrol edin"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Gerçek karartma: gizlenen içerik geri kopyalanamaz"
+        ]
+      }
+    },
+    "unlock-pdf": {
+      "slug": "pdf-sifre-kaldir",
+      "name": "PDF Şifre Kaldır",
+      "description": "PDF'deki parola korumasını kaldırın",
+      "seoTitle": "PDF Şifre Kaldırma — Parola Korumasını Ücretsiz Kaldırın",
+      "metaDescription": "PDF belgelerindeki parola korumasını kaldırın. Şifreli PDF'lerin kilidini düzenleme, yazdırma veya paylaşma için açın. Ücretsiz, kayıt gerekmez.",
+      "faqs": [
+        {
+          "q": "PDF'nin kilidini açmak için parolaya ihtiyacım var mı?",
+          "a": "Evet. Parolayı kaldırmak için mevcut parolayı bilmeniz gerekir. Parola olmadan PDF şifrelemesini aşmanın bir yolu yoktur."
+        },
+        {
+          "q": "Kilidi açmak PDF içeriğini değiştirir mi?",
+          "a": "Hayır. Kilit açma yalnızca parola korumasını kaldırır. Belge içeriği değişmeden kalır."
+        }
+      ],
+      "howTo": {
+        "title": "PDF şifresi nasıl kaldırılır",
+        "intro": "PDF Şifre Kaldır, korumalı bir PDF'nin parolası ve kısıtlamaları olmayan bir kopyasını kaydeder. Dosyanın kilidini açma hakkına ve açılırken parola soruyorsa parolaya sahip olmanız gerekir.",
+        "steps": [
+          "Korumalı PDF'yi seçin",
+          "Dosya açılırken parola istiyorsa parolayı girin",
+          "Kilidi açılmış bir kopyayı indirmek için PDF Kilidini Aç'a tıklayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "protect-pdf": {
+      "slug": "pdf-sifrele",
+      "name": "PDF Şifrele",
+      "description": "PDF'ye parola koruması ekleyin",
+      "seoTitle": "PDF Şifreleme — Ücretsiz Parola Koruması Ekleyin",
+      "metaDescription": "PDF belgelerine parola koruması ekleyin. Dosyalarınızı AES-256 şifrelemeyle koruyun. Ücretsiz, tarayıcıda, yükleme gerekmez.",
+      "faqs": [
+        {
+          "q": "PDF parola koruması ne kadar güçlü?",
+          "a": "Modern PDF şifrelemesi, bankaların ve devletlerin kullandığı standart olan AES-256'yı kullanır. Güçlü bir parola, kaba kuvvet saldırılarını pratikte imkânsız kılar."
+        },
+        {
+          "q": "Parolayı unutursam ne olur?",
+          "a": "Kurtarma mekanizması yoktur. Parola olmadan dosyaya kalıcı olarak erişilemez. Parolayı her zaman güvenli bir yerde saklayın."
+        }
+      ],
+      "howTo": {
+        "title": "PDF'ye şifre nasıl konur",
+        "intro": "PDF Şifrele, bir PDF'yi açma parolası, izinleri değiştirme parolası veya her ikisiyle şifreler; ayrıca yazdırmayı, kopyalamayı veya düzenlemeyi engelleyebilir.",
+        "steps": [
+          "PDF'nizi seçin",
+          "Bir açma parolası, bir sahip parolası veya her ikisini girin",
+          "İsterseniz yazdırma, kopyalama ve düzenlemeyi kısıtlamak için izin ayarlarını açın",
+          "Şifrelenmiş dosyayı indirmek için PDF'yi Koru'ya tıklayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Parolanız cihazınızdan asla çıkmaz"
+        ]
+      }
+    },
+    "compare-pdf": {
+      "slug": "pdf-karsilastir",
+      "name": "PDF Karşılaştır",
+      "description": "İki PDF dosyasını farklılıklar için karşılaştırın",
+      "seoTitle": "PDF Karşılaştırma — İki PDF Arasındaki Farkları Bulun",
+      "metaDescription": "İki PDF'nin eşleşip eşleşmediğini kontrol edin: benzerlik puanını ve farklı olan sayfaları görün. Ücretsiz, tarayıcıda, yükleme gerekmez.",
+      "faqs": [
+        {
+          "q": "Karşılaştırma neyi gösterir?",
+          "a": "İki dosyanın aynı olup olmadığını, benzerlik yüzdesini, hangi sayfa numaralarının farklı olduğunu ve her dosyanın sayfa sayısını, boyutunu ve belge bilgilerini. Tek tek kelimeleri işaretlemek yerine sizi değişen sayfalara yönlendirir."
+        },
+        {
+          "q": "Taranmış PDF'leri karşılaştırabilir miyim?",
+          "a": "Önce her iki taramada da OCR PDF'yi çalıştırın. Karşılaştırma dosyaların içindeki metin üzerinden çalışır, bu yüzden yalnızca görselden oluşan taramalarda karşılaştırılacak bir şey yoktur."
+        }
+      ],
+      "howTo": {
+        "title": "İki PDF nasıl karşılaştırılır",
+        "intro": "PDF Karşılaştır, bir orijinali değiştirilmiş sürümüyle karşılaştırır ve eşleşip eşleşmediklerini, ne kadar benzer olduklarını ve hangi sayfaların farklı olduğunu söyler.",
+        "steps": [
+          "İki PDF seçin: önce orijinali, sonra değiştirilmiş sürümü",
+          "PDF'leri Karşılaştır'a tıklayın",
+          "Sonucu okuyun: benzerlik, farklı sayfaların listesi ve her dosyanın bilgileri"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "ai-summarizer": {
+      "slug": "pdf-ozetle",
+      "name": "PDF Özetle",
+      "description": "PDF içeriğini özetleyin",
+      "seoTitle": "PDF Özetleme — PDF'yi Ücretsiz Özetleyin, Yükleme Yok",
+      "metaDescription": "Bir PDF'nin önemli noktalarını ve ana konularını saniyeler içinde görün. Özet cihazınızda hazırlanır, belge asla yüklenmez. Ücretsiz.",
+      "faqs": [
+        {
+          "q": "Özetleyici nasıl çalışır?",
+          "a": "Her cümleyi, belgenin anahtar terimlerinden kaçını içerdiğine göre puanlar ve en güçlü olanları önemli noktalar olarak tutar. Kelimeler yazarın kendisine aittir, bir sohbet botu tarafından yeniden yazılmaz — önemli belgeleri her zaman orijinaliyle karşılaştırın."
+        },
+        {
+          "q": "Belgem bir sunucuya gönderiliyor mu?",
+          "a": "Hayır. Özet tarayıcınızda hesaplanır ve PDF cihazınızdan asla çıkmaz."
+        }
+      ],
+      "howTo": {
+        "title": "PDF nasıl özetlenir",
+        "intro": "PDF Özetle, bir PDF'nin en önemli cümlelerini seçer ve önemli noktalarını ve ana konularını listeler. Tamamen cihazınızda çalışır — hiçbir yapay zeka hizmeti belgenizi görmez.",
+        "steps": [
+          "PDF'nizi seçin",
+          "Özet Oluştur'a tıklayın",
+          "Önemli noktaları ve konuları okuyun, başka bir yerde gerekirse kopyalayın"
+        ],
+        "benefits": [
+          "Gizli — dosya tarayıcınızda işlenir ve asla yüklenmez",
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    },
+    "translate-pdf": {
+      "slug": "pdf-ceviri",
+      "name": "PDF Çeviri",
+      "description": "PDF içeriğini herhangi bir dile çevirin",
+      "seoTitle": "PDF Çeviri — PDF İçeriğini Başka Bir Dile Çevirin",
+      "metaDescription": "Bir PDF'nin metnini 42 dile çevirin ve yeni bir PDF olarak indirin. Ücretsiz, kayıt yok. Metin bir çeviri hizmetine gönderilir.",
+      "faqs": [
+        {
+          "q": "Kaç dil destekleniyor?",
+          "a": "42 dil; kaynak dil otomatik olarak algılanır."
+        },
+        {
+          "q": "Biçimlendirme korunacak mı?",
+          "a": "Hayır. Çevrilmiş metni ekranda ve yalnızca metin içeren yeni bir PDF olarak alırsınız; orijinal düzen ve görseller yeniden oluşturulmaz."
+        },
+        {
+          "q": "Belgem yükleniyor mu?",
+          "a": "Bu, Slate PDF'nin çevrimiçi veri gönderen tek aracıdır: çıkarılan metin ücretsiz, herkese açık bir çeviri hizmetine gider. Gizli belgeler için kullanmayın."
+        }
+      ],
+      "howTo": {
+        "title": "PDF nasıl çevrilir",
+        "intro": "PDF Çeviri, bir PDF'nin metnini 42 dilden birine çevirir ve çeviriyi ekranda ya da yalnızca metin içeren yeni bir PDF olarak verir. Diğer araçlarımızdan farklı olarak metni ücretsiz bir çevrimiçi çeviri hizmetine gönderir — sayfa, başlamadan önce bunu size bildirir.",
+        "steps": [
+          "Gerçek metin içeren bir PDF seçin (taramalarda önce OCR PDF'yi çalıştırın)",
+          "Kaynak dili seçin veya Otomatik algıla'da bırakın, ardından hedef dili seçin",
+          "Çevir'e tıklayın",
+          "Çeviriyi kopyalayın veya PDF olarak indirin"
+        ],
+        "benefits": [
+          "Ücretsiz; hesap, filigran ve günlük sınır yok",
+          "Gizlilik konusunda açık: metni çevrimiçi gönderen tek araç budur ve bunu belirtir",
+          "Windows, Mac, Linux, iPhone ve Android'deki her modern tarayıcıda çalışır"
+        ]
+      }
+    }
+  }
+}

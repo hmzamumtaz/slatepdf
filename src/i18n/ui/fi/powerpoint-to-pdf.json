@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Muunna PDF:ksi",
+  "Converted {slides} slide including {images} image.": "Muunnettiin {slides} dia, mukana {images} kuva.",
+  "Converted {slides} slide including {images} images.": "Muunnettiin {slides} dia, mukana {images} kuvaa.",
+  "Converted {slides} slide.": "Muunnettiin {slides} dia.",
+  "Converted {slides} slides including {images} image.": "Muunnettiin {slides} diaa, mukana {images} kuva.",
+  "Converted {slides} slides including {images} images.": "Muunnettiin {slides} diaa, mukana {images} kuvaa.",
+  "Converted {slides} slides.": "Muunnettiin {slides} diaa.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Jokainen dia piirretään uudelleen valkoiselle sivulle alkuperäisessä koossaan – teksti oikeassa sijainnissaan, koossaan ja värissään sekä kuvat, taulukot ja ryhmitellyt muodot.",
+  "Rendering slide {current} of {total}...": "Piirretään diaa {current}/{total}..."
+}

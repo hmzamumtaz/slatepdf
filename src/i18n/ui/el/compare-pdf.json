@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Συντάκτης: {value}",
+  "Back to all tools": "Πίσω σε όλα τα εργαλεία",
+  "Changed": "Τροποποιημένο",
+  "Compare Another": "Σύγκριση άλλων",
+  "Compare PDF": "Σύγκριση PDF",
+  "Compare PDFs": "Σύγκριση PDF",
+  "Compare two PDFs and see the differences": "Συγκρίνετε δύο PDF και δείτε τις διαφορές",
+  "Comparing...": "Σύγκριση...",
+  "Comparison complete": "Η σύγκριση ολοκληρώθηκε",
+  "Creator: {value}": "Δημιουργός: {value}",
+  "Differing pages": "Σελίδες που διαφέρουν",
+  "File 1": "Αρχείο 1",
+  "File 2": "Αρχείο 2",
+  "Files are identical": "Τα αρχεία είναι ίδια",
+  "Original": "Πρωτότυπο",
+  "Page {page}": "Σελίδα {page}",
+  "Pages: {pages} | Size: {size}": "Σελίδες: {pages} | Μέγεθος: {size}",
+  "Title: {value}": "Τίτλος: {value}",
+  "similarity: {value}%": "ομοιότητα: {value}%",
+  "{count} page differ": "{count} σελίδα διαφέρει",
+  "{count} pages differ": "{count} σελίδες διαφέρουν"
+}

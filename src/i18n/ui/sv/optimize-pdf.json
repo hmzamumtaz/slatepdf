@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Bygger om PDF:en förlustfritt med komprimerade objektströmmar och tar bort oanvända objekt och gamla revisioner. Texten går fortfarande att markera och bilderna lämnas orörda.",
+  "Optimize PDF": "Optimera PDF",
+  "Remove document metadata (title, author, etc.)": "Ta bort dokumentets metadata (titel, författare osv.)",
+  "Saved {size} KB ({percent}% smaller).": "Sparade {size} KB ({percent} % mindre).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "PDF:en är redan optimalt packad – den returnerades oförändrad. För större minskningar kan du prova verktyget Komprimera PDF."
+}

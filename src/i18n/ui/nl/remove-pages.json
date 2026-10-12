@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Pagina's om te verwijderen (gescheiden door komma's, bijv. 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Voer de pagina's in die je wilt verwijderen (bijv. 1, 3, 5-8)",
+  "Preview after removal:": "Voorbeeld na verwijderen:",
+  "Remove Pages": "Pagina's verwijderen",
+  "Total pages: {total} | Remaining: {count}": "Totaal aantal pagina's: {total} | Overblijvend: {count}",
+  "e.g., 1, 3, 5, 7": "bijv. 1, 3, 5, 7"
+}

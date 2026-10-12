@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Silinecek sayfalar (virgülle ayrılmış, ör. 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Lütfen silinecek sayfaları girin (ör. 1, 3, 5-8)",
+  "Preview after removal:": "Silme sonrası önizleme:",
+  "Remove Pages": "Sayfaları Sil",
+  "Total pages: {total} | Remaining: {count}": "Toplam sayfa: {total} | Kalan: {count}",
+  "e.g., 1, 3, 5, 7": "ör. 1, 3, 5, 7"
+}

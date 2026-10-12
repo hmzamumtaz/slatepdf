@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Обрізати PDF",
+  "Margins (points)": "Поля (пункти)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Значення в пунктах (1 дюйм = 72 пункти). Обрізається з кожного краю.",
+  "bottom": "знизу",
+  "left": "ліворуч",
+  "right": "праворуч",
+  "top": "згори"
+}

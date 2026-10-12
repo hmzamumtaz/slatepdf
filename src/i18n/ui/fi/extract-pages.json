@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Poimi sivuja",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Poimittavat sivut (esim. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Anna poimittavat sivut (esim. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Poimittavien sivujen esikatselu:",
+  "Total pages: {total} | Extracting: {count}": "Sivuja yhteensä: {total} | Poimitaan: {count}",
+  "e.g., 1, 3, 5": "esim. 1, 3, 5"
+}

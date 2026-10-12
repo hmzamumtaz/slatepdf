@@ -1,0 +1,16 @@
+{
+  "Analyzing...": "分析中...",
+  "Back to all tools": "すべてのツールに戻る",
+  "Copied": "コピーしました",
+  "Copy": "コピー",
+  "File": "ファイル",
+  "Generate Summary": "要約を作成",
+  "Get an intelligent summary of your PDF document": "PDFドキュメントの要点をすばやくまとめます",
+  "Key points": "要点",
+  "Size": "サイズ",
+  "Summarize Again": "もう一度要約",
+  "Summarizer": "要約",
+  "Summary generated": "要約を作成しました",
+  "Top topics": "主なトピック",
+  "{words} words from {original} original words ({percent}% reduction)": "元の{original}語から{words}語に要約（{percent}%削減）"
+}

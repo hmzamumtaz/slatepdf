@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Vissza az összes eszközhöz",
+  "Convert to PDF": "Konvertálás PDF-be",
+  "Converting...": "Konvertálás...",
+  "Design preview": "Dizájn előnézete",
+  "Exact design": "Pontos dizájn",
+  "HTML code": "HTML kód",
+  "HTML design preview": "HTML dizájn előnézete",
+  "HTML to PDF": "HTML PDF konvertálás",
+  "Live preview — this is the design that will be converted": "Élő előnézet – ez a dizájn lesz konvertálva",
+  "PDF downloaded": "PDF letöltve",
+  "PDF output": "PDF kimenet",
+  "Paste some HTML or upload an .html file first.": "Előbb illessz be HTML kódot, vagy tölts fel egy .html fájlt.",
+  "Paste your HTML here, or upload an .html file above...": "Illeszd be ide a HTML kódot, vagy tölts fel fent egy .html fájlt...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "A tartalmat valódi, kijelölhető és kereshető PDF-szövegként szedi újra, egyszerűsített formázással.",
+  "Render the HTML design first, then convert it to PDF": "Előbb jelenítsd meg a HTML dizájnt, majd konvertáld PDF-be",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Az oldalt teljes CSS-sel jeleníti meg – színekkel, betűtípusokkal, hátterekkel és elrendezéssel –, pontosan úgy, ahogy az előnézetben látod. Ajánlott.",
+  "Selectable text": "Kijelölhető szöveg",
+  "Upload .html file": ".html fájl feltöltése",
+  "Upload an .html file above, or switch to the": "Tölts fel fent egy .html fájlt, vagy válts a",
+  "Your design preview will appear here": "A dizájn előnézete itt jelenik meg",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "lapra, és illeszd be a kódot. Az oldal itt jelenik meg a teljes dizájnjával – pontosan így fog kinézni a PDF-ed."
+}

@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Tilbage til alle værktøjer",
+  "Convert to PDF": "Konverter til PDF",
+  "Converting...": "Konverterer...",
+  "Design preview": "Forhåndsvisning af design",
+  "Exact design": "Præcist design",
+  "HTML code": "HTML-kode",
+  "HTML design preview": "Forhåndsvisning af HTML-design",
+  "HTML to PDF": "HTML til PDF",
+  "Live preview — this is the design that will be converted": "Live-forhåndsvisning – det er dette design, der bliver konverteret",
+  "PDF downloaded": "PDF downloadet",
+  "PDF output": "PDF-output",
+  "Paste some HTML or upload an .html file first.": "Indsæt først noget HTML, eller upload en .html-fil.",
+  "Paste your HTML here, or upload an .html file above...": "Indsæt din HTML her, eller upload en .html-fil ovenfor...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Sætter indholdet op igen som rigtig PDF-tekst, du kan markere og søge i, med forenklet formatering.",
+  "Render the HTML design first, then convert it to PDF": "Vis først HTML-designet, og konverter det derefter til PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Gengiver siden med fuld CSS – farver, skrifttyper, baggrunde og layout – præcis som i forhåndsvisningen. Anbefales.",
+  "Selectable text": "Markerbar tekst",
+  "Upload .html file": "Upload .html-fil",
+  "Upload an .html file above, or switch to the": "Upload en .html-fil ovenfor, eller skift til fanen",
+  "Your design preview will appear here": "Forhåndsvisningen af dit design vises her",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "og indsæt din markup. Siden vises her med hele sit design – præcis som din PDF kommer til at se ud."
+}

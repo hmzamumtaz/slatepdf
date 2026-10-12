@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Назад до всіх інструментів",
+  "Convert to PDF": "Конвертувати в PDF",
+  "Converting...": "Конвертація...",
+  "Design preview": "Попередній перегляд дизайну",
+  "Exact design": "Точний дизайн",
+  "HTML code": "HTML-код",
+  "HTML design preview": "Попередній перегляд HTML-дизайну",
+  "HTML to PDF": "HTML у PDF",
+  "Live preview — this is the design that will be converted": "Попередній перегляд наживо — саме цей дизайн буде конвертовано",
+  "PDF downloaded": "PDF завантажено",
+  "PDF output": "Вихідний PDF",
+  "Paste some HTML or upload an .html file first.": "Спершу вставте HTML або виберіть файл .html.",
+  "Paste your HTML here, or upload an .html file above...": "Вставте HTML сюди або виберіть файл .html вище...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Заново верстає вміст як справжній текст PDF, який можна виділяти й шукати, зі спрощеним оформленням.",
+  "Render the HTML design first, then convert it to PDF": "Спершу відобразіть HTML-дизайн, а потім конвертуйте його в PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Відображає сторінку з повним CSS — кольорами, шрифтами, фонами й макетом — точно як у попередньому перегляді. Рекомендовано.",
+  "Selectable text": "Текст для виділення",
+  "Upload .html file": "Вибрати файл .html",
+  "Upload an .html file above, or switch to the": "Виберіть файл .html вище або перейдіть на вкладку",
+  "Your design preview will appear here": "Тут з'явиться попередній перегляд дизайну",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "і вставте свою розмітку. Сторінка відобразиться тут з повним дизайном — саме так виглядатиме ваш PDF."
+}

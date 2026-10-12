@@ -1,0 +1,16 @@
+{
+  "Analyzing...": "正在分析……",
+  "Back to all tools": "返回全部工具",
+  "Copied": "已复制",
+  "Copy": "复制",
+  "File": "文件",
+  "Generate Summary": "生成摘要",
+  "Get an intelligent summary of your PDF document": "为你的PDF文档生成智能摘要",
+  "Key points": "要点",
+  "Size": "大小",
+  "Summarize Again": "重新生成摘要",
+  "Summarizer": "摘要工具",
+  "Summary generated": "摘要已生成",
+  "Top topics": "主要主题",
+  "{words} words from {original} original words ({percent}% reduction)": "从原文{original}个词精简为{words}个词（缩减{percent}%）"
+}

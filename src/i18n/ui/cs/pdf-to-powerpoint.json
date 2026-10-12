@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Z {pages} stránky vytvořen {slides} snímek.",
+  "Built {slides} slide from {pages} pages.": "Vytvořen {slides} snímek (počet stránek: {pages}).",
+  "Built {slides} slides from {pages} page.": "Z {pages} stránky vytvořeno snímků: {slides}.",
+  "Built {slides} slides from {pages} pages.": "Vytvořeno snímků: {slides} (počet stránek: {pages}).",
+  "Convert to PowerPoint": "Převést do PowerPointu",
+  "Reading page {current} of {total}...": "Čtu stránku {current} z {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Přečte strukturu dokumentu – nadpisy se stanou názvy snímků a odstavce odrážkami – místo vkládání surového textu. Dlouhé stránky pokračují na dalších snímcích."
+}

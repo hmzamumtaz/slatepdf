@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "পেজের নতুন ক্রম লিখুন (কমা দিয়ে আলাদা করে, যেমন: 3,1,2,4,5)",
+  "Organize PDF": "PDF সাজান",
+  "Please enter a page order": "অনুগ্রহ করে পেজের ক্রম লিখুন",
+  "Preview in new order:": "নতুন ক্রমে প্রিভিউ:",
+  "Total pages: {total} | Reordered: {count}": "মোট পেজ: {total} | নতুন ক্রমে: {count}",
+  "e.g., 3,1,2,4,5": "যেমন: 3,1,2,4,5"
+}

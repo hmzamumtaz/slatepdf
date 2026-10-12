@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Автор: {value}",
+  "Back to all tools": "Назад до всіх інструментів",
+  "Changed": "Змінений",
+  "Compare Another": "Порівняти інші",
+  "Compare PDF": "Порівняти PDF",
+  "Compare PDFs": "Порівняти PDF",
+  "Compare two PDFs and see the differences": "Порівняйте два PDF і перегляньте відмінності",
+  "Comparing...": "Порівняння...",
+  "Comparison complete": "Порівняння завершено",
+  "Creator: {value}": "Програма-створювач: {value}",
+  "Differing pages": "Сторінки з відмінностями",
+  "File 1": "Файл 1",
+  "File 2": "Файл 2",
+  "Files are identical": "Файли однакові",
+  "Original": "Оригінал",
+  "Page {page}": "Сторінка {page}",
+  "Pages: {pages} | Size: {size}": "Сторінок: {pages} | Розмір: {size}",
+  "Title: {value}": "Назва: {value}",
+  "similarity: {value}%": "схожість: {value}%",
+  "{count} page differ": "{count} сторінка відрізняється",
+  "{count} pages differ": "Сторінок із відмінностями: {count}"
+}

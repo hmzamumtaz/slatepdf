@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "Перебудовує PDF без втрат зі стиснутими потоками об'єктів і відкидає невикористані об'єкти та старі редакції. Текст можна виділяти, як і раніше, а зображення не змінюються.",
+  "Optimize PDF": "Оптимізувати PDF",
+  "Remove document metadata (title, author, etc.)": "Видалити метадані документа (назва, автор тощо)",
+  "Saved {size} KB ({percent}% smaller).": "Заощаджено {size} КБ (на {percent}% менше).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Цей PDF уже оптимально упакований — повернуто без змін. Для більшого зменшення спробуйте інструмент «Стиснути PDF»."
+}

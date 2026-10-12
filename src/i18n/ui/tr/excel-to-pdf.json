@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "\"{name}\" bir Excel çalışma kitabı olarak okunamadı. Geçerli bir .xlsx dosyası olduğundan emin olun.",
+  "Convert to PDF": "PDF'ye Dönüştür",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Eski .xls dosyaları desteklenmez. Dosyayı Excel'de .xlsx olarak kaydedip yeniden deneyin.",
+  "No data found in this workbook.": "Bu çalışma kitabında veri bulunamadı."
+}

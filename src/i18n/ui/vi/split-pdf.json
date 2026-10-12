@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Khoảng trang (ví dụ: 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Vui lòng nhập khoảng trang hợp lệ",
+  "Preview of pages in ranges:": "Xem trước các trang trong khoảng:",
+  "Split PDF": "Tách PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "Tổng số trang: {total} | Số trang trong khoảng: {count}"
+}

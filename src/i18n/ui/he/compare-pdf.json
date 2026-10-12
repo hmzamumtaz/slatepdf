@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "מחבר: {value}",
+  "Back to all tools": "חזרה לכל הכלים",
+  "Changed": "גרסה ששונתה",
+  "Compare Another": "השוואה נוספת",
+  "Compare PDF": "השוואת PDF",
+  "Compare PDFs": "השוואת קובצי PDF",
+  "Compare two PDFs and see the differences": "השוואה בין שני קובצי PDF והצגת ההבדלים",
+  "Comparing...": "משווה...",
+  "Comparison complete": "ההשוואה הושלמה",
+  "Creator: {value}": "יוצר: {value}",
+  "Differing pages": "עמודים שונים",
+  "File 1": "קובץ 1",
+  "File 2": "קובץ 2",
+  "Files are identical": "הקבצים זהים",
+  "Original": "מקור",
+  "Page {page}": "עמוד {page}",
+  "Pages: {pages} | Size: {size}": "עמודים: {pages} | גודל: {size}",
+  "Title: {value}": "כותרת: {value}",
+  "similarity: {value}%": "דמיון: {value}%",
+  "{count} page differ": "{count} עמוד שונה",
+  "{count} pages differ": "עמודים שונים: {count}"
+}

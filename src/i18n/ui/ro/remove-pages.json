@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "Pagini de șters (separate prin virgulă, de ex. 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "Introdu paginile de șters (de ex. 1, 3, 5-8)",
+  "Preview after removal:": "Previzualizare după ștergere:",
+  "Remove Pages": "Șterge paginile",
+  "Total pages: {total} | Remaining: {count}": "Total pagini: {total} | Rămân: {count}",
+  "e.g., 1, 3, 5, 7": "de ex. 1, 3, 5, 7"
+}

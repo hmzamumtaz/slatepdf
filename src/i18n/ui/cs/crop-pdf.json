@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "Oříznout PDF",
+  "Margins (points)": "Okraje (body)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "Hodnoty v bodech (1 palec = 72 bodů). Ořízne se z každého okraje.",
+  "bottom": "dole",
+  "left": "vlevo",
+  "right": "vpravo",
+  "top": "nahoře"
+}

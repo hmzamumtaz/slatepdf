@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "PDF 자르기",
+  "Margins (points)": "여백(포인트)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "값의 단위는 포인트입니다(1인치 = 72포인트). 각 가장자리에서 이만큼 잘라 냅니다.",
+  "bottom": "아래",
+  "left": "왼쪽",
+  "right": "오른쪽",
+  "top": "위"
+}

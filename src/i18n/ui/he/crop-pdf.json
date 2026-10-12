@@ -1,0 +1,9 @@
+{
+  "Crop PDF": "חיתוך PDF",
+  "Margins (points)": "שוליים (נקודות)",
+  "Values in points (1 inch = 72 points). This crops from each edge.": "ערכים בנקודות (אינץ' אחד = 72 נקודות). החיתוך מתבצע מכל קצה.",
+  "bottom": "למטה",
+  "left": "שמאל",
+  "right": "ימין",
+  "top": "למעלה"
+}

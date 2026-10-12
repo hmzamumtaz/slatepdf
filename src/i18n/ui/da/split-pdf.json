@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Sideintervaller (f.eks. 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Angiv gyldige sideintervaller",
+  "Preview of pages in ranges:": "Forhåndsvisning af sider i intervallerne:",
+  "Split PDF": "Opdel PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "Sider i alt: {total} | Sider i intervallerne: {count}"
+}

@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "압축된 객체 스트림으로 PDF를 무손실 재구성하고, 사용하지 않는 객체와 이전 수정본을 버립니다. 텍스트는 선택 가능한 상태로 남고 이미지는 그대로 유지됩니다.",
+  "Optimize PDF": "PDF 최적화",
+  "Remove document metadata (title, author, etc.)": "문서 메타데이터 제거(제목, 작성자 등)",
+  "Saved {size} KB ({percent}% smaller).": "{size} KB 절감({percent}% 감소).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "이 PDF는 이미 최적화되어 있어 변경 없이 반환했습니다. 더 많이 줄이려면 PDF 압축 도구를 사용하세요."
+}

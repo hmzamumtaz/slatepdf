@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "הזנת סדר העמודים החדש (מופרד בפסיקים, למשל 3,1,2,4,5)",
+  "Organize PDF": "סידור PDF",
+  "Please enter a page order": "יש להזין סדר עמודים",
+  "Preview in new order:": "תצוגה מקדימה בסדר החדש:",
+  "Total pages: {total} | Reordered: {count}": "סך הכול עמודים: {total} | סודרו מחדש: {count}",
+  "e.g., 3,1,2,4,5": "למשל 3,1,2,4,5"
+}

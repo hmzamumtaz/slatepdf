@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "अधूरी या खराब फ़ाइलें ठीक करने के लिए PDF की अंदरूनी संरचना (क्रॉस-रेफ़रेंस टेबल, ऑब्जेक्ट नंबरिंग, ट्रेलर) दोबारा बनाता है। अगर संरचना रिकवर नहीं हो सकती, तो पेज सर्च करने योग्य टेक्स्ट लेयर के साथ एक नई PDF में दोबारा रेंडर किए जाते हैं।",
+  "Repair PDF": "PDF रिपेयर करें"
+}

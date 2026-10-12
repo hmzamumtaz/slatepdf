@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Extrage paginile",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Pagini de extras (de ex. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Introdu paginile de extras (de ex. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Previzualizarea paginilor extrase:",
+  "Total pages: {total} | Extracting: {count}": "Total pagini: {total} | Se extrag: {count}",
+  "e.g., 1, 3, 5": "de ex. 1, 3, 5"
+}

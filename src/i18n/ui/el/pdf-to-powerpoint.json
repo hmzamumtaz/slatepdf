@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "Δημιουργήθηκε {slides} διαφάνεια από {pages} σελίδα.",
+  "Built {slides} slide from {pages} pages.": "Δημιουργήθηκε {slides} διαφάνεια από {pages} σελίδες.",
+  "Built {slides} slides from {pages} page.": "Δημιουργήθηκαν {slides} διαφάνειες από {pages} σελίδα.",
+  "Built {slides} slides from {pages} pages.": "Δημιουργήθηκαν {slides} διαφάνειες από {pages} σελίδες.",
+  "Convert to PowerPoint": "Μετατροπή σε PowerPoint",
+  "Reading page {current} of {total}...": "Ανάγνωση σελίδας {current} από {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "Διαβάζει τη δομή του εγγράφου — οι επικεφαλίδες γίνονται τίτλοι διαφανειών και οι παράγραφοι κουκκίδες — αντί να επικολλά ακατέργαστο κείμενο. Οι μεγάλες σελίδες συνεχίζουν σε επιπλέον διαφάνειες."
+}

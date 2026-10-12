@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "Convertește în PDF",
+  "Converted {slides} slide including {images} image.": "A fost convertit {slides} diapozitiv, inclusiv {images} imagine.",
+  "Converted {slides} slide including {images} images.": "A fost convertit {slides} diapozitiv (imagini incluse: {images}).",
+  "Converted {slides} slide.": "A fost convertit {slides} diapozitiv.",
+  "Converted {slides} slides including {images} image.": "Diapozitive convertite: {slides}, inclusiv {images} imagine.",
+  "Converted {slides} slides including {images} images.": "Diapozitive convertite: {slides} (imagini incluse: {images}).",
+  "Converted {slides} slides.": "Diapozitive convertite: {slides}.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "Fiecare diapozitiv este redesenat pe o pagină albă, la dimensiunea originală — textul cu poziția, mărimea și culoarea reale, plus imagini, tabele și forme grupate.",
+  "Rendering slide {current} of {total}...": "Se randează diapozitivul {current} din {total}..."
+}

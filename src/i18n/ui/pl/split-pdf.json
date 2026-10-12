@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Zakresy stron (np. 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Wpisz prawidłowe zakresy stron",
+  "Preview of pages in ranges:": "Podgląd stron w zakresach:",
+  "Split PDF": "Podziel PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "Liczba stron: {total} | Strony w zakresach: {count}"
+}

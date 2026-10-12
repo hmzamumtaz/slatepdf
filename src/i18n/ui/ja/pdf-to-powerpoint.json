@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{pages}ページから{slides}枚のスライドを作成しました。",
+  "Built {slides} slide from {pages} pages.": "{pages}ページから{slides}枚のスライドを作成しました。",
+  "Built {slides} slides from {pages} page.": "{pages}ページから{slides}枚のスライドを作成しました。",
+  "Built {slides} slides from {pages} pages.": "{pages}ページから{slides}枚のスライドを作成しました。",
+  "Convert to PowerPoint": "PowerPointに変換",
+  "Reading page {current} of {total}...": "ページを読み込み中（{current} / {total}）...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "テキストをそのまま貼り付けるのではなく、ドキュメントの構造を読み取ります。見出しはスライドのタイトルに、段落は箇条書きになります。長いページは次のスライドに続きます。"
+}

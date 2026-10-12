@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Πίσω σε όλα τα εργαλεία",
+  "Convert EPUB ebooks to PDF documents": "Μετατρέψτε ηλεκτρονικά βιβλία EPUB σε έγγραφα PDF",
+  "Convert to PDF": "Μετατροπή σε PDF",
+  "Converting...": "Μετατροπή...",
+  "EPUB to PDF": "EPUB σε PDF",
+  "Exact design": "Ακριβής σχεδίαση",
+  "Extracting EPUB content...": "Εξαγωγή περιεχομένου EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Εξάγει το κείμενο και το αναδιατάσσει σε ένα καθαρό, αναζητήσιμο PDF. Ιδανικό για μυθιστορήματα και βιβλία με πολύ κείμενο.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Διατηρεί τη διάταξη, τις εικόνες και την ενσωματωμένη μορφοποίηση κάθε κεφαλαίου. Τα συνδεδεμένα φύλλα στυλ και οι ενσωματωμένες προσαρμοσμένες γραμματοσειρές δεν φορτώνονται, οπότε αντικαθίστανται από τα προεπιλεγμένα στυλ. Ιδανικό για εικονογραφημένα βιβλία.",
+  "PDF downloaded": "Η λήψη του PDF ολοκληρώθηκε",
+  "PDF output": "Αποτέλεσμα PDF",
+  "Selectable text": "Επιλέξιμο κείμενο",
+  "Upload .epub file": "Ανέβασμα αρχείου .epub",
+  "Upload an EPUB file first.": "Ανεβάστε πρώτα ένα αρχείο EPUB."
+}

@@ -1,0 +1,8 @@
+{
+  "Enter new page order (comma-separated, e.g., 3,1,2,4,5)": "Zadejte nové pořadí stránek (oddělené čárkami, např. 3,1,2,4,5)",
+  "Organize PDF": "Uspořádat PDF",
+  "Please enter a page order": "Zadejte pořadí stránek",
+  "Preview in new order:": "Náhled v novém pořadí:",
+  "Total pages: {total} | Reordered: {count}": "Celkem stránek: {total} | Přeřazeno: {count}",
+  "e.g., 3,1,2,4,5": "např. 3,1,2,4,5"
+}

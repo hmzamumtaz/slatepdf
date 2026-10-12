@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Autor: {value}",
+  "Back to all tools": "Zpět na všechny nástroje",
+  "Changed": "Změněný",
+  "Compare Another": "Porovnat další",
+  "Compare PDF": "Porovnat PDF",
+  "Compare PDFs": "Porovnat PDF",
+  "Compare two PDFs and see the differences": "Porovnejte dvě PDF a zobrazte rozdíly",
+  "Comparing...": "Porovnávám...",
+  "Comparison complete": "Porovnání dokončeno",
+  "Creator: {value}": "Vytvořeno v: {value}",
+  "Differing pages": "Odlišné stránky",
+  "File 1": "Soubor 1",
+  "File 2": "Soubor 2",
+  "Files are identical": "Soubory jsou totožné",
+  "Original": "Originál",
+  "Page {page}": "Stránka {page}",
+  "Pages: {pages} | Size: {size}": "Stránky: {pages} | Velikost: {size}",
+  "Title: {value}": "Název: {value}",
+  "similarity: {value}%": "podobnost: {value} %",
+  "{count} page differ": "Liší se {count} stránka",
+  "{count} pages differ": "Počet odlišných stránek: {count}"
+}

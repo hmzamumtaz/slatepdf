@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "Діапазони сторінок (напр., 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "Введіть правильні діапазони сторінок",
+  "Preview of pages in ranges:": "Попередній перегляд сторінок у діапазонах:",
+  "Split PDF": "Розділити PDF",
+  "Total pages: {total} | Pages in ranges: {count}": "Усього сторінок: {total} | Сторінок у діапазонах: {count}"
+}

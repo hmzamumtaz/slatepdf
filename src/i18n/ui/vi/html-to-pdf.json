@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Quay lại tất cả công cụ",
+  "Convert to PDF": "Chuyển sang PDF",
+  "Converting...": "Đang chuyển đổi...",
+  "Design preview": "Xem trước thiết kế",
+  "Exact design": "Giữ nguyên thiết kế",
+  "HTML code": "Mã HTML",
+  "HTML design preview": "Xem trước thiết kế HTML",
+  "HTML to PDF": "HTML sang PDF",
+  "Live preview — this is the design that will be converted": "Xem trước trực tiếp — đây là thiết kế sẽ được chuyển đổi",
+  "PDF downloaded": "Đã tải xuống PDF",
+  "PDF output": "Kiểu PDF đầu ra",
+  "Paste some HTML or upload an .html file first.": "Hãy dán mã HTML hoặc tải lên tệp .html trước.",
+  "Paste your HTML here, or upload an .html file above...": "Dán mã HTML vào đây, hoặc tải lên tệp .html ở trên...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Dàn trang lại nội dung thành văn bản PDF thật mà bạn có thể chọn và tìm kiếm, với định dạng đơn giản hơn.",
+  "Render the HTML design first, then convert it to PDF": "Hiển thị thiết kế HTML trước, rồi chuyển sang PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Hiển thị trang với đầy đủ CSS — màu sắc, phông chữ, nền, bố cục — đúng như bản xem trước. Khuyên dùng.",
+  "Selectable text": "Văn bản chọn được",
+  "Upload .html file": "Tải lên tệp .html",
+  "Upload an .html file above, or switch to the": "Tải lên tệp .html ở trên, hoặc chuyển sang thẻ",
+  "Your design preview will appear here": "Bản xem trước thiết kế sẽ hiện ở đây",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "và dán mã của bạn. Trang sẽ hiển thị tại đây với đầy đủ thiết kế — đúng như PDF của bạn sẽ trông ra sao."
+}

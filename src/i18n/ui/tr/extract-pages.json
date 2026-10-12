@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Sayfaları Ayıkla",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Ayıklanacak sayfalar (ör. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Lütfen ayıklanacak sayfaları girin (ör. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Ayıklanacak sayfaların önizlemesi:",
+  "Total pages: {total} | Extracting: {count}": "Toplam sayfa: {total} | Ayıklanan: {count}",
+  "e.g., 1, 3, 5": "ör. 1, 3, 5"
+}

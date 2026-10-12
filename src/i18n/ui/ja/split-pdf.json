@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "ページ範囲（例：1-3, 5, 7-10）",
+  "Please enter valid page ranges": "有効なページ範囲を入力してください",
+  "Preview of pages in ranges:": "範囲内のページのプレビュー：",
+  "Split PDF": "PDFを分割",
+  "Total pages: {total} | Pages in ranges: {count}": "総ページ数：{total} | 範囲内のページ：{count}"
+}

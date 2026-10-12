@@ -1,0 +1,7 @@
+{
+  "Page ranges (e.g., 1-3, 5, 7-10)": "पेज रेंज (जैसे, 1-3, 5, 7-10)",
+  "Please enter valid page ranges": "कृपया सही पेज रेंज लिखें",
+  "Preview of pages in ranges:": "रेंज में आने वाले पेजों का प्रीव्यू:",
+  "Split PDF": "PDF स्प्लिट करें",
+  "Total pages: {total} | Pages in ranges: {count}": "कुल पेज: {total} | रेंज में पेज: {count}"
+}

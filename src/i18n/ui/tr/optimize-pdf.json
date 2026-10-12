@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "PDF'yi sıkıştırılmış nesne akışlarıyla kayıpsız olarak yeniden oluşturur, kullanılmayan nesneleri ve eski revizyonları atar. Metin seçilebilir kalır, görsellere dokunulmaz.",
+  "Optimize PDF": "PDF'yi Optimize Et",
+  "Remove document metadata (title, author, etc.)": "Belge meta verilerini kaldır (başlık, yazar vb.)",
+  "Saved {size} KB ({percent}% smaller).": "{size} KB kazanıldı (%{percent} daha küçük).",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "Bu PDF zaten en iyi şekilde paketlenmiş — değiştirilmeden döndürüldü. Daha fazla küçültme için PDF Sıkıştır aracını deneyin."
+}

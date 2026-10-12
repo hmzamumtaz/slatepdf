@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "提取页面",
+  "Pages to extract (e.g., 1, 3, 5-8)": "要提取的页面（例如：1, 3, 5-8）",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "请输入要提取的页面（例如：1, 3, 5-8）",
+  "Preview of extracted pages:": "提取页面预览：",
+  "Total pages: {total} | Extracting: {count}": "总页数：{total} | 提取：{count}",
+  "e.g., 1, 3, 5": "例如：1, 3, 5"
+}

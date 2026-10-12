@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "모든 도구로 돌아가기",
+  "Convert to PDF": "PDF로 변환",
+  "Converting...": "변환 중...",
+  "Design preview": "디자인 미리보기",
+  "Exact design": "디자인 그대로",
+  "HTML code": "HTML 코드",
+  "HTML design preview": "HTML 디자인 미리보기",
+  "HTML to PDF": "HTML PDF 변환",
+  "Live preview — this is the design that will be converted": "실시간 미리보기 — 이 디자인이 그대로 변환됩니다",
+  "PDF downloaded": "PDF 다운로드 완료",
+  "PDF output": "PDF 출력 방식",
+  "Paste some HTML or upload an .html file first.": "먼저 HTML을 붙여 넣거나 .html 파일을 업로드하세요.",
+  "Paste your HTML here, or upload an .html file above...": "여기에 HTML을 붙여 넣거나, 위에서 .html 파일을 업로드하세요...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "내용을 선택하고 검색할 수 있는 실제 PDF 텍스트로 다시 조판하며, 스타일은 단순해집니다.",
+  "Render the HTML design first, then convert it to PDF": "HTML 디자인을 먼저 렌더링한 뒤 PDF로 변환하세요",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "색상, 글꼴, 배경, 레이아웃 등 모든 CSS를 적용해 미리보기와 똑같이 렌더링합니다. 권장.",
+  "Selectable text": "선택 가능한 텍스트",
+  "Upload .html file": ".html 파일 업로드",
+  "Upload an .html file above, or switch to the": "위에서 .html 파일을 업로드하거나",
+  "Your design preview will appear here": "여기에 디자인 미리보기가 표시됩니다",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "탭으로 전환해 마크업을 붙여 넣으세요. 페이지가 디자인 그대로 여기에 렌더링되며, PDF도 정확히 이렇게 보입니다."
+}

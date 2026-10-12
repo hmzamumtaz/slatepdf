@@ -1,0 +1,6 @@
+{
+  "\"{name}\" could not be read as an Excel workbook. Make sure it is a valid .xlsx file.": "»{name}« kunne ikke læses som en Excel-projektmappe. Sørg for, at det er en gyldig .xlsx-fil.",
+  "Convert to PDF": "Konverter til PDF",
+  "Legacy .xls files are not supported. Save the file as .xlsx in Excel and try again.": "Gamle .xls-filer understøttes ikke. Gem filen som .xlsx i Excel, og prøv igen.",
+  "No data found in this workbook.": "Der blev ikke fundet nogen data i denne projektmappe."
+}

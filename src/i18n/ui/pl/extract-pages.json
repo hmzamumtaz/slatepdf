@@ -1,0 +1,8 @@
+{
+  "Extract Pages": "Wyodrębnij strony",
+  "Pages to extract (e.g., 1, 3, 5-8)": "Strony do wyodrębnienia (np. 1, 3, 5-8)",
+  "Please enter pages to extract (e.g., 1, 3, 5-8)": "Wpisz strony do wyodrębnienia (np. 1, 3, 5-8)",
+  "Preview of extracted pages:": "Podgląd wyodrębnionych stron:",
+  "Total pages: {total} | Extracting: {count}": "Liczba stron: {total} | Wyodrębniane: {count}",
+  "e.g., 1, 3, 5": "np. 1, 3, 5"
+}

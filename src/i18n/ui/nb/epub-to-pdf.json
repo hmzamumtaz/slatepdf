@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Tilbake til alle verktøy",
+  "Convert EPUB ebooks to PDF documents": "Konverter EPUB-e-bøker til PDF-dokumenter",
+  "Convert to PDF": "Konverter til PDF",
+  "Converting...": "Konverterer …",
+  "EPUB to PDF": "EPUB til PDF",
+  "Exact design": "Nøyaktig design",
+  "Extracting EPUB content...": "Trekker ut EPUB-innhold …",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Trekker ut tekstinnholdet og bryter det om til en ren, søkbar PDF. Best for romaner og tekstrike bøker.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Beholder oppsettet, bildene og den innebygde stilen i hvert kapittel. Koblede stilark og innebygde egne skrifter lastes ikke inn, så de faller tilbake til standardstiler. Best for illustrerte bøker.",
+  "PDF downloaded": "PDF-en er lastet ned",
+  "PDF output": "PDF-resultat",
+  "Selectable text": "Markerbar tekst",
+  "Upload .epub file": "Last opp .epub-fil",
+  "Upload an EPUB file first.": "Last opp en EPUB-fil først."
+}

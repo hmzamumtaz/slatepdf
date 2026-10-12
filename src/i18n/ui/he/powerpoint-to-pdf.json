@@ -1,0 +1,11 @@
+{
+  "Convert to PDF": "המרה ל-PDF",
+  "Converted {slides} slide including {images} image.": "הומרה {slides} שקופית, כולל {images} תמונה.",
+  "Converted {slides} slide including {images} images.": "הומרה {slides} שקופית, כולל {images} תמונות.",
+  "Converted {slides} slide.": "הומרה {slides} שקופית.",
+  "Converted {slides} slides including {images} image.": "הומרו {slides} שקופיות, כולל {images} תמונה.",
+  "Converted {slides} slides including {images} images.": "הומרו {slides} שקופיות, כולל {images} תמונות.",
+  "Converted {slides} slides.": "הומרו {slides} שקופיות.",
+  "Each slide is redrawn on a white page at its original size — text with its real position, size and colour, plus pictures, tables and grouped shapes.": "כל שקופית משורטטת מחדש על עמוד לבן בגודל המקורי שלה — הטקסט במיקום, בגודל ובצבע האמיתיים שלו, וגם תמונות, טבלאות וצורות מקובצות.",
+  "Rendering slide {current} of {total}...": "מעבד שקופית {current} מתוך {total}..."
+}

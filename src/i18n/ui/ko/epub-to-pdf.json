@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "모든 도구로 돌아가기",
+  "Convert EPUB ebooks to PDF documents": "EPUB 전자책을 PDF 문서로 변환하세요",
+  "Convert to PDF": "PDF로 변환",
+  "Converting...": "변환 중...",
+  "EPUB to PDF": "EPUB PDF 변환",
+  "Exact design": "디자인 그대로",
+  "Extracting EPUB content...": "EPUB 내용을 추출하는 중...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "텍스트 내용을 추출해 깔끔하고 검색 가능한 PDF로 다시 배치합니다. 소설처럼 글 위주의 책에 적합합니다.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "각 장의 레이아웃, 이미지, 인라인 스타일을 유지합니다. 연결된 스타일시트와 포함된 사용자 지정 글꼴은 불러오지 않으므로 기본 스타일로 대체됩니다. 삽화가 많은 책에 적합합니다.",
+  "PDF downloaded": "PDF 다운로드 완료",
+  "PDF output": "PDF 출력 방식",
+  "Selectable text": "선택 가능한 텍스트",
+  "Upload .epub file": ".epub 파일 업로드",
+  "Upload an EPUB file first.": "먼저 EPUB 파일을 업로드하세요."
+}

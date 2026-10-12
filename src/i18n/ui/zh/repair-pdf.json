@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "重建PDF的内部结构（交叉引用表、对象编号、文件尾），修复被截断或损坏的文件。如果结构无法恢复，会将页面重新渲染成一个带可搜索文字层的新PDF。",
+  "Repair PDF": "修复PDF"
+}

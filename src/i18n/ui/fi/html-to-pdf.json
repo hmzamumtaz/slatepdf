@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Takaisin kaikkiin työkaluihin",
+  "Convert to PDF": "Muunna PDF:ksi",
+  "Converting...": "Muunnetaan...",
+  "Design preview": "Ulkoasun esikatselu",
+  "Exact design": "Tarkka ulkoasu",
+  "HTML code": "HTML-koodi",
+  "HTML design preview": "HTML-ulkoasun esikatselu",
+  "HTML to PDF": "HTML PDF:ksi",
+  "Live preview — this is the design that will be converted": "Reaaliaikainen esikatselu – tämä ulkoasu muunnetaan",
+  "PDF downloaded": "PDF ladattu",
+  "PDF output": "PDF-tuloste",
+  "Paste some HTML or upload an .html file first.": "Liitä ensin HTML-koodia tai valitse .html-tiedosto.",
+  "Paste your HTML here, or upload an .html file above...": "Liitä HTML tähän tai valitse .html-tiedosto yllä...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Taittaa sisällön uudelleen oikeaksi PDF-tekstiksi, jota voi valita ja hakea, yksinkertaistetuin tyylein.",
+  "Render the HTML design first, then convert it to PDF": "Piirrä ensin HTML-ulkoasu ja muunna se sitten PDF:ksi",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Piirtää sivun täydellä CSS:llä – värit, fontit, taustat, asettelu – täsmälleen kuten esikatselussa. Suositeltu.",
+  "Selectable text": "Valittava teksti",
+  "Upload .html file": "Valitse .html-tiedosto",
+  "Upload an .html file above, or switch to the": "Valitse .html-tiedosto yllä tai siirry",
+  "Your design preview will appear here": "Ulkoasun esikatselu näkyy tässä",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "-välilehdelle ja liitä koodisi. Sivu piirretään tähän koko ulkoasuineen – juuri sellaisena kuin PDF tulee näyttämään."
+}

@@ -1,0 +1,8 @@
+{
+  "Pages to remove (comma-separated, e.g., 1, 3, 5-8)": "যে পেজগুলো সরাবেন (কমা দিয়ে আলাদা করে, যেমন: 1, 3, 5-8)",
+  "Please enter pages to remove (e.g., 1, 3, 5-8)": "অনুগ্রহ করে সরানোর পেজগুলো লিখুন (যেমন: 1, 3, 5-8)",
+  "Preview after removal:": "সরানোর পরের প্রিভিউ:",
+  "Remove Pages": "পেজ ডিলিট করুন",
+  "Total pages: {total} | Remaining: {count}": "মোট পেজ: {total} | বাকি থাকবে: {count}",
+  "e.g., 1, 3, 5, 7": "যেমন: 1, 3, 5, 7"
+}

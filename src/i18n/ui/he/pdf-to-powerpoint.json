@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "נוצרה {slides} שקופית מתוך {pages} עמוד.",
+  "Built {slides} slide from {pages} pages.": "נוצרה {slides} שקופית מתוך {pages} עמודים.",
+  "Built {slides} slides from {pages} page.": "נוצרו {slides} שקופיות מתוך {pages} עמוד.",
+  "Built {slides} slides from {pages} pages.": "נוצרו {slides} שקופיות מתוך {pages} עמודים.",
+  "Convert to PowerPoint": "המרה ל-PowerPoint",
+  "Reading page {current} of {total}...": "קורא עמוד {current} מתוך {total}...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "קורא את מבנה המסמך — כותרות הופכות לכותרות שקופיות ופסקאות הופכות לתבליטים — במקום להדביק טקסט גולמי. עמודים ארוכים ממשיכים לשקופיות נוספות."
+}

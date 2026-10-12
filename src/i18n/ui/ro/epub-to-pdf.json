@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Înapoi la toate instrumentele",
+  "Convert EPUB ebooks to PDF documents": "Convertește cărți electronice EPUB în documente PDF",
+  "Convert to PDF": "Convertește în PDF",
+  "Converting...": "Se convertește...",
+  "EPUB to PDF": "EPUB în PDF",
+  "Exact design": "Design exact",
+  "Extracting EPUB content...": "Se extrage conținutul EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Extrage textul și îl rearanjează într-un PDF curat, căutabil. Ideal pentru romane și cărți cu mult text.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Păstrează aspectul, imaginile și stilurile inline ale fiecărui capitol. Foile de stil legate și fonturile personalizate încorporate nu sunt încărcate, așa că se folosesc stilurile implicite. Ideal pentru cărți ilustrate.",
+  "PDF downloaded": "PDF descărcat",
+  "PDF output": "Rezultat PDF",
+  "Selectable text": "Text selectabil",
+  "Upload .epub file": "Încarcă fișierul .epub",
+  "Upload an EPUB file first.": "Încarcă mai întâi un fișier EPUB."
+}

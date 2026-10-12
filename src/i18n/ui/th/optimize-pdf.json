@@ -1,0 +1,7 @@
+{
+  "Losslessly rebuilds the PDF with compressed object streams and discards unused objects and old revisions. Text stays selectable and images untouched.": "สร้าง PDF ใหม่แบบไม่เสียคุณภาพด้วยสตรีมออบเจ็กต์ที่บีบอัด และทิ้งออบเจ็กต์ที่ไม่ได้ใช้และฉบับแก้ไขเก่า ข้อความยังเลือกได้และรูปภาพไม่ถูกแตะต้อง",
+  "Optimize PDF": "ปรับแต่ง PDF",
+  "Remove document metadata (title, author, etc.)": "ลบข้อมูลเมตาของเอกสาร (ชื่อเรื่อง ผู้เขียน ฯลฯ)",
+  "Saved {size} KB ({percent}% smaller).": "ประหยัดได้ {size} KB (เล็กลง {percent}%)",
+  "This PDF is already optimally packed — returned unchanged. For bigger reductions try the Compress PDF tool.": "PDF นี้ถูกจัดเก็บอย่างเหมาะสมที่สุดแล้ว — จึงส่งคืนโดยไม่เปลี่ยนแปลง หากต้องการลดขนาดมากกว่านี้ ลองใช้เครื่องมือบีบอัด PDF"
+}

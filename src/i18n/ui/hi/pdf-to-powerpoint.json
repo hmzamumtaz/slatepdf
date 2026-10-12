@@ -1,0 +1,9 @@
+{
+  "Built {slides} slide from {pages} page.": "{pages} पेज से {slides} स्लाइड बनाई गई।",
+  "Built {slides} slide from {pages} pages.": "{pages} पेजों से {slides} स्लाइड बनाई गई।",
+  "Built {slides} slides from {pages} page.": "{pages} पेज से {slides} स्लाइड बनाई गईं।",
+  "Built {slides} slides from {pages} pages.": "{pages} पेजों से {slides} स्लाइड बनाई गईं।",
+  "Convert to PowerPoint": "PowerPoint में बदलें",
+  "Reading page {current} of {total}...": "पेज {current} / {total} पढ़ा जा रहा है...",
+  "Reads the document's structure — headings become slide titles and paragraphs become bullet points — instead of pasting raw text. Long pages continue onto extra slides.": "कच्चा टेक्स्ट पेस्ट करने के बजाय दस्तावेज़ की संरचना पढ़ता है — हेडिंग स्लाइड टाइटल बनती हैं और पैराग्राफ़ बुलेट पॉइंट। लंबे पेज अतिरिक्त स्लाइडों पर जारी रहते हैं।"
+}

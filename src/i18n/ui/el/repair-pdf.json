@@ -1,0 +1,4 @@
+{
+  "Rebuilds the PDF's internal structure (cross-reference table, object numbering, trailer) to fix truncated or corrupted files. If the structure is unrecoverable, pages are re-rendered into a fresh PDF with a searchable text layer.": "Ανακατασκευάζει την εσωτερική δομή του PDF (πίνακας παραπομπών, αρίθμηση αντικειμένων, trailer) για να διορθώσει ελλιπή ή κατεστραμμένα αρχεία. Αν η δομή δεν μπορεί να ανακτηθεί, οι σελίδες αποδίδονται ξανά σε ένα νέο PDF με αναζητήσιμο επίπεδο κειμένου.",
+  "Repair PDF": "Επιδιόρθωση PDF"
+}

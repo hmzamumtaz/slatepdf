@@ -1,0 +1,23 @@
+{
+  "Back to all tools": "Înapoi la toate instrumentele",
+  "Convert to PDF": "Convertește în PDF",
+  "Converting...": "Se convertește...",
+  "Design preview": "Previzualizare design",
+  "Exact design": "Design exact",
+  "HTML code": "Cod HTML",
+  "HTML design preview": "Previzualizarea designului HTML",
+  "HTML to PDF": "HTML în PDF",
+  "Live preview — this is the design that will be converted": "Previzualizare live — acesta este designul care va fi convertit",
+  "PDF downloaded": "PDF descărcat",
+  "PDF output": "Rezultat PDF",
+  "Paste some HTML or upload an .html file first.": "Lipește mai întâi cod HTML sau încarcă un fișier .html.",
+  "Paste your HTML here, or upload an .html file above...": "Lipește codul HTML aici sau încarcă un fișier .html mai sus...",
+  "Re-typesets the content as real PDF text you can select and search, with simplified styling.": "Recompune conținutul ca text PDF real, pe care îl poți selecta și căuta, cu stiluri simplificate.",
+  "Render the HTML design first, then convert it to PDF": "Randează mai întâi designul HTML, apoi convertește-l în PDF",
+  "Renders the page with full CSS — colors, fonts, backgrounds, layout — exactly as previewed. Recommended.": "Randează pagina cu tot CSS-ul — culori, fonturi, fundaluri, aspect — exact ca în previzualizare. Recomandat.",
+  "Selectable text": "Text selectabil",
+  "Upload .html file": "Încarcă fișierul .html",
+  "Upload an .html file above, or switch to the": "Încarcă un fișier .html mai sus sau treci la fila",
+  "Your design preview will appear here": "Previzualizarea designului va apărea aici",
+  "tab and paste your markup. The page renders here with its full design — exactly what your PDF will look like.": "și lipește codul. Pagina se randează aici cu designul complet — exact cum va arăta PDF-ul."
+}

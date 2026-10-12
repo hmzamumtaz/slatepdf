@@ -1,0 +1,16 @@
+{
+  "Back to all tools": "Zpět na všechny nástroje",
+  "Convert EPUB ebooks to PDF documents": "Převeďte e-knihy EPUB na dokumenty PDF",
+  "Convert to PDF": "Převést do PDF",
+  "Converting...": "Převádím...",
+  "EPUB to PDF": "EPUB do PDF",
+  "Exact design": "Přesný vzhled",
+  "Extracting EPUB content...": "Získávám obsah EPUB...",
+  "Extracts the text content and reflows it into a clean, searchable PDF. Best for novels and text-heavy books.": "Získá textový obsah a znovu ho zalomí do čistého, prohledávatelného PDF. Nejlepší pro romány a knihy s převahou textu.",
+  "Keeps each chapter's layout, images and inline styling. Linked stylesheets and embedded custom fonts are not loaded, so those fall back to default styles. Best for illustrated books.": "Zachová rozvržení, obrázky a vložené styly každé kapitoly. Propojené styly a vložená vlastní písma se nenačítají, takže se místo nich použijí výchozí styly. Nejlepší pro ilustrované knihy.",
+  "PDF downloaded": "PDF staženo",
+  "PDF output": "Výstup PDF",
+  "Selectable text": "Označitelný text",
+  "Upload .epub file": "Vybrat soubor .epub",
+  "Upload an EPUB file first.": "Nejprve vyberte soubor EPUB."
+}

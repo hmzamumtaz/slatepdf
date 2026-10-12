@@ -1,0 +1,23 @@
+{
+  "Author: {value}": "Yazar: {value}",
+  "Back to all tools": "Tüm araçlara dön",
+  "Changed": "Değiştirilmiş",
+  "Compare Another": "Başka Bir Karşılaştırma Yap",
+  "Compare PDF": "PDF Karşılaştır",
+  "Compare PDFs": "PDF'leri Karşılaştır",
+  "Compare two PDFs and see the differences": "İki PDF'yi karşılaştırın ve farkları görün",
+  "Comparing...": "Karşılaştırılıyor...",
+  "Comparison complete": "Karşılaştırma tamamlandı",
+  "Creator: {value}": "Oluşturan: {value}",
+  "Differing pages": "Farklı sayfalar",
+  "File 1": "Dosya 1",
+  "File 2": "Dosya 2",
+  "Files are identical": "Dosyalar aynı",
+  "Original": "Orijinal",
+  "Page {page}": "Sayfa {page}",
+  "Pages: {pages} | Size: {size}": "Sayfa: {pages} | Boyut: {size}",
+  "Title: {value}": "Başlık: {value}",
+  "similarity: {value}%": "benzerlik: %{value}",
+  "{count} page differ": "{count} sayfa farklı",
+  "{count} pages differ": "{count} sayfa farklı"
+}
