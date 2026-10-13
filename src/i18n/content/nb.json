@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Blir kvaliteten dårligere når jeg komprimerer en PDF?",
-          "a": "På det anbefalte komprimeringsnivået kodes bildene om til 150 DPI – visuelt identisk med originalen på skjerm og ved vanlig utskrift."
+          "a": "Det avhenger av størrelsen du ber om. Verktøyet prøver først en tapsfri gjenoppbygging som ikke endrer noe synlig. Holder ikke det, tegner det hver side på nytt som bilde i den høyeste oppløsningen som passer målet ditt, med et usynlig tekstlag slik at teksten fortsatt er søkbar. Et romslig mål ser identisk ut; et svært lite ser mykere ut."
         },
         {
           "q": "Hvor mye mindre blir PDF-en min?",
@@ -672,8 +672,8 @@
       "metaDescription": "Konverter en nettside til PDF. Lagre artikler, kvitteringer og innhold fra nettet som PDF-dokumenter. Gratis, i nettleseren, uten installasjon.",
       "faqs": [
         {
-          "q": "Kan jeg konvertere hvilken som helst nettside?",
-          "a": "Ja. Skriv inn URL-en til en offentlig tilgjengelig nettside, så konverteres den til PDF-format."
+          "q": "Kan jeg konvertere en live nettside fra URL-en?",
+          "a": "Nei. HTML til PDF konverterer HTML du limer inn eller en .html-fil du velger. For en live side bruker du Skriv ut > Lagre som PDF i nettleseren, eller lagrer siden som HTML og konverterer den filen her."
         },
         {
           "q": "Kommer PDF-en til å se ut som nettsiden?",
@@ -1386,11 +1386,11 @@
       "name": "Beskytt PDF",
       "description": "Legg til passordbeskyttelse i PDF",
       "seoTitle": "Beskytt PDF – legg til passord på PDF gratis",
-      "metaDescription": "Legg til passordbeskyttelse i PDF-dokumenter. Krypter filene med AES-256-kryptering. Gratis, i nettleseren, uten opplasting.",
+      "metaDescription": "Legg til et passord på en PDF slik at den ikke kan åpnes uten. Standard 128-biters PDF-kryptering i nettleseren. Gratis, uten konto og uten opplasting.",
       "faqs": [
         {
           "q": "Hvor sterk er passordbeskyttelse av PDF?",
-          "a": "Moderne PDF-kryptering bruker AES-256, samme standard som banker og myndigheter bruker. Et sterkt passord gjør angrep med prøving og feiling praktisk talt umulige."
+          "a": "Slate PDF bruker standard 128-biters RC4 PDF-kryptering, som alle PDF-lesere kan åpne. Den stopper tilfeldig tilgang, men RC4 er en eldre algoritme: for svært sensitive filer bør du bruke et langt, unikt passord eller et verktøy som tilbyr AES-256."
         },
         {
           "q": "Hva skjer hvis jeg glemmer passordet?",

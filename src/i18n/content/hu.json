@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Romlik a PDF minősége a tömörítéstől?",
-          "a": "Az ajánlott tömörítési szinten a képek 150 DPI-vel kódolódnak újra – képernyőn és normál nyomtatásban vizuálisan megegyeznek az eredetivel."
+          "a": "A kért mérettől függ. Az eszköz először veszteségmentes újraépítést próbál, amely semmi láthatót nem változtat. Ha ez nem elég, minden oldalt képként rajzol újra a célba férő legnagyobb felbontással, láthatatlan szövegréteggel, hogy a szöveg kereshető maradjon. Bőkezű célnál ugyanúgy néz ki; nagyon kicsinél lágyabb."
         },
         {
           "q": "Mennyivel lesz kisebb a PDF-em?",
@@ -672,8 +672,8 @@
       "metaDescription": "Alakíts bármilyen weboldalt PDF-fé. Mentsd el a cikkeket, nyugtákat és online tartalmakat PDF dokumentumként. Ingyenes, böngészőben fut, telepítés nélkül.",
       "faqs": [
         {
-          "q": "Bármilyen weboldalt átalakíthatok?",
-          "a": "Igen. Add meg bármely nyilvánosan elérhető weboldal URL-jét, és az PDF formátumba alakul."
+          "q": "Átalakíthatok egy élő weboldalt az URL-je alapján?",
+          "a": "Nem. A HTML PDF konvertálás a beillesztett HTML-t vagy a kiválasztott .html fájlt alakítja át. Élő oldalhoz használja a böngésző Nyomtatás > Mentés PDF-ként funkcióját, vagy mentse az oldalt HTML-ként, és azt a fájlt alakítsa át itt."
         },
         {
           "q": "Úgy fog kinézni a PDF, mint a weboldal?",
@@ -1386,11 +1386,11 @@
       "name": "PDF jelszavas védelem",
       "description": "Jelszavas védelem hozzáadása PDF-hez",
       "seoTitle": "PDF jelszavas védelem – PDF levédése jelszóval ingyen",
-      "metaDescription": "Adj jelszavas védelmet PDF dokumentumokhoz. Titkosítsd a fájljaidat AES-256 titkosítással. Ingyenes, böngészőben fut, feltöltés nélkül.",
+      "metaDescription": "Adjon jelszót a PDF-hez, hogy nélküle ne lehessen megnyitni. Szabványos 128 bites PDF-titkosítás a böngészőben. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
           "q": "Mennyire erős a PDF jelszavas védelme?",
-          "a": "A modern PDF titkosítás AES-256-ot használ, ugyanazt a szabványt, amelyet bankok és kormányok is alkalmaznak. Egy erős jelszó mellett a nyers erővel végzett próbálgatás gyakorlatilag kivitelezhetetlen."
+          "a": "A Slate PDF szabványos 128 bites RC4 PDF-titkosítást alkalmaz, amelyet minden PDF-olvasó meg tud nyitni. Megakadályozza az alkalmi hozzáférést, de az RC4 régebbi algoritmus: nagyon érzékeny fájlokhoz használjon hosszú, egyedi jelszót, vagy AES-256-ot kínáló eszközt."
         },
         {
           "q": "Mi történik, ha elfelejtem a jelszót?",

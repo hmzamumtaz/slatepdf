@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Czy kompresja PDF obniży jego jakość?",
-          "a": "Przy zalecanym poziomie kompresji obrazy są ponownie kodowane w 150 DPI — wyglądają tak samo jak oryginał na ekranie i przy standardowym druku."
+          "a": "To zależy od rozmiaru, jaki wybierzesz. Narzędzie najpierw próbuje bezstratnej przebudowy, która nie zmienia niczego widocznego. Jeśli to nie wystarczy, przerysowuje każdą stronę jako obraz w najwyższej rozdzielczości mieszczącej się w celu, z niewidoczną warstwą tekstu, aby tekst dało się przeszukiwać. Przy hojnym celu wygląda identycznie; przy bardzo małym — bardziej miękko."
         },
         {
           "q": "O ile mniejszy będzie mój PDF?",
@@ -672,8 +672,8 @@
       "metaDescription": "Zamień dowolną stronę internetową na PDF. Zapisuj artykuły, potwierdzenia i treści online jako dokumenty PDF. Za darmo, w przeglądarce, bez instalacji.",
       "faqs": [
         {
-          "q": "Czy mogę przekonwertować dowolną stronę internetową?",
-          "a": "Tak. Wpisz adres URL dowolnej publicznie dostępnej strony, a zostanie ona przekonwertowana na PDF."
+          "q": "Czy mogę przekonwertować działającą stronę internetową z jej adresu URL?",
+          "a": "Nie. HTML na PDF konwertuje wklejony kod HTML lub wybrany plik .html. W przypadku działającej strony użyj w przeglądarce opcji Drukuj > Zapisz jako PDF albo zapisz stronę jako HTML i przekonwertuj ten plik tutaj."
         },
         {
           "q": "Czy PDF będzie wyglądał jak strona internetowa?",
@@ -1386,11 +1386,11 @@
       "name": "Zabezpiecz PDF hasłem",
       "description": "Dodaj zabezpieczenie hasłem do PDF",
       "seoTitle": "Zabezpiecz PDF hasłem — zaszyfruj plik za darmo",
-      "metaDescription": "Zabezpiecz dokumenty PDF hasłem. Zaszyfruj pliki algorytmem AES-256. Za darmo, w przeglądarce, bez przesyłania plików.",
+      "metaDescription": "Dodaj hasło do PDF, aby nie dało się go otworzyć bez niego. Standardowe 128-bitowe szyfrowanie PDF w przeglądarce. Za darmo, bez rejestracji i przesyłania.",
       "faqs": [
         {
           "q": "Jak silne jest zabezpieczenie PDF hasłem?",
-          "a": "Nowoczesne szyfrowanie PDF wykorzystuje AES-256 — ten sam standard, którego używają banki i instytucje rządowe. Silne hasło sprawia, że ataki siłowe (brute force) stają się niepraktyczne."
+          "a": "Slate PDF stosuje standardowe 128-bitowe szyfrowanie PDF RC4, które otworzy każdy czytnik PDF. Chroni przed przypadkowym dostępem, ale RC4 to starszy algorytm: dla bardzo poufnych plików użyj długiego, unikalnego hasła lub narzędzia oferującego AES-256."
         },
         {
           "q": "Co się stanie, jeśli zapomnę hasła?",

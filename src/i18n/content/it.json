@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Comprimere un PDF ne riduce la qualità?",
-          "a": "Al livello di compressione consigliato, le immagini vengono ricodificate a 150 DPI: visivamente identiche all'originale a schermo e nella stampa standard."
+          "a": "Dipende dalla dimensione richiesta. Lo strumento prova prima una ricostruzione senza perdita che non cambia nulla di visibile. Se non basta, ridisegna ogni pagina come immagine alla risoluzione più alta compatibile con il tuo obiettivo, con un livello di testo invisibile così il testo resta ricercabile. Un obiettivo ampio appare identico; uno molto piccolo appare più sfocato."
         },
         {
           "q": "Di quanto si ridurrà il mio PDF?",
@@ -672,8 +672,8 @@
       "metaDescription": "Converti qualsiasi pagina web in PDF. Salva articoli, ricevute e contenuti online come documenti PDF. Gratis, nel browser, senza installazioni.",
       "faqs": [
         {
-          "q": "Posso convertire qualsiasi pagina web?",
-          "a": "Sì. Inserisci l'URL di qualsiasi pagina web accessibile pubblicamente e verrà convertita in formato PDF."
+          "q": "Posso convertire una pagina web online dal suo URL?",
+          "a": "No. HTML in PDF converte l'HTML che incolli o un file .html che scegli. Per una pagina online, usa Stampa > Salva come PDF nel tuo browser, oppure salva la pagina come HTML e converti quel file qui."
         },
         {
           "q": "Il PDF avrà lo stesso aspetto della pagina web?",
@@ -1386,11 +1386,11 @@
       "name": "Proteggere PDF",
       "description": "Aggiungi una protezione con password al PDF",
       "seoTitle": "Proteggere PDF con password gratis",
-      "metaDescription": "Proteggi i documenti PDF con una password. Crittografa i tuoi file con la crittografia AES-256. Gratis, nel browser, senza upload.",
+      "metaDescription": "Aggiungi una password a un PDF perché non si apra senza. Crittografia PDF standard a 128 bit nel browser. Gratis, senza registrazione né caricamenti.",
       "faqs": [
         {
           "q": "Quanto è sicura la protezione con password di un PDF?",
-          "a": "La crittografia PDF moderna usa AES-256, lo stesso standard usato da banche e governi. Una password robusta rende impraticabili gli attacchi a forza bruta."
+          "a": "Slate PDF applica la crittografia PDF standard RC4 a 128 bit, che qualsiasi lettore PDF può aprire. Blocca l'accesso occasionale, ma RC4 è un algoritmo datato: per file molto sensibili usa una password lunga e unica, o uno strumento che offra AES-256."
         },
         {
           "q": "Cosa succede se dimentico la password?",

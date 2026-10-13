@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Sníží komprimace kvalitu PDF?",
-          "a": "Při doporučené úrovni komprimace se obrázky překódují na 150 DPI – při prohlížení na obrazovce a běžném tisku vypadají stejně jako originál."
+          "a": "Záleží na velikosti, kterou zadáte. Nástroj nejprve zkusí bezeztrátovou přestavbu, která nic viditelného nezmění. Pokud to nestačí, překreslí každou stránku jako obrázek v nejvyšším rozlišení, které se vejde do cíle, s neviditelnou textovou vrstvou, aby text zůstal prohledávatelný. Velkorysý cíl vypadá stejně; velmi malý vypadá měkčeji."
         },
         {
           "q": "O kolik se moje PDF zmenší?",
@@ -672,8 +672,8 @@
       "metaDescription": "Převeďte libovolnou webovou stránku do PDF. Uložte články, účtenky a online obsah jako dokumenty PDF. Zdarma, v prohlížeči, bez instalace.",
       "faqs": [
         {
-          "q": "Mohu převést jakoukoli webovou stránku?",
-          "a": "Ano. Zadejte URL libovolné veřejně dostupné webové stránky a ta se převede do formátu PDF."
+          "q": "Mohu převést živou webovou stránku z její URL?",
+          "a": "Ne. HTML do PDF převádí HTML, které vložíte, nebo soubor .html, který vyberete. U živé stránky použijte v prohlížeči Tisk > Uložit jako PDF, nebo stránku uložte jako HTML a tento soubor převeďte zde."
         },
         {
           "q": "Bude PDF vypadat jako webová stránka?",
@@ -1386,11 +1386,11 @@
       "name": "Zaheslovat PDF",
       "description": "Chraňte PDF heslem",
       "seoTitle": "Zaheslovat PDF – ochrana PDF heslem zdarma",
-      "metaDescription": "Chraňte dokumenty PDF heslem. Zašifrujte soubory pomocí AES-256. Zdarma, v prohlížeči, bez nahrávání.",
+      "metaDescription": "Přidejte k PDF heslo, aby ho nešlo otevřít bez něj. Standardní 128bitové šifrování PDF přímo v prohlížeči. Zdarma, bez registrace a bez nahrávání.",
       "faqs": [
         {
           "q": "Jak silná je ochrana PDF heslem?",
-          "a": "Moderní šifrování PDF používá AES-256, stejný standard, jaký používají banky a státní instituce. Silné heslo činí útoky hrubou silou nepraktickými."
+          "a": "Slate PDF používá standardní 128bitové šifrování PDF RC4, které otevře každá čtečka PDF. Zabrání běžnému přístupu, ale RC4 je starší algoritmus: pro velmi citlivé soubory použijte dlouhé jedinečné heslo nebo nástroj nabízející AES-256."
         },
         {
           "q": "Co se stane, když heslo zapomenu?",

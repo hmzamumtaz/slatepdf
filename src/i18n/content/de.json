@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Verschlechtert das Komprimieren die Qualität eines PDFs?",
-          "a": "Auf der empfohlenen Stufe werden Bilder mit 150 DPI neu kodiert – am Bildschirm und beim normalen Drucken optisch nicht vom Original zu unterscheiden."
+          "a": "Das hängt von der gewünschten Größe ab. Das Tool versucht zuerst einen verlustfreien Neuaufbau, der nichts Sichtbares verändert. Reicht das nicht, zeichnet es jede Seite als Bild in der höchsten Auflösung neu, die zu Ihrem Ziel passt – mit einer unsichtbaren Textebene, damit der Text durchsuchbar bleibt. Ein großzügiges Ziel sieht identisch aus, ein sehr kleines wirkt weicher."
         },
         {
           "q": "Wie viel kleiner wird mein PDF?",
@@ -672,8 +672,8 @@
       "metaDescription": "Webseiten in PDF umwandeln. Artikel, Belege und Online-Inhalte als PDF-Dokument speichern. Kostenlos, im Browser, ohne Installation.",
       "faqs": [
         {
-          "q": "Kann ich jede Webseite umwandeln?",
-          "a": "Ja. Geben Sie die URL einer öffentlich zugänglichen Webseite ein, und sie wird in das PDF-Format umgewandelt."
+          "q": "Kann ich eine Live-Webseite über ihre URL umwandeln?",
+          "a": "Nein. HTML in PDF wandelt HTML um, das Sie einfügen, oder eine .html-Datei, die Sie auswählen. Für eine Live-Seite nutzen Sie in Ihrem Browser Drucken > Als PDF speichern, oder speichern Sie die Seite als HTML und wandeln Sie diese Datei hier um."
         },
         {
           "q": "Sieht das PDF aus wie die Webseite?",
@@ -1386,11 +1386,11 @@
       "name": "PDF schützen",
       "description": "Ein PDF mit Passwort schützen",
       "seoTitle": "PDF mit Passwort schützen – kostenlos, ohne Upload",
-      "metaDescription": "PDF-Dokumente mit einem Passwort schützen. Verschlüsseln Sie Ihre Dateien mit AES-256. Kostenlos, im Browser, ohne Upload.",
+      "metaDescription": "Schützen Sie ein PDF mit einem Passwort, ohne das es sich nicht öffnen lässt. Standard-128-Bit-Verschlüsselung im Browser. Kostenlos, ohne Konto und Upload.",
       "faqs": [
         {
           "q": "Wie sicher ist der PDF-Passwortschutz?",
-          "a": "Moderne PDF-Verschlüsselung nutzt AES-256, denselben Standard, den Banken und Behörden verwenden. Ein starkes Passwort macht Brute-Force-Angriffe praktisch aussichtslos."
+          "a": "Slate PDF verwendet die standardmäßige 128-Bit-RC4-PDF-Verschlüsselung, die jeder PDF-Reader öffnen kann. Sie verhindert gelegentlichen Zugriff, doch RC4 ist ein älterer Algorithmus: Für hochsensible Dateien nutzen Sie ein langes, einzigartiges Passwort oder ein Tool, das AES-256 bietet."
         },
         {
           "q": "Was passiert, wenn ich das Passwort vergesse?",

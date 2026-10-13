@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Nén PDF có làm giảm chất lượng không?",
-          "a": "Ở mức nén khuyên dùng, hình ảnh được mã hóa lại ở 150 DPI — trông giống hệt bản gốc khi xem trên màn hình và khi in thông thường."
+          "a": "Tùy vào kích thước bạn yêu cầu. Công cụ trước tiên thử dựng lại không mất dữ liệu, không thay đổi gì nhìn thấy được. Nếu vẫn chưa đủ nhỏ, nó vẽ lại từng trang thành hình ảnh ở độ phân giải cao nhất vừa với mục tiêu, kèm một lớp văn bản ẩn để văn bản vẫn tìm kiếm được. Mục tiêu rộng rãi trông y hệt; mục tiêu rất nhỏ trông mờ hơn."
         },
         {
           "q": "PDF của tôi sẽ nhẹ đi bao nhiêu?",
@@ -672,8 +672,8 @@
       "metaDescription": "Chuyển trang web sang PDF. Lưu bài viết, hóa đơn và nội dung trực tuyến thành tài liệu PDF. Miễn phí, chạy trên trình duyệt, không cần cài đặt.",
       "faqs": [
         {
-          "q": "Tôi có thể chuyển bất kỳ trang web nào không?",
-          "a": "Có. Nhập URL của bất kỳ trang web công khai nào và trang đó sẽ được chuyển sang định dạng PDF."
+          "q": "Tôi có thể chuyển đổi một trang web trực tiếp từ URL của nó không?",
+          "a": "Không. HTML sang PDF chuyển đổi HTML bạn dán hoặc tệp .html bạn chọn. Với một trang trực tiếp, hãy dùng In > Lưu dưới dạng PDF trong trình duyệt, hoặc lưu trang thành HTML rồi chuyển đổi tệp đó tại đây."
         },
         {
           "q": "PDF có trông giống trang web không?",
@@ -1386,11 +1386,11 @@
       "name": "Đặt mật khẩu PDF",
       "description": "Thêm mật khẩu bảo vệ cho PDF",
       "seoTitle": "Đặt mật khẩu PDF — Bảo vệ file PDF miễn phí",
-      "metaDescription": "Đặt mật khẩu bảo vệ tài liệu PDF. Mã hóa tệp bằng chuẩn AES-256. Miễn phí, chạy trên trình duyệt, không cần tải lên.",
+      "metaDescription": "Thêm mật khẩu cho PDF để không thể mở nếu không có nó. Mã hóa PDF 128-bit tiêu chuẩn, thực hiện trong trình duyệt. Miễn phí, không đăng ký, không tải lên.",
       "faqs": [
         {
           "q": "Mật khẩu bảo vệ PDF mạnh đến mức nào?",
-          "a": "Mã hóa PDF hiện đại dùng AES-256, cùng chuẩn mà ngân hàng và chính phủ sử dụng. Một mật khẩu mạnh khiến việc dò mật khẩu (brute-force) trở nên không khả thi."
+          "a": "Slate PDF áp dụng mã hóa PDF RC4 128-bit tiêu chuẩn mà mọi trình đọc PDF đều mở được. Nó ngăn truy cập tùy tiện, nhưng RC4 là thuật toán cũ: với tệp rất nhạy cảm, hãy dùng mật khẩu dài và duy nhất, hoặc công cụ có AES-256."
         },
         {
           "q": "Nếu tôi quên mật khẩu thì sao?",

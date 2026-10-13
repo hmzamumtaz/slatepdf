@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "PDF sıkıştırmak kaliteyi düşürür mü?",
-          "a": "Önerilen sıkıştırma düzeyinde görseller 150 DPI ile yeniden kodlanır; ekranda görüntüleme ve standart baskı için orijinalinden ayırt edilemez."
+          "a": "İstediğiniz boyuta bağlı. Araç önce görünür hiçbir şeyi değiştirmeyen kayıpsız bir yeniden oluşturma dener. Bu yeterince küçültmezse, her sayfayı hedefinize sığan en yüksek çözünürlükte görüntü olarak yeniden çizer ve metnin aranabilir kalması için görünmez bir metin katmanı ekler. Cömert bir hedef aynı görünür; çok küçük bir hedef daha yumuşak görünür."
         },
         {
           "q": "PDF'm ne kadar küçülür?",
@@ -672,8 +672,8 @@
       "metaDescription": "Herhangi bir web sayfasını PDF'ye dönüştürün. Makaleleri, makbuzları ve çevrimiçi içerikleri PDF belgesi olarak kaydedin. Ücretsiz, tarayıcıda, kurulum yok.",
       "faqs": [
         {
-          "q": "Herhangi bir web sayfasını dönüştürebilir miyim?",
-          "a": "Evet. Herkese açık herhangi bir web sayfasının URL'sini girin; sayfa PDF biçimine dönüştürülür."
+          "q": "Canlı bir web sayfasını URL'sinden dönüştürebilir miyim?",
+          "a": "Hayır. HTML'den PDF'ye, yapıştırdığınız HTML'yi veya seçtiğiniz .html dosyasını dönüştürür. Canlı bir sayfa için tarayıcınızda Yazdır > PDF olarak kaydet seçeneğini kullanın ya da sayfayı HTML olarak kaydedip o dosyayı burada dönüştürün."
         },
         {
           "q": "PDF web sayfasına benzeyecek mi?",
@@ -1386,11 +1386,11 @@
       "name": "PDF Şifrele",
       "description": "PDF'ye parola koruması ekleyin",
       "seoTitle": "PDF Şifreleme — Ücretsiz Parola Koruması Ekleyin",
-      "metaDescription": "PDF belgelerine parola koruması ekleyin. Dosyalarınızı AES-256 şifrelemeyle koruyun. Ücretsiz, tarayıcıda, yükleme gerekmez.",
+      "metaDescription": "PDF'ye parola ekleyin, parolasız açılamasın. Standart 128 bit PDF şifrelemesi tarayıcınızda uygulanır. Ücretsiz, kayıt yok, yükleme yok.",
       "faqs": [
         {
           "q": "PDF parola koruması ne kadar güçlü?",
-          "a": "Modern PDF şifrelemesi, bankaların ve devletlerin kullandığı standart olan AES-256'yı kullanır. Güçlü bir parola, kaba kuvvet saldırılarını pratikte imkânsız kılar."
+          "a": "Slate PDF, her PDF okuyucunun açabildiği standart 128-bit RC4 PDF şifrelemesini uygular. Sıradan erişimi engeller, ancak RC4 eski bir algoritmadır: çok hassas dosyalar için uzun ve benzersiz bir parola ya da AES-256 sunan bir araç kullanın."
         },
         {
           "q": "Parolayı unutursam ne olur?",

@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Adakah memampatkan PDF akan mengurangkan kualitinya?",
-          "a": "Pada tahap pemampatan yang disyorkan, imej dikod semula pada 150 DPI — kelihatan sama seperti asal untuk paparan skrin dan cetakan biasa."
+          "a": "Ia bergantung pada saiz yang anda minta. Alat ini mula-mula mencuba binaan semula tanpa kehilangan yang tidak mengubah apa-apa yang kelihatan. Jika belum cukup kecil, ia melukis semula setiap halaman sebagai imej pada resolusi tertinggi yang muat dalam sasaran anda, dengan lapisan teks halimunan supaya teks kekal boleh dicari. Sasaran yang longgar kelihatan sama; sasaran yang sangat kecil kelihatan lebih kabur."
         },
         {
           "q": "Berapa kecil PDF saya akan menjadi?",
@@ -672,8 +672,8 @@
       "metaDescription": "Tukar mana-mana laman web ke PDF. Simpan artikel, resit dan kandungan dalam talian sebagai dokumen PDF. Percuma, dalam pelayar, tanpa pemasangan.",
       "faqs": [
         {
-          "q": "Bolehkah saya menukar mana-mana laman web?",
-          "a": "Boleh. Masukkan URL mana-mana laman web yang boleh diakses secara umum dan ia akan ditukar kepada format PDF."
+          "q": "Bolehkah saya menukar halaman web langsung daripada URLnya?",
+          "a": "Tidak. HTML ke PDF menukar HTML yang anda tampal atau fail .html yang anda pilih. Untuk halaman langsung, gunakan Cetak > Simpan sebagai PDF dalam pelayar anda, atau simpan halaman itu sebagai HTML dan tukar fail itu di sini."
         },
         {
           "q": "Adakah PDF akan kelihatan seperti laman web itu?",
@@ -1386,11 +1386,11 @@
       "name": "Lindungi PDF",
       "description": "Tambah perlindungan kata laluan pada PDF",
       "seoTitle": "Lindungi PDF — Letak Kata Laluan pada PDF Percuma",
-      "metaDescription": "Tambah perlindungan kata laluan pada dokumen PDF. Sulitkan fail anda dengan penyulitan AES-256. Percuma, dalam pelayar, tanpa muat naik.",
+      "metaDescription": "Tambah kata laluan pada PDF supaya ia tidak boleh dibuka tanpanya. Penyulitan PDF standard 128-bit dalam pelayar anda. Percuma, tanpa daftar, tanpa muat naik.",
       "faqs": [
         {
           "q": "Sejauh manakah kuatnya perlindungan kata laluan PDF?",
-          "a": "Penyulitan PDF moden menggunakan AES-256, standard yang sama digunakan oleh bank dan kerajaan. Kata laluan yang kuat menjadikan serangan cuba-jaya (brute-force) tidak praktikal."
+          "a": "Slate PDF menggunakan penyulitan PDF standard RC4 128-bit yang boleh dibuka oleh semua pembaca PDF. Ia menghalang akses biasa, tetapi RC4 ialah algoritma lama: untuk fail yang sangat sensitif, gunakan kata laluan yang panjang dan unik, atau alat yang menawarkan AES-256."
         },
         {
           "q": "Apakah yang berlaku jika saya terlupa kata laluan?",

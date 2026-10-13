@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Apakah mengompres PDF akan menurunkan kualitasnya?",
-          "a": "Pada tingkat kompresi yang disarankan, gambar dikodekan ulang pada 150 DPI — secara visual identik dengan aslinya untuk dilihat di layar maupun dicetak secara standar."
+          "a": "Tergantung ukuran yang Anda minta. Alat ini pertama-tama mencoba membangun ulang tanpa kehilangan kualitas yang tidak mengubah apa pun secara visual. Jika belum cukup kecil, alat ini menggambar ulang setiap halaman sebagai gambar dengan resolusi tertinggi yang sesuai target Anda, dengan lapisan teks tak terlihat agar teks tetap bisa dicari. Target yang longgar terlihat identik; target yang sangat kecil terlihat lebih lembut."
         },
         {
           "q": "Seberapa kecil PDF saya nantinya?",
@@ -672,8 +672,8 @@
       "metaDescription": "Ubah halaman web apa pun menjadi PDF. Simpan artikel, struk, dan konten online sebagai dokumen PDF. Gratis, berbasis browser, tanpa instalasi.",
       "faqs": [
         {
-          "q": "Bisakah saya mengonversi halaman web apa pun?",
-          "a": "Ya. Masukkan URL halaman web mana pun yang dapat diakses publik dan halaman tersebut akan diubah ke format PDF."
+          "q": "Bisakah saya mengonversi halaman web langsung dari URL-nya?",
+          "a": "Tidak. HTML ke PDF mengonversi HTML yang Anda tempel atau file .html yang Anda pilih. Untuk halaman langsung, gunakan Cetak > Simpan sebagai PDF di browser Anda, atau simpan halaman sebagai HTML lalu konversi file tersebut di sini."
         },
         {
           "q": "Apakah PDF-nya akan terlihat seperti halaman web aslinya?",
@@ -1386,11 +1386,11 @@
       "name": "Kunci PDF",
       "description": "Tambahkan perlindungan kata sandi ke PDF",
       "seoTitle": "Kunci PDF — Beri Password pada PDF Gratis",
-      "metaDescription": "Lindungi dokumen PDF dengan kata sandi. Enkripsi file Anda dengan enkripsi AES-256. Gratis, berbasis browser, tanpa unggah.",
+      "metaDescription": "Tambahkan kata sandi ke PDF agar tidak bisa dibuka tanpanya. Enkripsi PDF standar 128-bit, diterapkan di browser Anda. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
           "q": "Seberapa kuat perlindungan kata sandi PDF?",
-          "a": "Enkripsi PDF modern menggunakan AES-256, standar yang sama yang digunakan oleh bank dan pemerintah. Kata sandi yang kuat membuat serangan brute-force tidak praktis."
+          "a": "Slate PDF menerapkan enkripsi PDF standar RC4 128-bit yang bisa dibuka semua pembaca PDF. Enkripsi ini mencegah akses iseng, tetapi RC4 adalah algoritme lama: untuk file yang sangat sensitif, gunakan kata sandi yang panjang dan unik, atau alat yang menawarkan AES-256."
         },
         {
           "q": "Apa yang terjadi jika saya lupa kata sandinya?",

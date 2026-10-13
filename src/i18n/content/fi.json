@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Heikentääkö PDF:n pakkaaminen sen laatua?",
-          "a": "Suositellulla pakkaustasolla kuvat koodataan uudelleen 150 DPI:n tarkkuudella – ruudulla ja tavallisessa tulostuksessa ne näyttävät samalta kuin alkuperäiset."
+          "a": "Se riippuu pyytämästäsi koosta. Työkalu kokeilee ensin häviötöntä uudelleenrakennusta, joka ei muuta mitään näkyvää. Jos se ei riitä, se piirtää jokaisen sivun uudelleen kuvana suurimmalla tavoitteeseen mahtuvalla tarkkuudella ja lisää näkymättömän tekstikerroksen, jotta teksti pysyy haettavana. Väljä tavoite näyttää samalta; hyvin pieni näyttää pehmeämmältä."
         },
         {
           "q": "Kuinka paljon pienemmäksi PDF:ni muuttuu?",
@@ -672,8 +672,8 @@
       "metaDescription": "Muunna mikä tahansa verkkosivu PDF:ksi. Tallenna artikkelit, kuitit ja verkkosisältö PDF-asiakirjoina. Ilmainen, toimii selaimessa, ei asennusta.",
       "faqs": [
         {
-          "q": "Voinko muuntaa minkä tahansa verkkosivun?",
-          "a": "Voit. Anna minkä tahansa julkisesti saatavilla olevan verkkosivun URL-osoite, niin se muunnetaan PDF-muotoon."
+          "q": "Voinko muuntaa verkkosivun suoraan sen URL-osoitteesta?",
+          "a": "Et. HTML PDF:ksi muuntaa liittämäsi HTML:n tai valitsemasi .html-tiedoston. Verkossa olevalle sivulle käytä selaimen Tulosta > Tallenna PDF-tiedostona -toimintoa tai tallenna sivu HTML-muodossa ja muunna se tiedosto täällä."
         },
         {
           "q": "Näyttääkö PDF samalta kuin verkkosivu?",
@@ -1386,11 +1386,11 @@
       "name": "Suojaa PDF",
       "description": "Lisää PDF:ään salasanasuojaus",
       "seoTitle": "Suojaa PDF – lisää salasanasuojaus ilmaiseksi",
-      "metaDescription": "Lisää salasanasuojaus PDF-asiakirjoihin. Salaa tiedostosi AES-256-salauksella. Ilmainen, toimii selaimessa, ei lähetystä palvelimelle.",
+      "metaDescription": "Lisää PDF:ään salasana, jotta sitä ei voi avata ilman sitä. Vakiomuotoinen 128-bittinen PDF-salaus selaimessa. Ilmainen, ei rekisteröitymistä eikä latausta.",
       "faqs": [
         {
           "q": "Kuinka vahva PDF:n salasanasuojaus on?",
-          "a": "Nykyaikainen PDF-salaus käyttää AES-256:ta, samaa standardia, jota pankit ja valtiot käyttävät. Vahva salasana tekee raa'an voiman hyökkäyksistä käytännössä mahdottomia."
+          "a": "Slate PDF käyttää vakiomuotoista 128-bittistä RC4-PDF-salausta, jonka jokainen PDF-lukija avaa. Se estää satunnaisen pääsyn, mutta RC4 on vanhempi algoritmi: erittäin arkaluonteisille tiedostoille käytä pitkää, ainutlaatuista salasanaa tai työkalua, joka tarjoaa AES-256-salauksen."
         },
         {
           "q": "Mitä tapahtuu, jos unohdan salasanan?",

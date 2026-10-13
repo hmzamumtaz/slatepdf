@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Comprimarea unui PDF îi scade calitatea?",
-          "a": "La nivelul de comprimare recomandat, imaginile sunt recodate la 150 DPI — identice vizual cu originalul pentru vizualizare pe ecran și tipărire obișnuită."
+          "a": "Depinde de dimensiunea pe care o ceri. Instrumentul încearcă mai întâi o reconstruire fără pierderi, care nu schimbă nimic vizibil. Dacă nu e suficient, redesenează fiecare pagină ca imagine la cea mai mare rezoluție care încape în țintă, cu un strat de text invizibil, ca textul să rămână căutabil. O țintă generoasă arată identic; una foarte mică arată mai estompat."
         },
         {
           "q": "Cu cât se micșorează PDF-ul?",
@@ -672,8 +672,8 @@
       "metaDescription": "Convertește orice pagină web în PDF. Salvează articole, chitanțe și conținut online ca documente PDF. Gratuit, în browser, fără instalare.",
       "faqs": [
         {
-          "q": "Pot converti orice pagină web?",
-          "a": "Da. Introdu adresa URL a oricărei pagini web accesibile public, iar aceasta va fi convertită în format PDF."
+          "q": "Pot converti o pagină web live după URL-ul ei?",
+          "a": "Nu. HTML în PDF convertește HTML-ul pe care îl lipești sau un fișier .html pe care îl alegi. Pentru o pagină live, folosește Imprimare > Salvare ca PDF în browser sau salvează pagina ca HTML și convertește acel fișier aici."
         },
         {
           "q": "PDF-ul va arăta ca pagina web?",
@@ -1386,11 +1386,11 @@
       "name": "Protejare PDF",
       "description": "Adaugă protecție cu parolă unui PDF",
       "seoTitle": "Protejare PDF — pune parolă pe PDF gratuit",
-      "metaDescription": "Adaugă protecție cu parolă documentelor PDF. Criptează fișierele cu AES-256. Gratuit, în browser, fără încărcare.",
+      "metaDescription": "Adaugă o parolă unui PDF ca să nu poată fi deschis fără ea. Criptare PDF standard pe 128 de biți, în browser. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
           "q": "Cât de puternică este protecția cu parolă a unui PDF?",
-          "a": "Criptarea PDF modernă folosește AES-256, același standard folosit de bănci și guverne. O parolă puternică face atacurile de tip forță brută nepractice."
+          "a": "Slate PDF aplică criptarea PDF standard RC4 pe 128 de biți, pe care o poate deschide orice cititor PDF. Oprește accesul ocazional, dar RC4 este un algoritm vechi: pentru fișiere foarte sensibile folosește o parolă lungă și unică sau un instrument care oferă AES-256."
         },
         {
           "q": "Ce se întâmplă dacă uit parola?",

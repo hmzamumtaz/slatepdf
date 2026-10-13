@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Comprimir um PDF reduz a qualidade?",
-          "a": "No nível de compressão recomendado, as imagens são recodificadas em 150 DPI — visualmente idênticas ao original para leitura na tela e impressão comum."
+          "a": "Depende do tamanho que você pedir. A ferramenta primeiro tenta uma reconstrução sem perdas que não altera nada visível. Se não for suficiente, redesenha cada página como imagem na maior resolução que cabe no seu alvo, com uma camada de texto invisível para que o texto continue pesquisável. Um alvo folgado fica idêntico; um muito pequeno fica mais suave."
         },
         {
           "q": "Quanto meu PDF vai diminuir?",
@@ -672,8 +672,8 @@
       "metaDescription": "Converta qualquer página da web em PDF. Salve artigos, recibos e conteúdo online como documentos PDF. Grátis, no navegador, sem instalar nada.",
       "faqs": [
         {
-          "q": "Posso converter qualquer página da web?",
-          "a": "Sim. Informe o endereço de qualquer página da web de acesso público e ela será convertida para o formato PDF."
+          "q": "Posso converter uma página da web ao vivo pela URL?",
+          "a": "Não. HTML para PDF converte o HTML que você cola ou um arquivo .html que você escolhe. Para uma página ao vivo, use Imprimir > Salvar como PDF no seu navegador, ou salve a página como HTML e converta esse arquivo aqui."
         },
         {
           "q": "O PDF vai ficar igual à página da web?",
@@ -1386,11 +1386,11 @@
       "name": "Proteger PDF",
       "description": "Adicione proteção por senha a um PDF",
       "seoTitle": "Proteger PDF com senha — Grátis, sem upload",
-      "metaDescription": "Adicione proteção por senha a documentos PDF. Criptografe seus arquivos com AES-256. Grátis, no navegador, sem upload.",
+      "metaDescription": "Adicione uma senha a um PDF para que ele não abra sem ela. Criptografia PDF padrão de 128 bits, aplicada no seu navegador. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
           "q": "Qual é a força da proteção por senha de um PDF?",
-          "a": "A criptografia moderna de PDF usa AES-256, o mesmo padrão usado por bancos e governos. Uma senha forte torna ataques de força bruta inviáveis na prática."
+          "a": "O Slate PDF aplica a criptografia PDF padrão RC4 de 128 bits, que qualquer leitor de PDF consegue abrir. Ela impede o acesso casual, mas o RC4 é um algoritmo antigo: para arquivos muito sensíveis, use uma senha longa e exclusiva, ou uma ferramenta que ofereça AES-256."
         },
         {
           "q": "O que acontece se eu esquecer a senha?",

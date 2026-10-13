@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Gaat de kwaliteit achteruit als ik een PDF verklein?",
-          "a": "Op het aanbevolen compressieniveau worden afbeeldingen opnieuw gecodeerd op 150 DPI — op het scherm en bij normaal afdrukken niet van het origineel te onderscheiden."
+          "a": "Dat hangt af van de grootte die je vraagt. De tool probeert eerst een verliesvrije herbouw die niets zichtbaars verandert. Is dat niet klein genoeg, dan tekent hij elke pagina opnieuw als afbeelding op de hoogste resolutie die in je doel past, met een onzichtbare tekstlaag zodat de tekst doorzoekbaar blijft. Een ruim doel ziet er identiek uit; een heel klein doel ziet er zachter uit."
         },
         {
           "q": "Hoeveel kleiner wordt mijn PDF?",
@@ -672,8 +672,8 @@
       "metaDescription": "Zet elke webpagina om naar PDF. Sla artikelen, bonnen en online content op als PDF-document. Gratis, in je browser, zonder installatie.",
       "faqs": [
         {
-          "q": "Kan ik elke webpagina omzetten?",
-          "a": "Ja. Voer de URL in van een openbaar toegankelijke webpagina en die wordt omgezet naar PDF."
+          "q": "Kan ik een live webpagina via de URL omzetten?",
+          "a": "Nee. HTML naar PDF zet HTML om die je plakt of een .html-bestand dat je kiest. Gebruik voor een live pagina Afdrukken > Opslaan als PDF in je browser, of sla de pagina op als HTML en zet dat bestand hier om."
         },
         {
           "q": "Ziet de PDF eruit als de webpagina?",
@@ -1386,11 +1386,11 @@
       "name": "PDF beveiligen",
       "description": "Wachtwoordbeveiliging toevoegen aan een PDF",
       "seoTitle": "PDF beveiligen met wachtwoord — gratis en zonder upload",
-      "metaDescription": "Beveilig PDF-documenten met een wachtwoord. Versleutel je bestanden met AES-256. Gratis, in je browser, zonder upload.",
+      "metaDescription": "Zet een wachtwoord op een PDF zodat die zonder niet opent. Standaard 128-bit PDF-versleuteling in je browser. Gratis, zonder account en zonder upload.",
       "faqs": [
         {
           "q": "Hoe sterk is wachtwoordbeveiliging van een PDF?",
-          "a": "Moderne PDF-versleuteling gebruikt AES-256, dezelfde standaard die banken en overheden gebruiken. Met een sterk wachtwoord zijn brute-force-aanvallen niet haalbaar."
+          "a": "Slate PDF past standaard 128-bit RC4 PDF-versleuteling toe, die elke PDF-lezer kan openen. Het houdt toevallige toegang tegen, maar RC4 is een ouder algoritme: gebruik voor zeer gevoelige bestanden een lang, uniek wachtwoord of een tool die AES-256 biedt."
         },
         {
           "q": "Wat gebeurt er als ik het wachtwoord vergeet?",

@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Compresser un PDF réduit-il sa qualité ?",
-          "a": "Au niveau de compression recommandé, les images sont réencodées à 150 DPI — visuellement identiques à l’original à l’écran et pour une impression standard."
+          "a": "Cela dépend de la taille demandée. L’outil tente d’abord une reconstruction sans perte qui ne change rien de visible. Si ce n’est pas assez petit, il redessine chaque page en image à la plus haute résolution compatible avec votre objectif, avec une couche de texte invisible pour que le texte reste consultable par recherche. Un objectif large donne un rendu identique ; un objectif très petit donne un rendu plus flou."
         },
         {
           "q": "De combien mon PDF va-t-il diminuer ?",
@@ -672,8 +672,8 @@
       "metaDescription": "Convertissez une page web en PDF. Enregistrez articles, reçus et contenus en ligne au format PDF. Gratuit, dans le navigateur, sans installation.",
       "faqs": [
         {
-          "q": "Puis-je convertir n’importe quelle page web ?",
-          "a": "Oui. Saisissez l’URL de n’importe quelle page web accessible publiquement et elle sera convertie au format PDF."
+          "q": "Puis-je convertir une page web en ligne à partir de son URL ?",
+          "a": "Non. HTML en PDF convertit le HTML que vous collez ou un fichier .html que vous choisissez. Pour une page en ligne, utilisez Imprimer > Enregistrer au format PDF dans votre navigateur, ou enregistrez la page en HTML et convertissez ce fichier ici."
         },
         {
           "q": "Le PDF ressemblera-t-il à la page web ?",
@@ -1386,11 +1386,11 @@
       "name": "Protéger PDF",
       "description": "Protégez un PDF par mot de passe",
       "seoTitle": "Protéger PDF — Ajouter un mot de passe (Gratuit)",
-      "metaDescription": "Protégez vos documents PDF par mot de passe. Chiffrez vos fichiers en AES-256. Gratuit, dans le navigateur, sans envoi.",
+      "metaDescription": "Ajoutez un mot de passe à un PDF pour qu’il ne s’ouvre pas sans lui. Chiffrement PDF standard 128 bits dans le navigateur. Gratuit, sans inscription ni envoi.",
       "faqs": [
         {
           "q": "Quelle est la solidité de la protection par mot de passe d’un PDF ?",
-          "a": "Le chiffrement PDF moderne utilise l’AES-256, la même norme que celle utilisée par les banques et les gouvernements. Un mot de passe robuste rend les attaques par force brute irréalistes."
+          "a": "Slate PDF applique le chiffrement PDF standard RC4 128 bits, que tout lecteur PDF peut ouvrir. Il empêche l’accès occasionnel, mais RC4 est un algorithme ancien : pour des fichiers très sensibles, utilisez un mot de passe long et unique, ou un outil qui propose AES-256."
         },
         {
           "q": "Que se passe-t-il si j’oublie le mot de passe ?",
