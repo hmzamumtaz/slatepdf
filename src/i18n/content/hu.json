@@ -64,6 +64,18 @@
     "whyToolHeading": "{tool} – miért érdemes itt használni?",
     "faqHeading": "{tool} – gyakori kérdések",
     "continueHeading": "Folytasd egy másik eszközzel",
+    "glanceHeading": "{tool} – röviden",
+    "glancePrice": "Ár",
+    "glancePriceValue": "Ingyenes, fizetős csomag és használati korlát nélkül",
+    "glanceFile": "A fájlod",
+    "glanceFileValue": "A böngésződben dolgozzuk fel, sosem töltődik fel",
+    "glanceFileTranslate": "A böngésződben olvassuk be; csak a kinyert szöveg kerül egy fordítószolgáltatáshoz",
+    "glanceAccount": "Fiók",
+    "glanceAccountValue": "Nem szükséges",
+    "glanceWatermark": "Vízjel",
+    "glanceWatermarkValue": "Nem kerül vízjel a fájlodra",
+    "glanceDevices": "Hol működik",
+    "glanceDevicesValue": "Bármely modern böngészőben Windowson, Macen, Linuxon, Androidon és iPhone-on",
     "seeAllTools": "Az összes PDF eszköz megtekintése ({count})"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Feltöltődik a dokumentumom egy szerverre?",
           "a": "Nem. Minden művelet a böngésződben fut. A dokumentumod sosem hagyja el az eszközödet, így a munkaterület ideális bizalmas és érzékeny anyagokhoz."
+        },
+        {
+          "q": "Ingyenes a PDF munkaterület, és kell hozzá fiók?",
+          "a": "Ingyenes, fiók és vízjel nélkül, és nincs korlátja annak, hány dokumentumon dolgozol. Nyiss meg egy PDF-et, és kezdd el a szerkesztést."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Romlik a minőség a szétválasztástól?",
           "a": "Nem. A szétválasztás teljes oldalobjektumokat másol át új dokumentumokba. A szöveg kijelölhető marad, a képek megtartják eredeti felbontásukat."
+        },
+        {
+          "q": "Szét tudok választani egy PDF-et a telefonomon alkalmazás nélkül?",
+          "a": "Igen. A PDF szétválasztás a böngészőben fut Androidon és iPhone-on is, így telepítés és feltöltés nélkül szétválaszthatod a fájlt."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Ez ugyanaz, mint a szétválasztás?",
           "a": "Nem. A szétválasztás külön fájlokat hoz létre a kiválasztott oldalakból. A törlés eltávolítja az oldalakat a dokumentumból, a többit pedig egyetlen fájlban hagyja."
+        },
+        {
+          "q": "Biztonságos itt oldalakat törölni egy bizalmas PDF-ből?",
+          "a": "Igen. Az oldalak törlése a böngésződben történik, és a fájl sosem hagyja el az eszközödet, így semmi sem tárolódik szerveren."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Kinyerhetem az oldalakat más sorrendben?",
           "a": "Igen. Sorold fel az oldalakat a kívánt sorrendben. Ha például 9, 3, 5-öt adsz meg, a fájl ebben a sorrendben fogja tartalmazni az oldalakat."
+        },
+        {
+          "q": "Ingyenes az oldalak kinyerése, vízjel nélkül?",
+          "a": "Igen. A kinyerés ingyenes, nem kell hozzá fiók, és az új PDF-en nincs vízjel vagy hozzáadott márkajelzés."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Az optimalizálás ugyanaz, mint a tömörítés?",
           "a": "A tömörítés a képek újrakódolásával csökkenti a fájlméretet. Az optimalizálás a szerkezeti javításokra fókuszál, amelyek gyorsítják a betöltést és a megjelenítést."
+        },
+        {
+          "q": "Az optimalizált PDF továbbra is megnyílik minden PDF-olvasóban?",
+          "a": "Igen. Az optimalizálás után a fájl szabványos PDF marad, így ugyanúgy megnyílik az Adobe Readerben, böngészőkben, a Preview-ban és mobilos olvasókban, mint korábban."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Minden tartalom helyreállítható a javítással?",
           "a": "A javítás a PDF szerkezetének újraépítésével működik. Az, hogy mi állítható helyre, attól függ, mennyi maradt épen az eredeti adatokból."
+        },
+        {
+          "q": "Feltöltődik a sérült PDF-em a javításhoz?",
+          "a": "Nem. A javítás a böngésződben fut, így egy sérült szerződés vagy számlakivonat sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Mennyire pontos az OCR?",
           "a": "A pontosság a szkennelés minőségétől függ. Tiszta, nagy felbontású szkenneknél jellemzően 95–99%. Gyenge minőségű szkenneknél több hiba előfordulhat."
+        },
+        {
+          "q": "Feltölti a szkennelt dokumentumaimat a PDF szövegfelismerés (OCR)?",
+          "a": "Nem. A felismerőmotor és a nyelvi adatai egyszer letöltődnek a böngésződbe, utána minden oldal feldolgozása a saját eszközödön történik."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Egyesíthetek több képet egy PDF-be?",
           "a": "Igen. Töltsd be az összes JPG-t, rendezd sorba őket, és konvertáld. Minden képből egy oldal lesz az elkészült PDF-ben."
+        },
+        {
+          "q": "Át tudom alakítani a fotóimat PDF-be a telefonomon?",
+          "a": "Igen. Nyisd meg a JPG PDF konvertálás eszközt a telefonod böngészőjében, válassz fotókat a galériából, és tölts le egyetlen PDF-et. Semmi sem töltődik fel."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Telepítve kell lennie a Microsoft Wordnek?",
           "a": "Nem. Az átalakítás a böngésződben történik. Nincs szükség szoftvertelepítésre."
+        },
+        {
+          "q": "Feltöltődik a Word-dokumentumom a konvertáláshoz?",
+          "a": "Nem. A DOCX fájl beolvasása és PDF-fé alakítása a böngésződben történik, így sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Átalakíthatok csak bizonyos diákat?",
           "a": "Az átalakítás a teljes bemutatót feldolgozza. Ha csak bizonyos diákra van szükséged, az átalakítás után nyerd ki őket az Oldalak kinyerése eszközzel."
+        },
+        {
+          "q": "Feltöltődik a prezentációm a konvertáláshoz?",
+          "a": "Nem. A PPTX fájl a böngésződben konvertálódik, és sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Átalakíthatok csak bizonyos munkalapokat?",
           "a": "Az átalakítás a teljes munkafüzetet feldolgozza. Ha csak bizonyos munkalapokra van szükséged, előbb mentsd őket külön fájlba."
+        },
+        {
+          "q": "Feltöltődik a táblázatom a konvertáláshoz?",
+          "a": "Nem. Az XLSX fájl beolvasása és PDF-fé alakítása a böngésződben történik, így a pénzügyi adatok sosem hagyják el az eszközödet."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Úgy fog kinézni a PDF, mint a weboldal?",
           "a": "A PDF az oldal megjelenített tartalmát rögzíti. Az összetett elrendezések kissé eltérhetnek az eredetitől."
+        },
+        {
+          "q": "Kell bármit telepítenem a HTML PDF-fé alakításához?",
+          "a": "Nem. Illeszd be a HTML-kódot vagy válassz egy .html fájlt, és a PDF a böngésződben készül el – szoftver, bővítmény és fiók nélkül."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Átalakíthatok csak bizonyos oldalakat?",
           "a": "Igen. Választhatod az összes oldal átalakítását, vagy megadhatsz egy oldaltartományt, hogy csak a szükséges oldalakat nyerd ki."
+        },
+        {
+          "q": "Feltöltődik a PDF-em, amikor JPG-vé alakítom?",
+          "a": "Nem. Minden oldal a böngésződben alakul képpé, így a PDF sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Működik szkennelt PDF-ekkel?",
           "a": "A szkennelt PDF-eknél előbb OCR-re van szükség a szöveg kinyeréséhez. A legjobb eredményért futtasd le az OCR-t, majd az eredményt alakítsd Word fájllá."
+        },
+        {
+          "q": "Feltöltődik a PDF-em, amikor Word formátumba alakítom?",
+          "a": "Nem. A szöveg kinyerése és a DOCX elkészítése a böngésződben történik, így a PDF sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Szerkeszthetem az elkészült diákat?",
           "a": "Igen. A kimenet egy szabványos PPTX fájl, amelyet bármely PowerPoint-kompatibilis alkalmazásban szerkeszthetsz."
+        },
+        {
+          "q": "Feltöltődik a PDF-em, amikor PowerPoint formátumba alakítom?",
+          "a": "Nem. A diák a böngésződben készülnek el, így a PDF sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Miért érdemes PDF/A-ba konvertálni?",
           "a": "Sok iparág előírja a PDF/A használatát a dokumentumok megőrzéséhez. Biztosítja, hogy a betűtípusok beágyazottak, a színek definiáltak legyenek, és a dokumentum önálló legyen."
+        },
+        {
+          "q": "Garantált, hogy az eredmény átmegy egy PDF/A-validátoron?",
+          "a": "Nem mindig. Az eszköz hozzáadja a PDF/A azonosító metaadatokat, de ha a forrásfájlból hiányoznak betűtípusok, vagy átlátszóságot tartalmaz, a szigorú ellenőrzésen még elbukhat. Ha egy archívum megköveteli, ellenőrizd egy validátorral, például a veraPDF-fel."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Átalakíthatok csak bizonyos oldalakat?",
           "a": "A teljes dokumentum átalakításra kerül. Ha csak néhány oldalt szeretnél átalakítani, előbb futtasd az Oldalak kinyerése eszközt, és azt a fájlt alakítsd át."
+        },
+        {
+          "q": "Használhatom a Markdownt a ChatGPT-vel vagy más AI-eszközökkel?",
+          "a": "Igen. A Markdown egyszerű szövegként őrzi meg a címsorokat és a listákat, amelyeket az AI-asszisztensek és a jegyzetalkalmazások tisztán be tudnak olvasni. Maga a konvertálás a böngésződben fut."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Megváltozik a formázás a szerkesztéstől?",
           "a": "A közvetlen szerkesztés megőrzi az eredeti formázást. Csak a módosított szöveg változik – a betűtípusok, a térközök és az elrendezés érintetlen marad."
+        },
+        {
+          "q": "Szerkeszthetek szkennelt PDF-et?",
+          "a": "Közvetlenül nem. A szkennelt oldal a szöveg képe, így nincsenek benne helyben módosítható szavak. A PDF szövegfelismerés (OCR) eszközzel tedd kereshetővé, másold ki a szöveget, majd szerkeszd egy szövegszerkesztőben."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Befolyásolja a forgatás a nyomtatási minőséget?",
           "a": "Nem. A forgatás csak egy metaadat-módosítás, amely megmondja a megjelenítőnek, hogyan mutassa az oldalt. A tartalom nem renderelődik újra."
+        },
+        {
+          "q": "Végleges az elforgatás?",
+          "a": "Igen. Az új tájolás a letöltött PDF-ben mentésre kerül, így minden megjelenítőben a helyes irányban nyílik meg."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Kihagyhatom a számozást az első oldalon?",
           "a": "Igen. Válaszd azt a lehetőséget, hogy a számozás egy adott oldaltól, például a 2. vagy 3. oldaltól induljon, így kihagyhatod a borítóoldalakat."
+        },
+        {
+          "q": "Feltöltődik a PDF-em az oldalszámozáshoz?",
+          "a": "Nem. A számok a böngésződben kerülnek az oldalakra, így a fájl sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Elláthatom vízjellel egyszerre az összes oldalt?",
           "a": "Igen. A vízjel egyszerre kerül a dokumentum minden oldalára."
+        },
+        {
+          "q": "Eltávolítható később a vízjel?",
+          "a": "A szöveges vízjel az oldal tartalmába kerül, így nem lehet egy megjegyzéshez hasonlóan kikapcsolni. Szerkesztőszoftverrel azonban valaki eltakarhatja, ezért inkább elrettentésnek tekintsd, mint védelemnek."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Töröl tartalmat a körbevágás?",
           "a": "A körbevágás elrejti a vágási területen kívüli tartalmat. Az elrejtett tartalom nem törlődik, és később visszaállítható."
+        },
+        {
+          "q": "Körbevághatok PDF-et a telefonomon?",
+          "a": "Igen. A PDF körbevágás a telefonod böngészőjében fut, így alkalmazás telepítése és a fájl feltöltése nélkül vághatod le a margókat."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Aláírhatok jelszóval védett PDF-et?",
           "a": "Előbb fel kell oldanod. A jelszóval védett PDF-ek nem szerkeszthetők, amíg a jelszót el nem távolítod."
+        },
+        {
+          "q": "Hogyan hozhatom létre az aláírásomat?",
+          "a": "Rajzold meg egérrel vagy ujjal, írd be a neved kézírásos betűtípussal, vagy adj hozzá egy fotót a valódi aláírásodról. Az aláírás a böngésződben kerül az oldalra, és sosem tárolódik szerveren."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Megváltozik a PDF tartalma a feloldástól?",
           "a": "Nem. A feloldás csak a jelszavas védelmet távolítja el. A dokumentum tartalma változatlan marad."
+        },
+        {
+          "q": "Biztonságos itt megadni a PDF jelszavamat?",
+          "a": "Igen. A jelszó és a fájl a böngésződben marad, és sosem kerül szerverre."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Mi történik, ha elfelejtem a jelszót?",
           "a": "Nincs helyreállítási lehetőség. A fájl jelszó nélkül végleg hozzáférhetetlen. Mindig tárold a jelszót biztonságos helyen."
+        },
+        {
+          "q": "Feltöltődik a PDF-em a jelszó hozzáadásához?",
+          "a": "Nem. A titkosítás a böngésződben történik, így a védelem nélküli fájl és a jelszó sosem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Összehasonlíthatok szkennelt PDF-eket?",
           "a": "Előbb futtasd a PDF szövegfelismerés (OCR) eszközt mindkét szkennen. Az összehasonlítás a fájlokban lévő szövegen dolgozik, így a csak képet tartalmazó szkennekben nincs mit összehasonlítani."
+        },
+        {
+          "q": "Feltöltődik mindkét PDF az összehasonlításhoz?",
+          "a": "Nem. Mindkét fájl beolvasása és összehasonlítása a böngésződben történik, így egyik sem hagyja el az eszközödet."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Elküldésre kerül a dokumentumom egy szerverre?",
           "a": "Nem. Az összefoglaló a böngésződben készül, és a PDF sosem hagyja el az eszközödet."
+        },
+        {
+          "q": "Össze tudja foglalni egy szkennelt PDF tartalmát?",
+          "a": "Közvetlenül nem. A szkennelt PDF-nek nincs olvasható szövegrétege. Először futtasd le rajta a PDF szövegfelismerés (OCR) eszközt, majd foglald össze a kereshető eredményt."
         }
       ],
       "howTo": {

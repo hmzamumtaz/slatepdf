@@ -64,6 +64,18 @@
     "whyToolHeading": "Proč použít {tool} právě zde?",
     "faqHeading": "{tool} – časté dotazy",
     "continueHeading": "Pokračujte dalším nástrojem",
+    "glanceHeading": "{tool} v kostce",
+    "glancePrice": "Cena",
+    "glancePriceValue": "Zdarma, bez placené verze a bez omezení použití",
+    "glanceFile": "Váš soubor",
+    "glanceFileValue": "Zpracuje se v prohlížeči, nikdy se nenahrává",
+    "glanceFileTranslate": "Načte se v prohlížeči; do překladové služby se odešle jen extrahovaný text",
+    "glanceAccount": "Účet",
+    "glanceAccountValue": "Není potřeba",
+    "glanceWatermark": "Vodoznak",
+    "glanceWatermarkValue": "Do souboru se žádný nepřidává",
+    "glanceDevices": "Funguje na",
+    "glanceDevicesValue": "Jakémkoli moderním prohlížeči ve Windows, Macu, Linuxu, Androidu i iPhonu",
     "seeAllTools": "Zobrazit všech {count} PDF nástrojů"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Nahrává se můj dokument na server?",
           "a": "Ne. Každý úkon probíhá ve vašem prohlížeči. Váš dokument nikdy neopustí vaše zařízení, takže je pracovní prostor ideální pro důvěrnou a citlivou práci."
+        },
+        {
+          "q": "Je Pracovní prostor PDF zdarma a potřebuji účet?",
+          "a": "Je zdarma, bez účtu, bez vodoznaku a bez omezení počtu dokumentů. Otevřete PDF a začněte upravovat."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Snižuje rozdělení kvalitu?",
           "a": "Ne. Rozdělení kopíruje celé objekty stránek do nových dokumentů. Text zůstane označitelný a obrázky si zachovají původní rozlišení."
+        },
+        {
+          "q": "Můžu rozdělit PDF v telefonu bez aplikace?",
+          "a": "Ano. Rozdělit PDF běží v prohlížeči na Androidu i iPhonu, takže soubor rozdělíte bez instalace čehokoli a bez nahrávání."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Je to totéž jako rozdělení?",
           "a": "Ne. Rozdělení vytvoří z vybraných stránek samostatné soubory. Odstranění stránky z dokumentu smaže a zbytek ponechá v jednom souboru."
+        },
+        {
+          "q": "Je bezpečné mazat tu stránky z důvěrného PDF?",
+          "a": "Ano. Stránky se odstraní v prohlížeči a soubor nikdy neopustí vaše zařízení, takže se nic neukládá na server."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Mohu stránky extrahovat v jiném pořadí?",
           "a": "Ano. Uveďte stránky v požadovaném pořadí. Zadáním 9, 3, 5 vznikne soubor se stránkami právě v tomto pořadí."
+        },
+        {
+          "q": "Je extrakce stránek zdarma a bez vodoznaku?",
+          "a": "Ano. Extrakce je zdarma a bez účtu a nové PDF nemá žádný vodoznak ani přidané logo."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Je optimalizace totéž co komprimace?",
           "a": "Komprimace zmenšuje velikost souboru překódováním obrázků. Optimalizace se zaměřuje na úpravy struktury, které zrychlují načítání a vykreslování."
+        },
+        {
+          "q": "Otevře se optimalizované PDF stále v každé čtečce PDF?",
+          "a": "Ano. Optimalizace zachová standardní PDF, takže se soubor otevře v Adobe Reader, prohlížečích, Preview i mobilních aplikacích stejně jako dřív."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Obnoví oprava veškerý obsah?",
           "a": "Oprava funguje tak, že znovu sestaví strukturu PDF. Úspěšnost obnovy závisí na tom, kolik původních dat zůstalo nedotčeno."
+        },
+        {
+          "q": "Nahrává se poškozené PDF kvůli opravě na server?",
+          "a": "Ne. Oprava probíhá v prohlížeči, takže poškozená smlouva nebo výpis nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Jak přesné je OCR?",
           "a": "Přesnost závisí na kvalitě skenu. Ostré skeny ve vysokém rozlišení obvykle dosahují přesnosti 95–99 %. U nekvalitních skenů může být chyb více."
+        },
+        {
+          "q": "Nahrává OCR PDF moje skeny na server?",
+          "a": "Ne. Rozpoznávací engine a jazyková data se do prohlížeče stáhnou jednou a každá stránka se pak čte přímo ve vašem zařízení."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Mohu spojit více obrázků do jednoho PDF?",
           "a": "Ano. Načtěte všechny JPG, seřaďte je a převeďte. Každý obrázek se stane jednou stránkou výsledného PDF."
+        },
+        {
+          "q": "Můžu převést fotky do PDF v telefonu?",
+          "a": "Ano. Otevřete JPG do PDF v prohlížeči telefonu, vyberte fotky z galerie a stáhněte jedno PDF. Nic se nenahrává."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Musím mít nainstalovaný Microsoft Word?",
           "a": "Ne. Převod probíhá ve vašem prohlížeči. Není potřeba instalovat žádný software."
+        },
+        {
+          "q": "Nahrává se můj dokument Word kvůli převodu na server?",
+          "a": "Ne. Soubor DOCX se načte a převede do PDF v prohlížeči, takže nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Mohu převést jen vybrané snímky?",
           "a": "Převod zpracuje celou prezentaci. Chcete-li jen určité snímky, extrahujte je po převodu nástrojem Extrahovat stránky."
+        },
+        {
+          "q": "Nahrává se moje prezentace kvůli převodu na server?",
+          "a": "Ne. Soubor PPTX se převede v prohlížeči a nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Mohu převést jen vybrané listy?",
           "a": "Převod zpracuje celý sešit. Pro konkrétní listy je možná budete muset nejprve uložit jako samostatný soubor."
+        },
+        {
+          "q": "Nahrává se moje tabulka kvůli převodu na server?",
+          "a": "Ne. Soubor XLSX se načte a převede do PDF v prohlížeči, takže finanční data nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Bude PDF vypadat jako webová stránka?",
           "a": "PDF zachytí vykreslený obsah stránky. Složitá rozvržení se mohou od originálu mírně lišit."
+        },
+        {
+          "q": "Musím něco instalovat, abych převedl HTML do PDF?",
+          "a": "Ne. Vložte HTML nebo vyberte soubor .html a PDF vznikne v prohlížeči, bez softwaru, rozšíření i účtu."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Mohu převést jen vybrané stránky?",
           "a": "Ano. Zvolte převod všech stránek, nebo zadejte rozsah stránek a extrahujte jen ty, které potřebujete."
+        },
+        {
+          "q": "Nahrává se moje PDF při převodu do JPG na server?",
+          "a": "Ne. Každá stránka se vykreslí do obrázku v prohlížeči, takže PDF nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Funguje to s naskenovanými PDF?",
           "a": "U naskenovaných PDF je potřeba nejprve získat text pomocí OCR. Pro nejlepší výsledek spusťte OCR a výsledek pak převeďte do Wordu."
+        },
+        {
+          "q": "Nahrává se moje PDF při převodu do Wordu na server?",
+          "a": "Ne. Text se extrahuje a soubor DOCX se sestaví v prohlížeči, takže PDF nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Mohu výsledné snímky upravovat?",
           "a": "Ano. Výstupem je standardní soubor PPTX, který můžete upravit v jakékoli aplikaci kompatibilní s PowerPointem."
+        },
+        {
+          "q": "Nahrává se moje PDF při převodu do PowerPointu na server?",
+          "a": "Ne. Snímky se vytvoří v prohlížeči, takže PDF nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Proč převádět do PDF/A?",
           "a": "Mnoho odvětví vyžaduje pro uchovávání dokumentů PDF/A. Zajišťuje, že písma jsou vložená, barvy definované a dokument je soběstačný."
+        },
+        {
+          "q": "Je zaručeno, že výsledek projde validátorem PDF/A?",
+          "a": "Ne vždy. Nástroj přidá identifikační metadata PDF/A, ale zdrojový soubor s chybějícími fonty nebo průhledností může přísnými kontrolami neprojít. Pokud to archiv vyžaduje, ověřte soubor validátorem, například veraPDF."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Mohu převést jen vybrané stránky?",
           "a": "Převede se celý dokument. Chcete-li převést jen některé stránky, nejprve použijte Extrahovat stránky a převeďte výsledný soubor."
+        },
+        {
+          "q": "Můžu Markdown použít s ChatGPT nebo jinými AI nástroji?",
+          "a": "Ano. Markdown zachová nadpisy a seznamy jako prostý text, který AI asistenti i aplikace na poznámky čtou bez problémů. Samotný převod probíhá v prohlížeči."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Změní úpravy formátování?",
           "a": "Přímé úpravy zachovávají původní formátování. Změní se jen text, který upravíte – písma, mezery a rozvržení zůstanou zachovány."
+        },
+        {
+          "q": "Můžu upravit naskenované PDF?",
+          "a": "Ne přímo. Sken je obrázek textu, takže v něm nejsou žádná slova, která by šlo přepsat. Pomocí OCR PDF ho zpřístupněte pro vyhledávání a zkopírujte text, pak ho upravte v textovém editoru."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Ovlivní otočení kvalitu tisku?",
           "a": "Ne. Otočení je změna metadat, která prohlížeči říká, jak má stránku zobrazit. Obsah se znovu nevykresluje."
+        },
+        {
+          "q": "Je otočení trvalé?",
+          "a": "Ano. Nová orientace se uloží do staženého PDF, takže se správně otevře v každém prohlížeči PDF."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Mohu vynechat číslování první stránky?",
           "a": "Ano. Zvolte možnost začít číslovat od určité stránky, například od 2. nebo 3., a titulní strany tak přeskočíte."
+        },
+        {
+          "q": "Nahrává se moje PDF kvůli číslování stránek na server?",
+          "a": "Ne. Čísla se vykreslí na stránky v prohlížeči, takže soubor nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Mohu přidat vodoznak na všechny stránky najednou?",
           "a": "Ano. Vodoznak se použije na všechny stránky dokumentu současně."
+        },
+        {
+          "q": "Dá se vodoznak později odstranit?",
+          "a": "Textový vodoznak se vykreslí přímo do obsahu stránky, takže ho nejde vypnout jako komentář. Kdo má editační software, může ho ale zakrýt, proto ho berte jako odstrašení, ne jako ochranu."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Smaže ořez obsah?",
           "a": "Ořez skryje obsah mimo oblast ořezu. Skrytý obsah se nesmaže a ořez lze později zrušit."
+        },
+        {
+          "q": "Můžu oříznout PDF v telefonu?",
+          "a": "Ano. Oříznout PDF běží v prohlížeči telefonu, takže okraje oříznete bez instalace aplikace a bez nahrávání souboru."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Mohu podepsat PDF chráněné heslem?",
           "a": "Nejprve ho musíte odemknout. PDF chráněná heslem nelze upravovat, dokud heslo neodstraníte."
+        },
+        {
+          "q": "Jak si můžu vytvořit podpis?",
+          "a": "Nakreslete ho myší nebo prstem, napište své jméno ručně psaným písmem nebo nahrajte fotku skutečného podpisu. Na stránku se umístí v prohlížeči a nikdy se neukládá na server."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Změní odemčení obsah PDF?",
           "a": "Ne. Odemčení odstraní pouze ochranu heslem. Obsah dokumentu zůstane beze změny."
+        },
+        {
+          "q": "Je bezpečné zadat tu heslo k PDF?",
+          "a": "Ano. Heslo i soubor zůstávají v prohlížeči a nikdy se neodesílají na server."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Co se stane, když heslo zapomenu?",
           "a": "Neexistuje žádný způsob obnovy. Bez hesla je soubor trvale nepřístupný. Heslo si vždy uložte na bezpečné místo."
+        },
+        {
+          "q": "Nahrává se moje PDF kvůli přidání hesla na server?",
+          "a": "Ne. Šifrování probíhá v prohlížeči, takže nechráněný soubor ani heslo nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Mohu porovnat naskenovaná PDF?",
           "a": "Nejprve na oba skeny spusťte OCR PDF. Porovnání pracuje s textem uvnitř souborů, takže u skenů, které obsahují jen obrázky, není co porovnávat."
+        },
+        {
+          "q": "Nahrávají se obě PDF kvůli porovnání na server?",
+          "a": "Ne. Oba soubory se načtou a porovnají v prohlížeči, takže ani jeden neopustí vaše zařízení."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Odesílá se můj dokument na server?",
           "a": "Ne. Shrnutí se počítá ve vašem prohlížeči a PDF nikdy neopustí vaše zařízení."
+        },
+        {
+          "q": "Dokáže shrnout naskenované PDF?",
+          "a": "Ne přímo. Naskenované PDF nemá textovou vrstvu, kterou by šlo přečíst. Nejdřív ho prožente nástrojem OCR PDF a pak shrňte prohledávatelný výsledek."
         }
       ],
       "howTo": {

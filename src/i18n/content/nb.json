@@ -64,6 +64,18 @@
     "whyToolHeading": "Hvorfor bruke {tool} her?",
     "faqHeading": "{tool} – ofte stilte spørsmål",
     "continueHeading": "Fortsett med et annet verktøy",
+    "glanceHeading": "{tool} kort fortalt",
+    "glancePrice": "Pris",
+    "glancePriceValue": "Gratis, uten betalingsversjon og uten bruksgrense",
+    "glanceFile": "Filen din",
+    "glanceFileValue": "Behandles i nettleseren din og lastes aldri opp",
+    "glanceFileTranslate": "Leses i nettleseren din; bare den uttrukne teksten sendes til en oversettelsestjeneste",
+    "glanceAccount": "Konto",
+    "glanceAccountValue": "Ikke nødvendig",
+    "glanceWatermark": "Vannmerke",
+    "glanceWatermarkValue": "Ingen legges til i filen din",
+    "glanceDevices": "Fungerer på",
+    "glanceDevicesValue": "Alle moderne nettlesere på Windows, Mac, Linux, Android og iPhone",
     "seeAllTools": "Se alle {count} PDF-verktøy"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Blir dokumentet mitt lastet opp til en server?",
           "a": "Nei. Alle handlinger kjøres i nettleseren. Dokumentet forlater aldri enheten din, så arbeidsområdet passer godt for konfidensielt og sensitivt arbeid."
+        },
+        {
+          "q": "Er PDF-arbeidsområdet gratis, og trenger jeg en konto?",
+          "a": "Det er gratis, uten konto, uten vannmerke og uten grense for hvor mange dokumenter du jobber med. Åpne en PDF og begynn å redigere."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Blir kvaliteten dårligere når jeg deler en PDF?",
           "a": "Nei. Delingen kopierer hele sideobjekter inn i nye dokumenter. Teksten forblir markerbar og bildene beholder sin opprinnelige oppløsning."
+        },
+        {
+          "q": "Kan jeg dele en PDF på telefonen uten en app?",
+          "a": "Ja. Del PDF kjører i nettleseren på Android og iPhone, så du kan dele en fil uten å installere noe eller laste den opp."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Er dette det samme som å dele en PDF?",
           "a": "Nei. Deling lager separate filer av de valgte sidene. Fjerning sletter sider fra dokumentet og beholder resten som én fil."
+        },
+        {
+          "q": "Er det trygt å slette sider fra en konfidensiell PDF her?",
+          "a": "Ja. Sidene fjernes i nettleseren din, og filen forlater aldri enheten din, så ingenting lagres på en server."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Kan jeg trekke ut sider i en annen rekkefølge?",
           "a": "Ja. List opp sidene i den rekkefølgen du vil ha dem. Skriver du 9, 3, 5, får du en fil med sidene i den rekkefølgen."
+        },
+        {
+          "q": "Er det gratis å trekke ut sider, uten vannmerke?",
+          "a": "Ja. Uttrekking er gratis uten konto, og den nye PDF-en har verken vannmerke eller lagt til logo eller annen merking."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Er optimalisering det samme som komprimering?",
           "a": "Komprimering reduserer filstørrelsen ved å kode om bilder. Optimalisering handler om strukturelle forbedringer som gjør at filen lastes og gjengis raskere."
+        },
+        {
+          "q": "Åpnes en optimalisert PDF fortsatt i alle PDF-lesere?",
+          "a": "Ja. Optimaliseringen beholder filen som en standard PDF, så den åpnes i Adobe Reader, nettlesere, Preview og mobile visningsprogrammer som før."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Kan reparasjonen gjenopprette alt innhold?",
           "a": "Reparasjonen bygger opp PDF-strukturen på nytt. Hvor mye som kan gjenopprettes, avhenger av hvor mye av de opprinnelige dataene som er intakt."
+        },
+        {
+          "q": "Blir den skadede PDF-en min lastet opp for å repareres?",
+          "a": "Nei. Reparasjonen kjører i nettleseren din, så en skadet kontrakt eller kontoutskrift forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Hvor nøyaktig er OCR?",
           "a": "Nøyaktigheten avhenger av skannekvaliteten. Klare skanninger med høy oppløsning gir vanligvis 95–99 % nøyaktighet. Skanninger av dårlig kvalitet kan gi flere feil."
+        },
+        {
+          "q": "Laster OCR PDF opp skanningene mine?",
+          "a": "Nei. Gjenkjenningsmotoren og språkdataene lastes ned til nettleseren din én gang, og deretter leses hver side på din egen enhet."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Kan jeg samle flere bilder i én PDF?",
           "a": "Ja. Last inn alle JPG-ene, sett dem i rekkefølge og konverter. Hvert bilde blir én side i den ferdige PDF-en."
+        },
+        {
+          "q": "Kan jeg gjøre om bilder til PDF på telefonen?",
+          "a": "Ja. Åpne JPG til PDF i nettleseren på telefonen, velg bilder fra galleriet og last ned én PDF. Ingenting lastes opp."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Må jeg ha Microsoft Word installert?",
           "a": "Nei. Konverteringen skjer i nettleseren. Du trenger ikke installere noen programvare."
+        },
+        {
+          "q": "Blir Word-dokumentet mitt lastet opp for å konverteres?",
+          "a": "Nei. DOCX-filen leses og gjøres om til PDF i nettleseren din, så den forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Kan jeg konvertere bestemte lysbilder?",
           "a": "Hele presentasjonen konverteres. Vil du bare ha bestemte lysbilder, trekker du dem ut etter konverteringen med verktøyet Trekk ut sider."
+        },
+        {
+          "q": "Blir presentasjonen min lastet opp for å konverteres?",
+          "a": "Nei. PPTX-filen konverteres i nettleseren din og forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Kan jeg konvertere bestemte regneark?",
           "a": "Hele arbeidsboken konverteres. For bestemte ark må du kanskje lagre dem som en egen fil først."
+        },
+        {
+          "q": "Blir regnearket mitt lastet opp for å konverteres?",
+          "a": "Nei. XLSX-filen leses og gjøres om til PDF i nettleseren din, så økonomiske data forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Kommer PDF-en til å se ut som nettsiden?",
           "a": "PDF-en fanger opp det gjengitte innholdet på siden. Komplekse oppsett kan avvike litt fra originalen."
+        },
+        {
+          "q": "Må jeg installere noe for å konvertere HTML til PDF?",
+          "a": "Nei. Lim inn HTML-koden eller velg en .html-fil, så lages PDF-en i nettleseren din, uten programvare, utvidelse eller konto."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Kan jeg konvertere bestemte sider?",
           "a": "Ja. Velg å konvertere alle sidene, eller angi et sideområde for bare å hente ut sidene du trenger."
+        },
+        {
+          "q": "Blir PDF-en min lastet opp for å konverteres til JPG?",
+          "a": "Nei. Hver side gjengis som et bilde i nettleseren din, så PDF-en forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Fungerer dette med skannede PDF-er?",
           "a": "Skannede PDF-er trenger OCR først for å få ut teksten. Kjør OCR, og konverter deretter resultatet til Word for best resultat."
+        },
+        {
+          "q": "Blir PDF-en min lastet opp for å konverteres til Word?",
+          "a": "Nei. Teksten trekkes ut og DOCX-filen bygges i nettleseren din, så PDF-en forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Kan jeg redigere lysbildene jeg får?",
           "a": "Ja. Resultatet er en vanlig PPTX-fil som du kan redigere i alle programmer som er kompatible med PowerPoint."
+        },
+        {
+          "q": "Blir PDF-en min lastet opp for å konverteres til PowerPoint?",
+          "a": "Nei. Lysbildene bygges i nettleseren din, så PDF-en forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Hvorfor bør jeg konvertere til PDF/A?",
           "a": "Mange bransjer krever PDF/A for dokumentoppbevaring. Formatet sikrer at skrifter er innebygd, at farger er definert og at dokumentet er selvstendig."
+        },
+        {
+          "q": "Er resultatet garantert å bestå en PDF/A-validering?",
+          "a": "Ikke alltid. Verktøyet legger til PDF/A-identifikasjonsmetadata, men en kildefil med manglende skrifter eller gjennomsiktighet kan fortsatt stryke på strenge kontroller, så sjekk den med en validator som veraPDF hvis et arkiv krever det."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Kan jeg konvertere bestemte sider?",
           "a": "Hele dokumentet konverteres. Vil du bare konvertere noen sider, kjører du Trekk ut sider først og konverterer den filen."
+        },
+        {
+          "q": "Kan jeg bruke Markdown med ChatGPT eller andre AI-verktøy?",
+          "a": "Ja. Markdown beholder overskrifter og lister som ren tekst, som AI-assistenter og notatapper leser uten problemer. Selve konverteringen kjører i nettleseren din."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Endrer redigeringen formateringen?",
           "a": "Direkte redigering bevarer den opprinnelige formateringen. Bare teksten du endrer, påvirkes – skrifter, avstander og oppsett forblir intakt."
+        },
+        {
+          "q": "Kan jeg redigere en skannet PDF?",
+          "a": "Ikke direkte. En skanning er et bilde av tekst, så det finnes ingen ord å endre på stedet. Bruk OCR PDF til å gjøre den søkbar og kopiere ut teksten, og rediger den deretter i et tekstbehandlingsprogram."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Påvirker rotering utskriftskvaliteten?",
           "a": "Nei. Rotering er en endring i metadataene som forteller visningsprogrammet hvordan siden skal vises. Innholdet gjengis ikke på nytt."
+        },
+        {
+          "q": "Er rotasjonen permanent?",
+          "a": "Ja. Den nye retningen lagres i den nedlastede PDF-en, så den åpnes riktig vei i alle visningsprogrammer."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Kan jeg hoppe over nummereringen på første side?",
           "a": "Ja. Velg alternativet for å starte nummereringen fra en bestemt side, for eksempel side 2 eller 3, for å hoppe over forsider."
+        },
+        {
+          "q": "Blir PDF-en min lastet opp for å legge til sidetall?",
+          "a": "Nei. Tallene tegnes på sidene i nettleseren din, så filen forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Kan jeg legge vannmerke på alle sidene samtidig?",
           "a": "Ja. Vannmerket legges på alle sidene i dokumentet samtidig."
+        },
+        {
+          "q": "Kan et vannmerke fjernes senere?",
+          "a": "Et tekstvannmerke tegnes inn i sideinnholdet, så det kan ikke slås av som en kommentar. Noen med redigeringsprogramvare kan likevel dekke det til, så se på det som avskrekking snarere enn beskyttelse."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Sletter beskjæring innhold?",
           "a": "Beskjæring skjuler innholdet utenfor beskjæringsområdet. Det skjulte innholdet slettes ikke og kan hentes frem igjen senere."
+        },
+        {
+          "q": "Kan jeg beskjære en PDF på telefonen?",
+          "a": "Ja. Beskjær PDF kjører i nettleseren på telefonen, så du kan fjerne marger uten å installere en app eller laste opp filen."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Kan jeg signere en passordbeskyttet PDF?",
           "a": "Du må låse den opp først. Passordbeskyttede PDF-er kan ikke redigeres før passordet er fjernet."
+        },
+        {
+          "q": "Hvordan lager jeg signaturen min?",
+          "a": "Tegn den med mus eller finger, skriv navnet ditt med en håndskriftsskrift, eller last opp et bilde av den ekte signaturen din. Den plasseres på siden i nettleseren din og lagres aldri på en server."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Endrer opplåsingen innholdet i PDF-en?",
           "a": "Nei. Opplåsing fjerner bare passordbeskyttelsen. Innholdet i dokumentet forblir uendret."
+        },
+        {
+          "q": "Er det trygt å skrive inn PDF-passordet mitt her?",
+          "a": "Ja. Passordet og filen blir i nettleseren din og sendes aldri til en server."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Hva skjer hvis jeg glemmer passordet?",
           "a": "Det finnes ingen måte å gjenopprette det på. Filen er permanent utilgjengelig uten passordet. Ta alltid vare på det et trygt sted."
+        },
+        {
+          "q": "Blir PDF-en min lastet opp for å legge til et passord?",
+          "a": "Nei. Krypteringen skjer i nettleseren din, så den ubeskyttede filen og passordet forlater aldri enheten din."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Kan jeg sammenligne skannede PDF-er?",
           "a": "Kjør OCR PDF på begge skanningene først. Sammenligningen bruker teksten i filene, så skanninger som bare er bilder, har ingenting å sammenligne."
+        },
+        {
+          "q": "Blir begge PDF-ene lastet opp for å sammenlignes?",
+          "a": "Nei. Begge filene leses og sammenlignes i nettleseren din, så ingen av dem forlater enheten din."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Blir dokumentet mitt sendt til en server?",
           "a": "Nei. Sammendraget beregnes i nettleseren, og PDF-en forlater aldri enheten din."
+        },
+        {
+          "q": "Kan den oppsummere en skannet PDF?",
+          "a": "Ikke direkte. En skannet PDF har ikke noe tekstlag å lese. Kjør den gjennom OCR PDF først, og oppsummer deretter det søkbare resultatet."
         }
       ],
       "howTo": {

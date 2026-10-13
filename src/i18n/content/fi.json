@@ -64,6 +64,18 @@
     "whyToolHeading": "Miksi käyttää työkalua {tool} täällä?",
     "faqHeading": "{tool} – usein kysytyt kysymykset",
     "continueHeading": "Jatka toisella työkalulla",
+    "glanceHeading": "{tool} lyhyesti",
+    "glancePrice": "Hinta",
+    "glancePriceValue": "Ilmainen, ei maksullista versiota eikä käyttörajoja",
+    "glanceFile": "Tiedostosi",
+    "glanceFileValue": "Käsitellään selaimessasi, ei koskaan lähetetä palvelimelle",
+    "glanceFileTranslate": "Luetaan selaimessasi; vain poimittu teksti lähetetään käännöspalveluun",
+    "glanceAccount": "Tili",
+    "glanceAccountValue": "Ei tarvita",
+    "glanceWatermark": "Vesileima",
+    "glanceWatermarkValue": "Tiedostoosi ei lisätä vesileimaa",
+    "glanceDevices": "Toimii",
+    "glanceDevicesValue": "Missä tahansa nykyaikaisessa selaimessa Windowsissa, Macissa, Linuxissa, Androidissa ja iPhonessa",
     "seeAllTools": "Katso kaikki {count} PDF-työkalua"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Lähetetäänkö asiakirjani palvelimelle?",
           "a": "Ei. Jokainen toiminto suoritetaan selaimessasi. Asiakirjasi ei koskaan poistu laitteeltasi, joten työtila sopii erinomaisesti luottamuksellisiin ja arkaluonteisiin asiakirjoihin."
+        },
+        {
+          "q": "Onko PDF-työtila ilmainen, ja tarvitsenko tilin?",
+          "a": "Se on ilmainen, eikä siihen tarvita tiliä. Vesileimaa ei lisätä, eikä käsiteltävien asiakirjojen määrää ole rajoitettu. Avaa PDF ja aloita muokkaus."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Heikentääkö jakaminen laatua?",
           "a": "Ei. Jakaminen kopioi kokonaiset sivut uusiin asiakirjoihin. Teksti pysyy valittavana ja kuvat säilyttävät alkuperäisen tarkkuutensa."
+        },
+        {
+          "q": "Voinko jakaa PDF:n puhelimella ilman sovellusta?",
+          "a": "Voit. Jaa PDF toimii selaimessa Androidilla ja iPhonella, joten voit jakaa tiedoston asentamatta mitään ja lähettämättä sitä palvelimelle."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Onko tämä sama kuin jakaminen?",
           "a": "Ei. Jakaminen luo valituista sivuista erillisiä tiedostoja. Poistaminen poistaa sivut asiakirjasta, ja muut sivut säilyvät yhtenä tiedostona."
+        },
+        {
+          "q": "Onko turvallista poistaa sivuja luottamuksellisesta PDF:stä täällä?",
+          "a": "On. Sivut poistetaan selaimessasi, eikä tiedosto koskaan poistu laitteeltasi, joten mitään ei tallenneta palvelimelle."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Voinko poimia sivut eri järjestyksessä?",
           "a": "Voit. Luettele sivut haluamassasi järjestyksessä. Kun kirjoitat 9, 3, 5, saat tiedoston, jossa sivut ovat tässä järjestyksessä."
+        },
+        {
+          "q": "Onko sivujen poiminta ilmaista ja ilman vesileimaa?",
+          "a": "On. Poiminta on ilmaista ilman tiliä, eikä uudessa PDF:ssä ole vesileimaa tai lisättyä brändäystä."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Onko optimointi sama asia kuin pakkaaminen?",
           "a": "Pakkaaminen pienentää tiedostokokoa koodaamalla kuvat uudelleen. Optimointi keskittyy rakenteellisiin parannuksiin, jotka nopeuttavat latautumista ja piirtämistä."
+        },
+        {
+          "q": "Aukeaako optimoitu PDF yhä kaikissa PDF-lukijoissa?",
+          "a": "Aukeaa. Optimoinnin jälkeen tiedosto on edelleen tavallinen PDF, joten se aukeaa Adobe Readerissa, selaimissa, Preview'ssa ja mobiilikatseluohjelmissa kuten ennenkin."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Voiko korjaus palauttaa kaiken sisällön?",
           "a": "Korjaus rakentaa PDF:n rakenteen uudelleen. Se, mitä saadaan palautettua, riippuu siitä, kuinka paljon alkuperäisestä datasta on säilynyt ehjänä."
+        },
+        {
+          "q": "Lähetetäänkö vioittunut PDF:ni palvelimelle korjattavaksi?",
+          "a": "Ei. Korjaus tehdään selaimessasi, joten vioittunut sopimus tai tiliote ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Kuinka tarkka OCR on?",
           "a": "Tarkkuus riippuu skannauksen laadusta. Selkeillä, tarkoilla skannauksilla päästään tyypillisesti 95–99 %:n tarkkuuteen. Heikkolaatuisissa skannauksissa virheitä voi olla enemmän."
+        },
+        {
+          "q": "Lähettääkö OCR PDF skannaukseni palvelimelle?",
+          "a": "Ei. Tunnistusmoottori ja sen kielitiedot ladataan selaimeesi kerran, minkä jälkeen jokainen sivu luetaan omalla laitteellasi."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Voinko yhdistää useita kuvia yhdeksi PDF:ksi?",
           "a": "Voit. Lataa kaikki JPG-kuvasi, järjestä ne ja muunna. Jokaisesta kuvasta tulee yksi sivu syntyvään PDF:ään."
+        },
+        {
+          "q": "Voinko muuntaa kuvia PDF:ksi puhelimella?",
+          "a": "Voit. Avaa JPG PDF:ksi puhelimesi selaimessa, valitse kuvat galleriasta ja lataa yksi PDF. Mitään ei lähetetä palvelimelle."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Tarvitsenko Microsoft Wordin?",
           "a": "Et. Muunnos tapahtuu selaimessasi. Ohjelmia ei tarvitse asentaa."
+        },
+        {
+          "q": "Lähetetäänkö Word-asiakirjani palvelimelle muunnettavaksi?",
+          "a": "Ei. DOCX-tiedosto luetaan ja muunnetaan PDF:ksi selaimessasi, joten se ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Voinko muuntaa vain tietyt diat?",
           "a": "Muunnos käsittelee koko esityksen. Jos tarvitset vain tietyt diat, poimi ne muunnoksen jälkeen Poimi sivuja -työkalulla."
+        },
+        {
+          "q": "Lähetetäänkö esitykseni palvelimelle muunnettavaksi?",
+          "a": "Ei. PPTX-tiedosto muunnetaan selaimessasi, eikä se koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Voinko muuntaa vain tietyt laskentataulukot?",
           "a": "Muunnos käsittelee koko työkirjan. Jos tarvitset vain tietyt taulukot, tallenna ne ensin erilliseksi tiedostoksi."
+        },
+        {
+          "q": "Lähetetäänkö laskentataulukkoni palvelimelle muunnettavaksi?",
+          "a": "Ei. XLSX-tiedosto luetaan ja muunnetaan PDF:ksi selaimessasi, joten taloustiedot eivät koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Näyttääkö PDF samalta kuin verkkosivu?",
           "a": "PDF tallentaa sivun piirretyn sisällön. Monimutkaiset asettelut voivat poiketa hieman alkuperäisestä."
+        },
+        {
+          "q": "Täytyykö minun asentaa jotain, jotta voin muuntaa HTML:n PDF:ksi?",
+          "a": "Ei. Liitä HTML-koodi tai valitse .html-tiedosto, niin PDF luodaan selaimessasi ilman ohjelmistoa, laajennusta tai tiliä."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Voinko muuntaa vain tietyt sivut?",
           "a": "Voit. Muunna kaikki sivut tai määritä sivuväli, jos tarvitset vain tietyt sivut."
+        },
+        {
+          "q": "Lähetetäänkö PDF:ni palvelimelle JPG-muunnosta varten?",
+          "a": "Ei. Jokainen sivu muunnetaan kuvaksi selaimessasi, joten PDF ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Toimiiko tämä skannatuille PDF-tiedostoille?",
           "a": "Skannatuista PDF-tiedostoista teksti täytyy ensin tunnistaa OCR:llä. Parhaan tuloksen saat, kun ajat ensin OCR:n ja muunnat sitten tuloksen Wordiksi."
+        },
+        {
+          "q": "Lähetetäänkö PDF:ni palvelimelle Word-muunnosta varten?",
+          "a": "Ei. Teksti poimitaan ja DOCX-tiedosto rakennetaan selaimessasi, joten PDF ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Voinko muokata syntyviä dioja?",
           "a": "Voit. Tuloksena on tavallinen PPTX-tiedosto, jota voi muokata missä tahansa PowerPoint-yhteensopivassa sovelluksessa."
+        },
+        {
+          "q": "Lähetetäänkö PDF:ni palvelimelle PowerPoint-muunnosta varten?",
+          "a": "Ei. Diat rakennetaan selaimessasi, joten PDF ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Miksi minun kannattaisi muuntaa PDF/A-muotoon?",
           "a": "Monilla aloilla asiakirjojen säilytys edellyttää PDF/A-muotoa. Se varmistaa, että fontit on upotettu, värit on määritelty ja asiakirja on itsenäinen."
+        },
+        {
+          "q": "Läpäiseekö tulos varmasti PDF/A-validoinnin?",
+          "a": "Ei aina. Työkalu lisää PDF/A-tunnistemetatiedot, mutta jos lähdetiedostosta puuttuu fontteja tai siinä on läpinäkyvyyttä, se voi silti jäädä läpäisemättä tiukat tarkistukset. Jos arkisto sitä vaatii, tarkista tulos validointityökalulla, kuten veraPDF:llä."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Voinko muuntaa vain tietyt sivut?",
           "a": "Koko asiakirja muunnetaan. Jos haluat muuntaa vain osan sivuista, käytä ensin Poimi sivuja -työkalua ja muunna syntynyt tiedosto."
+        },
+        {
+          "q": "Voinko käyttää Markdownia ChatGPT:n tai muiden tekoälytyökalujen kanssa?",
+          "a": "Voit. Markdown säilyttää otsikot ja luettelot pelkkänä tekstinä, jota tekoälyavustajat ja muistiinpanosovellukset lukevat siististi. Itse muunnos tehdään selaimessasi."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Muuttuuko muotoilu muokatessa?",
           "a": "Suora muokkaus säilyttää alkuperäisen muotoilun. Vain muuttamasi teksti muuttuu – fontit, välit ja asettelu pysyvät ennallaan."
+        },
+        {
+          "q": "Voinko muokata skannattua PDF:ää?",
+          "a": "Ei suoraan. Skannaus on kuva tekstistä, joten siinä ei ole sanoja, joita voisi muuttaa paikallaan. Tee siitä haettava OCR PDF -työkalulla ja kopioi teksti, ja muokkaa sitä sitten tekstinkäsittelyohjelmassa."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Vaikuttaako kiertäminen tulostuslaatuun?",
           "a": "Ei. Kiertäminen on metatietomuutos, joka kertoo katseluohjelmalle, miten sivu näytetään. Sisältöä ei piirretä uudelleen."
+        },
+        {
+          "q": "Onko kierto pysyvä?",
+          "a": "On. Uusi suunta tallennetaan ladattuun PDF:ään, joten se aukeaa oikein päin jokaisessa katseluohjelmassa."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Voinko jättää ensimmäisen sivun numeroimatta?",
           "a": "Voit. Valitse asetus, jolla numerointi alkaa tietyltä sivulta, esimerkiksi sivulta 2 tai 3, jolloin kansilehdet jäävät numeroimatta."
+        },
+        {
+          "q": "Lähetetäänkö PDF:ni palvelimelle sivunumeroiden lisäämistä varten?",
+          "a": "Ei. Numerot piirretään sivuille selaimessasi, joten tiedosto ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Voinko lisätä vesileiman kaikille sivuille kerralla?",
           "a": "Voit. Vesileima lisätään asiakirjan jokaiselle sivulle samanaikaisesti."
+        },
+        {
+          "q": "Voiko vesileiman poistaa myöhemmin?",
+          "a": "Tekstivesileima piirretään osaksi sivun sisältöä, joten sitä ei voi kytkeä pois kuten kommenttia. Muokkausohjelmalla sen voi silti peittää, joten pidä sitä pikemminkin pelotteena kuin suojauksena."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Poistaako rajaaminen sisältöä?",
           "a": "Rajaaminen piilottaa rajausalueen ulkopuolisen sisällön. Piilotettua sisältöä ei poisteta, ja rajauksen voi myöhemmin kumota."
+        },
+        {
+          "q": "Voinko rajata PDF:n puhelimella?",
+          "a": "Voit. Rajaa PDF toimii puhelimesi selaimessa, joten voit leikata marginaalit asentamatta sovellusta tai lähettämättä tiedostoa palvelimelle."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Voinko allekirjoittaa salasanalla suojatun PDF:n?",
           "a": "Sinun täytyy ensin avata sen lukitus. Salasanalla suojattuja PDF-tiedostoja ei voi muokata ennen kuin salasana on poistettu."
+        },
+        {
+          "q": "Miten luon allekirjoitukseni?",
+          "a": "Piirrä se hiirellä tai sormella, kirjoita nimesi käsialafontilla tai lisää valokuva oikeasta allekirjoituksestasi. Se sijoitetaan sivulle selaimessasi, eikä sitä koskaan tallenneta palvelimelle."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Muuttuuko PDF:n sisältö, kun lukitus avataan?",
           "a": "Ei. Lukituksen avaaminen poistaa vain salasanasuojauksen. Asiakirjan sisältö pysyy ennallaan."
+        },
+        {
+          "q": "Onko turvallista kirjoittaa PDF:n salasana tänne?",
+          "a": "On. Salasana ja tiedosto pysyvät selaimessasi, eikä niitä koskaan lähetetä palvelimelle."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Mitä tapahtuu, jos unohdan salasanan?",
           "a": "Palautusmekanismia ei ole. Tiedostoa ei voi enää koskaan avata ilman salasanaa. Säilytä salasana aina turvallisessa paikassa."
+        },
+        {
+          "q": "Lähetetäänkö PDF:ni palvelimelle salasanan lisäämistä varten?",
+          "a": "Ei. Salaus tehdään selaimessasi, joten suojaamaton tiedosto ja salasana eivät koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Voinko vertailla skannattuja PDF-tiedostoja?",
           "a": "Käsittele molemmat skannaukset ensin OCR PDF -työkalulla. Vertailu perustuu tiedostojen sisältämään tekstiin, joten pelkistä kuvista koostuvissa skannauksissa ei ole mitään vertailtavaa."
+        },
+        {
+          "q": "Lähetetäänkö molemmat PDF:t palvelimelle vertailua varten?",
+          "a": "Ei. Molemmat tiedostot luetaan ja niitä verrataan selaimessasi, joten kumpikaan ei poistu laitteeltasi."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Lähetetäänkö asiakirjani palvelimelle?",
           "a": "Ei. Tiivistelmä lasketaan selaimessasi, eikä PDF koskaan poistu laitteeltasi."
+        },
+        {
+          "q": "Voiko se tiivistää skannatun PDF:n?",
+          "a": "Ei suoraan. Skannatussa PDF:ssä ei ole luettavaa tekstikerrosta. Aja se ensin OCR PDF -työkalun läpi ja tiivistä sitten haettava tulos."
         }
       ],
       "howTo": {

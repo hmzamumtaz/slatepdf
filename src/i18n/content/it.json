@@ -64,6 +64,18 @@
     "whyToolHeading": "Perché usare {tool} qui?",
     "faqHeading": "{tool}: domande frequenti",
     "continueHeading": "Continua con un altro strumento",
+    "glanceHeading": "{tool} in breve",
+    "glancePrice": "Prezzo",
+    "glancePriceValue": "Gratis, senza piani a pagamento né limiti d’uso",
+    "glanceFile": "Il tuo file",
+    "glanceFileValue": "Elaborato nel tuo browser, mai caricato",
+    "glanceFileTranslate": "Letto nel tuo browser; solo il testo estratto viene inviato a un servizio di traduzione",
+    "glanceAccount": "Account",
+    "glanceAccountValue": "Non serve",
+    "glanceWatermark": "Filigrana",
+    "glanceWatermarkValue": "Nessuna aggiunta al tuo file",
+    "glanceDevices": "Funziona su",
+    "glanceDevicesValue": "Qualsiasi browser moderno su Windows, Mac, Linux, Android e iPhone",
     "seeAllTools": "Vedi tutti i {count} strumenti PDF"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Il mio documento viene caricato su un server?",
           "a": "No. Ogni operazione avviene nel browser. Il documento non lascia mai il tuo dispositivo, il che rende l'area di lavoro ideale per il lavoro riservato e sensibile."
+        },
+        {
+          "q": "L’Area di lavoro PDF è gratuita? Serve un account?",
+          "a": "È gratuita, senza account, senza filigrana e senza limiti al numero di documenti. Apri un PDF e inizia a modificarlo."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Dividere un PDF ne riduce la qualità?",
           "a": "No. La divisione copia le pagine intere in nuovi documenti. Il testo resta selezionabile e le immagini mantengono la risoluzione originale."
+        },
+        {
+          "q": "Posso dividere un PDF sul telefono senza un’app?",
+          "a": "Sì. Dividere PDF funziona nel browser su Android e iPhone, quindi puoi dividere un file senza installare nulla né caricarlo."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "È la stessa cosa che dividere un PDF?",
           "a": "No. Dividere crea file separati a partire dalle pagine selezionate. Eliminare rimuove le pagine dal documento e mantiene il resto in un unico file."
+        },
+        {
+          "q": "È sicuro eliminare qui le pagine di un PDF riservato?",
+          "a": "Sì. Le pagine vengono eliminate nel tuo browser e il file non lascia mai il tuo dispositivo, quindi nulla viene salvato su un server."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Posso estrarre le pagine in un ordine diverso?",
           "a": "Sì. Elenca le pagine nell'ordine che desideri. Inserendo 9, 3, 5 ottieni un file con le pagine in quella sequenza."
+        },
+        {
+          "q": "Estrarre pagine è gratis e senza filigrana?",
+          "a": "Sì. L’estrazione è gratuita e senza account, e il nuovo PDF non ha filigrane né loghi aggiunti."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Ottimizzare è come comprimere?",
           "a": "La compressione riduce le dimensioni del file ricodificando le immagini. L'ottimizzazione si concentra su miglioramenti strutturali che velocizzano il caricamento e il rendering."
+        },
+        {
+          "q": "Un PDF ottimizzato si aprirà ancora in qualsiasi lettore PDF?",
+          "a": "Sì. L’ottimizzazione mantiene il file un PDF standard, quindi si apre come prima in Adobe Reader, nei browser, in Preview e nei visualizzatori per smartphone."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "La riparazione recupera tutto il contenuto?",
           "a": "La riparazione ricostruisce la struttura del PDF. Il recupero dipende da quanta parte dei dati originali è ancora intatta."
+        },
+        {
+          "q": "Il mio PDF danneggiato viene caricato per ripararlo?",
+          "a": "No. La riparazione avviene nel tuo browser, quindi un contratto o un estratto conto danneggiato non lascia mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Quanto è preciso l'OCR?",
           "a": "La precisione dipende dalla qualità della scansione. Scansioni nitide e ad alta risoluzione raggiungono in genere il 95-99% di precisione. Scansioni di bassa qualità possono contenere più errori."
+        },
+        {
+          "q": "OCR PDF carica le mie scansioni?",
+          "a": "No. Il motore di riconoscimento e i dati della lingua vengono scaricati una sola volta nel tuo browser, poi ogni pagina viene letta sul tuo dispositivo."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Posso combinare più immagini in un unico PDF?",
           "a": "Sì. Carica tutti i tuoi JPG, disponili nell'ordine desiderato e converti. Ogni immagine diventa una pagina del PDF risultante."
+        },
+        {
+          "q": "Posso convertire foto in PDF dal telefono?",
+          "a": "Sì. Apri JPG in PDF nel browser del telefono, scegli le foto dalla galleria e scarica un unico PDF. Non viene caricato nulla."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Devo avere Microsoft Word installato?",
           "a": "No. La conversione avviene nel browser. Non serve installare alcun software."
+        },
+        {
+          "q": "Il mio documento Word viene caricato per convertirlo?",
+          "a": "No. Il file DOCX viene letto e trasformato in PDF nel tuo browser, quindi non lascia mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Posso convertire solo alcune diapositive?",
           "a": "La conversione elabora l'intera presentazione. Per ottenere diapositive specifiche, estraile dopo la conversione con lo strumento Estrarre pagine PDF."
+        },
+        {
+          "q": "La mia presentazione viene caricata per convertirla?",
+          "a": "No. Il file PPTX viene convertito nel tuo browser e non lascia mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Posso convertire solo alcuni fogli di lavoro?",
           "a": "La conversione elabora l'intera cartella di lavoro. Per fogli specifici, potrebbe essere necessario salvarli prima in un file separato."
+        },
+        {
+          "q": "Il mio foglio di calcolo viene caricato per convertirlo?",
+          "a": "No. Il file XLSX viene letto e trasformato in PDF nel tuo browser, quindi i dati finanziari non lasciano mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Il PDF avrà lo stesso aspetto della pagina web?",
           "a": "Il PDF acquisisce il contenuto della pagina così come viene visualizzato. I layout complessi possono differire leggermente dall'originale."
+        },
+        {
+          "q": "Devo installare qualcosa per convertire HTML in PDF?",
+          "a": "No. Incolla l’HTML o scegli un file .html e il PDF viene creato nel tuo browser, senza programmi, estensioni o account."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Posso convertire solo alcune pagine?",
           "a": "Sì. Scegli se convertire tutte le pagine o indica un intervallo per estrarre solo quelle che ti servono."
+        },
+        {
+          "q": "Il mio PDF viene caricato per convertirlo in JPG?",
+          "a": "No. Ogni pagina viene trasformata in immagine nel tuo browser, quindi il PDF non lascia mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Funziona con i PDF scansionati?",
           "a": "I PDF scansionati richiedono prima l'OCR per estrarre il testo. Esegui l'OCR, poi converti il risultato in Word per ottenere risultati migliori."
+        },
+        {
+          "q": "Il mio PDF viene caricato per convertirlo in Word?",
+          "a": "No. Il testo viene estratto e il DOCX viene creato nel tuo browser, quindi il PDF non lascia mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Posso modificare le diapositive ottenute?",
           "a": "Sì. Il risultato è un normale file PPTX che puoi modificare con qualsiasi applicazione compatibile con PowerPoint."
+        },
+        {
+          "q": "Il mio PDF viene caricato per convertirlo in PowerPoint?",
+          "a": "No. Le slide vengono create nel tuo browser, quindi il PDF non lascia mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Perché dovrei convertire in PDF/A?",
           "a": "Molti settori richiedono il PDF/A per la conservazione dei documenti. Garantisce che i font siano incorporati, i colori definiti e il documento autosufficiente."
+        },
+        {
+          "q": "Il risultato supera sempre un validatore PDF/A?",
+          "a": "Non sempre. Lo strumento aggiunge i metadati di identificazione PDF/A, ma un file di origine con font mancanti o trasparenze può comunque non superare i controlli più severi. Se un archivio lo richiede, verificalo con un validatore come veraPDF."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Posso convertire solo alcune pagine?",
           "a": "Viene convertito l'intero documento. Per convertire solo alcune pagine, usa prima Estrarre pagine PDF e poi converti quel file."
+        },
+        {
+          "q": "Posso usare il Markdown con ChatGPT o altri strumenti di IA?",
+          "a": "Sì. Il Markdown conserva titoli ed elenchi come testo semplice, che gli assistenti IA e le app di note leggono senza problemi. La conversione in sé avviene nel tuo browser."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "La modifica cambierà la formattazione?",
           "a": "La modifica diretta mantiene la formattazione originale. Viene toccato solo il testo che cambi: font, spaziatura e layout restano intatti."
+        },
+        {
+          "q": "Posso modificare un PDF scansionato?",
+          "a": "Non direttamente. Una scansione è un’immagine del testo, quindi non ci sono parole da modificare sul posto. Usa OCR PDF per renderlo ricercabile e copiare il testo, poi modificalo in un programma di videoscrittura."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "La rotazione influisce sulla qualità di stampa?",
           "a": "No. La rotazione è una modifica dei metadati che indica al visualizzatore come mostrare la pagina. Il contenuto non viene rielaborato."
+        },
+        {
+          "q": "La rotazione è permanente?",
+          "a": "Sì. Il nuovo orientamento viene salvato nel PDF scaricato, quindi si apre nel verso giusto in qualsiasi visualizzatore."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Posso saltare la numerazione della prima pagina?",
           "a": "Sì. Seleziona l'opzione per iniziare la numerazione da una pagina specifica, come la 2 o la 3, per saltare le copertine."
+        },
+        {
+          "q": "Il mio PDF viene caricato per aggiungere i numeri di pagina?",
+          "a": "No. I numeri vengono disegnati sulle pagine nel tuo browser, quindi il file non lascia mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Posso applicare la filigrana a tutte le pagine in una volta?",
           "a": "Sì. La filigrana viene applicata contemporaneamente a tutte le pagine del documento."
+        },
+        {
+          "q": "Una filigrana si può rimuovere in seguito?",
+          "a": "Una filigrana di testo viene disegnata nel contenuto della pagina, quindi non si può disattivare come un commento. Chi ha un software di modifica può comunque coprirla, perciò considerala un deterrente più che una protezione."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Il ritaglio elimina il contenuto?",
           "a": "Il ritaglio nasconde il contenuto al di fuori dell'area di ritaglio. Il contenuto nascosto non viene eliminato e può essere ripristinato in seguito."
+        },
+        {
+          "q": "Posso ritagliare un PDF dal telefono?",
+          "a": "Sì. Ritagliare PDF funziona nel browser del telefono, quindi puoi rifilare i margini senza installare app né caricare il file."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Posso firmare un PDF protetto da password?",
           "a": "Devi prima sbloccarlo. I PDF protetti da password non possono essere modificati finché la password non viene rimossa."
+        },
+        {
+          "q": "Come posso creare la mia firma?",
+          "a": "Disegnala con il mouse o con il dito, scrivi il tuo nome con un font in stile corsivo oppure carica una foto della tua firma vera. Viene posizionata sulla pagina nel tuo browser e non viene mai salvata su un server."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Lo sblocco modificherà il contenuto del PDF?",
           "a": "No. Lo sblocco rimuove solo la protezione con password. Il contenuto del documento resta invariato."
+        },
+        {
+          "q": "È sicuro inserire qui la password del mio PDF?",
+          "a": "Sì. La password e il file restano nel tuo browser e non vengono mai inviati a un server."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Cosa succede se dimentico la password?",
           "a": "Non esiste un meccanismo di recupero. Senza la password il file resta inaccessibile per sempre. Conservala sempre in un posto sicuro."
+        },
+        {
+          "q": "Il mio PDF viene caricato per aggiungere una password?",
+          "a": "No. La crittografia avviene nel tuo browser, quindi il file non protetto e la password non lasciano mai il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Posso confrontare PDF scansionati?",
           "a": "Usa prima OCR PDF su entrambe le scansioni. Il confronto lavora sul testo contenuto nei file, quindi le scansioni composte solo da immagini non hanno nulla da confrontare."
+        },
+        {
+          "q": "Entrambi i PDF vengono caricati per confrontarli?",
+          "a": "No. Entrambi i file vengono letti e confrontati nel tuo browser, quindi nessuno dei due lascia il tuo dispositivo."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Il mio documento viene inviato a un server?",
           "a": "No. Il riassunto viene calcolato nel browser e il PDF non lascia mai il tuo dispositivo."
+        },
+        {
+          "q": "Può riassumere un PDF scansionato?",
+          "a": "Non direttamente. Un PDF scansionato non ha un livello di testo da leggere. Passalo prima in OCR PDF, poi riassumi il risultato ricercabile."
         }
       ],
       "howTo": {

@@ -64,6 +64,18 @@
     "whyToolHeading": "Waarom {tool} hier gebruiken?",
     "faqHeading": "{tool} — veelgestelde vragen",
     "continueHeading": "Ga verder met een andere tool",
+    "glanceHeading": "{tool} in het kort",
+    "glancePrice": "Prijs",
+    "glancePriceValue": "Gratis, zonder betaald abonnement en zonder gebruikslimiet",
+    "glanceFile": "Je bestand",
+    "glanceFileValue": "Verwerkt in je browser, nooit geüpload",
+    "glanceFileTranslate": "Gelezen in je browser; alleen de geëxtraheerde tekst gaat naar een vertaaldienst",
+    "glanceAccount": "Account",
+    "glanceAccountValue": "Niet nodig",
+    "glanceWatermark": "Watermerk",
+    "glanceWatermarkValue": "Er wordt niets aan je bestand toegevoegd",
+    "glanceDevices": "Werkt op",
+    "glanceDevicesValue": "Elke moderne browser op Windows, Mac, Linux, Android en iPhone",
     "seeAllTools": "Bekijk alle {count} PDF-tools"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Wordt mijn document naar een server geüpload?",
           "a": "Nee. Elke handeling wordt in je browser uitgevoerd. Je document verlaat nooit je apparaat, waardoor de werkruimte ideaal is voor vertrouwelijk en gevoelig werk."
+        },
+        {
+          "q": "Is de PDF-werkruimte gratis en heb ik een account nodig?",
+          "a": "Hij is gratis, zonder account, zonder watermerk en zonder limiet op het aantal documenten waaraan je werkt. Open een PDF en begin met bewerken."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Gaat de kwaliteit achteruit door splitsen?",
           "a": "Nee. Bij splitsen worden complete paginaobjecten naar nieuwe documenten gekopieerd. Tekst blijft selecteerbaar en afbeeldingen behouden hun oorspronkelijke resolutie."
+        },
+        {
+          "q": "Kan ik een PDF op mijn telefoon splitsen zonder app?",
+          "a": "Ja. PDF splitsen werkt in de browser op Android en iPhone, dus je splitst een bestand zonder iets te installeren of te uploaden."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Is dit hetzelfde als splitsen?",
           "a": "Nee. Splitsen maakt aparte bestanden van gekozen pagina's. Verwijderen haalt pagina's uit het document en houdt de rest bij elkaar in één bestand."
+        },
+        {
+          "q": "Is het veilig om hier pagina's uit een vertrouwelijke PDF te verwijderen?",
+          "a": "Ja. De pagina's worden in je browser verwijderd en het bestand verlaat je apparaat nooit, dus er wordt niets op een server opgeslagen."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Kan ik pagina's in een andere volgorde extraheren?",
           "a": "Ja. Zet de pagina's in de volgorde die je wilt. Met 9, 3, 5 krijg je een bestand met de pagina's in precies die volgorde."
+        },
+        {
+          "q": "Is pagina's extraheren gratis en zonder watermerk?",
+          "a": "Ja. Extraheren is gratis zonder account, en de nieuwe PDF krijgt geen watermerk of toegevoegde branding."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Is optimaliseren hetzelfde als comprimeren?",
           "a": "Comprimeren verkleint het bestand door afbeeldingen opnieuw te coderen. Optimaliseren richt zich op verbeteringen in de structuur die laden en weergeven versnellen."
+        },
+        {
+          "q": "Opent een geoptimaliseerde PDF nog in elke PDF-lezer?",
+          "a": "Ja. Na het optimaliseren blijft het een standaard-PDF, dus hij opent zoals vanouds in Adobe Reader, browsers, Preview en mobiele viewers."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Kan repareren alle inhoud terughalen?",
           "a": "Repareren werkt door de PDF-structuur opnieuw op te bouwen. Hoeveel er terugkomt, hangt af van hoeveel van de oorspronkelijke gegevens nog intact is."
+        },
+        {
+          "q": "Wordt mijn beschadigde PDF geüpload om hem te repareren?",
+          "a": "Nee. De reparatie gebeurt in je browser, dus een beschadigd contract of afschrift verlaat je apparaat nooit."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Hoe nauwkeurig is OCR?",
           "a": "De nauwkeurigheid hangt af van de kwaliteit van de scan. Heldere scans met een hoge resolutie halen meestal 95-99% nauwkeurigheid. Scans van slechte kwaliteit kunnen meer fouten bevatten."
+        },
+        {
+          "q": "Uploadt OCR PDF mijn scans?",
+          "a": "Nee. De herkenningsengine en de taaldata worden één keer naar je browser gedownload; daarna wordt elke pagina op je eigen apparaat gelezen."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Kan ik meerdere afbeeldingen combineren in één PDF?",
           "a": "Ja. Laad al je JPG's, zet ze in de juiste volgorde en zet ze om. Elke afbeelding wordt één pagina in de PDF."
+        },
+        {
+          "q": "Kan ik foto's op mijn telefoon naar PDF omzetten?",
+          "a": "Ja. Open JPG naar PDF in de browser van je telefoon, kies foto's uit je galerij en download één PDF. Er wordt niets geüpload."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Moet Microsoft Word geïnstalleerd zijn?",
           "a": "Nee. De conversie gebeurt in je browser. Je hoeft geen software te installeren."
+        },
+        {
+          "q": "Wordt mijn Word-document geüpload om het om te zetten?",
+          "a": "Nee. Het DOCX-bestand wordt in je browser gelezen en naar PDF omgezet, dus het verlaat je apparaat nooit."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Kan ik specifieke dia's omzetten?",
           "a": "De hele presentatie wordt omgezet. Wil je alleen bepaalde dia's, haal die dan na de conversie eruit met de tool Pagina's extraheren."
+        },
+        {
+          "q": "Wordt mijn presentatie geüpload om hem om te zetten?",
+          "a": "Nee. Het PPTX-bestand wordt in je browser omgezet en verlaat je apparaat nooit."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Kan ik specifieke werkbladen omzetten?",
           "a": "De hele werkmap wordt omgezet. Voor specifieke werkbladen moet je die mogelijk eerst als apart bestand opslaan."
+        },
+        {
+          "q": "Wordt mijn spreadsheet geüpload om hem om te zetten?",
+          "a": "Nee. Het XLSX-bestand wordt in je browser gelezen en naar PDF omgezet, dus financiële gegevens verlaten je apparaat nooit."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Ziet de PDF eruit als de webpagina?",
           "a": "De PDF legt de weergegeven inhoud van de pagina vast. Complexe indelingen kunnen iets afwijken van het origineel."
+        },
+        {
+          "q": "Moet ik iets installeren om HTML naar PDF om te zetten?",
+          "a": "Nee. Plak de HTML of kies een .html-bestand en de PDF wordt in je browser gemaakt, zonder software, extensie of account."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Kan ik specifieke pagina's omzetten?",
           "a": "Ja. Zet alle pagina's om of geef een paginabereik op om alleen de pagina's te krijgen die je nodig hebt."
+        },
+        {
+          "q": "Wordt mijn PDF geüpload om hem naar JPG om te zetten?",
+          "a": "Nee. Elke pagina wordt in je browser als afbeelding weergegeven, dus de PDF verlaat je apparaat nooit."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Werkt dit met gescande PDF's?",
           "a": "Gescande PDF's hebben eerst OCR nodig om de tekst eruit te halen. Voer OCR uit en zet het resultaat daarna om naar Word voor het beste resultaat."
+        },
+        {
+          "q": "Wordt mijn PDF geüpload om hem naar Word om te zetten?",
+          "a": "Nee. De tekst wordt geëxtraheerd en de DOCX wordt in je browser opgebouwd, dus de PDF verlaat je apparaat nooit."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Kan ik de dia's daarna bewerken?",
           "a": "Ja. Je krijgt een standaard PPTX-bestand dat je in elk programma kunt bewerken dat met PowerPoint overweg kan."
+        },
+        {
+          "q": "Wordt mijn PDF geüpload om hem naar PowerPoint om te zetten?",
+          "a": "Nee. De dia's worden in je browser gemaakt, dus de PDF verlaat je apparaat nooit."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Waarom zou ik naar PDF/A omzetten?",
           "a": "Veel sectoren vereisen PDF/A voor het bewaren van documenten. Het zorgt ervoor dat lettertypen zijn ingesloten, kleuren zijn vastgelegd en het document op zichzelf staat."
+        },
+        {
+          "q": "Komt het resultaat gegarandeerd door een PDF/A-validator?",
+          "a": "Niet altijd. De tool voegt PDF/A-identificatiemetadata toe, maar een bronbestand met ontbrekende lettertypen of transparantie kan strenge controles nog steeds niet doorstaan. Controleer het dus met een validator zoals veraPDF als een archief dat vereist."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Kan ik specifieke pagina's omzetten?",
           "a": "Het hele document wordt omgezet. Wil je maar een paar pagina's omzetten, gebruik dan eerst Pagina's extraheren en zet dat bestand om."
+        },
+        {
+          "q": "Kan ik de Markdown gebruiken met ChatGPT of andere AI-tools?",
+          "a": "Ja. Markdown houdt koppen en lijsten als platte tekst, die AI-assistenten en notitie-apps netjes kunnen lezen. De omzetting zelf gebeurt in je browser."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Verandert de opmaak door het bewerken?",
           "a": "Rechtstreeks bewerken behoudt de oorspronkelijke opmaak. Alleen de tekst die je wijzigt verandert — lettertypen, afstanden en indeling blijven intact."
+        },
+        {
+          "q": "Kan ik een gescande PDF bewerken?",
+          "a": "Niet rechtstreeks. Een scan is een afbeelding van tekst, dus er zijn geen woorden die je ter plekke kunt aanpassen. Maak hem met OCR PDF doorzoekbaar, kopieer de tekst en bewerk die in een tekstverwerker."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Heeft draaien invloed op de afdrukkwaliteit?",
           "a": "Nee. Draaien is een wijziging in de metadata die de viewer vertelt hoe de pagina moet worden weergegeven. De inhoud wordt niet opnieuw opgebouwd."
+        },
+        {
+          "q": "Is de draaiing blijvend?",
+          "a": "Ja. De nieuwe stand wordt opgeslagen in de gedownloade PDF, dus hij opent in elke viewer de goede kant op."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Kan ik de eerste pagina overslaan bij het nummeren?",
           "a": "Ja. Kies de optie om vanaf een bepaalde pagina te beginnen, zoals pagina 2 of 3, om voorbladen over te slaan."
+        },
+        {
+          "q": "Wordt mijn PDF geüpload om paginanummers toe te voegen?",
+          "a": "Nee. De nummers worden in je browser op de pagina's gezet, dus het bestand verlaat je apparaat nooit."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Kan ik alle pagina's tegelijk van een watermerk voorzien?",
           "a": "Ja. Het watermerk wordt in één keer op elke pagina van het document gezet."
+        },
+        {
+          "q": "Kan een watermerk later worden verwijderd?",
+          "a": "Een tekstwatermerk wordt in de pagina-inhoud getekend, dus je kunt het niet uitzetten zoals een opmerking. Iemand met bewerkingssoftware kan het nog wel afdekken, dus zie het als afschrikmiddel, niet als beveiliging."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Wordt er inhoud verwijderd door bijsnijden?",
           "a": "Bijsnijden verbergt de inhoud buiten het bijsnijgebied. De verborgen inhoud wordt niet verwijderd en kan later weer zichtbaar worden gemaakt."
+        },
+        {
+          "q": "Kan ik een PDF op mijn telefoon bijsnijden?",
+          "a": "Ja. PDF bijsnijden werkt in de browser van je telefoon, dus je knipt marges weg zonder een app te installeren of het bestand te uploaden."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Kan ik een PDF met een wachtwoord ondertekenen?",
           "a": "Dan moet je hem eerst ontgrendelen. Een PDF met een wachtwoord kan pas worden bewerkt als het wachtwoord is verwijderd."
+        },
+        {
+          "q": "Hoe maak ik mijn handtekening?",
+          "a": "Teken hem met je muis of vinger, typ je naam in een handschriftlettertype of upload een foto van je echte handtekening. Hij wordt in je browser op de pagina geplaatst en nooit op een server opgeslagen."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Verandert ontgrendelen de inhoud van de PDF?",
           "a": "Nee. Ontgrendelen verwijdert alleen de wachtwoordbeveiliging. De inhoud van het document blijft ongewijzigd."
+        },
+        {
+          "q": "Is het veilig om hier het wachtwoord van mijn PDF in te voeren?",
+          "a": "Ja. Het wachtwoord en het bestand blijven in je browser en worden nooit naar een server gestuurd."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Wat gebeurt er als ik het wachtwoord vergeet?",
           "a": "Er is geen manier om het te herstellen. Zonder het wachtwoord is het bestand voorgoed ontoegankelijk. Bewaar het dus altijd op een veilige plek."
+        },
+        {
+          "q": "Wordt mijn PDF geüpload om er een wachtwoord op te zetten?",
+          "a": "Nee. De versleuteling gebeurt in je browser, dus het onbeveiligde bestand en het wachtwoord verlaten je apparaat nooit."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Kan ik gescande PDF's vergelijken?",
           "a": "Gebruik eerst OCR PDF op beide scans. De vergelijking werkt op de tekst in de bestanden, dus scans die alleen uit afbeeldingen bestaan, hebben niets om te vergelijken."
+        },
+        {
+          "q": "Worden beide PDF's geüpload om ze te vergelijken?",
+          "a": "Nee. Beide bestanden worden in je browser gelezen en vergeleken, dus geen van beide verlaat je apparaat."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Wordt mijn document naar een server gestuurd?",
           "a": "Nee. De samenvatting wordt in je browser berekend en de PDF verlaat nooit je apparaat."
+        },
+        {
+          "q": "Kan hij een gescande PDF samenvatten?",
+          "a": "Niet rechtstreeks. Een gescande PDF heeft geen tekstlaag om te lezen. Haal hem eerst door OCR PDF en vat daarna het doorzoekbare resultaat samen."
         }
       ],
       "howTo": {

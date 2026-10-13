@@ -64,6 +64,18 @@
     "whyToolHeading": "Mengapa guna {tool} di sini?",
     "faqHeading": "{tool} — soalan lazim",
     "continueHeading": "Teruskan dengan alat lain",
+    "glanceHeading": "{tool} secara ringkas",
+    "glancePrice": "Harga",
+    "glancePriceValue": "Percuma, tanpa pelan berbayar dan tanpa had penggunaan",
+    "glanceFile": "Fail anda",
+    "glanceFileValue": "Diproses dalam pelayar anda, tidak pernah dimuat naik",
+    "glanceFileTranslate": "Dibaca dalam pelayar anda; hanya teks yang diekstrak dihantar kepada perkhidmatan terjemahan",
+    "glanceAccount": "Akaun",
+    "glanceAccountValue": "Tidak diperlukan",
+    "glanceWatermark": "Tera air",
+    "glanceWatermarkValue": "Tiada yang ditambah pada fail anda",
+    "glanceDevices": "Berfungsi pada",
+    "glanceDevicesValue": "Mana-mana pelayar moden pada Windows, Mac, Linux, Android dan iPhone",
     "seeAllTools": "Lihat kesemua {count} alat PDF"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Adakah dokumen saya dimuat naik ke pelayan?",
           "a": "Tidak. Setiap tindakan berjalan dalam pelayar anda. Dokumen anda tidak pernah meninggalkan peranti anda, jadi ruang kerja ini sesuai untuk kerja sulit dan sensitif."
+        },
+        {
+          "q": "Adakah Ruang Kerja PDF percuma, dan perlukah saya akaun?",
+          "a": "Ia percuma tanpa akaun, tanpa tera air dan tanpa had bilangan dokumen yang anda usahakan. Buka PDF dan mula mengedit."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Adakah memisah PDF mengurangkan kualiti?",
           "a": "Tidak. Pemisahan menyalin keseluruhan objek halaman ke dalam dokumen baharu. Teks kekal boleh dipilih dan imej mengekalkan resolusi asalnya."
+        },
+        {
+          "q": "Bolehkah saya memisahkan PDF pada telefon tanpa aplikasi?",
+          "a": "Boleh. Pisah PDF berjalan dalam pelayar pada Android dan iPhone, jadi anda boleh memisahkan fail tanpa memasang apa-apa atau memuat naiknya."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Adakah ini sama dengan memisah PDF?",
           "a": "Tidak. Pemisahan mencipta fail berasingan daripada halaman yang dipilih. Pemadaman membuang halaman daripada dokumen dan mengekalkan selebihnya sebagai satu fail."
+        },
+        {
+          "q": "Adakah selamat untuk memadam halaman daripada PDF sulit di sini?",
+          "a": "Ya. Halaman dibuang dalam pelayar anda dan fail tidak pernah meninggalkan peranti anda, jadi tiada apa-apa disimpan pada pelayan."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Bolehkah saya mengekstrak halaman dalam susunan berbeza?",
           "a": "Boleh. Senaraikan halaman mengikut susunan yang anda mahu. Memasukkan 9, 3, 5 menghasilkan fail dengan halaman dalam urutan itu."
+        },
+        {
+          "q": "Adakah pengekstrakan halaman percuma, tanpa tera air?",
+          "a": "Ya. Pengekstrakan adalah percuma tanpa akaun, dan PDF baharu tidak mengandungi tera air atau penjenamaan tambahan."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Adakah pengoptimuman sama dengan pemampatan?",
           "a": "Pemampatan mengecilkan saiz fail dengan mengekod semula imej. Pengoptimuman memberi tumpuan kepada penambahbaikan struktur yang mempercepat pemuatan dan paparan."
+        },
+        {
+          "q": "Adakah PDF yang dioptimumkan masih boleh dibuka dalam semua pembaca PDF?",
+          "a": "Ya. Pengoptimuman mengekalkan fail sebagai PDF standard, jadi ia dibuka dalam Adobe Reader, pelayar, Preview dan pemapar mudah alih seperti sebelumnya."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Bolehkah pembaikan memulihkan semua kandungan?",
           "a": "Pembaikan berfungsi dengan membina semula struktur PDF. Pemulihan bergantung pada berapa banyak data asal yang masih utuh."
+        },
+        {
+          "q": "Adakah PDF saya yang rosak dimuat naik untuk dibaiki?",
+          "a": "Tidak. Pembaikan berjalan dalam pelayar anda, jadi kontrak atau penyata yang rosak tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Sejauh manakah ketepatan OCR?",
           "a": "Ketepatan bergantung pada kualiti imbasan. Imbasan yang jelas dan beresolusi tinggi biasanya mencapai ketepatan 95-99%. Imbasan berkualiti rendah mungkin mempunyai lebih banyak ralat."
+        },
+        {
+          "q": "Adakah OCR PDF memuat naik imbasan saya?",
+          "a": "Tidak. Enjin pengecaman dan data bahasanya dimuat turun ke pelayar anda sekali sahaja, kemudian setiap halaman dibaca pada peranti anda sendiri."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Bolehkah saya menggabungkan beberapa imej menjadi satu PDF?",
           "a": "Boleh. Muatkan semua JPG anda, susun mengikut urutan dan tukar. Setiap imej menjadi satu halaman dalam PDF yang dihasilkan."
+        },
+        {
+          "q": "Bolehkah saya menukar foto kepada PDF pada telefon?",
+          "a": "Boleh. Buka JPG ke PDF dalam pelayar telefon anda, pilih foto daripada galeri dan muat turun satu PDF. Tiada apa-apa dimuat naik."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Perlukah saya memasang Microsoft Word?",
           "a": "Tidak. Penukaran berlaku dalam pelayar anda. Tiada perisian yang perlu dipasang."
+        },
+        {
+          "q": "Adakah dokumen Word saya dimuat naik untuk ditukar?",
+          "a": "Tidak. Fail DOCX dibaca dan ditukar kepada PDF dalam pelayar anda, jadi ia tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Bolehkah saya menukar slaid tertentu sahaja?",
           "a": "Penukaran memproses keseluruhan persembahan. Untuk mendapatkan slaid tertentu, ekstrak slaid tersebut selepas penukaran menggunakan alat Ekstrak Halaman PDF."
+        },
+        {
+          "q": "Adakah persembahan saya dimuat naik untuk ditukar?",
+          "a": "Tidak. Fail PPTX ditukar dalam pelayar anda dan tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Bolehkah saya menukar lembaran kerja tertentu sahaja?",
           "a": "Penukaran memproses keseluruhan buku kerja. Untuk helaian tertentu, anda mungkin perlu menyimpannya sebagai fail berasingan terlebih dahulu."
+        },
+        {
+          "q": "Adakah hamparan saya dimuat naik untuk ditukar?",
+          "a": "Tidak. Fail XLSX dibaca dan ditukar kepada PDF dalam pelayar anda, jadi data kewangan tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Adakah PDF akan kelihatan seperti laman web itu?",
           "a": "PDF menangkap kandungan halaman seperti yang dipaparkan. Susun atur yang kompleks mungkin sedikit berbeza daripada yang asal."
+        },
+        {
+          "q": "Perlukah saya memasang apa-apa untuk menukar HTML kepada PDF?",
+          "a": "Tidak. Tampal HTML atau pilih fail .html dan PDF akan dicipta dalam pelayar anda, tanpa perisian, sambungan atau akaun."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Bolehkah saya menukar halaman tertentu sahaja?",
           "a": "Boleh. Pilih untuk menukar semua halaman atau tetapkan julat halaman untuk mengekstrak halaman yang anda perlukan sahaja."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk ditukar kepada JPG?",
+          "a": "Tidak. Setiap halaman dijadikan imej dalam pelayar anda, jadi PDF tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Adakah ini berfungsi pada PDF imbasan?",
           "a": "PDF imbasan memerlukan OCR terlebih dahulu untuk mengekstrak teks. Jalankan OCR, kemudian tukar hasilnya ke Word untuk hasil terbaik."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk ditukar kepada Word?",
+          "a": "Tidak. Teks diekstrak dan DOCX dibina dalam pelayar anda, jadi PDF tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Bolehkah saya mengedit slaid yang dihasilkan?",
           "a": "Boleh. Outputnya ialah fail PPTX standard yang boleh anda edit dalam mana-mana aplikasi yang serasi dengan PowerPoint."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk ditukar kepada PowerPoint?",
+          "a": "Tidak. Slaid dibina dalam pelayar anda, jadi PDF tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Mengapa saya perlu menukar kepada PDF/A?",
           "a": "Banyak industri memerlukan PDF/A untuk penyimpanan dokumen. Ia memastikan fon dibenamkan, warna ditakrifkan dan dokumen itu serba lengkap."
+        },
+        {
+          "q": "Adakah hasilnya dijamin lulus pengesah PDF/A?",
+          "a": "Tidak selalu. Alat ini menambah metadata pengenalan PDF/A, tetapi fail sumber yang kehilangan fon atau mengandungi ketelusan mungkin masih gagal dalam semakan yang ketat, jadi sahkan dengan pengesah seperti veraPDF jika arkib memerlukannya."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Bolehkah saya menukar halaman tertentu sahaja?",
           "a": "Keseluruhan dokumen akan ditukar. Untuk menukar sebahagian halaman sahaja, jalankan Ekstrak Halaman PDF dahulu dan tukar fail tersebut."
+        },
+        {
+          "q": "Bolehkah saya menggunakan Markdown dengan ChatGPT atau alat AI lain?",
+          "a": "Boleh. Markdown mengekalkan tajuk dan senarai sebagai teks biasa, yang dibaca dengan kemas oleh pembantu AI dan aplikasi nota. Penukaran itu sendiri berjalan dalam pelayar anda."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Adakah pengeditan akan mengubah format?",
           "a": "Pengeditan terus mengekalkan format asal. Hanya teks yang anda ubah terjejas — fon, jarak dan susun atur kekal utuh."
+        },
+        {
+          "q": "Bolehkah saya mengedit PDF yang diimbas?",
+          "a": "Tidak secara langsung. Imbasan ialah gambar teks, jadi tiada perkataan yang boleh diubah terus. Gunakan OCR PDF untuk menjadikannya boleh dicari dan salin teksnya, kemudian edit dalam pemproses kata."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Adakah putaran menjejaskan kualiti cetakan?",
           "a": "Tidak. Putaran ialah perubahan metadata yang memberitahu pemapar cara memaparkan halaman. Kandungannya tidak dilukis semula."
+        },
+        {
+          "q": "Adakah putaran itu kekal?",
+          "a": "Ya. Orientasi baharu disimpan dalam PDF yang dimuat turun, jadi ia dibuka dengan betul dalam setiap pemapar."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Bolehkah saya melangkau penomboran pada halaman pertama?",
           "a": "Boleh. Pilih pilihan untuk memulakan penomboran dari halaman tertentu, seperti halaman 2 atau 3, untuk melangkau halaman muka depan."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk menambah nombor halaman?",
+          "a": "Tidak. Nombor dilukis pada halaman dalam pelayar anda, jadi fail tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Bolehkah saya meletakkan tera air pada semua halaman sekaligus?",
           "a": "Boleh. Tera air dikenakan pada setiap halaman dalam dokumen secara serentak."
+        },
+        {
+          "q": "Bolehkah tera air dibuang kemudian?",
+          "a": "Tera air teks dilukis ke dalam kandungan halaman, jadi ia tidak boleh dimatikan seperti komen. Seseorang yang mempunyai perisian penyuntingan masih boleh menutupnya, jadi anggaplah ia sebagai pencegah, bukan perlindungan."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Adakah pemangkasan memadam kandungan?",
           "a": "Pemangkasan menyembunyikan kandungan di luar kawasan pangkasan. Kandungan tersembunyi itu tidak dipadam dan boleh dipulihkan kemudian."
+        },
+        {
+          "q": "Bolehkah saya memangkas PDF pada telefon?",
+          "a": "Boleh. Pangkas PDF berjalan dalam pelayar telefon anda, jadi anda boleh memangkas margin tanpa memasang aplikasi atau memuat naik fail."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Bolehkah saya menandatangani PDF yang dilindungi kata laluan?",
           "a": "Anda perlu membuka kuncinya dahulu. PDF yang dilindungi kata laluan tidak boleh diedit sehingga kata laluan dibuang."
+        },
+        {
+          "q": "Bagaimanakah saya boleh mencipta tandatangan saya?",
+          "a": "Lukis dengan tetikus atau jari, taip nama anda dalam fon tulisan tangan, atau muat naik foto tandatangan sebenar anda. Ia diletakkan pada halaman dalam pelayar anda dan tidak pernah disimpan pada pelayan."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Adakah membuka kunci akan mengubah kandungan PDF?",
           "a": "Tidak. Membuka kunci hanya membuang perlindungan kata laluan. Kandungan dokumen kekal tidak berubah."
+        },
+        {
+          "q": "Adakah selamat untuk memasukkan kata laluan PDF saya di sini?",
+          "a": "Ya. Kata laluan dan fail kekal dalam pelayar anda dan tidak pernah dihantar ke pelayan."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Apakah yang berlaku jika saya terlupa kata laluan?",
           "a": "Tiada mekanisme pemulihan. Fail tidak boleh diakses selama-lamanya tanpa kata laluan. Sentiasa simpan kata laluan di tempat yang selamat."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk menambah kata laluan?",
+          "a": "Tidak. Penyulitan berlaku dalam pelayar anda, jadi fail yang tidak dilindungi dan kata laluan tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Bolehkah saya membandingkan PDF imbasan?",
           "a": "Jalankan OCR PDF pada kedua-dua imbasan dahulu. Perbandingan berfungsi pada teks dalam fail, jadi imbasan yang hanya mengandungi imej tidak mempunyai apa-apa untuk dibandingkan."
+        },
+        {
+          "q": "Adakah kedua-dua PDF dimuat naik untuk dibandingkan?",
+          "a": "Tidak. Kedua-dua fail dibaca dan dibandingkan dalam pelayar anda, jadi tiada satu pun yang meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Adakah dokumen saya dihantar ke pelayan?",
           "a": "Tidak. Ringkasan dikira dalam pelayar anda, dan PDF tidak pernah meninggalkan peranti anda."
+        },
+        {
+          "q": "Bolehkah ia meringkaskan PDF yang diimbas?",
+          "a": "Tidak secara langsung. PDF yang diimbas tiada lapisan teks untuk dibaca. Jalankannya melalui OCR PDF dahulu, kemudian ringkaskan hasil yang boleh dicari."
         }
       ],
       "howTo": {

@@ -11,10 +11,20 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
-      // Allow AI search bots for GEO/AEO visibility
+      // AI search, assistant and training crawlers: explicitly welcome, so
+      // answer engines can read, cite and recommend the tools (GEO/AEO).
+      // /llms.txt and /llms-full.txt are the plain-text maps written for them.
       {
-        userAgent: ['OAI-SearchBot', 'ChatGPT-User', 'PerplexityBot', 'ClaudeBot', 'YouBot', 'Google-Extended', 'Bytespider', 'GPTBot'],
+        userAgent: [
+          'OAI-SearchBot', 'ChatGPT-User', 'GPTBot',
+          'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai',
+          'PerplexityBot', 'Perplexity-User',
+          'Google-Extended', 'GoogleOther', 'Applebot', 'Applebot-Extended',
+          'Bingbot', 'DuckAssistBot', 'YouBot', 'Amazonbot', 'meta-externalagent',
+          'MistralAI-User', 'cohere-ai', 'Bytespider', 'CCBot',
+        ],
         allow: '/',
+        disallow: ['/api/'],
       },
       // Block aggressive crawlers from non-essential paths
       {

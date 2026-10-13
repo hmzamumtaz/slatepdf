@@ -64,6 +64,18 @@
     "whyToolHeading": "Hvorfor bruge {tool} her?",
     "faqHeading": "{tool} – ofte stillede spørgsmål",
     "continueHeading": "Fortsæt med et andet værktøj",
+    "glanceHeading": "{tool} kort fortalt",
+    "glancePrice": "Pris",
+    "glancePriceValue": "Gratis, uden betalingsversion og uden forbrugsgrænse",
+    "glanceFile": "Din fil",
+    "glanceFileValue": "Behandles i din browser og uploades aldrig",
+    "glanceFileTranslate": "Læses i din browser; kun den udtrukne tekst sendes til en oversættelsestjeneste",
+    "glanceAccount": "Konto",
+    "glanceAccountValue": "Ikke nødvendig",
+    "glanceWatermark": "Vandmærke",
+    "glanceWatermarkValue": "Der tilføjes intet til din fil",
+    "glanceDevices": "Virker på",
+    "glanceDevicesValue": "Enhver moderne browser på Windows, Mac, Linux, Android og iPhone",
     "seeAllTools": "Se alle {count} PDF-værktøjer"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Bliver mit dokument uploadet til en server?",
           "a": "Nej. Alle handlinger kører i din browser. Dit dokument forlader aldrig din enhed, så arbejdsområdet er ideelt til fortroligt og følsomt arbejde."
+        },
+        {
+          "q": "Er PDF-arbejdsområdet gratis, og skal jeg have en konto?",
+          "a": "Det er gratis uden konto, uden vandmærke og uden grænse for, hvor mange dokumenter du arbejder med. Åbn en PDF, og begynd at redigere."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Bliver kvaliteten dårligere ved opdeling?",
           "a": "Nej. Opdeling kopierer hele sideobjekter over i nye dokumenter. Teksten kan stadig markeres, og billederne beholder deres oprindelige opløsning."
+        },
+        {
+          "q": "Kan jeg opdele en PDF på min telefon uden en app?",
+          "a": "Ja. Opdel PDF kører i browseren på Android og iPhone, så du kan opdele en fil uden at installere noget eller uploade den."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Er det det samme som at opdele?",
           "a": "Nej. Opdeling laver separate filer ud fra de valgte sider. Fjernelse sletter sider fra dokumentet og beholder resten som én fil."
+        },
+        {
+          "q": "Er det sikkert at slette sider fra en fortrolig PDF her?",
+          "a": "Ja. Siderne fjernes i din browser, og filen forlader aldrig din enhed, så intet gemmes på en server."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Kan jeg udtrække sider i en anden rækkefølge?",
           "a": "Ja. Angiv siderne i den rækkefølge, du vil have dem. Skriver du 9, 3, 5, får du en fil med siderne i netop den rækkefølge."
+        },
+        {
+          "q": "Er det gratis at udtrække sider, uden vandmærke?",
+          "a": "Ja. Udtrækning er gratis uden konto, og den nye PDF har hverken vandmærke eller tilføjet branding."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Er optimering det samme som komprimering?",
           "a": "Komprimering gør filen mindre ved at genkode billeder. Optimering fokuserer på strukturelle forbedringer, der gør indlæsning og gengivelse hurtigere."
+        },
+        {
+          "q": "Kan en optimeret PDF stadig åbnes i alle PDF-læsere?",
+          "a": "Ja. Optimeringen bevarer filen som en standard-PDF, så den åbner i Adobe Reader, browsere, Preview og mobile læsere som før."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Kan reparationen gendanne alt indhold?",
           "a": "Reparationen fungerer ved at genopbygge PDF-strukturen. Hvor meget der kan gendannes, afhænger af, hvor meget af de oprindelige data der stadig er intakt."
+        },
+        {
+          "q": "Bliver min beskadigede PDF uploadet for at blive repareret?",
+          "a": "Nej. Reparationen kører i din browser, så en beskadiget kontrakt eller kontoudskrift forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Hvor præcis er OCR?",
           "a": "Præcisionen afhænger af scanningens kvalitet. Tydelige scanninger i høj opløsning opnår typisk 95-99 % præcision. Scanninger af dårlig kvalitet kan have flere fejl."
+        },
+        {
+          "q": "Uploader OCR PDF mine scanninger?",
+          "a": "Nej. Genkendelsesmotoren og dens sprogdata downloades til din browser én gang, og derefter læses hver side på din egen enhed."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Kan jeg samle flere billeder i én PDF?",
           "a": "Ja. Indlæs alle dine JPG'er, sæt dem i rækkefølge, og konverter. Hvert billede bliver til én side i den færdige PDF."
+        },
+        {
+          "q": "Kan jeg konvertere fotos til PDF på min telefon?",
+          "a": "Ja. Åbn JPG til PDF i telefonens browser, vælg fotos fra dit galleri, og download én samlet PDF. Intet uploades."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Skal jeg have Microsoft Word installeret?",
           "a": "Nej. Konverteringen sker i din browser. Der skal ikke installeres noget program."
+        },
+        {
+          "q": "Bliver mit Word-dokument uploadet for at blive konverteret?",
+          "a": "Nej. DOCX-filen læses og omdannes til PDF i din browser, så den forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Kan jeg konvertere bestemte slides?",
           "a": "Konverteringen behandler hele præsentationen. Vil du kun have bestemte slides, så udtræk dem efter konverteringen med værktøjet Udtræk sider."
+        },
+        {
+          "q": "Bliver min præsentation uploadet for at blive konverteret?",
+          "a": "Nej. PPTX-filen konverteres i din browser og forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Kan jeg konvertere bestemte regneark?",
           "a": "Konverteringen behandler hele projektmappen. Vil du kun have bestemte ark, skal du muligvis først gemme dem som en separat fil."
+        },
+        {
+          "q": "Bliver mit regneark uploadet for at blive konverteret?",
+          "a": "Nej. XLSX-filen læses og omdannes til PDF i din browser, så økonomiske data forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Kommer PDF'en til at ligne websiden?",
           "a": "PDF'en gengiver sidens viste indhold. Komplekse layouts kan afvige en smule fra originalen."
+        },
+        {
+          "q": "Skal jeg installere noget for at konvertere HTML til PDF?",
+          "a": "Nej. Indsæt HTML-koden, eller vælg en .html-fil, så oprettes PDF'en i din browser uden software, udvidelse eller konto."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Kan jeg konvertere bestemte sider?",
           "a": "Ja. Vælg at konvertere alle sider, eller angiv et sideinterval for kun at udtrække de sider, du har brug for."
+        },
+        {
+          "q": "Bliver min PDF uploadet for at blive konverteret til JPG?",
+          "a": "Nej. Hver side gengives som et billede i din browser, så PDF'en forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Virker det med scannede PDF'er?",
           "a": "Scannede PDF'er skal først have OCR for at få teksten ud. Kør OCR, og konverter derefter resultatet til Word for det bedste resultat."
+        },
+        {
+          "q": "Bliver min PDF uploadet for at blive konverteret til Word?",
+          "a": "Nej. Teksten udtrækkes, og DOCX-filen opbygges i din browser, så PDF'en forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Kan jeg redigere de færdige slides?",
           "a": "Ja. Resultatet er en almindelig PPTX-fil, som du kan redigere i ethvert PowerPoint-kompatibelt program."
+        },
+        {
+          "q": "Bliver min PDF uploadet for at blive konverteret til PowerPoint?",
+          "a": "Nej. Slides opbygges i din browser, så PDF'en forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Hvorfor skal jeg konvertere til PDF/A?",
           "a": "Mange brancher kræver PDF/A til opbevaring af dokumenter. Formatet sikrer, at skrifttyper er indlejret, farver er defineret, og dokumentet er selvstændigt."
+        },
+        {
+          "q": "Er resultatet garanteret at bestå en PDF/A-validering?",
+          "a": "Ikke altid. Værktøjet tilføjer PDF/A-identifikationsmetadata, men en kildefil med manglende skrifttyper eller gennemsigtighed kan stadig fejle strenge kontroller, så tjek den med et valideringsværktøj som veraPDF, hvis et arkiv kræver det."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Kan jeg konvertere bestemte sider?",
           "a": "Hele dokumentet konverteres. Vil du kun konvertere nogle sider, så kør Udtræk sider først, og konverter den fil."
+        },
+        {
+          "q": "Kan jeg bruge Markdown med ChatGPT eller andre AI-værktøjer?",
+          "a": "Ja. Markdown bevarer overskrifter og lister som ren tekst, som AI-assistenter og noteapps kan læse uden problemer. Selve konverteringen kører i din browser."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Ændrer redigeringen formateringen?",
           "a": "Direkte redigering bevarer den oprindelige formatering. Kun den tekst, du ændrer, påvirkes – skrifttyper, afstande og layout forbliver intakte."
+        },
+        {
+          "q": "Kan jeg redigere en scannet PDF?",
+          "a": "Ikke direkte. En scanning er et billede af tekst, så der er ingen ord at ændre direkte på siden. Brug OCR PDF til at gøre den søgbar og kopiere teksten ud, og rediger den derefter i et tekstbehandlingsprogram."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Påvirker rotationen udskriftskvaliteten?",
           "a": "Nej. Rotation er en ændring i metadataene, der fortæller fremviseren, hvordan siden skal vises. Indholdet gengives ikke på ny."
+        },
+        {
+          "q": "Er rotationen permanent?",
+          "a": "Ja. Den nye retning gemmes i den downloadede PDF, så den vender rigtigt i alle læsere."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Kan jeg springe nummereringen over på første side?",
           "a": "Ja. Vælg at starte nummereringen fra en bestemt side, f.eks. side 2 eller 3, for at springe forsider over."
+        },
+        {
+          "q": "Bliver min PDF uploadet for at tilføje sidetal?",
+          "a": "Nej. Sidetallene tegnes på siderne i din browser, så filen forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Kan jeg sætte vandmærke på alle sider på én gang?",
           "a": "Ja. Vandmærket anvendes på alle dokumentets sider på samme tid."
+        },
+        {
+          "q": "Kan et vandmærke fjernes senere?",
+          "a": "Et tekstvandmærke tegnes ind i sidens indhold, så det kan ikke slås fra som en kommentar. En person med redigeringssoftware kan dog stadig dække det, så betragt det som afskrækkelse snarere end beskyttelse."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Sletter beskæring indhold?",
           "a": "Beskæring skjuler indholdet uden for beskæringsområdet. Det skjulte indhold slettes ikke og kan gendannes senere."
+        },
+        {
+          "q": "Kan jeg beskære en PDF på min telefon?",
+          "a": "Ja. Beskær PDF kører i telefonens browser, så du kan fjerne margener uden at installere en app eller uploade filen."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Kan jeg underskrive en adgangskodebeskyttet PDF?",
           "a": "Du skal låse den op først. Adgangskodebeskyttede PDF'er kan ikke redigeres, før adgangskoden er fjernet."
+        },
+        {
+          "q": "Hvordan laver jeg min underskrift?",
+          "a": "Tegn den med mus eller finger, skriv dit navn med en håndskriftsskrifttype, eller upload et foto af din rigtige underskrift. Den placeres på siden i din browser og gemmes aldrig på en server."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Ændrer oplåsningen PDF'ens indhold?",
           "a": "Nej. Oplåsningen fjerner kun adgangskodebeskyttelsen. Dokumentets indhold forbliver uændret."
+        },
+        {
+          "q": "Er det sikkert at indtaste min PDF-adgangskode her?",
+          "a": "Ja. Adgangskoden og filen bliver i din browser og sendes aldrig til en server."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Hvad sker der, hvis jeg glemmer adgangskoden?",
           "a": "Der er ingen mulighed for gendannelse. Filen er permanent utilgængelig uden adgangskoden. Opbevar den altid et sikkert sted."
+        },
+        {
+          "q": "Bliver min PDF uploadet for at tilføje en adgangskode?",
+          "a": "Nej. Krypteringen sker i din browser, så den ubeskyttede fil og adgangskoden forlader aldrig din enhed."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Kan jeg sammenligne scannede PDF'er?",
           "a": "Kør OCR PDF på begge scanninger først. Sammenligningen arbejder med teksten i filerne, så scanninger, der kun består af billeder, har intet at sammenligne."
+        },
+        {
+          "q": "Bliver begge PDF'er uploadet for at blive sammenlignet?",
+          "a": "Nej. Begge filer læses og sammenlignes i din browser, så ingen af dem forlader din enhed."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Bliver mit dokument sendt til en server?",
           "a": "Nej. Resuméet beregnes i din browser, og PDF'en forlader aldrig din enhed."
+        },
+        {
+          "q": "Kan den opsummere en scannet PDF?",
+          "a": "Ikke direkte. En scannet PDF har intet tekstlag at læse. Kør den først gennem OCR PDF, og opsummer derefter det søgbare resultat."
         }
       ],
       "howTo": {

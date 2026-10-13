@@ -64,6 +64,18 @@
     "whyToolHeading": "De ce să folosești {tool} aici?",
     "faqHeading": "{tool} — întrebări frecvente",
     "continueHeading": "Continuă cu alt instrument",
+    "glanceHeading": "{tool} pe scurt",
+    "glancePrice": "Preț",
+    "glancePriceValue": "Gratuit, fără variantă plătită și fără limită de utilizare",
+    "glanceFile": "Fișierul tău",
+    "glanceFileValue": "Procesat în browser, nu se încarcă niciodată",
+    "glanceFileTranslate": "Citit în browser; doar textul extras este trimis unui serviciu de traducere",
+    "glanceAccount": "Cont",
+    "glanceAccountValue": "Nu este necesar",
+    "glanceWatermark": "Filigran",
+    "glanceWatermarkValue": "Nu se adaugă niciunul în fișier",
+    "glanceDevices": "Funcționează pe",
+    "glanceDevicesValue": "Orice browser modern pe Windows, Mac, Linux, Android și iPhone",
     "seeAllTools": "Vezi toate cele {count} instrumente PDF"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Documentul meu este încărcat pe un server?",
           "a": "Nu. Fiecare acțiune rulează în browser. Documentul nu părăsește niciodată dispozitivul tău, așa că spațiul de lucru este ideal pentru documente confidențiale și sensibile."
+        },
+        {
+          "q": "Spațiul de lucru PDF este gratuit și am nevoie de cont?",
+          "a": "Este gratuit, fără cont, fără filigran și fără limită pentru numărul de documente. Deschide un PDF și începe să editezi."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Împărțirea scade calitatea?",
           "a": "Nu. Împărțirea copiază paginile întregi în documente noi. Textul rămâne selectabil, iar imaginile își păstrează rezoluția originală."
+        },
+        {
+          "q": "Pot împărți un PDF pe telefon fără aplicație?",
+          "a": "Da. Împărțire PDF rulează în browser pe Android și iPhone, așa că poți împărți un fișier fără să instalezi nimic și fără să-l încarci."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Este același lucru cu împărțirea?",
           "a": "Nu. Împărțirea creează fișiere separate din paginile selectate. Ștergerea elimină pagini din document și păstrează restul într-un singur fișier."
+        },
+        {
+          "q": "Este sigur să șterg aici pagini dintr-un PDF confidențial?",
+          "a": "Da. Paginile sunt eliminate în browser, iar fișierul nu părăsește niciodată dispozitivul, deci nimic nu este stocat pe un server."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Pot extrage paginile într-o altă ordine?",
           "a": "Da. Enumeră paginile în ordinea dorită. Dacă introduci 9, 3, 5, obții un fișier cu paginile în această succesiune."
+        },
+        {
+          "q": "Extragerea paginilor este gratuită și fără filigran?",
+          "a": "Da. Extragerea este gratuită, fără cont, iar noul PDF nu are filigran sau vreun logo adăugat."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Optimizarea este același lucru cu comprimarea?",
           "a": "Comprimarea reduce dimensiunea fișierului prin recodarea imaginilor. Optimizarea se concentrează pe îmbunătățiri de structură care accelerează încărcarea și afișarea."
+        },
+        {
+          "q": "Un PDF optimizat se va deschide în continuare în orice cititor PDF?",
+          "a": "Da. Optimizarea păstrează fișierul ca PDF standard, așa că se deschide ca înainte în Adobe Reader, browsere, Preview și aplicațiile mobile."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Repararea recuperează tot conținutul?",
           "a": "Repararea reconstruiește structura PDF-ului. Cât se poate recupera depinde de cât din datele originale au rămas intacte."
+        },
+        {
+          "q": "PDF-ul meu deteriorat este încărcat pentru reparare?",
+          "a": "Nu. Repararea rulează în browser, așa că un contract sau un extras de cont deteriorat nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Cât de precis este OCR-ul?",
           "a": "Precizia depinde de calitatea scanării. Scanările clare, la rezoluție mare, ating de obicei o precizie de 95–99%. Scanările slabe pot avea mai multe erori."
+        },
+        {
+          "q": "OCR PDF îmi încarcă documentele scanate?",
+          "a": "Nu. Motorul de recunoaștere și datele de limbă se descarcă o singură dată în browser, apoi fiecare pagină este citită pe propriul dispozitiv."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Pot combina mai multe imagini într-un singur PDF?",
           "a": "Da. Încarcă toate fișierele JPG, aranjează-le în ordine și convertește. Fiecare imagine devine o pagină în PDF-ul rezultat."
+        },
+        {
+          "q": "Pot transforma fotografii în PDF pe telefon?",
+          "a": "Da. Deschide JPG în PDF în browserul telefonului, alege fotografiile din galerie și descarcă un singur PDF. Nimic nu se încarcă."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Trebuie să am Microsoft Word instalat?",
           "a": "Nu. Conversia se face în browser. Nu este nevoie să instalezi niciun program."
+        },
+        {
+          "q": "Documentul meu Word este încărcat pentru conversie?",
+          "a": "Nu. Fișierul DOCX este citit și transformat în PDF în browser, așa că nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Pot converti doar anumite diapozitive?",
           "a": "Conversia procesează întreaga prezentare. Pentru anumite diapozitive, extrage-le după conversie cu instrumentul Extragere pagini."
+        },
+        {
+          "q": "Prezentarea mea este încărcată pentru conversie?",
+          "a": "Nu. Fișierul PPTX este convertit în browser și nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Pot converti doar anumite foi de lucru?",
           "a": "Conversia procesează întregul registru. Pentru anumite foi, s-ar putea să fie nevoie să le salvezi mai întâi într-un fișier separat."
+        },
+        {
+          "q": "Foaia de calcul este încărcată pentru conversie?",
+          "a": "Nu. Fișierul XLSX este citit și transformat în PDF în browser, așa că datele financiare nu părăsesc niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "PDF-ul va arăta ca pagina web?",
           "a": "PDF-ul captează conținutul afișat al paginii. Aspectele complexe pot diferi ușor de original."
+        },
+        {
+          "q": "Trebuie să instalez ceva ca să convertesc HTML în PDF?",
+          "a": "Nu. Lipește codul HTML sau alege un fișier .html, iar PDF-ul este creat în browser, fără software, extensii sau cont."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Pot converti doar anumite pagini?",
           "a": "Da. Alege să convertești toate paginile sau specifică un interval pentru a extrage doar paginile de care ai nevoie."
+        },
+        {
+          "q": "PDF-ul meu este încărcat pentru conversia în JPG?",
+          "a": "Nu. Fiecare pagină este randată ca imagine în browser, așa că PDF-ul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Funcționează cu PDF-uri scanate?",
           "a": "PDF-urile scanate au nevoie mai întâi de OCR pentru extragerea textului. Rulează OCR, apoi convertește rezultatul în Word pentru cele mai bune rezultate."
+        },
+        {
+          "q": "PDF-ul meu este încărcat pentru conversia în Word?",
+          "a": "Nu. Textul este extras, iar fișierul DOCX este construit în browser, așa că PDF-ul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Pot edita diapozitivele rezultate?",
           "a": "Da. Rezultatul este un fișier PPTX standard pe care îl poți edita în orice aplicație compatibilă cu PowerPoint."
+        },
+        {
+          "q": "PDF-ul meu este încărcat pentru conversia în PowerPoint?",
+          "a": "Nu. Slide-urile sunt create în browser, așa că PDF-ul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "De ce să convertesc în PDF/A?",
           "a": "Multe domenii cer PDF/A pentru păstrarea documentelor. Formatul asigură că fonturile sunt încorporate, culorile sunt definite, iar documentul este autonom."
+        },
+        {
+          "q": "Este garantat că rezultatul trece de un validator PDF/A?",
+          "a": "Nu întotdeauna. Instrumentul adaugă metadatele de identificare PDF/A, dar un fișier sursă cu fonturi lipsă sau transparență poate pica verificările stricte, așa că verifică-l cu un validator precum veraPDF dacă arhiva o cere."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Pot converti doar anumite pagini?",
           "a": "Este convertit întregul document. Pentru a converti doar unele pagini, folosește mai întâi Extragere pagini și convertește fișierul obținut."
+        },
+        {
+          "q": "Pot folosi Markdown-ul cu ChatGPT sau alte instrumente AI?",
+          "a": "Da. Markdown păstrează titlurile și listele ca text simplu, pe care asistenții AI și aplicațiile de notițe le citesc fără probleme. Conversia în sine rulează în browser."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Editarea schimbă formatarea?",
           "a": "Editarea directă păstrează formatarea originală. Este afectat doar textul pe care îl modifici — fonturile, spațierea și aspectul rămân intacte."
+        },
+        {
+          "q": "Pot edita un PDF scanat?",
+          "a": "Nu direct. O scanare este o imagine a textului, deci nu există cuvinte care să poată fi modificate pe loc. Folosește OCR PDF ca să-l faci căutabil și să copiezi textul, apoi editează-l într-un procesor de text."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Rotirea afectează calitatea la tipărire?",
           "a": "Nu. Rotirea este o modificare de metadate care îi spune vizualizatorului cum să afișeze pagina. Conținutul nu este redesenat."
+        },
+        {
+          "q": "Rotirea este permanentă?",
+          "a": "Da. Noua orientare este salvată în PDF-ul descărcat, așa că se deschide corect în orice cititor."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Pot sări peste numerotarea primei pagini?",
           "a": "Da. Alege opțiunea de a începe numerotarea de la o anumită pagină, cum ar fi pagina 2 sau 3, ca să sari peste paginile de copertă."
+        },
+        {
+          "q": "PDF-ul meu este încărcat pentru a adăuga numere de pagină?",
+          "a": "Nu. Numerele sunt desenate pe pagini în browser, așa că fișierul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Pot aplica filigranul pe toate paginile deodată?",
           "a": "Da. Filigranul se aplică simultan pe toate paginile documentului."
+        },
+        {
+          "q": "Un filigran poate fi eliminat ulterior?",
+          "a": "Un filigran text este desenat în conținutul paginii, deci nu poate fi dezactivat ca un comentariu. Cineva cu un program de editare îl poate totuși acoperi, așa că privește-l ca pe un factor de descurajare, nu ca pe o protecție."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Decuparea șterge conținut?",
           "a": "Decuparea ascunde conținutul din afara zonei de decupare. Conținutul ascuns nu este șters și poate fi readus ulterior."
+        },
+        {
+          "q": "Pot decupa un PDF pe telefon?",
+          "a": "Da. Decupare PDF rulează în browserul telefonului, așa că poți tăia marginile fără să instalezi o aplicație sau să încarci fișierul."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Pot semna un PDF protejat cu parolă?",
           "a": "Trebuie să îl deblochezi mai întâi. PDF-urile protejate cu parolă nu pot fi modificate până când parola nu este eliminată."
+        },
+        {
+          "q": "Cum îmi pot crea semnătura?",
+          "a": "Deseneaz-o cu mouse-ul sau cu degetul, scrie-ți numele cu un font de mână sau încarcă o fotografie a semnăturii tale reale. Este plasată pe pagină în browser și nu este stocată niciodată pe un server."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Deblocarea modifică conținutul PDF-ului?",
           "a": "Nu. Deblocarea elimină doar protecția cu parolă. Conținutul documentului rămâne neschimbat."
+        },
+        {
+          "q": "Este sigur să introduc aici parola PDF-ului?",
+          "a": "Da. Parola și fișierul rămân în browser și nu sunt trimise niciodată unui server."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Ce se întâmplă dacă uit parola?",
           "a": "Nu există nicio metodă de recuperare. Fără parolă, fișierul rămâne inaccesibil definitiv. Păstreaz-o mereu într-un loc sigur."
+        },
+        {
+          "q": "PDF-ul meu este încărcat pentru a adăuga o parolă?",
+          "a": "Nu. Criptarea are loc în browser, așa că fișierul neprotejat și parola nu părăsesc niciodată dispozitivul."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Pot compara PDF-uri scanate?",
           "a": "Rulează mai întâi OCR PDF pe ambele scanări. Comparația lucrează cu textul din fișiere, așa că scanările care conțin doar imagini nu au ce compara."
+        },
+        {
+          "q": "Ambele PDF-uri sunt încărcate pentru comparare?",
+          "a": "Nu. Ambele fișiere sunt citite și comparate în browser, așa că niciunul nu părăsește dispozitivul."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Documentul meu este trimis pe un server?",
           "a": "Nu. Rezumatul este calculat în browser, iar PDF-ul nu părăsește niciodată dispozitivul tău."
+        },
+        {
+          "q": "Poate rezuma un PDF scanat?",
+          "a": "Nu direct. Un PDF scanat nu are un strat de text care să poată fi citit. Trece-l mai întâi prin OCR PDF, apoi rezumă rezultatul căutabil."
         }
       ],
       "howTo": {

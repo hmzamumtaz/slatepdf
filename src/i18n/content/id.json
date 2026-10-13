@@ -64,6 +64,18 @@
     "whyToolHeading": "Mengapa menggunakan {tool} di sini?",
     "faqHeading": "{tool} — pertanyaan yang sering diajukan",
     "continueHeading": "Lanjutkan dengan alat lain",
+    "glanceHeading": "Sekilas tentang {tool}",
+    "glancePrice": "Harga",
+    "glancePriceValue": "Gratis, tanpa paket berbayar dan tanpa batas pemakaian",
+    "glanceFile": "File Anda",
+    "glanceFileValue": "Diproses di browser Anda, tidak pernah diunggah",
+    "glanceFileTranslate": "Dibaca di browser Anda; hanya teks hasil ekstraksi yang dikirim ke layanan terjemahan",
+    "glanceAccount": "Akun",
+    "glanceAccountValue": "Tidak perlu",
+    "glanceWatermark": "Tanda air",
+    "glanceWatermarkValue": "Tidak ada yang ditambahkan ke file Anda",
+    "glanceDevices": "Berjalan di",
+    "glanceDevicesValue": "Browser modern apa pun di Windows, Mac, Linux, Android, dan iPhone",
     "seeAllTools": "Lihat semua {count} alat PDF"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Apakah dokumen saya diunggah ke server?",
           "a": "Tidak. Setiap tindakan berjalan di browser Anda. Dokumen Anda tidak pernah keluar dari perangkat Anda, sehingga ruang kerja ini cocok untuk pekerjaan yang rahasia dan sensitif."
+        },
+        {
+          "q": "Apakah Ruang Kerja PDF gratis, dan apakah saya perlu akun?",
+          "a": "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas jumlah dokumen. Buka PDF dan mulai mengedit."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Apakah memisahkan PDF menurunkan kualitas?",
           "a": "Tidak. Pemisahan menyalin objek halaman secara utuh ke dokumen baru. Teks tetap bisa dipilih dan gambar tetap mempertahankan resolusi aslinya."
+        },
+        {
+          "q": "Bisakah saya memisahkan PDF di ponsel tanpa aplikasi?",
+          "a": "Bisa. Pisahkan PDF berjalan di browser Android dan iPhone, jadi Anda bisa memisahkan file tanpa memasang apa pun atau mengunggahnya."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Apakah ini sama dengan memisahkan PDF?",
           "a": "Tidak. Memisahkan membuat file terpisah dari halaman yang dipilih. Menghapus membuang halaman dari dokumen dan menyimpan sisanya sebagai satu file."
+        },
+        {
+          "q": "Amankah menghapus halaman dari PDF rahasia di sini?",
+          "a": "Aman. Halaman dihapus di browser Anda dan file tidak pernah meninggalkan perangkat Anda, jadi tidak ada yang disimpan di server."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Bisakah saya mengekstrak halaman dengan urutan berbeda?",
           "a": "Ya. Cantumkan halaman sesuai urutan yang Anda inginkan. Memasukkan 9, 3, 5 menghasilkan file dengan halaman dalam urutan tersebut."
+        },
+        {
+          "q": "Apakah mengekstrak halaman gratis dan tanpa tanda air?",
+          "a": "Ya. Ekstraksi gratis tanpa akun, dan PDF baru tidak diberi tanda air atau logo tambahan apa pun."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Apakah optimasi sama dengan kompresi?",
           "a": "Kompresi memperkecil ukuran file dengan mengodekan ulang gambar. Optimasi berfokus pada perbaikan struktur yang mempercepat pemuatan dan render."
+        },
+        {
+          "q": "Apakah PDF yang sudah dioptimalkan tetap bisa dibuka di semua pembaca PDF?",
+          "a": "Ya. Optimalisasi tetap menjadikan file sebagai PDF standar, jadi file tetap terbuka seperti biasa di Adobe Reader, browser, Preview, dan penampil di ponsel."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Apakah perbaikan bisa memulihkan semua konten?",
           "a": "Perbaikan bekerja dengan membangun ulang struktur PDF. Hasil pemulihan bergantung pada seberapa banyak data asli yang masih utuh."
+        },
+        {
+          "q": "Apakah PDF saya yang rusak diunggah untuk diperbaiki?",
+          "a": "Tidak. Perbaikan berjalan di browser Anda, jadi kontrak atau rekening koran yang rusak tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Seberapa akurat OCR?",
           "a": "Akurasinya bergantung pada kualitas pindaian. Pindaian yang jelas dan beresolusi tinggi biasanya mencapai akurasi 95-99%. Pindaian berkualitas buruk mungkin menghasilkan lebih banyak kesalahan."
+        },
+        {
+          "q": "Apakah OCR PDF mengunggah hasil pindaian saya?",
+          "a": "Tidak. Mesin pengenalan dan data bahasanya diunduh sekali ke browser Anda, lalu setiap halaman dibaca di perangkat Anda sendiri."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Bisakah saya menggabungkan banyak gambar menjadi satu PDF?",
           "a": "Ya. Masukkan semua JPG Anda, susun urutannya, lalu konversi. Setiap gambar menjadi satu halaman dalam PDF yang dihasilkan."
+        },
+        {
+          "q": "Bisakah saya mengubah foto menjadi PDF di ponsel?",
+          "a": "Bisa. Buka JPG ke PDF di browser ponsel, pilih foto dari galeri, lalu unduh satu PDF. Tidak ada yang diunggah."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Apakah Microsoft Word harus terpasang?",
           "a": "Tidak. Konversi berlangsung di browser Anda. Tidak perlu memasang perangkat lunak apa pun."
+        },
+        {
+          "q": "Apakah dokumen Word saya diunggah untuk dikonversi?",
+          "a": "Tidak. File DOCX dibaca dan diubah menjadi PDF di browser Anda, jadi tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Bisakah saya mengonversi slide tertentu saja?",
           "a": "Konversi memproses seluruh presentasi. Untuk mendapatkan slide tertentu, ambil slide tersebut setelah konversi dengan alat Ekstrak Halaman PDF."
+        },
+        {
+          "q": "Apakah presentasi saya diunggah untuk dikonversi?",
+          "a": "Tidak. File PPTX dikonversi di browser Anda dan tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Bisakah saya mengonversi sheet tertentu saja?",
           "a": "Konversi memproses seluruh workbook. Untuk sheet tertentu, Anda mungkin perlu menyimpannya sebagai file terpisah terlebih dahulu."
+        },
+        {
+          "q": "Apakah spreadsheet saya diunggah untuk dikonversi?",
+          "a": "Tidak. File XLSX dibaca dan diubah menjadi PDF di browser Anda, jadi data keuangan tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Apakah PDF-nya akan terlihat seperti halaman web aslinya?",
           "a": "PDF merekam konten halaman sebagaimana ditampilkan. Tata letak yang rumit mungkin sedikit berbeda dari aslinya."
+        },
+        {
+          "q": "Apakah saya perlu memasang sesuatu untuk mengubah HTML ke PDF?",
+          "a": "Tidak. Tempel HTML atau pilih file .html, dan PDF dibuat di browser Anda tanpa perangkat lunak, ekstensi, atau akun."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Bisakah saya mengonversi halaman tertentu saja?",
           "a": "Ya. Pilih untuk mengonversi semua halaman atau tentukan rentang halaman untuk mengambil halaman yang Anda perlukan saja."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk diubah ke JPG?",
+          "a": "Tidak. Setiap halaman dirender menjadi gambar di browser Anda, jadi PDF tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Apakah ini bisa digunakan untuk PDF hasil scan?",
           "a": "PDF hasil pindaian perlu diproses dengan OCR terlebih dahulu untuk mengambil teksnya. Jalankan OCR, lalu ubah hasilnya ke Word untuk hasil terbaik."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk diubah ke Word?",
+          "a": "Tidak. Teks diekstrak dan file DOCX dibuat di browser Anda, jadi PDF tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Bisakah saya mengedit slide yang dihasilkan?",
           "a": "Ya. Hasilnya adalah file PPTX standar yang bisa Anda edit di aplikasi apa pun yang kompatibel dengan PowerPoint."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk diubah ke PowerPoint?",
+          "a": "Tidak. Slide dibuat di browser Anda, jadi PDF tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Mengapa saya perlu mengubah ke PDF/A?",
           "a": "Banyak industri mewajibkan PDF/A untuk penyimpanan dokumen. Format ini memastikan font disematkan, warna didefinisikan, dan dokumen bersifat mandiri."
+        },
+        {
+          "q": "Apakah hasilnya dijamin lolos validator PDF/A?",
+          "a": "Tidak selalu. Alat ini menambahkan metadata identifikasi PDF/A, tetapi file sumber dengan font yang hilang atau transparansi masih bisa gagal dalam pemeriksaan ketat. Jika arsip mewajibkannya, periksa dengan validator seperti veraPDF."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Bisakah saya mengonversi halaman tertentu saja?",
           "a": "Seluruh dokumen dikonversi. Untuk mengonversi sebagian halaman saja, jalankan Ekstrak Halaman PDF terlebih dahulu lalu konversi file tersebut."
+        },
+        {
+          "q": "Bisakah Markdown-nya dipakai dengan ChatGPT atau alat AI lain?",
+          "a": "Bisa. Markdown mempertahankan judul dan daftar sebagai teks biasa yang mudah dibaca asisten AI dan aplikasi catatan. Konversinya sendiri berjalan di browser Anda."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Apakah mengedit akan mengubah format?",
           "a": "Pengeditan langsung mempertahankan format aslinya. Hanya teks yang Anda ubah yang terpengaruh — font, spasi, dan tata letak tetap utuh."
+        },
+        {
+          "q": "Bisakah saya mengedit PDF hasil pindaian?",
+          "a": "Tidak secara langsung. Hasil pindaian adalah gambar teks, jadi tidak ada kata yang bisa diubah di tempat. Gunakan OCR PDF agar teksnya bisa dicari dan disalin, lalu edit di pengolah kata."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Apakah memutar halaman memengaruhi kualitas cetak?",
           "a": "Tidak. Rotasi adalah perubahan metadata yang memberi tahu penampil cara menampilkan halaman. Kontennya tidak dirender ulang."
+        },
+        {
+          "q": "Apakah rotasinya permanen?",
+          "a": "Ya. Orientasi baru disimpan di PDF yang diunduh, jadi file terbuka dengan posisi yang benar di penampil mana pun."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Bisakah halaman pertama tidak diberi nomor?",
           "a": "Ya. Pilih opsi untuk mulai memberi nomor dari halaman tertentu, misalnya halaman 2 atau 3, untuk melewati halaman sampul."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk menambahkan nomor halaman?",
+          "a": "Tidak. Nomor digambar pada halaman di browser Anda, jadi file tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Bisakah saya menambahkan tanda air ke semua halaman sekaligus?",
           "a": "Ya. Tanda air diterapkan ke setiap halaman dokumen secara bersamaan."
+        },
+        {
+          "q": "Bisakah tanda air dihapus nanti?",
+          "a": "Tanda air teks digambar langsung ke konten halaman, jadi tidak bisa dimatikan seperti komentar. Namun, orang dengan perangkat lunak pengedit tetap bisa menutupinya, jadi anggap sebagai pencegah, bukan perlindungan."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Apakah memotong akan menghapus konten?",
           "a": "Pemotongan menyembunyikan konten di luar area potong. Konten yang tersembunyi tidak dihapus dan bisa dikembalikan nanti."
+        },
+        {
+          "q": "Bisakah saya memotong PDF di ponsel?",
+          "a": "Bisa. Potong PDF berjalan di browser ponsel Anda, jadi Anda bisa merapikan margin tanpa memasang aplikasi atau mengunggah file."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Bisakah saya menandatangani PDF yang dilindungi kata sandi?",
           "a": "Anda perlu membuka kuncinya terlebih dahulu. PDF yang dilindungi kata sandi tidak dapat diedit sampai kata sandinya dihapus."
+        },
+        {
+          "q": "Bagaimana cara membuat tanda tangan saya?",
+          "a": "Gambar dengan mouse atau jari, ketik nama Anda dengan font tulisan tangan, atau unggah foto tanda tangan asli Anda. Tanda tangan ditempatkan di halaman di browser Anda dan tidak pernah disimpan di server."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Apakah membuka kunci akan mengubah isi PDF?",
           "a": "Tidak. Membuka kunci hanya menghapus perlindungan kata sandi. Isi dokumen tetap tidak berubah."
+        },
+        {
+          "q": "Amankah memasukkan kata sandi PDF saya di sini?",
+          "a": "Aman. Kata sandi dan file tetap berada di browser Anda dan tidak pernah dikirim ke server."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Apa yang terjadi jika saya lupa kata sandinya?",
           "a": "Tidak ada cara pemulihan. File tidak dapat diakses selamanya tanpa kata sandi. Selalu simpan kata sandi di tempat yang aman."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk menambahkan kata sandi?",
+          "a": "Tidak. Enkripsi dilakukan di browser Anda, jadi file yang belum dilindungi dan kata sandinya tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Bisakah saya membandingkan PDF hasil scan?",
           "a": "Jalankan OCR PDF pada kedua hasil pindaian terlebih dahulu. Perbandingan bekerja pada teks di dalam file, sehingga pindaian yang hanya berisi gambar tidak punya apa pun untuk dibandingkan."
+        },
+        {
+          "q": "Apakah kedua PDF diunggah untuk dibandingkan?",
+          "a": "Tidak. Kedua file dibaca dan dibandingkan di browser Anda, jadi tidak ada yang meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Apakah dokumen saya dikirim ke server?",
           "a": "Tidak. Ringkasan dihitung di browser Anda, dan PDF tidak pernah keluar dari perangkat Anda."
+        },
+        {
+          "q": "Bisakah alat ini meringkas PDF hasil pindaian?",
+          "a": "Tidak secara langsung. PDF hasil pindaian tidak memiliki lapisan teks untuk dibaca. Jalankan dulu lewat OCR PDF, lalu ringkas hasil yang sudah bisa dicari."
         }
       ],
       "howTo": {

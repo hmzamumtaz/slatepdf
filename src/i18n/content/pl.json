@@ -64,6 +64,18 @@
     "whyToolHeading": "Dlaczego warto użyć tutaj narzędzia {tool}?",
     "faqHeading": "{tool} — najczęściej zadawane pytania",
     "continueHeading": "Kontynuuj z innym narzędziem",
+    "glanceHeading": "{tool} w skrócie",
+    "glancePrice": "Cena",
+    "glancePriceValue": "Za darmo, bez płatnej wersji i bez limitu użycia",
+    "glanceFile": "Twój plik",
+    "glanceFileValue": "Przetwarzany w przeglądarce, nigdy nie trafia na serwer",
+    "glanceFileTranslate": "Odczytywany w przeglądarce; do usługi tłumaczeniowej trafia tylko wyodrębniony tekst",
+    "glanceAccount": "Konto",
+    "glanceAccountValue": "Niepotrzebne",
+    "glanceWatermark": "Znak wodny",
+    "glanceWatermarkValue": "Żaden nie zostaje dodany do pliku",
+    "glanceDevices": "Działa na",
+    "glanceDevicesValue": "Każdej nowoczesnej przeglądarce w systemach Windows, Mac, Linux, Android i na iPhone",
     "seeAllTools": "Zobacz wszystkie narzędzia PDF ({count})"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Czy mój dokument jest przesyłany na serwer?",
           "a": "Nie. Każda operacja działa w przeglądarce. Dokument nigdy nie opuszcza Twojego urządzenia, dlatego obszar roboczy idealnie nadaje się do poufnej i wrażliwej pracy."
+        },
+        {
+          "q": "Czy Obszar roboczy PDF jest darmowy i czy potrzebuję konta?",
+          "a": "Jest darmowy, bez konta, bez znaku wodnego i bez limitu liczby dokumentów. Otwórz PDF i zacznij edytować."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Czy dzielenie obniża jakość?",
           "a": "Nie. Dzielenie kopiuje całe obiekty stron do nowych dokumentów. Tekst można nadal zaznaczać, a obrazy zachowują oryginalną rozdzielczość."
+        },
+        {
+          "q": "Czy mogę podzielić PDF na telefonie bez aplikacji?",
+          "a": "Tak. Podziel PDF działa w przeglądarce na Androidzie i iPhonie, więc podzielisz plik bez instalowania czegokolwiek i bez przesyłania go na serwer."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Czy to to samo co dzielenie?",
           "a": "Nie. Dzielenie tworzy osobne pliki z wybranych stron. Usuwanie kasuje strony z dokumentu, a resztę zachowuje jako jeden plik."
+        },
+        {
+          "q": "Czy usuwanie stron z poufnego PDF jest tu bezpieczne?",
+          "a": "Tak. Strony są usuwane w przeglądarce, a plik nigdy nie opuszcza Twojego urządzenia, więc nic nie jest przechowywane na serwerze."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Czy mogę wyodrębnić strony w innej kolejności?",
           "a": "Tak. Wpisz strony w kolejności, w jakiej mają się znaleźć. Wpisanie 9, 3, 5 da plik ze stronami właśnie w tej kolejności."
+        },
+        {
+          "q": "Czy wyodrębnianie stron jest darmowe i bez znaku wodnego?",
+          "a": "Tak. Wyodrębnianie jest darmowe i nie wymaga konta, a nowy PDF nie ma znaku wodnego ani dodanego logo."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Czy optymalizacja to to samo co kompresja?",
           "a": "Kompresja zmniejsza rozmiar pliku przez ponowne kodowanie obrazów. Optymalizacja skupia się na zmianach w strukturze, które przyspieszają wczytywanie i renderowanie."
+        },
+        {
+          "q": "Czy zoptymalizowany PDF nadal otworzy się w każdym czytniku PDF?",
+          "a": "Tak. Optymalizacja zachowuje standardowy format PDF, więc plik otwiera się jak wcześniej w Adobe Reader, przeglądarkach, Preview i aplikacjach mobilnych."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Czy naprawa odzyska całą treść?",
           "a": "Naprawa polega na odbudowie struktury PDF. To, ile da się odzyskać, zależy od tego, jaka część oryginalnych danych pozostała nienaruszona."
+        },
+        {
+          "q": "Czy uszkodzony PDF jest przesyłany na serwer do naprawy?",
+          "a": "Nie. Naprawa odbywa się w przeglądarce, więc uszkodzona umowa czy wyciąg nigdy nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "Jak dokładne jest OCR?",
           "a": "Dokładność zależy od jakości skanu. Wyraźne skany w wysokiej rozdzielczości zwykle osiągają 95–99% dokładności. Skany słabej jakości mogą zawierać więcej błędów."
+        },
+        {
+          "q": "Czy OCR PDF przesyła moje skany na serwer?",
+          "a": "Nie. Silnik rozpoznawania i dane językowe pobierają się do przeglądarki jednorazowo, a potem każda strona jest odczytywana na Twoim urządzeniu."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Czy mogę połączyć wiele obrazów w jeden PDF?",
           "a": "Tak. Wczytaj wszystkie pliki JPG, ułóż je w kolejności i przekonwertuj. Każdy obraz stanie się jedną stroną wynikowego PDF."
+        },
+        {
+          "q": "Czy mogę zamienić zdjęcia na PDF na telefonie?",
+          "a": "Tak. Otwórz JPG na PDF w przeglądarce telefonu, wybierz zdjęcia z galerii i pobierz jeden PDF. Nic nie jest przesyłane."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Czy muszę mieć zainstalowany Microsoft Word?",
           "a": "Nie. Konwersja odbywa się w przeglądarce. Nie trzeba instalować żadnego oprogramowania."
+        },
+        {
+          "q": "Czy mój dokument Word jest przesyłany na serwer w celu konwersji?",
+          "a": "Nie. Plik DOCX jest odczytywany i zamieniany na PDF w przeglądarce, więc nigdy nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Czy mogę przekonwertować tylko wybrane slajdy?",
           "a": "Konwertowana jest cała prezentacja. Aby uzyskać wybrane slajdy, po konwersji wyodrębnij je narzędziem Wyodrębnij strony."
+        },
+        {
+          "q": "Czy moja prezentacja jest przesyłana na serwer w celu konwersji?",
+          "a": "Nie. Plik PPTX jest konwertowany w przeglądarce i nigdy nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Czy mogę przekonwertować tylko wybrane arkusze?",
           "a": "Konwertowany jest cały skoroszyt. Aby uzyskać wybrane arkusze, może być konieczne wcześniejsze zapisanie ich jako osobnego pliku."
+        },
+        {
+          "q": "Czy mój arkusz kalkulacyjny jest przesyłany na serwer w celu konwersji?",
+          "a": "Nie. Plik XLSX jest odczytywany i zamieniany na PDF w przeglądarce, więc dane finansowe nigdy nie opuszczają Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Czy PDF będzie wyglądał jak strona internetowa?",
           "a": "PDF odwzorowuje wyrenderowaną treść strony. Złożone układy mogą nieco różnić się od oryginału."
+        },
+        {
+          "q": "Czy muszę coś instalować, żeby przekonwertować HTML na PDF?",
+          "a": "Nie. Wklej kod HTML lub wybierz plik .html, a PDF powstanie w przeglądarce, bez oprogramowania, rozszerzeń i konta."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Czy mogę przekonwertować tylko wybrane strony?",
           "a": "Tak. Przekonwertuj wszystkie strony lub podaj zakres stron, aby wyodrębnić tylko te, których potrzebujesz."
+        },
+        {
+          "q": "Czy mój PDF jest przesyłany na serwer przy konwersji na JPG?",
+          "a": "Nie. Każda strona jest renderowana do obrazu w przeglądarce, więc PDF nigdy nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Czy to działa na zeskanowanych PDF?",
           "a": "Zeskanowane PDF wymagają najpierw OCR, aby wyodrębnić tekst. Dla najlepszych wyników uruchom OCR, a potem przekonwertuj wynik na Word."
+        },
+        {
+          "q": "Czy mój PDF jest przesyłany na serwer przy konwersji na Word?",
+          "a": "Nie. Tekst jest wyodrębniany, a plik DOCX tworzony w przeglądarce, więc PDF nigdy nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Czy mogę edytować powstałe slajdy?",
           "a": "Tak. Wynikiem jest standardowy plik PPTX, który możesz edytować w dowolnym programie zgodnym z PowerPointem."
+        },
+        {
+          "q": "Czy mój PDF jest przesyłany na serwer przy konwersji na PowerPoint?",
+          "a": "Nie. Slajdy powstają w przeglądarce, więc PDF nigdy nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Dlaczego warto konwertować do PDF/A?",
           "a": "Wiele branż wymaga PDF/A do przechowywania dokumentów. Format ten zapewnia osadzenie czcionek, zdefiniowanie kolorów i samowystarczalność dokumentu."
+        },
+        {
+          "q": "Czy wynik na pewno przejdzie walidację PDF/A?",
+          "a": "Nie zawsze. Narzędzie dodaje metadane identyfikujące PDF/A, ale plik źródłowy z brakującymi czcionkami lub przezroczystością może nie przejść rygorystycznych testów. Jeśli archiwum tego wymaga, sprawdź plik walidatorem, np. veraPDF."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Czy mogę przekonwertować tylko wybrane strony?",
           "a": "Konwertowany jest cały dokument. Aby przekonwertować tylko niektóre strony, najpierw użyj Wyodrębnij strony, a potem przekonwertuj ten plik."
+        },
+        {
+          "q": "Czy mogę użyć Markdown z ChatGPT lub innymi narzędziami AI?",
+          "a": "Tak. Markdown zachowuje nagłówki i listy jako zwykły tekst, który asystenci AI i aplikacje do notatek czytają bez problemu. Sama konwersja odbywa się w przeglądarce."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Czy edycja zmieni formatowanie?",
           "a": "Bezpośrednia edycja zachowuje oryginalne formatowanie. Zmienia się tylko edytowany tekst — czcionki, odstępy i układ pozostają nienaruszone."
+        },
+        {
+          "q": "Czy mogę edytować zeskanowany PDF?",
+          "a": "Nie bezpośrednio. Skan to obraz tekstu, więc nie ma w nim słów do zmiany. Użyj OCR PDF, aby plik dało się przeszukiwać i skopiować tekst, a potem edytuj go w edytorze tekstu."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Czy obrót wpłynie na jakość druku?",
           "a": "Nie. Obrót to zmiana metadanych, która mówi przeglądarce plików, jak wyświetlić stronę. Treść nie jest renderowana od nowa."
+        },
+        {
+          "q": "Czy obrót jest trwały?",
+          "a": "Tak. Nowa orientacja zostaje zapisana w pobranym PDF, więc plik otwiera się prawidłowo w każdej przeglądarce PDF."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Czy mogę pominąć numerację na pierwszej stronie?",
           "a": "Tak. Wybierz opcję rozpoczęcia numeracji od określonej strony, np. 2 lub 3, aby pominąć strony tytułowe."
+        },
+        {
+          "q": "Czy mój PDF jest przesyłany na serwer, żeby dodać numery stron?",
+          "a": "Nie. Numery są nanoszone na strony w przeglądarce, więc plik nigdy nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Czy mogę dodać znak wodny na wszystkich stronach naraz?",
           "a": "Tak. Znak wodny jest nakładany jednocześnie na każdą stronę dokumentu."
+        },
+        {
+          "q": "Czy znak wodny można później usunąć?",
+          "a": "Tekstowy znak wodny jest wpisany w treść strony, więc nie da się go wyłączyć jak komentarza. Osoba z programem do edycji może go jednak zakryć, dlatego traktuj go jako odstraszacz, a nie zabezpieczenie."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Czy przycinanie usuwa treść?",
           "a": "Przycinanie ukrywa treść poza obszarem przycięcia. Ukryta treść nie jest usuwana i można ją później przywrócić."
+        },
+        {
+          "q": "Czy mogę przyciąć PDF na telefonie?",
+          "a": "Tak. Przytnij PDF działa w przeglądarce telefonu, więc przytniesz marginesy bez instalowania aplikacji i bez przesyłania pliku."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Czy mogę podpisać PDF chroniony hasłem?",
           "a": "Najpierw musisz go odblokować. Plików PDF chronionych hasłem nie można edytować, dopóki hasło nie zostanie usunięte."
+        },
+        {
+          "q": "Jak mogę utworzyć swój podpis?",
+          "a": "Narysuj go myszą lub palcem, wpisz imię i nazwisko odręczną czcionką albo prześlij zdjęcie prawdziwego podpisu. Podpis jest umieszczany na stronie w przeglądarce i nigdy nie jest przechowywany na serwerze."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Czy odblokowanie zmieni treść PDF?",
           "a": "Nie. Odblokowanie usuwa tylko zabezpieczenie hasłem. Treść dokumentu pozostaje bez zmian."
+        },
+        {
+          "q": "Czy wpisanie tu hasła do PDF jest bezpieczne?",
+          "a": "Tak. Hasło i plik pozostają w przeglądarce i nigdy nie są wysyłane na serwer."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Co się stanie, jeśli zapomnę hasła?",
           "a": "Nie ma możliwości odzyskania. Bez hasła plik jest trwale niedostępny. Zawsze przechowuj hasło w bezpiecznym miejscu."
+        },
+        {
+          "q": "Czy mój PDF jest przesyłany na serwer, żeby dodać hasło?",
+          "a": "Nie. Szyfrowanie odbywa się w przeglądarce, więc niezabezpieczony plik i hasło nigdy nie opuszczają Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Czy mogę porównać zeskanowane PDF?",
           "a": "Najpierw użyj OCR PDF na obu skanach. Porównanie działa na tekście w plikach, więc skany zawierające tylko obrazy nie mają czego porównywać."
+        },
+        {
+          "q": "Czy oba pliki PDF są przesyłane na serwer w celu porównania?",
+          "a": "Nie. Oba pliki są odczytywane i porównywane w przeglądarce, więc żaden z nich nie opuszcza Twojego urządzenia."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Czy mój dokument jest wysyłany na serwer?",
           "a": "Nie. Streszczenie jest obliczane w przeglądarce, a PDF nigdy nie opuszcza Twojego urządzenia."
+        },
+        {
+          "q": "Czy narzędzie streści zeskanowany PDF?",
+          "a": "Nie bezpośrednio. Zeskanowany PDF nie ma warstwy tekstowej do odczytania. Najpierw przepuść go przez OCR PDF, a potem streść przeszukiwalny wynik."
         }
       ],
       "howTo": {

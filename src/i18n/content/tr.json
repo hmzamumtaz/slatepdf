@@ -64,6 +64,18 @@
     "whyToolHeading": "{tool} için neden burayı kullanmalısınız?",
     "faqHeading": "{tool} — sıkça sorulan sorular",
     "continueHeading": "Başka bir araçla devam edin",
+    "glanceHeading": "Bir bakışta {tool}",
+    "glancePrice": "Fiyat",
+    "glancePriceValue": "Ücretsiz; ücretli paket ve kullanım sınırı yok",
+    "glanceFile": "Dosyanız",
+    "glanceFileValue": "Tarayıcınızda işlenir, asla yüklenmez",
+    "glanceFileTranslate": "Tarayıcınızda okunur; çeviri hizmetine yalnızca çıkarılan metin gönderilir",
+    "glanceAccount": "Hesap",
+    "glanceAccountValue": "Gerekmez",
+    "glanceWatermark": "Filigran",
+    "glanceWatermarkValue": "Dosyanıza filigran eklenmez",
+    "glanceDevices": "Çalıştığı yerler",
+    "glanceDevicesValue": "Windows, Mac, Linux, Android ve iPhone'daki her modern tarayıcı",
     "seeAllTools": "{count} PDF aracının tümünü görün"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Belgem bir sunucuya yükleniyor mu?",
           "a": "Hayır. Her işlem tarayıcınızda çalışır. Belgeniz cihazınızdan asla çıkmaz; bu da çalışma alanını gizli ve hassas işler için ideal kılar."
+        },
+        {
+          "q": "PDF Çalışma Alanı ücretsiz mi, hesap gerekiyor mu?",
+          "a": "Ücretsizdir; hesap gerekmez, filigran eklenmez ve üzerinde çalışabileceğiniz belge sayısında sınır yoktur. Bir PDF açın ve düzenlemeye başlayın."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Bölme kaliteyi düşürür mü?",
           "a": "Hayır. Bölme, sayfa nesnelerini bütün halinde yeni belgelere kopyalar. Metin seçilebilir kalır ve görseller orijinal çözünürlüklerini korur."
+        },
+        {
+          "q": "Uygulama olmadan telefonda PDF bölebilir miyim?",
+          "a": "Evet. PDF Böl, Android ve iPhone'da tarayıcıda çalışır; böylece hiçbir şey kurmadan ve dosyayı yüklemeden bölebilirsiniz."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Bu, bölme ile aynı şey mi?",
           "a": "Hayır. Bölme, seçilen sayfalardan ayrı dosyalar oluşturur. Silme ise sayfaları belgeden kaldırır ve geri kalanını tek bir dosya olarak tutar."
+        },
+        {
+          "q": "Gizli bir PDF'den sayfaları burada silmek güvenli mi?",
+          "a": "Evet. Sayfalar tarayıcınızda silinir ve dosya cihazınızdan hiç çıkmaz; bu yüzden sunucuda hiçbir şey saklanmaz."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Sayfaları farklı bir sırayla ayıklayabilir miyim?",
           "a": "Evet. Sayfaları istediğiniz sırayla listeleyin. 9, 3, 5 girerseniz sayfalar bu sırayla yer alan bir dosya oluşur."
+        },
+        {
+          "q": "Sayfa ayıklama ücretsiz mi, filigran ekleniyor mu?",
+          "a": "Evet, hesap olmadan ücretsizdir ve yeni PDF'ye hiçbir filigran veya marka eklenmez."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Optimizasyon sıkıştırma ile aynı şey mi?",
           "a": "Sıkıştırma, görselleri yeniden kodlayarak dosya boyutunu küçültür. Optimizasyon ise yüklemeyi ve görüntülemeyi hızlandıran yapısal iyileştirmelere odaklanır."
+        },
+        {
+          "q": "Optimize edilmiş PDF her PDF okuyucuda açılır mı?",
+          "a": "Evet. Optimizasyon dosyayı standart bir PDF olarak bırakır; Adobe Reader'da, tarayıcılarda, Preview'da ve mobil görüntüleyicilerde eskisi gibi açılır."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Onarım tüm içeriği kurtarabilir mi?",
           "a": "Onarım, PDF yapısını yeniden oluşturarak çalışır. Kurtarma, orijinal verilerin ne kadarının sağlam kaldığına bağlıdır."
+        },
+        {
+          "q": "Hasarlı PDF'm onarım için yükleniyor mu?",
+          "a": "Hayır. Onarım tarayıcınızda çalışır; hasarlı bir sözleşme veya hesap özeti cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "OCR ne kadar doğrudur?",
           "a": "Doğruluk tarama kalitesine bağlıdır. Net ve yüksek çözünürlüklü taramalar genellikle %95-99 doğruluğa ulaşır. Düşük kaliteli taramalarda daha fazla hata olabilir."
+        },
+        {
+          "q": "OCR PDF taramalarımı yüklüyor mu?",
+          "a": "Hayır. Tanıma motoru ve dil verileri tarayıcınıza bir kez indirilir, ardından her sayfa kendi cihazınızda okunur."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Birden fazla görseli tek bir PDF'de birleştirebilir miyim?",
           "a": "Evet. Tüm JPG'lerinizi yükleyin, sıraya koyun ve dönüştürün. Her görsel, oluşan PDF'de bir sayfa olur."
+        },
+        {
+          "q": "Telefonumda fotoğrafları PDF'ye dönüştürebilir miyim?",
+          "a": "Evet. Telefonunuzun tarayıcısında JPG'den PDF'ye aracını açın, galeriden fotoğrafları seçin ve tek bir PDF indirin. Hiçbir şey yüklenmez."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Microsoft Word'ün yüklü olması gerekiyor mu?",
           "a": "Hayır. Dönüştürme tarayıcınızda gerçekleşir. Herhangi bir yazılım yüklemeniz gerekmez."
+        },
+        {
+          "q": "Word belgem dönüştürmek için yükleniyor mu?",
+          "a": "Hayır. DOCX dosyası tarayıcınızda okunur ve PDF'ye dönüştürülür; cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Belirli slaytları dönüştürebilir miyim?",
           "a": "Dönüştürme tüm sunumu işler. Belirli slaytları almak için dönüştürmeden sonra PDF Sayfa Ayıkla aracıyla onları ayıklayın."
+        },
+        {
+          "q": "Sunumum dönüştürmek için yükleniyor mu?",
+          "a": "Hayır. PPTX dosyası tarayıcınızda dönüştürülür ve cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Belirli çalışma sayfalarını dönüştürebilir miyim?",
           "a": "Dönüştürme tüm çalışma kitabını işler. Belirli sayfalar için önce onları ayrı bir dosya olarak kaydetmeniz gerekebilir."
+        },
+        {
+          "q": "Elektronik tablom dönüştürmek için yükleniyor mu?",
+          "a": "Hayır. XLSX dosyası tarayıcınızda okunur ve PDF'ye dönüştürülür; finansal verileriniz cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "PDF web sayfasına benzeyecek mi?",
           "a": "PDF, sayfanın işlenmiş içeriğini yakalar. Karmaşık düzenler orijinalden biraz farklı olabilir."
+        },
+        {
+          "q": "HTML'yi PDF'ye dönüştürmek için bir şey kurmam gerekiyor mu?",
+          "a": "Hayır. HTML'yi yapıştırın veya bir .html dosyası seçin; PDF, yazılım, eklenti veya hesap gerekmeden tarayıcınızda oluşturulur."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Belirli sayfaları dönüştürebilir miyim?",
           "a": "Evet. Tüm sayfaları dönüştürmeyi seçin veya yalnızca ihtiyacınız olan sayfaları almak için bir sayfa aralığı belirtin."
+        },
+        {
+          "q": "PDF'm JPG'ye dönüştürmek için yükleniyor mu?",
+          "a": "Hayır. Her sayfa tarayıcınızda görüntüye dönüştürülür; PDF cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Taranmış PDF'lerde çalışır mı?",
           "a": "Taranmış PDF'lerde metni çıkarmak için önce OCR gerekir. En iyi sonuç için önce OCR çalıştırın, ardından sonucu Word'e dönüştürün."
+        },
+        {
+          "q": "PDF'm Word'e dönüştürmek için yükleniyor mu?",
+          "a": "Hayır. Metin tarayıcınızda çıkarılır ve DOCX orada oluşturulur; PDF cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Oluşan slaytları düzenleyebilir miyim?",
           "a": "Evet. Çıktı, PowerPoint uyumlu herhangi bir uygulamada düzenleyebileceğiniz standart bir PPTX dosyasıdır."
+        },
+        {
+          "q": "PDF'm PowerPoint'e dönüştürmek için yükleniyor mu?",
+          "a": "Hayır. Slaytlar tarayıcınızda oluşturulur; PDF cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Neden PDF/A'ya dönüştürmeliyim?",
           "a": "Pek çok sektör, belge saklama için PDF/A gerektirir. PDF/A, yazı tiplerinin gömülmesini, renklerin tanımlanmasını ve belgenin kendi içinde eksiksiz olmasını sağlar."
+        },
+        {
+          "q": "Sonucun bir PDF/A doğrulayıcısından geçmesi garanti mi?",
+          "a": "Her zaman değil. Araç PDF/A tanımlama meta verilerini ekler, ancak fontları eksik veya saydamlık içeren bir kaynak dosya katı denetimlerden yine de geçemeyebilir. Arşiv bunu şart koşuyorsa veraPDF gibi bir doğrulayıcıyla kontrol edin."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Belirli sayfaları dönüştürebilir miyim?",
           "a": "Belgenin tamamı dönüştürülür. Yalnızca bazı sayfaları dönüştürmek için önce PDF Sayfa Ayıkla'yı çalıştırın ve o dosyayı dönüştürün."
+        },
+        {
+          "q": "Markdown'ı ChatGPT veya diğer yapay zekâ araçlarıyla kullanabilir miyim?",
+          "a": "Evet. Markdown başlıkları ve listeleri düz metin olarak korur; yapay zekâ asistanları ve not uygulamaları bunu sorunsuz okur. Dönüştürmenin kendisi tarayıcınızda çalışır."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Düzenleme biçimlendirmeyi değiştirir mi?",
           "a": "Doğrudan düzenleme orijinal biçimlendirmeyi korur. Yalnızca değiştirdiğiniz metin etkilenir; yazı tipleri, boşluklar ve düzen olduğu gibi kalır."
+        },
+        {
+          "q": "Taranmış bir PDF'yi düzenleyebilir miyim?",
+          "a": "Doğrudan değil. Tarama, metnin bir resmidir; yerinde değiştirilecek kelime yoktur. OCR PDF ile aranabilir hale getirip metni kopyalayın, ardından bir kelime işlemcide düzenleyin."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Döndürme baskı kalitesini etkiler mi?",
           "a": "Hayır. Döndürme, görüntüleyiciye sayfanın nasıl gösterileceğini bildiren bir meta veri değişikliğidir. İçerik yeniden oluşturulmaz."
+        },
+        {
+          "q": "Döndürme kalıcı mı?",
+          "a": "Evet. Yeni yön indirilen PDF'ye kaydedilir; böylece her görüntüleyicide doğru yönde açılır."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "İlk sayfada numaralandırmayı atlayabilir miyim?",
           "a": "Evet. Kapak sayfalarını atlamak için numaralandırmayı 2. veya 3. sayfa gibi belirli bir sayfadan başlatma seçeneğini kullanın."
+        },
+        {
+          "q": "Sayfa numarası eklemek için PDF'm yükleniyor mu?",
+          "a": "Hayır. Numaralar tarayıcınızda sayfalara çizilir; dosya cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Tüm sayfalara aynı anda filigran ekleyebilir miyim?",
           "a": "Evet. Filigran, belgedeki tüm sayfalara aynı anda uygulanır."
+        },
+        {
+          "q": "Filigran daha sonra kaldırılabilir mi?",
+          "a": "Metin filigranı sayfa içeriğine çizilir, bu yüzden bir yorum gibi kapatılamaz. Yine de düzenleme yazılımı olan biri üzerini örtebilir; bunu bir koruma değil, caydırıcı olarak düşünün."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Kırpma içeriği siler mi?",
           "a": "Kırpma, kırpma alanının dışındaki içeriği gizler. Gizlenen içerik silinmez ve daha sonra kırpma geri alınabilir."
+        },
+        {
+          "q": "Telefonumda PDF kırpabilir miyim?",
+          "a": "Evet. PDF Kırp telefonunuzun tarayıcısında çalışır; uygulama kurmadan veya dosyayı yüklemeden kenar boşluklarını kırpabilirsiniz."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Parola korumalı bir PDF'yi imzalayabilir miyim?",
           "a": "Önce kilidini açmanız gerekir. Parola korumalı PDF'ler, parola kaldırılana kadar düzenlenemez."
+        },
+        {
+          "q": "İmzamı nasıl oluşturabilirim?",
+          "a": "Fare veya parmağınızla çizin, adınızı el yazısı yazı tipiyle yazın ya da gerçek imzanızın fotoğrafını yükleyin. İmza sayfaya tarayıcınızda yerleştirilir ve hiçbir sunucuda saklanmaz."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Kilidi açmak PDF içeriğini değiştirir mi?",
           "a": "Hayır. Kilit açma yalnızca parola korumasını kaldırır. Belge içeriği değişmeden kalır."
+        },
+        {
+          "q": "PDF parolamı buraya girmek güvenli mi?",
+          "a": "Evet. Parola ve dosya tarayıcınızda kalır ve hiçbir sunucuya gönderilmez."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Parolayı unutursam ne olur?",
           "a": "Kurtarma mekanizması yoktur. Parola olmadan dosyaya kalıcı olarak erişilemez. Parolayı her zaman güvenli bir yerde saklayın."
+        },
+        {
+          "q": "Parola eklemek için PDF'm yükleniyor mu?",
+          "a": "Hayır. Şifreleme tarayıcınızda yapılır; korumasız dosya ve parola cihazınızdan hiç çıkmaz."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Taranmış PDF'leri karşılaştırabilir miyim?",
           "a": "Önce her iki taramada da OCR PDF'yi çalıştırın. Karşılaştırma dosyaların içindeki metin üzerinden çalışır, bu yüzden yalnızca görselden oluşan taramalarda karşılaştırılacak bir şey yoktur."
+        },
+        {
+          "q": "Karşılaştırmak için iki PDF de yükleniyor mu?",
+          "a": "Hayır. İki dosya da tarayıcınızda okunur ve karşılaştırılır; hiçbiri cihazınızdan çıkmaz."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Belgem bir sunucuya gönderiliyor mu?",
           "a": "Hayır. Özet tarayıcınızda hesaplanır ve PDF cihazınızdan asla çıkmaz."
+        },
+        {
+          "q": "Taranmış bir PDF'yi özetleyebilir mi?",
+          "a": "Doğrudan değil. Taranmış PDF'de okunabilecek bir metin katmanı yoktur. Önce OCR PDF'den geçirin, ardından aranabilir sonucu özetleyin."
         }
       ],
       "howTo": {

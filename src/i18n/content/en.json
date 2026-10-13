@@ -64,6 +64,18 @@
     "whyToolHeading": "Why use {tool} here?",
     "faqHeading": "{tool} — frequently asked questions",
     "continueHeading": "Continue with another tool",
+    "glanceHeading": "{tool} at a glance",
+    "glancePrice": "Price",
+    "glancePriceValue": "Free, with no paid tier and no usage limit",
+    "glanceFile": "Your file",
+    "glanceFileValue": "Processed in your browser, never uploaded",
+    "glanceFileTranslate": "Read in your browser; only the extracted text is sent to a translation service",
+    "glanceAccount": "Account",
+    "glanceAccountValue": "Not needed",
+    "glanceWatermark": "Watermark",
+    "glanceWatermarkValue": "None added to your file",
+    "glanceDevices": "Works on",
+    "glanceDevicesValue": "Any modern browser on Windows, Mac, Linux, Android and iPhone",
     "seeAllTools": "See all {count} PDF tools"
   },
   "categories": {
@@ -106,7 +118,7 @@
       "name": "PDF Workspace",
       "description": "Edit, redact, sign, stamp and secure one document without leaving the page",
       "seoTitle": "PDF Workspace — Edit, Sign, Redact & Secure PDFs Online",
-      "metaDescription": "One PDF workspace to edit text, redact sensitive info, add signatures, stamp watermarks, and password-protect documents. All processing happens in your browser.",
+      "metaDescription": "One PDF workspace to edit text, redact sensitive info, add signatures, stamp watermarks and password-protect documents. Everything runs in your browser.",
       "faqs": [
         {
           "q": "What can I do in the PDF Workspace?",
@@ -115,6 +127,10 @@
         {
           "q": "Is my document uploaded to a server?",
           "a": "No. Every action runs in your browser. Your document never leaves your device, making the workspace ideal for confidential and sensitive work."
+        },
+        {
+          "q": "Is the PDF Workspace free, and do I need an account?",
+          "a": "It is free with no account, no watermark and no limit on how many documents you work on. Open a PDF and start editing."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Does splitting reduce quality?",
           "a": "No. Splitting copies whole page objects into new documents. Text stays selectable and images keep their original resolution."
+        },
+        {
+          "q": "Can I split a PDF on my phone without an app?",
+          "a": "Yes. Split PDF runs in the browser on Android and iPhone, so you can split a file without installing anything or uploading it."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Is this the same as splitting?",
           "a": "No. Splitting creates separate files from selected pages. Removing deletes pages from the document while keeping the rest as a single file."
+        },
+        {
+          "q": "Is it safe to delete pages from a confidential PDF here?",
+          "a": "Yes. The pages are removed in your browser and the file never leaves your device, so nothing is stored on a server."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Can I extract pages in a different order?",
           "a": "Yes. List the pages in the order you want them. Entering 9, 3, 5 produces a file with pages in that sequence."
+        },
+        {
+          "q": "Is extracting pages free, with no watermark?",
+          "a": "Yes. Extraction is free with no account, and the new PDF carries no watermark or added branding."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Is optimization the same as compression?",
           "a": "Compression reduces file size by re-encoding images. Optimization focuses on structural improvements that speed up loading and rendering."
+        },
+        {
+          "q": "Will an optimized PDF still open in every PDF reader?",
+          "a": "Yes. Optimization keeps the file a standard PDF, so it opens in Adobe Reader, browsers, Preview and mobile viewers as before."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Can repair recover all content?",
           "a": "Repair works by rebuilding the PDF structure. Recovery depends on how much of the original data remains intact."
+        },
+        {
+          "q": "Is my damaged PDF uploaded for repair?",
+          "a": "No. The repair runs in your browser, so a damaged contract or statement never leaves your device."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "How accurate is OCR?",
           "a": "Accuracy depends on scan quality. Clear, high-resolution scans typically achieve 95-99% accuracy. Poor quality scans may have more errors."
+        },
+        {
+          "q": "Does OCR PDF upload my scans?",
+          "a": "No. The recognition engine and its language data download to your browser once, then every page is read on your own device."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Can I combine multiple images into one PDF?",
           "a": "Yes. Load all your JPGs, arrange them in order, and convert. Each image becomes one page in the resulting PDF."
+        },
+        {
+          "q": "Can I convert photos to PDF on my phone?",
+          "a": "Yes. Open JPG to PDF in your phone's browser, pick photos from your gallery, and download one PDF. Nothing is uploaded."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Do I need Microsoft Word installed?",
           "a": "No. The conversion happens in your browser. No software installation is required."
+        },
+        {
+          "q": "Is my Word document uploaded to convert it?",
+          "a": "No. The DOCX file is read and turned into a PDF in your browser, so it never leaves your device."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Can I convert specific slides?",
           "a": "The conversion processes the entire presentation. To get specific slides, extract them after conversion using the Extract Pages tool."
+        },
+        {
+          "q": "Is my presentation uploaded to convert it?",
+          "a": "No. The PPTX file is converted in your browser and never leaves your device."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Can I convert specific worksheets?",
           "a": "The conversion processes the entire workbook. For specific sheets, you may need to save them as a separate file first."
+        },
+        {
+          "q": "Is my spreadsheet uploaded to convert it?",
+          "a": "No. The XLSX file is read and turned into a PDF in your browser, so financial data never leaves your device."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "Will the PDF look like the web page?",
           "a": "The PDF captures the rendered content of the page. Complex layouts may vary slightly from the original."
+        },
+        {
+          "q": "Do I need to install anything to convert HTML to PDF?",
+          "a": "No. Paste the HTML or choose an .html file and the PDF is created in your browser, with no software, extension or account."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Can I convert specific pages?",
           "a": "Yes. Choose to convert all pages or specify a page range to extract only the pages you need."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to JPG?",
+          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
         }
       ],
       "howTo": {
@@ -852,7 +916,7 @@
       "name": "PDF to Word",
       "description": "Turn a PDF into an editable document (DOCX)",
       "seoTitle": "PDF to Word — Convert PDF to Editable DOCX Free",
-      "metaDescription": "Turn the text of a PDF into an editable Word file (DOCX), page by page. Free, browser-based, no sign-up and no upload.",
+      "metaDescription": "Turn the text of a PDF into an editable Word file (DOCX), page by page. Free, runs in your browser, no sign-up and no upload.",
       "faqs": [
         {
           "q": "Will the Word file keep the layout and images?",
@@ -861,6 +925,10 @@
         {
           "q": "Does this work on scanned PDFs?",
           "a": "Scanned PDFs need OCR first to extract the text. Run OCR, then convert the result to Word for best results."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to Word?",
+          "a": "No. The text is extracted and the DOCX is built in your browser, so the PDF never leaves your device."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Can I edit the resulting slides?",
           "a": "Yes. The output is a standard PPTX file that you can edit in any PowerPoint-compatible application."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to PowerPoint?",
+          "a": "No. The slides are built in your browser, so the PDF never leaves your device."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Why should I convert to PDF/A?",
           "a": "Many industries require PDF/A for document retention. It ensures fonts are embedded, colors are defined, and the document is self-contained."
+        },
+        {
+          "q": "Is the result guaranteed to pass a PDF/A validator?",
+          "a": "Not always. The tool adds PDF/A identification metadata, but a source file with missing fonts or transparency may still fail strict checks, so verify with a validator such as veraPDF if an archive requires it."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Can I convert specific pages?",
           "a": "The whole document is converted. To convert only some pages, run Extract Pages first and convert that file."
+        },
+        {
+          "q": "Can I use the Markdown with ChatGPT or other AI tools?",
+          "a": "Yes. Markdown keeps headings and lists as plain text, which AI assistants and note apps read cleanly. The conversion itself runs in your browser."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Will editing change the formatting?",
           "a": "Direct editing preserves the original formatting. Only the text you change is affected — fonts, spacing, and layout remain intact."
+        },
+        {
+          "q": "Can I edit a scanned PDF?",
+          "a": "Not directly. A scan is a picture of text, so there are no words to change in place. Use OCR PDF to make it searchable and copy the text out, then edit it in a word processor."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Will rotation affect print quality?",
           "a": "No. Rotation is a metadata change that instructs the viewer how to display the page. The content is not re-rendered."
+        },
+        {
+          "q": "Is the rotation permanent?",
+          "a": "Yes. The new orientation is saved in the downloaded PDF, so it opens the right way up in every viewer."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Can I skip numbering on the first page?",
           "a": "Yes. Select the option to start numbering from a specific page, such as page 2 or 3, to skip cover pages."
+        },
+        {
+          "q": "Is my PDF uploaded to add page numbers?",
+          "a": "No. The numbers are drawn onto the pages in your browser, so the file never leaves your device."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Can I watermark all pages at once?",
           "a": "Yes. The watermark is applied to every page in the document simultaneously."
+        },
+        {
+          "q": "Can a watermark be removed later?",
+          "a": "A text watermark is drawn into the page content, so it cannot be switched off like a comment. Someone with editing software can still cover it, so treat it as a deterrent rather than protection."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Does cropping delete content?",
           "a": "Cropping hides the content outside the crop area. The hidden content is not deleted and can be uncropped later."
+        },
+        {
+          "q": "Can I crop a PDF on my phone?",
+          "a": "Yes. Crop PDF runs in your phone's browser, so you can trim margins without installing an app or uploading the file."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Can I sign a password-protected PDF?",
           "a": "You need to unlock it first. Password-protected PDFs cannot be edited until the password is removed."
+        },
+        {
+          "q": "How can I create my signature?",
+          "a": "Draw it with a mouse or finger, type your name in a handwriting font, or upload a photo of your real signature. It is placed on the page in your browser and never stored on a server."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Will unlocking change the PDF content?",
           "a": "No. Unlocking only removes the password protection. The document content remains unchanged."
+        },
+        {
+          "q": "Is it safe to enter my PDF password here?",
+          "a": "Yes. The password and the file stay in your browser and are never sent to a server."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "What happens if I forget the password?",
           "a": "There is no recovery mechanism. The file is permanently inaccessible without the password. Always store it somewhere safe."
+        },
+        {
+          "q": "Is my PDF uploaded to add a password?",
+          "a": "No. Encryption happens in your browser, so the unprotected file and the password never leave your device."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Can I compare scanned PDFs?",
           "a": "Run OCR PDF on both scans first. Comparison works on the text inside the files, so image-only scans have nothing to compare."
+        },
+        {
+          "q": "Are both PDFs uploaded to compare them?",
+          "a": "No. Both files are read and compared in your browser, so neither one leaves your device."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Is my document sent to a server?",
           "a": "No. The summary is computed in your browser, and the PDF never leaves your device."
+        },
+        {
+          "q": "Can it summarize a scanned PDF?",
+          "a": "Not directly. A scanned PDF has no text layer to read. Run it through OCR PDF first, then summarize the searchable result."
         }
       ],
       "howTo": {

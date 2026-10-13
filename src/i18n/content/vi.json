@@ -64,6 +64,18 @@
     "whyToolHeading": "Vì sao nên dùng {tool} tại đây?",
     "faqHeading": "{tool} — câu hỏi thường gặp",
     "continueHeading": "Tiếp tục với công cụ khác",
+    "glanceHeading": "Tổng quan về {tool}",
+    "glancePrice": "Giá",
+    "glancePriceValue": "Miễn phí, không có gói trả phí và không giới hạn sử dụng",
+    "glanceFile": "Tệp của bạn",
+    "glanceFileValue": "Xử lý ngay trên trình duyệt, không bao giờ bị tải lên",
+    "glanceFileTranslate": "Được đọc trên trình duyệt; chỉ phần văn bản trích xuất được gửi tới dịch vụ dịch thuật",
+    "glanceAccount": "Tài khoản",
+    "glanceAccountValue": "Không cần",
+    "glanceWatermark": "Watermark",
+    "glanceWatermarkValue": "Không chèn vào tệp của bạn",
+    "glanceDevices": "Hoạt động trên",
+    "glanceDevicesValue": "Mọi trình duyệt hiện đại trên Windows, Mac, Linux, Android và iPhone",
     "seeAllTools": "Xem tất cả {count} công cụ PDF"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Tài liệu của tôi có bị tải lên máy chủ không?",
           "a": "Không. Mọi thao tác đều chạy trong trình duyệt. Tài liệu không bao giờ rời khỏi thiết bị của bạn, nên không gian làm việc này rất phù hợp cho công việc bảo mật và nhạy cảm."
+        },
+        {
+          "q": "Không gian làm việc PDF có miễn phí không, có cần tài khoản không?",
+          "a": "Hoàn toàn miễn phí, không cần tài khoản, không có watermark và không giới hạn số tài liệu. Chỉ cần mở PDF và bắt đầu chỉnh sửa."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Tách PDF có làm giảm chất lượng không?",
           "a": "Không. Khi tách, toàn bộ trang được sao chép sang tài liệu mới. Văn bản vẫn chọn được và hình ảnh giữ nguyên độ phân giải gốc."
+        },
+        {
+          "q": "Tôi có thể tách PDF trên điện thoại mà không cần ứng dụng không?",
+          "a": "Có. Tách PDF chạy ngay trên trình duyệt của Android và iPhone, nên bạn có thể tách tệp mà không cần cài đặt gì hay tải tệp lên."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Việc này có giống tách PDF không?",
           "a": "Không. Tách PDF tạo ra các tệp riêng từ những trang đã chọn. Xóa trang thì loại bỏ trang khỏi tài liệu và giữ phần còn lại trong một tệp duy nhất."
+        },
+        {
+          "q": "Xóa trang khỏi PDF bảo mật ở đây có an toàn không?",
+          "a": "Có. Các trang được xóa ngay trên trình duyệt và tệp không bao giờ rời khỏi thiết bị của bạn, nên không có gì được lưu trên máy chủ."
         }
       ],
       "howTo": {
@@ -247,6 +271,10 @@
         {
           "q": "Tôi có thể trích xuất trang theo thứ tự khác không?",
           "a": "Có. Liệt kê các trang theo thứ tự bạn muốn. Nhập 9, 3, 5 sẽ tạo ra tệp có các trang theo đúng thứ tự đó."
+        },
+        {
+          "q": "Trích xuất trang có miễn phí và không có watermark không?",
+          "a": "Có. Tính năng trích xuất miễn phí, không cần tài khoản, và tệp PDF mới không có watermark hay logo nào được thêm vào."
         }
       ],
       "howTo": {
@@ -351,6 +379,10 @@
         {
           "q": "Tối ưu có giống nén không?",
           "a": "Nén giảm dung lượng tệp bằng cách mã hóa lại hình ảnh. Tối ưu tập trung cải thiện cấu trúc để tăng tốc độ tải và hiển thị."
+        },
+        {
+          "q": "PDF đã tối ưu có còn mở được trên mọi trình đọc PDF không?",
+          "a": "Có. Quá trình tối ưu giữ tệp ở định dạng PDF chuẩn, nên vẫn mở được trên Adobe Reader, trình duyệt, Preview và ứng dụng di động như trước."
         }
       ],
       "howTo": {
@@ -383,6 +415,10 @@
         {
           "q": "Sửa lỗi có khôi phục được toàn bộ nội dung không?",
           "a": "Công cụ hoạt động bằng cách dựng lại cấu trúc PDF. Khả năng khôi phục phụ thuộc vào lượng dữ liệu gốc còn nguyên vẹn."
+        },
+        {
+          "q": "PDF bị lỗi của tôi có bị tải lên để sửa không?",
+          "a": "Không. Việc sửa lỗi diễn ra trên trình duyệt, nên hợp đồng hay sao kê bị lỗi không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -414,6 +450,10 @@
         {
           "q": "OCR chính xác đến mức nào?",
           "a": "Độ chính xác phụ thuộc vào chất lượng bản scan. Bản scan rõ nét, độ phân giải cao thường đạt 95-99%. Bản scan kém có thể có nhiều lỗi hơn."
+        },
+        {
+          "q": "OCR PDF có tải bản scan của tôi lên không?",
+          "a": "Không. Công cụ nhận dạng và dữ liệu ngôn ngữ chỉ tải về trình duyệt một lần, sau đó mọi trang đều được đọc ngay trên thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Tôi có thể gộp nhiều ảnh vào một PDF không?",
           "a": "Có. Thêm tất cả ảnh JPG, sắp xếp theo thứ tự rồi chuyển đổi. Mỗi ảnh sẽ thành một trang trong tệp PDF kết quả."
+        },
+        {
+          "q": "Tôi có thể chuyển ảnh sang PDF trên điện thoại không?",
+          "a": "Có. Mở JPG sang PDF trên trình duyệt điện thoại, chọn ảnh từ thư viện và tải về một tệp PDF duy nhất. Không có gì bị tải lên."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Tôi có cần cài Microsoft Word không?",
           "a": "Không. Việc chuyển đổi diễn ra trong trình duyệt. Không cần cài đặt phần mềm nào."
+        },
+        {
+          "q": "Tài liệu Word của tôi có bị tải lên để chuyển đổi không?",
+          "a": "Không. Tệp DOCX được đọc và chuyển thành PDF ngay trên trình duyệt, nên không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Tôi có thể chuyển một số slide cụ thể không?",
           "a": "Công cụ chuyển đổi toàn bộ bài thuyết trình. Để lấy các slide cụ thể, hãy dùng công cụ Trích xuất trang sau khi chuyển đổi."
+        },
+        {
+          "q": "Bài thuyết trình của tôi có bị tải lên để chuyển đổi không?",
+          "a": "Không. Tệp PPTX được chuyển đổi ngay trên trình duyệt và không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -591,6 +643,10 @@
         {
           "q": "Tôi có thể chuyển từng trang tính riêng không?",
           "a": "Công cụ chuyển đổi toàn bộ sổ làm việc. Để chuyển các trang tính cụ thể, bạn có thể cần lưu chúng thành một tệp riêng trước."
+        },
+        {
+          "q": "Bảng tính của tôi có bị tải lên để chuyển đổi không?",
+          "a": "Không. Tệp XLSX được đọc và chuyển thành PDF ngay trên trình duyệt, nên dữ liệu tài chính không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -622,6 +678,10 @@
         {
           "q": "PDF có trông giống trang web không?",
           "a": "PDF ghi lại nội dung đã hiển thị của trang. Bố cục phức tạp có thể hơi khác so với bản gốc."
+        },
+        {
+          "q": "Tôi có cần cài đặt gì để chuyển HTML sang PDF không?",
+          "a": "Không. Dán mã HTML hoặc chọn tệp .html, PDF sẽ được tạo ngay trên trình duyệt mà không cần phần mềm, tiện ích mở rộng hay tài khoản."
         }
       ],
       "howTo": {
@@ -829,6 +889,10 @@
         {
           "q": "Tôi có thể chuyển một số trang cụ thể không?",
           "a": "Có. Chọn chuyển tất cả các trang hoặc chỉ định khoảng trang để chỉ xuất những trang bạn cần."
+        },
+        {
+          "q": "PDF của tôi có bị tải lên để chuyển sang JPG không?",
+          "a": "Không. Mỗi trang được kết xuất thành ảnh ngay trên trình duyệt, nên PDF không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Công cụ có dùng được với PDF scan không?",
           "a": "PDF scan cần chạy OCR trước để lấy được văn bản. Hãy chạy OCR rồi chuyển kết quả sang Word để có kết quả tốt nhất."
+        },
+        {
+          "q": "PDF của tôi có bị tải lên để chuyển sang Word không?",
+          "a": "Không. Văn bản được trích xuất và tệp DOCX được tạo ngay trên trình duyệt, nên PDF không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Tôi có thể chỉnh sửa các slide kết quả không?",
           "a": "Có. Kết quả là tệp PPTX chuẩn mà bạn có thể chỉnh sửa trong bất kỳ ứng dụng nào tương thích với PowerPoint."
+        },
+        {
+          "q": "PDF của tôi có bị tải lên để chuyển sang PowerPoint không?",
+          "a": "Không. Các slide được tạo ngay trên trình duyệt, nên PDF không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -958,6 +1030,10 @@
         {
           "q": "Vì sao tôi nên chuyển sang PDF/A?",
           "a": "Nhiều ngành yêu cầu PDF/A để lưu giữ tài liệu. Định dạng này đảm bảo phông chữ được nhúng, màu sắc được xác định và tài liệu tự chứa đầy đủ."
+        },
+        {
+          "q": "Kết quả có chắc chắn vượt qua trình kiểm tra PDF/A không?",
+          "a": "Không phải lúc nào cũng vậy. Công cụ thêm siêu dữ liệu nhận dạng PDF/A, nhưng tệp gốc thiếu phông chữ hoặc có độ trong suốt vẫn có thể không đạt các bài kiểm tra nghiêm ngặt, vì vậy hãy kiểm tra bằng trình xác thực như veraPDF nếu nơi lưu trữ yêu cầu."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Tôi có thể chuyển một số trang cụ thể không?",
           "a": "Toàn bộ tài liệu sẽ được chuyển đổi. Để chỉ chuyển một số trang, hãy dùng Trích xuất trang trước rồi chuyển tệp đó."
+        },
+        {
+          "q": "Tôi có thể dùng Markdown với ChatGPT hoặc công cụ AI khác không?",
+          "a": "Có. Markdown giữ tiêu đề và danh sách ở dạng văn bản thuần, nên trợ lý AI và ứng dụng ghi chú đọc rất rõ ràng. Bản thân quá trình chuyển đổi chạy ngay trên trình duyệt."
         }
       ],
       "howTo": {
@@ -1020,6 +1100,10 @@
         {
           "q": "Chỉnh sửa có làm thay đổi định dạng không?",
           "a": "Chỉnh sửa trực tiếp giữ nguyên định dạng gốc. Chỉ phần chữ bạn thay đổi bị ảnh hưởng — phông chữ, khoảng cách và bố cục vẫn giữ nguyên."
+        },
+        {
+          "q": "Tôi có thể chỉnh sửa PDF scan không?",
+          "a": "Không trực tiếp. Bản scan là hình ảnh của văn bản, nên không có chữ nào để sửa tại chỗ. Hãy dùng OCR PDF để biến nó thành tệp tìm kiếm được và sao chép văn bản ra, rồi chỉnh sửa trong trình soạn thảo văn bản."
         }
       ],
       "howTo": {
@@ -1052,6 +1136,10 @@
         {
           "q": "Xoay trang có ảnh hưởng tới chất lượng in không?",
           "a": "Không. Xoay chỉ là thay đổi siêu dữ liệu, cho trình xem biết cách hiển thị trang. Nội dung không bị dựng lại."
+        },
+        {
+          "q": "Việc xoay có được lưu vĩnh viễn không?",
+          "a": "Có. Hướng mới được lưu trong tệp PDF tải về, nên tệp hiển thị đúng chiều trên mọi trình xem."
         }
       ],
       "howTo": {
@@ -1084,6 +1172,10 @@
         {
           "q": "Tôi có thể bỏ qua đánh số ở trang đầu không?",
           "a": "Có. Chọn tùy chọn bắt đầu đánh số từ một trang cụ thể, chẳng hạn trang 2 hoặc 3, để bỏ qua trang bìa."
+        },
+        {
+          "q": "PDF của tôi có bị tải lên để đánh số trang không?",
+          "a": "Không. Số trang được vẽ lên các trang ngay trên trình duyệt, nên tệp không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -1116,6 +1208,10 @@
         {
           "q": "Tôi có thể chèn watermark cho tất cả các trang cùng lúc không?",
           "a": "Có. Watermark được áp dụng đồng thời cho mọi trang trong tài liệu."
+        },
+        {
+          "q": "Watermark có thể bị xóa sau này không?",
+          "a": "Watermark dạng chữ được vẽ trực tiếp vào nội dung trang, nên không thể tắt đi như một bình luận. Tuy vậy, người có phần mềm chỉnh sửa vẫn có thể che nó đi, vì thế hãy xem nó như biện pháp răn đe chứ không phải bảo vệ."
         }
       ],
       "howTo": {
@@ -1148,6 +1244,10 @@
         {
           "q": "Cắt lề có xóa nội dung không?",
           "a": "Cắt lề chỉ ẩn nội dung nằm ngoài vùng cắt. Nội dung bị ẩn không bị xóa và có thể khôi phục lại sau."
+        },
+        {
+          "q": "Tôi có thể cắt lề PDF trên điện thoại không?",
+          "a": "Có. Cắt lề PDF chạy ngay trên trình duyệt điện thoại, nên bạn có thể cắt lề mà không cần cài ứng dụng hay tải tệp lên."
         }
       ],
       "howTo": {
@@ -1180,6 +1280,10 @@
         {
           "q": "Tôi có thể ký PDF có mật khẩu không?",
           "a": "Bạn cần mở khóa trước. PDF có mật khẩu không thể chỉnh sửa cho đến khi gỡ mật khẩu."
+        },
+        {
+          "q": "Làm thế nào để tạo chữ ký của tôi?",
+          "a": "Vẽ bằng chuột hoặc ngón tay, gõ tên bằng phông chữ viết tay, hoặc tải lên ảnh chụp chữ ký thật của bạn. Chữ ký được đặt lên trang ngay trên trình duyệt và không bao giờ được lưu trên máy chủ."
         }
       ],
       "howTo": {
@@ -1256,6 +1360,10 @@
         {
           "q": "Mở khóa có làm thay đổi nội dung PDF không?",
           "a": "Không. Mở khóa chỉ gỡ lớp bảo vệ bằng mật khẩu. Nội dung tài liệu vẫn giữ nguyên."
+        },
+        {
+          "q": "Nhập mật khẩu PDF ở đây có an toàn không?",
+          "a": "Có. Mật khẩu và tệp ở lại trong trình duyệt và không bao giờ được gửi tới máy chủ."
         }
       ],
       "howTo": {
@@ -1287,6 +1395,10 @@
         {
           "q": "Nếu tôi quên mật khẩu thì sao?",
           "a": "Không có cách khôi phục. Tệp sẽ vĩnh viễn không mở được nếu thiếu mật khẩu. Hãy luôn lưu mật khẩu ở nơi an toàn."
+        },
+        {
+          "q": "PDF của tôi có bị tải lên để đặt mật khẩu không?",
+          "a": "Không. Việc mã hóa diễn ra ngay trên trình duyệt, nên tệp chưa được bảo vệ và mật khẩu không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -1319,6 +1431,10 @@
         {
           "q": "Tôi có thể so sánh PDF scan không?",
           "a": "Hãy chạy OCR PDF cho cả hai bản scan trước. Việc so sánh dựa trên văn bản bên trong tệp, nên bản scan chỉ có ảnh sẽ không có gì để so sánh."
+        },
+        {
+          "q": "Cả hai tệp PDF có bị tải lên để so sánh không?",
+          "a": "Không. Cả hai tệp được đọc và so sánh ngay trên trình duyệt, nên không tệp nào rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Tài liệu của tôi có bị gửi lên máy chủ không?",
           "a": "Không. Bản tóm tắt được tính toán trong trình duyệt và PDF không bao giờ rời khỏi thiết bị của bạn."
+        },
+        {
+          "q": "Công cụ có tóm tắt được PDF scan không?",
+          "a": "Không trực tiếp. PDF scan không có lớp văn bản để đọc. Hãy xử lý nó bằng OCR PDF trước, rồi tóm tắt tệp kết quả có thể tìm kiếm."
         }
       ],
       "howTo": {

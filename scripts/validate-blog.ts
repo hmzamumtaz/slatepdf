@@ -1,6 +1,7 @@
 import { posts } from '../src/lib/blog';
 import { postText } from '../src/lib/blog/types';
 import { tools } from '../src/lib/tools-data';
+import { inlineHrefs } from '../src/lib/blog/inline';
 
 const slugs = new Set<string>();
 const dupes: string[] = [];
@@ -23,6 +24,15 @@ for (const p of posts) {
   if (p.faqs.length < 3) problems.push(`${p.slug}: only ${p.faqs.length} FAQs`);
   if (p.blocks.filter(b => b.type === 'h2').length < 3) problems.push(`${p.slug}: fewer than 3 H2s`);
   for (const r of p.related ?? []) if (!posts.some(q => q.slug === r)) problems.push(`${p.slug}: related "${r}" does not exist`);
+  const linkable = [...p.blocks.flatMap(b => 'text' in b ? [b.text] : 'items' in b ? b.items : 'rows' in b ? b.rows.flat() : [])];
+  for (const href of linkable.flatMap(inlineHrefs)) {
+    const path = href.split('#')[0];
+    const ok = path === '/' || path === '/tools' || path === '/blog' || path === '/verify-no-upload' || path === '/about'
+      || (path.startsWith('/tools/') && toolSlugs.has(path.slice(7)))
+      || (path.startsWith('/blog/') && posts.some(q => q.slug === path.slice(6)));
+    if (!ok) problems.push(`${p.slug}: broken inline link ${href}`);
+  }
+  for (const f of p.faqs) if (inlineHrefs(f.a).length) problems.push(`${p.slug}: FAQ answers must stay plain text`);
   titles.set(p.title, (titles.get(p.title) ?? 0) + 1);
   descs.set(p.description, (descs.get(p.description) ?? 0) + 1);
 }

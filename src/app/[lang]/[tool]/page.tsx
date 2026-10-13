@@ -8,7 +8,7 @@ import { getContent, toolContent, toolMessages } from '@/i18n/content';
 import { languageAlternates } from '@/i18n/alternates';
 import { toolOgImage } from '@/i18n/og';
 import { localizedSlug, slugFromLocalized, toolHref } from '@/i18n/paths';
-import { generateFAQSchema } from '@/lib/schema';
+import { generateFAQSchema, generateWebPageSchema } from '@/lib/schema';
 import { SITE_NAME, SITE_URL, pageTitle } from '@/lib/site';
 import { tools } from '@/lib/tools-data';
 
@@ -53,15 +53,12 @@ export default async function LocalizedToolPage({ params }: PageProps<'/[lang]/[
   const messages = await toolMessages(lang, slug);
   const Tool = toolComponents[slug];
 
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+  const pageSchema = generateWebPageSchema({
     name: `${local.name} — ${SITE_NAME}`,
     description: local.metaDescription,
     url: `${SITE_URL}${toolHref(lang, slug)}`,
     inLanguage: lang,
-    isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
-  };
+  });
   const faqSchema = generateFAQSchema(local.faqs);
 
   return (

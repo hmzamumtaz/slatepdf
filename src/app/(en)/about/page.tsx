@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Shield, Lock, BookOpenText, Mail } from 'lucide-react';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 import { SITE_AUTHOR, SITE_EMAIL } from '@/lib/author';
+import { ORG_ID, WEBSITE_ID } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: `About ${SITE_NAME}`,
@@ -27,12 +28,8 @@ export default function AboutPage() {
     '@type': 'AboutPage',
     name: `About ${SITE_NAME}`,
     url: `${SITE_URL}/about`,
-    mainEntity: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-      description: 'Free PDF toolkit that runs in your browser. Edit without uploading.',
-    },
+    isPartOf: { '@id': WEBSITE_ID },
+    mainEntity: { '@id': ORG_ID },
   };
 
   const personSchema = {
@@ -43,7 +40,7 @@ export default function AboutPage() {
     description: SITE_AUTHOR.bio,
     url: `${SITE_URL}/about`,
     knowsAbout: ['PDF', 'Document management', 'File formats', 'Digital signatures', 'Prepress'],
-    worksFor: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    worksFor: { '@id': ORG_ID },
   };
 
   return (
