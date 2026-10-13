@@ -52,6 +52,6 @@ export const newPosts6: BlogPost[] = [
       { q: 'Do I need Microsoft Word to convert to PDF on a Mac?', a: 'No. Pages, Google Docs, and browser-based converters all do it without Word installed.' },
       { q: 'Is my Word document uploaded to a server?', a: 'No. When the conversion runs in your browser, your .docx is processed locally on your Mac and never leaves your device.' },
     ],
-    related: ['how-to-convert-word-to-pdf-without-losing-formatting', 'how-to-convert-word-to-pdf-on-iphone', 'how-to-convert-jpg-to-pdf-on-windows', 'how-to-convert-google-docs-to-pdf'],
+    related: ['how-to-convert-word-to-pdf-without-losing-formatting', 'how-to-convert-word-to-pdf-on-iphone', 'how-to-convert-word-to-pdf-on-chromebook', 'how-to-convert-google-docs-to-pdf'],
   },
 ];
