@@ -270,7 +270,7 @@
         },
         {
           "q": "Mohu stránky extrahovat v jiném pořadí?",
-          "a": "Ano. Uveďte stránky v požadovaném pořadí. Zadáním 9, 3, 5 vznikne soubor se stránkami právě v tomto pořadí."
+          "a": "Ne. Stránky vždy vyjdou v původním pořadí a stránka uvedená dvakrát se zařadí jen jednou, takže 9, 3, 5 dá stránky 3, 5 a 9. Chcete-li pořadí změnit, prožente výsledek nástrojem Uspořádat PDF."
         },
         {
           "q": "Je extrakce stránek zdarma a bez vodoznaku?",
@@ -296,7 +296,7 @@
     "organize-pdf": {
       "slug": "seradit-stranky-pdf",
       "name": "Uspořádat PDF",
-      "description": "Měňte pořadí stránek a spravujte je",
+      "description": "Změňte pořadí stránek a odeberte ty, které nepotřebujete",
       "seoTitle": "Uspořádat PDF – změnit pořadí a odstranit stránky zdarma",
       "metaDescription": "Seřaďte stránky PDF v libovolném pořadí a v jednom kroku vynechte ty, které nepotřebujete. Zdarma, bez registrace, soubor neopustí váš prohlížeč.",
       "faqs": [
@@ -332,9 +332,9 @@
     "compress-pdf": {
       "slug": "zmensit-pdf",
       "name": "Zmenšit PDF",
-      "description": "Zmenšete velikost souboru se zachováním kvality",
-      "seoTitle": "Zmenšit PDF – komprimace PDF bez ztráty kvality",
-      "metaDescription": "Zmenšete velikost PDF až o 80 % bez viditelné ztráty kvality. Komprimace zdarma v prohlížeči. Bez nahrávání, bez vodoznaků a bez registrace.",
+      "description": "Zmenšete PDF na potřebnou velikost souboru",
+      "seoTitle": "Zmenšit PDF – zmenšení PDF na potřebnou velikost zdarma",
+      "metaDescription": "Zmenšete PDF na cílovou velikost v MB nebo KB. Nejprve se zkusí bezztrátové přestavění; stránky se mění na obrázky jen v případě potřeby. Zdarma, bez nahrávání.",
       "faqs": [
         {
           "q": "Sníží komprimace kvalitu PDF?",
@@ -342,7 +342,7 @@
         },
         {
           "q": "O kolik se moje PDF zmenší?",
-          "a": "PDF s mnoha fotografiemi se zmenší o 60–80 %. Čistě textové soubory o 10–30 %. Naskenované dokumenty se mohou zmenšit až o 90 %."
+          "a": "Záleží na souboru, proto nástroj neslibuje žádné procento: cíl určujete vy. Pokud bezztrátové přestavění cíle nedosáhne, stránky se znovu vykreslí jako obrázky s postupně nižší kvalitou, dokud se soubor nevejde, a výsledek ukáže skutečně dosaženou velikost."
         },
         {
           "q": "Mohu zmenšit PDF chráněné heslem?",
@@ -368,17 +368,17 @@
     "optimize-pdf": {
       "slug": "optimalizovat-pdf",
       "name": "Optimalizovat PDF",
-      "description": "Optimalizujte PDF pro web a rychlejší načítání",
-      "seoTitle": "Optimalizovat PDF – rychlejší načítání PDF na webu",
-      "metaDescription": "Optimalizujte soubory PDF pro web a rychlejší načítání. Zkraťte dobu vykreslení, slučte vrstvy a zjednodušte strukturu dokumentu.",
+      "description": "Bezztrátově přebalte PDF a zmenšete jeho velikost",
+      "seoTitle": "Optimalizovat PDF – bezztrátové přebalení PDF zdarma",
+      "metaDescription": "Bezztrátové přebalení PDF: komprimované proudy objektů, odstranění nepoužívaných objektů a starých revizí, volitelně vymazání metadat. Text a obrázky beze změny.",
       "faqs": [
         {
           "q": "Co dělá optimalizace PDF?",
-          "a": "Optimalizace odstraní nepoužívané objekty, sloučí interaktivní vrstvy, vytvoří podmnožiny písem a zjednoduší vnitřní strukturu pro rychlejší vykreslování."
+          "a": "Nástroj soubor přestaví s komprimovanými proudy objektů, čímž odstraní nepoužívané objekty a staré uložené revize, a volitelně vymaže metadata, jako je název a autor. Nesplošťuje vrstvy, nevytváří podmnožiny písem ani znovu nekóduje obrázky. Pokud nic neušetří, dostanete původní soubor beze změny."
         },
         {
           "q": "Je optimalizace totéž co komprimace?",
-          "a": "Komprimace zmenšuje velikost souboru překódováním obrázků. Optimalizace se zaměřuje na úpravy struktury, které zrychlují načítání a vykreslování."
+          "a": "Ne. Zmenšit PDF míří na cílovou velikost a kvůli tomu může stránky převést na obrázky. Optimalizace jen bezztrátově přebalí strukturu souboru, takže úspora bývá menší, ale nic viditelného se nezmění."
         },
         {
           "q": "Otevře se optimalizované PDF stále v každé čtečce PDF?",
@@ -406,7 +406,7 @@
       "name": "Opravit PDF",
       "description": "Opravte poškozené soubory PDF",
       "seoTitle": "Opravit PDF – oprava poškozených souborů PDF",
-      "metaDescription": "Opravte poškozené soubory PDF. Napravte chybné hlavičky, obnovte čitelný obsah a zachraňte poškozené dokumenty. Nástroj zdarma online.",
+      "metaDescription": "Opravte poškozené soubory PDF: přestavte tabulku křížových odkazů a strukturu, nebo zachraňte stránky silně poškozených souborů. Zdarma, bez nahrávání.",
       "faqs": [
         {
           "q": "Proč se PDF poškodí?",
@@ -441,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Získejte text z naskenovaných dokumentů",
       "seoTitle": "OCR PDF – převod naskenovaného PDF na text zdarma",
-      "metaDescription": "Převeďte naskenované dokumenty pomocí OCR na prohledávatelný a označitelný text. Naskenovaná PDF lze prohledávat a upravovat. Zdarma, bez nahrávání.",
+      "metaDescription": "Udělejte naskenovaná PDF prohledávatelná pomocí OCR: neviditelná textová vrstva, kterou lze prohledávat, označit a kopírovat. Až 3 ze 44 jazyků. Zdarma.",
       "faqs": [
         {
           "q": "Co je OCR?",
@@ -449,7 +449,7 @@
         },
         {
           "q": "Jak přesné je OCR?",
-          "a": "Přesnost závisí na kvalitě skenu. Ostré skeny ve vysokém rozlišení obvykle dosahují přesnosti 95–99 %. U nekvalitních skenů může být chyb více."
+          "a": "Záleží na skenu. Ostré, dobře osvětlené a rovné stránky tištěného textu se čtou dobře; nízké rozlišení, ručně psaný text, natočení nebo šum způsobují více chyb. Než se na důležitý text spolehnete, porovnejte ho s obrázkem stránky."
         },
         {
           "q": "Nahrává OCR PDF moje skeny na server?",
@@ -638,7 +638,7 @@
       "faqs": [
         {
           "q": "Zachovají se moje vzorce?",
-          "a": "Vzorce se vypočítají a do PDF se uloží jejich výsledné hodnoty. Samotné vzorce se nezachovají, protože PDF je statický formát."
+          "a": "Ne. PDF zobrazí u každého vzorce poslední vypočtenou hodnotu uloženou v souboru; samotné vzorce se nezachovají. Pokud sešit nebyl nikdy přepočítán (například ho vytvořil skript), nejprve ho otevřete a uložte v Excelu."
         },
         {
           "q": "Mohu převést jen vybrané listy?",
@@ -667,9 +667,9 @@
     "html-to-pdf": {
       "slug": "html-do-pdf",
       "name": "HTML do PDF",
-      "description": "Převeďte webové stránky do PDF",
+      "description": "Převeďte kód HTML nebo soubory .html do PDF",
       "seoTitle": "HTML do PDF – převod webových stránek do PDF zdarma",
-      "metaDescription": "Převeďte libovolnou webovou stránku do PDF. Uložte články, účtenky a online obsah jako dokumenty PDF. Zdarma, v prohlížeči, bez instalace.",
+      "metaDescription": "Převeďte vložený HTML nebo soubor .html do PDF jako přesnou kopii designu, nebo s označitelným textem. Zdarma, v prohlížeči, bez instalace.",
       "faqs": [
         {
           "q": "Mohu převést živou webovou stránku z její URL?",
@@ -705,7 +705,7 @@
       "name": "HEIC do PDF",
       "description": "Převeďte obrázky Apple HEIC do PDF",
       "seoTitle": "HEIC do PDF – převod fotek HEIC z iPhonu do PDF zdarma",
-      "metaDescription": "Převeďte fotky HEIC a HEIF z iPhonu a iPadu na dokumenty PDF. Zdarma, v prohlížeči, bez nahrávání. Zachová původní kvalitu obrázků.",
+      "metaDescription": "Převeďte fotky HEIC a HEIF z iPhonu a iPadu do PDF, jedno PDF na fotku v plném rozlišení. Zdarma, v prohlížeči, bez nahrávání.",
       "faqs": [
         {
           "q": "Co je soubor HEIC?",
@@ -717,7 +717,7 @@
         },
         {
           "q": "Sníží převod kvalitu obrázku?",
-          "a": "Ne. Obrázek HEIC se dekóduje a vloží do PDF v původním rozlišení. Vizuální kvalita se zachová."
+          "a": "Jen velmi málo. Každá fotka si zachová plné rozlišení, ale uvnitř PDF se znovu zakóduje jako JPEG ve vysoké kvalitě (92 %), protože PDF neumí HEIC uložit přímo. Rozdíl je sotva vidět."
         }
       ],
       "howTo": {
@@ -748,11 +748,11 @@
         },
         {
           "q": "Sníží převod WebP do PDF kvalitu?",
-          "a": "Ne. Obrázek WebP se dekóduje a vloží do PDF v původním rozlišení bez opětovné komprese."
+          "a": "Ne. Každý WebP se dekóduje a uloží bezztrátově (jako PNG) v plném rozlišení pixelů, vycentruje se na stránku A4 a zmenší se jen tehdy, když je větší než stránka."
         },
         {
           "q": "Mohu převést více souborů WebP najednou?",
-          "a": "Ano. Vyberte více obrázků WebP a ty se spojí do jednoho vícestránkového PDF s jedním obrázkem na stránku."
+          "a": "Ano. Vyberte několik obrázků WebP a z každého vznikne samostatné PDF; stáhněte je jednotlivě nebo jako ZIP. Pro jedno vícestránkové PDF použijte JPG do PDF, které přijímá i WebP."
         }
       ],
       "howTo": {
@@ -787,7 +787,7 @@
         },
         {
           "q": "Mohu převést více souborů TIFF najednou?",
-          "a": "Ano. Vyberte více souborů TIFF a každý se převede, přičemž všechny stránky se spojí do jednoho PDF."
+          "a": "Ano. Vyberte několik souborů TIFF a z každého vznikne samostatné PDF se všemi jeho stránkami. Stáhněte je jednotlivě nebo jako ZIP a pak použijte Spojit PDF, pokud chcete jediný soubor."
         }
       ],
       "howTo": {
@@ -822,7 +822,7 @@
         },
         {
           "q": "Je používání zdarma?",
-          "a": "Ano. Převod SVG do PDF je zcela zdarma, bez omezení, bez vodoznaků a bez registrace."
+          "a": "Ano. Převod SVG do PDF je zcela zdarma, bez denního limitu, bez vodoznaku a bez registrace."
         }
       ],
       "howTo": {
@@ -880,15 +880,15 @@
       "name": "PDF do JPG",
       "description": "Převeďte stránky PDF na obrázky JPG",
       "seoTitle": "PDF do JPG – převod stránek PDF na obrázky zdarma",
-      "metaDescription": "Převeďte stránky PDF na kvalitní obrázky JPG. Uložte jako obrázky všechny stránky nebo jen vybrané. Zdarma, bez registrace a bez vodoznaků.",
+      "metaDescription": "Převeďte každou stránku PDF na obrázek JPG nebo PNG ve 144 nebo 216 DPI. Zdarma, bez registrace, bez vodoznaku a PDF nikdy neopustí váš prohlížeč.",
       "faqs": [
         {
           "q": "Jaké rozlišení budou obrázky mít?",
-          "a": "Obrázky se extrahují v nejvyšším rozlišení obsaženém v PDF, obvykle 150–300 DPI podle zdroje."
+          "a": "Stránky se vykreslují ve 144 DPI (Standardní) nebo 216 DPI (Vysoké) bez ohledu na zdroj. Vysoké dává ostřejší text a větší soubory."
         },
         {
           "q": "Mohu převést jen vybrané stránky?",
-          "a": "Ano. Zvolte převod všech stránek, nebo zadejte rozsah stránek a extrahujte jen ty, které potřebujete."
+          "a": "Převedou se všechny stránky. Chcete-li jen některé, nejprve použijte Extrahovat stránky a převeďte tento soubor, nebo stáhněte jen obrázky stránek, které potřebujete."
         },
         {
           "q": "Nahrává se moje PDF při převodu do JPG na server?",
@@ -1021,7 +1021,7 @@
       "name": "PDF do PDF/A",
       "description": "Převeďte PDF do archivního formátu PDF/A",
       "seoTitle": "PDF do PDF/A – převod do archivního formátu PDF",
-      "metaDescription": "Převeďte běžné soubory PDF do archivního formátu PDF/A pro dlouhodobé uchování a splnění požadavků. Převod zdarma v prohlížeči.",
+      "metaDescription": "Převeďte PDF na archivní kopii označenou v metadatech jako PDF/A-2b. Přísnou shodu ověřte validátorem. Zdarma, v prohlížeči, bez nahrávání.",
       "faqs": [
         {
           "q": "Co je PDF/A?",
@@ -1029,7 +1029,7 @@
         },
         {
           "q": "Proč převádět do PDF/A?",
-          "a": "Mnoho odvětví vyžaduje pro uchovávání dokumentů PDF/A. Zajišťuje, že písma jsou vložená, barvy definované a dokument je soběstačný."
+          "a": "Mnoho soudů, archivů a spisových systémů vyžaduje PDF/A, které předpokládá vložená písma, definované barvy a žádné šifrování. Tento nástroj zkopíruje vaše stránky a přidá identifikaci PDF/A; chybějící písma nevkládá a nepřidává barevný profil."
         },
         {
           "q": "Je zaručeno, že výsledek projde validátorem PDF/A?",
@@ -1068,7 +1068,7 @@
         },
         {
           "q": "Můžu Markdown použít s ChatGPT nebo jinými AI nástroji?",
-          "a": "Ano. Markdown zachová nadpisy a seznamy jako prostý text, který AI asistenti i aplikace na poznámky čtou bez problémů. Samotný převod probíhá v prohlížeči."
+          "a": "Ano. Výstupem je prostý text s jednou sekcí na stránku (## Page 1, ## Page 2 …), který asistenti AI a aplikace na poznámky čtou bez potíží. Převod probíhá ve vašem prohlížeči."
         }
       ],
       "howTo": {
@@ -1095,11 +1095,11 @@
       "faqs": [
         {
           "q": "Mohu upravit jakékoli PDF?",
-          "a": "Upravit lze jakékoli digitálně vytvořené PDF s označitelným textem. U naskenovaných PDF je nejprve potřeba OCR, aby byl text upravitelný."
+          "a": "Upravit lze každé digitálně vytvořené PDF s označitelným textem. Naskenované PDF je obrázek textu, takže v něm nejsou slova, která by šla přímo změnit."
         },
         {
           "q": "Změní úpravy formátování?",
-          "a": "Přímé úpravy zachovávají původní formátování. Změní se jen text, který upravíte – písma, mezery a rozvržení zůstanou zachovány."
+          "a": "Znovu se vykreslí jen text, který změníte; zbytek stránky se zkopíruje beze změny. Upravený text podle možností použije písmo, které už PDF obsahuje; pokud v něm chybí znak, který napíšete, použije se podobné standardní písmo, takže upravené řádky před odesláním zkontrolujte."
         },
         {
           "q": "Můžu upravit naskenované PDF?",
@@ -1125,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "otocit-pdf",
       "name": "Otočit PDF",
-      "description": "Otočte stránky PDF o libovolný úhel",
-      "seoTitle": "Otočit PDF – otočení stránek PDF zdarma",
+      "description": "Otáčejte stránky PDF o 90°, 180° nebo 270°",
+      "seoTitle": "Otočit PDF – otočení stránek o 90°, 180° nebo 270° zdarma",
       "metaDescription": "Otočte jednotlivé nebo všechny stránky PDF. Opravte naskenované stránky ležící na boku a orientaci stránek. Zdarma, bez registrace.",
       "faqs": [
         {
@@ -1163,7 +1163,7 @@
       "name": "Očíslovat stránky",
       "description": "Vložte do PDF čísla stránek",
       "seoTitle": "Číslování stránek PDF – vložit čísla stránek zdarma",
-      "metaDescription": "Přidejte čísla stránek na libovolné místo v PDF. Zvolte formát, pozici a počáteční číslo. Zdarma, v prohlížeči, bez nahrávání.",
+      "metaDescription": "Přidejte do PDF čísla stránek v jedné ze šesti pozic. Zvolte formát (1, Strana 1 nebo 1 z N) a počáteční číslo. Zdarma, bez nahrávání.",
       "faqs": [
         {
           "q": "Kam mohu čísla stránek umístit?",
@@ -1171,7 +1171,7 @@
         },
         {
           "q": "Mohu vynechat číslování první stránky?",
-          "a": "Ano. Zvolte možnost začít číslovat od určité stránky, například od 2. nebo 3., a titulní strany tak přeskočíte."
+          "a": "Ne přímo: číslo dostane každá stránka a „Začít číslovat od“ mění jen první číslo. Aby obálka zůstala bez čísla, oddělte ji nástrojem Rozdělit PDF, zbytek očíslujte od 2 a pak vše znovu spojte nástrojem Spojit PDF."
         },
         {
           "q": "Nahrává se moje PDF kvůli číslování stránek na server?",
@@ -1197,7 +1197,7 @@
     "add-watermark": {
       "slug": "vodoznak-pdf",
       "name": "Přidat vodoznak",
-      "description": "Přidejte textový nebo obrázkový vodoznak",
+      "description": "Vložte textový vodoznak na každou stránku",
       "seoTitle": "Vodoznak do PDF – přidat textový vodoznak zdarma",
       "metaDescription": "Vložte na každou stránku PDF textový vodoznak, například DŮVĚRNÉ nebo KONCEPT. Nastavte průhlednost a velikost. Zdarma, bez registrace a nahrávání.",
       "faqs": [
@@ -1239,11 +1239,11 @@
       "faqs": [
         {
           "q": "Mohu oříznout všechny stránky najednou?",
-          "a": "Ano. Použijte stejnou oblast ořezu na všechny stránky, nebo nastavte různé ořezy pro jednotlivé stránky."
+          "a": "Ano — nastavené okraje se vždy oříznou ze všech stránek. Různé oříznutí pro jednotlivé stránky podporováno není; pokud některé stránky potřebují jiné okraje, PDF nejprve rozdělte."
         },
         {
           "q": "Smaže ořez obsah?",
-          "a": "Ořez skryje obsah mimo oblast ořezu. Skrytý obsah se nesmaže a ořez lze později zrušit."
+          "a": "Ne. Oříznutí zmenší viditelnou plochu stránky, ale obsah mimo ni zůstane v souboru a některé editory ho mohou znovu zobrazit. Nikdy neořezávejte kvůli skrytí citlivých údajů — použijte k tomu Začernit PDF."
         },
         {
           "q": "Můžu oříznout PDF v telefonu?",
@@ -1269,13 +1269,13 @@
     "sign-pdf": {
       "slug": "podepsat-pdf",
       "name": "Podepsat PDF",
-      "description": "Přidejte do PDF elektronický podpis",
+      "description": "Vložte do PDF nakreslený, napsaný nebo nahraný podpis",
       "seoTitle": "Podepsat PDF – elektronický podpis zdarma online",
-      "metaDescription": "Přidejte do dokumentů PDF elektronický podpis. Nakreslete, napište nebo nahrajte svůj podpis. Právně platné, zdarma, bez registrace.",
+      "metaDescription": "Podepište PDF online: nakreslete, napište nebo nahrajte podpis a umístěte ho na libovolnou stránku. Zdarma, bez registrace a podpis se nikdy nenahrává.",
       "faqs": [
         {
           "q": "Jsou elektronické podpisy právně platné?",
-          "a": "Ano. Elektronické podpisy jsou právně platné podle amerického zákona ESIGN Act a evropského nařízení eIDAS prakticky u všech dokumentů."
+          "a": "U většiny běžných dokumentů ano: předpisy jako americký ESIGN Act a nařízení EU eIDAS uznávají prosté elektronické podpisy. Tento nástroj vloží obrázek vašeho podpisu bez certifikátu a auditní stopy, proto tam, kde se vyžaduje kvalifikovaný podpis nebo podpis založený na certifikátu, použijte certifikovanou službu pro elektronické podepisování."
         },
         {
           "q": "Mohu podepsat PDF chráněné heslem?",
@@ -1351,15 +1351,15 @@
       "name": "Odemknout PDF",
       "description": "Odstraňte z PDF ochranu heslem",
       "seoTitle": "Odemknout PDF – odstranit heslo z PDF zdarma",
-      "metaDescription": "Odstraňte ochranu heslem z dokumentů PDF. Odemkněte šifrovaná PDF pro úpravy, tisk nebo sdílení. Zdarma, bez registrace.",
+      "metaDescription": "Odstraňte heslo a omezení tisku, kopírování či úprav z PDF, které máte právo odemknout. Zdarma, bez registrace, přímo v prohlížeči.",
       "faqs": [
         {
           "q": "Potřebuji k odemčení PDF heslo?",
-          "a": "Ano. Abyste heslo mohli odstranit, musíte ho znát. Šifrování PDF nelze bez hesla obejít."
+          "a": "Jen pokud PDF při otevření vyžaduje heslo. Soubory, které se otevřou bez hesla, ale blokují tisk, kopírování nebo úpravy, se odemknou bez něj. Heslo pro otevření obejít nejde: bez něj zůstane soubor zamčený."
         },
         {
           "q": "Změní odemčení obsah PDF?",
-          "a": "Ne. Odemčení odstraní pouze ochranu heslem. Obsah dokumentu zůstane beze změny."
+          "a": "Stránky vypadají stejně, ale každá se přestaví jako obrázek ve vysokém rozlišení s neviditelnou textovou vrstvou: text lze dál vyhledávat a kopírovat, ale už ho nejde upravovat jako text a odkazy ani formulářová pole se nezachovají. Soubor se také může zvětšit."
         },
         {
           "q": "Je bezpečné zadat tu heslo k PDF?",
@@ -1403,10 +1403,10 @@
       ],
       "howTo": {
         "title": "Jak zaheslovat PDF",
-        "intro": "Zaheslovat PDF zašifruje PDF heslem pro otevření, heslem pro změnu oprávnění, nebo obojím – a může zakázat tisk, kopírování nebo úpravy.",
+        "intro": "Zaheslovat PDF zašifruje PDF tak, aby k otevření bylo nutné heslo, s volitelným samostatným heslem vlastníka, a může zablokovat tisk, kopírování nebo úpravy.",
         "steps": [
           "Vyberte své PDF",
-          "Zadejte heslo pro otevření, heslo vlastníka, nebo obojí",
+          "Zadejte heslo pro otevření a případně jiné heslo vlastníka",
           "Volitelně otevřete nastavení oprávnění a omezte tisk, kopírování a úpravy",
           "Klikněte na Zaheslovat PDF a stáhněte zašifrovaný soubor"
         ],
@@ -1490,8 +1490,8 @@
     "translate-pdf": {
       "slug": "prelozit-pdf",
       "name": "Přeložit PDF",
-      "description": "Přeložte obsah PDF do jiného jazyka",
-      "seoTitle": "Přeložit PDF – překlad obsahu PDF do jiného jazyka",
+      "description": "Přeložte text PDF do 42 jazyků",
+      "seoTitle": "Přeložit PDF – překlad textu PDF do 42 jazyků",
       "metaDescription": "Přeložte text PDF do 42 jazyků a stáhněte ho jako nové PDF. Zdarma, bez registrace. Text se odesílá překladové službě.",
       "faqs": [
         {

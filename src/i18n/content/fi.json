@@ -270,7 +270,7 @@
         },
         {
           "q": "Voinko poimia sivut eri järjestyksessä?",
-          "a": "Voit. Luettele sivut haluamassasi järjestyksessä. Kun kirjoitat 9, 3, 5, saat tiedoston, jossa sivut ovat tässä järjestyksessä."
+          "a": "Ei. Sivut tulevat aina alkuperäisessä järjestyksessään, ja kahdesti mainittu sivu otetaan mukaan vain kerran, joten 9, 3, 5 antaa sivut 3, 5 ja 9. Jos haluat muuttaa järjestystä, aja tulos Järjestä PDF -työkalun läpi."
         },
         {
           "q": "Onko sivujen poiminta ilmaista ja ilman vesileimaa?",
@@ -296,7 +296,7 @@
     "organize-pdf": {
       "slug": "jarjesta-pdf",
       "name": "Järjestä PDF",
-      "description": "Järjestä, kierrä ja hallitse sivuja",
+      "description": "Järjestä sivut uudelleen ja poista ne, joita et tarvitse",
       "seoTitle": "Järjestä PDF – vaihda sivujen järjestys ilmaiseksi",
       "metaDescription": "Järjestä PDF:n sivut haluamaasi järjestykseen ja jätä turhat pois yhdellä kertaa. Ilmainen, ei rekisteröitymistä, tiedosto ei poistu selaimesta.",
       "faqs": [
@@ -332,9 +332,9 @@
     "compress-pdf": {
       "slug": "pakkaa-pdf",
       "name": "Pakkaa PDF",
-      "description": "Pienennä tiedostokokoa laadun säilyessä",
-      "seoTitle": "Pakkaa PDF – pienennä PDF:n kokoa laadun kärsimättä",
-      "metaDescription": "Pienennä PDF-tiedoston kokoa jopa 80 % ilman näkyvää laadun heikkenemistä. Ilmainen pakkaus selaimessa. Ei lähetyksiä, ei vesileimoja, ei tiliä.",
+      "description": "Pienennä PDF tarvitsemaasi tiedostokokoon",
+      "seoTitle": "Pakkaa PDF – pienennä PDF tarvitsemaasi kokoon (ilmainen)",
+      "metaDescription": "Pienennä PDF tavoitekokoon megatavuina tai kilotavuina. Ensin kokeillaan häviötöntä uudelleenrakennusta; sivuista tulee kuvia vain tarvittaessa. Ilmainen, ei latausta palvelimelle.",
       "faqs": [
         {
           "q": "Heikentääkö PDF:n pakkaaminen sen laatua?",
@@ -342,7 +342,7 @@
         },
         {
           "q": "Kuinka paljon pienemmäksi PDF:ni muuttuu?",
-          "a": "Paljon kuvia sisältävät PDF:t pienenevät 60–80 %. Pelkkää tekstiä sisältävät tiedostot pienenevät 10–30 %. Skannatut asiakirjat voivat pienentyä jopa 90 %."
+          "a": "Se riippuu tiedostosta, joten työkalu ei lupaa mitään prosenttia: sinä asetat tavoitteen. Jos häviötön uudelleenrakennus ei riitä, sivut piirretään uudelleen kuviksi vähitellen heikkenevällä laadulla, kunnes tiedosto mahtuu, ja tulos näyttää todella saavutetun koon."
         },
         {
           "q": "Voinko pakata salasanalla suojatun PDF:n?",
@@ -368,17 +368,17 @@
     "optimize-pdf": {
       "slug": "optimoi-pdf",
       "name": "Optimoi PDF",
-      "description": "Optimoi PDF verkkoon ja nopeampaan latautumiseen",
-      "seoTitle": "Optimoi PDF – nopeampi latautuminen verkossa",
-      "metaDescription": "Optimoi PDF-tiedostot verkkoon ja nopeampaan latautumiseen. Lyhennä piirtoaikaa, litistä tasot ja virtaviivaista asiakirjan rakenne.",
+      "description": "Pakkaa PDF uudelleen häviöttömästi pienemmäksi",
+      "seoTitle": "Optimoi PDF – pakkaa PDF uudelleen häviöttömästi (ilmainen)",
+      "metaDescription": "Pakkaa PDF uudelleen häviöttömästi: pakatut objektivirrat, käyttämättömät objektit ja vanhat versiot pois, metatiedot tyhjennetään halutessa. Teksti ja kuvat ennallaan.",
       "faqs": [
         {
           "q": "Mitä PDF:n optimointi tekee?",
-          "a": "Optimointi poistaa käyttämättömät objektit, litistää interaktiiviset tasot, rajaa fontit käytettyihin merkkeihin ja virtaviivaistaa sisäisen rakenteen nopeampaa piirtämistä varten."
+          "a": "Se rakentaa tiedoston uudelleen pakatuilla objektivirroilla, mikä poistaa käyttämättömät objektit ja vanhat tallennetut versiot, ja voi halutessasi tyhjentää metatiedot, kuten otsikon ja tekijän. Se ei litistä tasoja, ei osajoukota fontteja eikä koodaa kuvia uudelleen. Jos mitään ei säästy, saat alkuperäisen tiedostosi muuttamattomana takaisin."
         },
         {
           "q": "Onko optimointi sama asia kuin pakkaaminen?",
-          "a": "Pakkaaminen pienentää tiedostokokoa koodaamalla kuvat uudelleen. Optimointi keskittyy rakenteellisiin parannuksiin, jotka nopeuttavat latautumista ja piirtämistä."
+          "a": "Ei. Pakkaa PDF tähtää tavoitekokoon ja voi muuttaa sivuja kuviksi päästäkseen siihen. Optimointi vain pakkaa tiedoston rakenteen uudelleen häviöttömästi, joten säästö on yleensä pienempi, mutta mikään näkyvä ei muutu."
         },
         {
           "q": "Aukeaako optimoitu PDF yhä kaikissa PDF-lukijoissa?",
@@ -406,7 +406,7 @@
       "name": "Korjaa PDF",
       "description": "Korjaa vioittuneet tai vaurioituneet PDF-tiedostot",
       "seoTitle": "Korjaa PDF – korjaa vioittunut tai vaurioitunut PDF",
-      "metaDescription": "Korjaa vioittuneet tai vaurioituneet PDF-tiedostot. Korjaa rikkinäiset otsakkeet, palauta luettava sisältö ja elvytä vaurioituneet asiakirjat ilmaiseksi.",
+      "metaDescription": "Korjaa vioittuneita PDF-tiedostoja: rakenna ristiviittaustaulukko ja rakenne uudelleen tai pelasta pahasti vaurioituneiden tiedostojen sivut. Ilmainen, ei latausta.",
       "faqs": [
         {
           "q": "Mikä saa PDF:n vioittumaan?",
@@ -441,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Poimi teksti skannatuista asiakirjoista",
       "seoTitle": "OCR PDF – tekstintunnistus skannatuista asiakirjoista",
-      "metaDescription": "Muunna skannatut asiakirjat haettavaksi ja valittavaksi tekstiksi OCR-tekstintunnistuksella. Ilmainen, ei lähetystä palvelimelle.",
+      "metaDescription": "Tee skannatuista PDF-tiedostoista haettavia OCR:llä: näkymätön tekstikerros, jota voi hakea, valita ja kopioida. Enintään 3 kielestä 44:stä. Ilmainen.",
       "faqs": [
         {
           "q": "Mitä OCR tarkoittaa?",
@@ -449,7 +449,7 @@
         },
         {
           "q": "Kuinka tarkka OCR on?",
-          "a": "Tarkkuus riippuu skannauksen laadusta. Selkeillä, tarkoilla skannauksilla päästään tyypillisesti 95–99 %:n tarkkuuteen. Heikkolaatuisissa skannauksissa virheitä voi olla enemmän."
+          "a": "Se riippuu skannauksesta. Terävät, hyvin valaistut ja suorat painetun tekstin sivut luetaan hyvin; matala tarkkuus, käsiala, vinous tai kohina aiheuttavat enemmän virheitä. Tarkista tärkeä teksti sivun kuvasta ennen kuin luotat siihen."
         },
         {
           "q": "Lähettääkö OCR PDF skannaukseni palvelimelle?",
@@ -638,7 +638,7 @@
       "faqs": [
         {
           "q": "Säilyvätkö kaavat?",
-          "a": "Kaavat lasketaan ja tallennetaan PDF:ään tulosarvoina. Itse kaavat eivät säily, koska PDF on staattinen muoto."
+          "a": "Ei. PDF näyttää jokaisesta kaavasta tiedostoon tallennetun viimeksi lasketun arvon; itse kaavat eivät säily. Jos työkirjaa ei ole koskaan laskettu uudelleen (esimerkiksi skriptin luoma), avaa ja tallenna se ensin Excelissä."
         },
         {
           "q": "Voinko muuntaa vain tietyt laskentataulukot?",
@@ -667,9 +667,9 @@
     "html-to-pdf": {
       "slug": "html-pdfksi",
       "name": "HTML PDF:ksi",
-      "description": "Muunna verkkosivut PDF:ksi",
+      "description": "Muunna HTML-koodi tai .html-tiedostot PDF:ksi",
       "seoTitle": "HTML PDF:ksi – muunna verkkosivut PDF:ksi ilmaiseksi",
-      "metaDescription": "Muunna mikä tahansa verkkosivu PDF:ksi. Tallenna artikkelit, kuitit ja verkkosisältö PDF-asiakirjoina. Ilmainen, toimii selaimessa, ei asennusta.",
+      "metaDescription": "Muunna liitetty HTML tai .html-tiedosto PDF:ksi tarkkana ulkoasukopiona tai valittavalla tekstillä. Ilmainen, toimii selaimessa, ei asennusta.",
       "faqs": [
         {
           "q": "Voinko muuntaa verkkosivun suoraan sen URL-osoitteesta?",
@@ -705,7 +705,7 @@
       "name": "HEIC PDF:ksi",
       "description": "Muunna Applen HEIC-kuvat PDF:ksi",
       "seoTitle": "HEIC PDF:ksi – muunna Applen HEIC-kuvat PDF:ksi ilmaiseksi",
-      "metaDescription": "Muunna iPhonen ja iPadin HEIC- ja HEIF-kuvat PDF-asiakirjoiksi. Ilmainen, toimii selaimessa, ei lähetystä. Kuvien alkuperäinen laatu säilyy.",
+      "metaDescription": "Muunna iPhonen ja iPadin HEIC- ja HEIF-kuvat PDF:ksi, yksi PDF kuvaa kohden täydellä tarkkuudella. Ilmainen, selaimessa, ei latausta palvelimelle.",
       "faqs": [
         {
           "q": "Mikä on HEIC-tiedosto?",
@@ -717,7 +717,7 @@
         },
         {
           "q": "Heikentääkö muunnos kuvanlaatua?",
-          "a": "Ei. HEIC-kuva puretaan ja upotetaan PDF:ään alkuperäisellä tarkkuudellaan. Kuvanlaatu säilyy."
+          "a": "Hyvin vähän. Jokainen kuva säilyttää täyden tarkkuutensa, mutta se koodataan PDF:n sisällä uudelleen korkealaatuiseksi JPEG-kuvaksi (92 %), koska PDF ei voi tallentaa HEIC-muotoa suoraan. Eroa on vaikea huomata."
         }
       ],
       "howTo": {
@@ -748,11 +748,11 @@
         },
         {
           "q": "Heikentääkö WebP:n muuntaminen PDF:ksi laatua?",
-          "a": "Ei. WebP-kuva puretaan ja upotetaan PDF:ään alkuperäisellä tarkkuudellaan pakkaamatta sitä uudelleen."
+          "a": "Ei. Jokainen WebP puretaan ja tallennetaan häviöttömästi (PNG:nä) täydellä pikselitarkkuudella, keskitetään A4-sivulle ja pienennetään vain, jos se on sivua suurempi."
         },
         {
           "q": "Voinko muuntaa useita WebP-tiedostoja kerralla?",
-          "a": "Voit. Valitse useita WebP-kuvia, niin ne yhdistetään yhdeksi monisivuiseksi PDF:ksi, yksi kuva sivua kohden."
+          "a": "Kyllä. Valitse useita WebP-kuvia, niin jokaisesta tulee oma PDF; lataa ne yksitellen tai ZIP-tiedostona. Jos haluat yhden monisivuisen PDF:n, käytä JPG PDF:ksi -työkalua, joka hyväksyy myös WebP-kuvat."
         }
       ],
       "howTo": {
@@ -787,7 +787,7 @@
         },
         {
           "q": "Voinko muuntaa useita TIFF-tiedostoja kerralla?",
-          "a": "Voit. Valitse useita TIFF-tiedostoja, niin jokainen muunnetaan ja kaikki sivut yhdistetään yhdeksi PDF:ksi."
+          "a": "Kyllä. Valitse useita TIFF-tiedostoja, niin jokaisesta tulee oma PDF kaikkine sivuineen. Lataa ne yksitellen tai ZIP-tiedostona ja käytä sitten Yhdistä PDF -työkalua, jos haluat yhden tiedoston."
         }
       ],
       "howTo": {
@@ -822,7 +822,7 @@
         },
         {
           "q": "Onko tämä ilmainen?",
-          "a": "On. SVG:n muuntaminen PDF:ksi on täysin ilmaista, ilman rajoituksia, vesileimoja tai rekisteröitymistä."
+          "a": "Kyllä. SVG:n muuntaminen PDF:ksi on täysin ilmaista, ilman päivärajaa, vesileimaa tai rekisteröitymistä."
         }
       ],
       "howTo": {
@@ -880,15 +880,15 @@
       "name": "PDF JPG:ksi",
       "description": "Muunna PDF-sivut JPG-kuviksi",
       "seoTitle": "PDF JPG:ksi – muunna PDF-sivut kuviksi ilmaiseksi",
-      "metaDescription": "Muunna PDF-sivut laadukkaiksi JPG-kuviksi. Tallenna kaikki sivut tai vain tietyt sivut kuvina. Ilmainen, ei rekisteröitymistä eikä vesileimoja.",
+      "metaDescription": "Muunna PDF:n jokainen sivu JPG- tai PNG-kuvaksi 144 tai 216 DPI:n tarkkuudella. Ilmainen, ei rekisteröitymistä eikä vesileimaa, eikä PDF poistu selaimestasi.",
       "faqs": [
         {
           "q": "Minkä tarkkuisia kuvista tulee?",
-          "a": "Kuvat tallennetaan suurimmalla PDF:n sisältämällä tarkkuudella, tyypillisesti 150–300 DPI lähteestä riippuen."
+          "a": "Sivut piirretään 144 DPI:n (Normaali) tai 216 DPI:n (Korkea) tarkkuudella lähteestä riippumatta. Korkea antaa terävämmän tekstin ja suuremmat tiedostot."
         },
         {
           "q": "Voinko muuntaa vain tietyt sivut?",
-          "a": "Voit. Muunna kaikki sivut tai määritä sivuväli, jos tarvitset vain tietyt sivut."
+          "a": "Kaikki sivut muunnetaan. Jos haluat vain osan, käytä ensin Poimi sivuja -työkalua ja muunna se tiedosto, tai lataa vain tarvitsemasi sivukuvat."
         },
         {
           "q": "Lähetetäänkö PDF:ni palvelimelle JPG-muunnosta varten?",
@@ -1021,7 +1021,7 @@
       "name": "PDF PDF/A:ksi",
       "description": "Muunna PDF arkistointiin tarkoitettuun PDF/A-muotoon",
       "seoTitle": "PDF PDF/A:ksi – muunna arkistokelpoiseen PDF-muotoon",
-      "metaDescription": "Muunna tavalliset PDF-tiedostot PDF/A-arkistomuotoon pitkäaikaista säilytystä ja vaatimustenmukaisuutta varten. Ilmainen muunnos selaimessa.",
+      "metaDescription": "Tee PDF:stä arkistokopio, joka on merkitty metatiedoissaan PDF/A-2b:ksi. Tarkista tiukka vaatimustenmukaisuus validaattorilla. Ilmainen, selaimessasi.",
       "faqs": [
         {
           "q": "Mikä on PDF/A?",
@@ -1029,7 +1029,7 @@
         },
         {
           "q": "Miksi minun kannattaisi muuntaa PDF/A-muotoon?",
-          "a": "Monilla aloilla asiakirjojen säilytys edellyttää PDF/A-muotoa. Se varmistaa, että fontit on upotettu, värit on määritelty ja asiakirja on itsenäinen."
+          "a": "Monet tuomioistuimet, arkistot ja asiakirjajärjestelmät vaativat PDF/A:ta, joka edellyttää upotettuja fontteja, määriteltyjä värejä eikä salausta. Tämä työkalu kopioi sivusi ja lisää PDF/A-tunnisteen; se ei upota puuttuvia fontteja eikä lisää väriprofiilia."
         },
         {
           "q": "Läpäiseekö tulos varmasti PDF/A-validoinnin?",
@@ -1068,7 +1068,7 @@
         },
         {
           "q": "Voinko käyttää Markdownia ChatGPT:n tai muiden tekoälytyökalujen kanssa?",
-          "a": "Voit. Markdown säilyttää otsikot ja luettelot pelkkänä tekstinä, jota tekoälyavustajat ja muistiinpanosovellukset lukevat siististi. Itse muunnos tehdään selaimessasi."
+          "a": "Kyllä. Tuloksena on pelkkää tekstiä, jossa on yksi osio sivua kohden (## Page 1, ## Page 2 …), ja tekoälyavustajat sekä muistiinpanosovellukset lukevat sitä siististi. Muunnos tapahtuu selaimessasi."
         }
       ],
       "howTo": {
@@ -1095,11 +1095,11 @@
       "faqs": [
         {
           "q": "Voinko muokata mitä tahansa PDF:ää?",
-          "a": "Mitä tahansa digitaalisesti luotua PDF:ää, jonka tekstiä voi valita, voi muokata. Skannatuista PDF-tiedostoista teksti täytyy ensin tunnistaa OCR:llä, jotta sitä voi muokata."
+          "a": "Mitä tahansa digitaalisesti luotua PDF:ää, jossa on valittavaa tekstiä, voi muokata. Skannattu PDF on kuva tekstistä, joten siinä ei ole sanoja, joita voisi muuttaa suoraan."
         },
         {
           "q": "Muuttuuko muotoilu muokatessa?",
-          "a": "Suora muokkaus säilyttää alkuperäisen muotoilun. Vain muuttamasi teksti muuttuu – fontit, välit ja asettelu pysyvät ennallaan."
+          "a": "Vain muuttamasi teksti piirretään uudelleen; muu sivu kopioidaan sellaisenaan. Muokattu teksti käyttää mahdollisuuksien mukaan PDF:ään jo upotettua fonttia; jos siitä puuttuu kirjoittamasi merkki, käytetään samankaltaista vakiofonttia, joten tarkista muokatut rivit ennen lähettämistä."
         },
         {
           "q": "Voinko muokata skannattua PDF:ää?",
@@ -1125,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "kierra-pdf",
       "name": "Kierrä PDF",
-      "description": "Kierrä PDF-sivuja haluamaasi kulmaan",
-      "seoTitle": "Kierrä PDF – käännä PDF-sivut haluamaasi asentoon",
+      "description": "Kierrä PDF-sivuja 90°, 180° tai 270°",
+      "seoTitle": "Kierrä PDF – kierrä sivuja 90°, 180° tai 270° ilmaiseksi",
       "metaDescription": "Kierrä yksittäisiä sivuja tai kaikkia PDF:n sivuja. Korjaa kyljellään olevat skannaukset ja sivujen suunta. Ilmainen, ei rekisteröitymistä.",
       "faqs": [
         {
@@ -1163,7 +1163,7 @@
       "name": "Lisää sivunumerot",
       "description": "Lisää sivunumerot PDF:ään",
       "seoTitle": "Lisää sivunumerot PDF:ään – numeroi sivut ilmaiseksi",
-      "metaDescription": "Lisää sivunumerot mihin kohtaan tahansa PDF:ssä. Valitse muoto, sijainti ja aloitusnumero. Ilmainen, toimii selaimessa, ei lähetystä.",
+      "metaDescription": "Lisää sivunumerot PDF:ään yhteen kuudesta kohdasta. Valitse muoto (1, Sivu 1 tai 1/N) ja aloitusnumero. Ilmainen, ei latausta palvelimelle.",
       "faqs": [
         {
           "q": "Mihin voin sijoittaa sivunumerot?",
@@ -1171,7 +1171,7 @@
         },
         {
           "q": "Voinko jättää ensimmäisen sivun numeroimatta?",
-          "a": "Voit. Valitse asetus, jolla numerointi alkaa tietyltä sivulta, esimerkiksi sivulta 2 tai 3, jolloin kansilehdet jäävät numeroimatta."
+          "a": "Ei suoraan: jokainen sivu saa numeron, ja ”Aloita numerointi numerosta” muuttaa vain ensimmäisen numeron. Jos haluat kansilehden ilman numeroa, erota se Jaa PDF -työkalulla, numeroi loput alkaen 2:sta ja yhdistä ne sitten taas Yhdistä PDF -työkalulla."
         },
         {
           "q": "Lähetetäänkö PDF:ni palvelimelle sivunumeroiden lisäämistä varten?",
@@ -1197,7 +1197,7 @@
     "add-watermark": {
       "slug": "lisaa-vesileima",
       "name": "Lisää vesileima",
-      "description": "Lisää teksti- tai kuvavesileimoja",
+      "description": "Leimaa tekstivesileima jokaiselle sivulle",
       "seoTitle": "Lisää vesileima PDF:ään – ilmainen tekstivesileima",
       "metaDescription": "Leimaa tekstivesileima, kuten LUOTTAMUKSELLINEN tai LUONNOS, PDF:n jokaiselle sivulle. Säädä läpinäkyvyys ja koko. Ilmainen, ei tiliä eikä lähetystä.",
       "faqs": [
@@ -1239,11 +1239,11 @@
       "faqs": [
         {
           "q": "Voinko rajata kaikki sivut kerralla?",
-          "a": "Voit. Käytä samaa rajausaluetta jokaiselle sivulle tai aseta yksittäisille sivuille eri rajaukset."
+          "a": "Kyllä – asettamasi marginaalit rajataan aina kaikilta sivuilta. Eri rajauksia yksittäisille sivuille ei tueta; jaa PDF ensin, jos jotkin sivut tarvitsevat muut marginaalit."
         },
         {
           "q": "Poistaako rajaaminen sisältöä?",
-          "a": "Rajaaminen piilottaa rajausalueen ulkopuolisen sisällön. Piilotettua sisältöä ei poisteta, ja rajauksen voi myöhemmin kumota."
+          "a": "Ei. Rajaus pienentää sivun näkyvää aluetta, mutta sen ulkopuolinen sisältö jää tiedostoon, ja jotkin muokkausohjelmat voivat näyttää sen uudelleen. Älä koskaan rajaa piilottaaksesi arkaluonteisia tietoja – käytä siihen Sensuroi PDF -työkalua."
         },
         {
           "q": "Voinko rajata PDF:n puhelimella?",
@@ -1269,13 +1269,13 @@
     "sign-pdf": {
       "slug": "allekirjoita-pdf",
       "name": "Allekirjoita PDF",
-      "description": "Lisää digitaalisia allekirjoituksia PDF-tiedostoihin",
+      "description": "Sijoita piirretty, kirjoitettu tai ladattu allekirjoituksesi PDF:ään",
       "seoTitle": "Allekirjoita PDF – sähköinen allekirjoitus ilmaiseksi",
-      "metaDescription": "Lisää sähköisiä allekirjoituksia PDF-asiakirjoihin. Piirrä, kirjoita tai lataa allekirjoituksesi. Oikeudellisesti pätevä, ilmainen, ei rekisteröitymistä.",
+      "metaDescription": "Allekirjoita PDF verkossa: piirrä, kirjoita tai lataa allekirjoituksesi ja sijoita se mille tahansa sivulle. Ilmainen, ei rekisteröitymistä, eikä allekirjoitusta ladata palvelimelle.",
       "faqs": [
         {
           "q": "Ovatko sähköiset allekirjoitukset oikeudellisesti päteviä?",
-          "a": "Ovat. Sähköiset allekirjoitukset ovat oikeudellisesti päteviä Yhdysvaltain ESIGN-lain ja EU:n eIDAS-asetuksen nojalla käytännössä kaikissa asiakirjoissa."
+          "a": "Useimmissa arkisissa asiakirjoissa kyllä: lait, kuten Yhdysvaltain ESIGN Act ja EU:n eIDAS-asetus, hyväksyvät yksinkertaiset sähköiset allekirjoitukset. Tämä työkalu sijoittaa kuvan allekirjoituksestasi ilman varmennetta tai lokia, joten käytä sertifioitua sähköisen allekirjoituksen palvelua, kun vaaditaan hyväksytty tai varmenteeseen perustuva allekirjoitus."
         },
         {
           "q": "Voinko allekirjoittaa salasanalla suojatun PDF:n?",
@@ -1351,15 +1351,15 @@
       "name": "Avaa PDF:n lukitus",
       "description": "Poista PDF:n salasanasuojaus",
       "seoTitle": "Avaa PDF:n lukitus – poista salasana ilmaiseksi",
-      "metaDescription": "Poista salasanasuojaus PDF-asiakirjoista. Avaa salattujen PDF-tiedostojen lukitus muokkausta, tulostusta tai jakamista varten. Ilmainen, ei tiliä.",
+      "metaDescription": "Poista salasana sekä tulostus-, kopiointi- ja muokkausrajoitukset PDF:stä, jonka lukituksen avaamiseen sinulla on oikeus. Ilmainen, toimii selaimessa.",
       "faqs": [
         {
           "q": "Tarvitsenko salasanan PDF:n lukituksen avaamiseen?",
-          "a": "Tarvitset. Sinun on tiedettävä nykyinen salasana, jotta voit poistaa sen. PDF-salausta ei voi ohittaa ilman salasanaa."
+          "a": "Vain jos PDF pyytää salasanaa avattaessa. Tiedostot, jotka aukeavat vapaasti mutta estävät tulostuksen, kopioinnin tai muokkauksen, avataan ilman salasanaa. Avaussalasanaa ei voi ohittaa: ilman sitä tiedosto pysyy lukittuna."
         },
         {
           "q": "Muuttuuko PDF:n sisältö, kun lukitus avataan?",
-          "a": "Ei. Lukituksen avaaminen poistaa vain salasanasuojauksen. Asiakirjan sisältö pysyy ennallaan."
+          "a": "Sivut näyttävät samalta, mutta jokainen rakennetaan uudelleen korkearesoluutioiseksi kuvaksi näkymättömällä tekstikerroksella: tekstiä voi yhä hakea ja kopioida, mutta sitä ei voi enää muokata tekstinä, eivätkä linkit ja lomakekentät säily. Tiedosto voi myös kasvaa."
         },
         {
           "q": "Onko turvallista kirjoittaa PDF:n salasana tänne?",
@@ -1403,10 +1403,10 @@
       ],
       "howTo": {
         "title": "Näin suojaat PDF:n salasanalla",
-        "intro": "Suojaa PDF salaa PDF:n avaussalasanalla, käyttöoikeuksien muuttamiseen tarvittavalla salasanalla tai molemmilla – ja voi estää tulostamisen, kopioinnin tai muokkaamisen.",
+        "intro": "Suojaa PDF salaa PDF:n niin, että sen avaaminen vaatii salasanan, ja siihen voi lisätä erillisen omistajan salasanan; se voi myös estää tulostuksen, kopioinnin tai muokkauksen.",
         "steps": [
           "Valitse PDF",
-          "Anna avaussalasana, omistajan salasana tai molemmat",
+          "Anna avaussalasana ja halutessasi eri omistajan salasana",
           "Avaa halutessasi käyttöoikeusasetukset rajoittaaksesi tulostamista, kopiointia ja muokkaamista",
           "Lataa salattu tiedosto napsauttamalla Suojaa PDF"
         ],
@@ -1490,8 +1490,8 @@
     "translate-pdf": {
       "slug": "kaanna-pdf",
       "name": "Käännä PDF",
-      "description": "Käännä PDF:n sisältö mille tahansa kielelle",
-      "seoTitle": "Käännä PDF – käännä PDF:n teksti toiselle kielelle",
+      "description": "Käännä PDF-teksti 42 kielelle",
+      "seoTitle": "Käännä PDF – käännä PDF-teksti 42 kielelle",
       "metaDescription": "Käännä PDF:n teksti 42 kielelle ja lataa se uutena PDF:nä. Ilmainen, ei rekisteröitymistä. Teksti lähetetään käännöspalveluun.",
       "faqs": [
         {

@@ -270,7 +270,7 @@
         },
         {
           "q": "Tôi có thể trích xuất trang theo thứ tự khác không?",
-          "a": "Có. Liệt kê các trang theo thứ tự bạn muốn. Nhập 9, 3, 5 sẽ tạo ra tệp có các trang theo đúng thứ tự đó."
+          "a": "Không. Các trang luôn được giữ theo thứ tự gốc, và một trang ghi hai lần chỉ được lấy một lần, nên 9, 3, 5 cho ra các trang 3, 5 và 9. Để đổi thứ tự, hãy đưa kết quả qua Sắp xếp trang PDF."
         },
         {
           "q": "Trích xuất trang có miễn phí và không có watermark không?",
@@ -296,7 +296,7 @@
     "organize-pdf": {
       "slug": "sap-xep-trang-pdf",
       "name": "Sắp xếp trang PDF",
-      "description": "Sắp xếp lại, xoay và quản lý các trang",
+      "description": "Sắp xếp lại các trang và bỏ những trang không cần",
       "seoTitle": "Sắp xếp trang PDF — Đổi thứ tự và xóa trang miễn phí",
       "metaDescription": "Sắp xếp các trang PDF theo thứ tự bất kỳ và bỏ những trang không cần, chỉ trong một bước. Miễn phí, không cần đăng ký, tệp không rời trình duyệt.",
       "faqs": [
@@ -332,9 +332,9 @@
     "compress-pdf": {
       "slug": "nen-pdf",
       "name": "Nén PDF",
-      "description": "Giảm dung lượng tệp mà vẫn giữ chất lượng",
-      "seoTitle": "Nén PDF — Giảm dung lượng file PDF không mất chất lượng",
-      "metaDescription": "Giảm dung lượng file PDF tới 80% mà không giảm chất lượng thấy rõ. Nén miễn phí ngay trên trình duyệt. Không tải lên, không watermark, không đăng ký.",
+      "description": "Giảm PDF xuống đúng dung lượng bạn cần",
+      "seoTitle": "Nén PDF — Giảm PDF xuống dung lượng bạn cần (miễn phí)",
+      "metaDescription": "Giảm PDF xuống dung lượng mục tiêu tính bằng MB hoặc KB. Công cụ thử dựng lại không mất dữ liệu trước; trang chỉ thành ảnh khi cần. Miễn phí, không tải lên.",
       "faqs": [
         {
           "q": "Nén PDF có làm giảm chất lượng không?",
@@ -342,7 +342,7 @@
         },
         {
           "q": "PDF của tôi sẽ nhẹ đi bao nhiêu?",
-          "a": "PDF nhiều ảnh giảm 60-80%. Tệp chỉ có chữ giảm 10-30%. Tài liệu scan có thể giảm tới 90%."
+          "a": "Điều đó tùy vào từng file, nên công cụ không hứa hẹn tỷ lệ nào: bạn tự đặt mục tiêu. Nếu dựng lại không mất dữ liệu chưa đạt, các trang được kết xuất lại thành ảnh với chất lượng giảm dần cho đến khi file vừa, và kết quả hiển thị dung lượng thực tế đạt được."
         },
         {
           "q": "Tôi có thể nén PDF có mật khẩu không?",
@@ -368,17 +368,17 @@
     "optimize-pdf": {
       "slug": "toi-uu-pdf",
       "name": "Tối ưu PDF",
-      "description": "Tối ưu PDF cho web và tải nhanh hơn",
-      "seoTitle": "Tối ưu PDF — Tăng tốc PDF cho web và mở nhanh hơn",
-      "metaDescription": "Tối ưu file PDF để đăng web và mở nhanh hơn. Giảm thời gian hiển thị, làm phẳng các lớp và tinh gọn cấu trúc tài liệu.",
+      "description": "Đóng gói lại PDF không mất dữ liệu để giảm dung lượng",
+      "seoTitle": "Tối ưu PDF — Đóng gói lại PDF không mất dữ liệu (miễn phí)",
+      "metaDescription": "Đóng gói lại PDF không mất dữ liệu: nén luồng đối tượng, bỏ đối tượng thừa và bản sửa cũ, có thể xóa siêu dữ liệu. Văn bản và hình ảnh giữ nguyên.",
       "faqs": [
         {
           "q": "Tối ưu PDF làm những gì?",
-          "a": "Tối ưu hóa loại bỏ các đối tượng không dùng đến, làm phẳng các lớp tương tác, rút gọn phông chữ và tinh gọn cấu trúc bên trong để hiển thị nhanh hơn."
+          "a": "Công cụ dựng lại file với luồng đối tượng được nén, nhờ đó loại bỏ các đối tượng không dùng và những bản sửa đã lưu trước đây, và có thể xóa siêu dữ liệu như tiêu đề, tác giả. Công cụ không làm phẳng lớp, không cắt bớt phông chữ và không mã hóa lại hình ảnh. Nếu không giảm được gì, bạn nhận lại file gốc nguyên vẹn."
         },
         {
           "q": "Tối ưu có giống nén không?",
-          "a": "Nén giảm dung lượng tệp bằng cách mã hóa lại hình ảnh. Tối ưu tập trung cải thiện cấu trúc để tăng tốc độ tải và hiển thị."
+          "a": "Không. Nén PDF nhắm tới một dung lượng mục tiêu và có thể biến trang thành ảnh để đạt được. Tối ưu chỉ đóng gói lại cấu trúc file mà không mất dữ liệu, nên mức giảm thường nhỏ hơn nhưng không có gì thay đổi về mặt hiển thị."
         },
         {
           "q": "PDF đã tối ưu có còn mở được trên mọi trình đọc PDF không?",
@@ -406,7 +406,7 @@
       "name": "Sửa lỗi PDF",
       "description": "Khôi phục tệp PDF bị lỗi hoặc hỏng",
       "seoTitle": "Sửa lỗi PDF — Khôi phục file PDF bị lỗi, bị hỏng",
-      "metaDescription": "Sửa file PDF bị lỗi hoặc bị hỏng. Sửa phần đầu tệp bị hỏng, khôi phục nội dung còn đọc được và phục hồi tài liệu. Công cụ trực tuyến miễn phí.",
+      "metaDescription": "Sửa file PDF bị hỏng: dựng lại bảng tham chiếu chéo và cấu trúc, hoặc khôi phục các trang của file hỏng nặng. Miễn phí, không cần tải lên.",
       "faqs": [
         {
           "q": "Vì sao PDF bị hỏng?",
@@ -441,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Nhận dạng chữ từ tài liệu scan",
       "seoTitle": "OCR PDF — Nhận dạng chữ từ file PDF scan",
-      "metaDescription": "Chuyển tài liệu scan thành văn bản tìm kiếm và chọn được bằng OCR. Biến PDF scan thành tệp tìm kiếm, chỉnh sửa được. Miễn phí, không cần tải lên.",
+      "metaDescription": "Giúp PDF scan tìm kiếm được bằng OCR: một lớp văn bản ẩn để tìm kiếm, chọn và sao chép. Tối đa 3 trong 44 ngôn ngữ. Miễn phí, không cần tải lên.",
       "faqs": [
         {
           "q": "OCR là gì?",
@@ -449,7 +449,7 @@
         },
         {
           "q": "OCR chính xác đến mức nào?",
-          "a": "Độ chính xác phụ thuộc vào chất lượng bản scan. Bản scan rõ nét, độ phân giải cao thường đạt 95-99%. Bản scan kém có thể có nhiều lỗi hơn."
+          "a": "Còn tùy vào bản scan. Trang chữ in sắc nét, đủ sáng và thẳng sẽ được đọc tốt; độ phân giải thấp, chữ viết tay, trang bị nghiêng hoặc nhiễu sẽ gây nhiều lỗi hơn. Hãy đối chiếu văn bản quan trọng với ảnh trang trước khi dựa vào nó."
         },
         {
           "q": "OCR PDF có tải bản scan của tôi lên không?",
@@ -638,7 +638,7 @@
       "faqs": [
         {
           "q": "Công thức của tôi có được giữ lại không?",
-          "a": "Công thức được tính toán và lưu thành giá trị kết quả trong PDF. Bản thân công thức không được giữ lại vì PDF là định dạng tĩnh."
+          "a": "Không. PDF hiển thị giá trị tính toán gần nhất được lưu trong file cho mỗi công thức; bản thân công thức không được giữ lại. Nếu workbook chưa từng được tính lại (ví dụ do script tạo ra), hãy mở và lưu nó trong Excel trước."
         },
         {
           "q": "Tôi có thể chuyển từng trang tính riêng không?",
@@ -667,9 +667,9 @@
     "html-to-pdf": {
       "slug": "chuyen-html-sang-pdf",
       "name": "HTML sang PDF",
-      "description": "Chuyển trang web thành PDF",
+      "description": "Chuyển mã HTML hoặc file .html sang PDF",
       "seoTitle": "Chuyển HTML sang PDF — Lưu trang web thành PDF miễn phí",
-      "metaDescription": "Chuyển trang web sang PDF. Lưu bài viết, hóa đơn và nội dung trực tuyến thành tài liệu PDF. Miễn phí, chạy trên trình duyệt, không cần cài đặt.",
+      "metaDescription": "Chuyển HTML dán vào hoặc file .html sang PDF, dạng bản sao đúng thiết kế hoặc với văn bản chọn được. Miễn phí, chạy trong trình duyệt, không cần cài đặt.",
       "faqs": [
         {
           "q": "Tôi có thể chuyển đổi một trang web trực tiếp từ URL của nó không?",
@@ -705,7 +705,7 @@
       "name": "HEIC sang PDF",
       "description": "Chuyển ảnh HEIC của Apple sang PDF",
       "seoTitle": "Chuyển HEIC sang PDF — Đổi ảnh iPhone sang PDF miễn phí",
-      "metaDescription": "Chuyển ảnh HEIC và HEIF từ iPhone, iPad sang PDF. Miễn phí, chạy trên trình duyệt, không cần tải lên. Giữ nguyên chất lượng ảnh gốc.",
+      "metaDescription": "Chuyển ảnh HEIC và HEIF từ iPhone, iPad sang PDF, mỗi ảnh một PDF ở độ phân giải đầy đủ. Miễn phí, chạy trên trình duyệt, không cần tải lên.",
       "faqs": [
         {
           "q": "Tệp HEIC là gì?",
@@ -717,7 +717,7 @@
         },
         {
           "q": "Chuyển đổi có làm giảm chất lượng ảnh không?",
-          "a": "Không. Ảnh HEIC được giải mã và nhúng vào PDF ở độ phân giải gốc. Chất lượng hình ảnh được giữ nguyên."
+          "a": "Rất ít. Mỗi ảnh giữ nguyên độ phân giải đầy đủ nhưng được mã hóa lại thành JPEG chất lượng cao (92%) bên trong PDF, vì PDF không lưu trực tiếp được HEIC. Khác biệt rất khó nhận ra."
         }
       ],
       "howTo": {
@@ -748,11 +748,11 @@
         },
         {
           "q": "Chuyển WebP sang PDF có làm giảm chất lượng không?",
-          "a": "Không. Ảnh WebP được giải mã và nhúng vào PDF ở độ phân giải gốc mà không nén lại."
+          "a": "Không. Mỗi ảnh WebP được giải mã và lưu không mất dữ liệu (dạng PNG) ở độ phân giải điểm ảnh đầy đủ, đặt giữa trang A4 và chỉ thu nhỏ nếu lớn hơn trang."
         },
         {
           "q": "Tôi có thể chuyển nhiều tệp WebP cùng lúc không?",
-          "a": "Có. Chọn nhiều ảnh WebP và chúng sẽ được gộp vào một tệp PDF nhiều trang, mỗi ảnh một trang."
+          "a": "Có. Chọn nhiều ảnh WebP và mỗi ảnh thành một PDF riêng; tải từng file hoặc tải chung dạng ZIP. Muốn một PDF nhiều trang, hãy dùng JPG sang PDF, công cụ này cũng nhận WebP."
         }
       ],
       "howTo": {
@@ -787,7 +787,7 @@
         },
         {
           "q": "Tôi có thể chuyển nhiều tệp TIFF cùng lúc không?",
-          "a": "Có. Chọn nhiều tệp TIFF, mỗi tệp sẽ được chuyển đổi và tất cả các trang được gộp vào một tệp PDF."
+          "a": "Có. Chọn nhiều file TIFF và mỗi file thành một PDF riêng chứa tất cả các trang của nó. Tải từng file hoặc dạng ZIP, rồi dùng Ghép PDF nếu bạn muốn một file duy nhất."
         }
       ],
       "howTo": {
@@ -822,7 +822,7 @@
         },
         {
           "q": "Công cụ này có miễn phí không?",
-          "a": "Có. Chuyển SVG sang PDF hoàn toàn miễn phí, không giới hạn, không watermark và không cần đăng ký."
+          "a": "Có. Chuyển SVG sang PDF hoàn toàn miễn phí, không giới hạn hằng ngày, không watermark và không cần đăng ký."
         }
       ],
       "howTo": {
@@ -880,15 +880,15 @@
       "name": "PDF sang JPG",
       "description": "Chuyển các trang PDF thành ảnh JPG",
       "seoTitle": "Chuyển PDF sang JPG — Đổi trang PDF thành ảnh miễn phí",
-      "metaDescription": "Chuyển các trang PDF thành ảnh JPG chất lượng cao. Xuất tất cả hoặc chỉ một số trang thành ảnh. Miễn phí, không cần đăng ký, không watermark.",
+      "metaDescription": "Chuyển mọi trang của PDF thành ảnh JPG hoặc PNG ở 144 hoặc 216 DPI. Miễn phí, không đăng ký, không watermark, và PDF không bao giờ rời trình duyệt của bạn.",
       "faqs": [
         {
           "q": "Ảnh sẽ có độ phân giải bao nhiêu?",
-          "a": "Ảnh được xuất ở độ phân giải cao nhất có trong PDF, thường từ 150-300 DPI tùy tệp nguồn."
+          "a": "Các trang được kết xuất ở 144 DPI (Tiêu chuẩn) hoặc 216 DPI (Cao), bất kể nguồn ra sao. Cao cho chữ sắc nét hơn và file lớn hơn."
         },
         {
           "q": "Tôi có thể chuyển một số trang cụ thể không?",
-          "a": "Có. Chọn chuyển tất cả các trang hoặc chỉ định khoảng trang để chỉ xuất những trang bạn cần."
+          "a": "Tất cả các trang đều được chuyển. Muốn lấy chỉ một số trang, hãy dùng Trích xuất trang PDF trước rồi chuyển file đó, hoặc chỉ tải ảnh của những trang bạn cần."
         },
         {
           "q": "PDF của tôi có bị tải lên để chuyển sang JPG không?",
@@ -1021,7 +1021,7 @@
       "name": "PDF sang PDF/A",
       "description": "Chuyển PDF sang định dạng lưu trữ PDF/A",
       "seoTitle": "Chuyển PDF sang PDF/A — Định dạng PDF lưu trữ",
-      "metaDescription": "Chuyển file PDF thông thường sang định dạng lưu trữ PDF/A để bảo quản lâu dài và đáp ứng yêu cầu lưu trữ. Miễn phí, chuyển đổi ngay trên trình duyệt.",
+      "metaDescription": "Biến PDF thành bản lưu trữ được đánh dấu PDF/A-2b trong siêu dữ liệu. Kiểm tra mức tuân thủ nghiêm ngặt bằng trình xác thực. Miễn phí, trong trình duyệt.",
       "faqs": [
         {
           "q": "PDF/A là gì?",
@@ -1029,7 +1029,7 @@
         },
         {
           "q": "Vì sao tôi nên chuyển sang PDF/A?",
-          "a": "Nhiều ngành yêu cầu PDF/A để lưu giữ tài liệu. Định dạng này đảm bảo phông chữ được nhúng, màu sắc được xác định và tài liệu tự chứa đầy đủ."
+          "a": "Nhiều tòa án, kho lưu trữ và hệ thống hồ sơ yêu cầu PDF/A, chuẩn đòi hỏi phông chữ được nhúng, màu được xác định và không mã hóa. Công cụ này sao chép các trang và thêm định danh PDF/A; nó không nhúng phông chữ còn thiếu và không thêm hồ sơ màu."
         },
         {
           "q": "Kết quả có chắc chắn vượt qua trình kiểm tra PDF/A không?",
@@ -1068,7 +1068,7 @@
         },
         {
           "q": "Tôi có thể dùng Markdown với ChatGPT hoặc công cụ AI khác không?",
-          "a": "Có. Markdown giữ tiêu đề và danh sách ở dạng văn bản thuần, nên trợ lý AI và ứng dụng ghi chú đọc rất rõ ràng. Bản thân quá trình chuyển đổi chạy ngay trên trình duyệt."
+          "a": "Có. Kết quả là văn bản thuần, mỗi trang một phần (## Page 1, ## Page 2 …), được trợ lý AI và ứng dụng ghi chú đọc gọn gàng. Việc chuyển đổi chạy trong trình duyệt của bạn."
         }
       ],
       "howTo": {
@@ -1095,11 +1095,11 @@
       "faqs": [
         {
           "q": "Tôi có thể chỉnh sửa mọi PDF không?",
-          "a": "Mọi PDF được tạo bằng máy tính có văn bản chọn được đều có thể chỉnh sửa. PDF scan cần chạy OCR trước để văn bản sửa được."
+          "a": "Mọi PDF tạo bằng máy tính có văn bản chọn được đều chỉnh sửa được. PDF scan là ảnh chụp văn bản, nên không có chữ nào để sửa trực tiếp."
         },
         {
           "q": "Chỉnh sửa có làm thay đổi định dạng không?",
-          "a": "Chỉnh sửa trực tiếp giữ nguyên định dạng gốc. Chỉ phần chữ bạn thay đổi bị ảnh hưởng — phông chữ, khoảng cách và bố cục vẫn giữ nguyên."
+          "a": "Chỉ phần văn bản bạn sửa được vẽ lại; phần còn lại của trang được giữ nguyên. Văn bản đã sửa dùng lại phông chữ có sẵn trong PDF khi có thể; nếu phông đó thiếu ký tự bạn gõ, một phông chuẩn tương tự sẽ được dùng, vì vậy hãy kiểm tra các dòng đã sửa trước khi gửi."
         },
         {
           "q": "Tôi có thể chỉnh sửa PDF scan không?",
@@ -1125,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "xoay-pdf",
       "name": "Xoay PDF",
-      "description": "Xoay các trang PDF theo góc bất kỳ",
-      "seoTitle": "Xoay PDF — Xoay trang PDF theo góc bất kỳ miễn phí",
+      "description": "Xoay trang PDF 90°, 180° hoặc 270°",
+      "seoTitle": "Xoay PDF — Xoay trang 90°, 180° hoặc 270° miễn phí",
       "metaDescription": "Xoay từng trang hoặc tất cả các trang trong PDF. Sửa bản scan bị nằm ngang, chỉnh lại hướng và góc trang. Miễn phí, không cần đăng ký.",
       "faqs": [
         {
@@ -1163,7 +1163,7 @@
       "name": "Đánh số trang PDF",
       "description": "Chèn số trang vào PDF của bạn",
       "seoTitle": "Đánh số trang PDF — Chèn số trang vào PDF miễn phí",
-      "metaDescription": "Đánh số trang ở bất kỳ vị trí nào trong PDF. Chọn kiểu số, vị trí và số bắt đầu. Miễn phí, chạy trên trình duyệt, không cần tải lên.",
+      "metaDescription": "Thêm số trang vào PDF ở một trong sáu vị trí. Chọn định dạng (1, Trang 1 hoặc 1 / N) và số bắt đầu. Miễn phí, không cần tải lên.",
       "faqs": [
         {
           "q": "Tôi có thể đặt số trang ở đâu?",
@@ -1171,7 +1171,7 @@
         },
         {
           "q": "Tôi có thể bỏ qua đánh số ở trang đầu không?",
-          "a": "Có. Chọn tùy chọn bắt đầu đánh số từ một trang cụ thể, chẳng hạn trang 2 hoặc 3, để bỏ qua trang bìa."
+          "a": "Không trực tiếp: trang nào cũng được đánh số, và \"Bắt đầu đánh số từ\" chỉ đổi số đầu tiên. Để bìa không có số, hãy tách bìa ra bằng Tách PDF, đánh số phần còn lại bắt đầu từ 2, rồi ghép lại bằng Ghép PDF."
         },
         {
           "q": "PDF của tôi có bị tải lên để đánh số trang không?",
@@ -1197,7 +1197,7 @@
     "add-watermark": {
       "slug": "chen-watermark-pdf",
       "name": "Chèn watermark",
-      "description": "Thêm watermark dạng chữ hoặc hình ảnh",
+      "description": "Đóng watermark chữ lên mọi trang",
       "seoTitle": "Chèn watermark vào PDF — Đóng dấu chữ miễn phí",
       "metaDescription": "Đóng watermark chữ như MẬT hoặc BẢN NHÁP lên mọi trang PDF. Tùy chỉnh độ mờ và cỡ chữ. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
@@ -1239,11 +1239,11 @@
       "faqs": [
         {
           "q": "Tôi có thể cắt tất cả các trang cùng lúc không?",
-          "a": "Có. Áp dụng cùng một vùng cắt cho mọi trang, hoặc đặt vùng cắt khác nhau cho từng trang."
+          "a": "Có — lề bạn đặt luôn được cắt khỏi mọi trang. Không hỗ trợ cắt khác nhau cho từng trang; hãy tách PDF trước nếu một số trang cần lề khác."
         },
         {
           "q": "Cắt lề có xóa nội dung không?",
-          "a": "Cắt lề chỉ ẩn nội dung nằm ngoài vùng cắt. Nội dung bị ẩn không bị xóa và có thể khôi phục lại sau."
+          "a": "Không. Cắt trang thu nhỏ vùng hiển thị, nhưng nội dung bên ngoài vẫn nằm trong file và một số trình chỉnh sửa có thể hiện lại. Đừng bao giờ cắt để giấu thông tin nhạy cảm — hãy dùng Che thông tin PDF."
         },
         {
           "q": "Tôi có thể cắt lề PDF trên điện thoại không?",
@@ -1269,13 +1269,13 @@
     "sign-pdf": {
       "slug": "ky-pdf",
       "name": "Ký PDF",
-      "description": "Thêm chữ ký điện tử vào PDF",
+      "description": "Đặt chữ ký vẽ tay, gõ hoặc tải lên vào PDF",
       "seoTitle": "Ký PDF — Thêm chữ ký điện tử online miễn phí",
-      "metaDescription": "Thêm chữ ký điện tử vào tài liệu PDF. Vẽ, gõ hoặc tải lên chữ ký của bạn. Có giá trị pháp lý, miễn phí, không cần đăng ký.",
+      "metaDescription": "Ký PDF trực tuyến: vẽ, gõ hoặc tải lên chữ ký rồi đặt vào bất kỳ trang nào. Miễn phí, không đăng ký, và chữ ký của bạn không bao giờ bị tải lên.",
       "faqs": [
         {
           "q": "Chữ ký điện tử có giá trị pháp lý không?",
-          "a": "Có. Chữ ký điện tử có giá trị pháp lý theo Đạo luật ESIGN của Hoa Kỳ và quy định eIDAS của EU đối với hầu hết mọi loại tài liệu."
+          "a": "Với hầu hết giấy tờ thông thường thì có: các luật như ESIGN Act của Mỹ và eIDAS của EU chấp nhận chữ ký điện tử đơn giản. Công cụ này đặt hình ảnh chữ ký của bạn, không kèm chứng thư số hay nhật ký kiểm tra, vì vậy hãy dùng dịch vụ chữ ký điện tử được chứng nhận khi cần chữ ký đủ điều kiện hoặc dựa trên chứng thư số."
         },
         {
           "q": "Tôi có thể ký PDF có mật khẩu không?",
@@ -1351,15 +1351,15 @@
       "name": "Mở khóa PDF",
       "description": "Gỡ mật khẩu bảo vệ khỏi PDF",
       "seoTitle": "Mở khóa PDF — Gỡ mật khẩu PDF miễn phí",
-      "metaDescription": "Gỡ mật khẩu bảo vệ khỏi tài liệu PDF. Mở khóa PDF đã mã hóa để chỉnh sửa, in hoặc chia sẻ. Miễn phí, không cần đăng ký.",
+      "metaDescription": "Gỡ mật khẩu và các hạn chế in, sao chép hoặc chỉnh sửa khỏi PDF mà bạn có quyền mở khóa. Miễn phí, không đăng ký, chạy trong trình duyệt.",
       "faqs": [
         {
           "q": "Tôi có cần mật khẩu để mở khóa PDF không?",
-          "a": "Có. Bạn phải biết mật khẩu hiện tại để gỡ nó. Không có cách nào vượt qua mã hóa PDF mà không có mật khẩu."
+          "a": "Chỉ khi PDF yêu cầu mật khẩu để mở. File mở được bình thường nhưng chặn in, sao chép hoặc chỉnh sửa sẽ được mở khóa mà không cần mật khẩu. Mật khẩu mở file thì không thể vượt qua: không có nó, file vẫn bị khóa."
         },
         {
           "q": "Mở khóa có làm thay đổi nội dung PDF không?",
-          "a": "Không. Mở khóa chỉ gỡ lớp bảo vệ bằng mật khẩu. Nội dung tài liệu vẫn giữ nguyên."
+          "a": "Các trang trông vẫn như cũ, nhưng mỗi trang được dựng lại thành ảnh độ phân giải cao kèm lớp văn bản ẩn: văn bản vẫn tìm kiếm và sao chép được nhưng không còn sửa được như văn bản, và liên kết cũng như trường biểu mẫu không được giữ lại. File cũng có thể nặng hơn."
         },
         {
           "q": "Nhập mật khẩu PDF ở đây có an toàn không?",
@@ -1403,10 +1403,10 @@
       ],
       "howTo": {
         "title": "Cách đặt mật khẩu cho file PDF",
-        "intro": "Đặt mật khẩu PDF mã hóa PDF bằng mật khẩu để mở, mật khẩu để thay đổi quyền, hoặc cả hai — và có thể chặn in, sao chép hoặc chỉnh sửa.",
+        "intro": "Đặt mật khẩu PDF mã hóa PDF để cần mật khẩu khi mở, kèm mật khẩu chủ sở hữu riêng tùy chọn, và có thể chặn in, sao chép hoặc chỉnh sửa.",
         "steps": [
           "Chọn tệp PDF của bạn",
-          "Nhập mật khẩu mở tệp, mật khẩu chủ sở hữu, hoặc cả hai",
+          "Nhập mật khẩu mở file, và nếu muốn, một mật khẩu chủ sở hữu khác",
           "Nếu muốn, mở phần cài đặt quyền để giới hạn in, sao chép và chỉnh sửa",
           "Bấm Bảo vệ PDF để tải xuống tệp đã mã hóa"
         ],
@@ -1490,8 +1490,8 @@
     "translate-pdf": {
       "slug": "dich-pdf",
       "name": "Dịch PDF",
-      "description": "Dịch nội dung PDF sang ngôn ngữ khác",
-      "seoTitle": "Dịch PDF — Dịch file PDF sang nhiều ngôn ngữ miễn phí",
+      "description": "Dịch văn bản PDF sang 42 ngôn ngữ",
+      "seoTitle": "Dịch PDF — Dịch văn bản PDF sang 42 ngôn ngữ",
       "metaDescription": "Dịch văn bản trong PDF sang 42 ngôn ngữ và tải xuống thành PDF mới. Miễn phí, không cần đăng ký. Văn bản được gửi tới một dịch vụ dịch thuật.",
       "faqs": [
         {

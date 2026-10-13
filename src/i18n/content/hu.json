@@ -270,7 +270,7 @@
         },
         {
           "q": "Kinyerhetem az oldalakat más sorrendben?",
-          "a": "Igen. Sorold fel az oldalakat a kívánt sorrendben. Ha például 9, 3, 5-öt adsz meg, a fájl ebben a sorrendben fogja tartalmazni az oldalakat."
+          "a": "Nem. Az oldalak mindig az eredeti sorrendjükben kerülnek ki, a kétszer megadott oldal pedig csak egyszer, így a 9, 3, 5 a 3., 5. és 9. oldalt adja. A sorrend módosításához futtassa az eredményt a PDF rendezés eszközön."
         },
         {
           "q": "Ingyenes az oldalak kinyerése, vízjel nélkül?",
@@ -296,7 +296,7 @@
     "organize-pdf": {
       "slug": "pdf-rendezese",
       "name": "PDF rendezés",
-      "description": "Oldalak átrendezése, forgatása és kezelése",
+      "description": "Rendezze át az oldalakat, és hagyja ki, amelyekre nincs szüksége",
       "seoTitle": "PDF rendezés – oldalak átrendezése és törlése ingyen",
       "metaDescription": "Rakd tetszőleges sorrendbe egy PDF oldalait, és hagyd ki a feleslegeseket, egyetlen lépésben. Ingyenes, regisztráció nélkül, a fájl a böngésződben marad.",
       "faqs": [
@@ -332,9 +332,9 @@
     "compress-pdf": {
       "slug": "pdf-tomoritese",
       "name": "PDF tömörítés",
-      "description": "Fájlméret csökkentése a minőség megőrzésével",
-      "seoTitle": "PDF tömörítés – fájlméret csökkentése minőségromlás nélkül",
-      "metaDescription": "Csökkentsd a PDF fájlméretét akár 80%-kal, látható minőségromlás nélkül. Ingyenes tömörítés a böngészőben, feltöltés, vízjel és regisztráció nélkül.",
+      "description": "Zsugorítsa a PDF-et a szükséges fájlméretre",
+      "seoTitle": "PDF tömörítés – a PDF zsugorítása a szükséges méretre",
+      "metaDescription": "Zsugorítsa a PDF-et egy MB-ban vagy KB-ban megadott célméretre. Előbb veszteségmentes újraépítés történik; oldalak csak szükség esetén lesznek képek. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
           "q": "Romlik a PDF minősége a tömörítéstől?",
@@ -342,7 +342,7 @@
         },
         {
           "q": "Mennyivel lesz kisebb a PDF-em?",
-          "a": "A sok fényképet tartalmazó PDF-ek 60–80%-kal, a csak szöveges fájlok 10–30%-kal lesznek kisebbek. A szkennelt dokumentumok akár 90%-kal is zsugorodhatnak."
+          "a": "Ez a fájltól függ, ezért az eszköz nem ígér százalékot: a célt Ön adja meg. Ha a veszteségmentes újraépítés nem éri el, az oldalak egyre alacsonyabb minőségű képként újra kirajzolódnak, amíg a fájl bele nem fér, az eredmény pedig a ténylegesen elért méretet mutatja."
         },
         {
           "q": "Tömöríthetek jelszóval védett PDF-et?",
@@ -368,17 +368,17 @@
     "optimize-pdf": {
       "slug": "pdf-optimalizalasa",
       "name": "PDF optimalizálás",
-      "description": "PDF optimalizálása webre és gyorsabb betöltésre",
-      "seoTitle": "PDF optimalizálás – gyorsabb betöltés webre",
-      "metaDescription": "Optimalizáld a PDF fájlokat webes közzétételre és gyorsabb betöltésre. Rövidebb megjelenítési idő, egyesített rétegek és letisztult dokumentumszerkezet.",
+      "description": "Csomagolja újra a PDF-et veszteségmentesen a méret csökkentéséhez",
+      "seoTitle": "PDF optimalizálás – a PDF veszteségmentes újracsomagolása",
+      "metaDescription": "A PDF veszteségmentes újracsomagolása: tömörített objektumfolyamok, a fel nem használt objektumok és régi változatok törlése, a metaadatok opcionális törlése. Szöveg és kép érintetlen.",
       "faqs": [
         {
           "q": "Mit csinál a PDF optimalizálás?",
-          "a": "Az optimalizálás eltávolítja a nem használt objektumokat, egyesíti az interaktív rétegeket, részhalmazra szűkíti a betűtípusokat, és letisztítja a belső szerkezetet a gyorsabb megjelenítés érdekében."
+          "a": "Tömörített objektumfolyamokkal építi újra a fájlt, ami eltávolítja a fel nem használt objektumokat és a régi mentett változatokat, és opcionálisan törli a metaadatokat, például a címet és a szerzőt. Nem egyesíti a rétegeket, nem készít betűkészlet-részhalmazt, és nem kódolja újra a képeket. Ha nincs mit nyerni, az eredeti fájlt kapja vissza változatlanul."
         },
         {
           "q": "Az optimalizálás ugyanaz, mint a tömörítés?",
-          "a": "A tömörítés a képek újrakódolásával csökkenti a fájlméretet. Az optimalizálás a szerkezeti javításokra fókuszál, amelyek gyorsítják a betöltést és a megjelenítést."
+          "a": "Nem. A PDF tömörítés egy célméretre törekszik, és ehhez képpé alakíthatja az oldalakat. Az optimalizálás csak veszteségmentesen csomagolja újra a fájl szerkezetét, így a megtakarítás általában kisebb, de semmi látható nem változik."
         },
         {
           "q": "Az optimalizált PDF továbbra is megnyílik minden PDF-olvasóban?",
@@ -406,7 +406,7 @@
       "name": "PDF javítás",
       "description": "Sérült vagy hibás PDF fájlok javítása",
       "seoTitle": "PDF javítás – sérült vagy hibás PDF fájlok helyreállítása",
-      "metaDescription": "Javítsd meg a sérült vagy hibás PDF fájlokat. Javítsd a hibás fejléceket, mentsd meg az olvasható tartalmat, és állítsd helyre a dokumentumot. Ingyenes.",
+      "metaDescription": "Javítsa ki a sérült PDF-fájlokat: építse újra a kereszthivatkozási táblát és a szerkezetet, vagy mentse meg a súlyosan sérült fájlok oldalait. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
           "q": "Mitől sérül meg egy PDF?",
@@ -441,7 +441,7 @@
       "name": "PDF szövegfelismerés (OCR)",
       "description": "Szöveg kinyerése szkennelt dokumentumokból",
       "seoTitle": "PDF szövegfelismerés (OCR) – szkennelt dokumentumokhoz",
-      "metaDescription": "Alakítsd a szkennelt dokumentumokat kereshető, kijelölhető szöveggé OCR-rel. Kereshető és szerkeszthető szkennelt PDF-ek. Ingyenes, feltöltés nélkül.",
+      "metaDescription": "Tegye kereshetővé a szkennelt PDF-eket OCR-rel: láthatatlan szövegréteg, amelyben kereshet, kijelölhet és másolhat. 44 nyelvből legfeljebb 3. Ingyenes.",
       "faqs": [
         {
           "q": "Mi az az OCR?",
@@ -449,7 +449,7 @@
         },
         {
           "q": "Mennyire pontos az OCR?",
-          "a": "A pontosság a szkennelés minőségétől függ. Tiszta, nagy felbontású szkenneknél jellemzően 95–99%. Gyenge minőségű szkenneknél több hiba előfordulhat."
+          "a": "A szkenneléstől függ. Az éles, jól megvilágított, egyenes, nyomtatott szöveges oldalak jól olvashatók; az alacsony felbontás, a kézírás, a ferdeség vagy a zaj több hibát okoz. Mielőtt egy fontos szövegre támaszkodna, vesse össze az oldal képével."
         },
         {
           "q": "Feltölti a szkennelt dokumentumaimat a PDF szövegfelismerés (OCR)?",
@@ -638,7 +638,7 @@
       "faqs": [
         {
           "q": "Megmaradnak a képleteim?",
-          "a": "A képletek kiszámításra kerülnek, és az eredményül kapott értékek mentődnek a PDF-be. Maguk a képletek nem maradnak meg, mivel a PDF statikus formátum."
+          "a": "Nem. A PDF minden képletnél a fájlban mentett utolsó kiszámított értéket mutatja; maguk a képletek nem maradnak meg. Ha egy munkafüzetet sosem számoltak újra (például szkript hozta létre), előbb nyissa meg és mentse Excelben."
         },
         {
           "q": "Átalakíthatok csak bizonyos munkalapokat?",
@@ -667,9 +667,9 @@
     "html-to-pdf": {
       "slug": "html-pdf-konvertalas",
       "name": "HTML PDF konvertálás",
-      "description": "Weboldalak átalakítása PDF-fé",
+      "description": "HTML-kód vagy .html-fájlok PDF-be alakítása",
       "seoTitle": "HTML PDF konvertálás – weboldalak PDF-be ingyen",
-      "metaDescription": "Alakíts bármilyen weboldalt PDF-fé. Mentsd el a cikkeket, nyugtákat és online tartalmakat PDF dokumentumként. Ingyenes, böngészőben fut, telepítés nélkül.",
+      "metaDescription": "Alakítsa a beillesztett HTML-t vagy egy .html-fájlt PDF-be pontos dizájnmásolatként vagy kijelölhető szöveggel. Ingyenes, a böngészőben, telepítés nélkül.",
       "faqs": [
         {
           "q": "Átalakíthatok egy élő weboldalt az URL-je alapján?",
@@ -705,7 +705,7 @@
       "name": "HEIC PDF konvertálás",
       "description": "Apple HEIC képek átalakítása PDF-fé",
       "seoTitle": "HEIC PDF konvertálás – iPhone fotók PDF-be ingyen",
-      "metaDescription": "Alakítsd iPhone és iPad HEIC és HEIF fotóidat PDF dokumentummá. Ingyenes, böngészőben fut, feltöltés nélkül. Megőrzi az eredeti képminőséget.",
+      "metaDescription": "Alakítsa az iPhone és iPad HEIC és HEIF fotóit PDF-be, fotónként egy PDF-et, teljes felbontásban. Ingyenes, böngészőben fut, feltöltés nélkül.",
       "faqs": [
         {
           "q": "Mi az a HEIC fájl?",
@@ -717,7 +717,7 @@
         },
         {
           "q": "Romlik a képminőség az átalakítás során?",
-          "a": "Nem. A HEIC kép dekódolás után eredeti felbontásában kerül be a PDF-be. A vizuális minőség megmarad."
+          "a": "Nagyon keveset. Minden fotó megtartja a teljes felbontását, de a PDF-ben jó minőségű JPEG-ként (92%) újrakódolódik, mert a PDF nem tud közvetlenül HEIC-et tárolni. A különbség alig látható."
         }
       ],
       "howTo": {
@@ -748,11 +748,11 @@
         },
         {
           "q": "Romlik a minőség a WebP PDF konvertálás során?",
-          "a": "Nem. A WebP kép dekódolás után, újratömörítés nélkül, eredeti felbontásában kerül be a PDF-be."
+          "a": "Nem. Minden WebP dekódolva, veszteségmentesen (PNG-ként) tárolódik teljes pixelfelbontásban, egy A4-es oldal közepére kerül, és csak akkor kicsinyül, ha nagyobb az oldalnál."
         },
         {
           "q": "Átalakíthatok egyszerre több WebP fájlt?",
-          "a": "Igen. Válassz ki több WebP képet, és ezek egyetlen többoldalas PDF-be kerülnek, oldalanként egy képpel."
+          "a": "Igen. Válasszon ki több WebP-képet, és mindegyikből külön PDF lesz; töltse le őket egyenként vagy ZIP-ben. Egyetlen többoldalas PDF-hez használja a JPG PDF konvertálás eszközt, amely WebP-t is elfogad."
         }
       ],
       "howTo": {
@@ -787,7 +787,7 @@
         },
         {
           "q": "Átalakíthatok egyszerre több TIFF fájlt?",
-          "a": "Igen. Válassz ki több TIFF fájlt, és mindegyik átalakításra kerül, az összes oldal pedig egyetlen PDF-be kerül."
+          "a": "Igen. Válasszon ki több TIFF-fájlt, és mindegyikből külön PDF lesz az összes oldalával. Töltse le őket egyenként vagy ZIP-ben, majd használja a PDF egyesítés eszközt, ha egyetlen fájlt szeretne."
         }
       ],
       "howTo": {
@@ -822,7 +822,7 @@
         },
         {
           "q": "Ingyenesen használható?",
-          "a": "Igen. Az SVG PDF konvertálás teljesen ingyenes, korlátok, vízjel és regisztráció nélkül."
+          "a": "Igen. Az SVG–PDF átalakítás teljesen ingyenes, napi korlát, vízjel és regisztráció nélkül."
         }
       ],
       "howTo": {
@@ -880,15 +880,15 @@
       "name": "PDF JPG konvertálás",
       "description": "PDF oldalak átalakítása JPG képekké",
       "seoTitle": "PDF JPG konvertálás – PDF oldalak képpé alakítása ingyen",
-      "metaDescription": "Alakítsd a PDF oldalakat jó minőségű JPG képekké. Az összes oldalt vagy csak bizonyos oldalakat mentheted képként. Ingyenes, regisztráció és vízjel nélkül.",
+      "metaDescription": "A PDF minden oldalát JPG- vagy PNG-képpé alakítja 144 vagy 216 DPI-vel. Ingyenes, regisztráció és vízjel nélkül, a PDF nem hagyja el a böngészőt.",
       "faqs": [
         {
           "q": "Milyen felbontásúak lesznek a képek?",
-          "a": "A képek a PDF-ben található legnagyobb felbontásban kerülnek kinyerésre, a forrástól függően jellemzően 150–300 DPI-vel."
+          "a": "Az oldalak 144 DPI-vel (Normál) vagy 216 DPI-vel (Nagy) jelennek meg, a forrástól függetlenül. A Nagy élesebb szöveget és nagyobb fájlokat ad."
         },
         {
           "q": "Átalakíthatok csak bizonyos oldalakat?",
-          "a": "Igen. Választhatod az összes oldal átalakítását, vagy megadhatsz egy oldaltartományt, hogy csak a szükséges oldalakat nyerd ki."
+          "a": "Minden oldal átalakul. Ha csak néhányra van szüksége, előbb használja az Oldalak kinyerése eszközt, és azt a fájlt alakítsa át, vagy töltse le csak a szükséges oldalképeket."
         },
         {
           "q": "Feltöltődik a PDF-em, amikor JPG-vé alakítom?",
@@ -1021,7 +1021,7 @@
       "name": "PDF PDF/A konvertálás",
       "description": "PDF átalakítása archiválási PDF/A formátumba",
       "seoTitle": "PDF PDF/A konvertálás – archiválási PDF formátum",
-      "metaDescription": "Alakítsd a hagyományos PDF fájlokat PDF/A archiválási formátumba a hosszú távú megőrzés és a megfelelőség érdekében. Ingyenes, böngészőben fut.",
+      "metaDescription": "Alakítsa a PDF-et a metaadataiban PDF/A-2b-ként jelölt archív másolattá. A szigorú megfelelést validátorral ellenőrizze. Ingyenes, a böngészőben.",
       "faqs": [
         {
           "q": "Mi az a PDF/A?",
@@ -1029,7 +1029,7 @@
         },
         {
           "q": "Miért érdemes PDF/A-ba konvertálni?",
-          "a": "Sok iparág előírja a PDF/A használatát a dokumentumok megőrzéséhez. Biztosítja, hogy a betűtípusok beágyazottak, a színek definiáltak legyenek, és a dokumentum önálló legyen."
+          "a": "Sok bíróság, levéltár és iratkezelő rendszer PDF/A-t kér, amely beágyazott betűkészleteket, meghatározott színeket és titkosítás nélküliséget követel meg. Ez az eszköz átmásolja az oldalakat és hozzáadja a PDF/A-azonosítót; a hiányzó betűkészleteket nem ágyazza be, és színprofilt sem ad hozzá."
         },
         {
           "q": "Garantált, hogy az eredmény átmegy egy PDF/A-validátoron?",
@@ -1068,7 +1068,7 @@
         },
         {
           "q": "Használhatom a Markdownt a ChatGPT-vel vagy más AI-eszközökkel?",
-          "a": "Igen. A Markdown egyszerű szövegként őrzi meg a címsorokat és a listákat, amelyeket az AI-asszisztensek és a jegyzetalkalmazások tisztán be tudnak olvasni. Maga a konvertálás a böngésződben fut."
+          "a": "Igen. Az eredmény egyszerű szöveg, oldalanként egy szakasszal (## Page 1, ## Page 2 …), amelyet az MI-asszisztensek és jegyzetalkalmazások tisztán olvasnak. Az átalakítás a böngészőben fut."
         }
       ],
       "howTo": {
@@ -1095,11 +1095,11 @@
       "faqs": [
         {
           "q": "Bármilyen PDF-et szerkeszthetek?",
-          "a": "Minden digitálisan létrehozott, kijelölhető szöveget tartalmazó PDF szerkeszthető. A szkennelt PDF-eknél előbb OCR-re van szükség, hogy a szöveg szerkeszthetővé váljon."
+          "a": "Bármely digitálisan létrehozott, kijelölhető szöveget tartalmazó PDF szerkeszthető. A szkennelt PDF a szöveg képe, így nincsenek benne közvetlenül módosítható szavak."
         },
         {
           "q": "Megváltozik a formázás a szerkesztéstől?",
-          "a": "A közvetlen szerkesztés megőrzi az eredeti formázást. Csak a módosított szöveg változik – a betűtípusok, a térközök és az elrendezés érintetlen marad."
+          "a": "Csak a módosított szöveg rajzolódik újra; az oldal többi része változatlanul átmásolódik. A szerkesztett szöveg lehetőség szerint a PDF-be már beágyazott betűkészletet használja; ha abból hiányzik egy begépelt karakter, hasonló szabványos betűkészlet kerül a helyére, ezért küldés előtt ellenőrizze a módosított sorokat."
         },
         {
           "q": "Szerkeszthetek szkennelt PDF-et?",
@@ -1125,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "pdf-forgatasa",
       "name": "PDF forgatás",
-      "description": "PDF oldalak elforgatása tetszőleges szögben",
-      "seoTitle": "PDF forgatás – PDF oldalak elforgatása ingyen",
+      "description": "PDF-oldalak forgatása 90°, 180° vagy 270°-kal",
+      "seoTitle": "PDF forgatás – oldalak forgatása 90°, 180° vagy 270°-kal",
       "metaDescription": "Forgasd el egy PDF egyes vagy összes oldalát. Javítsd ki az oldalra fordult szkenneket, és állítsd be a helyes tájolást. Ingyenes, regisztráció nélkül.",
       "faqs": [
         {
@@ -1163,7 +1163,7 @@
       "name": "PDF oldalszámozás",
       "description": "Oldalszámok beszúrása a PDF-be",
       "seoTitle": "PDF oldalszámozás – oldalszámok beszúrása ingyen",
-      "metaDescription": "Adj oldalszámokat a PDF-hez tetszőleges pozícióban. Válaszd ki a formátumot, a helyet és a kezdőszámot. Ingyenes, böngészőben fut, feltöltés nélkül.",
+      "metaDescription": "Adjon oldalszámokat a PDF-hez hat pozíció egyikében. Válassza ki a formátumot (1, 1. oldal vagy 1 / N) és a kezdőszámot. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
           "q": "Hová helyezhetem az oldalszámokat?",
@@ -1171,7 +1171,7 @@
         },
         {
           "q": "Kihagyhatom a számozást az első oldalon?",
-          "a": "Igen. Válaszd azt a lehetőséget, hogy a számozás egy adott oldaltól, például a 2. vagy 3. oldaltól induljon, így kihagyhatod a borítóoldalakat."
+          "a": "Közvetlenül nem: minden oldal számot kap, a „Számozás kezdete” pedig csak az első számot módosítja. Ha a borítót számozatlanul hagyná, válassza le a PDF szétválasztás eszközzel, számozza a többit 2-től, majd fűzze össze őket a PDF egyesítés eszközzel."
         },
         {
           "q": "Feltöltődik a PDF-em az oldalszámozáshoz?",
@@ -1197,7 +1197,7 @@
     "add-watermark": {
       "slug": "pdf-vizjel",
       "name": "Vízjel hozzáadása",
-      "description": "Szöveges vagy képes vízjel hozzáadása",
+      "description": "Szöveges vízjel minden oldalra",
       "seoTitle": "Vízjel hozzáadása PDF-hez – ingyenes szöveges vízjel",
       "metaDescription": "Helyezz szöveges vízjelet, például BIZALMAS vagy TERVEZET feliratot egy PDF minden oldalára. Állítható átlátszóság és méret. Ingyenes, feltöltés nélkül.",
       "faqs": [
@@ -1239,11 +1239,11 @@
       "faqs": [
         {
           "q": "Körbevághatom egyszerre az összes oldalt?",
-          "a": "Igen. Alkalmazd ugyanazt a vágási területet minden oldalra, vagy állíts be eltérő vágást az egyes oldalakhoz."
+          "a": "Igen — a beállított margókat mindig minden oldalról levágja. Az egyes oldalak eltérő vágása nem támogatott; ha néhány oldalnak más margó kell, előbb válassza szét a PDF-et."
         },
         {
           "q": "Töröl tartalmat a körbevágás?",
-          "a": "A körbevágás elrejti a vágási területen kívüli tartalmat. Az elrejtett tartalom nem törlődik, és később visszaállítható."
+          "a": "Nem. A vágás csak a látható oldalterületet csökkenti, a kívül eső tartalom a fájlban marad, és egyes szerkesztők újra megjeleníthetik. Soha ne vágjon azért, hogy érzékeny adatot rejtsen el — erre használja a PDF kitakarás eszközt."
         },
         {
           "q": "Körbevághatok PDF-et a telefonomon?",
@@ -1269,13 +1269,13 @@
     "sign-pdf": {
       "slug": "pdf-alairasa",
       "name": "PDF aláírás",
-      "description": "Digitális aláírás hozzáadása PDF-ekhez",
+      "description": "Rajzolt, gépelt vagy feltöltött aláírás elhelyezése a PDF-en",
       "seoTitle": "PDF aláírás – elektronikus aláírás online ingyen",
-      "metaDescription": "Adj elektronikus aláírást PDF dokumentumokhoz. Rajzold meg, gépeld be vagy töltsd fel az aláírásodat. Jogilag érvényes, ingyenes, regisztráció nélkül.",
+      "metaDescription": "Írjon alá PDF-et online: rajzolja meg, gépelje be vagy töltse fel az aláírását, és helyezze bármelyik oldalra. Ingyenes, regisztráció nélkül, az aláírás sosem kerül feltöltésre.",
       "faqs": [
         {
           "q": "Jogilag érvényesek az elektronikus aláírások?",
-          "a": "Igen. Az elektronikus aláírások az amerikai ESIGN törvény és az uniós eIDAS rendelet szerint gyakorlatilag minden dokumentumnál jogilag érvényesek."
+          "a": "A legtöbb hétköznapi dokumentumnál igen: az olyan jogszabályok, mint az amerikai ESIGN Act és az uniós eIDAS-rendelet, elfogadják az egyszerű elektronikus aláírást. Ez az eszköz az aláírása képét helyezi el tanúsítvány és naplózás nélkül, ezért ha minősített vagy tanúsítványalapú aláírás szükséges, használjon tanúsított e-aláírási szolgáltatást."
         },
         {
           "q": "Aláírhatok jelszóval védett PDF-et?",
@@ -1351,15 +1351,15 @@
       "name": "PDF feloldás",
       "description": "Jelszavas védelem eltávolítása PDF-ből",
       "seoTitle": "PDF feloldás – jelszavas védelem eltávolítása ingyen",
-      "metaDescription": "Távolítsd el a jelszavas védelmet PDF dokumentumokról. Oldd fel a titkosított PDF-eket szerkesztéshez, nyomtatáshoz vagy megosztáshoz. Ingyenes.",
+      "metaDescription": "Távolítsa el a jelszót és a nyomtatási, másolási vagy szerkesztési korlátozásokat egy olyan PDF-ből, amelynek feloldására jogosult. Ingyenes, böngészőben fut.",
       "faqs": [
         {
           "q": "Kell a jelszó egy PDF feloldásához?",
-          "a": "Igen. Ismerned kell a jelenlegi jelszót az eltávolításához. A PDF titkosítás jelszó nélkül nem kerülhető meg."
+          "a": "Csak ha a PDF megnyitáskor jelszót kér. Azokat a fájlokat, amelyek szabadon megnyílnak, de tiltják a nyomtatást, másolást vagy szerkesztést, jelszó nélkül oldja fel. A megnyitási jelszó nem kerülhető meg: nélküle a fájl zárolva marad."
         },
         {
           "q": "Megváltozik a PDF tartalma a feloldástól?",
-          "a": "Nem. A feloldás csak a jelszavas védelmet távolítja el. A dokumentum tartalma változatlan marad."
+          "a": "Az oldalak ugyanúgy néznek ki, de mindegyik nagy felbontású képként épül újra láthatatlan szövegréteggel: a szöveg kereshető és másolható marad, de szövegként már nem szerkeszthető, a hivatkozások és űrlapmezők pedig nem maradnak meg. A fájl mérete is nőhet."
         },
         {
           "q": "Biztonságos itt megadni a PDF jelszavamat?",
@@ -1403,10 +1403,10 @@
       ],
       "howTo": {
         "title": "Hogyan lehet jelszóval védeni egy PDF-et",
-        "intro": "A PDF jelszavas védelem jelszóval titkosít egy PDF-et: megnyitási jelszóval, az engedélyek módosításához szükséges jelszóval vagy mindkettővel – és letilthatja a nyomtatást, a másolást vagy a szerkesztést.",
+        "intro": "A PDF jelszavas védelem úgy titkosítja a PDF-et, hogy megnyitáskor jelszót kérjen, opcionálisan külön tulajdonosi jelszóval, és letilthatja a nyomtatást, másolást vagy szerkesztést.",
         "steps": [
           "Válaszd ki a PDF-et",
-          "Adj meg egy megnyitási jelszót, egy tulajdonosi jelszót vagy mindkettőt",
+          "Adja meg a megnyitási jelszót, és ha szeretné, egy eltérő tulajdonosi jelszót",
           "Ha szeretnéd, nyisd meg az engedélybeállításokat a nyomtatás, a másolás és a szerkesztés korlátozásához",
           "Kattints a PDF védelme gombra a titkosított fájl letöltéséhez"
         ],
@@ -1490,8 +1490,8 @@
     "translate-pdf": {
       "slug": "pdf-forditasa",
       "name": "PDF fordítás",
-      "description": "PDF tartalmának lefordítása bármilyen nyelvre",
-      "seoTitle": "PDF fordítás – PDF tartalom lefordítása más nyelvre",
+      "description": "PDF-szöveg fordítása 42 nyelvre",
+      "seoTitle": "PDF fordítás – PDF-szöveg fordítása 42 nyelvre",
       "metaDescription": "Fordítsd le egy PDF szövegét 42 nyelvre, és töltsd le új PDF-ként. Ingyenes, regisztráció nélkül. A szöveg egy fordítószolgáltatáshoz kerül elküldésre.",
       "faqs": [
         {

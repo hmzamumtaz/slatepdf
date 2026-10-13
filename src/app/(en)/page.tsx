@@ -337,7 +337,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: `${tools.length} Free PDF Tools`, text: 'Merge multiple PDFs, split large files, compress without quality loss, convert between formats, add signatures, and password-protect documents.' },
+              { title: `${tools.length} Free PDF Tools`, text: 'Merge multiple PDFs, split large files, compress to the size you need, convert between formats, add signatures, and password-protect documents.' },
               { title: 'Works Everywhere', text: 'Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDFs regularly — it all runs in your browser.' },
               { title: 'Truly Free. Forever.', text: 'No sign-up required, no watermarks added to your output, no upload size limits, and no hidden fees. Use every tool as many times as you want.' },
             ].map((item) => (

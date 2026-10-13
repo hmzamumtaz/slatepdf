@@ -51,7 +51,7 @@ export const newPosts5: BlogPost[] = [
       { q: 'Is removing a watermark from a PDF legal?', a: 'Only for documents you are entitled to edit. Watermarks are often copyright or license protection, and removing them from someone else\u2019s content to redistribute it can be a breach of terms or law.' },
       { q: 'Why do watermark removers make the text blurry?', a: 'Because there is no clean content behind a flattened watermark, these tools guess and reconstruct the area, which smears the pixels. No software can recover ink that was never there.' },
     ],
-    related: ['how-to-add-a-watermark-to-a-pdf', 'how-to-redact-a-pdf-properly', 'how-to-flatten-a-pdf', 'what-personal-data-is-hidden-in-your-pdf'],
+    related: ['how-to-add-a-watermark-to-a-pdf', 'how-to-redact-a-pdf-properly', 'how-to-flatten-a-pdf', 'how-to-remove-metadata-from-a-pdf'],
   },
 
   // Article 4: Make a scanned PDF editable
@@ -103,6 +103,6 @@ export const newPosts5: BlogPost[] = [
       { q: 'Is my scanned PDF uploaded when I use a free OCR tool?', a: 'Only if you choose one that uploads. Many free OCR tools run entirely in the browser or on your device, so confidential pages never leave your computer \u2014 prefer those.' },
       { q: 'Can OCR read handwriting?', a: 'Generally poorly. Handwriting recognition is far less reliable than typed text. For handwritten scans, expect to correct the output manually or fall back to comparing the original page.' },
     ],
-    related: ['how-to-make-a-scanned-pdf-searchable', 'what-is-ocr-and-how-does-it-work', 'how-to-copy-text-from-a-scanned-pdf', 'how-to-convert-a-scanned-document-to-pdf'],
+    related: ['how-to-make-a-scanned-pdf-searchable', 'how-to-convert-a-scanned-pdf-to-a-word-document', 'how-to-copy-text-from-a-scanned-pdf', 'how-to-convert-a-scanned-document-to-pdf'],
   },
 ];

@@ -270,7 +270,7 @@
         },
         {
           "q": "Posso extrair páginas em outra ordem?",
-          "a": "Sim. Liste as páginas na ordem desejada. Digitar 9, 3, 5 gera um arquivo com as páginas nessa sequência."
+          "a": "Não. As páginas saem sempre na ordem original e uma página repetida entra uma só vez, então 9, 3, 5 resulta nas páginas 3, 5 e 9. Para mudar a ordem, passe o resultado pelo Organizar PDF."
         },
         {
           "q": "Extrair páginas é grátis e sem marca d'água?",
@@ -296,7 +296,7 @@
     "organize-pdf": {
       "slug": "organizar-pdf",
       "name": "Organizar PDF",
-      "description": "Reordene, gire e gerencie páginas",
+      "description": "Reordene as páginas e remova as que não precisa",
       "seoTitle": "Organizar PDF — Reordenar e remover páginas grátis",
       "metaDescription": "Coloque as páginas de um PDF em qualquer ordem e descarte as que não precisa, em uma só etapa. Grátis, sem cadastro, e o arquivo nunca sai do navegador.",
       "faqs": [
@@ -332,9 +332,9 @@
     "compress-pdf": {
       "slug": "comprimir-pdf",
       "name": "Comprimir PDF",
-      "description": "Reduza o tamanho do arquivo mantendo a qualidade",
-      "seoTitle": "Comprimir PDF — Reduzir tamanho sem perder qualidade",
-      "metaDescription": "Reduza o tamanho de um PDF em até 80% sem perda de qualidade visível. Compressão grátis no navegador. Sem upload, sem marca d'água, sem cadastro.",
+      "description": "Reduza um PDF ao tamanho de arquivo que você precisa",
+      "seoTitle": "Comprimir PDF — Reduza um PDF ao tamanho que precisa (grátis)",
+      "metaDescription": "Reduza um PDF a um tamanho-alvo em MB ou KB. Primeiro tenta-se uma reconstrução sem perdas; as páginas só viram imagens se for preciso. Grátis, sem upload.",
       "faqs": [
         {
           "q": "Comprimir um PDF reduz a qualidade?",
@@ -342,7 +342,7 @@
         },
         {
           "q": "Quanto meu PDF vai diminuir?",
-          "a": "PDFs com muitas fotos diminuem de 60 a 80%. Arquivos só com texto diminuem de 10 a 30%. Documentos escaneados podem diminuir até 90%."
+          "a": "Depende do arquivo, por isso a ferramenta não promete nenhuma porcentagem: você define o alvo. Se uma reconstrução sem perdas não chegar lá, as páginas são renderizadas de novo como imagens com qualidade cada vez menor até o arquivo caber, e o resultado mostra o tamanho realmente alcançado."
         },
         {
           "q": "Posso comprimir um PDF protegido por senha?",
@@ -368,17 +368,17 @@
     "optimize-pdf": {
       "slug": "otimizar-pdf",
       "name": "Otimizar PDF",
-      "description": "Otimize o PDF para a web e carregamento mais rápido",
-      "seoTitle": "Otimizar PDF — PDF mais leve para a web e mais rápido",
-      "metaDescription": "Otimize arquivos PDF para a web e um carregamento mais rápido. Reduza o tempo de renderização, achate camadas e simplifique a estrutura do documento.",
+      "description": "Reempacote um PDF sem perdas para reduzir seu tamanho",
+      "seoTitle": "Otimizar PDF — Reempacote um PDF sem perdas (grátis, sem upload)",
+      "metaDescription": "Reempacote um PDF sem perdas: fluxos de objetos comprimidos, objetos não usados e revisões antigas descartados, metadados opcionalmente apagados. Texto e imagens intactos.",
       "faqs": [
         {
           "q": "O que a otimização de PDF faz?",
-          "a": "A otimização remove objetos não usados, achata camadas interativas, cria subconjuntos de fontes e simplifica a estrutura interna para uma renderização mais rápida."
+          "a": "Ela reconstrói o arquivo com fluxos de objetos comprimidos, o que descarta objetos não usados e revisões antigas salvas, e pode apagar metadados como título e autor. Não achata camadas, não reduz fontes nem recodifica imagens. Se não houver ganho, você recebe o arquivo original sem alterações."
         },
         {
           "q": "Otimizar é o mesmo que comprimir?",
-          "a": "A compressão reduz o tamanho do arquivo recodificando imagens. A otimização foca em melhorias estruturais que aceleram o carregamento e a renderização."
+          "a": "Não. O Comprimir PDF trabalha para chegar a um tamanho-alvo e pode transformar páginas em imagens para isso. A otimização apenas reempacota a estrutura do arquivo sem perdas, então a economia costuma ser menor, mas nada visível muda."
         },
         {
           "q": "Um PDF otimizado continua abrindo em qualquer leitor de PDF?",
@@ -406,7 +406,7 @@
       "name": "Reparar PDF",
       "description": "Corrija arquivos PDF corrompidos ou danificados",
       "seoTitle": "Reparar PDF — Corrigir PDF corrompido ou danificado",
-      "metaDescription": "Repare arquivos PDF corrompidos ou danificados. Corrija cabeçalhos quebrados, recupere o conteúdo legível e restaure documentos. Ferramenta online grátis.",
+      "metaDescription": "Repare arquivos PDF corrompidos ou danificados: reconstrua a tabela de referências cruzadas e a estrutura, ou recupere as páginas de arquivos muito danificados. Grátis, sem upload.",
       "faqs": [
         {
           "q": "O que faz um PDF ficar corrompido?",
@@ -441,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Extraia texto de documentos escaneados",
       "seoTitle": "OCR PDF — Extrair texto de documentos escaneados",
-      "metaDescription": "Converta documentos escaneados em texto pesquisável e selecionável com OCR. Torne PDFs escaneados pesquisáveis e editáveis. Grátis, sem upload.",
+      "metaDescription": "Torne PDFs digitalizados pesquisáveis com OCR: uma camada de texto invisível que você pode pesquisar, selecionar e copiar. Até 3 de 44 idiomas. Grátis, sem upload.",
       "faqs": [
         {
           "q": "O que é OCR?",
@@ -449,7 +449,7 @@
         },
         {
           "q": "O OCR é preciso?",
-          "a": "A precisão depende da qualidade da digitalização. Digitalizações nítidas e em alta resolução costumam atingir 95-99% de precisão. Digitalizações de baixa qualidade podem ter mais erros."
+          "a": "Depende da digitalização. Páginas nítidas, bem iluminadas e retas de texto impresso são bem lidas; baixa resolução, letra manuscrita, inclinação ou ruído causam mais erros. Confira o texto importante com a imagem da página antes de confiar nele."
         },
         {
           "q": "O OCR PDF envia meus documentos digitalizados?",
@@ -638,7 +638,7 @@
       "faqs": [
         {
           "q": "As fórmulas serão mantidas?",
-          "a": "As fórmulas são calculadas e salvas no PDF como os valores resultantes. As fórmulas em si não são mantidas, porque o PDF é um formato estático."
+          "a": "Não. O PDF mostra o último valor calculado salvo no arquivo para cada fórmula; as fórmulas em si não são mantidas. Se uma pasta de trabalho nunca foi recalculada (por exemplo, gerada por um script), abra e salve no Excel antes."
         },
         {
           "q": "Posso converter apenas algumas abas?",
@@ -667,9 +667,9 @@
     "html-to-pdf": {
       "slug": "html-para-pdf",
       "name": "HTML para PDF",
-      "description": "Converta páginas da web em PDF",
+      "description": "Converta código HTML ou arquivos .html em PDF",
       "seoTitle": "HTML para PDF — Converter páginas da web em PDF grátis",
-      "metaDescription": "Converta qualquer página da web em PDF. Salve artigos, recibos e conteúdo online como documentos PDF. Grátis, no navegador, sem instalar nada.",
+      "metaDescription": "Converta HTML colado ou um arquivo .html em PDF, como cópia com o design exato ou com texto selecionável. Grátis, no seu navegador, sem instalar nada.",
       "faqs": [
         {
           "q": "Posso converter uma página da web ao vivo pela URL?",
@@ -705,7 +705,7 @@
       "name": "HEIC para PDF",
       "description": "Converta imagens HEIC da Apple em PDF",
       "seoTitle": "HEIC para PDF — Converter fotos HEIC do iPhone grátis",
-      "metaDescription": "Converta fotos HEIC e HEIF do iPhone e do iPad em PDF. Grátis, no navegador, sem upload. Mantém a qualidade original da imagem.",
+      "metaDescription": "Converta fotos HEIC e HEIF do iPhone e iPad em PDF, um PDF por foto em resolução total. Grátis, no navegador, sem upload.",
       "faqs": [
         {
           "q": "O que é um arquivo HEIC?",
@@ -717,7 +717,7 @@
         },
         {
           "q": "A conversão reduz a qualidade da imagem?",
-          "a": "Não. A imagem HEIC é decodificada e incorporada ao PDF na resolução original. A qualidade visual é mantida."
+          "a": "Muito pouco. Cada foto mantém a resolução total, mas é recodificada como JPEG de alta qualidade (92%) dentro do PDF, porque o PDF não armazena HEIC diretamente. A diferença é difícil de ver."
         }
       ],
       "howTo": {
@@ -748,11 +748,11 @@
         },
         {
           "q": "Converter WebP para PDF reduz a qualidade?",
-          "a": "Não. A imagem WebP é decodificada e incorporada ao PDF na resolução original, sem nova compressão."
+          "a": "Não. Cada WebP é decodificado e guardado sem perdas (como PNG) na resolução total em pixels, centralizado numa página A4 e reduzido só se for maior que a página."
         },
         {
           "q": "Posso converter vários arquivos WebP de uma vez?",
-          "a": "Sim. Selecione várias imagens WebP e elas serão combinadas em um único PDF de várias páginas, com uma imagem por página."
+          "a": "Sim. Selecione várias imagens WebP e cada uma vira um PDF próprio; baixe um a um ou num ZIP. Para um único PDF com várias páginas, use JPG para PDF, que também aceita WebP."
         }
       ],
       "howTo": {
@@ -787,7 +787,7 @@
         },
         {
           "q": "Posso converter vários arquivos TIFF de uma vez?",
-          "a": "Sim. Selecione vários arquivos TIFF e cada um será convertido, com todas as páginas reunidas em um único PDF."
+          "a": "Sim. Selecione vários arquivos TIFF e cada um vira um PDF próprio com todas as suas páginas. Baixe um a um ou num ZIP e use Juntar PDF se quiser um único arquivo."
         }
       ],
       "howTo": {
@@ -822,7 +822,7 @@
         },
         {
           "q": "É grátis?",
-          "a": "Sim. A conversão de SVG para PDF é totalmente gratuita, sem limites, sem marca d'água e sem cadastro."
+          "a": "Sim. A conversão de SVG para PDF é totalmente grátis, sem limite diário, sem marca d'água e sem cadastro."
         }
       ],
       "howTo": {
@@ -880,15 +880,15 @@
       "name": "PDF para JPG",
       "description": "Converta páginas de PDF em imagens JPG",
       "seoTitle": "PDF para JPG — Converter páginas de PDF em imagem grátis",
-      "metaDescription": "Converta páginas de PDF em imagens JPG de alta qualidade. Extraia todas as páginas ou só algumas como imagens. Grátis, sem cadastro, sem marca d'água.",
+      "metaDescription": "Converta cada página de um PDF em imagem JPG ou PNG a 144 ou 216 DPI. Grátis, sem cadastro, sem marca d'água, e o PDF nunca sai do seu navegador.",
       "faqs": [
         {
           "q": "Qual será a resolução das imagens?",
-          "a": "As imagens são extraídas na maior resolução contida no PDF, normalmente entre 150 e 300 DPI, dependendo do original."
+          "a": "As páginas são renderizadas a 144 DPI (Padrão) ou 216 DPI (Alta), seja qual for a origem. Alta dá texto mais nítido e arquivos maiores."
         },
         {
           "q": "Posso converter apenas algumas páginas?",
-          "a": "Sim. Escolha converter todas as páginas ou indique um intervalo para extrair só as páginas de que precisa."
+          "a": "Todas as páginas são convertidas. Para obter só algumas, use antes o Extrair páginas e converta esse arquivo, ou baixe apenas as imagens das páginas de que precisa."
         },
         {
           "q": "Meu PDF é enviado para ser convertido em JPG?",
@@ -1021,7 +1021,7 @@
       "name": "PDF para PDF/A",
       "description": "Converta PDF para o formato de arquivamento PDF/A",
       "seoTitle": "PDF para PDF/A — Converter para o formato de arquivamento",
-      "metaDescription": "Converta arquivos PDF comuns para o formato de arquivamento PDF/A. Garanta a preservação a longo prazo e a conformidade. Conversão grátis no navegador.",
+      "metaDescription": "Transforme um PDF numa cópia de arquivamento marcada como PDF/A-2b nos metadados. Verifique a conformidade estrita com um validador. Grátis, no navegador.",
       "faqs": [
         {
           "q": "O que é PDF/A?",
@@ -1029,7 +1029,7 @@
         },
         {
           "q": "Por que converter para PDF/A?",
-          "a": "Muitos setores exigem PDF/A para a guarda de documentos. O formato garante que as fontes estejam incorporadas, as cores estejam definidas e o documento seja autossuficiente."
+          "a": "Muitos tribunais, arquivos e sistemas de registros pedem PDF/A, que exige fontes incorporadas, cores definidas e nenhuma criptografia. Esta ferramenta copia suas páginas e adiciona a identificação PDF/A; ela não incorpora fontes ausentes nem adiciona perfil de cor."
         },
         {
           "q": "O resultado sempre passa em um validador de PDF/A?",
@@ -1068,7 +1068,7 @@
         },
         {
           "q": "Posso usar o Markdown com o ChatGPT ou outras ferramentas de IA?",
-          "a": "Sim. O Markdown mantém títulos e listas como texto simples, que assistentes de IA e apps de notas leem sem problemas. A conversão em si roda no seu navegador."
+          "a": "Sim. O resultado é texto simples com uma seção por página (## Page 1, ## Page 2 …), que assistentes de IA e apps de notas leem sem problemas. A conversão roda no seu navegador."
         }
       ],
       "howTo": {
@@ -1095,11 +1095,11 @@
       "faqs": [
         {
           "q": "Posso editar qualquer PDF?",
-          "a": "Qualquer PDF criado digitalmente com texto selecionável pode ser editado. PDFs escaneados precisam passar por OCR antes para que o texto fique editável."
+          "a": "Qualquer PDF criado digitalmente com texto selecionável pode ser editado. Um PDF digitalizado é uma imagem do texto, então não há palavras para alterar diretamente."
         },
         {
           "q": "A edição altera a formatação?",
-          "a": "A edição direta mantém a formatação original. Só o texto que você altera é afetado — fontes, espaçamento e layout continuam intactos."
+          "a": "Só o texto que você altera é redesenhado; o resto da página é copiado sem mudanças. O texto editado reutiliza a fonte que o PDF já incorpora sempre que possível; se faltar nessa fonte um caractere que você digitou, usa-se uma fonte padrão parecida, então confira as linhas editadas antes de enviar."
         },
         {
           "q": "Posso editar um PDF digitalizado?",
@@ -1125,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "girar-pdf",
       "name": "Girar PDF",
-      "description": "Gire as páginas do PDF em qualquer ângulo",
-      "seoTitle": "Girar PDF — Girar páginas de PDF em qualquer ângulo",
+      "description": "Gire as páginas de um PDF em 90°, 180° ou 270°",
+      "seoTitle": "Girar PDF — Gire páginas em 90°, 180° ou 270° grátis",
       "metaDescription": "Gire páginas avulsas ou todas as páginas de um PDF. Corrija digitalizações de lado, ajuste a orientação e o ângulo das páginas. Grátis, sem cadastro.",
       "faqs": [
         {
@@ -1163,7 +1163,7 @@
       "name": "Numerar páginas",
       "description": "Insira números de página no seu PDF",
       "seoTitle": "Numerar páginas de PDF — Inserir números de página grátis",
-      "metaDescription": "Adicione números de página ao seu PDF na posição que quiser. Escolha o formato, a posição e o número inicial. Grátis, no navegador, sem upload.",
+      "metaDescription": "Adicione números de página ao PDF em uma de seis posições. Escolha o formato (1, Página 1 ou 1 de N) e o número inicial. Grátis, sem upload.",
       "faqs": [
         {
           "q": "Onde posso colocar os números de página?",
@@ -1171,7 +1171,7 @@
         },
         {
           "q": "Posso pular a numeração da primeira página?",
-          "a": "Sim. Selecione a opção para começar a numerar a partir de uma página específica, como a página 2 ou 3, para pular as capas."
+          "a": "Não diretamente: todas as páginas recebem um número, e \"Começar a numeração em\" só muda o primeiro número. Para deixar uma capa sem número, separe-a com Dividir PDF, numere o resto começando em 2 e junte tudo de novo com Juntar PDF."
         },
         {
           "q": "Meu PDF é enviado para adicionar números de página?",
@@ -1197,7 +1197,7 @@
     "add-watermark": {
       "slug": "marca-dagua-pdf",
       "name": "Marca d'água",
-      "description": "Adicione marcas d'água de texto ou imagem",
+      "description": "Carimbe uma marca d'água de texto em cada página",
       "seoTitle": "Colocar marca d'água em PDF — Ferramenta grátis",
       "metaDescription": "Aplique uma marca d'água de texto, como CONFIDENCIAL ou RASCUNHO, em todas as páginas de um PDF. Ajuste opacidade e tamanho. Grátis, sem cadastro, sem upload.",
       "faqs": [
@@ -1239,11 +1239,11 @@
       "faqs": [
         {
           "q": "Posso cortar todas as páginas de uma vez?",
-          "a": "Sim. Aplique a mesma área de corte a todas as páginas ou defina cortes diferentes para páginas individuais."
+          "a": "Sim — as margens que você define são sempre cortadas de todas as páginas. Cortes diferentes para páginas específicas não são suportados; divida o PDF antes se algumas páginas precisarem de outras margens."
         },
         {
           "q": "Cortar apaga o conteúdo?",
-          "a": "O corte esconde o conteúdo fora da área de corte. O conteúdo escondido não é apagado e pode ser recuperado depois, desfazendo o corte."
+          "a": "Não. Cortar reduz a área visível da página, mas o conteúdo de fora continua no arquivo, e alguns editores podem mostrá-lo de novo. Nunca corte para esconder informações sensíveis — use Tarjar PDF para isso."
         },
         {
           "q": "Posso cortar um PDF no celular?",
@@ -1269,13 +1269,13 @@
     "sign-pdf": {
       "slug": "assinar-pdf",
       "name": "Assinar PDF",
-      "description": "Adicione assinaturas digitais a PDFs",
+      "description": "Coloque num PDF sua assinatura desenhada, digitada ou enviada",
       "seoTitle": "Assinar PDF — Assinatura eletrônica grátis online",
-      "metaDescription": "Adicione assinaturas eletrônicas a documentos PDF. Desenhe, digite ou envie uma imagem da sua assinatura. Com validade jurídica, grátis e sem cadastro.",
+      "metaDescription": "Assine um PDF online: desenhe, digite ou envie sua assinatura e coloque-a em qualquer página. Grátis, sem cadastro, e sua assinatura nunca é enviada a um servidor.",
       "faqs": [
         {
           "q": "Assinaturas eletrônicas têm validade jurídica?",
-          "a": "Sim. Assinaturas eletrônicas têm validade jurídica pela lei ESIGN dos EUA e pelo regulamento eIDAS da UE para praticamente todos os documentos."
+          "a": "Para a maioria dos documentos do dia a dia, sim: leis como a ESIGN Act dos EUA e o eIDAS da UE aceitam assinaturas eletrônicas simples. Esta ferramenta coloca uma imagem da sua assinatura, sem certificado nem trilha de auditoria; por isso, use um serviço de assinatura eletrônica certificado quando for exigida uma assinatura qualificada ou baseada em certificado."
         },
         {
           "q": "Posso assinar um PDF protegido por senha?",
@@ -1351,15 +1351,15 @@
       "name": "Desbloquear PDF",
       "description": "Remova a proteção por senha de um PDF",
       "seoTitle": "Desbloquear PDF — Remover senha de PDF grátis",
-      "metaDescription": "Remova a proteção por senha de documentos PDF. Desbloqueie PDFs criptografados para editar, imprimir ou compartilhar. Grátis e sem cadastro.",
+      "metaDescription": "Remova a senha e as restrições de impressão, cópia ou edição de um PDF que você tem direito de desbloquear. Grátis, sem cadastro, no seu navegador.",
       "faqs": [
         {
           "q": "Preciso da senha para desbloquear um PDF?",
-          "a": "Sim. Você precisa saber a senha atual para removê-la. Não há como contornar a criptografia do PDF sem a senha."
+          "a": "Só se o PDF pedir senha para abrir. Arquivos que abrem normalmente mas bloqueiam impressão, cópia ou edição são desbloqueados sem senha. Uma senha de abertura não pode ser contornada: sem ela, o arquivo continua bloqueado."
         },
         {
           "q": "Desbloquear altera o conteúdo do PDF?",
-          "a": "Não. O desbloqueio só remove a proteção por senha. O conteúdo do documento continua o mesmo."
+          "a": "As páginas ficam com a mesma aparência, mas cada uma é reconstruída como imagem de alta resolução com uma camada de texto invisível: o texto continua pesquisável e copiável, mas deixa de ser editável como texto, e links e campos de formulário não são mantidos. O arquivo também pode ficar maior."
         },
         {
           "q": "É seguro digitar a senha do meu PDF aqui?",
@@ -1403,10 +1403,10 @@
       ],
       "howTo": {
         "title": "Como colocar senha em um PDF",
-        "intro": "Proteger PDF criptografa um PDF com uma senha para abri-lo, uma senha para alterar as permissões, ou as duas — e pode bloquear impressão, cópia ou edição.",
+        "intro": "Proteger PDF criptografa um PDF para que ele peça senha ao abrir, com uma senha de proprietário separada opcional, e pode bloquear impressão, cópia ou edição.",
         "steps": [
           "Escolha seu PDF",
-          "Digite uma senha de abertura, uma senha de proprietário ou as duas",
+          "Digite a senha de abertura e, se quiser, uma senha de proprietário diferente",
           "Se quiser, abra as configurações de permissão para restringir impressão, cópia e edição",
           "Clique em Proteger PDF para baixar o arquivo criptografado"
         ],
@@ -1490,8 +1490,8 @@
     "translate-pdf": {
       "slug": "traduzir-pdf",
       "name": "Traduzir PDF",
-      "description": "Traduza o conteúdo de um PDF para qualquer idioma",
-      "seoTitle": "Traduzir PDF — Traduzir texto de PDF para outro idioma",
+      "description": "Traduza o texto de um PDF para 42 idiomas",
+      "seoTitle": "Traduzir PDF — Traduza o texto de um PDF para 42 idiomas",
       "metaDescription": "Traduza o texto de um PDF para 42 idiomas e baixe como um novo PDF. Grátis, sem cadastro. O texto é enviado para um serviço de tradução.",
       "faqs": [
         {
