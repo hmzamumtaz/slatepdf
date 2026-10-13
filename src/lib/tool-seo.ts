@@ -76,7 +76,7 @@ const toolSeo: Record<string, {
     description: 'Shrink PDF file size by up to 80% without visible quality loss. Free, browser-based compression. No uploads, no watermarks, no sign-up.',
     keywords: ['compress pdf', 'reduce pdf size', 'shrink pdf', 'pdf compressor free', 'compress pdf without losing quality'],
     faqs: [
-      { q: 'Will compressing a PDF reduce its quality?', a: 'At the recommended compression level, images are re-encoded at 150 DPI — visually identical to the original for screen viewing and standard printing.' },
+      { q: 'Will compressing a PDF reduce its quality?', a: 'It depends on the size you ask for. The tool first tries a lossless rebuild that changes nothing visible. If that is not small enough, it redraws each page as an image at the highest resolution that fits your target, with an invisible text layer so the text stays searchable. A generous target looks identical; a very small one looks softer.' },
       { q: 'How much smaller will my PDF get?', a: 'Photo-heavy PDFs shrink 60-80%. Text-only files shrink 10-30%. Scanned documents can shrink up to 90%.' },
       { q: 'Can I compress a password-protected PDF?', a: 'You need to unlock it first. Compression tools cannot read encrypted files until the password is removed.' },
     ],
@@ -170,7 +170,7 @@ const toolSeo: Record<string, {
     description: 'Convert any web page to PDF. Save articles, receipts, and online content as PDF documents. Free, browser-based, no installation.',
     keywords: ['html to pdf', 'web page to pdf', 'convert html to pdf', 'save webpage as pdf'],
     faqs: [
-      { q: 'Can I convert any web page?', a: 'Yes. Enter the URL of any publicly accessible web page and it will be converted to PDF format.' },
+      { q: 'Can I convert a live web page from its URL?', a: 'No. HTML to PDF converts HTML you paste or an .html file you choose. For a live page, use your browser\'s Print > Save as PDF, or save the page as HTML and convert that file here.' },
       { q: 'Will the PDF look like the web page?', a: 'The PDF captures the rendered content of the page. Complex layouts may vary slightly from the original.' },
       { q: 'Do I need to install anything to convert HTML to PDF?', a: 'No. Paste the HTML or choose an .html file and the PDF is created in your browser, with no software, extension or account.' },
     ],
@@ -319,10 +319,10 @@ const toolSeo: Record<string, {
   },
   'protect-pdf': {
     title: 'Protect PDF — Add Password Protection Free',
-    description: 'Add password protection to PDF documents. Encrypt your files with AES-256 encryption. Free, browser-based, no upload required.',
+    description: 'Add a password to a PDF so it can\'t be opened without it. Standard 128-bit PDF encryption, applied in your browser. Free, no sign-up, no upload required.',
     keywords: ['protect pdf', 'password protect pdf', 'encrypt pdf', 'lock pdf', 'pdf password protection'],
     faqs: [
-      { q: 'How strong is PDF password protection?', a: 'Modern PDF encryption uses AES-256, the same standard used by banks and governments. A strong password makes brute-force attacks impractical.' },
+      { q: 'How strong is PDF password protection?', a: 'Slate PDF applies standard 128-bit RC4 PDF encryption, which every PDF reader can open. It stops casual access, but RC4 is an older algorithm: for highly sensitive files use a long, unique password, or a tool that offers AES-256.' },
       { q: 'What happens if I forget the password?', a: 'There is no recovery mechanism. The file is permanently inaccessible without the password. Always store it somewhere safe.' },
       { q: 'Is my PDF uploaded to add a password?', a: 'No. Encryption happens in your browser, so the unprotected file and the password never leave your device.' },
     ],

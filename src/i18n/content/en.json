@@ -338,7 +338,7 @@
       "faqs": [
         {
           "q": "Will compressing a PDF reduce its quality?",
-          "a": "At the recommended compression level, images are re-encoded at 150 DPI — visually identical to the original for screen viewing and standard printing."
+          "a": "It depends on the size you ask for. The tool first tries a lossless rebuild that changes nothing visible. If that is not small enough, it redraws each page as an image at the highest resolution that fits your target, with an invisible text layer so the text stays searchable. A generous target looks identical; a very small one looks softer."
         },
         {
           "q": "How much smaller will my PDF get?",
@@ -672,8 +672,8 @@
       "metaDescription": "Convert any web page to PDF. Save articles, receipts, and online content as PDF documents. Free, browser-based, no installation.",
       "faqs": [
         {
-          "q": "Can I convert any web page?",
-          "a": "Yes. Enter the URL of any publicly accessible web page and it will be converted to PDF format."
+          "q": "Can I convert a live web page from its URL?",
+          "a": "No. HTML to PDF converts HTML you paste or an .html file you choose. For a live page, use your browser's Print > Save as PDF, or save the page as HTML and convert that file here."
         },
         {
           "q": "Will the PDF look like the web page?",
@@ -1386,11 +1386,11 @@
       "name": "Protect PDF",
       "description": "Add password protection to PDF",
       "seoTitle": "Protect PDF — Add Password Protection Free",
-      "metaDescription": "Add password protection to PDF documents. Encrypt your files with AES-256 encryption. Free, browser-based, no upload required.",
+      "metaDescription": "Add a password to a PDF so it can't be opened without it. Standard 128-bit PDF encryption, applied in your browser. Free, no sign-up, no upload required.",
       "faqs": [
         {
           "q": "How strong is PDF password protection?",
-          "a": "Modern PDF encryption uses AES-256, the same standard used by banks and governments. A strong password makes brute-force attacks impractical."
+          "a": "Slate PDF applies standard 128-bit RC4 PDF encryption, which every PDF reader can open. It stops casual access, but RC4 is an older algorithm: for highly sensitive files use a long, unique password, or a tool that offers AES-256."
         },
         {
           "q": "What happens if I forget the password?",
