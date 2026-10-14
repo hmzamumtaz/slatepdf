@@ -64,6 +64,18 @@
     "whyToolHeading": "Warum „{tool}“ hier nutzen?",
     "faqHeading": "{tool} – häufig gestellte Fragen",
     "continueHeading": "Mit einem anderen Tool weitermachen",
+    "glanceHeading": "{tool} auf einen Blick",
+    "glancePrice": "Preis",
+    "glancePriceValue": "Kostenlos, ohne Bezahlversion und ohne Nutzungslimit",
+    "glanceFile": "Ihre Datei",
+    "glanceFileValue": "Wird in Ihrem Browser verarbeitet, nie hochgeladen",
+    "glanceFileTranslate": "Wird in Ihrem Browser gelesen; nur der extrahierte Text geht an einen Übersetzungsdienst",
+    "glanceAccount": "Konto",
+    "glanceAccountValue": "Nicht nötig",
+    "glanceWatermark": "Wasserzeichen",
+    "glanceWatermarkValue": "Ihrer Datei wird keines hinzugefügt",
+    "glanceDevices": "Läuft auf",
+    "glanceDevicesValue": "Jedem modernen Browser unter Windows, Mac, Linux, Android und iPhone",
     "seeAllTools": "Alle {count} PDF-Tools ansehen"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Wird mein Dokument auf einen Server hochgeladen?",
           "a": "Nein. Jeder Schritt läuft in Ihrem Browser. Ihr Dokument verlässt nie Ihr Gerät – damit eignet sich der Arbeitsbereich ideal für vertrauliche und sensible Dokumente."
+        },
+        {
+          "q": "Ist der PDF-Arbeitsbereich kostenlos, und brauche ich ein Konto?",
+          "a": "Er ist kostenlos, ohne Konto, ohne Wasserzeichen und ohne Begrenzung der Anzahl an Dokumenten. Öffnen Sie ein PDF und legen Sie los."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Verschlechtert das Teilen die Qualität?",
           "a": "Nein. Beim Teilen werden ganze Seitenobjekte in neue Dokumente kopiert. Text bleibt markierbar und Bilder behalten ihre ursprüngliche Auflösung."
+        },
+        {
+          "q": "Kann ich ein PDF ohne App auf dem Handy teilen?",
+          "a": "Ja. „PDF teilen“ läuft im Browser auf Android und iPhone, sodass Sie eine Datei teilen können, ohne etwas zu installieren oder sie hochzuladen."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Ist das dasselbe wie Teilen?",
           "a": "Nein. Beim Teilen entstehen aus ausgewählten Seiten separate Dateien. Beim Löschen werden Seiten aus dem Dokument entfernt, der Rest bleibt eine einzige Datei."
+        },
+        {
+          "q": "Ist es sicher, hier Seiten aus einem vertraulichen PDF zu löschen?",
+          "a": "Ja. Die Seiten werden in Ihrem Browser entfernt und die Datei verlässt nie Ihr Gerät, es wird also nichts auf einem Server gespeichert."
         }
       ],
       "howTo": {
@@ -246,7 +270,11 @@
         },
         {
           "q": "Kann ich Seiten in einer anderen Reihenfolge extrahieren?",
-          "a": "Ja. Geben Sie die Seiten in der gewünschten Reihenfolge an. Mit 9, 3, 5 erhalten Sie eine Datei mit den Seiten in genau dieser Abfolge."
+          "a": "Nein. Die Seiten kommen immer in ihrer ursprünglichen Reihenfolge heraus, und eine doppelt angegebene Seite wird nur einmal übernommen – 9, 3, 5 ergibt also die Seiten 3, 5 und 9. Um die Reihenfolge zu ändern, geben Sie das Ergebnis in „PDF-Seiten sortieren“."
+        },
+        {
+          "q": "Ist das Extrahieren von Seiten kostenlos und ohne Wasserzeichen?",
+          "a": "Ja. Das Extrahieren ist kostenlos und ohne Konto möglich, und das neue PDF erhält weder Wasserzeichen noch zusätzliches Branding."
         }
       ],
       "howTo": {
@@ -268,7 +296,7 @@
     "organize-pdf": {
       "slug": "pdf-seiten-sortieren",
       "name": "PDF-Seiten sortieren",
-      "description": "Seiten neu anordnen, drehen und verwalten",
+      "description": "Seiten neu anordnen und nicht benötigte entfernen",
       "seoTitle": "PDF-Seiten sortieren – Seiten neu anordnen (kostenlos)",
       "metaDescription": "PDF-Seiten in beliebige Reihenfolge bringen und unnötige Seiten in einem Schritt entfernen. Kostenlos, ohne Anmeldung – die Datei bleibt im Browser.",
       "faqs": [
@@ -304,17 +332,17 @@
     "compress-pdf": {
       "slug": "pdf-komprimieren",
       "name": "PDF komprimieren",
-      "description": "Dateigröße verringern und Qualität erhalten",
-      "seoTitle": "PDF komprimieren – Dateigröße ohne Qualitätsverlust",
-      "metaDescription": "PDF-Dateigröße um bis zu 80 % verringern, ohne sichtbaren Qualitätsverlust. Kostenlose Komprimierung im Browser. Kein Upload, kein Wasserzeichen.",
+      "description": "Ein PDF auf die gewünschte Dateigröße verkleinern",
+      "seoTitle": "PDF komprimieren – PDF auf die gewünschte Größe bringen",
+      "metaDescription": "Verkleinern Sie ein PDF auf eine Zielgröße in MB oder KB. Zuerst wird ein verlustfreier Neuaufbau versucht; Seiten werden nur bei Bedarf zu Bildern. Kostenlos, ohne Upload.",
       "faqs": [
         {
           "q": "Verschlechtert das Komprimieren die Qualität eines PDFs?",
-          "a": "Auf der empfohlenen Stufe werden Bilder mit 150 DPI neu kodiert – am Bildschirm und beim normalen Drucken optisch nicht vom Original zu unterscheiden."
+          "a": "Das hängt von der gewünschten Größe ab. Das Tool versucht zuerst einen verlustfreien Neuaufbau, der nichts Sichtbares verändert. Reicht das nicht, zeichnet es jede Seite als Bild in der höchsten Auflösung neu, die zu Ihrem Ziel passt – mit einer unsichtbaren Textebene, damit der Text durchsuchbar bleibt. Ein großzügiges Ziel sieht identisch aus, ein sehr kleines wirkt weicher."
         },
         {
           "q": "Wie viel kleiner wird mein PDF?",
-          "a": "Bildlastige PDFs schrumpfen um 60–80 %. Reine Textdateien um 10–30 %. Gescannte Dokumente können um bis zu 90 % kleiner werden."
+          "a": "Das hängt von der Datei ab, daher verspricht das Tool keinen Prozentsatz: Sie legen das Ziel fest. Reicht ein verlustfreier Neuaufbau nicht, werden die Seiten mit schrittweise geringerer Qualität als Bilder neu erzeugt, bis die Datei passt, und das Ergebnis zeigt die tatsächlich erreichte Größe."
         },
         {
           "q": "Kann ich ein passwortgeschütztes PDF komprimieren?",
@@ -340,17 +368,21 @@
     "optimize-pdf": {
       "slug": "pdf-optimieren",
       "name": "PDF optimieren",
-      "description": "PDF für das Web und schnelleres Laden optimieren",
-      "seoTitle": "PDF optimieren – schneller laden und fürs Web",
-      "metaDescription": "PDF-Dateien für das Web und schnelleres Laden optimieren. Renderzeit verkürzen, Ebenen reduzieren und die Dokumentstruktur verschlanken.",
+      "description": "Ein PDF verlustfrei neu packen und so verkleinern",
+      "seoTitle": "PDF optimieren – PDF verlustfrei neu packen (kostenlos)",
+      "metaDescription": "PDF verlustfrei neu packen: komprimierte Objekt-Streams, ungenutzte Objekte und alte Revisionen entfernt, Metadaten optional gelöscht. Text und Bilder bleiben unverändert.",
       "faqs": [
         {
           "q": "Was bewirkt die PDF-Optimierung?",
-          "a": "Die Optimierung entfernt ungenutzte Objekte, reduziert interaktive Ebenen, bettet nur benötigte Schriftzeichen ein und verschlankt die interne Struktur für schnelleres Rendern."
+          "a": "Die Datei wird mit komprimierten Objekt-Streams neu aufgebaut. Dabei fallen ungenutzte Objekte und alte gespeicherte Revisionen weg, und optional werden Metadaten wie Titel und Autor gelöscht. Ebenen werden nicht reduziert, Schriften nicht als Teilmenge eingebettet und Bilder nicht neu kodiert. Bringt das nichts, erhalten Sie Ihre Originaldatei unverändert zurück."
         },
         {
           "q": "Ist Optimieren dasselbe wie Komprimieren?",
-          "a": "Komprimieren verringert die Dateigröße, indem Bilder neu kodiert werden. Optimieren setzt auf strukturelle Verbesserungen, die Laden und Rendern beschleunigen."
+          "a": "Nein. „PDF komprimieren“ arbeitet auf eine Zielgröße hin und kann dafür Seiten in Bilder umwandeln. Die Optimierung packt nur die Dateistruktur verlustfrei neu – die Ersparnis ist meist kleiner, aber nichts Sichtbares ändert sich."
+        },
+        {
+          "q": "Lässt sich ein optimiertes PDF weiterhin in jedem PDF-Reader öffnen?",
+          "a": "Ja. Die Optimierung lässt die Datei ein Standard-PDF bleiben, sie öffnet sich also wie zuvor in Adobe Reader, Browsern, Preview und mobilen Viewern."
         }
       ],
       "howTo": {
@@ -374,7 +406,7 @@
       "name": "PDF reparieren",
       "description": "Beschädigte oder defekte PDF-Dateien reparieren",
       "seoTitle": "PDF reparieren – beschädigte PDF-Dateien wiederherstellen",
-      "metaDescription": "Beschädigte oder defekte PDF-Dateien reparieren. Fehlerhafte Header beheben, lesbare Inhalte retten und Dokumente wiederherstellen. Kostenlos online.",
+      "metaDescription": "Beschädigte PDF-Dateien reparieren: Querverweistabelle und Struktur neu aufbauen oder die Seiten stark beschädigter Dateien retten. Kostenlos, ohne Upload.",
       "faqs": [
         {
           "q": "Warum wird ein PDF beschädigt?",
@@ -383,6 +415,10 @@
         {
           "q": "Kann die Reparatur alle Inhalte wiederherstellen?",
           "a": "Die Reparatur baut die PDF-Struktur neu auf. Wie viel sich retten lässt, hängt davon ab, wie viele der ursprünglichen Daten noch intakt sind."
+        },
+        {
+          "q": "Wird mein beschädigtes PDF zur Reparatur hochgeladen?",
+          "a": "Nein. Die Reparatur läuft in Ihrem Browser, ein beschädigter Vertrag oder Kontoauszug verlässt also nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -405,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Text aus gescannten Dokumenten erkennen",
       "seoTitle": "OCR PDF – Text aus gescannten PDFs erkennen (kostenlos)",
-      "metaDescription": "Gescannte Dokumente per OCR in durchsuchbaren, markierbaren Text umwandeln. Gescannte PDFs durchsuchbar und bearbeitbar machen. Kostenlos, ohne Upload.",
+      "metaDescription": "Gescannte PDFs per OCR durchsuchbar machen: eine unsichtbare Textebene zum Suchen, Markieren und Kopieren. Bis zu 3 von 44 Sprachen. Kostenlos, ohne Upload.",
       "faqs": [
         {
           "q": "Was ist OCR?",
@@ -413,7 +449,11 @@
         },
         {
           "q": "Wie genau ist OCR?",
-          "a": "Die Genauigkeit hängt von der Scanqualität ab. Klare, hochauflösende Scans erreichen typischerweise 95–99 %. Bei schlechten Scans kann es mehr Fehler geben."
+          "a": "Das hängt vom Scan ab. Scharfe, gut ausgeleuchtete, gerade Seiten mit gedrucktem Text werden gut erkannt; geringe Auflösung, Handschrift, Schräglage oder Bildrauschen führen zu mehr Fehlern. Prüfen Sie wichtigen Text am Seitenbild, bevor Sie sich darauf verlassen."
+        },
+        {
+          "q": "Lädt OCR PDF meine Scans hoch?",
+          "a": "Nein. Die Texterkennung und ihre Sprachdaten werden einmalig in Ihren Browser geladen, danach wird jede Seite auf Ihrem eigenen Gerät gelesen."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Kann ich mehrere Bilder zu einem PDF kombinieren?",
           "a": "Ja. Laden Sie alle JPGs, bringen Sie sie in die richtige Reihenfolge und wandeln Sie sie um. Jedes Bild wird zu einer Seite im PDF."
+        },
+        {
+          "q": "Kann ich Fotos auf dem Handy in PDF umwandeln?",
+          "a": "Ja. Öffnen Sie „JPG in PDF“ im Browser Ihres Handys, wählen Sie Fotos aus der Galerie und laden Sie ein einziges PDF herunter. Es wird nichts hochgeladen."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Muss Microsoft Word installiert sein?",
           "a": "Nein. Die Umwandlung erfolgt in Ihrem Browser. Es muss keine Software installiert werden."
+        },
+        {
+          "q": "Wird mein Word-Dokument für die Umwandlung hochgeladen?",
+          "a": "Nein. Die DOCX-Datei wird in Ihrem Browser gelesen und in ein PDF umgewandelt, sie verlässt also nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Kann ich bestimmte Folien umwandeln?",
           "a": "Es wird immer die gesamte Präsentation umgewandelt. Um bestimmte Folien zu erhalten, extrahieren Sie sie nach der Umwandlung mit dem Tool „PDF-Seiten extrahieren“."
+        },
+        {
+          "q": "Wird meine Präsentation für die Umwandlung hochgeladen?",
+          "a": "Nein. Die PPTX-Datei wird in Ihrem Browser umgewandelt und verlässt nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -586,11 +638,15 @@
       "faqs": [
         {
           "q": "Bleiben meine Formeln erhalten?",
-          "a": "Formeln werden berechnet und als Ergebniswerte im PDF gespeichert. Die Formeln selbst bleiben nicht erhalten, da PDF ein statisches Format ist."
+          "a": "Nein. Das PDF zeigt für jede Formel den zuletzt berechneten Wert, der in der Datei gespeichert ist; die Formeln selbst bleiben nicht erhalten. Wurde eine Arbeitsmappe nie neu berechnet (etwa weil ein Skript sie erzeugt hat), öffnen und speichern Sie sie zuerst in Excel."
         },
         {
           "q": "Kann ich bestimmte Arbeitsblätter umwandeln?",
           "a": "Es wird immer die gesamte Arbeitsmappe umgewandelt. Für einzelne Blätter speichern Sie diese gegebenenfalls zuerst als separate Datei."
+        },
+        {
+          "q": "Wird meine Tabelle für die Umwandlung hochgeladen?",
+          "a": "Nein. Die XLSX-Datei wird in Ihrem Browser gelesen und in ein PDF umgewandelt, Finanzdaten verlassen also nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -611,17 +667,21 @@
     "html-to-pdf": {
       "slug": "html-in-pdf",
       "name": "HTML in PDF",
-      "description": "Webseiten in PDF umwandeln",
+      "description": "HTML-Code oder .html-Dateien in PDF umwandeln",
       "seoTitle": "HTML in PDF umwandeln – Webseiten als PDF (kostenlos)",
-      "metaDescription": "Webseiten in PDF umwandeln. Artikel, Belege und Online-Inhalte als PDF-Dokument speichern. Kostenlos, im Browser, ohne Installation.",
+      "metaDescription": "Eingefügtes HTML oder eine .html-Datei in PDF umwandeln – als originalgetreue Kopie oder mit markierbarem Text. Kostenlos, im Browser, ohne Installation.",
       "faqs": [
         {
-          "q": "Kann ich jede Webseite umwandeln?",
-          "a": "Ja. Geben Sie die URL einer öffentlich zugänglichen Webseite ein, und sie wird in das PDF-Format umgewandelt."
+          "q": "Kann ich eine Live-Webseite über ihre URL umwandeln?",
+          "a": "Nein. HTML in PDF wandelt HTML um, das Sie einfügen, oder eine .html-Datei, die Sie auswählen. Für eine Live-Seite nutzen Sie in Ihrem Browser Drucken > Als PDF speichern, oder speichern Sie die Seite als HTML und wandeln Sie diese Datei hier um."
         },
         {
           "q": "Sieht das PDF aus wie die Webseite?",
           "a": "Das PDF erfasst den gerenderten Inhalt der Seite. Komplexe Layouts können leicht vom Original abweichen."
+        },
+        {
+          "q": "Muss ich etwas installieren, um HTML in PDF umzuwandeln?",
+          "a": "Nein. Fügen Sie das HTML ein oder wählen Sie eine .html-Datei, und das PDF wird in Ihrem Browser erstellt – ohne Software, Erweiterung oder Konto."
         }
       ],
       "howTo": {
@@ -645,7 +705,7 @@
       "name": "HEIC in PDF",
       "description": "Apple-HEIC-Bilder in PDF umwandeln",
       "seoTitle": "HEIC in PDF umwandeln – iPhone-Fotos als PDF",
-      "metaDescription": "HEIC- und HEIF-Fotos von iPhone und iPad in PDF-Dokumente umwandeln. Kostenlos, im Browser, ohne Upload. Die ursprüngliche Bildqualität bleibt erhalten.",
+      "metaDescription": "HEIC- und HEIF-Fotos von iPhone und iPad in PDF umwandeln, ein PDF pro Foto in voller Auflösung. Kostenlos, im Browser, ohne Upload.",
       "faqs": [
         {
           "q": "Was ist eine HEIC-Datei?",
@@ -657,7 +717,7 @@
         },
         {
           "q": "Verschlechtert die Umwandlung die Bildqualität?",
-          "a": "Nein. Das HEIC-Bild wird dekodiert und in seiner Originalauflösung in das PDF eingebettet. Die Bildqualität bleibt erhalten."
+          "a": "Kaum. Jedes Foto behält seine volle Auflösung, wird im PDF aber als hochwertiges JPEG (92 %) neu kodiert, weil PDF kein HEIC direkt speichern kann. Der Unterschied ist kaum zu sehen."
         }
       ],
       "howTo": {
@@ -688,11 +748,11 @@
         },
         {
           "q": "Verschlechtert die Umwandlung von WebP in PDF die Qualität?",
-          "a": "Nein. Das WebP-Bild wird dekodiert und ohne erneute Komprimierung in seiner Originalauflösung in das PDF eingebettet."
+          "a": "Nein. Jedes WebP wird dekodiert und verlustfrei (als PNG) in voller Pixelauflösung gespeichert, mittig auf eine A4-Seite gesetzt und nur verkleinert, wenn es größer als die Seite ist."
         },
         {
           "q": "Kann ich mehrere WebP-Dateien auf einmal umwandeln?",
-          "a": "Ja. Wählen Sie mehrere WebP-Bilder aus, und sie werden zu einem mehrseitigen PDF mit einem Bild pro Seite zusammengefügt."
+          "a": "Ja. Wählen Sie mehrere WebP-Bilder aus – jedes wird zu einem eigenen PDF, einzeln oder als ZIP herunterladbar. Für ein einziges mehrseitiges PDF nutzen Sie „JPG in PDF“, das auch WebP annimmt."
         }
       ],
       "howTo": {
@@ -727,7 +787,7 @@
         },
         {
           "q": "Kann ich mehrere TIFF-Dateien auf einmal umwandeln?",
-          "a": "Ja. Wählen Sie mehrere TIFF-Dateien aus; jede wird umgewandelt, und alle Seiten werden zu einem einzigen PDF zusammengefügt."
+          "a": "Ja. Wählen Sie mehrere TIFF-Dateien aus – jede wird zu einem eigenen PDF mit all ihren Seiten. Laden Sie sie einzeln oder als ZIP herunter und nutzen Sie „PDF zusammenfügen“, wenn Sie eine einzige Datei möchten."
         }
       ],
       "howTo": {
@@ -762,7 +822,7 @@
         },
         {
           "q": "Ist die Nutzung kostenlos?",
-          "a": "Ja. Die Umwandlung von SVG in PDF ist völlig kostenlos – ohne Limits, ohne Wasserzeichen und ohne Anmeldung."
+          "a": "Ja. Die Umwandlung von SVG in PDF ist völlig kostenlos, ohne Tageslimit, ohne Wasserzeichen und ohne Anmeldung."
         }
       ],
       "howTo": {
@@ -820,15 +880,19 @@
       "name": "PDF in JPG",
       "description": "PDF-Seiten in JPG-Bilder umwandeln",
       "seoTitle": "PDF in JPG umwandeln – PDF-Seiten als Bild (kostenlos)",
-      "metaDescription": "PDF-Seiten in hochwertige JPG-Bilder umwandeln. Alle oder ausgewählte Seiten als Bild speichern. Kostenlos, ohne Anmeldung, ohne Wasserzeichen.",
+      "metaDescription": "Jede Seite eines PDFs als JPG- oder PNG-Bild mit 144 oder 216 DPI speichern. Kostenlos, ohne Anmeldung, ohne Wasserzeichen – das PDF verlässt nie Ihren Browser.",
       "faqs": [
         {
           "q": "Welche Auflösung haben die Bilder?",
-          "a": "Die Bilder werden in der höchsten im PDF enthaltenen Auflösung extrahiert, je nach Quelle typischerweise 150–300 DPI."
+          "a": "Die Seiten werden mit 144 DPI (Standard) oder 216 DPI (Hoch) gerendert, unabhängig von der Quelle. Hoch liefert schärferen Text und größere Dateien."
         },
         {
           "q": "Kann ich bestimmte Seiten umwandeln?",
-          "a": "Ja. Wandeln Sie alle Seiten um oder geben Sie einen Seitenbereich an, um nur die benötigten Seiten zu extrahieren."
+          "a": "Es werden alle Seiten umgewandelt. Wenn Sie nur einige brauchen, nutzen Sie zuerst „PDF-Seiten extrahieren“ und wandeln diese Datei um – oder laden Sie nur die benötigten Seitenbilder herunter."
+        },
+        {
+          "q": "Wird mein PDF für die Umwandlung in JPG hochgeladen?",
+          "a": "Nein. Jede Seite wird in Ihrem Browser als Bild gerendert, das PDF verlässt also nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Funktioniert das mit gescannten PDFs?",
           "a": "Bei gescannten PDFs muss der Text zuerst per OCR erkannt werden. Führen Sie OCR aus und wandeln Sie das Ergebnis dann in Word um, um die besten Ergebnisse zu erzielen."
+        },
+        {
+          "q": "Wird mein PDF für die Umwandlung in Word hochgeladen?",
+          "a": "Nein. Der Text wird in Ihrem Browser extrahiert und die DOCX-Datei dort erstellt, das PDF verlässt also nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Kann ich die erzeugten Folien bearbeiten?",
           "a": "Ja. Das Ergebnis ist eine normale PPTX-Datei, die Sie in jeder PowerPoint-kompatiblen Anwendung bearbeiten können."
+        },
+        {
+          "q": "Wird mein PDF für die Umwandlung in PowerPoint hochgeladen?",
+          "a": "Nein. Die Folien werden in Ihrem Browser erstellt, das PDF verlässt also nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -949,7 +1021,7 @@
       "name": "PDF in PDF/A",
       "description": "PDF in das Archivformat PDF/A umwandeln",
       "seoTitle": "PDF in PDF/A umwandeln – Archivformat (kostenlos)",
-      "metaDescription": "Normale PDF-Dateien in das Archivformat PDF/A umwandeln – für langfristige Aufbewahrung und Vorgaben. Kostenlose Umwandlung im Browser.",
+      "metaDescription": "Ein PDF in eine Archivkopie umwandeln, die in den Metadaten als PDF/A-2b gekennzeichnet ist. Strenge Konformität mit einem Validator prüfen. Kostenlos, im Browser.",
       "faqs": [
         {
           "q": "Was ist PDF/A?",
@@ -957,7 +1029,11 @@
         },
         {
           "q": "Warum sollte ich in PDF/A umwandeln?",
-          "a": "Viele Branchen schreiben PDF/A für die Aufbewahrung von Dokumenten vor. Das Format stellt sicher, dass Schriftarten eingebettet, Farben definiert und das Dokument in sich geschlossen ist."
+          "a": "Viele Gerichte, Archive und Ablagesysteme verlangen PDF/A, das eingebettete Schriften, definierte Farben und keine Verschlüsselung voraussetzt. Dieses Tool kopiert Ihre Seiten und ergänzt die PDF/A-Kennung; fehlende Schriften bettet es nicht ein und fügt kein Farbprofil hinzu."
+        },
+        {
+          "q": "Besteht das Ergebnis garantiert eine PDF/A-Prüfung?",
+          "a": "Nicht immer. Das Tool fügt die PDF/A-Kennzeichnung in den Metadaten hinzu, doch eine Quelldatei mit fehlenden Schriften oder Transparenzen kann strenge Prüfungen trotzdem nicht bestehen. Wenn ein Archiv es verlangt, prüfen Sie die Datei mit einem Validator wie veraPDF."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Kann ich bestimmte Seiten umwandeln?",
           "a": "Es wird immer das ganze Dokument umgewandelt. Um nur einige Seiten umzuwandeln, nutzen Sie zuerst „PDF-Seiten extrahieren“ und wandeln dann diese Datei um."
+        },
+        {
+          "q": "Kann ich das Markdown mit ChatGPT oder anderen KI-Tools nutzen?",
+          "a": "Ja. Das Ergebnis ist reiner Text mit einem Abschnitt pro Seite (## Page 1, ## Page 2 …), den KI-Assistenten und Notiz-Apps sauber lesen. Die Umwandlung läuft in Ihrem Browser."
         }
       ],
       "howTo": {
@@ -1015,11 +1095,15 @@
       "faqs": [
         {
           "q": "Kann ich jedes PDF bearbeiten?",
-          "a": "Jedes digital erstellte PDF mit markierbarem Text lässt sich bearbeiten. Gescannte PDFs brauchen zuerst OCR, damit der Text bearbeitbar wird."
+          "a": "Jedes digital erstellte PDF mit markierbarem Text lässt sich bearbeiten. Ein gescanntes PDF ist ein Bild des Textes, daher gibt es dort keine Wörter, die man direkt ändern könnte."
         },
         {
           "q": "Verändert das Bearbeiten die Formatierung?",
-          "a": "Die direkte Bearbeitung behält die ursprüngliche Formatierung bei. Nur der Text, den Sie ändern, ist betroffen – Schriftarten, Abstände und Layout bleiben erhalten."
+          "a": "Nur der Text, den Sie ändern, wird neu gezeichnet; der Rest der Seite wird unverändert übernommen. Geänderter Text nutzt nach Möglichkeit die bereits im PDF eingebettete Schrift; fehlt darin ein Zeichen, das Sie tippen, wird eine ähnliche Standardschrift verwendet – prüfen Sie geänderte Zeilen daher vor dem Versenden."
+        },
+        {
+          "q": "Kann ich ein gescanntes PDF bearbeiten?",
+          "a": "Nicht direkt. Ein Scan ist ein Bild des Textes, es gibt also keine Wörter, die sich direkt ändern lassen. Machen Sie es mit OCR PDF durchsuchbar, kopieren Sie den Text heraus und bearbeiten Sie ihn dann in einer Textverarbeitung."
         }
       ],
       "howTo": {
@@ -1041,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "pdf-drehen",
       "name": "PDF drehen",
-      "description": "PDF-Seiten in jedem Winkel drehen",
-      "seoTitle": "PDF drehen – PDF-Seiten drehen und speichern",
+      "description": "PDF-Seiten um 90°, 180° oder 270° drehen",
+      "seoTitle": "PDF drehen – Seiten um 90°, 180° oder 270° drehen",
       "metaDescription": "Einzelne oder alle Seiten eines PDFs drehen. Seitlich gescannte Seiten korrigieren und die Ausrichtung anpassen. Kostenlos, ohne Anmeldung.",
       "faqs": [
         {
@@ -1052,6 +1136,10 @@
         {
           "q": "Beeinflusst das Drehen die Druckqualität?",
           "a": "Nein. Die Drehung ist eine Metadatenänderung, die dem Anzeigeprogramm sagt, wie die Seite dargestellt werden soll. Der Inhalt wird nicht neu gerendert."
+        },
+        {
+          "q": "Ist die Drehung dauerhaft?",
+          "a": "Ja. Die neue Ausrichtung wird im heruntergeladenen PDF gespeichert, es öffnet sich also in jedem Viewer richtig herum."
         }
       ],
       "howTo": {
@@ -1075,7 +1163,7 @@
       "name": "Seitenzahlen einfügen",
       "description": "Seitenzahlen in Ihr PDF einfügen",
       "seoTitle": "PDF Seitenzahlen einfügen – kostenlos, ohne Upload",
-      "metaDescription": "Seitenzahlen an beliebiger Position in Ihr PDF einfügen. Format, Position und Startnummer frei wählbar. Kostenlos, im Browser, ohne Upload.",
+      "metaDescription": "Seitenzahlen in einer von sechs Positionen ins PDF einfügen. Format (1, Seite 1 oder 1 von N) und Startnummer wählen. Kostenlos, ohne Upload.",
       "faqs": [
         {
           "q": "Wo kann ich Seitenzahlen platzieren?",
@@ -1083,7 +1171,11 @@
         },
         {
           "q": "Kann ich die erste Seite von der Nummerierung ausnehmen?",
-          "a": "Ja. Wählen Sie die Option, die Nummerierung ab einer bestimmten Seite zu beginnen, etwa ab Seite 2 oder 3, um Deckblätter auszulassen."
+          "a": "Nicht direkt: Jede Seite erhält eine Nummer, und „Nummerierung beginnt bei“ ändert nur die erste Zahl. Damit ein Deckblatt ohne Nummer bleibt, trennen Sie es mit „PDF teilen“ ab, nummerieren den Rest ab 2 und fügen beides mit „PDF zusammenfügen“ wieder zusammen."
+        },
+        {
+          "q": "Wird mein PDF zum Hinzufügen von Seitenzahlen hochgeladen?",
+          "a": "Nein. Die Zahlen werden in Ihrem Browser auf die Seiten gezeichnet, die Datei verlässt also nie Ihr Gerät."
         }
       ],
       "howTo": {
@@ -1105,7 +1197,7 @@
     "add-watermark": {
       "slug": "pdf-wasserzeichen-einfuegen",
       "name": "Wasserzeichen einfügen",
-      "description": "Text- oder Bild-Wasserzeichen hinzufügen",
+      "description": "Ein Text-Wasserzeichen auf jede Seite stempeln",
       "seoTitle": "PDF Wasserzeichen einfügen – Text-Wasserzeichen gratis",
       "metaDescription": "Ein Text-Wasserzeichen wie VERTRAULICH oder ENTWURF auf jede Seite eines PDFs stempeln. Deckkraft und Größe einstellen. Kostenlos, ohne Anmeldung und Upload.",
       "faqs": [
@@ -1116,6 +1208,10 @@
         {
           "q": "Kann ich alle Seiten auf einmal mit einem Wasserzeichen versehen?",
           "a": "Ja. Das Wasserzeichen wird gleichzeitig auf alle Seiten des Dokuments angewendet."
+        },
+        {
+          "q": "Lässt sich ein Wasserzeichen später entfernen?",
+          "a": "Ein Text-Wasserzeichen wird in den Seiteninhalt gezeichnet und lässt sich daher nicht wie ein Kommentar ausblenden. Mit Bearbeitungssoftware kann es aber überdeckt werden – sehen Sie es also als Abschreckung, nicht als Schutz."
         }
       ],
       "howTo": {
@@ -1143,11 +1239,15 @@
       "faqs": [
         {
           "q": "Kann ich alle Seiten auf einmal zuschneiden?",
-          "a": "Ja. Wenden Sie denselben Zuschnitt auf jede Seite an oder legen Sie für einzelne Seiten unterschiedliche Zuschnitte fest."
+          "a": "Ja – die eingestellten Ränder werden immer von allen Seiten abgeschnitten. Unterschiedliche Zuschnitte für einzelne Seiten sind nicht möglich; teilen Sie das PDF vorher, wenn manche Seiten andere Ränder brauchen."
         },
         {
           "q": "Löscht das Zuschneiden Inhalte?",
-          "a": "Beim Zuschneiden wird der Inhalt außerhalb des Zuschnittbereichs ausgeblendet. Der ausgeblendete Inhalt wird nicht gelöscht und kann später wieder sichtbar gemacht werden."
+          "a": "Nein. Zuschneiden verkleinert den sichtbaren Seitenbereich, der Inhalt außerhalb bleibt aber in der Datei, und manche Editoren können ihn wieder sichtbar machen. Schneiden Sie nie zu, um vertrauliche Informationen zu verbergen – nutzen Sie dafür „PDF schwärzen“."
+        },
+        {
+          "q": "Kann ich ein PDF auf dem Handy zuschneiden?",
+          "a": "Ja. „PDF zuschneiden“ läuft im Browser Ihres Handys, sodass Sie Ränder entfernen können, ohne eine App zu installieren oder die Datei hochzuladen."
         }
       ],
       "howTo": {
@@ -1169,17 +1269,21 @@
     "sign-pdf": {
       "slug": "pdf-unterschreiben",
       "name": "PDF unterschreiben",
-      "description": "PDFs digital unterschreiben",
+      "description": "Ihre gezeichnete, getippte oder hochgeladene Unterschrift auf ein PDF setzen",
       "seoTitle": "PDF unterschreiben – elektronisch signieren (kostenlos)",
-      "metaDescription": "PDF-Dokumente elektronisch unterschreiben. Unterschrift zeichnen, tippen oder als Bild hochladen. Rechtsgültig, kostenlos, ohne Anmeldung.",
+      "metaDescription": "PDF online unterschreiben: Unterschrift zeichnen, tippen oder als Bild laden und auf eine beliebige Seite setzen. Kostenlos, ohne Anmeldung, die Unterschrift wird nie hochgeladen.",
       "faqs": [
         {
           "q": "Sind elektronische Unterschriften rechtsgültig?",
-          "a": "Ja. Elektronische Unterschriften sind nach dem US-amerikanischen ESIGN Act und der EU-Verordnung eIDAS für praktisch alle Dokumente rechtsgültig."
+          "a": "Für die meisten Alltagsdokumente ja: Gesetze wie der US-amerikanische ESIGN Act und die EU-Verordnung eIDAS erkennen einfache elektronische Signaturen an. Dieses Tool setzt ein Bild Ihrer Unterschrift ohne Zertifikat oder Prüfprotokoll – nutzen Sie daher einen zertifizierten E-Signatur-Dienst, wenn eine qualifizierte oder zertifikatsbasierte Signatur verlangt wird."
         },
         {
           "q": "Kann ich ein passwortgeschütztes PDF unterschreiben?",
           "a": "Sie müssen es zuerst entsperren. Passwortgeschützte PDFs können erst bearbeitet werden, wenn das Passwort entfernt ist."
+        },
+        {
+          "q": "Wie erstelle ich meine Unterschrift?",
+          "a": "Zeichnen Sie sie mit der Maus oder dem Finger, tippen Sie Ihren Namen in einer Handschrift-Schriftart oder laden Sie ein Foto Ihrer echten Unterschrift hoch. Sie wird in Ihrem Browser auf der Seite platziert und nie auf einem Server gespeichert."
         }
       ],
       "howTo": {
@@ -1247,15 +1351,19 @@
       "name": "PDF entsperren",
       "description": "Passwortschutz von einem PDF entfernen",
       "seoTitle": "PDF entsperren – Passwortschutz entfernen (kostenlos)",
-      "metaDescription": "Passwortschutz von PDF-Dokumenten entfernen. Verschlüsselte PDFs zum Bearbeiten, Drucken oder Teilen entsperren. Kostenlos, ohne Anmeldung.",
+      "metaDescription": "Passwort sowie Druck-, Kopier- und Bearbeitungssperren aus einem PDF entfernen, das Sie entsperren dürfen. Kostenlos, ohne Anmeldung, direkt im Browser.",
       "faqs": [
         {
           "q": "Brauche ich das Passwort, um ein PDF zu entsperren?",
-          "a": "Ja. Sie müssen das aktuelle Passwort kennen, um es zu entfernen. Ohne das Passwort lässt sich die PDF-Verschlüsselung nicht umgehen."
+          "a": "Nur wenn das PDF zum Öffnen ein Passwort verlangt. Dateien, die sich frei öffnen lassen, aber Drucken, Kopieren oder Bearbeiten sperren, werden ohne Passwort entsperrt. Ein Öffnungspasswort lässt sich nicht umgehen: Ohne es bleibt die Datei gesperrt."
         },
         {
           "q": "Verändert das Entsperren den Inhalt des PDFs?",
-          "a": "Nein. Beim Entsperren wird nur der Passwortschutz entfernt. Der Inhalt des Dokuments bleibt unverändert."
+          "a": "Die Seiten sehen gleich aus, aber jede wird als hochauflösendes Bild mit unsichtbarer Textebene neu aufgebaut: Der Text bleibt durchsuchbar und kopierbar, lässt sich aber nicht mehr als Text bearbeiten, und Links sowie Formularfelder gehen verloren. Die Datei kann außerdem größer werden."
+        },
+        {
+          "q": "Ist es sicher, hier das Passwort meines PDFs einzugeben?",
+          "a": "Ja. Passwort und Datei bleiben in Ihrem Browser und werden nie an einen Server gesendet."
         }
       ],
       "howTo": {
@@ -1278,23 +1386,27 @@
       "name": "PDF schützen",
       "description": "Ein PDF mit Passwort schützen",
       "seoTitle": "PDF mit Passwort schützen – kostenlos, ohne Upload",
-      "metaDescription": "PDF-Dokumente mit einem Passwort schützen. Verschlüsseln Sie Ihre Dateien mit AES-256. Kostenlos, im Browser, ohne Upload.",
+      "metaDescription": "Schützen Sie ein PDF mit einem Passwort, ohne das es sich nicht öffnen lässt. Standard-128-Bit-Verschlüsselung im Browser. Kostenlos, ohne Konto und Upload.",
       "faqs": [
         {
           "q": "Wie sicher ist der PDF-Passwortschutz?",
-          "a": "Moderne PDF-Verschlüsselung nutzt AES-256, denselben Standard, den Banken und Behörden verwenden. Ein starkes Passwort macht Brute-Force-Angriffe praktisch aussichtslos."
+          "a": "Slate PDF verwendet die standardmäßige 128-Bit-RC4-PDF-Verschlüsselung, die jeder PDF-Reader öffnen kann. Sie verhindert gelegentlichen Zugriff, doch RC4 ist ein älterer Algorithmus: Für hochsensible Dateien nutzen Sie ein langes, einzigartiges Passwort oder ein Tool, das AES-256 bietet."
         },
         {
           "q": "Was passiert, wenn ich das Passwort vergesse?",
           "a": "Es gibt keine Wiederherstellungsmöglichkeit. Ohne das Passwort ist die Datei dauerhaft unzugänglich. Bewahren Sie es immer an einem sicheren Ort auf."
+        },
+        {
+          "q": "Wird mein PDF hochgeladen, um ein Passwort hinzuzufügen?",
+          "a": "Nein. Die Verschlüsselung erfolgt in Ihrem Browser, die ungeschützte Datei und das Passwort verlassen also nie Ihr Gerät."
         }
       ],
       "howTo": {
         "title": "PDF mit Passwort schützen – so geht's",
-        "intro": "„PDF schützen“ verschlüsselt ein PDF mit einem Passwort zum Öffnen, einem Passwort zum Ändern der Berechtigungen oder beidem – und kann Drucken, Kopieren oder Bearbeiten sperren.",
+        "intro": "„PDF schützen“ verschlüsselt ein PDF, sodass es zum Öffnen ein Passwort verlangt, optional mit einem separaten Besitzerpasswort, und kann Drucken, Kopieren oder Bearbeiten sperren.",
         "steps": [
           "Wählen Sie Ihr PDF aus",
-          "Geben Sie ein Öffnungspasswort, ein Besitzerpasswort oder beide ein",
+          "Geben Sie das Öffnungspasswort und optional ein anderes Besitzerpasswort ein",
           "Öffnen Sie bei Bedarf die Berechtigungseinstellungen, um Drucken, Kopieren und Bearbeiten einzuschränken",
           "Klicken Sie auf PDF schützen, um die verschlüsselte Datei herunterzuladen"
         ],
@@ -1319,6 +1431,10 @@
         {
           "q": "Kann ich gescannte PDFs vergleichen?",
           "a": "Führen Sie zuerst bei beiden Scans „OCR PDF“ aus. Der Vergleich arbeitet mit dem Text in den Dateien, reine Bild-Scans bieten also nichts zum Vergleichen."
+        },
+        {
+          "q": "Werden beide PDFs für den Vergleich hochgeladen?",
+          "a": "Nein. Beide Dateien werden in Ihrem Browser gelesen und verglichen, keine von beiden verlässt Ihr Gerät."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Wird mein Dokument an einen Server gesendet?",
           "a": "Nein. Die Zusammenfassung wird in Ihrem Browser berechnet, und das PDF verlässt nie Ihr Gerät."
+        },
+        {
+          "q": "Kann es ein gescanntes PDF zusammenfassen?",
+          "a": "Nicht direkt. Ein gescanntes PDF hat keine Textebene, die gelesen werden kann. Lassen Sie es zuerst durch OCR PDF laufen und fassen Sie dann das durchsuchbare Ergebnis zusammen."
         }
       ],
       "howTo": {
@@ -1370,7 +1490,7 @@
     "translate-pdf": {
       "slug": "pdf-uebersetzen",
       "name": "PDF übersetzen",
-      "description": "PDF-Inhalte in eine andere Sprache übersetzen",
+      "description": "PDF-Text in 42 Sprachen übersetzen",
       "seoTitle": "PDF übersetzen – PDF-Text in 42 Sprachen übersetzen",
       "metaDescription": "Den Text eines PDFs in 42 Sprachen übersetzen und als neues PDF herunterladen. Kostenlos, ohne Anmeldung. Der Text wird an einen Übersetzungsdienst gesendet.",
       "faqs": [

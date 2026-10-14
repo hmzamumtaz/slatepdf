@@ -64,6 +64,18 @@
     "whyToolHeading": "Mengapa guna {tool} di sini?",
     "faqHeading": "{tool} — soalan lazim",
     "continueHeading": "Teruskan dengan alat lain",
+    "glanceHeading": "{tool} secara ringkas",
+    "glancePrice": "Harga",
+    "glancePriceValue": "Percuma, tanpa pelan berbayar dan tanpa had penggunaan",
+    "glanceFile": "Fail anda",
+    "glanceFileValue": "Diproses dalam pelayar anda, tidak pernah dimuat naik",
+    "glanceFileTranslate": "Dibaca dalam pelayar anda; hanya teks yang diekstrak dihantar kepada perkhidmatan terjemahan",
+    "glanceAccount": "Akaun",
+    "glanceAccountValue": "Tidak diperlukan",
+    "glanceWatermark": "Tera air",
+    "glanceWatermarkValue": "Tiada yang ditambah pada fail anda",
+    "glanceDevices": "Berfungsi pada",
+    "glanceDevicesValue": "Mana-mana pelayar moden pada Windows, Mac, Linux, Android dan iPhone",
     "seeAllTools": "Lihat kesemua {count} alat PDF"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Adakah dokumen saya dimuat naik ke pelayan?",
           "a": "Tidak. Setiap tindakan berjalan dalam pelayar anda. Dokumen anda tidak pernah meninggalkan peranti anda, jadi ruang kerja ini sesuai untuk kerja sulit dan sensitif."
+        },
+        {
+          "q": "Adakah Ruang Kerja PDF percuma, dan perlukah saya akaun?",
+          "a": "Ia percuma tanpa akaun, tanpa tera air dan tanpa had bilangan dokumen yang anda usahakan. Buka PDF dan mula mengedit."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Adakah memisah PDF mengurangkan kualiti?",
           "a": "Tidak. Pemisahan menyalin keseluruhan objek halaman ke dalam dokumen baharu. Teks kekal boleh dipilih dan imej mengekalkan resolusi asalnya."
+        },
+        {
+          "q": "Bolehkah saya memisahkan PDF pada telefon tanpa aplikasi?",
+          "a": "Boleh. Pisah PDF berjalan dalam pelayar pada Android dan iPhone, jadi anda boleh memisahkan fail tanpa memasang apa-apa atau memuat naiknya."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Adakah ini sama dengan memisah PDF?",
           "a": "Tidak. Pemisahan mencipta fail berasingan daripada halaman yang dipilih. Pemadaman membuang halaman daripada dokumen dan mengekalkan selebihnya sebagai satu fail."
+        },
+        {
+          "q": "Adakah selamat untuk memadam halaman daripada PDF sulit di sini?",
+          "a": "Ya. Halaman dibuang dalam pelayar anda dan fail tidak pernah meninggalkan peranti anda, jadi tiada apa-apa disimpan pada pelayan."
         }
       ],
       "howTo": {
@@ -246,7 +270,11 @@
         },
         {
           "q": "Bolehkah saya mengekstrak halaman dalam susunan berbeza?",
-          "a": "Boleh. Senaraikan halaman mengikut susunan yang anda mahu. Memasukkan 9, 3, 5 menghasilkan fail dengan halaman dalam urutan itu."
+          "a": "Tidak. Halaman sentiasa keluar mengikut susunan asal, dan halaman yang disenaraikan dua kali hanya dimasukkan sekali, jadi 9, 3, 5 menghasilkan halaman 3, 5 dan 9. Untuk menukar susunan, proses hasilnya melalui Susun PDF."
+        },
+        {
+          "q": "Adakah pengekstrakan halaman percuma, tanpa tera air?",
+          "a": "Ya. Pengekstrakan adalah percuma tanpa akaun, dan PDF baharu tidak mengandungi tera air atau penjenamaan tambahan."
         }
       ],
       "howTo": {
@@ -268,7 +296,7 @@
     "organize-pdf": {
       "slug": "susun-pdf",
       "name": "Susun PDF",
-      "description": "Susun semula, putar dan urus halaman",
+      "description": "Susun semula halaman dan buang yang anda tidak perlukan",
       "seoTitle": "Susun PDF — Susun Semula & Buang Halaman Percuma",
       "metaDescription": "Susun halaman PDF mengikut sebarang urutan dan buang yang tidak diperlukan, dalam satu langkah. Percuma, tanpa daftar, fail tidak meninggalkan pelayar anda.",
       "faqs": [
@@ -304,17 +332,17 @@
     "compress-pdf": {
       "slug": "mampat-pdf",
       "name": "Mampatkan PDF",
-      "description": "Kecilkan saiz fail sambil mengekalkan kualiti",
-      "seoTitle": "Mampatkan PDF — Kecilkan Saiz Fail Tanpa Hilang Kualiti",
-      "metaDescription": "Kecilkan saiz fail PDF sehingga 80% tanpa kehilangan kualiti yang ketara. Pemampatan percuma dalam pelayar. Tanpa muat naik, tanpa tera air, tanpa daftar.",
+      "description": "Kecilkan PDF kepada saiz fail yang anda perlukan",
+      "seoTitle": "Mampatkan PDF — Kecilkan PDF kepada Saiz yang Diperlukan",
+      "metaDescription": "Kecilkan PDF kepada saiz sasaran dalam MB atau KB. Binaan semula tanpa kehilangan kualiti dicuba dahulu; halaman jadi imej hanya jika perlu. Percuma, tanpa muat naik.",
       "faqs": [
         {
           "q": "Adakah memampatkan PDF akan mengurangkan kualitinya?",
-          "a": "Pada tahap pemampatan yang disyorkan, imej dikod semula pada 150 DPI — kelihatan sama seperti asal untuk paparan skrin dan cetakan biasa."
+          "a": "Ia bergantung pada saiz yang anda minta. Alat ini mula-mula mencuba binaan semula tanpa kehilangan yang tidak mengubah apa-apa yang kelihatan. Jika belum cukup kecil, ia melukis semula setiap halaman sebagai imej pada resolusi tertinggi yang muat dalam sasaran anda, dengan lapisan teks halimunan supaya teks kekal boleh dicari. Sasaran yang longgar kelihatan sama; sasaran yang sangat kecil kelihatan lebih kabur."
         },
         {
           "q": "Berapa kecil PDF saya akan menjadi?",
-          "a": "PDF yang banyak gambar mengecil 60-80%. Fail teks sahaja mengecil 10-30%. Dokumen imbasan boleh mengecil sehingga 90%."
+          "a": "Ia bergantung pada fail, jadi alat ini tidak menjanjikan sebarang peratusan: anda yang tetapkan sasaran. Jika binaan semula tanpa kehilangan kualiti tidak mencapainya, halaman dirender semula sebagai imej dengan kualiti yang semakin rendah sehingga fail muat, dan hasilnya menunjukkan saiz sebenar yang dicapai."
         },
         {
           "q": "Bolehkah saya memampatkan PDF yang dilindungi kata laluan?",
@@ -340,17 +368,21 @@
     "optimize-pdf": {
       "slug": "optimumkan-pdf",
       "name": "Optimumkan PDF",
-      "description": "Optimumkan PDF untuk web dan pemuatan lebih pantas",
-      "seoTitle": "Optimumkan PDF — PDF Lebih Pantas untuk Web",
-      "metaDescription": "Optimumkan fail PDF untuk web dan pemuatan lebih pantas. Kurangkan masa paparan, ratakan lapisan dan kemaskan struktur dokumen.",
+      "description": "Bungkus semula PDF tanpa kehilangan kualiti untuk kurangkan saiznya",
+      "seoTitle": "Optimumkan PDF — Bungkus Semula PDF Tanpa Kehilangan Kualiti",
+      "metaDescription": "Bungkus semula PDF tanpa kehilangan kualiti: aliran objek dimampatkan, objek tidak digunakan dan semakan lama dibuang, metadata boleh dipadam. Teks dan imej tidak disentuh.",
       "faqs": [
         {
           "q": "Apakah fungsi pengoptimuman PDF?",
-          "a": "Pengoptimuman membuang objek yang tidak digunakan, meratakan lapisan interaktif, mengambil subset fon dan mengemaskan struktur dalaman untuk paparan yang lebih pantas."
+          "a": "Ia membina semula fail dengan aliran objek yang dimampatkan, yang membuang objek tidak digunakan dan semakan lama yang disimpan, serta boleh memadam metadata seperti tajuk dan pengarang. Ia tidak meratakan lapisan, tidak memangkas fon dan tidak mengekod semula imej. Jika tiada penjimatan, fail asal anda dipulangkan tanpa perubahan."
         },
         {
           "q": "Adakah pengoptimuman sama dengan pemampatan?",
-          "a": "Pemampatan mengecilkan saiz fail dengan mengekod semula imej. Pengoptimuman memberi tumpuan kepada penambahbaikan struktur yang mempercepat pemuatan dan paparan."
+          "a": "Tidak. Mampatkan PDF berusaha mencapai saiz sasaran dan boleh menukar halaman kepada imej untuk sampai ke situ. Pengoptimuman hanya membungkus semula struktur fail tanpa kehilangan kualiti, jadi penjimatannya biasanya lebih kecil tetapi tiada perubahan yang kelihatan."
+        },
+        {
+          "q": "Adakah PDF yang dioptimumkan masih boleh dibuka dalam semua pembaca PDF?",
+          "a": "Ya. Pengoptimuman mengekalkan fail sebagai PDF standard, jadi ia dibuka dalam Adobe Reader, pelayar, Preview dan pemapar mudah alih seperti sebelumnya."
         }
       ],
       "howTo": {
@@ -374,7 +406,7 @@
       "name": "Baiki PDF",
       "description": "Baiki fail PDF yang rosak",
       "seoTitle": "Baiki PDF — Pulihkan Fail PDF yang Rosak",
-      "metaDescription": "Baiki fail PDF yang rosak. Betulkan pengepala yang rosak, pulihkan kandungan yang boleh dibaca dan kembalikan dokumen yang rosak. Alat dalam talian percuma.",
+      "metaDescription": "Baiki fail PDF yang rosak: bina semula jadual rujukan silang dan strukturnya, atau pulihkan halaman daripada fail yang rosak teruk. Percuma, tanpa muat naik.",
       "faqs": [
         {
           "q": "Apakah yang menyebabkan PDF rosak?",
@@ -383,6 +415,10 @@
         {
           "q": "Bolehkah pembaikan memulihkan semua kandungan?",
           "a": "Pembaikan berfungsi dengan membina semula struktur PDF. Pemulihan bergantung pada berapa banyak data asal yang masih utuh."
+        },
+        {
+          "q": "Adakah PDF saya yang rosak dimuat naik untuk dibaiki?",
+          "a": "Tidak. Pembaikan berjalan dalam pelayar anda, jadi kontrak atau penyata yang rosak tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -405,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Ekstrak teks daripada dokumen imbasan",
       "seoTitle": "OCR PDF — Ekstrak Teks daripada Dokumen Imbasan",
-      "metaDescription": "Tukar dokumen imbasan kepada teks yang boleh dicari dan dipilih dengan OCR. Jadikan PDF imbasan boleh dicari dan diedit. Percuma, tanpa muat naik.",
+      "metaDescription": "Jadikan PDF imbasan boleh dicari dengan OCR: lapisan teks halimunan yang boleh dicari, dipilih dan disalin. Sehingga 3 daripada 44 bahasa. Percuma, tanpa muat naik.",
       "faqs": [
         {
           "q": "Apakah itu OCR?",
@@ -413,7 +449,11 @@
         },
         {
           "q": "Sejauh manakah ketepatan OCR?",
-          "a": "Ketepatan bergantung pada kualiti imbasan. Imbasan yang jelas dan beresolusi tinggi biasanya mencapai ketepatan 95-99%. Imbasan berkualiti rendah mungkin mempunyai lebih banyak ralat."
+          "a": "Ia bergantung pada imbasan. Halaman teks bercetak yang tajam, terang dan lurus dibaca dengan baik; resolusi rendah, tulisan tangan, kecondongan atau hingar menyebabkan lebih banyak ralat. Semak teks penting dengan imej halaman sebelum bergantung padanya."
+        },
+        {
+          "q": "Adakah OCR PDF memuat naik imbasan saya?",
+          "a": "Tidak. Enjin pengecaman dan data bahasanya dimuat turun ke pelayar anda sekali sahaja, kemudian setiap halaman dibaca pada peranti anda sendiri."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Bolehkah saya menggabungkan beberapa imej menjadi satu PDF?",
           "a": "Boleh. Muatkan semua JPG anda, susun mengikut urutan dan tukar. Setiap imej menjadi satu halaman dalam PDF yang dihasilkan."
+        },
+        {
+          "q": "Bolehkah saya menukar foto kepada PDF pada telefon?",
+          "a": "Boleh. Buka JPG ke PDF dalam pelayar telefon anda, pilih foto daripada galeri dan muat turun satu PDF. Tiada apa-apa dimuat naik."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Perlukah saya memasang Microsoft Word?",
           "a": "Tidak. Penukaran berlaku dalam pelayar anda. Tiada perisian yang perlu dipasang."
+        },
+        {
+          "q": "Adakah dokumen Word saya dimuat naik untuk ditukar?",
+          "a": "Tidak. Fail DOCX dibaca dan ditukar kepada PDF dalam pelayar anda, jadi ia tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Bolehkah saya menukar slaid tertentu sahaja?",
           "a": "Penukaran memproses keseluruhan persembahan. Untuk mendapatkan slaid tertentu, ekstrak slaid tersebut selepas penukaran menggunakan alat Ekstrak Halaman PDF."
+        },
+        {
+          "q": "Adakah persembahan saya dimuat naik untuk ditukar?",
+          "a": "Tidak. Fail PPTX ditukar dalam pelayar anda dan tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -586,11 +638,15 @@
       "faqs": [
         {
           "q": "Adakah formula saya akan dikekalkan?",
-          "a": "Formula dikira dan disimpan sebagai nilai hasilnya dalam PDF. Formula itu sendiri tidak dikekalkan kerana PDF ialah format statik."
+          "a": "Tidak. PDF menunjukkan nilai terakhir yang dikira dan disimpan dalam fail bagi setiap formula; formula itu sendiri tidak disimpan. Jika buku kerja tidak pernah dikira semula (contohnya dijana oleh skrip), buka dan simpan dalam Excel dahulu."
         },
         {
           "q": "Bolehkah saya menukar lembaran kerja tertentu sahaja?",
           "a": "Penukaran memproses keseluruhan buku kerja. Untuk helaian tertentu, anda mungkin perlu menyimpannya sebagai fail berasingan terlebih dahulu."
+        },
+        {
+          "q": "Adakah hamparan saya dimuat naik untuk ditukar?",
+          "a": "Tidak. Fail XLSX dibaca dan ditukar kepada PDF dalam pelayar anda, jadi data kewangan tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -611,17 +667,21 @@
     "html-to-pdf": {
       "slug": "html-ke-pdf",
       "name": "HTML ke PDF",
-      "description": "Tukar laman web kepada PDF",
+      "description": "Tukar kod HTML atau fail .html kepada PDF",
       "seoTitle": "HTML ke PDF — Tukar Laman Web ke PDF Percuma",
-      "metaDescription": "Tukar mana-mana laman web ke PDF. Simpan artikel, resit dan kandungan dalam talian sebagai dokumen PDF. Percuma, dalam pelayar, tanpa pemasangan.",
+      "metaDescription": "Tukar HTML yang ditampal atau fail .html kepada PDF, sebagai salinan reka bentuk tepat atau dengan teks boleh dipilih. Percuma, dalam pelayar anda, tanpa pemasangan.",
       "faqs": [
         {
-          "q": "Bolehkah saya menukar mana-mana laman web?",
-          "a": "Boleh. Masukkan URL mana-mana laman web yang boleh diakses secara umum dan ia akan ditukar kepada format PDF."
+          "q": "Bolehkah saya menukar halaman web langsung daripada URLnya?",
+          "a": "Tidak. HTML ke PDF menukar HTML yang anda tampal atau fail .html yang anda pilih. Untuk halaman langsung, gunakan Cetak > Simpan sebagai PDF dalam pelayar anda, atau simpan halaman itu sebagai HTML dan tukar fail itu di sini."
         },
         {
           "q": "Adakah PDF akan kelihatan seperti laman web itu?",
           "a": "PDF menangkap kandungan halaman seperti yang dipaparkan. Susun atur yang kompleks mungkin sedikit berbeza daripada yang asal."
+        },
+        {
+          "q": "Perlukah saya memasang apa-apa untuk menukar HTML kepada PDF?",
+          "a": "Tidak. Tampal HTML atau pilih fail .html dan PDF akan dicipta dalam pelayar anda, tanpa perisian, sambungan atau akaun."
         }
       ],
       "howTo": {
@@ -645,7 +705,7 @@
       "name": "HEIC ke PDF",
       "description": "Tukar imej HEIC Apple kepada PDF",
       "seoTitle": "HEIC ke PDF — Tukar Imej HEIC iPhone ke PDF Percuma",
-      "metaDescription": "Tukar foto HEIC dan HEIF daripada iPhone dan iPad kepada dokumen PDF. Percuma, dalam pelayar, tanpa muat naik. Mengekalkan kualiti imej asal.",
+      "metaDescription": "Tukar foto HEIC dan HEIF daripada iPhone dan iPad kepada PDF, satu PDF bagi setiap foto pada resolusi penuh. Percuma, dalam pelayar, tanpa muat naik.",
       "faqs": [
         {
           "q": "Apakah itu fail HEIC?",
@@ -657,7 +717,7 @@
         },
         {
           "q": "Adakah penukaran mengurangkan kualiti imej?",
-          "a": "Tidak. Imej HEIC dinyahkod dan dibenamkan ke dalam PDF pada resolusi asalnya. Kualiti visual dikekalkan."
+          "a": "Sangat sedikit. Setiap foto mengekalkan resolusi penuh tetapi dikod semula sebagai JPEG berkualiti tinggi (92%) dalam PDF, kerana PDF tidak boleh menyimpan HEIC secara terus. Perbezaannya sukar dilihat."
         }
       ],
       "howTo": {
@@ -688,11 +748,11 @@
         },
         {
           "q": "Adakah menukar WebP ke PDF mengurangkan kualiti?",
-          "a": "Tidak. Imej WebP dinyahkod dan dibenamkan ke dalam PDF pada resolusi asalnya tanpa pemampatan semula."
+          "a": "Tidak. Setiap WebP dinyahkod dan disimpan tanpa kehilangan kualiti (sebagai PNG) pada resolusi piksel penuh, diletakkan di tengah halaman A4 dan hanya dikecilkan jika lebih besar daripada halaman."
         },
         {
           "q": "Bolehkah saya menukar beberapa fail WebP sekaligus?",
-          "a": "Boleh. Pilih beberapa imej WebP dan ia akan digabungkan menjadi satu PDF berbilang halaman dengan satu imej bagi setiap halaman."
+          "a": "Ya. Pilih beberapa imej WebP dan setiap satu menjadi PDF tersendiri; muat turun satu demi satu atau sebagai ZIP. Untuk satu PDF berbilang halaman, gunakan JPG ke PDF, yang juga menerima WebP."
         }
       ],
       "howTo": {
@@ -727,7 +787,7 @@
         },
         {
           "q": "Bolehkah saya menukar beberapa fail TIFF sekaligus?",
-          "a": "Boleh. Pilih beberapa fail TIFF dan setiap satu akan ditukar, dengan semua halaman digabungkan menjadi satu PDF."
+          "a": "Ya. Pilih beberapa fail TIFF dan setiap satu menjadi PDF tersendiri yang mengandungi semua halamannya. Muat turun satu demi satu atau sebagai ZIP, kemudian gunakan Gabung PDF jika anda mahu satu fail sahaja."
         }
       ],
       "howTo": {
@@ -762,7 +822,7 @@
         },
         {
           "q": "Adakah ini percuma digunakan?",
-          "a": "Ya. Penukaran SVG ke PDF percuma sepenuhnya, tanpa had, tanpa tera air dan tanpa perlu daftar."
+          "a": "Ya. Penukaran SVG ke PDF adalah percuma sepenuhnya, tanpa had harian, tanpa tera air dan tanpa pendaftaran."
         }
       ],
       "howTo": {
@@ -820,15 +880,19 @@
       "name": "PDF ke JPG",
       "description": "Tukar halaman PDF kepada imej JPG",
       "seoTitle": "PDF ke JPG — Tukar Halaman PDF kepada Imej Percuma",
-      "metaDescription": "Tukar halaman PDF kepada imej JPG berkualiti tinggi. Ekstrak semua halaman atau halaman tertentu sebagai imej. Percuma, tanpa daftar, tanpa tera air.",
+      "metaDescription": "Tukar setiap halaman PDF kepada imej JPG atau PNG pada 144 atau 216 DPI. Percuma, tanpa pendaftaran, tanpa tera air, dan PDF tidak pernah meninggalkan pelayar anda.",
       "faqs": [
         {
           "q": "Apakah resolusi imej yang dihasilkan?",
-          "a": "Imej diekstrak pada resolusi tertinggi yang terkandung dalam PDF, biasanya 150-300 DPI bergantung pada sumbernya."
+          "a": "Halaman dirender pada 144 DPI (Standard) atau 216 DPI (Tinggi), tanpa mengira sumbernya. Tinggi memberi teks lebih tajam dan fail lebih besar."
         },
         {
           "q": "Bolehkah saya menukar halaman tertentu sahaja?",
-          "a": "Boleh. Pilih untuk menukar semua halaman atau tetapkan julat halaman untuk mengekstrak halaman yang anda perlukan sahaja."
+          "a": "Semua halaman ditukar. Untuk mendapatkan beberapa halaman sahaja, gunakan Ekstrak Halaman PDF dahulu dan tukar fail itu, atau muat turun hanya imej halaman yang anda perlukan."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk ditukar kepada JPG?",
+          "a": "Tidak. Setiap halaman dijadikan imej dalam pelayar anda, jadi PDF tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Adakah ini berfungsi pada PDF imbasan?",
           "a": "PDF imbasan memerlukan OCR terlebih dahulu untuk mengekstrak teks. Jalankan OCR, kemudian tukar hasilnya ke Word untuk hasil terbaik."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk ditukar kepada Word?",
+          "a": "Tidak. Teks diekstrak dan DOCX dibina dalam pelayar anda, jadi PDF tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Bolehkah saya mengedit slaid yang dihasilkan?",
           "a": "Boleh. Outputnya ialah fail PPTX standard yang boleh anda edit dalam mana-mana aplikasi yang serasi dengan PowerPoint."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk ditukar kepada PowerPoint?",
+          "a": "Tidak. Slaid dibina dalam pelayar anda, jadi PDF tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -949,7 +1021,7 @@
       "name": "PDF ke PDF/A",
       "description": "Tukar PDF kepada format arkib PDF/A",
       "seoTitle": "PDF ke PDF/A — Tukar kepada Format PDF Arkib",
-      "metaDescription": "Tukar fail PDF biasa kepada format arkib PDF/A. Pastikan pemeliharaan jangka panjang dan pematuhan. Penukaran percuma dalam pelayar.",
+      "metaDescription": "Jadikan PDF salinan arkib yang ditanda sebagai PDF/A-2b dalam metadatanya. Semak pematuhan ketat dengan pengesah. Percuma, dalam pelayar anda, tanpa muat naik.",
       "faqs": [
         {
           "q": "Apakah itu PDF/A?",
@@ -957,7 +1029,11 @@
         },
         {
           "q": "Mengapa saya perlu menukar kepada PDF/A?",
-          "a": "Banyak industri memerlukan PDF/A untuk penyimpanan dokumen. Ia memastikan fon dibenamkan, warna ditakrifkan dan dokumen itu serba lengkap."
+          "a": "Banyak mahkamah, arkib dan sistem rekod meminta PDF/A, yang memerlukan fon terbenam, warna yang ditakrifkan dan tiada penyulitan. Alat ini menyalin halaman anda dan menambah pengenalan PDF/A; ia tidak membenamkan fon yang hilang atau menambah profil warna."
+        },
+        {
+          "q": "Adakah hasilnya dijamin lulus pengesah PDF/A?",
+          "a": "Tidak selalu. Alat ini menambah metadata pengenalan PDF/A, tetapi fail sumber yang kehilangan fon atau mengandungi ketelusan mungkin masih gagal dalam semakan yang ketat, jadi sahkan dengan pengesah seperti veraPDF jika arkib memerlukannya."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Bolehkah saya menukar halaman tertentu sahaja?",
           "a": "Keseluruhan dokumen akan ditukar. Untuk menukar sebahagian halaman sahaja, jalankan Ekstrak Halaman PDF dahulu dan tukar fail tersebut."
+        },
+        {
+          "q": "Bolehkah saya menggunakan Markdown dengan ChatGPT atau alat AI lain?",
+          "a": "Ya. Hasilnya ialah teks biasa dengan satu bahagian bagi setiap halaman (## Page 1, ## Page 2 …), yang dibaca dengan kemas oleh pembantu AI dan aplikasi nota. Penukaran berlaku dalam pelayar anda."
         }
       ],
       "howTo": {
@@ -1015,11 +1095,15 @@
       "faqs": [
         {
           "q": "Bolehkah saya mengedit mana-mana PDF?",
-          "a": "Mana-mana PDF yang dicipta secara digital dengan teks yang boleh dipilih boleh diedit. PDF imbasan memerlukan OCR terlebih dahulu supaya teks boleh diedit."
+          "a": "Mana-mana PDF yang dicipta secara digital dengan teks boleh dipilih boleh disunting. PDF imbasan ialah gambar teks, jadi tiada perkataan untuk diubah secara terus."
         },
         {
           "q": "Adakah pengeditan akan mengubah format?",
-          "a": "Pengeditan terus mengekalkan format asal. Hanya teks yang anda ubah terjejas — fon, jarak dan susun atur kekal utuh."
+          "a": "Hanya teks yang anda ubah dilukis semula; bahagian lain halaman disalin tanpa perubahan. Teks yang disunting menggunakan fon yang sudah terbenam dalam PDF jika boleh; jika fon itu tiada aksara yang anda taip, fon standard yang serupa digunakan, jadi semak baris yang disunting sebelum menghantar."
+        },
+        {
+          "q": "Bolehkah saya mengedit PDF yang diimbas?",
+          "a": "Tidak secara langsung. Imbasan ialah gambar teks, jadi tiada perkataan yang boleh diubah terus. Gunakan OCR PDF untuk menjadikannya boleh dicari dan salin teksnya, kemudian edit dalam pemproses kata."
         }
       ],
       "howTo": {
@@ -1041,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "putar-pdf",
       "name": "Putar PDF",
-      "description": "Putar halaman PDF pada sebarang sudut",
-      "seoTitle": "Putar PDF — Putar Halaman PDF pada Sebarang Sudut",
+      "description": "Putar halaman PDF 90°, 180° atau 270°",
+      "seoTitle": "Putar PDF — Putar Halaman 90°, 180° atau 270° Percuma",
       "metaDescription": "Putar halaman tertentu atau semua halaman dalam PDF. Betulkan imbasan yang senget ke tepi, orientasi yang salah dan sudut halaman. Percuma, tanpa daftar.",
       "faqs": [
         {
@@ -1052,6 +1136,10 @@
         {
           "q": "Adakah putaran menjejaskan kualiti cetakan?",
           "a": "Tidak. Putaran ialah perubahan metadata yang memberitahu pemapar cara memaparkan halaman. Kandungannya tidak dilukis semula."
+        },
+        {
+          "q": "Adakah putaran itu kekal?",
+          "a": "Ya. Orientasi baharu disimpan dalam PDF yang dimuat turun, jadi ia dibuka dengan betul dalam setiap pemapar."
         }
       ],
       "howTo": {
@@ -1075,7 +1163,7 @@
       "name": "Tambah Nombor Halaman",
       "description": "Masukkan nombor halaman ke dalam PDF anda",
       "seoTitle": "Tambah Nombor Halaman PDF — Percuma & Mudah",
-      "metaDescription": "Tambah nombor halaman pada mana-mana kedudukan dalam PDF anda. Pilih format, kedudukan dan nombor permulaan. Percuma, dalam pelayar, tanpa muat naik.",
+      "metaDescription": "Tambah nombor halaman pada PDF di salah satu daripada enam kedudukan. Pilih format (1, Halaman 1 atau 1 daripada N) dan nombor permulaan. Percuma, tanpa muat naik.",
       "faqs": [
         {
           "q": "Di manakah saya boleh meletakkan nombor halaman?",
@@ -1083,7 +1171,11 @@
         },
         {
           "q": "Bolehkah saya melangkau penomboran pada halaman pertama?",
-          "a": "Boleh. Pilih pilihan untuk memulakan penomboran dari halaman tertentu, seperti halaman 2 atau 3, untuk melangkau halaman muka depan."
+          "a": "Tidak secara terus: setiap halaman mendapat nombor, dan \"Mula penomboran pada\" hanya menukar nombor pertama. Untuk membiarkan kulit tanpa nombor, asingkannya dengan Pisah PDF, nomborkan selebihnya bermula dari 2, kemudian cantumkan semula dengan Gabung PDF."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk menambah nombor halaman?",
+          "a": "Tidak. Nombor dilukis pada halaman dalam pelayar anda, jadi fail tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -1105,7 +1197,7 @@
     "add-watermark": {
       "slug": "tambah-tera-air-pdf",
       "name": "Tambah Tera Air",
-      "description": "Tambah tera air teks atau imej",
+      "description": "Cop tera air teks pada setiap halaman",
       "seoTitle": "Tambah Tera Air pada PDF — Alat Watermark Percuma",
       "metaDescription": "Cop tera air teks seperti SULIT atau DRAF pada setiap halaman PDF. Tetapkan kelegapan dan saiz. Percuma, tanpa daftar dan tanpa muat naik.",
       "faqs": [
@@ -1116,6 +1208,10 @@
         {
           "q": "Bolehkah saya meletakkan tera air pada semua halaman sekaligus?",
           "a": "Boleh. Tera air dikenakan pada setiap halaman dalam dokumen secara serentak."
+        },
+        {
+          "q": "Bolehkah tera air dibuang kemudian?",
+          "a": "Tera air teks dilukis ke dalam kandungan halaman, jadi ia tidak boleh dimatikan seperti komen. Seseorang yang mempunyai perisian penyuntingan masih boleh menutupnya, jadi anggaplah ia sebagai pencegah, bukan perlindungan."
         }
       ],
       "howTo": {
@@ -1143,11 +1239,15 @@
       "faqs": [
         {
           "q": "Bolehkah saya memangkas semua halaman sekaligus?",
-          "a": "Boleh. Gunakan kawasan pangkasan yang sama pada setiap halaman, atau tetapkan pangkasan berbeza bagi halaman individu."
+          "a": "Ya — margin yang anda tetapkan sentiasa dipangkas daripada setiap halaman. Pangkasan berbeza bagi halaman tertentu tidak disokong; pisahkan PDF dahulu jika sesetengah halaman memerlukan margin lain."
         },
         {
           "q": "Adakah pemangkasan memadam kandungan?",
-          "a": "Pemangkasan menyembunyikan kandungan di luar kawasan pangkasan. Kandungan tersembunyi itu tidak dipadam dan boleh dipulihkan kemudian."
+          "a": "Tidak. Memangkas mengecilkan kawasan halaman yang kelihatan, tetapi kandungan di luarnya kekal dalam fail dan sesetengah editor boleh memaparkannya semula. Jangan sekali-kali memangkas untuk menyembunyikan maklumat sensitif — gunakan Hitamkan PDF untuk itu."
+        },
+        {
+          "q": "Bolehkah saya memangkas PDF pada telefon?",
+          "a": "Boleh. Pangkas PDF berjalan dalam pelayar telefon anda, jadi anda boleh memangkas margin tanpa memasang aplikasi atau memuat naik fail."
         }
       ],
       "howTo": {
@@ -1169,17 +1269,21 @@
     "sign-pdf": {
       "slug": "tandatangan-pdf",
       "name": "Tandatangan PDF",
-      "description": "Tambah tandatangan digital pada PDF",
+      "description": "Letakkan tandatangan yang dilukis, ditaip atau dimuat naik pada PDF",
       "seoTitle": "Tandatangan PDF — Tandatangan Elektronik Percuma",
-      "metaDescription": "Tambah tandatangan elektronik pada dokumen PDF. Lukis, taip atau muatkan tandatangan anda. Sah dari segi undang-undang, percuma, tanpa perlu daftar.",
+      "metaDescription": "Tandatangani PDF dalam talian: lukis, taip atau muat naik tandatangan anda dan letakkan di mana-mana halaman. Percuma, tanpa pendaftaran, dan tandatangan anda tidak pernah dimuat naik.",
       "faqs": [
         {
           "q": "Adakah tandatangan elektronik sah dari segi undang-undang?",
-          "a": "Ya. Tandatangan elektronik sah dari segi undang-undang di bawah Akta ESIGN Amerika Syarikat dan eIDAS Kesatuan Eropah untuk hampir semua dokumen."
+          "a": "Bagi kebanyakan dokumen harian, ya: undang-undang seperti ESIGN Act di AS dan eIDAS di EU menerima tandatangan elektronik ringkas. Alat ini meletakkan imej tandatangan anda tanpa sijil atau jejak audit, jadi gunakan perkhidmatan tandatangan elektronik bertauliah apabila tandatangan bertauliah atau berasaskan sijil diperlukan."
         },
         {
           "q": "Bolehkah saya menandatangani PDF yang dilindungi kata laluan?",
           "a": "Anda perlu membuka kuncinya dahulu. PDF yang dilindungi kata laluan tidak boleh diedit sehingga kata laluan dibuang."
+        },
+        {
+          "q": "Bagaimanakah saya boleh mencipta tandatangan saya?",
+          "a": "Lukis dengan tetikus atau jari, taip nama anda dalam fon tulisan tangan, atau muat naik foto tandatangan sebenar anda. Ia diletakkan pada halaman dalam pelayar anda dan tidak pernah disimpan pada pelayan."
         }
       ],
       "howTo": {
@@ -1247,15 +1351,19 @@
       "name": "Buka Kunci PDF",
       "description": "Buang perlindungan kata laluan daripada PDF",
       "seoTitle": "Buka Kunci PDF — Buang Kata Laluan PDF Percuma",
-      "metaDescription": "Buang perlindungan kata laluan daripada dokumen PDF. Buka kunci PDF yang disulitkan untuk diedit, dicetak atau dikongsi. Percuma, tanpa perlu daftar.",
+      "metaDescription": "Buang kata laluan dan sekatan cetak, salin atau sunting daripada PDF yang anda berhak buka kuncinya. Percuma, tanpa pendaftaran, berjalan dalam pelayar anda.",
       "faqs": [
         {
           "q": "Perlukah saya kata laluan untuk membuka kunci PDF?",
-          "a": "Ya. Anda mesti tahu kata laluan semasa untuk membuangnya. Tiada cara untuk memintas penyulitan PDF tanpa kata laluan."
+          "a": "Hanya jika PDF meminta kata laluan untuk dibuka. Fail yang dibuka seperti biasa tetapi menyekat cetak, salin atau sunting dibuka kuncinya tanpa kata laluan. Kata laluan pembuka tidak boleh dipintas: tanpanya, fail kekal terkunci."
         },
         {
           "q": "Adakah membuka kunci akan mengubah kandungan PDF?",
-          "a": "Tidak. Membuka kunci hanya membuang perlindungan kata laluan. Kandungan dokumen kekal tidak berubah."
+          "a": "Halamannya kelihatan sama, tetapi setiap satu dibina semula sebagai imej resolusi tinggi dengan lapisan teks halimunan: teks masih boleh dicari dan disalin tetapi tidak lagi boleh disunting sebagai teks, dan pautan serta medan borang tidak dikekalkan. Saiz fail juga mungkin bertambah."
+        },
+        {
+          "q": "Adakah selamat untuk memasukkan kata laluan PDF saya di sini?",
+          "a": "Ya. Kata laluan dan fail kekal dalam pelayar anda dan tidak pernah dihantar ke pelayan."
         }
       ],
       "howTo": {
@@ -1278,23 +1386,27 @@
       "name": "Lindungi PDF",
       "description": "Tambah perlindungan kata laluan pada PDF",
       "seoTitle": "Lindungi PDF — Letak Kata Laluan pada PDF Percuma",
-      "metaDescription": "Tambah perlindungan kata laluan pada dokumen PDF. Sulitkan fail anda dengan penyulitan AES-256. Percuma, dalam pelayar, tanpa muat naik.",
+      "metaDescription": "Tambah kata laluan pada PDF supaya ia tidak boleh dibuka tanpanya. Penyulitan PDF standard 128-bit dalam pelayar anda. Percuma, tanpa daftar, tanpa muat naik.",
       "faqs": [
         {
           "q": "Sejauh manakah kuatnya perlindungan kata laluan PDF?",
-          "a": "Penyulitan PDF moden menggunakan AES-256, standard yang sama digunakan oleh bank dan kerajaan. Kata laluan yang kuat menjadikan serangan cuba-jaya (brute-force) tidak praktikal."
+          "a": "Slate PDF menggunakan penyulitan PDF standard RC4 128-bit yang boleh dibuka oleh semua pembaca PDF. Ia menghalang akses biasa, tetapi RC4 ialah algoritma lama: untuk fail yang sangat sensitif, gunakan kata laluan yang panjang dan unik, atau alat yang menawarkan AES-256."
         },
         {
           "q": "Apakah yang berlaku jika saya terlupa kata laluan?",
           "a": "Tiada mekanisme pemulihan. Fail tidak boleh diakses selama-lamanya tanpa kata laluan. Sentiasa simpan kata laluan di tempat yang selamat."
+        },
+        {
+          "q": "Adakah PDF saya dimuat naik untuk menambah kata laluan?",
+          "a": "Tidak. Penyulitan berlaku dalam pelayar anda, jadi fail yang tidak dilindungi dan kata laluan tidak pernah meninggalkan peranti anda."
         }
       ],
       "howTo": {
         "title": "Cara letak kata laluan pada PDF",
-        "intro": "Lindungi PDF menyulitkan PDF dengan kata laluan untuk membukanya, kata laluan untuk mengubah kebenarannya, atau kedua-duanya — dan boleh menyekat pencetakan, penyalinan atau pengeditan.",
+        "intro": "Lindungi PDF menyulitkan PDF supaya ia memerlukan kata laluan untuk dibuka, dengan kata laluan pemilik berasingan yang pilihan, dan boleh menyekat pencetakan, penyalinan atau penyuntingan.",
         "steps": [
           "Pilih PDF anda",
-          "Masukkan kata laluan pembukaan, kata laluan pemilik, atau kedua-duanya",
+          "Masukkan kata laluan pembuka, dan jika mahu, kata laluan pemilik yang berbeza",
           "Jika mahu, buka tetapan kebenaran untuk menyekat pencetakan, penyalinan dan pengeditan",
           "Klik Lindungi PDF untuk memuat turun fail yang disulitkan"
         ],
@@ -1319,6 +1431,10 @@
         {
           "q": "Bolehkah saya membandingkan PDF imbasan?",
           "a": "Jalankan OCR PDF pada kedua-dua imbasan dahulu. Perbandingan berfungsi pada teks dalam fail, jadi imbasan yang hanya mengandungi imej tidak mempunyai apa-apa untuk dibandingkan."
+        },
+        {
+          "q": "Adakah kedua-dua PDF dimuat naik untuk dibandingkan?",
+          "a": "Tidak. Kedua-dua fail dibaca dan dibandingkan dalam pelayar anda, jadi tiada satu pun yang meninggalkan peranti anda."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Adakah dokumen saya dihantar ke pelayan?",
           "a": "Tidak. Ringkasan dikira dalam pelayar anda, dan PDF tidak pernah meninggalkan peranti anda."
+        },
+        {
+          "q": "Bolehkah ia meringkaskan PDF yang diimbas?",
+          "a": "Tidak secara langsung. PDF yang diimbas tiada lapisan teks untuk dibaca. Jalankannya melalui OCR PDF dahulu, kemudian ringkaskan hasil yang boleh dicari."
         }
       ],
       "howTo": {
@@ -1370,8 +1490,8 @@
     "translate-pdf": {
       "slug": "terjemah-pdf",
       "name": "Terjemah PDF",
-      "description": "Terjemah kandungan PDF ke mana-mana bahasa",
-      "seoTitle": "Terjemah PDF — Terjemah Kandungan PDF ke Bahasa Lain",
+      "description": "Terjemah teks PDF ke 42 bahasa",
+      "seoTitle": "Terjemah PDF — Terjemah Teks PDF ke 42 Bahasa",
       "metaDescription": "Terjemah teks PDF ke 42 bahasa dan muat turun sebagai PDF baharu. Percuma, tanpa daftar. Teks dihantar kepada perkhidmatan terjemahan.",
       "faqs": [
         {

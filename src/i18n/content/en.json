@@ -64,6 +64,18 @@
     "whyToolHeading": "Why use {tool} here?",
     "faqHeading": "{tool} — frequently asked questions",
     "continueHeading": "Continue with another tool",
+    "glanceHeading": "{tool} at a glance",
+    "glancePrice": "Price",
+    "glancePriceValue": "Free, with no paid tier and no usage limit",
+    "glanceFile": "Your file",
+    "glanceFileValue": "Processed in your browser, never uploaded",
+    "glanceFileTranslate": "Read in your browser; only the extracted text is sent to a translation service",
+    "glanceAccount": "Account",
+    "glanceAccountValue": "Not needed",
+    "glanceWatermark": "Watermark",
+    "glanceWatermarkValue": "None added to your file",
+    "glanceDevices": "Works on",
+    "glanceDevicesValue": "Any modern browser on Windows, Mac, Linux, Android and iPhone",
     "seeAllTools": "See all {count} PDF tools"
   },
   "categories": {
@@ -106,7 +118,7 @@
       "name": "PDF Workspace",
       "description": "Edit, redact, sign, stamp and secure one document without leaving the page",
       "seoTitle": "PDF Workspace — Edit, Sign, Redact & Secure PDFs Online",
-      "metaDescription": "One PDF workspace to edit text, redact sensitive info, add signatures, stamp watermarks, and password-protect documents. All processing happens in your browser.",
+      "metaDescription": "One PDF workspace to edit text, redact sensitive info, add signatures, stamp watermarks and password-protect documents. Everything runs in your browser.",
       "faqs": [
         {
           "q": "What can I do in the PDF Workspace?",
@@ -115,6 +127,10 @@
         {
           "q": "Is my document uploaded to a server?",
           "a": "No. Every action runs in your browser. Your document never leaves your device, making the workspace ideal for confidential and sensitive work."
+        },
+        {
+          "q": "Is the PDF Workspace free, and do I need an account?",
+          "a": "It is free with no account, no watermark and no limit on how many documents you work on. Open a PDF and start editing."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Does splitting reduce quality?",
           "a": "No. Splitting copies whole page objects into new documents. Text stays selectable and images keep their original resolution."
+        },
+        {
+          "q": "Can I split a PDF on my phone without an app?",
+          "a": "Yes. Split PDF runs in the browser on Android and iPhone, so you can split a file without installing anything or uploading it."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Is this the same as splitting?",
           "a": "No. Splitting creates separate files from selected pages. Removing deletes pages from the document while keeping the rest as a single file."
+        },
+        {
+          "q": "Is it safe to delete pages from a confidential PDF here?",
+          "a": "Yes. The pages are removed in your browser and the file never leaves your device, so nothing is stored on a server."
         }
       ],
       "howTo": {
@@ -246,7 +270,11 @@
         },
         {
           "q": "Can I extract pages in a different order?",
-          "a": "Yes. List the pages in the order you want them. Entering 9, 3, 5 produces a file with pages in that sequence."
+          "a": "No. Pages always come out in their original order, and a page listed twice is included once, so 9, 3, 5 gives pages 3, 5 and 9. To change the order, run the result through Organize PDF."
+        },
+        {
+          "q": "Is extracting pages free, with no watermark?",
+          "a": "Yes. Extraction is free with no account, and the new PDF carries no watermark or added branding."
         }
       ],
       "howTo": {
@@ -268,7 +296,7 @@
     "organize-pdf": {
       "slug": "organize-pdf",
       "name": "Organize PDF",
-      "description": "Reorder, rotate, and manage pages",
+      "description": "Reorder pages and drop the ones you do not need",
       "seoTitle": "Organize PDF — Reorder & Remove Pages Free",
       "metaDescription": "Put the pages of a PDF in any order and drop the ones you do not need, in one step. Free, no sign-up, and the file never leaves your browser.",
       "faqs": [
@@ -304,17 +332,17 @@
     "compress-pdf": {
       "slug": "compress-pdf",
       "name": "Compress PDF",
-      "description": "Reduce file size while maintaining quality",
-      "seoTitle": "Compress PDF — Reduce File Size Without Losing Quality",
-      "metaDescription": "Shrink PDF file size by up to 80% without visible quality loss. Free, browser-based compression. No uploads, no watermarks, no sign-up.",
+      "description": "Shrink a PDF to the file size you need",
+      "seoTitle": "Compress PDF — Shrink a PDF to the Size You Need (Free)",
+      "metaDescription": "Shrink a PDF to a target size in MB or KB. A lossless rebuild is tried first; pages become images only when needed. Free, no upload, no sign-up.",
       "faqs": [
         {
           "q": "Will compressing a PDF reduce its quality?",
-          "a": "At the recommended compression level, images are re-encoded at 150 DPI — visually identical to the original for screen viewing and standard printing."
+          "a": "It depends on the size you ask for. The tool first tries a lossless rebuild that changes nothing visible. If that is not small enough, it redraws each page as an image at the highest resolution that fits your target, with an invisible text layer so the text stays searchable. A generous target looks identical; a very small one looks softer."
         },
         {
           "q": "How much smaller will my PDF get?",
-          "a": "Photo-heavy PDFs shrink 60-80%. Text-only files shrink 10-30%. Scanned documents can shrink up to 90%."
+          "a": "It depends on the file, so the tool promises no percentage: you set the target. If a lossless rebuild cannot reach it, pages are re-rendered as images at gradually lower quality until the file fits, and the result shows the size actually achieved."
         },
         {
           "q": "Can I compress a password-protected PDF?",
@@ -340,17 +368,21 @@
     "optimize-pdf": {
       "slug": "optimize-pdf",
       "name": "Optimize PDF",
-      "description": "Optimize PDF for web and faster loading",
-      "seoTitle": "Optimize PDF — Speed Up PDF for Web & Faster Loading",
-      "metaDescription": "Optimize PDF files for web delivery and faster loading. Reduce render time, flatten layers, and streamline the document structure.",
+      "description": "Repack a PDF losslessly to trim its size",
+      "seoTitle": "Optimize PDF — Losslessly Repack a PDF (Free, No Upload)",
+      "metaDescription": "Repack a PDF losslessly: compressed object streams, unused objects and old revisions dropped, metadata optionally cleared. Text and images untouched.",
       "faqs": [
         {
           "q": "What does PDF optimization do?",
-          "a": "Optimization removes unused objects, flattens interactive layers, subsets fonts, and streamlines the internal structure for faster rendering."
+          "a": "It rebuilds the file with compressed object streams, which drops unused objects and old saved revisions, and can optionally clear metadata such as title and author. It does not flatten layers, subset fonts or re-encode images. If nothing is gained, your original file is returned unchanged."
         },
         {
           "q": "Is optimization the same as compression?",
-          "a": "Compression reduces file size by re-encoding images. Optimization focuses on structural improvements that speed up loading and rendering."
+          "a": "No. Compress PDF works towards a target size and can turn pages into images to get there. Optimization only repacks the file structure losslessly, so the saving is usually smaller but nothing visible changes."
+        },
+        {
+          "q": "Will an optimized PDF still open in every PDF reader?",
+          "a": "Yes. Optimization keeps the file a standard PDF, so it opens in Adobe Reader, browsers, Preview and mobile viewers as before."
         }
       ],
       "howTo": {
@@ -374,7 +406,7 @@
       "name": "Repair PDF",
       "description": "Fix corrupted or damaged PDF files",
       "seoTitle": "Repair PDF — Fix Corrupted or Damaged PDF Files",
-      "metaDescription": "Repair corrupted or damaged PDF files. Fix broken headers, recover readable content, and restore damaged documents. Free online tool.",
+      "metaDescription": "Repair corrupted or damaged PDF files: rebuild the cross-reference table and structure, or recover the pages of badly damaged files. Free, no upload.",
       "faqs": [
         {
           "q": "What causes a PDF to become corrupted?",
@@ -383,6 +415,10 @@
         {
           "q": "Can repair recover all content?",
           "a": "Repair works by rebuilding the PDF structure. Recovery depends on how much of the original data remains intact."
+        },
+        {
+          "q": "Is my damaged PDF uploaded for repair?",
+          "a": "No. The repair runs in your browser, so a damaged contract or statement never leaves your device."
         }
       ],
       "howTo": {
@@ -405,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Extract text from scanned documents",
       "seoTitle": "OCR PDF — Extract Text From Scanned Documents",
-      "metaDescription": "Convert scanned documents into searchable, selectable text using OCR. Make scanned PDFs searchable and editable. Free, no upload required.",
+      "metaDescription": "Make scanned PDFs searchable with OCR: an invisible text layer you can search, select and copy. Pick up to 3 of 44 languages. Free, no upload.",
       "faqs": [
         {
           "q": "What is OCR?",
@@ -413,7 +449,11 @@
         },
         {
           "q": "How accurate is OCR?",
-          "a": "Accuracy depends on scan quality. Clear, high-resolution scans typically achieve 95-99% accuracy. Poor quality scans may have more errors."
+          "a": "It depends on the scan. Sharp, well-lit, straight pages of printed text read well; low resolution, handwriting, skew or noise cause more errors. Check important text against the page image before relying on it."
+        },
+        {
+          "q": "Does OCR PDF upload my scans?",
+          "a": "No. The recognition engine and its language data download to your browser once, then every page is read on your own device."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Can I combine multiple images into one PDF?",
           "a": "Yes. Load all your JPGs, arrange them in order, and convert. Each image becomes one page in the resulting PDF."
+        },
+        {
+          "q": "Can I convert photos to PDF on my phone?",
+          "a": "Yes. Open JPG to PDF in your phone's browser, pick photos from your gallery, and download one PDF. Nothing is uploaded."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Do I need Microsoft Word installed?",
           "a": "No. The conversion happens in your browser. No software installation is required."
+        },
+        {
+          "q": "Is my Word document uploaded to convert it?",
+          "a": "No. The DOCX file is read and turned into a PDF in your browser, so it never leaves your device."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Can I convert specific slides?",
           "a": "The conversion processes the entire presentation. To get specific slides, extract them after conversion using the Extract Pages tool."
+        },
+        {
+          "q": "Is my presentation uploaded to convert it?",
+          "a": "No. The PPTX file is converted in your browser and never leaves your device."
         }
       ],
       "howTo": {
@@ -586,11 +638,15 @@
       "faqs": [
         {
           "q": "Will my formulas be preserved?",
-          "a": "Formulas are calculated and saved as their resulting values in the PDF. The formulas themselves are not preserved since PDF is a static format."
+          "a": "No. The PDF shows the last calculated value saved in the file for each formula; the formulas themselves are not kept. If a workbook was never recalculated (for example, one generated by a script), open and save it in Excel first."
         },
         {
           "q": "Can I convert specific worksheets?",
           "a": "The conversion processes the entire workbook. For specific sheets, you may need to save them as a separate file first."
+        },
+        {
+          "q": "Is my spreadsheet uploaded to convert it?",
+          "a": "No. The XLSX file is read and turned into a PDF in your browser, so financial data never leaves your device."
         }
       ],
       "howTo": {
@@ -611,17 +667,21 @@
     "html-to-pdf": {
       "slug": "html-to-pdf",
       "name": "HTML to PDF",
-      "description": "Convert web pages to PDF",
+      "description": "Convert HTML code or .html files to PDF",
       "seoTitle": "HTML to PDF — Convert Web Pages to PDF Free",
-      "metaDescription": "Convert any web page to PDF. Save articles, receipts, and online content as PDF documents. Free, browser-based, no installation.",
+      "metaDescription": "Convert pasted HTML or an .html file to PDF, as an exact-design copy or with selectable text. Free, runs in your browser, no installation.",
       "faqs": [
         {
-          "q": "Can I convert any web page?",
-          "a": "Yes. Enter the URL of any publicly accessible web page and it will be converted to PDF format."
+          "q": "Can I convert a live web page from its URL?",
+          "a": "No. HTML to PDF converts HTML you paste or an .html file you choose. For a live page, use your browser's Print > Save as PDF, or save the page as HTML and convert that file here."
         },
         {
           "q": "Will the PDF look like the web page?",
           "a": "The PDF captures the rendered content of the page. Complex layouts may vary slightly from the original."
+        },
+        {
+          "q": "Do I need to install anything to convert HTML to PDF?",
+          "a": "No. Paste the HTML or choose an .html file and the PDF is created in your browser, with no software, extension or account."
         }
       ],
       "howTo": {
@@ -645,7 +705,7 @@
       "name": "HEIC to PDF",
       "description": "Convert Apple HEIC images to PDF",
       "seoTitle": "HEIC to PDF — Convert Apple HEIC Images to PDF Free",
-      "metaDescription": "Convert HEIC and HEIF photos from iPhone and iPad to PDF documents. Free, browser-based, no upload required. Preserves original image quality.",
+      "metaDescription": "Convert HEIC and HEIF photos from iPhone and iPad to PDF, one PDF per photo at full resolution. Free, browser-based, no upload required.",
       "faqs": [
         {
           "q": "What is a HEIC file?",
@@ -657,7 +717,7 @@
         },
         {
           "q": "Does conversion reduce image quality?",
-          "a": "No. The HEIC image is decoded and embedded into the PDF at its original resolution. The visual quality is preserved."
+          "a": "Very little. Each photo keeps its full resolution but is re-encoded as a high-quality JPEG (92%) inside the PDF, because PDF cannot store HEIC directly. The difference is hard to see."
         }
       ],
       "howTo": {
@@ -688,11 +748,11 @@
         },
         {
           "q": "Does converting WebP to PDF reduce quality?",
-          "a": "No. The WebP image is decoded and embedded into the PDF at its original resolution without re-compression."
+          "a": "No. Each WebP is decoded and stored losslessly (as PNG) at its full pixel resolution, centred on an A4 page and scaled down only if it is larger than the page."
         },
         {
           "q": "Can I convert multiple WebP files at once?",
-          "a": "Yes. Select multiple WebP images and they will be combined into a single multi-page PDF with one image per page."
+          "a": "Yes. Select several WebP images and each becomes its own PDF; download them one by one or as a ZIP. For one multi-page PDF, use JPG to PDF, which also accepts WebP."
         }
       ],
       "howTo": {
@@ -727,7 +787,7 @@
         },
         {
           "q": "Can I convert multiple TIFF files at once?",
-          "a": "Yes. Select multiple TIFF files and each will be converted, with all pages combined into a single PDF."
+          "a": "Yes. Select several TIFF files and each becomes its own PDF containing all of its pages. Download them one by one or as a ZIP, then use Merge PDF if you want a single file."
         }
       ],
       "howTo": {
@@ -762,7 +822,7 @@
         },
         {
           "q": "Is this free to use?",
-          "a": "Yes. SVG to PDF conversion is completely free with no limits, no watermarks, and no sign-up required."
+          "a": "Yes. SVG to PDF conversion is completely free with no daily limit, no watermarks, and no sign-up required."
         }
       ],
       "howTo": {
@@ -820,15 +880,19 @@
       "name": "PDF to JPG",
       "description": "Convert PDF pages to JPG images",
       "seoTitle": "PDF to JPG — Convert PDF Pages to Images Free",
-      "metaDescription": "Convert PDF pages to high-quality JPG images. Extract all pages or specific pages as images. Free, no sign-up, no watermarks.",
+      "metaDescription": "Convert every page of a PDF to a JPG or PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
       "faqs": [
         {
           "q": "What resolution will the images be?",
-          "a": "Images are extracted at the highest resolution contained in the PDF, typically 150-300 DPI depending on the source."
+          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
         },
         {
           "q": "Can I convert specific pages?",
-          "a": "Yes. Choose to convert all pages or specify a page range to extract only the pages you need."
+          "a": "Every page is converted. To get only some pages, run Extract Pages first and convert that file, or download just the page images you need."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to JPG?",
+          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
         }
       ],
       "howTo": {
@@ -852,7 +916,7 @@
       "name": "PDF to Word",
       "description": "Turn a PDF into an editable document (DOCX)",
       "seoTitle": "PDF to Word — Convert PDF to Editable DOCX Free",
-      "metaDescription": "Turn the text of a PDF into an editable Word file (DOCX), page by page. Free, browser-based, no sign-up and no upload.",
+      "metaDescription": "Turn the text of a PDF into an editable Word file (DOCX), page by page. Free, runs in your browser, no sign-up and no upload.",
       "faqs": [
         {
           "q": "Will the Word file keep the layout and images?",
@@ -861,6 +925,10 @@
         {
           "q": "Does this work on scanned PDFs?",
           "a": "Scanned PDFs need OCR first to extract the text. Run OCR, then convert the result to Word for best results."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to Word?",
+          "a": "No. The text is extracted and the DOCX is built in your browser, so the PDF never leaves your device."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Can I edit the resulting slides?",
           "a": "Yes. The output is a standard PPTX file that you can edit in any PowerPoint-compatible application."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to PowerPoint?",
+          "a": "No. The slides are built in your browser, so the PDF never leaves your device."
         }
       ],
       "howTo": {
@@ -949,7 +1021,7 @@
       "name": "PDF to PDF/A",
       "description": "Convert PDF to archival PDF/A format",
       "seoTitle": "PDF to PDF/A — Convert to Archival PDF Format",
-      "metaDescription": "Convert standard PDF files to PDF/A archival format. Ensure long-term preservation and compliance. Free, browser-based conversion.",
+      "metaDescription": "Turn a PDF into an archival copy tagged as PDF/A-2b in its metadata. Check strict compliance with a validator. Free, in your browser, no upload.",
       "faqs": [
         {
           "q": "What is PDF/A?",
@@ -957,7 +1029,11 @@
         },
         {
           "q": "Why should I convert to PDF/A?",
-          "a": "Many industries require PDF/A for document retention. It ensures fonts are embedded, colors are defined, and the document is self-contained."
+          "a": "Many courts, archives and records systems ask for PDF/A, which requires embedded fonts, defined colors and no encryption. This tool copies your pages and adds the PDF/A identification; it does not embed missing fonts or add a color profile."
+        },
+        {
+          "q": "Is the result guaranteed to pass a PDF/A validator?",
+          "a": "Not always. The tool adds PDF/A identification metadata, but a source file with missing fonts or transparency may still fail strict checks, so verify with a validator such as veraPDF if an archive requires it."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Can I convert specific pages?",
           "a": "The whole document is converted. To convert only some pages, run Extract Pages first and convert that file."
+        },
+        {
+          "q": "Can I use the Markdown with ChatGPT or other AI tools?",
+          "a": "Yes. The output is plain text in one section per page (## Page 1, ## Page 2 …), which AI assistants and note apps read cleanly. The conversion itself runs in your browser."
         }
       ],
       "howTo": {
@@ -1015,11 +1095,15 @@
       "faqs": [
         {
           "q": "Can I edit any PDF?",
-          "a": "Any digitally-created PDF with selectable text can be edited. Scanned PDFs need OCR first to make text editable."
+          "a": "Any digitally created PDF with selectable text can be edited. A scanned PDF is a picture of text, so there are no words to change in place."
         },
         {
           "q": "Will editing change the formatting?",
-          "a": "Direct editing preserves the original formatting. Only the text you change is affected — fonts, spacing, and layout remain intact."
+          "a": "Only the text you change is redrawn; the rest of the page is copied through untouched. Edited text reuses the font the PDF already embeds where it can; if that font lacks a character you type, a similar standard font is used, so check edited lines before sending."
+        },
+        {
+          "q": "Can I edit a scanned PDF?",
+          "a": "Not directly. A scan is a picture of text, so there are no words to change in place. Use OCR PDF to make it searchable and copy the text out, then edit it in a word processor."
         }
       ],
       "howTo": {
@@ -1041,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "rotate-pdf",
       "name": "Rotate PDF",
-      "description": "Rotate PDF pages to any angle",
-      "seoTitle": "Rotate PDF — Rotate PDF Pages to Any Angle",
+      "description": "Rotate PDF pages by 90°, 180° or 270°",
+      "seoTitle": "Rotate PDF — Rotate Pages 90°, 180° or 270° Free",
       "metaDescription": "Rotate individual pages or all pages in a PDF. Fix sideways scans, correct orientation, and adjust page angles. Free, no sign-up.",
       "faqs": [
         {
@@ -1052,6 +1136,10 @@
         {
           "q": "Will rotation affect print quality?",
           "a": "No. Rotation is a metadata change that instructs the viewer how to display the page. The content is not re-rendered."
+        },
+        {
+          "q": "Is the rotation permanent?",
+          "a": "Yes. The new orientation is saved in the downloaded PDF, so it opens the right way up in every viewer."
         }
       ],
       "howTo": {
@@ -1075,7 +1163,7 @@
       "name": "Add Page Numbers",
       "description": "Insert page numbers into your PDF",
       "seoTitle": "Add Page Numbers to PDF — Insert Page Numbers Free",
-      "metaDescription": "Add page numbers to any position in your PDF. Choose the format, position, and starting number. Free, browser-based, no upload required.",
+      "metaDescription": "Add page numbers to your PDF in one of six positions. Choose the format (1, Page 1 or 1 of N) and the starting number. Free, no upload required.",
       "faqs": [
         {
           "q": "Where can I place page numbers?",
@@ -1083,7 +1171,11 @@
         },
         {
           "q": "Can I skip numbering on the first page?",
-          "a": "Yes. Select the option to start numbering from a specific page, such as page 2 or 3, to skip cover pages."
+          "a": "Not directly: every page gets a number, and \"Start numbering at\" only changes the first number. To leave a cover unnumbered, split it off with Split PDF, number the rest starting at 2, then join them again with Merge PDF."
+        },
+        {
+          "q": "Is my PDF uploaded to add page numbers?",
+          "a": "No. The numbers are drawn onto the pages in your browser, so the file never leaves your device."
         }
       ],
       "howTo": {
@@ -1105,7 +1197,7 @@
     "add-watermark": {
       "slug": "add-watermark",
       "name": "Add Watermark",
-      "description": "Add text or image watermarks",
+      "description": "Stamp a text watermark on every page",
       "seoTitle": "Add Watermark to PDF — Free Text Watermark Tool",
       "metaDescription": "Stamp a text watermark such as CONFIDENTIAL or DRAFT on every page of a PDF. Set opacity and size. Free, no sign-up, and no upload.",
       "faqs": [
@@ -1116,6 +1208,10 @@
         {
           "q": "Can I watermark all pages at once?",
           "a": "Yes. The watermark is applied to every page in the document simultaneously."
+        },
+        {
+          "q": "Can a watermark be removed later?",
+          "a": "A text watermark is drawn into the page content, so it cannot be switched off like a comment. Someone with editing software can still cover it, so treat it as a deterrent rather than protection."
         }
       ],
       "howTo": {
@@ -1143,11 +1239,15 @@
       "faqs": [
         {
           "q": "Can I crop all pages at once?",
-          "a": "Yes. Apply the same crop area to every page, or set different crops for individual pages."
+          "a": "Yes — the margins you set are always trimmed from every page. Different crops for individual pages are not supported; split the PDF first if some pages need other margins."
         },
         {
           "q": "Does cropping delete content?",
-          "a": "Cropping hides the content outside the crop area. The hidden content is not deleted and can be uncropped later."
+          "a": "No. Cropping shrinks the visible page area, but the content outside it stays in the file, and some editors can reveal it again. Never crop to hide sensitive information — use Redact PDF for that."
+        },
+        {
+          "q": "Can I crop a PDF on my phone?",
+          "a": "Yes. Crop PDF runs in your phone's browser, so you can trim margins without installing an app or uploading the file."
         }
       ],
       "howTo": {
@@ -1169,17 +1269,21 @@
     "sign-pdf": {
       "slug": "sign-pdf",
       "name": "Sign PDF",
-      "description": "Add digital signatures to PDFs",
+      "description": "Place your drawn, typed or uploaded signature on a PDF",
       "seoTitle": "Sign PDF — Add Electronic Signatures Free Online",
-      "metaDescription": "Add electronic signatures to PDF documents. Draw, type, or upload your signature. Legally valid, free, no sign-up required.",
+      "metaDescription": "Sign a PDF online: draw, type or upload your signature and place it on any page. Free, no sign-up, and your signature is never uploaded.",
       "faqs": [
         {
           "q": "Are electronic signatures legally valid?",
-          "a": "Yes. Electronic signatures are legally valid under the US ESIGN Act and EU eIDAS for virtually all documents."
+          "a": "For most everyday documents, yes: laws such as the US ESIGN Act and EU eIDAS accept simple electronic signatures. This tool places an image of your signature with no certificate or audit trail, so use a certified e-signature service when a qualified or certificate-based signature is required."
         },
         {
           "q": "Can I sign a password-protected PDF?",
           "a": "You need to unlock it first. Password-protected PDFs cannot be edited until the password is removed."
+        },
+        {
+          "q": "How can I create my signature?",
+          "a": "Draw it with a mouse or finger, type your name in a handwriting font, or upload a photo of your real signature. It is placed on the page in your browser and never stored on a server."
         }
       ],
       "howTo": {
@@ -1247,15 +1351,19 @@
       "name": "Unlock PDF",
       "description": "Remove password protection from PDF",
       "seoTitle": "Unlock PDF — Remove Password Protection Free",
-      "metaDescription": "Remove password protection from PDF documents. Unlock encrypted PDFs for editing, printing, or sharing. Free, no sign-up required.",
+      "metaDescription": "Remove the password and the print, copy or edit restrictions from a PDF you have the right to unlock. Free, no sign-up, runs in your browser.",
       "faqs": [
         {
           "q": "Do I need the password to unlock a PDF?",
-          "a": "Yes. You must know the current password to remove it. There is no way to bypass PDF encryption without the password."
+          "a": "Only if the PDF asks for a password to open. Files that open freely but block printing, copying or editing are unlocked without one. An open password cannot be bypassed: without it, the file stays locked."
         },
         {
           "q": "Will unlocking change the PDF content?",
-          "a": "No. Unlocking only removes the password protection. The document content remains unchanged."
+          "a": "The pages look the same, but each one is rebuilt as a high-resolution image with an invisible text layer: text stays searchable and copyable but is no longer editable as text, and links and form fields are not kept. The file may also get larger."
+        },
+        {
+          "q": "Is it safe to enter my PDF password here?",
+          "a": "Yes. The password and the file stay in your browser and are never sent to a server."
         }
       ],
       "howTo": {
@@ -1278,23 +1386,27 @@
       "name": "Protect PDF",
       "description": "Add password protection to PDF",
       "seoTitle": "Protect PDF — Add Password Protection Free",
-      "metaDescription": "Add password protection to PDF documents. Encrypt your files with AES-256 encryption. Free, browser-based, no upload required.",
+      "metaDescription": "Add a password to a PDF so it can't be opened without it. Standard 128-bit PDF encryption, applied in your browser. Free, no sign-up, no upload required.",
       "faqs": [
         {
           "q": "How strong is PDF password protection?",
-          "a": "Modern PDF encryption uses AES-256, the same standard used by banks and governments. A strong password makes brute-force attacks impractical."
+          "a": "Slate PDF applies standard 128-bit RC4 PDF encryption, which every PDF reader can open. It stops casual access, but RC4 is an older algorithm: for highly sensitive files use a long, unique password, or a tool that offers AES-256."
         },
         {
           "q": "What happens if I forget the password?",
           "a": "There is no recovery mechanism. The file is permanently inaccessible without the password. Always store it somewhere safe."
+        },
+        {
+          "q": "Is my PDF uploaded to add a password?",
+          "a": "No. Encryption happens in your browser, so the unprotected file and the password never leave your device."
         }
       ],
       "howTo": {
         "title": "How to password protect a PDF",
-        "intro": "Protect PDF encrypts a PDF with a password to open it, a password to change its permissions, or both — and can block printing, copying or editing.",
+        "intro": "Protect PDF encrypts a PDF so it needs a password to open, with an optional separate owner password, and can block printing, copying or editing.",
         "steps": [
           "Choose your PDF",
-          "Enter an open password, an owner password, or both",
+          "Enter the open password, and optionally a different owner password",
           "Optionally open the permission settings to restrict printing, copying and editing",
           "Click Protect PDF to download the encrypted file"
         ],
@@ -1319,6 +1431,10 @@
         {
           "q": "Can I compare scanned PDFs?",
           "a": "Run OCR PDF on both scans first. Comparison works on the text inside the files, so image-only scans have nothing to compare."
+        },
+        {
+          "q": "Are both PDFs uploaded to compare them?",
+          "a": "No. Both files are read and compared in your browser, so neither one leaves your device."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Is my document sent to a server?",
           "a": "No. The summary is computed in your browser, and the PDF never leaves your device."
+        },
+        {
+          "q": "Can it summarize a scanned PDF?",
+          "a": "Not directly. A scanned PDF has no text layer to read. Run it through OCR PDF first, then summarize the searchable result."
         }
       ],
       "howTo": {
@@ -1370,8 +1490,8 @@
     "translate-pdf": {
       "slug": "translate-pdf",
       "name": "Translate PDF",
-      "description": "Translate PDF content to any language",
-      "seoTitle": "Translate PDF — Translate PDF Content to Any Language",
+      "description": "Translate PDF text into 42 languages",
+      "seoTitle": "Translate PDF — Translate PDF Text Into 42 Languages",
       "metaDescription": "Translate the text of a PDF into 42 languages and download it as a new PDF. Free, no sign-up. Text is sent to a translation service.",
       "faqs": [
         {

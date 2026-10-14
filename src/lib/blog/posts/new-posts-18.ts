@@ -4,7 +4,7 @@ export const newPosts18: BlogPost[] = [
   {
     slug: 'how-to-convert-a-scanned-pdf-to-a-word-document',
     title: 'How to Convert a Scanned PDF to a Word Document (Free)',
-    description: 'Turn a scanned PDF into an editable Word document for free — run OCR so the scan becomes readable, then convert it to DOCX, all in your browser with no upload.',
+    description: 'Turn a scanned PDF into an editable Word document for free: run OCR so the scan becomes readable, then convert it to DOCX in your browser, with no upload.',
     keyword: 'how to convert a scanned pdf to a word document',
     category: 'Converting',
     published: '2026-09-24',

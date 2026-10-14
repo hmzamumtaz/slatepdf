@@ -64,6 +64,18 @@
     "whyToolHeading": "Varför använda {tool} här?",
     "faqHeading": "{tool} – vanliga frågor",
     "continueHeading": "Fortsätt med ett annat verktyg",
+    "glanceHeading": "{tool} i korthet",
+    "glancePrice": "Pris",
+    "glancePriceValue": "Gratis, utan betalversion och utan användningsgräns",
+    "glanceFile": "Din fil",
+    "glanceFileValue": "Bearbetas i webbläsaren, laddas aldrig upp",
+    "glanceFileTranslate": "Läses i webbläsaren; bara den extraherade texten skickas till en översättningstjänst",
+    "glanceAccount": "Konto",
+    "glanceAccountValue": "Behövs inte",
+    "glanceWatermark": "Vattenstämpel",
+    "glanceWatermarkValue": "Ingen läggs till i din fil",
+    "glanceDevices": "Fungerar på",
+    "glanceDevicesValue": "Alla moderna webbläsare på Windows, Mac, Linux, Android och iPhone",
     "seeAllTools": "Se alla {count} PDF-verktyg"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Laddas mitt dokument upp till en server?",
           "a": "Nej. Varje åtgärd körs i din webbläsare. Ditt dokument lämnar aldrig din enhet, vilket gör arbetsytan perfekt för konfidentiellt och känsligt arbete."
+        },
+        {
+          "q": "Är PDF-arbetsytan gratis, och behöver jag ett konto?",
+          "a": "Den är gratis, utan konto, utan vattenstämpel och utan gräns för hur många dokument du arbetar med. Öppna en PDF och börja redigera."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Försämras kvaliteten när man delar en PDF?",
           "a": "Nej. Delningen kopierar hela sidobjekt till nya dokument. Texten går fortfarande att markera och bilderna behåller sin ursprungliga upplösning."
+        },
+        {
+          "q": "Kan jag dela en PDF i mobilen utan app?",
+          "a": "Ja. Dela PDF körs i webbläsaren på Android och iPhone, så du kan dela en fil utan att installera något eller ladda upp den."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Är det samma sak som att dela?",
           "a": "Nej. Att dela skapar separata filer av valda sidor. Att ta bort raderar sidor ur dokumentet och behåller resten som en enda fil."
+        },
+        {
+          "q": "Är det säkert att ta bort sidor ur en konfidentiell PDF här?",
+          "a": "Ja. Sidorna tas bort i webbläsaren och filen lämnar aldrig din enhet, så ingenting sparas på en server."
         }
       ],
       "howTo": {
@@ -246,7 +270,11 @@
         },
         {
           "q": "Kan jag extrahera sidor i en annan ordning?",
-          "a": "Ja. Ange sidorna i den ordning du vill ha dem. Skriver du 9, 3, 5 får du en fil med sidorna i just den ordningen."
+          "a": "Nej. Sidorna kommer alltid i sin ursprungliga ordning, och en sida som anges två gånger tas med en gång, så 9, 3, 5 ger sidorna 3, 5 och 9. Vill du ändra ordningen kör du resultatet genom Sortera PDF-sidor."
+        },
+        {
+          "q": "Är det gratis att extrahera sidor, utan vattenstämpel?",
+          "a": "Ja. Extraheringen är gratis utan konto, och den nya PDF:en får ingen vattenstämpel eller tillagd logotyp."
         }
       ],
       "howTo": {
@@ -268,7 +296,7 @@
     "organize-pdf": {
       "slug": "sortera-sidor-pdf",
       "name": "Sortera PDF-sidor",
-      "description": "Ändra ordning på, rotera och hantera sidor",
+      "description": "Ändra sidordningen och ta bort sidor du inte behöver",
       "seoTitle": "Sortera PDF-sidor – ändra ordning och ta bort sidor gratis",
       "metaDescription": "Ändra ordningen på sidorna i en PDF och ta bort dem du inte behöver, i ett steg. Gratis, utan konto, och filen lämnar aldrig din webbläsare.",
       "faqs": [
@@ -304,17 +332,17 @@
     "compress-pdf": {
       "slug": "komprimera-pdf",
       "name": "Komprimera PDF",
-      "description": "Minska filstorleken med bibehållen kvalitet",
-      "seoTitle": "Komprimera PDF – minska filstorleken utan kvalitetsförlust",
-      "metaDescription": "Minska storleken på en PDF med upp till 80 % utan synlig kvalitetsförlust. Gratis komprimering i webbläsaren. Ingen uppladdning, inget konto.",
+      "description": "Krymp en PDF till den filstorlek du behöver",
+      "seoTitle": "Komprimera PDF – krymp en PDF till den storlek du behöver",
+      "metaDescription": "Krymp en PDF till en målstorlek i MB eller KB. Först provas en förlustfri ombyggnad; sidor blir bilder bara när det behövs. Gratis, ingen uppladdning, inget konto.",
       "faqs": [
         {
           "q": "Försämras kvaliteten när jag komprimerar en PDF?",
-          "a": "På den rekommenderade komprimeringsnivån kodas bilderna om till 150 DPI – visuellt identiskt med originalet för visning på skärm och vanlig utskrift."
+          "a": "Det beror på storleken du väljer. Verktyget försöker först en förlustfri ombyggnad som inte ändrar något synligt. Räcker inte det ritar det om varje sida som bild i den högsta upplösning som ryms i ditt mål, med ett osynligt textlager så att texten förblir sökbar. Ett generöst mål ser identiskt ut; ett mycket litet ser mjukare ut."
         },
         {
           "q": "Hur mycket mindre blir min PDF?",
-          "a": "PDF-filer med mycket foton krymper 60–80 %. Filer med bara text krymper 10–30 %. Skannade dokument kan krympa upp till 90 %."
+          "a": "Det beror på filen, så verktyget lovar ingen procentsats: du väljer målet. Räcker inte en förlustfri ombyggnad renderas sidorna om som bilder med gradvis lägre kvalitet tills filen får plats, och resultatet visar den storlek som faktiskt nåddes."
         },
         {
           "q": "Kan jag komprimera en lösenordsskyddad PDF?",
@@ -340,17 +368,21 @@
     "optimize-pdf": {
       "slug": "optimera-pdf",
       "name": "Optimera PDF",
-      "description": "Optimera PDF för webben och snabbare laddning",
-      "seoTitle": "Optimera PDF – snabbare PDF för webben och laddning",
-      "metaDescription": "Optimera PDF-filer för webben och snabbare laddning. Minska renderingstiden, platta till lager och effektivisera dokumentets struktur.",
+      "description": "Packa om en PDF förlustfritt för att minska storleken",
+      "seoTitle": "Optimera PDF – packa om en PDF förlustfritt (gratis)",
+      "metaDescription": "Packa om en PDF förlustfritt: komprimerade objektströmmar, oanvända objekt och gamla revisioner borttagna, metadata rensas om du vill. Text och bilder orörda.",
       "faqs": [
         {
           "q": "Vad gör PDF-optimering?",
-          "a": "Optimeringen tar bort oanvända objekt, plattar till interaktiva lager, delmängdsbäddar in typsnitt och effektiviserar den interna strukturen för snabbare rendering."
+          "a": "Filen byggs om med komprimerade objektströmmar, vilket tar bort oanvända objekt och gamla sparade revisioner, och kan om du vill rensa metadata som titel och författare. Lager plattas inte ut, typsnitt delmängdsbäddas inte och bilder kodas inte om. Blir det ingen vinst får du tillbaka originalfilen oförändrad."
         },
         {
           "q": "Är optimering samma sak som komprimering?",
-          "a": "Komprimering minskar filstorleken genom att koda om bilder. Optimering fokuserar på strukturella förbättringar som gör att filen laddas och renderas snabbare."
+          "a": "Nej. Komprimera PDF arbetar mot en målstorlek och kan göra om sidor till bilder för att nå den. Optimering packar bara om filstrukturen förlustfritt, så besparingen är oftast mindre, men inget synligt ändras."
+        },
+        {
+          "q": "Går en optimerad PDF fortfarande att öppna i alla PDF-läsare?",
+          "a": "Ja. Optimeringen behåller filen som en vanlig PDF, så den öppnas i Adobe Reader, webbläsare, Preview och mobilappar precis som förut."
         }
       ],
       "howTo": {
@@ -374,7 +406,7 @@
       "name": "Reparera PDF",
       "description": "Laga skadade eller trasiga PDF-filer",
       "seoTitle": "Reparera PDF – laga skadade eller trasiga PDF-filer",
-      "metaDescription": "Reparera skadade eller trasiga PDF-filer. Laga felaktiga filhuvuden, rädda läsbart innehåll och återställ skadade dokument. Gratis onlineverktyg.",
+      "metaDescription": "Reparera skadade PDF-filer: bygg om korsreferenstabellen och strukturen, eller rädda sidorna i svårt skadade filer. Gratis, ingen uppladdning.",
       "faqs": [
         {
           "q": "Varför blir en PDF skadad?",
@@ -383,6 +415,10 @@
         {
           "q": "Kan reparationen återställa allt innehåll?",
           "a": "Reparationen bygger om PDF-filens struktur. Hur mycket som kan räddas beror på hur mycket av originaldata som fortfarande är intakt."
+        },
+        {
+          "q": "Laddas min skadade PDF upp för att repareras?",
+          "a": "Nej. Reparationen körs i webbläsaren, så ett skadat avtal eller kontoutdrag lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -405,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Extrahera text ur skannade dokument",
       "seoTitle": "OCR PDF – extrahera text ur skannade dokument gratis",
-      "metaDescription": "Gör skannade dokument till sökbar, markerbar text med OCR. Gör skannade PDF-filer sökbara och redigerbara. Gratis, ingen uppladdning.",
+      "metaDescription": "Gör skannade PDF:er sökbara med OCR: ett osynligt textlager som du kan söka i, markera och kopiera. Upp till 3 av 44 språk. Gratis, ingen uppladdning.",
       "faqs": [
         {
           "q": "Vad är OCR?",
@@ -413,7 +449,11 @@
         },
         {
           "q": "Hur exakt är OCR?",
-          "a": "Precisionen beror på skanningens kvalitet. Tydliga skanningar med hög upplösning ger normalt 95–99 % precision. Skanningar av dålig kvalitet kan ge fler fel."
+          "a": "Det beror på skanningen. Skarpa, väl belysta och raka sidor med tryckt text läses bra; låg upplösning, handskrift, sned sida eller brus ger fler fel. Kontrollera viktig text mot sidbilden innan du litar på den."
+        },
+        {
+          "q": "Laddar OCR PDF upp mina skanningar?",
+          "a": "Nej. Igenkänningsmotorn och språkdatan laddas ner till webbläsaren en gång, och sedan läses varje sida på din egen enhet."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Kan jag samla flera bilder i en PDF?",
           "a": "Ja. Lägg till alla dina JPG-bilder, ordna dem och konvertera. Varje bild blir en sida i den färdiga PDF:en."
+        },
+        {
+          "q": "Kan jag göra om foton till PDF i mobilen?",
+          "a": "Ja. Öppna JPG till PDF i mobilens webbläsare, välj foton från galleriet och ladda ner en enda PDF. Ingenting laddas upp."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Behöver jag ha Microsoft Word installerat?",
           "a": "Nej. Konverteringen sker i din webbläsare. Ingen programvara behöver installeras."
+        },
+        {
+          "q": "Laddas mitt Word-dokument upp för att konverteras?",
+          "a": "Nej. DOCX-filen läses och görs om till PDF i webbläsaren, så den lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Kan jag konvertera vissa bilder?",
           "a": "Hela presentationen konverteras. Vill du bara ha vissa bilder extraherar du dem efter konverteringen med verktyget Extrahera sidor."
+        },
+        {
+          "q": "Laddas min presentation upp för att konverteras?",
+          "a": "Nej. PPTX-filen konverteras i webbläsaren och lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -586,11 +638,15 @@
       "faqs": [
         {
           "q": "Behålls mina formler?",
-          "a": "Formlerna beräknas och sparas som sina resultatvärden i PDF:en. Själva formlerna behålls inte eftersom PDF är ett statiskt format."
+          "a": "Nej. PDF:en visar det senast beräknade värdet som sparats i filen för varje formel; själva formlerna behålls inte. Har en arbetsbok aldrig räknats om (till exempel om ett skript skapade den), öppna och spara den i Excel först."
         },
         {
           "q": "Kan jag konvertera vissa kalkylblad?",
           "a": "Hela arbetsboken konverteras. För enskilda blad kan du behöva spara dem som en separat fil först."
+        },
+        {
+          "q": "Laddas mitt kalkylark upp för att konverteras?",
+          "a": "Nej. XLSX-filen läses och görs om till PDF i webbläsaren, så ekonomiska uppgifter lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -611,17 +667,21 @@
     "html-to-pdf": {
       "slug": "html-till-pdf",
       "name": "HTML till PDF",
-      "description": "Konvertera webbsidor till PDF",
+      "description": "Konvertera HTML-kod eller .html-filer till PDF",
       "seoTitle": "HTML till PDF – konvertera webbsidor till PDF gratis",
-      "metaDescription": "Konvertera webbsidor till PDF. Spara artiklar, kvitton och annat innehåll från webben som PDF-dokument. Gratis, i webbläsaren, ingen installation.",
+      "metaDescription": "Konvertera inklistrad HTML eller en .html-fil till PDF, som exakt designkopia eller med markerbar text. Gratis, i webbläsaren, ingen installation.",
       "faqs": [
         {
-          "q": "Kan jag konvertera vilken webbsida som helst?",
-          "a": "Ja. Ange webbadressen till en offentligt tillgänglig webbsida så konverteras den till PDF-format."
+          "q": "Kan jag konvertera en live-webbsida från dess URL?",
+          "a": "Nej. HTML till PDF konverterar HTML som du klistrar in eller en .html-fil som du väljer. För en live-sida använder du Skriv ut > Spara som PDF i webbläsaren, eller sparar sidan som HTML och konverterar den filen här."
         },
         {
           "q": "Kommer PDF:en att se ut som webbsidan?",
           "a": "PDF:en fångar sidans renderade innehåll. Komplexa layouter kan skilja sig något från originalet."
+        },
+        {
+          "q": "Måste jag installera något för att konvertera HTML till PDF?",
+          "a": "Nej. Klistra in HTML-koden eller välj en .html-fil så skapas PDF:en i webbläsaren, utan program, tillägg eller konto."
         }
       ],
       "howTo": {
@@ -645,7 +705,7 @@
       "name": "HEIC till PDF",
       "description": "Konvertera HEIC-bilder från Apple till PDF",
       "seoTitle": "HEIC till PDF – konvertera iPhone-bilder till PDF gratis",
-      "metaDescription": "Konvertera HEIC- och HEIF-foton från iPhone och iPad till PDF-dokument. Gratis, i webbläsaren, ingen uppladdning. Bildkvaliteten behålls.",
+      "metaDescription": "Konvertera HEIC- och HEIF-foton från iPhone och iPad till PDF, en PDF per foto i full upplösning. Gratis, i webbläsaren, ingen uppladdning.",
       "faqs": [
         {
           "q": "Vad är en HEIC-fil?",
@@ -657,7 +717,7 @@
         },
         {
           "q": "Försämras bildkvaliteten vid konverteringen?",
-          "a": "Nej. HEIC-bilden avkodas och bäddas in i PDF:en i sin ursprungliga upplösning. Den visuella kvaliteten behålls."
+          "a": "Mycket lite. Varje foto behåller full upplösning men kodas om till JPEG med hög kvalitet (92 %) i PDF:en, eftersom PDF inte kan lagra HEIC direkt. Skillnaden syns knappt."
         }
       ],
       "howTo": {
@@ -688,11 +748,11 @@
         },
         {
           "q": "Försämras kvaliteten när man konverterar WebP till PDF?",
-          "a": "Nej. WebP-bilden avkodas och bäddas in i PDF:en i sin ursprungliga upplösning utan att komprimeras om."
+          "a": "Nej. Varje WebP avkodas och lagras förlustfritt (som PNG) i full pixelupplösning, centreras på en A4-sida och skalas bara ner om den är större än sidan."
         },
         {
           "q": "Kan jag konvertera flera WebP-filer samtidigt?",
-          "a": "Ja. Välj flera WebP-bilder så samlas de i en PDF med flera sidor, en bild per sida."
+          "a": "Ja. Välj flera WebP-bilder så blir var och en en egen PDF; ladda ner dem en och en eller som ZIP. För en enda PDF med flera sidor använder du JPG till PDF, som också tar emot WebP."
         }
       ],
       "howTo": {
@@ -727,7 +787,7 @@
         },
         {
           "q": "Kan jag konvertera flera TIFF-filer samtidigt?",
-          "a": "Ja. Välj flera TIFF-filer så konverteras var och en, med alla sidor samlade i en enda PDF."
+          "a": "Ja. Välj flera TIFF-filer så blir var och en en egen PDF med alla sina sidor. Ladda ner dem en och en eller som ZIP, och använd sedan Slå ihop PDF om du vill ha en enda fil."
         }
       ],
       "howTo": {
@@ -762,7 +822,7 @@
         },
         {
           "q": "Är det gratis att använda?",
-          "a": "Ja. Konvertering från SVG till PDF är helt gratis, utan begränsningar, utan vattenstämplar och utan konto."
+          "a": "Ja. Att konvertera SVG till PDF är helt gratis, utan daglig gräns, utan vattenstämpel och utan registrering."
         }
       ],
       "howTo": {
@@ -820,15 +880,19 @@
       "name": "PDF till JPG",
       "description": "Konvertera PDF-sidor till JPG-bilder",
       "seoTitle": "PDF till JPG – konvertera PDF-sidor till bilder gratis",
-      "metaDescription": "Konvertera PDF-sidor till JPG-bilder av hög kvalitet. Spara alla sidor eller bara vissa som bilder. Gratis, inget konto, inga vattenstämplar.",
+      "metaDescription": "Konvertera varje sida i en PDF till en JPG- eller PNG-bild i 144 eller 216 DPI. Gratis, utan konto, utan vattenstämpel, och PDF:en lämnar aldrig din webbläsare.",
       "faqs": [
         {
           "q": "Vilken upplösning får bilderna?",
-          "a": "Bilderna extraheras i den högsta upplösning som finns i PDF:en, normalt 150–300 DPI beroende på källan."
+          "a": "Sidorna renderas i 144 DPI (Standard) eller 216 DPI (Hög), oavsett källa. Hög ger skarpare text och större filer."
         },
         {
           "q": "Kan jag konvertera vissa sidor?",
-          "a": "Ja. Välj att konvertera alla sidor eller ange ett sidintervall för att bara få de sidor du behöver."
+          "a": "Alla sidor konverteras. Vill du bara ha vissa sidor använder du Extrahera sidor först och konverterar den filen, eller laddar bara ner de sidbilder du behöver."
+        },
+        {
+          "q": "Laddas min PDF upp för att konverteras till JPG?",
+          "a": "Nej. Varje sida renderas till en bild i webbläsaren, så PDF:en lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Fungerar det med skannade PDF-filer?",
           "a": "Skannade PDF-filer behöver OCR först för att texten ska kunna extraheras. Kör OCR och konvertera sedan resultatet till Word för bäst resultat."
+        },
+        {
+          "q": "Laddas min PDF upp för att konverteras till Word?",
+          "a": "Nej. Texten extraheras och DOCX-filen byggs i webbläsaren, så PDF:en lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Kan jag redigera bilderna efteråt?",
           "a": "Ja. Resultatet är en vanlig PPTX-fil som du kan redigera i alla program som är kompatibla med PowerPoint."
+        },
+        {
+          "q": "Laddas min PDF upp för att konverteras till PowerPoint?",
+          "a": "Nej. Bilderna skapas i webbläsaren, så PDF:en lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -949,7 +1021,7 @@
       "name": "PDF till PDF/A",
       "description": "Konvertera PDF till arkivformatet PDF/A",
       "seoTitle": "PDF till PDF/A – konvertera till arkivformat gratis",
-      "metaDescription": "Konvertera vanliga PDF-filer till arkivformatet PDF/A för långtidsbevarande och efterlevnad av krav. Gratis konvertering i webbläsaren.",
+      "metaDescription": "Gör en PDF till en arkivkopia märkt som PDF/A-2b i sina metadata. Kontrollera strikt efterlevnad med en validerare. Gratis, i webbläsaren, ingen uppladdning.",
       "faqs": [
         {
           "q": "Vad är PDF/A?",
@@ -957,7 +1029,11 @@
         },
         {
           "q": "Varför ska jag konvertera till PDF/A?",
-          "a": "Många branscher kräver PDF/A för dokumentlagring. Formatet säkerställer att typsnitt är inbäddade, att färger är definierade och att dokumentet är fristående."
+          "a": "Många domstolar, arkiv och diariesystem kräver PDF/A, som förutsätter inbäddade typsnitt, definierade färger och ingen kryptering. Det här verktyget kopierar dina sidor och lägger till PDF/A-identifieringen; det bäddar inte in saknade typsnitt och lägger inte till någon färgprofil."
+        },
+        {
+          "q": "Är resultatet garanterat godkänt av en PDF/A-validerare?",
+          "a": "Inte alltid. Verktyget lägger till PDF/A-metadata, men en källfil med saknade typsnitt eller transparens kan ändå underkännas i strikta kontroller. Kontrollera med en validerare som veraPDF om ett arkiv kräver det."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Kan jag konvertera vissa sidor?",
           "a": "Hela dokumentet konverteras. Vill du bara konvertera vissa sidor kör du Extrahera sidor först och konverterar den filen."
+        },
+        {
+          "q": "Kan jag använda Markdown med ChatGPT eller andra AI-verktyg?",
+          "a": "Ja. Resultatet är ren text med ett avsnitt per sida (## Page 1, ## Page 2 …), som AI-assistenter och anteckningsappar läser rent. Konverteringen körs i din webbläsare."
         }
       ],
       "howTo": {
@@ -1015,11 +1095,15 @@
       "faqs": [
         {
           "q": "Kan jag redigera vilken PDF som helst?",
-          "a": "Alla digitalt skapade PDF-filer med markerbar text kan redigeras. Skannade PDF-filer behöver OCR först för att texten ska bli redigerbar."
+          "a": "Alla digitalt skapade PDF:er med markerbar text kan redigeras. En skannad PDF är en bild av text, så det finns inga ord att ändra direkt."
         },
         {
           "q": "Ändras formateringen när jag redigerar?",
-          "a": "Direkt redigering behåller den ursprungliga formateringen. Bara texten du ändrar påverkas – typsnitt, avstånd och layout förblir intakta."
+          "a": "Bara texten du ändrar ritas om; resten av sidan kopieras oförändrad. Redigerad text använder om möjligt typsnittet som redan är inbäddat i PDF:en; saknar det ett tecken du skriver används ett liknande standardtypsnitt, så kontrollera redigerade rader innan du skickar."
+        },
+        {
+          "q": "Kan jag redigera en skannad PDF?",
+          "a": "Inte direkt. En skanning är en bild av text, så det finns inga ord att ändra på plats. Använd OCR PDF för att göra den sökbar och kopiera ut texten, och redigera den sedan i ett ordbehandlingsprogram."
         }
       ],
       "howTo": {
@@ -1041,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "rotera-pdf",
       "name": "Rotera PDF",
-      "description": "Rotera PDF-sidor i valfri vinkel",
-      "seoTitle": "Rotera PDF – vrid PDF-sidor och spara gratis",
+      "description": "Rotera PDF-sidor 90°, 180° eller 270°",
+      "seoTitle": "Rotera PDF – rotera sidor 90°, 180° eller 270° gratis",
       "metaDescription": "Rotera enskilda sidor eller alla sidor i en PDF. Rätta till skanningar som ligger på sned och korrigera sidornas riktning. Gratis, inget konto.",
       "faqs": [
         {
@@ -1052,6 +1136,10 @@
         {
           "q": "Påverkar rotationen utskriftskvaliteten?",
           "a": "Nej. Rotation är en ändring i metadata som talar om för visningsprogrammet hur sidan ska visas. Innehållet renderas inte om."
+        },
+        {
+          "q": "Är rotationen permanent?",
+          "a": "Ja. Den nya orienteringen sparas i den nedladdade PDF:en, så den visas rättvänd i alla läsare."
         }
       ],
       "howTo": {
@@ -1075,7 +1163,7 @@
       "name": "Lägg till sidnummer",
       "description": "Infoga sidnummer i din PDF",
       "seoTitle": "Lägg till sidnummer i PDF – numrera sidor gratis",
-      "metaDescription": "Lägg till sidnummer var som helst i din PDF. Välj format, position och startnummer. Gratis, i webbläsaren, ingen uppladdning.",
+      "metaDescription": "Lägg till sidnummer i din PDF på en av sex positioner. Välj format (1, Sida 1 eller 1 av N) och startnummer. Gratis, ingen uppladdning.",
       "faqs": [
         {
           "q": "Var kan jag placera sidnumren?",
@@ -1083,7 +1171,11 @@
         },
         {
           "q": "Kan jag hoppa över numreringen på första sidan?",
-          "a": "Ja. Välj att börja numreringen från en viss sida, till exempel sida 2 eller 3, för att hoppa över försättsblad."
+          "a": "Inte direkt: varje sida får ett nummer, och ”Börja numrera på” ändrar bara det första numret. Vill du ha ett omslag utan nummer delar du av det med Dela PDF, numrerar resten med start på 2 och slår sedan ihop dem igen med Slå ihop PDF."
+        },
+        {
+          "q": "Laddas min PDF upp för att lägga till sidnummer?",
+          "a": "Nej. Numren ritas på sidorna i webbläsaren, så filen lämnar aldrig din enhet."
         }
       ],
       "howTo": {
@@ -1105,7 +1197,7 @@
     "add-watermark": {
       "slug": "vattenstampel-pdf",
       "name": "Lägg till vattenstämpel",
-      "description": "Lägg till vattenstämplar med text eller bild",
+      "description": "Stämpla en textvattenstämpel på varje sida",
       "seoTitle": "Vattenstämpel på PDF – lägg till textvattenstämpel gratis",
       "metaDescription": "Stämpla en textvattenstämpel som KONFIDENTIELLT eller UTKAST på varje sida i en PDF. Välj opacitet och storlek. Gratis, inget konto, ingen uppladdning.",
       "faqs": [
@@ -1116,6 +1208,10 @@
         {
           "q": "Kan jag vattenstämpla alla sidor på en gång?",
           "a": "Ja. Vattenstämpeln läggs på alla sidor i dokumentet samtidigt."
+        },
+        {
+          "q": "Kan en vattenstämpel tas bort i efterhand?",
+          "a": "En textvattenstämpel ritas in i sidans innehåll, så den kan inte stängas av som en kommentar. Den som har redigeringsprogram kan ändå täcka över den, så se den som ett avskräckande medel snarare än ett skydd."
         }
       ],
       "howTo": {
@@ -1143,11 +1239,15 @@
       "faqs": [
         {
           "q": "Kan jag beskära alla sidor på en gång?",
-          "a": "Ja. Använd samma beskärningsområde på alla sidor, eller ställ in olika beskärning för enskilda sidor."
+          "a": "Ja – marginalerna du anger beskärs alltid från alla sidor. Olika beskärning för enskilda sidor stöds inte; dela PDF:en först om vissa sidor behöver andra marginaler."
         },
         {
           "q": "Raderas innehåll när jag beskär?",
-          "a": "Beskärningen döljer innehållet utanför beskärningsområdet. Det dolda innehållet raderas inte och kan visas igen senare."
+          "a": "Nej. Beskärning minskar sidans synliga yta, men innehållet utanför finns kvar i filen och vissa redigerare kan visa det igen. Beskär aldrig för att dölja känslig information – använd Maskera PDF för det."
+        },
+        {
+          "q": "Kan jag beskära en PDF i mobilen?",
+          "a": "Ja. Beskär PDF körs i mobilens webbläsare, så du kan klippa bort marginaler utan att installera en app eller ladda upp filen."
         }
       ],
       "howTo": {
@@ -1169,17 +1269,21 @@
     "sign-pdf": {
       "slug": "signera-pdf",
       "name": "Signera PDF",
-      "description": "Lägg till digitala signaturer i PDF",
+      "description": "Placera din ritade, skrivna eller uppladdade signatur på en PDF",
       "seoTitle": "Signera PDF – lägg till elektronisk signatur gratis online",
-      "metaDescription": "Lägg till elektroniska signaturer i PDF-dokument. Rita, skriv eller ladda upp din signatur. Juridiskt giltigt, gratis, inget konto behövs.",
+      "metaDescription": "Signera en PDF online: rita, skriv eller ladda upp din signatur och placera den på valfri sida. Gratis, utan konto, och din signatur laddas aldrig upp.",
       "faqs": [
         {
           "q": "Är elektroniska signaturer juridiskt giltiga?",
-          "a": "Ja. Elektroniska signaturer är juridiskt giltiga enligt amerikanska ESIGN Act och EU:s eIDAS för i stort sett alla dokument."
+          "a": "För de flesta vardagliga dokument, ja: lagar som amerikanska ESIGN Act och EU:s eIDAS godtar enkla elektroniska signaturer. Det här verktyget placerar en bild av din signatur utan certifikat eller granskningslogg, så använd en certifierad e-signaturtjänst när en kvalificerad eller certifikatbaserad signatur krävs."
         },
         {
           "q": "Kan jag signera en lösenordsskyddad PDF?",
           "a": "Du måste låsa upp den först. Lösenordsskyddade PDF-filer kan inte redigeras förrän lösenordet har tagits bort."
+        },
+        {
+          "q": "Hur skapar jag min signatur?",
+          "a": "Rita den med musen eller fingret, skriv ditt namn med ett handskriftsliknande typsnitt eller ladda upp ett foto av din riktiga namnteckning. Den placeras på sidan i webbläsaren och sparas aldrig på en server."
         }
       ],
       "howTo": {
@@ -1247,15 +1351,19 @@
       "name": "Lås upp PDF",
       "description": "Ta bort lösenordsskyddet från en PDF",
       "seoTitle": "Lås upp PDF – ta bort lösenordsskydd gratis",
-      "metaDescription": "Ta bort lösenordsskyddet från PDF-dokument. Lås upp krypterade PDF-filer för redigering, utskrift eller delning. Gratis, inget konto behövs.",
+      "metaDescription": "Ta bort lösenordet och begränsningarna för utskrift, kopiering eller redigering från en PDF du har rätt att låsa upp. Gratis, utan konto, i webbläsaren.",
       "faqs": [
         {
           "q": "Behöver jag lösenordet för att låsa upp en PDF?",
-          "a": "Ja. Du måste känna till det nuvarande lösenordet för att ta bort det. Det finns inget sätt att kringgå PDF-kryptering utan lösenordet."
+          "a": "Bara om PDF:en ber om ett lösenord för att öppnas. Filer som öppnas fritt men spärrar utskrift, kopiering eller redigering låses upp utan lösenord. Ett öppningslösenord går inte att kringgå: utan det förblir filen låst."
         },
         {
           "q": "Ändras innehållet i PDF:en när jag låser upp den?",
-          "a": "Nej. Upplåsningen tar bara bort lösenordsskyddet. Dokumentets innehåll förblir oförändrat."
+          "a": "Sidorna ser likadana ut, men varje sida byggs om som en högupplöst bild med ett osynligt textlager: texten går fortfarande att söka i och kopiera men kan inte längre redigeras som text, och länkar och formulärfält behålls inte. Filen kan också bli större."
+        },
+        {
+          "q": "Är det säkert att ange mitt PDF-lösenord här?",
+          "a": "Ja. Lösenordet och filen stannar i webbläsaren och skickas aldrig till en server."
         }
       ],
       "howTo": {
@@ -1278,23 +1386,27 @@
       "name": "Skydda PDF",
       "description": "Lösenordsskydda en PDF",
       "seoTitle": "Skydda PDF – lägg till lösenordsskydd gratis",
-      "metaDescription": "Lösenordsskydda PDF-dokument. Kryptera dina filer med AES-256-kryptering. Gratis, i webbläsaren, ingen uppladdning.",
+      "metaDescription": "Lägg till ett lösenord på en PDF så att den inte kan öppnas utan det. Standard 128-bitars PDF-kryptering i webbläsaren. Gratis, utan konto och utan uppladdning.",
       "faqs": [
         {
           "q": "Hur starkt är lösenordsskyddet för PDF?",
-          "a": "Modern PDF-kryptering använder AES-256, samma standard som banker och myndigheter använder. Ett starkt lösenord gör brute force-attacker ogenomförbara i praktiken."
+          "a": "Slate PDF använder standardiserad 128-bitars RC4-kryptering för PDF, som alla PDF-läsare kan öppna. Den stoppar tillfällig åtkomst, men RC4 är en äldre algoritm: för mycket känsliga filer, använd ett långt, unikt lösenord eller ett verktyg som erbjuder AES-256."
         },
         {
           "q": "Vad händer om jag glömmer lösenordet?",
           "a": "Det finns inget sätt att återställa det. Filen går inte att öppna utan lösenordet. Förvara det alltid på ett säkert ställe."
+        },
+        {
+          "q": "Laddas min PDF upp för att få ett lösenord?",
+          "a": "Nej. Krypteringen sker i webbläsaren, så den oskyddade filen och lösenordet lämnar aldrig din enhet."
         }
       ],
       "howTo": {
         "title": "Så lösenordsskyddar du en PDF",
-        "intro": "Skydda PDF krypterar en PDF med ett lösenord för att öppna den, ett lösenord för att ändra dess behörigheter, eller båda – och kan blockera utskrift, kopiering och redigering.",
+        "intro": "Skydda PDF krypterar en PDF så att den kräver ett lösenord för att öppnas, med ett valfritt separat ägarlösenord, och kan spärra utskrift, kopiering eller redigering.",
         "steps": [
           "Välj din PDF",
-          "Ange ett öppningslösenord, ett ägarlösenord eller båda",
+          "Ange öppningslösenordet och, om du vill, ett annat ägarlösenord",
           "Öppna vid behov behörighetsinställningarna för att begränsa utskrift, kopiering och redigering",
           "Klicka på Skydda PDF för att ladda ner den krypterade filen"
         ],
@@ -1319,6 +1431,10 @@
         {
           "q": "Kan jag jämföra skannade PDF-filer?",
           "a": "Kör OCR PDF på båda skanningarna först. Jämförelsen arbetar med texten i filerna, så skanningar som bara består av bilder har inget att jämföra."
+        },
+        {
+          "q": "Laddas båda PDF-filerna upp för att jämföras?",
+          "a": "Nej. Båda filerna läses och jämförs i webbläsaren, så ingen av dem lämnar din enhet."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Skickas mitt dokument till en server?",
           "a": "Nej. Sammanfattningen beräknas i din webbläsare, och PDF:en lämnar aldrig din enhet."
+        },
+        {
+          "q": "Kan den sammanfatta en skannad PDF?",
+          "a": "Inte direkt. En skannad PDF har inget textlager att läsa. Kör den först genom OCR PDF och sammanfatta sedan det sökbara resultatet."
         }
       ],
       "howTo": {
@@ -1370,8 +1490,8 @@
     "translate-pdf": {
       "slug": "oversatt-pdf",
       "name": "Översätt PDF",
-      "description": "Översätt PDF-innehåll till valfritt språk",
-      "seoTitle": "Översätt PDF – översätt PDF-innehåll till valfritt språk",
+      "description": "Översätt PDF-text till 42 språk",
+      "seoTitle": "Översätt PDF – översätt PDF-text till 42 språk",
       "metaDescription": "Översätt texten i en PDF till 42 språk och ladda ner den som en ny PDF. Gratis, inget konto. Texten skickas till en översättningstjänst.",
       "faqs": [
         {

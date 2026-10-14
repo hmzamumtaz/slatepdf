@@ -64,6 +64,18 @@
     "whyToolHeading": "Mengapa menggunakan {tool} di sini?",
     "faqHeading": "{tool} — pertanyaan yang sering diajukan",
     "continueHeading": "Lanjutkan dengan alat lain",
+    "glanceHeading": "Sekilas tentang {tool}",
+    "glancePrice": "Harga",
+    "glancePriceValue": "Gratis, tanpa paket berbayar dan tanpa batas pemakaian",
+    "glanceFile": "File Anda",
+    "glanceFileValue": "Diproses di browser Anda, tidak pernah diunggah",
+    "glanceFileTranslate": "Dibaca di browser Anda; hanya teks hasil ekstraksi yang dikirim ke layanan terjemahan",
+    "glanceAccount": "Akun",
+    "glanceAccountValue": "Tidak perlu",
+    "glanceWatermark": "Tanda air",
+    "glanceWatermarkValue": "Tidak ada yang ditambahkan ke file Anda",
+    "glanceDevices": "Berjalan di",
+    "glanceDevicesValue": "Browser modern apa pun di Windows, Mac, Linux, Android, dan iPhone",
     "seeAllTools": "Lihat semua {count} alat PDF"
   },
   "categories": {
@@ -115,6 +127,10 @@
         {
           "q": "Apakah dokumen saya diunggah ke server?",
           "a": "Tidak. Setiap tindakan berjalan di browser Anda. Dokumen Anda tidak pernah keluar dari perangkat Anda, sehingga ruang kerja ini cocok untuk pekerjaan yang rahasia dan sensitif."
+        },
+        {
+          "q": "Apakah Ruang Kerja PDF gratis, dan apakah saya perlu akun?",
+          "a": "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas jumlah dokumen. Buka PDF dan mulai mengedit."
         }
       ],
       "howTo": {
@@ -183,6 +199,10 @@
         {
           "q": "Apakah memisahkan PDF menurunkan kualitas?",
           "a": "Tidak. Pemisahan menyalin objek halaman secara utuh ke dokumen baru. Teks tetap bisa dipilih dan gambar tetap mempertahankan resolusi aslinya."
+        },
+        {
+          "q": "Bisakah saya memisahkan PDF di ponsel tanpa aplikasi?",
+          "a": "Bisa. Pisahkan PDF berjalan di browser Android dan iPhone, jadi Anda bisa memisahkan file tanpa memasang apa pun atau mengunggahnya."
         }
       ],
       "howTo": {
@@ -215,6 +235,10 @@
         {
           "q": "Apakah ini sama dengan memisahkan PDF?",
           "a": "Tidak. Memisahkan membuat file terpisah dari halaman yang dipilih. Menghapus membuang halaman dari dokumen dan menyimpan sisanya sebagai satu file."
+        },
+        {
+          "q": "Amankah menghapus halaman dari PDF rahasia di sini?",
+          "a": "Aman. Halaman dihapus di browser Anda dan file tidak pernah meninggalkan perangkat Anda, jadi tidak ada yang disimpan di server."
         }
       ],
       "howTo": {
@@ -246,7 +270,11 @@
         },
         {
           "q": "Bisakah saya mengekstrak halaman dengan urutan berbeda?",
-          "a": "Ya. Cantumkan halaman sesuai urutan yang Anda inginkan. Memasukkan 9, 3, 5 menghasilkan file dengan halaman dalam urutan tersebut."
+          "a": "Tidak. Halaman selalu keluar dalam urutan aslinya, dan halaman yang ditulis dua kali hanya dimasukkan sekali, jadi 9, 3, 5 menghasilkan halaman 3, 5, dan 9. Untuk mengubah urutan, proses hasilnya dengan Atur PDF."
+        },
+        {
+          "q": "Apakah mengekstrak halaman gratis dan tanpa tanda air?",
+          "a": "Ya. Ekstraksi gratis tanpa akun, dan PDF baru tidak diberi tanda air atau logo tambahan apa pun."
         }
       ],
       "howTo": {
@@ -268,7 +296,7 @@
     "organize-pdf": {
       "slug": "atur-halaman-pdf",
       "name": "Atur PDF",
-      "description": "Urutkan ulang, putar, dan kelola halaman",
+      "description": "Ubah urutan halaman dan buang yang tidak Anda perlukan",
       "seoTitle": "Atur Halaman PDF — Ubah Urutan & Hapus Halaman Gratis",
       "metaDescription": "Susun halaman PDF dalam urutan apa pun dan buang yang tidak diperlukan, dalam satu langkah. Gratis, tanpa daftar, dan file tidak pernah keluar dari browser.",
       "faqs": [
@@ -304,17 +332,17 @@
     "compress-pdf": {
       "slug": "kompres-pdf",
       "name": "Kompres PDF",
-      "description": "Perkecil ukuran file dengan tetap menjaga kualitas",
-      "seoTitle": "Kompres PDF — Perkecil Ukuran File Tanpa Kurangi Kualitas",
-      "metaDescription": "Perkecil ukuran file PDF hingga 80% tanpa penurunan kualitas yang terlihat. Kompresi gratis di browser. Tanpa unggah, tanpa tanda air, tanpa daftar.",
+      "description": "Perkecil PDF ke ukuran file yang Anda butuhkan",
+      "seoTitle": "Kompres PDF — Perkecil PDF ke Ukuran yang Dibutuhkan (Gratis)",
+      "metaDescription": "Perkecil PDF ke ukuran target dalam MB atau KB. Penyusunan ulang tanpa kehilangan kualitas dicoba dulu; halaman jadi gambar hanya bila perlu. Gratis, tanpa unggah.",
       "faqs": [
         {
           "q": "Apakah mengompres PDF akan menurunkan kualitasnya?",
-          "a": "Pada tingkat kompresi yang disarankan, gambar dikodekan ulang pada 150 DPI — secara visual identik dengan aslinya untuk dilihat di layar maupun dicetak secara standar."
+          "a": "Tergantung ukuran yang Anda minta. Alat ini pertama-tama mencoba membangun ulang tanpa kehilangan kualitas yang tidak mengubah apa pun secara visual. Jika belum cukup kecil, alat ini menggambar ulang setiap halaman sebagai gambar dengan resolusi tertinggi yang sesuai target Anda, dengan lapisan teks tak terlihat agar teks tetap bisa dicari. Target yang longgar terlihat identik; target yang sangat kecil terlihat lebih lembut."
         },
         {
           "q": "Seberapa kecil PDF saya nantinya?",
-          "a": "PDF yang banyak berisi foto menyusut 60-80%. File yang hanya berisi teks menyusut 10-30%. Dokumen hasil pindaian bisa menyusut hingga 90%."
+          "a": "Tergantung file-nya, jadi alat ini tidak menjanjikan persentase apa pun: Anda yang menentukan target. Jika penyusunan ulang tanpa kehilangan kualitas tidak mencapainya, halaman dirender ulang sebagai gambar dengan kualitas yang makin rendah sampai file muat, dan hasilnya menunjukkan ukuran yang benar-benar tercapai."
         },
         {
           "q": "Bisakah saya mengompres PDF yang dilindungi kata sandi?",
@@ -340,17 +368,21 @@
     "optimize-pdf": {
       "slug": "optimalkan-pdf",
       "name": "Optimalkan PDF",
-      "description": "Optimalkan PDF untuk web dan pemuatan lebih cepat",
-      "seoTitle": "Optimalkan PDF — Percepat PDF untuk Web & Pemuatan",
-      "metaDescription": "Optimalkan file PDF untuk web dan pemuatan yang lebih cepat. Kurangi waktu render, ratakan lapisan, dan rampingkan struktur dokumen.",
+      "description": "Kemas ulang PDF tanpa kehilangan kualitas agar lebih ringkas",
+      "seoTitle": "Optimalkan PDF — Kemas Ulang PDF Tanpa Kehilangan Kualitas",
+      "metaDescription": "Kemas ulang PDF tanpa kehilangan kualitas: object stream dikompresi, objek tak terpakai dan revisi lama dibuang, metadata bisa dihapus. Teks dan gambar tidak diubah.",
       "faqs": [
         {
           "q": "Apa fungsi optimasi PDF?",
-          "a": "Optimasi menghapus objek yang tidak terpakai, meratakan lapisan interaktif, mengambil subset font, dan merampingkan struktur internal agar render lebih cepat."
+          "a": "Alat ini menyusun ulang file dengan object stream terkompresi, sehingga objek yang tidak terpakai dan revisi lama yang tersimpan dibuang, dan secara opsional menghapus metadata seperti judul dan penulis. Alat ini tidak meratakan layer, tidak memangkas font, dan tidak meng-encode ulang gambar. Jika tidak ada penghematan, file asli Anda dikembalikan tanpa perubahan."
         },
         {
           "q": "Apakah optimasi sama dengan kompresi?",
-          "a": "Kompresi memperkecil ukuran file dengan mengodekan ulang gambar. Optimasi berfokus pada perbaikan struktur yang mempercepat pemuatan dan render."
+          "a": "Tidak. Kompres PDF mengejar ukuran target dan bisa mengubah halaman menjadi gambar untuk mencapainya. Optimalisasi hanya mengemas ulang struktur file tanpa kehilangan kualitas, jadi penghematannya biasanya lebih kecil, tetapi tidak ada yang berubah secara visual."
+        },
+        {
+          "q": "Apakah PDF yang sudah dioptimalkan tetap bisa dibuka di semua pembaca PDF?",
+          "a": "Ya. Optimalisasi tetap menjadikan file sebagai PDF standar, jadi file tetap terbuka seperti biasa di Adobe Reader, browser, Preview, dan penampil di ponsel."
         }
       ],
       "howTo": {
@@ -374,7 +406,7 @@
       "name": "Perbaiki PDF",
       "description": "Perbaiki file PDF yang rusak",
       "seoTitle": "Perbaiki PDF — Pulihkan File PDF yang Rusak atau Korup",
-      "metaDescription": "Perbaiki file PDF yang rusak atau korup. Perbaiki header yang rusak, pulihkan konten yang masih terbaca, dan kembalikan dokumen rusak. Alat online gratis.",
+      "metaDescription": "Perbaiki file PDF yang rusak: susun ulang tabel referensi silang dan strukturnya, atau pulihkan halaman dari file yang rusak parah. Gratis, tanpa unggah.",
       "faqs": [
         {
           "q": "Apa yang menyebabkan PDF menjadi rusak?",
@@ -383,6 +415,10 @@
         {
           "q": "Apakah perbaikan bisa memulihkan semua konten?",
           "a": "Perbaikan bekerja dengan membangun ulang struktur PDF. Hasil pemulihan bergantung pada seberapa banyak data asli yang masih utuh."
+        },
+        {
+          "q": "Apakah PDF saya yang rusak diunggah untuk diperbaiki?",
+          "a": "Tidak. Perbaikan berjalan di browser Anda, jadi kontrak atau rekening koran yang rusak tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -405,7 +441,7 @@
       "name": "OCR PDF",
       "description": "Ambil teks dari dokumen hasil pindaian",
       "seoTitle": "OCR PDF — Ambil Teks dari Dokumen Hasil Scan",
-      "metaDescription": "Ubah dokumen hasil scan menjadi teks yang bisa dicari dan dipilih dengan OCR. Jadikan PDF hasil pindaian bisa dicari dan diedit. Gratis, tanpa unggah.",
+      "metaDescription": "Buat PDF hasil pindai bisa dicari dengan OCR: lapisan teks tak terlihat yang bisa dicari, dipilih, dan disalin. Hingga 3 dari 44 bahasa. Gratis, tanpa unggah.",
       "faqs": [
         {
           "q": "Apa itu OCR?",
@@ -413,7 +449,11 @@
         },
         {
           "q": "Seberapa akurat OCR?",
-          "a": "Akurasinya bergantung pada kualitas pindaian. Pindaian yang jelas dan beresolusi tinggi biasanya mencapai akurasi 95-99%. Pindaian berkualitas buruk mungkin menghasilkan lebih banyak kesalahan."
+          "a": "Tergantung hasil pindaiannya. Halaman teks cetak yang tajam, terang, dan lurus terbaca dengan baik; resolusi rendah, tulisan tangan, posisi miring, atau noise menimbulkan lebih banyak kesalahan. Cocokkan teks penting dengan gambar halamannya sebelum mengandalkannya."
+        },
+        {
+          "q": "Apakah OCR PDF mengunggah hasil pindaian saya?",
+          "a": "Tidak. Mesin pengenalan dan data bahasanya diunduh sekali ke browser Anda, lalu setiap halaman dibaca di perangkat Anda sendiri."
         }
       ],
       "howTo": {
@@ -446,6 +486,10 @@
         {
           "q": "Bisakah saya menggabungkan banyak gambar menjadi satu PDF?",
           "a": "Ya. Masukkan semua JPG Anda, susun urutannya, lalu konversi. Setiap gambar menjadi satu halaman dalam PDF yang dihasilkan."
+        },
+        {
+          "q": "Bisakah saya mengubah foto menjadi PDF di ponsel?",
+          "a": "Bisa. Buka JPG ke PDF di browser ponsel, pilih foto dari galeri, lalu unduh satu PDF. Tidak ada yang diunggah."
         }
       ],
       "howTo": {
@@ -529,6 +573,10 @@
         {
           "q": "Apakah Microsoft Word harus terpasang?",
           "a": "Tidak. Konversi berlangsung di browser Anda. Tidak perlu memasang perangkat lunak apa pun."
+        },
+        {
+          "q": "Apakah dokumen Word saya diunggah untuk dikonversi?",
+          "a": "Tidak. File DOCX dibaca dan diubah menjadi PDF di browser Anda, jadi tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -560,6 +608,10 @@
         {
           "q": "Bisakah saya mengonversi slide tertentu saja?",
           "a": "Konversi memproses seluruh presentasi. Untuk mendapatkan slide tertentu, ambil slide tersebut setelah konversi dengan alat Ekstrak Halaman PDF."
+        },
+        {
+          "q": "Apakah presentasi saya diunggah untuk dikonversi?",
+          "a": "Tidak. File PPTX dikonversi di browser Anda dan tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -586,11 +638,15 @@
       "faqs": [
         {
           "q": "Apakah rumus saya akan tetap ada?",
-          "a": "Rumus dihitung dan disimpan sebagai nilai hasilnya di dalam PDF. Rumusnya sendiri tidak dipertahankan karena PDF adalah format statis."
+          "a": "Tidak. PDF menampilkan nilai hasil hitungan terakhir yang tersimpan di file untuk setiap rumus; rumusnya sendiri tidak disimpan. Jika workbook belum pernah dihitung ulang (misalnya dibuat oleh skrip), buka dan simpan dulu di Excel."
         },
         {
           "q": "Bisakah saya mengonversi sheet tertentu saja?",
           "a": "Konversi memproses seluruh workbook. Untuk sheet tertentu, Anda mungkin perlu menyimpannya sebagai file terpisah terlebih dahulu."
+        },
+        {
+          "q": "Apakah spreadsheet saya diunggah untuk dikonversi?",
+          "a": "Tidak. File XLSX dibaca dan diubah menjadi PDF di browser Anda, jadi data keuangan tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -611,17 +667,21 @@
     "html-to-pdf": {
       "slug": "html-ke-pdf",
       "name": "HTML ke PDF",
-      "description": "Ubah halaman web menjadi PDF",
+      "description": "Ubah kode HTML atau file .html menjadi PDF",
       "seoTitle": "HTML ke PDF — Ubah Halaman Web ke PDF Gratis",
-      "metaDescription": "Ubah halaman web apa pun menjadi PDF. Simpan artikel, struk, dan konten online sebagai dokumen PDF. Gratis, berbasis browser, tanpa instalasi.",
+      "metaDescription": "Ubah HTML yang ditempel atau file .html menjadi PDF, sebagai salinan desain persis atau dengan teks yang bisa dipilih. Gratis, di browser Anda, tanpa instalasi.",
       "faqs": [
         {
-          "q": "Bisakah saya mengonversi halaman web apa pun?",
-          "a": "Ya. Masukkan URL halaman web mana pun yang dapat diakses publik dan halaman tersebut akan diubah ke format PDF."
+          "q": "Bisakah saya mengonversi halaman web langsung dari URL-nya?",
+          "a": "Tidak. HTML ke PDF mengonversi HTML yang Anda tempel atau file .html yang Anda pilih. Untuk halaman langsung, gunakan Cetak > Simpan sebagai PDF di browser Anda, atau simpan halaman sebagai HTML lalu konversi file tersebut di sini."
         },
         {
           "q": "Apakah PDF-nya akan terlihat seperti halaman web aslinya?",
           "a": "PDF merekam konten halaman sebagaimana ditampilkan. Tata letak yang rumit mungkin sedikit berbeda dari aslinya."
+        },
+        {
+          "q": "Apakah saya perlu memasang sesuatu untuk mengubah HTML ke PDF?",
+          "a": "Tidak. Tempel HTML atau pilih file .html, dan PDF dibuat di browser Anda tanpa perangkat lunak, ekstensi, atau akun."
         }
       ],
       "howTo": {
@@ -645,7 +705,7 @@
       "name": "HEIC ke PDF",
       "description": "Ubah gambar HEIC dari Apple menjadi PDF",
       "seoTitle": "HEIC ke PDF — Ubah Foto HEIC iPhone ke PDF Gratis",
-      "metaDescription": "Ubah foto HEIC dan HEIF dari iPhone dan iPad menjadi dokumen PDF. Gratis, berbasis browser, tanpa unggah. Kualitas gambar asli tetap terjaga.",
+      "metaDescription": "Ubah foto HEIC dan HEIF dari iPhone dan iPad menjadi PDF, satu PDF per foto dengan resolusi penuh. Gratis, berbasis browser, tanpa unggah.",
       "faqs": [
         {
           "q": "Apa itu file HEIC?",
@@ -657,7 +717,7 @@
         },
         {
           "q": "Apakah konversi menurunkan kualitas gambar?",
-          "a": "Tidak. Gambar HEIC didekode dan disematkan ke dalam PDF dengan resolusi aslinya. Kualitas visualnya tetap terjaga."
+          "a": "Sangat sedikit. Setiap foto tetap beresolusi penuh, tetapi di-encode ulang sebagai JPEG berkualitas tinggi (92%) di dalam PDF, karena PDF tidak bisa menyimpan HEIC secara langsung. Perbedaannya sulit terlihat."
         }
       ],
       "howTo": {
@@ -688,11 +748,11 @@
         },
         {
           "q": "Apakah mengubah WebP ke PDF menurunkan kualitas?",
-          "a": "Tidak. Gambar WebP didekode dan disematkan ke dalam PDF dengan resolusi aslinya tanpa dikompres ulang."
+          "a": "Tidak. Setiap WebP didekode dan disimpan tanpa kehilangan kualitas (sebagai PNG) dengan resolusi piksel penuh, diletakkan di tengah halaman A4 dan hanya diperkecil jika lebih besar dari halaman."
         },
         {
           "q": "Bisakah saya mengonversi banyak file WebP sekaligus?",
-          "a": "Ya. Pilih beberapa gambar WebP dan semuanya akan digabungkan menjadi satu PDF multi-halaman dengan satu gambar per halaman."
+          "a": "Ya. Pilih beberapa gambar WebP dan masing-masing menjadi PDF tersendiri; unduh satu per satu atau sebagai ZIP. Untuk satu PDF berisi banyak halaman, gunakan JPG ke PDF, yang juga menerima WebP."
         }
       ],
       "howTo": {
@@ -727,7 +787,7 @@
         },
         {
           "q": "Bisakah saya mengonversi banyak file TIFF sekaligus?",
-          "a": "Ya. Pilih beberapa file TIFF dan masing-masing akan dikonversi, dengan semua halaman digabungkan menjadi satu PDF."
+          "a": "Ya. Pilih beberapa file TIFF dan masing-masing menjadi PDF tersendiri berisi semua halamannya. Unduh satu per satu atau sebagai ZIP, lalu gunakan Gabungkan PDF jika Anda ingin satu file saja."
         }
       ],
       "howTo": {
@@ -762,7 +822,7 @@
         },
         {
           "q": "Apakah alat ini gratis?",
-          "a": "Ya. Konversi SVG ke PDF sepenuhnya gratis, tanpa batas, tanpa tanda air, dan tanpa perlu daftar."
+          "a": "Ya. Konversi SVG ke PDF sepenuhnya gratis, tanpa batas harian, tanpa watermark, dan tanpa perlu daftar."
         }
       ],
       "howTo": {
@@ -820,15 +880,19 @@
       "name": "PDF ke JPG",
       "description": "Ubah halaman PDF menjadi gambar JPG",
       "seoTitle": "PDF ke JPG — Ubah Halaman PDF Menjadi Gambar Gratis",
-      "metaDescription": "Ubah halaman PDF menjadi gambar JPG berkualitas tinggi. Ambil semua halaman atau halaman tertentu sebagai gambar. Gratis, tanpa daftar, tanpa tanda air.",
+      "metaDescription": "Ubah setiap halaman PDF menjadi gambar JPG atau PNG pada 144 atau 216 DPI. Gratis, tanpa daftar, tanpa watermark, dan PDF tidak pernah keluar dari browser Anda.",
       "faqs": [
         {
           "q": "Berapa resolusi gambar yang dihasilkan?",
-          "a": "Gambar diambil dengan resolusi tertinggi yang ada di dalam PDF, biasanya 150-300 DPI tergantung sumbernya."
+          "a": "Halaman dirender pada 144 DPI (Standar) atau 216 DPI (Tinggi), apa pun sumbernya. Tinggi menghasilkan teks lebih tajam dan file lebih besar."
         },
         {
           "q": "Bisakah saya mengonversi halaman tertentu saja?",
-          "a": "Ya. Pilih untuk mengonversi semua halaman atau tentukan rentang halaman untuk mengambil halaman yang Anda perlukan saja."
+          "a": "Semua halaman dikonversi. Untuk mendapatkan beberapa halaman saja, jalankan Ekstrak Halaman PDF dulu lalu konversi file tersebut, atau unduh hanya gambar halaman yang Anda perlukan."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk diubah ke JPG?",
+          "a": "Tidak. Setiap halaman dirender menjadi gambar di browser Anda, jadi PDF tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -861,6 +925,10 @@
         {
           "q": "Apakah ini bisa digunakan untuk PDF hasil scan?",
           "a": "PDF hasil pindaian perlu diproses dengan OCR terlebih dahulu untuk mengambil teksnya. Jalankan OCR, lalu ubah hasilnya ke Word untuk hasil terbaik."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk diubah ke Word?",
+          "a": "Tidak. Teks diekstrak dan file DOCX dibuat di browser Anda, jadi PDF tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -892,6 +960,10 @@
         {
           "q": "Bisakah saya mengedit slide yang dihasilkan?",
           "a": "Ya. Hasilnya adalah file PPTX standar yang bisa Anda edit di aplikasi apa pun yang kompatibel dengan PowerPoint."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk diubah ke PowerPoint?",
+          "a": "Tidak. Slide dibuat di browser Anda, jadi PDF tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -949,7 +1021,7 @@
       "name": "PDF ke PDF/A",
       "description": "Ubah PDF ke format arsip PDF/A",
       "seoTitle": "PDF ke PDF/A — Ubah ke Format PDF untuk Arsip",
-      "metaDescription": "Ubah file PDF standar ke format arsip PDF/A. Pastikan dokumen tersimpan jangka panjang dan sesuai ketentuan. Konversi gratis di browser.",
+      "metaDescription": "Ubah PDF menjadi salinan arsip yang ditandai PDF/A-2b di metadatanya. Periksa kepatuhan ketat dengan validator. Gratis, di browser Anda, tanpa unggah.",
       "faqs": [
         {
           "q": "Apa itu PDF/A?",
@@ -957,7 +1029,11 @@
         },
         {
           "q": "Mengapa saya perlu mengubah ke PDF/A?",
-          "a": "Banyak industri mewajibkan PDF/A untuk penyimpanan dokumen. Format ini memastikan font disematkan, warna didefinisikan, dan dokumen bersifat mandiri."
+          "a": "Banyak pengadilan, arsip, dan sistem rekaman meminta PDF/A, yang mensyaratkan font tertanam, warna terdefinisi, dan tanpa enkripsi. Alat ini menyalin halaman Anda dan menambahkan identifikasi PDF/A; alat ini tidak menanamkan font yang hilang dan tidak menambahkan profil warna."
+        },
+        {
+          "q": "Apakah hasilnya dijamin lolos validator PDF/A?",
+          "a": "Tidak selalu. Alat ini menambahkan metadata identifikasi PDF/A, tetapi file sumber dengan font yang hilang atau transparansi masih bisa gagal dalam pemeriksaan ketat. Jika arsip mewajibkannya, periksa dengan validator seperti veraPDF."
         }
       ],
       "howTo": {
@@ -989,6 +1065,10 @@
         {
           "q": "Bisakah saya mengonversi halaman tertentu saja?",
           "a": "Seluruh dokumen dikonversi. Untuk mengonversi sebagian halaman saja, jalankan Ekstrak Halaman PDF terlebih dahulu lalu konversi file tersebut."
+        },
+        {
+          "q": "Bisakah Markdown-nya dipakai dengan ChatGPT atau alat AI lain?",
+          "a": "Ya. Hasilnya berupa teks biasa dengan satu bagian per halaman (## Page 1, ## Page 2 …), yang terbaca rapi oleh asisten AI dan aplikasi catatan. Konversinya berjalan di browser Anda."
         }
       ],
       "howTo": {
@@ -1015,11 +1095,15 @@
       "faqs": [
         {
           "q": "Bisakah saya mengedit PDF apa pun?",
-          "a": "PDF apa pun yang dibuat secara digital dengan teks yang bisa dipilih dapat diedit. PDF hasil pindaian perlu diproses dengan OCR terlebih dahulu agar teksnya bisa diedit."
+          "a": "PDF apa pun yang dibuat secara digital dengan teks yang bisa dipilih dapat diedit. PDF hasil pindai adalah gambar teks, jadi tidak ada kata yang bisa diubah secara langsung."
         },
         {
           "q": "Apakah mengedit akan mengubah format?",
-          "a": "Pengeditan langsung mempertahankan format aslinya. Hanya teks yang Anda ubah yang terpengaruh — font, spasi, dan tata letak tetap utuh."
+          "a": "Hanya teks yang Anda ubah yang digambar ulang; bagian lain halaman disalin apa adanya. Teks yang diedit memakai font yang sudah tertanam di PDF bila memungkinkan; jika font itu tidak punya karakter yang Anda ketik, font standar yang mirip dipakai, jadi periksa baris yang diedit sebelum mengirim."
+        },
+        {
+          "q": "Bisakah saya mengedit PDF hasil pindaian?",
+          "a": "Tidak secara langsung. Hasil pindaian adalah gambar teks, jadi tidak ada kata yang bisa diubah di tempat. Gunakan OCR PDF agar teksnya bisa dicari dan disalin, lalu edit di pengolah kata."
         }
       ],
       "howTo": {
@@ -1041,8 +1125,8 @@
     "rotate-pdf": {
       "slug": "putar-pdf",
       "name": "Putar PDF",
-      "description": "Putar halaman PDF ke sudut mana pun",
-      "seoTitle": "Putar PDF — Putar Halaman PDF ke Sudut Mana Pun",
+      "description": "Putar halaman PDF 90°, 180°, atau 270°",
+      "seoTitle": "Putar PDF — Putar Halaman 90°, 180°, atau 270° Gratis",
       "metaDescription": "Putar halaman tertentu atau semua halaman PDF. Perbaiki hasil scan yang miring ke samping dan atur orientasi halaman. Gratis, tanpa daftar.",
       "faqs": [
         {
@@ -1052,6 +1136,10 @@
         {
           "q": "Apakah memutar halaman memengaruhi kualitas cetak?",
           "a": "Tidak. Rotasi adalah perubahan metadata yang memberi tahu penampil cara menampilkan halaman. Kontennya tidak dirender ulang."
+        },
+        {
+          "q": "Apakah rotasinya permanen?",
+          "a": "Ya. Orientasi baru disimpan di PDF yang diunduh, jadi file terbuka dengan posisi yang benar di penampil mana pun."
         }
       ],
       "howTo": {
@@ -1075,7 +1163,7 @@
       "name": "Tambah Nomor Halaman",
       "description": "Sisipkan nomor halaman ke PDF Anda",
       "seoTitle": "Tambah Nomor Halaman PDF — Beri Nomor Halaman Gratis",
-      "metaDescription": "Tambahkan nomor halaman di posisi mana pun pada PDF Anda. Pilih format, posisi, dan nomor awalnya. Gratis, berbasis browser, tanpa unggah.",
+      "metaDescription": "Tambahkan nomor halaman ke PDF di salah satu dari enam posisi. Pilih format (1, Halaman 1, atau 1 dari N) dan nomor awal. Gratis, tanpa unggah.",
       "faqs": [
         {
           "q": "Di mana saja saya bisa menempatkan nomor halaman?",
@@ -1083,7 +1171,11 @@
         },
         {
           "q": "Bisakah halaman pertama tidak diberi nomor?",
-          "a": "Ya. Pilih opsi untuk mulai memberi nomor dari halaman tertentu, misalnya halaman 2 atau 3, untuk melewati halaman sampul."
+          "a": "Tidak secara langsung: setiap halaman mendapat nomor, dan \"Mulai penomoran dari\" hanya mengubah nomor pertama. Agar sampul tidak bernomor, pisahkan dengan Pisahkan PDF, beri nomor sisanya mulai dari 2, lalu satukan lagi dengan Gabungkan PDF."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk menambahkan nomor halaman?",
+          "a": "Tidak. Nomor digambar pada halaman di browser Anda, jadi file tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -1105,7 +1197,7 @@
     "add-watermark": {
       "slug": "tambah-watermark-pdf",
       "name": "Tambah Tanda Air",
-      "description": "Tambahkan tanda air berupa teks atau gambar",
+      "description": "Bubuhkan watermark teks di setiap halaman",
       "seoTitle": "Tambah Watermark PDF — Tanda Air Teks Gratis",
       "metaDescription": "Bubuhkan tanda air (watermark) teks seperti RAHASIA atau DRAF di setiap halaman PDF. Atur transparansi dan ukurannya. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
@@ -1116,6 +1208,10 @@
         {
           "q": "Bisakah saya menambahkan tanda air ke semua halaman sekaligus?",
           "a": "Ya. Tanda air diterapkan ke setiap halaman dokumen secara bersamaan."
+        },
+        {
+          "q": "Bisakah tanda air dihapus nanti?",
+          "a": "Tanda air teks digambar langsung ke konten halaman, jadi tidak bisa dimatikan seperti komentar. Namun, orang dengan perangkat lunak pengedit tetap bisa menutupinya, jadi anggap sebagai pencegah, bukan perlindungan."
         }
       ],
       "howTo": {
@@ -1143,11 +1239,15 @@
       "faqs": [
         {
           "q": "Bisakah saya memotong semua halaman sekaligus?",
-          "a": "Ya. Terapkan area potong yang sama ke setiap halaman, atau atur potongan yang berbeda untuk halaman tertentu."
+          "a": "Ya — margin yang Anda atur selalu dipotong dari setiap halaman. Potongan berbeda untuk halaman tertentu tidak didukung; pisahkan PDF terlebih dahulu jika beberapa halaman perlu margin lain."
         },
         {
           "q": "Apakah memotong akan menghapus konten?",
-          "a": "Pemotongan menyembunyikan konten di luar area potong. Konten yang tersembunyi tidak dihapus dan bisa dikembalikan nanti."
+          "a": "Tidak. Memotong mengecilkan area halaman yang terlihat, tetapi konten di luarnya tetap ada di file, dan beberapa editor bisa menampilkannya lagi. Jangan pernah memotong untuk menyembunyikan informasi sensitif — gunakan Sensor PDF untuk itu."
+        },
+        {
+          "q": "Bisakah saya memotong PDF di ponsel?",
+          "a": "Bisa. Potong PDF berjalan di browser ponsel Anda, jadi Anda bisa merapikan margin tanpa memasang aplikasi atau mengunggah file."
         }
       ],
       "howTo": {
@@ -1169,17 +1269,21 @@
     "sign-pdf": {
       "slug": "tanda-tangan-pdf",
       "name": "Tanda Tangan PDF",
-      "description": "Tambahkan tanda tangan digital ke PDF",
+      "description": "Tempatkan tanda tangan yang digambar, diketik, atau diunggah di PDF",
       "seoTitle": "Tanda Tangan PDF — Tanda Tangan Elektronik Online Gratis",
-      "metaDescription": "Tambahkan tanda tangan elektronik ke dokumen PDF. Gambar, ketik, atau unggah tanda tangan Anda. Sah secara hukum, gratis, tanpa perlu daftar.",
+      "metaDescription": "Tanda tangani PDF secara online: gambar, ketik, atau unggah tanda tangan Anda lalu letakkan di halaman mana pun. Gratis, tanpa daftar, dan tanda tangan tidak pernah diunggah.",
       "faqs": [
         {
           "q": "Apakah tanda tangan elektronik sah secara hukum?",
-          "a": "Ya. Tanda tangan elektronik sah secara hukum berdasarkan ESIGN Act di AS dan eIDAS di Uni Eropa untuk hampir semua dokumen."
+          "a": "Untuk sebagian besar dokumen sehari-hari, ya: undang-undang seperti ESIGN Act di AS dan eIDAS di UE menerima tanda tangan elektronik sederhana. Alat ini menempatkan gambar tanda tangan Anda tanpa sertifikat atau jejak audit, jadi gunakan layanan tanda tangan elektronik bersertifikat bila diperlukan tanda tangan berkualifikasi atau berbasis sertifikat."
         },
         {
           "q": "Bisakah saya menandatangani PDF yang dilindungi kata sandi?",
           "a": "Anda perlu membuka kuncinya terlebih dahulu. PDF yang dilindungi kata sandi tidak dapat diedit sampai kata sandinya dihapus."
+        },
+        {
+          "q": "Bagaimana cara membuat tanda tangan saya?",
+          "a": "Gambar dengan mouse atau jari, ketik nama Anda dengan font tulisan tangan, atau unggah foto tanda tangan asli Anda. Tanda tangan ditempatkan di halaman di browser Anda dan tidak pernah disimpan di server."
         }
       ],
       "howTo": {
@@ -1247,15 +1351,19 @@
       "name": "Buka Kunci PDF",
       "description": "Hapus perlindungan kata sandi dari PDF",
       "seoTitle": "Buka Kunci PDF — Hapus Password PDF Gratis",
-      "metaDescription": "Hapus perlindungan kata sandi dari dokumen PDF. Buka PDF terenkripsi agar bisa diedit, dicetak, atau dibagikan. Gratis, tanpa perlu daftar.",
+      "metaDescription": "Hapus kata sandi serta batasan cetak, salin, atau edit dari PDF yang berhak Anda buka kuncinya. Gratis, tanpa daftar, berjalan di browser Anda.",
       "faqs": [
         {
           "q": "Apakah saya perlu kata sandinya untuk membuka kunci PDF?",
-          "a": "Ya. Anda harus mengetahui kata sandi saat ini untuk menghapusnya. Tidak ada cara untuk menembus enkripsi PDF tanpa kata sandi."
+          "a": "Hanya jika PDF meminta kata sandi untuk dibuka. File yang bisa dibuka bebas tetapi memblokir cetak, salin, atau edit dibuka kuncinya tanpa kata sandi. Kata sandi pembuka tidak bisa dilewati: tanpa kata sandi itu, file tetap terkunci."
         },
         {
           "q": "Apakah membuka kunci akan mengubah isi PDF?",
-          "a": "Tidak. Membuka kunci hanya menghapus perlindungan kata sandi. Isi dokumen tetap tidak berubah."
+          "a": "Halamannya tampak sama, tetapi setiap halaman disusun ulang sebagai gambar beresolusi tinggi dengan lapisan teks tak terlihat: teks tetap bisa dicari dan disalin, tetapi tidak bisa lagi diedit sebagai teks, dan tautan serta kolom formulir tidak dipertahankan. Ukuran file juga bisa bertambah."
+        },
+        {
+          "q": "Amankah memasukkan kata sandi PDF saya di sini?",
+          "a": "Aman. Kata sandi dan file tetap berada di browser Anda dan tidak pernah dikirim ke server."
         }
       ],
       "howTo": {
@@ -1278,23 +1386,27 @@
       "name": "Kunci PDF",
       "description": "Tambahkan perlindungan kata sandi ke PDF",
       "seoTitle": "Kunci PDF — Beri Password pada PDF Gratis",
-      "metaDescription": "Lindungi dokumen PDF dengan kata sandi. Enkripsi file Anda dengan enkripsi AES-256. Gratis, berbasis browser, tanpa unggah.",
+      "metaDescription": "Tambahkan kata sandi ke PDF agar tidak bisa dibuka tanpanya. Enkripsi PDF standar 128-bit, diterapkan di browser Anda. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
           "q": "Seberapa kuat perlindungan kata sandi PDF?",
-          "a": "Enkripsi PDF modern menggunakan AES-256, standar yang sama yang digunakan oleh bank dan pemerintah. Kata sandi yang kuat membuat serangan brute-force tidak praktis."
+          "a": "Slate PDF menerapkan enkripsi PDF standar RC4 128-bit yang bisa dibuka semua pembaca PDF. Enkripsi ini mencegah akses iseng, tetapi RC4 adalah algoritme lama: untuk file yang sangat sensitif, gunakan kata sandi yang panjang dan unik, atau alat yang menawarkan AES-256."
         },
         {
           "q": "Apa yang terjadi jika saya lupa kata sandinya?",
           "a": "Tidak ada cara pemulihan. File tidak dapat diakses selamanya tanpa kata sandi. Selalu simpan kata sandi di tempat yang aman."
+        },
+        {
+          "q": "Apakah PDF saya diunggah untuk menambahkan kata sandi?",
+          "a": "Tidak. Enkripsi dilakukan di browser Anda, jadi file yang belum dilindungi dan kata sandinya tidak pernah meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
         "title": "Cara memberi password pada PDF",
-        "intro": "Kunci PDF mengenkripsi PDF dengan kata sandi untuk membukanya, kata sandi untuk mengubah izinnya, atau keduanya — dan dapat memblokir pencetakan, penyalinan, atau pengeditan.",
+        "intro": "Kunci PDF mengenkripsi PDF sehingga perlu kata sandi untuk membukanya, dengan kata sandi pemilik terpisah yang opsional, dan bisa memblokir pencetakan, penyalinan, atau pengeditan.",
         "steps": [
           "Pilih PDF Anda",
-          "Masukkan kata sandi pembuka, kata sandi pemilik, atau keduanya",
+          "Masukkan kata sandi pembuka, dan jika mau, kata sandi pemilik yang berbeda",
           "Jika perlu, buka pengaturan izin untuk membatasi pencetakan, penyalinan, dan pengeditan",
           "Klik Kunci PDF untuk mengunduh file yang terenkripsi"
         ],
@@ -1319,6 +1431,10 @@
         {
           "q": "Bisakah saya membandingkan PDF hasil scan?",
           "a": "Jalankan OCR PDF pada kedua hasil pindaian terlebih dahulu. Perbandingan bekerja pada teks di dalam file, sehingga pindaian yang hanya berisi gambar tidak punya apa pun untuk dibandingkan."
+        },
+        {
+          "q": "Apakah kedua PDF diunggah untuk dibandingkan?",
+          "a": "Tidak. Kedua file dibaca dan dibandingkan di browser Anda, jadi tidak ada yang meninggalkan perangkat Anda."
         }
       ],
       "howTo": {
@@ -1350,6 +1466,10 @@
         {
           "q": "Apakah dokumen saya dikirim ke server?",
           "a": "Tidak. Ringkasan dihitung di browser Anda, dan PDF tidak pernah keluar dari perangkat Anda."
+        },
+        {
+          "q": "Bisakah alat ini meringkas PDF hasil pindaian?",
+          "a": "Tidak secara langsung. PDF hasil pindaian tidak memiliki lapisan teks untuk dibaca. Jalankan dulu lewat OCR PDF, lalu ringkas hasil yang sudah bisa dicari."
         }
       ],
       "howTo": {
@@ -1370,8 +1490,8 @@
     "translate-pdf": {
       "slug": "terjemahkan-pdf",
       "name": "Terjemahkan PDF",
-      "description": "Terjemahkan isi PDF ke bahasa apa pun",
-      "seoTitle": "Terjemahkan PDF — Terjemahkan Isi PDF ke Bahasa Lain",
+      "description": "Terjemahkan teks PDF ke 42 bahasa",
+      "seoTitle": "Terjemahkan PDF — Terjemahkan Teks PDF ke 42 Bahasa",
       "metaDescription": "Terjemahkan teks PDF ke 42 bahasa dan unduh sebagai PDF baru. Gratis, tanpa daftar. Teks dikirim ke layanan penerjemahan online.",
       "faqs": [
         {

@@ -7,6 +7,8 @@ import { getPost, posts, relatedPosts, readingMinutes, formatDate } from '@/lib/
 import { SITE_AUTHOR, postAuthor } from '@/lib/author';
 import { getToolBySlug } from '@/lib/tools-data';
 import { SITE_NAME, SITE_URL, pageTitle } from '@/lib/site';
+import { ORG_ID, WEBSITE_ID } from '@/lib/schema';
+import { postText } from '@/lib/blog/types';
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -65,13 +67,13 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     inLanguage: 'en',
     articleSection: post.category,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    isPartOf: { '@id': WEBSITE_ID },
+    image: `${SITE_URL}/og-home.png`,
+    keywords: post.keyword,
+    wordCount: postText(post).split(/\s+/).filter(Boolean).length,
+    ...(tool ? { about: { '@type': 'Thing', name: tool.name, url: `${SITE_URL}/tools/${tool.slug}` } } : {}),
     author: { '@type': 'Person', name: author.name, url: author.url ?? SITE_URL },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon-512.png` },
-    },
+    publisher: { '@id': ORG_ID },
   };
 
   const faqSchema = post.faqs.length
@@ -104,7 +106,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     description: author.bio,
     url: author.url ?? SITE_URL,
     knowsAbout: ['PDF', 'Document management', 'File formats', 'Digital signatures'],
-    worksFor: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    worksFor: { '@id': ORG_ID },
   };
 
   return (

@@ -366,10 +366,10 @@ const howTos: Record<string, Omit<ToolHowTo, 'benefits'> & { benefits?: string[]
   },
   'protect-pdf': {
     title: 'How to password protect a PDF',
-    intro: 'Protect PDF encrypts a PDF with a password to open it, a password to change its permissions, or both — and can block printing, copying or editing.',
+    intro: 'Protect PDF encrypts a PDF so it needs a password to open, with an optional separate owner password, and can block printing, copying or editing.',
     steps: [
       'Choose your PDF',
-      'Enter an open password, an owner password, or both',
+      'Enter the open password, and optionally a different owner password',
       'Optionally open the permission settings to restrict printing, copying and editing',
       'Click Protect PDF to download the encrypted file',
     ],

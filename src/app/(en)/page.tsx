@@ -61,9 +61,53 @@ const toolListSchema = {
   })),
 };
 
+/**
+ * Homepage FAQ. Rendered as <details> so every answer is in the HTML (crawlers
+ * and answer engines read collapsed answers), and mirrored in FAQPage schema.
+ */
+const homeFaqs = [
+  {
+    q: `What is ${SITE_NAME}?`,
+    a: `${SITE_NAME} is a free, browser-based PDF toolkit with ${tools.length} tools to merge, split, compress, convert, edit, sign, OCR and protect PDF files. Processing happens locally in your browser, so your files never leave your device. There is no account, no watermark and no paid tier.`,
+  },
+  {
+    q: `Is ${SITE_NAME} really free?`,
+    a: 'Yes. Every tool is free with no subscription, no daily task limit and no watermark on your output. Because the work runs on your own device, there is no server cost to recover through a paid plan.',
+  },
+  {
+    q: 'Are my files uploaded to your servers?',
+    a: `No. ${SITE_NAME} processes files in your browser with JavaScript and WebAssembly, so they are never uploaded, stored or transmitted. The one exception is Translate PDF, which sends the extracted text to a translation service and tells you before it does. You can check this yourself in your browser's Network tab.`,
+  },
+  {
+    q: 'Do I need to create an account?',
+    a: 'No account is required. Visit the site, pick a tool and start working on your PDFs immediately.',
+  },
+  {
+    q: 'Is there a file size limit?',
+    a: 'There is no upload limit, because nothing is uploaded. The practical limit is your device memory: a laptop or desktop handles large PDFs comfortably, while phones have less memory, so very large files are better done on a computer.',
+  },
+  {
+    q: 'Which browsers and devices are supported?',
+    a: `${SITE_NAME} works in current versions of Chrome, Edge, Firefox and Safari on Windows, Mac, Linux, Chromebook, Android and iPhone. No plugin or installation is needed.`,
+  },
+  {
+    q: `How does ${SITE_NAME} compare to Smallpdf or iLovePDF?`,
+    a: `Smallpdf and iLovePDF are capable tools that upload your files to their servers and limit free use. ${SITE_NAME} does the work in your browser instead: no upload wait, no daily cap and no account. They are the better choice for cloud storage integrations, team features and layout-perfect PDF to Word conversion.`,
+  },
+  {
+    q: `Can I use ${SITE_NAME} offline?`,
+    a: 'Mostly, yes. Once a tool has loaded, it keeps working if your connection drops, because the processing happens on your device. Translate PDF needs a connection, and OCR needs one the first time to download its language data.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [stats, setStats] = useState({ filesConverted: 0, toolsUsed: 0, globalCount: 0 });
 
   const popularTools = ['merge-pdf', 'compress-pdf', 'jpg-to-pdf', 'pdf-to-word', 'sign-pdf', 'edit-pdf']
@@ -79,6 +123,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <ToolsModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero — conversion-first */}
       <section className="relative overflow-hidden pt-16 sm:pt-24 pb-14 sm:pb-20">
@@ -292,9 +337,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: '38 Professional Tools', text: 'Merge multiple PDFs, split large files, compress without quality loss, convert between formats, add signatures, and password-protect documents.' },
+              { title: `${tools.length} Free PDF Tools`, text: 'Merge multiple PDFs, split large files, compress to the size you need, convert between formats, add signatures, and password-protect documents.' },
               { title: 'Works Everywhere', text: 'Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDFs regularly — it all runs in your browser.' },
-              { title: 'Truly Free. Forever.', text: 'No sign-up required, no watermarks added to your output, no file size limits, and no hidden fees. Use every tool as many times as you want.' },
+              { title: 'Truly Free. Forever.', text: 'No sign-up required, no watermarks added to your output, no upload size limits, and no hidden fees. Use every tool as many times as you want.' },
             ].map((item) => (
               <div key={item.title} className="p-6 rounded-xl bg-white border border-border">
                 <h3 className="font-semibold mb-2 text-foreground">{item.title}</h3>
@@ -340,7 +385,7 @@ export default function Home() {
           <div className="mt-16 pt-8 border-t border-border flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
             <span className="flex items-center gap-2"><Globe className="w-4 h-4" /> Works in any modern browser</span>
             <span className="flex items-center gap-2"><Lock className="w-4 h-4" /> No account required</span>
-            <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> No data collection</span>
+            <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> No file uploads</span>
           </div>
         </div>
       </section>
@@ -492,51 +537,16 @@ export default function Home() {
           </div>
 
           <div className="space-y-3">
-            {[
-              {
-                q: 'What is Slate PDF?',
-                a: 'Slate PDF is a free, browser-based PDF toolkit that lets you merge, split, compress, convert, edit, sign, and secure PDF files. All processing happens locally in your browser — your files never leave your device.',
-              },
-              {
-                q: 'Is Slate PDF really free?',
-                a: 'Yes. Every tool is completely free to use with no hidden fees, no subscription tiers, and no usage limits. There are no watermarks added to your output and no file size restrictions.',
-              },
-              {
-                q: 'Are my files uploaded to your servers?',
-                a: 'No. Unlike other PDF tools, Slate PDF processes everything locally in your browser using WebAssembly and client-side JavaScript. Your files are never uploaded, stored, or transmitted to any server.',
-              },
-              {
-                q: 'Do I need to create an account?',
-                a: 'No account is required. Simply visit the site, pick a tool, and start working on your PDFs immediately.',
-              },
-              {
-                q: 'Which browsers are supported?',
-                a: 'Slate PDF works in all modern browsers including Chrome, Firefox, Safari, and Edge. It runs entirely client-side, so no plugins or installations are needed.',
-              },
-              {
-                q: 'How does Slate PDF compare to Smallpdf or iLovePDF?',
-                a: 'Smallpdf and iLovePDF are great tools, but they require uploading your files to their servers for processing. Slate PDF does everything locally in your browser, which means faster processing (no upload wait), complete privacy, no file size limits, and no account required.',
-              },
-              {
-                q: 'Can I use Slate PDF offline?',
-                a: 'Yes. Once the page is loaded, all processing happens locally in your browser. If you have a stable connection to load the site initially, you can continue using the tools even if your connection drops during processing.',
-              },
-
-            ].map((faq, i) => (
-              <div key={i} className="rounded-xl border border-border overflow-hidden">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left hover:bg-gray-50 transition-colors"
-                >
+            {homeFaqs.map((faq, i) => (
+              <details key={faq.q} open={i === 0} className="group rounded-xl border border-border overflow-hidden">
+                <summary className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer list-none hover:bg-gray-50 transition-colors">
                   <span className="font-semibold text-foreground">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`} />
-                </button>
-                {openFaq === i && (
-                  <div className="px-6 pb-5 text-muted-foreground text-sm leading-relaxed">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-200 group-open:rotate-180" />
+                </summary>
+                <div className="px-6 pb-5 text-muted-foreground text-sm leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
             ))}
           </div>
         </div>

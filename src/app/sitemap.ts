@@ -17,18 +17,27 @@ import { hrefFor, type PageKey } from '@/i18n/paths';
 export const dynamic = 'force-static';
 
 const SITE_LAUNCH = new Date('2025-11-01');
-// Last real change to every tool page: tool-specific how-to steps, guide links
-// and the /tools hub (2026-10-12).
-const TOOL_DATE = new Date('2026-10-12');
-// Translated pages first published.
+// Last real change to the /tools hub and the no-upload proof page.
+const HUB_DATE = new Date('2026-10-12');
+// Last real change to every tool page, in every language: a third FAQ, the
+// "at a glance" facts table and HowTo structured data (2026-10-13).
+const TOOL_DATE = new Date('2026-10-13');
+// Translated home and hub pages first published.
 const I18N_DATE = new Date('2026-10-12');
+// Homepage FAQ rewritten, crawlable and marked up as FAQPage.
+const HOME_DATE = new Date('2026-10-13');
+
+/** A post's newest real date: publication, content update or editorial review. */
+function postDate(post: (typeof posts)[number]): Date {
+  return new Date([post.published, post.updated, post.reviewed].filter((d): d is string => !!d).sort().at(-1)!);
+}
 
 /** The same page in every translated language, each listing all its alternates. */
-function translated(page: PageKey, priority: number): MetadataRoute.Sitemap {
+function translated(page: PageKey, priority: number, lastModified = I18N_DATE): MetadataRoute.Sitemap {
   const languages = languageAlternates(page);
   return LOCALES.map(locale => ({
     url: `${SITE_URL}${hrefFor(locale, page)}`,
-    lastModified: I18N_DATE,
+    lastModified,
     changeFrequency: 'monthly' as const,
     priority,
     alternates: { languages },
@@ -42,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Homepage - highest priority
     {
       url: SITE_URL,
-      lastModified: SITE_LAUNCH,
+      lastModified: HOME_DATE,
       changeFrequency: 'weekly',
       priority: 1,
       alternates: { languages: languageAlternates({ kind: 'home' }) },
@@ -57,14 +66,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // All-tools hub
     {
       url: `${SITE_URL}/tools`,
-      lastModified: TOOL_DATE,
+      lastModified: HUB_DATE,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: { languages: languageAlternates({ kind: 'hub' }) },
     },
     // Trust / entity pages
     { url: `${SITE_URL}/about`, lastModified: SITE_LAUNCH, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${SITE_URL}/verify-no-upload`, lastModified: TOOL_DATE, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/verify-no-upload`, lastModified: HUB_DATE, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE_URL}/privacy`, lastModified: SITE_LAUNCH, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${SITE_URL}/terms`, lastModified: SITE_LAUNCH, changeFrequency: 'yearly', priority: 0.3 },
     // Tool pages - these are the money pages
@@ -78,11 +87,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Translated home, hub and tool pages
     ...translated({ kind: 'home' }, 0.8),
     ...translated({ kind: 'hub' }, 0.7),
-    ...tools.flatMap(tool => translated({ kind: 'tool', slug: tool.slug }, 0.8)),
+    ...tools.flatMap(tool => translated({ kind: 'tool', slug: tool.slug }, 0.8, TOOL_DATE)),
     // Blog articles
     ...posts.map((post) => ({
       url: `${SITE_URL}/blog/${post.slug}`,
-      lastModified: new Date(post.reviewed ?? post.updated ?? post.published),
+      lastModified: postDate(post),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),

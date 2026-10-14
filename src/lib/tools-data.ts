@@ -27,11 +27,11 @@ export const tools: ToolInfo[] = [
   { slug: 'split-pdf', name: 'Split PDF', description: 'Separate a PDF into individual pages', icon: 'Scissors', category: 'Organize PDF', color: '#8b5cf6' },
   { slug: 'remove-pages', name: 'Remove Pages', description: 'Delete specific pages from a PDF', icon: 'Trash2', category: 'Organize PDF', color: '#ef4444' },
   { slug: 'extract-pages', name: 'Extract Pages', description: 'Extract specific pages as a new PDF', icon: 'FileOutput', category: 'Organize PDF', color: '#f59e0b' },
-  { slug: 'organize-pdf', name: 'Organize PDF', description: 'Reorder, rotate, and manage pages', icon: 'ArrowUpDown', category: 'Organize PDF', color: '#10b981' },
+  { slug: 'organize-pdf', name: 'Organize PDF', description: 'Reorder pages and drop the ones you do not need', icon: 'ArrowUpDown', category: 'Organize PDF', color: '#10b981' },
 
   // Optimize
-  { slug: 'compress-pdf', name: 'Compress PDF', description: 'Reduce file size while maintaining quality', icon: 'Minimize2', category: 'Optimize PDF', color: '#06b6d4' },
-  { slug: 'optimize-pdf', name: 'Optimize PDF', description: 'Optimize PDF for web and faster loading', icon: 'Zap', category: 'Optimize PDF', color: '#0ea5e9' },
+  { slug: 'compress-pdf', name: 'Compress PDF', description: 'Shrink a PDF to the file size you need', icon: 'Minimize2', category: 'Optimize PDF', color: '#06b6d4' },
+  { slug: 'optimize-pdf', name: 'Optimize PDF', description: 'Repack a PDF losslessly to trim its size', icon: 'Zap', category: 'Optimize PDF', color: '#0ea5e9' },
   { slug: 'repair-pdf', name: 'Repair PDF', description: 'Fix corrupted or damaged PDF files', icon: 'Wrench', category: 'Optimize PDF', color: '#14b8a6' },
   { slug: 'ocr-pdf', name: 'OCR PDF', description: 'Extract text from scanned documents', icon: 'ScanText', category: 'Optimize PDF', color: '#84cc16' },
 
@@ -41,7 +41,7 @@ export const tools: ToolInfo[] = [
   { slug: 'word-to-pdf', name: 'Word to PDF', description: 'Turn a document (DOCX) into a PDF', icon: 'FileText', category: 'Create PDF', color: '#2563eb' },
   { slug: 'powerpoint-to-pdf', name: 'PowerPoint to PDF', description: 'Turn slides (PPTX) into a PDF', icon: 'Presentation', category: 'Create PDF', color: '#dc2626' },
   { slug: 'excel-to-pdf', name: 'Excel to PDF', description: 'Turn a spreadsheet (XLSX) into a PDF', icon: 'Table', category: 'Create PDF', color: '#16a34a' },
-  { slug: 'html-to-pdf', name: 'HTML to PDF', description: 'Convert web pages to PDF', icon: 'Globe', category: 'Create PDF', color: '#7c3aed' },
+  { slug: 'html-to-pdf', name: 'HTML to PDF', description: 'Convert HTML code or .html files to PDF', icon: 'Globe', category: 'Create PDF', color: '#7c3aed' },
   { slug: 'heic-to-pdf', name: 'HEIC to PDF', description: 'Convert Apple HEIC images to PDF', icon: 'Smartphone', category: 'Create PDF', color: '#8b5cf6' },
   { slug: 'webp-to-pdf', name: 'WebP to PDF', description: 'Convert WebP images to PDF documents', icon: 'FileImage', category: 'Create PDF', color: '#0ea5e9' },
   { slug: 'tiff-to-pdf', name: 'TIFF to PDF', description: 'Convert TIFF images to PDF documents', icon: 'Layers', category: 'Create PDF', color: '#d946ef' },
@@ -58,11 +58,11 @@ export const tools: ToolInfo[] = [
 
   // Edit
   { slug: 'edit-pdf', name: 'Edit PDF', description: 'Change the text, headings and numbers in a PDF', icon: 'TextCursorInput', category: 'Modify PDF', color: '#7c3aed' },
-  { slug: 'rotate-pdf', name: 'Rotate PDF', description: 'Rotate PDF pages to any angle', icon: 'RotateCw', category: 'Modify PDF', color: '#a855f7' },
+  { slug: 'rotate-pdf', name: 'Rotate PDF', description: 'Rotate PDF pages by 90°, 180° or 270°', icon: 'RotateCw', category: 'Modify PDF', color: '#a855f7' },
   { slug: 'add-page-numbers', name: 'Add Page Numbers', description: 'Insert page numbers into your PDF', icon: 'Hash', category: 'Modify PDF', color: '#3b82f6' },
-  { slug: 'add-watermark', name: 'Add Watermark', description: 'Add text or image watermarks', icon: 'Droplets', category: 'Modify PDF', color: '#0891b2' },
+  { slug: 'add-watermark', name: 'Add Watermark', description: 'Stamp a text watermark on every page', icon: 'Droplets', category: 'Modify PDF', color: '#0891b2' },
   { slug: 'crop-pdf', name: 'Crop PDF', description: 'Crop and resize PDF pages', icon: 'Crop', category: 'Modify PDF', color: '#65a30d' },
-  { slug: 'sign-pdf', name: 'Sign PDF', description: 'Add digital signatures to PDFs', icon: 'PenTool', category: 'Modify PDF', color: '#1d4ed8' },
+  { slug: 'sign-pdf', name: 'Sign PDF', description: 'Place your drawn, typed or uploaded signature on a PDF', icon: 'PenTool', category: 'Modify PDF', color: '#1d4ed8' },
   { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out text, images or pages permanently', icon: 'Eraser', category: 'Modify PDF', color: '#991b1b' },
 
   // Security
@@ -72,7 +72,7 @@ export const tools: ToolInfo[] = [
   // AI
   { slug: 'compare-pdf', name: 'Compare PDF', description: 'Compare two PDF files for differences', icon: 'GitCompare', category: 'PDF Intelligence', color: '#7c3aed' },
   { slug: 'ai-summarizer', name: 'Summarizer', description: 'Summarize PDF content', icon: 'Sparkles', category: 'PDF Intelligence', color: '#ec4899' },
-  { slug: 'translate-pdf', name: 'Translate PDF', description: 'Translate PDF content to any language', icon: 'Languages', category: 'PDF Intelligence', color: '#0ea5e9' },
+  { slug: 'translate-pdf', name: 'Translate PDF', description: 'Translate PDF text into 42 languages', icon: 'Languages', category: 'PDF Intelligence', color: '#0ea5e9' },
 ];
 
 export const categories = [

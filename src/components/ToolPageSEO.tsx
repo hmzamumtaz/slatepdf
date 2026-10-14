@@ -7,7 +7,7 @@ import { categoryAnchor, getNextTools, getToolBySlug, tools } from '@/lib/tools-
 import { getToolFaqs } from '@/lib/tool-seo';
 import { getToolHowTo } from '@/lib/tool-howto';
 import { posts } from '@/lib/blog';
-import { generateBreadcrumbSchema, generateToolRatingSchema } from '@/lib/schema';
+import { generateBreadcrumbSchema, generateHowToSchema, generateToolRatingSchema } from '@/lib/schema';
 import { getPageRating, MIN_PUBLIC_VOTES } from '@/lib/ratings';
 import { SITE_URL } from '@/lib/site';
 import { DEFAULT_LOCALE, type AnyLocale } from '@/i18n/config';
@@ -53,6 +53,9 @@ export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {!guide && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateHowToSchema(howTo, pageUrl, locale)) }} />
+      )}
       {rating.count >= MIN_PUBLIC_VOTES && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...generateToolRatingSchema({ ...tool, name, description: local.description }, rating), url: pageUrl }) }} />
       )}
@@ -68,8 +71,27 @@ export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE
         />
       </div>
 
+      {/* Plain facts in one table: what answer engines quote when asked for a free, private tool. */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <h2 className="text-lg font-semibold text-foreground mb-3">{fill(site.glanceHeading, { tool: name })}</h2>
+        <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-2 rounded-2xl border border-border bg-white p-5 text-sm">
+          {[
+            [site.glancePrice, site.glancePriceValue],
+            [site.glanceFile, slug === 'translate-pdf' ? site.glanceFileTranslate : site.glanceFileValue],
+            [site.glanceAccount, site.glanceAccountValue],
+            [site.glanceWatermark, site.glanceWatermarkValue],
+            [site.glanceDevices, site.glanceDevicesValue],
+          ].map(([term, value]) => (
+            <div key={term} className="flex gap-2">
+              <dt className="font-semibold text-foreground shrink-0">{term}:</dt>
+              <dd className="text-gray-600">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
       {guide ?? (
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <section id="how-to" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 scroll-mt-24">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">{howTo.title}</h2>
           <p className="text-gray-600 leading-relaxed mb-6">{howTo.intro}</p>
           <ol className="space-y-3 mb-8">

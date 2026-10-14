@@ -1,6 +1,9 @@
 /** The content model every article is written against. */
 
+import { stripInline } from './inline';
+
 export type Block =
+  /** Text in p, steps, list, table cells and callout text may carry `[label](/path)` links. */
   | { type: 'p'; text: string }
   | { type: 'h2'; text: string }
   | { type: 'h3'; text: string }
@@ -89,7 +92,7 @@ export function postText(post: BlogPost): string {
     }
   }
   for (const f of post.faqs) parts.push(f.q, f.a);
-  return parts.join(' ');
+  return stripInline(parts.join(' '));
 }
 
 export function readingMinutes(post: BlogPost): number {

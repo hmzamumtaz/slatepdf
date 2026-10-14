@@ -64,6 +64,6 @@ export const newPosts12: BlogPost[] = [
       { q: 'Do I need Adobe Acrobat to create a PDF from Word?', a: 'No. Windows includes everything you need: Word\u2019s export and the Microsoft Print to PDF printer. Acrobat is only a paid alternative.' },
       { q: 'Are my files uploaded when I convert them in a browser tool?', a: 'No. The conversion runs in your browser tab on your Windows PC. Your document never leaves your device.' },
     ],
-    related: ['how-to-convert-word-to-pdf-on-mac', 'how-to-convert-word-to-pdf-on-android', 'how-to-convert-pdf-to-word-on-windows', 'how-to-convert-word-to-pdf-without-losing-formatting'],
+    related: ['how-to-convert-word-to-pdf-on-mac', 'how-to-convert-word-to-pdf-on-android', 'how-to-convert-pdf-to-word-without-losing-formatting', 'how-to-convert-word-to-pdf-without-losing-formatting'],
   },
 ];

@@ -48,6 +48,18 @@ export const site = {
   whyToolHeading: 'Why use {tool} here?',
   faqHeading: '{tool} — frequently asked questions',
   continueHeading: 'Continue with another tool',
+  glanceHeading: '{tool} at a glance',
+  glancePrice: 'Price',
+  glancePriceValue: 'Free, with no paid tier and no usage limit',
+  glanceFile: 'Your file',
+  glanceFileValue: 'Processed in your browser, never uploaded',
+  glanceFileTranslate: 'Read in your browser; only the extracted text is sent to a translation service',
+  glanceAccount: 'Account',
+  glanceAccountValue: 'Not needed',
+  glanceWatermark: 'Watermark',
+  glanceWatermarkValue: 'None added to your file',
+  glanceDevices: 'Works on',
+  glanceDevicesValue: 'Any modern browser on Windows, Mac, Linux, Android and iPhone',
   seeAllTools: 'See all {count} PDF tools',
 };
 

@@ -1,15 +1,28 @@
-import { SITE_NAME, SITE_URL } from './site';
+import { SITE_NAME, SITE_SLUG, SITE_TAGLINE, SITE_URL } from './site';
 import { SITE_AUTHOR, SITE_EMAIL } from './author';
+import { ALL_LOCALES } from '@/i18n/config';
 
-/** Organization + WebSite schema for the homepage. */
+/**
+ * Stable node ids. Every page's structured data points at the same
+ * Organization and WebSite nodes, so search and answer engines resolve
+ * "Slate PDF" to one entity rather than a loose name on each page.
+ */
+export const ORG_ID = `${SITE_URL}/#organization`;
+export const WEBSITE_ID = `${SITE_URL}/#website`;
+
+/** Organization schema, emitted on every page by the root layout. */
 export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': ORG_ID,
     name: SITE_NAME,
+    alternateName: [SITE_SLUG, 'slatepdf.space'],
     url: SITE_URL,
-    logo: `${SITE_URL}/icon-512.png`,
-    description: 'Free PDF toolkit that runs in your browser. Edit, convert, merge, compress, and secure PDFs without uploading.',
+    logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon-512.png`, width: 512, height: 512 },
+    slogan: SITE_TAGLINE,
+    description: 'Free PDF toolkit that runs in your browser. Edit, convert, merge, compress, OCR, sign and secure PDFs without uploading them, with no account and no watermark.',
+    knowsAbout: ['PDF', 'PDF editing', 'PDF conversion', 'PDF compression', 'OCR', 'Electronic signatures', 'Document privacy', 'Client-side file processing'],
     sameAs: ['https://github.com/hmzamumtaz/slatepdf'],
     founder: { '@type': 'Person', name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role, url: `${SITE_URL}/about` },
     employee: { '@type': 'Person', name: SITE_AUTHOR.name, jobTitle: SITE_AUTHOR.role, url: `${SITE_URL}/about` },
@@ -27,8 +40,46 @@ export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': WEBSITE_ID,
     name: SITE_NAME,
+    alternateName: SITE_SLUG,
     url: SITE_URL,
+    description: 'Free PDF tools that run in your browser: merge, split, compress, convert, edit, sign and protect PDFs without uploading them.',
+    inLanguage: ALL_LOCALES,
+    publisher: { '@id': ORG_ID },
+  };
+}
+
+/** The WebPage node every page type shares; `extra` adds type-specific fields. */
+export function generateWebPageSchema(page: { name: string; description: string; url: string; inLanguage: string; dateModified?: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': page.url,
+    name: page.name,
+    description: page.description,
+    url: page.url,
+    inLanguage: page.inLanguage,
+    isPartOf: { '@id': WEBSITE_ID },
+    publisher: { '@id': ORG_ID },
+    ...(page.dateModified ? { dateModified: page.dateModified } : {}),
+  };
+}
+
+/**
+ * HowTo schema mirroring the visible how-to steps on a tool page. Google no
+ * longer shows HowTo rich results, but answer engines still read the steps.
+ */
+export function generateHowToSchema(howTo: { title: string; intro: string; steps: string[] }, url: string, inLanguage: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: howTo.title,
+    description: howTo.intro,
+    inLanguage,
+    estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+    tool: { '@type': 'HowToTool', name: `${SITE_NAME} (web browser)` },
+    step: howTo.steps.map((text, i) => ({ '@type': 'HowToStep', position: i + 1, text, url: `${url}#how-to` })),
   };
 }
 
@@ -45,15 +96,12 @@ export function generateToolPageSchema(tool: {
   slug: string;
   category: string;
 }) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+  return generateWebPageSchema({
     name: `${tool.name} — ${SITE_NAME}`,
     description: tool.description,
     url: `${SITE_URL}/tools/${tool.slug}`,
     inLanguage: 'en',
-    isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
-  };
+  });
 }
 
 /**
@@ -73,6 +121,7 @@ export function generateToolRatingSchema(
     description: tool.description,
     url: `${SITE_URL}/tools/${tool.slug}`,
     applicationCategory: 'UtilitiesApplication',
+    publisher: { '@id': ORG_ID },
     operatingSystem: 'Any (runs in a web browser)',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     aggregateRating: {
