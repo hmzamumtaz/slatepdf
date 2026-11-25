@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Convertir a PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 horizontal",
+  "Convert to PDF": "Convertir a PDF",
+  "Enlarge small images to fill the page": "Ampliar las imágenes pequeñas para llenar la página",
+  "Large": "Grande",
+  "Legal": "Oficio (Legal)",
+  "Letter": "Carta",
+  "Letter landscape": "Carta horizontal",
+  "Margin": "Margen",
+  "None": "Ninguno",
+  "Original size": "Tamaño original",
+  "Page size": "Tamaño de página",
+  "Small": "Pequeño"
 }

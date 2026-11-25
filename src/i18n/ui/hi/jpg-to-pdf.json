@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "PDF में बदलें"
+  "A4": "A4",
+  "A4 landscape": "A4 लैंडस्केप",
+  "Convert to PDF": "PDF में बदलें",
+  "Enlarge small images to fill the page": "छोटी छवियों को पृष्ठ भरने के लिए बड़ा करें",
+  "Large": "बड़ा",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter लैंडस्केप",
+  "Margin": "मार्जिन",
+  "None": "कोई नहीं",
+  "Original size": "मूल साइज़",
+  "Page size": "पेज साइज़",
+  "Small": "छोटा"
 }

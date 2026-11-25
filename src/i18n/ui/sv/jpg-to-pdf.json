@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Konvertera till PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 liggande",
+  "Convert to PDF": "Konvertera till PDF",
+  "Enlarge small images to fill the page": "Förstora små bilder för att fylla sidan",
+  "Large": "Stor",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter liggande",
+  "Margin": "Marginal",
+  "None": "Ingen",
+  "Original size": "Ursprunglig storlek",
+  "Page size": "Sidstorlek",
+  "Small": "Liten"
 }

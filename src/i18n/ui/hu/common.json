@@ -41,6 +41,8 @@
   "Loading preview...": "Előnézet betöltése...",
   "Loading text recognition…": "Szövegfelismerés betöltése…",
   "Medium": "Közepes",
+  "Move file down": "Fájl mozgatása lefelé",
+  "Move file up": "Fájl mozgatása felfelé",
   "Next": "Következő",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Nem található kinyerhető szöveg – ez a PDF szkenneltnek vagy képalapúnak tűnik. Előbb futtasd le rajta a PDF szövegfelismerés (OCR) eszközt, majd az eredményt foglald össze.",
   "No redaction areas specified.": "Nincs megadva kitakarandó terület.",

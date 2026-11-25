@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "تحويل إلى PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 أفقي",
+  "Convert to PDF": "تحويل إلى PDF",
+  "Enlarge small images to fill the page": "تكبير الصور الصغيرة لملء الصفحة",
+  "Large": "كبيرة",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter أفقي",
+  "Margin": "الهامش",
+  "None": "بلا",
+  "Original size": "الحجم الأصلي",
+  "Page size": "حجم الصفحة",
+  "Small": "صغير"
 }

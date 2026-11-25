@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "המרה ל-PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 לרוחב",
+  "Convert to PDF": "המרה ל-PDF",
+  "Enlarge small images to fill the page": "הגדל תמונות קטנות כדי למלא את העמוד",
+  "Large": "גדול",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter לרוחב",
+  "Margin": "שוליים",
+  "None": "ללא",
+  "Original size": "גודל מקורי",
+  "Page size": "גודל הדף",
+  "Small": "קטן"
 }

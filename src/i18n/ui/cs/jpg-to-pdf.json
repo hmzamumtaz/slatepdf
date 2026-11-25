@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Převést do PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 na šířku",
+  "Convert to PDF": "Převést do PDF",
+  "Enlarge small images to fill the page": "Zvětšit malé obrázky, aby vyplnily stránku",
+  "Large": "Velký",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter na šířku",
+  "Margin": "Okraj",
+  "None": "Žádný",
+  "Original size": "Původní velikost",
+  "Page size": "Velikost stránky",
+  "Small": "Malá"
 }

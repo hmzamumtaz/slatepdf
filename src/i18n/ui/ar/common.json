@@ -41,6 +41,8 @@
   "Loading preview...": "جارٍ تحميل المعاينة...",
   "Loading text recognition…": "جارٍ تحميل التعرف على النص…",
   "Medium": "متوسط",
+  "Move file down": "نقل الملف لأسفل",
+  "Move file up": "نقل الملف لأعلى",
   "Next": "التالي",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "لم يُعثر على نص قابل للاستخراج، ويبدو أن ملف PDF هذا ممسوح ضوئيًا أو قائم على الصور. مرّره أولًا عبر أداة OCR لملفات PDF، ثم لخّص النتيجة.",
   "No redaction areas specified.": "لم تُحدَّد أي مناطق للحجب.",

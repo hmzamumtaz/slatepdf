@@ -41,6 +41,8 @@
   "Loading preview...": "正在加载预览……",
   "Loading text recognition…": "正在加载文字识别……",
   "Medium": "中",
+  "Move file down": "下移文件",
+  "Move file up": "上移文件",
   "Next": "下一个",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "未找到可提取的文字，此PDF似乎是扫描件或纯图片。请先用“PDF OCR文字识别”工具处理，再对结果生成摘要。",
   "No redaction areas specified.": "未指定要涂黑的区域。",

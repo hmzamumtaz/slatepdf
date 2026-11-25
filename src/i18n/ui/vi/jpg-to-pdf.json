@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Chuyển sang PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 ngang",
+  "Convert to PDF": "Chuyển sang PDF",
+  "Enlarge small images to fill the page": "Phóng to ảnh nhỏ để lấp đầy trang",
+  "Large": "Lớn",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter ngang",
+  "Margin": "Lề",
+  "None": "Không",
+  "Original size": "Dung lượng gốc",
+  "Page size": "Khổ giấy",
+  "Small": "Nhỏ"
 }

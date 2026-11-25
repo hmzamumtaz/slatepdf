@@ -41,6 +41,8 @@
   "Loading preview...": "미리보기 불러오는 중...",
   "Loading text recognition…": "텍스트 인식을 불러오는 중…",
   "Medium": "보통",
+  "Move file down": "파일 아래로 이동",
+  "Move file up": "파일 위로 이동",
   "Next": "다음",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "추출할 수 있는 텍스트가 없습니다. 스캔했거나 이미지로 된 PDF로 보입니다. 먼저 PDF OCR 도구를 실행한 뒤 그 결과를 요약하세요.",
   "No redaction areas specified.": "가릴 영역이 지정되지 않았습니다.",

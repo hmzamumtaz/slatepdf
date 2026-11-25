@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState, useRef } from 'react';
-import { Upload, FileText, X, Plus, CheckSquare, Square, MinusSquare, Lock } from 'lucide-react';
+import { Upload, FileText, X, Plus, CheckSquare, Square, MinusSquare, Lock, ChevronUp, ChevronDown } from 'lucide-react';
 import { useT } from '@/i18n/I18nProvider';
 
 interface FileUploadProps {
@@ -11,6 +11,8 @@ interface FileUploadProps {
   onFilesSelected: (files: File[]) => void;
   files: File[];
   onRemoveFile?: (index: number) => void;
+  /** Move a file one step up (to - 1) or down (to + 1). Only offered when set. */
+  onMoveFile?: (from: number, to: number) => void;
   label?: string;
   description?: string;
   selected?: Set<number>;
@@ -38,6 +40,7 @@ export default function FileUpload({
   onFilesSelected,
   files,
   onRemoveFile,
+  onMoveFile,
   label,
   description,
   selected,
@@ -205,6 +208,26 @@ export default function FileUpload({
                 <p className="text-sm font-medium text-foreground truncate">{file.name}</p>
                 <p className="text-xs text-muted-foreground">{formatSize(file.size)}</p>
               </div>
+              {onMoveFile && files.length > 1 && (
+                <span className="flex flex-col shrink-0">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); onMoveFile(index, index - 1); }}
+                    disabled={index === 0}
+                    className="p-0.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-colors disabled:opacity-30 disabled:pointer-events-none"
+                    aria-label={t('Move file up')}
+                  >
+                    <ChevronUp className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); onMoveFile(index, index + 1); }}
+                    disabled={index === files.length - 1}
+                    className="p-0.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-colors disabled:opacity-30 disabled:pointer-events-none"
+                    aria-label={t('Move file down')}
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </span>
+              )}
               {onRemoveFile && (
                 <button
                   onClick={(e) => { e.stopPropagation(); onRemoveFile(index); }}

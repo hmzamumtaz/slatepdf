@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "แปลงเป็น PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 แนวนอน",
+  "Convert to PDF": "แปลงเป็น PDF",
+  "Enlarge small images to fill the page": "ขยายภาพขนาดเล็กให้เต็มหน้า",
+  "Large": "ใหญ่",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter แนวนอน",
+  "Margin": "ขอบ",
+  "None": "ไม่มี",
+  "Original size": "ขนาดเดิม",
+  "Page size": "ขนาดหน้า",
+  "Small": "เล็ก"
 }

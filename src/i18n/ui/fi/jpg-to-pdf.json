@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Muunna PDF:ksi"
+  "A4": "A4",
+  "A4 landscape": "A4 vaaka",
+  "Convert to PDF": "Muunna PDF:ksi",
+  "Enlarge small images to fill the page": "Suurenna pienet kuvat täyttämään sivu",
+  "Large": "Suuri",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter vaaka",
+  "Margin": "Marginaali",
+  "None": "Ei mitään",
+  "Original size": "Alkuperäinen koko",
+  "Page size": "Sivukoko",
+  "Small": "Pieni"
 }

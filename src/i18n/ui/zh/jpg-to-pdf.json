@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "转换为PDF"
+  "A4": "A4",
+  "A4 landscape": "A4横向",
+  "Convert to PDF": "转换为PDF",
+  "Enlarge small images to fill the page": "放大较小的图片以填满页面",
+  "Large": "大",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter横向",
+  "Margin": "边距",
+  "None": "无",
+  "Original size": "原始大小",
+  "Page size": "页面尺寸",
+  "Small": "小"
 }

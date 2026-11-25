@@ -41,6 +41,8 @@
   "Loading preview...": "Önizleme yükleniyor...",
   "Loading text recognition…": "Metin tanıma yükleniyor…",
   "Medium": "Orta",
+  "Move file down": "Dosyayı aşağı taşı",
+  "Move file up": "Dosyayı yukarı taşı",
   "Next": "İleri",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Çıkarılabilir metin bulunamadı — bu PDF taranmış veya görsel tabanlı görünüyor. Önce OCR PDF aracından geçirin, ardından sonucu özetleyin.",
   "No redaction areas specified.": "Karartılacak alan belirtilmedi.",

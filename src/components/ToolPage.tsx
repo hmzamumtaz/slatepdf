@@ -302,6 +302,29 @@ export default function ToolPage({
     setResults([]);
   }, []);
 
+  /** Move a file one step in the list. Selection follows the file, not the slot. */
+  const handleMoveFile = useCallback((from: number, to: number) => {
+    if (to < 0) return;
+    setFiles(prev => {
+      if (to >= prev.length || from < 0 || from >= prev.length || from === to) return prev;
+      const next = [...prev];
+      const [moved] = next.splice(from, 1);
+      next.splice(to, 0, moved);
+      return next;
+    });
+    setSelected(prev => {
+      const next = new Set<number>();
+      prev.forEach(i => {
+        if (i === from) next.add(to);
+        else if (from < to && i > from && i <= to) next.add(i - 1);
+        else if (from > to && i >= to && i < from) next.add(i + 1);
+        else next.add(i);
+      });
+      return next;
+    });
+    setResults([]);
+  }, []);
+
   const toggleSelectAll = useCallback(() => {
     if (allSelected) setSelected(new Set());
     else setSelected(new Set(files.map((_, i) => i)));
@@ -414,7 +437,7 @@ export default function ToolPage({
 
         {!showTwoCol && (
           <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 shadow-sm">
-            <FileUpload accept={accept} multiple={multiple} files={files} onFilesSelected={handleFilesSelected} onRemoveFile={results.length === 0 ? handleRemoveFile : undefined} selectable={false} selected={selected} onToggleFile={toggleFile} onToggleAll={toggleSelectAll} allSelected={allSelected} someSelected={someSelected} />
+            <FileUpload accept={accept} multiple={multiple} files={files} onFilesSelected={handleFilesSelected} onRemoveFile={results.length === 0 ? handleRemoveFile : undefined} onMoveFile={results.length === 0 ? handleMoveFile : undefined} selectable={false} selected={selected} onToggleFile={toggleFile} onToggleAll={toggleSelectAll} allSelected={allSelected} someSelected={someSelected} />
             {error && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3 animate-fade-in"><AlertCircle className="w-5 h-5 text-destructive shrink-0" /><p className="text-sm text-destructive">{t(error)}</p></div>}
             {progress && (
               <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl animate-fade-in">
@@ -451,7 +474,7 @@ export default function ToolPage({
                 {multiple && files.length > 1 && <ViewToggle mode={leftView} onChange={setLeftView} />}
               </div>
               {leftView === 'list' || !multiple ? (
-                <FileUpload accept={accept} multiple={multiple} files={files} onFilesSelected={handleFilesSelected} onRemoveFile={results.length === 0 ? handleRemoveFile : undefined} selectable={results.length === 0} selected={selected} onToggleFile={toggleFile} onToggleAll={toggleSelectAll} allSelected={allSelected} someSelected={someSelected} />
+                <FileUpload accept={accept} multiple={multiple} files={files} onFilesSelected={handleFilesSelected} onRemoveFile={results.length === 0 ? handleRemoveFile : undefined} onMoveFile={results.length === 0 ? handleMoveFile : undefined} selectable={results.length === 0} selected={selected} onToggleFile={toggleFile} onToggleAll={toggleSelectAll} allSelected={allSelected} someSelected={someSelected} />
               ) : (
                 <FileGridPreview files={files} currentIndex={leftGridIdx} onPrev={() => setLeftGridIdx(i => Math.max(0, i - 1))} onNext={() => setLeftGridIdx(i => Math.min(files.length - 1, i + 1))} />
               )}

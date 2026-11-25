@@ -41,6 +41,8 @@
   "Loading preview...": "Cargando la vista previa...",
   "Loading text recognition…": "Cargando el reconocimiento de texto…",
   "Medium": "Media",
+  "Move file down": "Bajar archivo",
+  "Move file up": "Subir archivo",
   "Next": "Siguiente",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "No se encontró texto extraíble: este PDF parece escaneado o basado en imágenes. Pásalo primero por la herramienta OCR PDF y luego resume el resultado.",
   "No redaction areas specified.": "No se indicó ninguna zona para censurar.",

@@ -41,6 +41,8 @@
   "Loading preview...": "プレビューを読み込んでいます...",
   "Loading text recognition…": "文字認識を読み込んでいます…",
   "Medium": "標準",
+  "Move file down": "ファイルを下に移動",
+  "Move file up": "ファイルを上に移動",
   "Next": "次へ",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "抽出できるテキストが見つかりません。このPDFはスキャンされたもの、または画像ベースのようです。先に「PDF OCR」ツールで処理してから、その結果を要約してください。",
   "No redaction areas specified.": "墨消しする範囲が指定されていません。",

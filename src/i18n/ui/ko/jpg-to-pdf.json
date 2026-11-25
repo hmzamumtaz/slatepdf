@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "PDF로 변환"
+  "A4": "A4",
+  "A4 landscape": "A4 가로",
+  "Convert to PDF": "PDF로 변환",
+  "Enlarge small images to fill the page": "작은 이미지를 확대하여 페이지에 채우기",
+  "Large": "큼",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter 가로",
+  "Margin": "여백",
+  "None": "없음",
+  "Original size": "원본 크기",
+  "Page size": "페이지 크기",
+  "Small": "작게"
 }

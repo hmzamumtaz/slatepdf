@@ -41,6 +41,8 @@
   "Loading preview...": "Načítám náhled...",
   "Loading text recognition…": "Načítám rozpoznávání textu…",
   "Medium": "Střední",
+  "Move file down": "Přesunout soubor dolů",
+  "Move file up": "Přesunout soubor nahoru",
   "Next": "Další",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Nebyl nalezen žádný text k získání – toto PDF je zřejmě naskenované nebo složené z obrázků. Nejprve ho zpracujte nástrojem OCR PDF a potom shrňte výsledek.",
   "No redaction areas specified.": "Nejsou určeny žádné oblasti k začernění.",

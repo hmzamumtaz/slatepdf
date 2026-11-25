@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Конвертувати в PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 альбомна",
+  "Convert to PDF": "Конвертувати в PDF",
+  "Enlarge small images to fill the page": "Збільшувати маленькі зображення на всю сторінку",
+  "Large": "Великі",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter альбомна",
+  "Margin": "Поля",
+  "None": "Немає",
+  "Original size": "Початковий розмір",
+  "Page size": "Розмір сторінки",
+  "Small": "Низька"
 }

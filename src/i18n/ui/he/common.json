@@ -41,6 +41,8 @@
   "Loading preview...": "טוען תצוגה מקדימה...",
   "Loading text recognition…": "טוען זיהוי טקסט…",
   "Medium": "בינונית",
+  "Move file down": "העבר קובץ למטה",
+  "Move file up": "העבר קובץ למעלה",
   "Next": "הבא",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "לא נמצא טקסט שאפשר לחלץ — נראה שה-PDF הזה סרוק או מבוסס תמונות. יש להריץ אותו קודם בכלי OCR ל-PDF, ואז לסכם את התוצאה.",
   "No redaction areas specified.": "לא צוינו אזורים להשחרה.",

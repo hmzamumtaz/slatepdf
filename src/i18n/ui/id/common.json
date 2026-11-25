@@ -41,6 +41,8 @@
   "Loading preview...": "Memuat pratinjau...",
   "Loading text recognition…": "Memuat pengenalan teks…",
   "Medium": "Sedang",
+  "Move file down": "Pindahkan file ke bawah",
+  "Move file up": "Pindahkan file ke atas",
   "Next": "Berikutnya",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Tidak ada teks yang dapat diambil — PDF ini tampaknya hasil pindaian atau berbasis gambar. Jalankan dulu dengan alat OCR PDF, lalu ringkas hasilnya.",
   "No redaction areas specified.": "Belum ada area sensor yang ditentukan.",

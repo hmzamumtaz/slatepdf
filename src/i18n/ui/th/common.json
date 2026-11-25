@@ -41,6 +41,8 @@
   "Loading preview...": "กำลังโหลดตัวอย่าง...",
   "Loading text recognition…": "กำลังโหลดการอ่านข้อความ…",
   "Medium": "กลาง",
+  "Move file down": "ย้ายไฟล์ลง",
+  "Move file up": "ย้ายไฟล์ขึ้น",
   "Next": "ถัดไป",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "ไม่พบข้อความที่ดึงออกมาได้ — PDF นี้น่าจะเป็นเอกสารสแกนหรือไฟล์แบบรูปภาพ ให้ใช้เครื่องมือ OCR PDF ก่อน แล้วจึงสรุปผลลัพธ์",
   "No redaction areas specified.": "ยังไม่ได้ระบุพื้นที่ที่จะปิดทับ",

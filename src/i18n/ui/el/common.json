@@ -41,6 +41,8 @@
   "Loading preview...": "Φόρτωση προεπισκόπησης...",
   "Loading text recognition…": "Φόρτωση αναγνώρισης κειμένου…",
   "Medium": "Μεσαίο",
+  "Move file down": "Μετακίνηση αρχείου προς τα κάτω",
+  "Move file up": "Μετακίνηση αρχείου προς τα επάνω",
   "Next": "Επόμενο",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Δεν βρέθηκε κείμενο προς εξαγωγή — αυτό το PDF φαίνεται σαρωμένο ή βασισμένο σε εικόνες. Περάστε το πρώτα από το εργαλείο OCR PDF και μετά κάντε σύνοψη του αποτελέσματος.",
   "No redaction areas specified.": "Δεν ορίστηκαν περιοχές απόκρυψης.",

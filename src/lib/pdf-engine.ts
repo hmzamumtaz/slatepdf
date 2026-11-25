@@ -747,11 +747,29 @@ export async function protectPdf(file: File, userPassword: string, ownerPassword
   return new Blob([new Uint8Array(encrypted)], { type: 'application/pdf' });
 }
 
-export async function jpgToPdf(files: File[]): Promise<Blob> {
+export interface JpgToPdfOptions {
+  /** Paper size; 'original' sizes each page to its image. Defaults to 'a4'. */
+  pageSize?: 'a4' | 'a4-landscape' | 'letter' | 'letter-landscape' | 'legal' | 'original';
+  /** Blank border around the image. Defaults to 'small' (24pt, the old behaviour). */
+  margin?: 'none' | 'small' | 'large';
+  /** Allow small images to be enlarged to fill the page. Defaults to false. */
+  enlarge?: boolean;
+}
+
+const PAPER_SIZES = {
+  a4: { w: 595.28, h: 841.89 },
+  'a4-landscape': { w: 841.89, h: 595.28 },
+  letter: { w: 612, h: 792 },
+  'letter-landscape': { w: 792, h: 612 },
+  legal: { w: 612, h: 1008 },
+} as const;
+
+const JPG_MARGINS = { none: 0, small: 24, large: 48 } as const;
+
+export async function jpgToPdf(files: File[], options: JpgToPdfOptions = {}): Promise<Blob> {
   if (files.length === 0) throw new Error(msg('Select at least one image.'));
-  const A4_W = 595.28;
-  const A4_H = 841.89;
-  const MARGIN = 24;
+  const pageSize = options.pageSize ?? 'a4';
+  const margin = JPG_MARGINS[options.margin ?? 'small'];
   const merged = await PDFDocument.create();
   for (const file of files) {
     const buf = await readFileAsArrayBuffer(file);
@@ -768,17 +786,28 @@ export async function jpgToPdf(files: File[]): Promise<Blob> {
     } catch {
       throw new Error(`"${file.name}" could not be read as an image. It may be corrupted or in an unsupported format.`);
     }
-    // A page sized to the image's raw pixel count (treated as PDF points)
-    // produced absurdly oversized, non-standard pages for any real photo —
-    // fit it onto a normal A4 page instead, scaled down only if it's larger
-    // than the printable area.
-    const maxW = A4_W - MARGIN * 2;
-    const maxH = A4_H - MARGIN * 2;
-    const scale = Math.min(maxW / image.width, maxH / image.height, 1);
+    let pw: number;
+    let ph: number;
+    if (pageSize === 'original') {
+      // Match the image's aspect ratio, capped so absurdly large phone photos
+      // don't produce towering non-standard pages (same cap as Scan).
+      const cap = 2000;
+      const scale = Math.min(1, cap / Math.max(image.width, image.height));
+      pw = Math.max(1, image.width * scale);
+      ph = Math.max(1, image.height * scale);
+    } else {
+      pw = PAPER_SIZES[pageSize].w;
+      ph = PAPER_SIZES[pageSize].h;
+    }
+    // Fit inside the printable area, scaled down only — unless `enlarge`
+    // lets a small image grow to fill the page.
+    const maxW = pw - margin * 2;
+    const maxH = ph - margin * 2;
+    const scale = Math.min(maxW / image.width, maxH / image.height, options.enlarge ? Infinity : 1);
     const w = image.width * scale;
     const h = image.height * scale;
-    const page = merged.addPage([A4_W, A4_H]);
-    page.drawImage(image, { x: (A4_W - w) / 2, y: (A4_H - h) / 2, width: w, height: h });
+    const page = merged.addPage([pw, ph]);
+    page.drawImage(image, { x: (pw - w) / 2, y: (ph - h) / 2, width: w, height: h });
   }
   return toBlob(await merged.save());
 }

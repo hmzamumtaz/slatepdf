@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Μετατροπή σε PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 οριζόντιο",
+  "Convert to PDF": "Μετατροπή σε PDF",
+  "Enlarge small images to fill the page": "Μεγέθυνση μικρών εικόνων για να γεμίσει η σελίδα",
+  "Large": "Μεγάλο",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter οριζόντιο",
+  "Margin": "Περιθώριο",
+  "None": "Κανένα",
+  "Original size": "Αρχικό μέγεθος",
+  "Page size": "Μέγεθος σελίδας",
+  "Small": "Μικρό"
 }

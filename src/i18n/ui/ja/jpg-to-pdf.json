@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "PDFに変換"
+  "A4": "A4",
+  "A4 landscape": "A4 横",
+  "Convert to PDF": "PDFに変換",
+  "Enlarge small images to fill the page": "小さい画像を拡大してページいっぱいに表示",
+  "Large": "大",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter 横",
+  "Margin": "余白",
+  "None": "なし",
+  "Original size": "元のサイズ",
+  "Page size": "用紙サイズ",
+  "Small": "小"
 }

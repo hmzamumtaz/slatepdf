@@ -41,6 +41,8 @@
   "Loading preview...": "Laster inn forhåndsvisning …",
   "Loading text recognition…": "Laster inn tekstgjenkjenning …",
   "Medium": "Middels",
+  "Move file down": "Flytt fil ned",
+  "Move file up": "Flytt fil opp",
   "Next": "Neste",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Fant ingen tekst som kan trekkes ut – denne PDF-en ser ut til å være skannet eller bildebasert. Kjør den gjennom OCR PDF først, og oppsummer deretter resultatet.",
   "No redaction areas specified.": "Ingen områder er markert for sladding.",

@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Converter para PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 paisagem",
+  "Convert to PDF": "Converter para PDF",
+  "Enlarge small images to fill the page": "Ampliar imagens pequenas para preencher a página",
+  "Large": "Grande",
+  "Legal": "Ofício",
+  "Letter": "Carta",
+  "Letter landscape": "Carta paisagem",
+  "Margin": "Margem",
+  "None": "Nenhum",
+  "Original size": "Tamanho original",
+  "Page size": "Tamanho da página",
+  "Small": "Pequeno"
 }

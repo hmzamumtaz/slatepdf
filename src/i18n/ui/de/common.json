@@ -41,6 +41,8 @@
   "Loading preview...": "Vorschau wird geladen …",
   "Loading text recognition…": "Texterkennung wird geladen …",
   "Medium": "Mittel",
+  "Move file down": "Datei nach unten verschieben",
+  "Move file up": "Datei nach oben verschieben",
   "Next": "Weiter",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Kein extrahierbarer Text gefunden – dieses PDF scheint gescannt oder bildbasiert zu sein. Führen Sie zuerst „OCR PDF“ aus und fassen Sie dann das Ergebnis zusammen.",
   "No redaction areas specified.": "Keine zu schwärzenden Bereiche angegeben.",

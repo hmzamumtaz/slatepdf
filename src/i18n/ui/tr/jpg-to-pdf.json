@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "PDF'ye Dönüştür"
+  "A4": "A4",
+  "A4 landscape": "A4 yatay",
+  "Convert to PDF": "PDF'ye Dönüştür",
+  "Enlarge small images to fill the page": "Küçük görselleri sayfayı dolduracak şekilde büyüt",
+  "Large": "Büyük",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter yatay",
+  "Margin": "Kenar boşluğu",
+  "None": "Yok",
+  "Original size": "Orijinal boyut",
+  "Page size": "Sayfa boyutu",
+  "Small": "Küçük"
 }

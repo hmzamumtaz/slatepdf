@@ -41,6 +41,8 @@
   "Loading preview...": "Загрузка предпросмотра...",
   "Loading text recognition…": "Загрузка распознавания текста…",
   "Medium": "Средний",
+  "Move file down": "Переместить файл вниз",
+  "Move file up": "Переместить файл вверх",
   "Next": "Далее",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Текст для извлечения не найден — похоже, этот PDF отсканирован или состоит из изображений. Сначала обработайте его инструментом «OCR PDF», а затем создайте краткое содержание результата.",
   "No redaction areas specified.": "Не указаны области для скрытия.",

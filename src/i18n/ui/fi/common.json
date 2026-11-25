@@ -41,6 +41,8 @@
   "Loading preview...": "Ladataan esikatselua...",
   "Loading text recognition…": "Ladataan tekstintunnistusta…",
   "Medium": "Keskitaso",
+  "Move file down": "Siirrä tiedosto alas",
+  "Move file up": "Siirrä tiedosto ylös",
   "Next": "Seuraava",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Poimittavaa tekstiä ei löytynyt – tämä PDF näyttää olevan skannattu tai kuvapohjainen. Käsittele se ensin OCR PDF -työkalulla ja tiivistä sitten tulos.",
   "No redaction areas specified.": "Sensuroitavia alueita ei ole määritetty.",

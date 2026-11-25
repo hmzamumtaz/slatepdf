@@ -41,6 +41,8 @@
   "Loading preview...": "Đang tải bản xem trước...",
   "Loading text recognition…": "Đang tải bộ nhận dạng chữ…",
   "Medium": "Trung bình",
+  "Move file down": "Di chuyển tệp xuống",
+  "Move file up": "Di chuyển tệp lên",
   "Next": "Tiếp",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Không tìm thấy văn bản trích xuất được — PDF này có vẻ là bản scan hoặc dạng ảnh. Hãy chạy công cụ OCR PDF trước, rồi tóm tắt kết quả.",
   "No redaction areas specified.": "Chưa chọn vùng nào để che.",

@@ -41,6 +41,8 @@
   "Loading preview...": "Loading preview...",
   "Loading text recognition…": "Loading text recognition…",
   "Medium": "Medium",
+  "Move file down": "Move file down",
+  "Move file up": "Move file up",
   "Next": "Next",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.",
   "No redaction areas specified.": "No redaction areas specified.",

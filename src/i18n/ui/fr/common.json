@@ -41,6 +41,8 @@
   "Loading preview...": "Chargement de l’aperçu...",
   "Loading text recognition…": "Chargement de la reconnaissance de texte…",
   "Medium": "Moyenne",
+  "Move file down": "Déplacer le fichier vers le bas",
+  "Move file up": "Déplacer le fichier vers le haut",
   "Next": "Suivant",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Aucun texte extractible trouvé — ce PDF semble numérisé ou composé d’images. Passez-le d’abord dans l’outil OCR PDF, puis résumez le résultat.",
   "No redaction areas specified.": "Aucune zone à caviarder n’a été définie.",

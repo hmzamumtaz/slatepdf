@@ -41,6 +41,8 @@
   "Loading preview...": "Se încarcă previzualizarea...",
   "Loading text recognition…": "Se încarcă recunoașterea textului…",
   "Medium": "Medie",
+  "Move file down": "Mută fișierul în jos",
+  "Move file up": "Mută fișierul în sus",
   "Next": "Următor",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Nu s-a găsit text extractibil — acest PDF pare scanat sau bazat pe imagini. Trece-l mai întâi prin instrumentul OCR PDF, apoi rezumă rezultatul.",
   "No redaction areas specified.": "Nu ai marcat nicio zonă de cenzurat.",

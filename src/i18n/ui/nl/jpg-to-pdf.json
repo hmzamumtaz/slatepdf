@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Omzetten naar PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 liggend",
+  "Convert to PDF": "Omzetten naar PDF",
+  "Enlarge small images to fill the page": "Kleine afbeeldingen vergroten om de pagina te vullen",
+  "Large": "Groot",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter liggend",
+  "Margin": "Marge",
+  "None": "Geen",
+  "Original size": "Oorspronkelijke grootte",
+  "Page size": "Paginaformaat",
+  "Small": "Klein"
 }

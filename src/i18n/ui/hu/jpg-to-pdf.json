@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Konvertálás PDF-be"
+  "A4": "A4",
+  "A4 landscape": "A4 fekvő",
+  "Convert to PDF": "Konvertálás PDF-be",
+  "Enlarge small images to fill the page": "Kis képek nagyítása az oldal kitöltéséhez",
+  "Large": "Nagy",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter fekvő",
+  "Margin": "Margó",
+  "None": "Nincs",
+  "Original size": "Eredeti méret",
+  "Page size": "Oldalméret",
+  "Small": "Kicsi"
 }

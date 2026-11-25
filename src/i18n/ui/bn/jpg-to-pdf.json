@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "PDF-এ কনভার্ট করুন"
+  "A4": "A4",
+  "A4 landscape": "A4 ল্যান্ডস্কেপ",
+  "Convert to PDF": "PDF-এ কনভার্ট করুন",
+  "Enlarge small images to fill the page": "ছোট ছবিগুলিকে পৃষ্ঠা ভরাট করতে বড় করুন",
+  "Large": "বড়",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter ল্যান্ডস্কেপ",
+  "Margin": "মার্জিন",
+  "None": "কোনোটিই নয়",
+  "Original size": "মূল আকার",
+  "Page size": "পেজের আকার",
+  "Small": "ছোট"
 }

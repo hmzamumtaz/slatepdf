@@ -1,3 +1,15 @@
 {
-  "Convert to PDF": "Convertește în PDF"
+  "A4": "A4",
+  "A4 landscape": "A4 orizontal",
+  "Convert to PDF": "Convertește în PDF",
+  "Enlarge small images to fill the page": "Mărește imaginile mici pentru a umple pagina",
+  "Large": "Mare",
+  "Legal": "Legal",
+  "Letter": "Letter",
+  "Letter landscape": "Letter orizontal",
+  "Margin": "Margine",
+  "None": "Niciuna",
+  "Original size": "Dimensiune originală",
+  "Page size": "Dimensiunea paginii",
+  "Small": "Mică"
 }

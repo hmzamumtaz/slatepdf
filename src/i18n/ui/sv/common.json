@@ -41,6 +41,8 @@
   "Loading preview...": "Läser in förhandsvisning …",
   "Loading text recognition…": "Läser in textigenkänning …",
   "Medium": "Medel",
+  "Move file down": "Flytta filen nedåt",
+  "Move file up": "Flytta filen uppåt",
   "Next": "Nästa",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Ingen text kunde extraheras – PDF:en verkar vara skannad eller bildbaserad. Kör den genom verktyget OCR PDF först och sammanfatta sedan resultatet.",
   "No redaction areas specified.": "Inga områden att maskera har angetts.",

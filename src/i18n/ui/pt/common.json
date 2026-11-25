@@ -41,6 +41,8 @@
   "Loading preview...": "Carregando a pré-visualização...",
   "Loading text recognition…": "Carregando o reconhecimento de texto…",
   "Medium": "Média",
+  "Move file down": "Mover ficheiro para baixo",
+  "Move file up": "Mover ficheiro para cima",
   "Next": "Próxima",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "Nenhum texto extraível encontrado — este PDF parece ser escaneado ou baseado em imagens. Passe-o primeiro pela ferramenta OCR PDF e depois resuma o resultado.",
   "No redaction areas specified.": "Nenhuma área para tarjar foi marcada.",

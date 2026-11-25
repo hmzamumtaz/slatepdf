@@ -41,6 +41,8 @@
   "Loading preview...": "प्रीव्यू लोड हो रहा है...",
   "Loading text recognition…": "टेक्स्ट पहचान लोड हो रही है…",
   "Medium": "मीडियम",
+  "Move file down": "फ़ाइल नीचे ले जाएँ",
+  "Move file up": "फ़ाइल ऊपर ले जाएँ",
   "Next": "अगला",
   "No extractable text found — this PDF appears to be scanned or image-based. Run it through the OCR PDF tool first, then summarize the result.": "निकालने लायक कोई टेक्स्ट नहीं मिला — यह PDF स्कैन की हुई या इमेज-आधारित लगती है। पहले इसे OCR PDF टूल से चलाएँ, फिर नतीजे का सारांश बनाएँ।",
   "No redaction areas specified.": "रिडैक्शन के लिए कोई हिस्सा नहीं चुना गया।",
