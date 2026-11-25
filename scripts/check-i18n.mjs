@@ -27,7 +27,7 @@ const NAMESPACE_RULES = [
   [/^components\/workspace\//, 'workspace'],
   [/^components\/PdfEditor\.tsx$/, 'editor'],
   [/^components\/tools\/(\w+)Tool\.tsx$/, (m) => toolSlugFromComponent(m[1])],
-  [/^components\/(ToolPage|FileUpload|LivePreviewModal|PdfPreview|RateTool|Header)\.tsx$/, 'common'],
+  [/^components\/(ToolPage|FileUpload|LivePreviewModal|PdfPreview|RateTool|Header|ToolTrustChips)\.tsx$/, 'common'],
   [/^lib\//, 'common'],
 ];
 

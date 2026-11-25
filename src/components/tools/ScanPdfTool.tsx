@@ -19,6 +19,7 @@ import ScanErrorBoundary from './scan/ScanErrorBoundary';
 import { terminateOcr } from '@/lib/scan-ocr';
 import { useT, useHomeHref } from '@/i18n/I18nProvider';
 import { msg } from '@/i18n/format';
+import ToolTrustChips from '@/components/ToolTrustChips';
 
 type View = 'home' | 'camera' | 'review';
 
@@ -358,13 +359,14 @@ function Scanner() {
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center"><Camera className="w-6 h-6 text-violet-600" /></div>
+        <div className="flex items-start gap-4 mb-3">
+          <div className="w-14 h-14 rounded-2xl bg-violet-50 flex items-center justify-center"><Camera className="w-7 h-7 text-violet-600" /></div>
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Scan to PDF Online')}</h1>
-            <p className="text-muted-foreground text-sm sm:text-base">{t('Free camera scanner — scan documents with your phone and save them as a PDF. No app, nothing uploaded.')}</p>
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">{t('Scan to PDF Online')}</h1>
+            <p className="text-muted-foreground text-sm sm:text-base mt-1">{t('Free camera scanner — scan documents with your phone and save them as a PDF. No app, nothing uploaded.')}</p>
           </div>
         </div>
+        <ToolTrustChips />
 
         <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 shadow-sm">
           {isMobile ? (

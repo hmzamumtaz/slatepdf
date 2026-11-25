@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
-import { ArrowLeft, Download, Loader2, Check, AlertCircle, FileText, Trash2, FileDown, List, LayoutGrid, ChevronLeft, ChevronRight, Eye, BadgeCheck, Lock, UserX, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Download, Loader2, Check, AlertCircle, FileText, Trash2, FileDown, List, LayoutGrid, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 import { toolIcon } from '@/components/tool-icons';
 import Link from 'next/link';
 import { getToolBySlug } from '@/lib/tools-data';
 import FileUpload from './FileUpload';
+import ToolTrustChips from './ToolTrustChips';
 import LivePreviewModal from './LivePreviewModal';
 import { downloadBlob, downloadBlobsAsZip, renderPdfPages, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
@@ -408,19 +409,7 @@ export default function ToolPage({
             </div>
           </div>
           {/* The pitch, at a glance: the four facts every competitor hides. */}
-          <div className="flex flex-wrap items-center gap-2">
-            {[
-              { icon: BadgeCheck, label: t('Free') },
-              { icon: Lock, label: t('No upload') },
-              { icon: UserX, label: t('No sign-up') },
-              { icon: ShieldCheck, label: t('No watermark') },
-            ].map((chip) => (
-              <span key={chip.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted text-xs font-semibold text-foreground">
-                <chip.icon className="w-3.5 h-3.5 text-green-600" />
-                {chip.label}
-              </span>
-            ))}
-          </div>
+          <ToolTrustChips />
         </div>
 
         {!showTwoCol && (

@@ -7,6 +7,7 @@ import FileUpload from '@/components/FileUpload';
 import { protectPdf, downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 import { useT, useHomeHref } from '@/i18n/I18nProvider';
+import ToolTrustChips from '@/components/ToolTrustChips';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -81,14 +82,15 @@ export default function ProtectPdfTool() {
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
-        <div className="mb-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-amber-50"><Shield className="w-6 h-6 text-amber-500" /></div>
+        <div className="mb-6">
+          <div className="flex items-start gap-4 mb-3">
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-amber-50"><Shield className="w-7 h-7 text-amber-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Protect PDF')}</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">{t('Encrypt your PDF with password protection and permission controls')}</p>
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">{t('Protect PDF')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base mt-1">{t('Encrypt your PDF with password protection and permission controls')}</p>
             </div>
           </div>
+          <ToolTrustChips />
         </div>
 
         <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 shadow-sm">

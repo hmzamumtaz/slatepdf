@@ -7,6 +7,7 @@ import FileUpload from '@/components/FileUpload';
 import PdfEditor from '@/components/PdfEditor';
 import { downloadBlob, getOutputFilename } from '@/lib/pdf-engine';
 import { useT, useToolHref, useHomeHref } from '@/i18n/I18nProvider';
+import ToolTrustChips from '@/components/ToolTrustChips';
 
 export default function EditPdfTool() {
   const t = useT();
@@ -24,7 +25,7 @@ export default function EditPdfTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-4">
+        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
           <Link href={homeHref} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-4 h-4" />
             {t('All tools')}
@@ -34,6 +35,7 @@ export default function EditPdfTool() {
             {t('Click any line on the page and type — or add text, shapes, whiteout and freehand drawings. Everything runs in this tab — your file is never uploaded.')}
           </p>
         </div>
+        <div className="mb-4"><ToolTrustChips /></div>
 
         {file === null ? (
           <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 shadow-sm max-w-3xl">

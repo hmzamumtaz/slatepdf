@@ -7,6 +7,7 @@ import FileUpload from '@/components/FileUpload';
 import { summarizePdf, SummaryResult } from '@/lib/summarizer';
 import { friendlyError } from '@/lib/errors';
 import { useT, useHomeHref } from '@/i18n/I18nProvider';
+import ToolTrustChips from '@/components/ToolTrustChips';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -54,14 +55,15 @@ export default function AiSummarizerTool() {
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
-        <div className="mb-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-pink-50"><Sparkles className="w-6 h-6 text-pink-500" /></div>
+        <div className="mb-6">
+          <div className="flex items-start gap-4 mb-3">
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-pink-50"><Sparkles className="w-7 h-7 text-pink-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Summarizer')}</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">{t('Get an intelligent summary of your PDF document')}</p>
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">{t('Summarizer')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base mt-1">{t('Get an intelligent summary of your PDF document')}</p>
             </div>
           </div>
+          <ToolTrustChips />
         </div>
 
         <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 shadow-sm">

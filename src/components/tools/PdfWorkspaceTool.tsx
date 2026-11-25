@@ -20,6 +20,7 @@ import { blobToFile, countPages, formatSize, type Version } from '@/lib/workspac
 import { msg } from '@/i18n/format';
 import { useLocale, useT } from '@/i18n/I18nProvider';
 import { homeHref } from '@/i18n/paths';
+import ToolTrustChips from '@/components/ToolTrustChips';
 
 /**
  * One document, every tool.
@@ -165,7 +166,7 @@ export default function PdfWorkspaceTool() {
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-4">
+        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
           <Link href={homeHref(locale)} className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-4 h-4" />
             {t('All tools')}
@@ -175,6 +176,7 @@ export default function PdfWorkspaceTool() {
             {t('Every tool, one document. Each change carries into the next tab — download whenever you like.')}
           </p>
         </div>
+        <div className="mb-4"><ToolTrustChips /></div>
 
         {!current ? (
           <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 shadow-sm max-w-3xl">

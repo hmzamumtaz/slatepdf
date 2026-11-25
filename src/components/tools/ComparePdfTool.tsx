@@ -8,6 +8,7 @@ import { comparePdfs } from '@/lib/pdf-engine';
 import type { CompareResult } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
 import { useT, useHomeHref } from '@/i18n/I18nProvider';
+import ToolTrustChips from '@/components/ToolTrustChips';
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -45,14 +46,15 @@ export default function ComparePdfTool() {
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
-        <div className="mb-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-blue-50"><GitCompareArrows className="w-6 h-6 text-blue-500" /></div>
+        <div className="mb-6">
+          <div className="flex items-start gap-4 mb-3">
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-blue-50"><GitCompareArrows className="w-7 h-7 text-blue-500" /></div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t('Compare PDF')}</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">{t('Compare two PDFs and see the differences')}</p>
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">{t('Compare PDF')}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base mt-1">{t('Compare two PDFs and see the differences')}</p>
             </div>
           </div>
+          <ToolTrustChips />
         </div>
 
         <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 shadow-sm">
