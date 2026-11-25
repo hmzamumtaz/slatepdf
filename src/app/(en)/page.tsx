@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
 import { toolIcon } from '@/components/tool-icons';
@@ -9,43 +9,6 @@ import ToolGrid from '@/components/ToolGrid';
 import ToolsModal from '@/components/ToolsModal';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 import { SITE_AUTHOR } from '@/lib/author';
-import { getStats } from '@/lib/stats';
-
-function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const started = useRef(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          const duration = 1200;
-          const start = performance.now();
-
-          function tick(now: number) {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(eased * target));
-            if (progress < 1) requestAnimationFrame(tick);
-          }
-          requestAnimationFrame(tick);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [target]);
-
-  return <span ref={ref}>{count}{suffix}</span>;
-}
 
 /** Every tool as an ItemList, so the homepage's tool grid is explicit to crawlers. */
 const toolListSchema = {
@@ -108,16 +71,10 @@ const faqSchema = {
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [stats, setStats] = useState({ filesConverted: 0, toolsUsed: 0, globalCount: 0 });
 
   const popularTools = ['merge-pdf', 'compress-pdf', 'jpg-to-pdf', 'pdf-to-word', 'sign-pdf', 'edit-pdf']
     .map(getToolBySlug)
     .filter((t): t is NonNullable<typeof t> => !!t);
-
-  useEffect(() => {
-    const id = requestAnimationFrame(() => setStats(getStats()));
-    return () => cancelAnimationFrame(id);
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -225,21 +182,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats bar */}
+      {/* Stats bar — only figures that are true in the HTML itself.
+          The old "Files Converted" counter was a per-visitor localStorage
+          estimate that rendered as 0 to crawlers and to first paint, and the
+          tool count was hardcoded to 38 while tools.length is 39. Both are
+          gone; the tool count now comes from tools.length. */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         <div className="rounded-2xl border border-border bg-gray-50 px-6 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
-                <AnimatedCounter target={38} suffix="+" />
+                {tools.length}+
               </div>
               <div className="text-sm text-muted-foreground mt-1">PDF Tools</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
-                <AnimatedCounter target={stats.globalCount} />
-              </div>
-              <div className="text-sm text-muted-foreground mt-1">Files Converted</div>
             </div>
             <div>
               <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">100%</div>
@@ -407,7 +362,7 @@ export default function Home() {
                   <th className="text-left py-4 px-6 font-semibold text-foreground w-2/5">Feature</th>
                   <th className="text-center py-4 px-4 font-semibold text-foreground w-1/5">
                     <span className="inline-flex items-center gap-1.5">
-                      <span className="w-5 h-5 rounded bg-foreground text-white text-[10px] font-bold flex items-center justify-center">S</span>
+                      <span aria-hidden="true" className="w-5 h-5 rounded bg-foreground text-white text-[10px] font-bold flex items-center justify-center">S</span>
                       Slate PDF
                     </span>
                   </th>
