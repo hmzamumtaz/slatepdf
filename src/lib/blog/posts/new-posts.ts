@@ -84,10 +84,13 @@ export const newPosts: BlogPost[] = [
     keyword: 'convert jpg to pdf without losing quality',
     category: 'Converting',
     published: '2026-08-25',
+    updated: '2026-11-25',
     tool: 'jpg-to-pdf',
     blocks: [
       { type: 'p', text: 'Converting a JPG to a PDF should not make your image look worse. If the result is blurrier, smaller, or oddly cropped, the tool compressed or re-sampled the image during conversion. A correct conversion wraps your image in a PDF container without touching the pixel data.' },
       { type: 'p', text: 'Here is how to do it properly, what to check afterward, and how to handle multi-image conversions.' },
+      { type: 'h2', text: 'Can I convert JPG to PDF for free online?' },
+      { type: 'p', text: 'Yes. Open the [JPG to PDF](/tools/jpg-to-pdf) tool, drag in one or more JPG files and download the PDF — free, with no account and no upload, because the conversion runs in your browser. Each image becomes a page at its original resolution, so the PDF is pixel-identical to the photos you started with.' },
       { type: 'h2', text: 'Convert a JPG to PDF in three steps' },
       { type: 'steps', items: [
         'Open the JPG to PDF tool. The conversion runs in your browser — no upload.',
@@ -126,6 +129,7 @@ export const newPosts: BlogPost[] = [
       { type: 'p', text: 'The browser-based converter works on iPhone and Android. Take a photo, open the tool in Safari or Chrome, load the image, and download the PDF. For converting multiple photos, select them all at once from your camera roll.' },
     ],
     faqs: [
+      { q: 'How do I convert JPG to PDF for free?', a: 'Open JPG to PDF, drag in one or more JPG files and download the PDF. Each image becomes a page at its original resolution. It is free, needs no account, and the files are never uploaded.' },
       { q: 'Does converting JPG to PDF reduce image quality?', a: 'No — a proper conversion embeds the original JPG data into the PDF without re-compressing it. The image is pixel-identical to the original.' },
       { q: 'How do I combine multiple images into one PDF?', a: 'Load all your JPGs into the converter, arrange them in order, and convert. Each image becomes one page in the resulting PDF.' },
       { q: 'Can I convert a PNG to PDF the same way?', a: 'Yes. PNG to PDF works identically — the image data is embedded without quality loss. The same is true for GIF, BMP, and TIFF images.' },
