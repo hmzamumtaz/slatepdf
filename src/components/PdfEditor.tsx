@@ -4,9 +4,10 @@ import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import {
   Loader2, Check, AlertCircle, Bold, Italic, Underline, Strikethrough, Trash2, RotateCcw,
-  Download, ChevronLeft, ChevronRight, Plus, AlertTriangle, Undo2,
+  Download, ChevronLeft, ChevronRight, Plus, AlertTriangle, Undo2, Redo2,
   Replace, MoveDiagonal, Minus, ScanText, AlignLeft, AlignCenter, AlignRight,
-  ImagePlus,
+  ImagePlus, Square, Circle, Slash, MoveUpRight, Eraser, PenLine,
+  ArrowUpToLine, ArrowDownToLine,
 } from 'lucide-react';
 import { getPdfJs } from '@/lib/pdf-engine';
 import { friendlyError } from '@/lib/errors';
@@ -14,6 +15,7 @@ import {
   openEditableDocument, buildEditedPdf, isChanged, isImageChanged,
   rgbToHex, hexToRgb, normaliseFontName,
   type EditorSession, type LoadedPage, type TextBlock, type ImageObject, type FontFamily, type Rgb, type TextAlign,
+  type ShapeObject, type DrawingStroke,
 } from '@/lib/pdf-editor';
 import { unsupportedCharacters } from '@/lib/unicode-font';
 import { useT, useToolHref } from '@/i18n/I18nProvider';
@@ -136,8 +138,19 @@ function measure(text: string, font: string): number {
 }
 
 type Drag =
-  | { kind: 'move' | 'text-move'; id: string; startX: number; startY: number; box: PdfBox; moved: boolean }
+  | { kind: 'move' | 'text-move' | 'shape-move'; id: string; startX: number; startY: number; box: PdfBox; moved: boolean }
   | { kind: 'resize'; id: string; startX: number; startY: number; box: ImageObject['box'] };
+
+/** Which annotation tool is armed: a shape to drag out, whiteout, or the pen. */
+type DrawMode = 'rect' | 'ellipse' | 'line' | 'arrow' | 'whiteout' | 'pen' | null;
+
+/** One undoable state of the whole editor: text, pictures, shapes and strokes. */
+interface Snapshot {
+  blocks: TextBlock[];
+  images: ImageObject[];
+  shapes: ShapeObject[];
+  strokes: DrawingStroke[];
+}
 
 export interface PdfEditorProps {
   /**
@@ -171,8 +184,20 @@ export default function PdfEditor({
   const [page, setPage] = useState<LoadedPage | null>(null);
   const [blocks, setBlocks] = useState<TextBlock[]>([]);
   const [images, setImages] = useState<ImageObject[]>([]);
+  const [shapes, setShapes] = useState<ShapeObject[]>([]);
+  const [strokes, setStrokes] = useState<DrawingStroke[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [placing, setPlacing] = useState(false);
+  /** Which annotation tool is armed; null means the normal select/edit mode. */
+  const [drawMode, setDrawMode] = useState<DrawMode>(null);
+  const [shapeStroke, setShapeStroke] = useState('#2563eb');
+  const [shapeFill, setShapeFill] = useState<'none' | 'white' | 'stroke'>('none');
+  const [shapeWidth, setShapeWidth] = useState(2);
+  const [penColor, setPenColor] = useState('#dc2626');
+  const [penWidth, setPenWidth] = useState(2);
+  /** The shape / stroke being drawn right now, shown live under the pointer. */
+  const [draftShape, setDraftShape] = useState<ShapeObject | null>(null);
+  const [draftStroke, setDraftStroke] = useState<{ x: number; y: number }[] | null>(null);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -191,6 +216,9 @@ export default function PdfEditor({
   const previewToken = useRef(0);
   const addedCount = useRef(0);
   const drag = useRef<Drag | null>(null);
+  const drawDrag = useRef<{ mode: Exclude<DrawMode, null>; startPdfX: number; startPdfY: number; moved: boolean } | null>(null);
+  const draftShapeRef = useRef<ShapeObject | null>(null);
+  const draftStrokeRef = useRef<{ x: number; y: number }[] | null>(null);
   const stageRef = useRef<HTMLDivElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const inputs = useRef(new Map<string, HTMLInputElement | HTMLTextAreaElement>());
@@ -198,15 +226,31 @@ export default function PdfEditor({
   const replaceTarget = useRef<string | null>(null);
   const replaceInput = useRef<HTMLInputElement>(null);
   const addImageInput = useRef<HTMLInputElement>(null);
+  const historyRef = useRef<{ past: Snapshot[]; future: Snapshot[] }>({ past: [], future: [] });
+  const lastCommitted = useRef<Snapshot | null>(null);
+  const applyingHistory = useRef(false);
+  const commitTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [historyTick, setHistoryTick] = useState(0);
+  /** Latest editor state, so history commits always see the newest arrays. */
+  const stateRef = useRef<Snapshot>({ blocks: [], images: [], shapes: [], strokes: [] });
+  stateRef.current = { blocks, images, shapes, strokes };
   const suppressClick = useRef(false);
 
   const pageBlocks = useMemo(() => blocks.filter(b => b.page === pageIndex), [blocks, pageIndex]);
   const pageImages = useMemo(() => images.filter(i => i.page === pageIndex), [images, pageIndex]);
+  const pageShapes = useMemo(() => shapes.filter(s => s.page === pageIndex), [shapes, pageIndex]);
+  const pageStrokes = useMemo(() => strokes.filter(s => s.page === pageIndex), [strokes, pageIndex]);
   const selectedBlock = useMemo(() => pageBlocks.find(b => b.id === selectedId) ?? null, [pageBlocks, selectedId]);
   const selectedImage = useMemo(() => pageImages.find(i => i.id === selectedId) ?? null, [pageImages, selectedId]);
+  const selectedShape = useMemo(() => pageShapes.find(s => s.id === selectedId) ?? null, [pageShapes, selectedId]);
+  const selectedStroke = useMemo(() => pageStrokes.find(s => s.id === selectedId) ?? null, [pageStrokes, selectedId]);
+  // historyTick forces a re-render when the stacks change; the lengths are read here.
+  const canUndo = historyRef.current.past.length > 0;
+  const canRedo = historyRef.current.future.length > 0;
+  void historyTick;
   const changeCount = useMemo(
-    () => blocks.filter(isChanged).length + images.filter(isImageChanged).length,
-    [blocks, images],
+    () => blocks.filter(isChanged).length + images.filter(isImageChanged).length + shapes.length + strokes.length,
+    [blocks, images, shapes, strokes],
   );
 
   // Fit the whole page by default, so nothing needs scrolling to be found.
@@ -357,7 +401,140 @@ export default function PdfEditor({
     setDone(false);
   }, []);
 
+  const updateShape = useCallback((id: string, patch: Partial<ShapeObject>) => {
+    setShapes(prev => prev.map(s => (s.id === id ? { ...s, ...patch } : s)));
+    setDone(false);
+  }, []);
+
+  /** Record the current state as an undo step, unless it matches the last one. */
+  const commitHistory = useCallback(() => {
+    const current = stateRef.current;
+    if (lastCommitted.current === current) return;
+    if (lastCommitted.current) {
+      historyRef.current.past.push(lastCommitted.current);
+      if (historyRef.current.past.length > 100) historyRef.current.past.shift();
+    }
+    historyRef.current.future = [];
+    lastCommitted.current = current;
+    setHistoryTick(t => t + 1);
+  }, []);
+
+  /** Flush a pending debounced commit before an undo or redo. */
+  const flushCommit = useCallback(() => {
+    if (commitTimer.current !== null) {
+      clearTimeout(commitTimer.current);
+      commitTimer.current = null;
+      commitHistory();
+    }
+  }, [commitHistory]);
+
+  const applySnapshot = useCallback((snap: Snapshot) => {
+    applyingHistory.current = true;
+    lastCommitted.current = snap;
+    setBlocks(snap.blocks);
+    setImages(snap.images);
+    setShapes(snap.shapes);
+    setStrokes(snap.strokes);
+    setSelectedId(null);
+    setDrawMode(null);
+    setDraftShape(null);
+    setDraftStroke(null);
+    setDone(false);
+    setHistoryTick(t => t + 1);
+  }, []);
+
+  const undo = useCallback(() => {
+    flushCommit();
+    const prev = historyRef.current.past.pop();
+    if (!prev) return;
+    historyRef.current.future.unshift(stateRef.current);
+    applySnapshot(prev);
+  }, [flushCommit, applySnapshot]);
+
+  const redo = useCallback(() => {
+    flushCommit();
+    const next = historyRef.current.future.shift();
+    if (!next) return;
+    historyRef.current.past.push(stateRef.current);
+    applySnapshot(next);
+  }, [flushCommit, applySnapshot]);
+
+  // Commit undo steps shortly after the user stops changing things, so a
+  // long drag or a burst of typing becomes one step instead of dozens.
+  useEffect(() => {
+    if (applyingHistory.current) {
+      applyingHistory.current = false;
+      return;
+    }
+    if (commitTimer.current !== null) clearTimeout(commitTimer.current);
+    commitTimer.current = setTimeout(() => {
+      commitTimer.current = null;
+      commitHistory();
+    }, 700);
+    return () => {
+      if (commitTimer.current !== null) {
+        clearTimeout(commitTimer.current);
+        commitTimer.current = null;
+      }
+    };
+  }, [blocks, images, shapes, strokes, commitHistory]);
+
+  /** Pointer position in PDF points (y-up), for drawing shapes and strokes. */
+  const eventToPdfPoint = useCallback((e: React.PointerEvent | React.MouseEvent): [number, number] | null => {
+    if (!stageRef.current || !page) return null;
+    const rect = stageRef.current.getBoundingClientRect();
+    return unrotate(view, e.clientX - rect.left - view[4], e.clientY - rect.top - view[5]);
+  }, [page, view]);
+
+  const makeShape = useCallback((mode: Exclude<DrawMode, null | 'pen'>, x: number, y: number): ShapeObject => {
+    const stroke = mode === 'whiteout' ? null : hexToRgb(shapeStroke);
+    const fill = mode === 'whiteout'
+      ? { r: 255, g: 255, b: 255 }
+      : shapeFill === 'white' ? { r: 255, g: 255, b: 255 }
+      : shapeFill === 'stroke' ? hexToRgb(shapeStroke)
+      : null;
+    return {
+      id: `shape-${addedCount.current++}`,
+      page: pageIndex,
+      kind: mode === 'whiteout' ? 'rect' : mode,
+      box: { x, y, width: 0, height: 0 },
+      from: 'bl',
+      fill,
+      stroke,
+      strokeWidth: mode === 'whiteout' ? 0 : shapeWidth,
+      opacity: 1,
+    };
+  }, [pageIndex, shapeStroke, shapeFill, shapeWidth]);
+
+  /** Start a shape or a pen stroke on the paper. */
+  const onStagePointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    if (!drawMode || !page) return;
+    const target = e.target as HTMLElement;
+    if (target.dataset.paper === undefined) return; // Started on an object, not the paper.
+    e.preventDefault();
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    const point = eventToPdfPoint(e);
+    if (!point) return;
+    const [px, py] = point;
+    drawDrag.current = { mode: drawMode, startPdfX: px, startPdfY: py, moved: false };
+    if (drawMode === 'pen') {
+      const pts = [{ x: px, y: py }];
+      draftStrokeRef.current = pts;
+      setDraftStroke(pts);
+    } else {
+      const shape = makeShape(drawMode, px, py);
+      draftShapeRef.current = shape;
+      setDraftShape(shape);
+    }
+  }, [drawMode, page, eventToPdfPoint, makeShape]);
+
   const onStageClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    // A draw or a text drag just ended here; the click that follows it is
+    // not a "click on the paper", so swallow it instead of deselecting.
+    if (suppressClick.current) {
+      suppressClick.current = false;
+      return;
+    }
     const target = e.target as HTMLElement;
     if (target.dataset.paper === undefined) return; // An object on the page handled it.
 
@@ -414,6 +591,16 @@ export default function PdfEditor({
     setSelectedId(image.id);
     drag.current = { kind, id: image.id, startX: e.clientX, startY: e.clientY, box: { ...image.box }, moved: false };
   }, []);
+
+  /** Pressing a shape is a potential drag; only heavier movement becomes one. */
+  const onShapePointerDown = useCallback((e: React.PointerEvent, shape: ShapeObject) => {
+    if (drawMode) return; // A draw tool is armed: the stage handles the drag.
+    e.preventDefault();
+    e.stopPropagation();
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    setSelectedId(shape.id);
+    drag.current = { kind: 'shape-move', id: shape.id, startX: e.clientX, startY: e.clientY, box: { ...shape.box }, moved: false };
+  }, [drawMode]);
 
   const chooseReplacement = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -485,7 +672,7 @@ export default function PdfEditor({
     setProcessing(true);
     setError(null);
     try {
-      const result = await buildEditedPdf(file, blocks, images);
+      const result = await buildEditedPdf(file, blocks, images, shapes, strokes);
       await onSave(result.bytes);
       setDone(true);
     } catch (err) {
@@ -493,12 +680,56 @@ export default function PdfEditor({
     } finally {
       setProcessing(false);
     }
-  }, [file, blocks, images, onSave]);
+  }, [file, blocks, images, shapes, strokes, onSave]);
 
   const fontOf = useCallback((block: TextBlock) => {
     const own = block.sourceFont ? faces.get(normaliseFontName(block.sourceFont)) : undefined;
     return own ? `"${own}", ${FALLBACKS[block.family]}` : FALLBACKS[block.family];
   }, [faces]);
+
+  /** The SVG inside a shape's overlay box. Coordinates are the box's own, y-down. */
+  const shapeSvg = (shape: ShapeObject) => {
+    const { width: w, height: h } = shape.box;
+    const stroke = shape.stroke ? css(shape.stroke) : 'none';
+    const fill = shape.fill ? css(shape.fill) : 'none';
+    const sw = Math.max(shape.strokeWidth, 0.5);
+    if (shape.kind === 'rect') {
+      return (
+        <rect x={0} y={0} width={w} height={h} fill={fill} fillOpacity={shape.opacity} stroke={stroke} strokeWidth={shape.stroke ? sw : 0} />
+      );
+    }
+    if (shape.kind === 'ellipse') {
+      return (
+        <ellipse cx={w / 2} cy={h / 2} rx={w / 2} ry={h / 2} fill={fill} fillOpacity={shape.opacity} stroke={stroke} strokeWidth={shape.stroke ? sw : 0} />
+      );
+    }
+    // line / arrow: the endpoints follow `from`, converted to y-down box coords.
+    const ends = {
+      bl: { x1: 0, y1: h, x2: w, y2: 0 },
+      br: { x1: w, y1: h, x2: 0, y2: 0 },
+      tl: { x1: 0, y1: 0, x2: w, y2: h },
+      tr: { x1: w, y1: 0, x2: 0, y2: h },
+    }[shape.from];
+    const angle = Math.atan2(ends.y2 - ends.y1, ends.x2 - ends.x1);
+    const len = Math.max(8, sw * 4);
+    return (
+      <>
+        <line x1={ends.x1} y1={ends.y1} x2={ends.x2} y2={ends.y2} stroke={stroke} strokeWidth={sw} strokeLinecap="round" opacity={shape.opacity} />
+        {shape.kind === 'arrow' && [angle + Math.PI * 0.85, angle - Math.PI * 0.85].map(a => (
+          <line
+            key={a}
+            x1={ends.x2} y1={ends.y2}
+            x2={ends.x2 + len * Math.cos(a)} y2={ends.y2 + len * Math.sin(a)}
+            stroke={stroke} strokeWidth={sw} strokeLinecap="round" opacity={shape.opacity}
+          />
+        ))}
+      </>
+    );
+  };
+
+  /** A pen stroke's points as an SVG polyline string, in page coords (y-down). */
+  const strokePoints = (points: { x: number; y: number }[]) =>
+    page ? points.map(p => `${p.x},${page.height - p.y}`).join(' ') : '';
 
   const dropped = selectedBlock ? unsupportedCharacters(selectedBlock.text) : [];
 
@@ -557,6 +788,44 @@ export default function PdfEditor({
   }, [placing, blockPdfBox]);
 
   const onPointerMove = useCallback((e: React.PointerEvent) => {
+    // A shape or pen stroke being drawn: update the live draft.
+    const drawing = drawDrag.current;
+    if (drawing && page) {
+      const point = eventToPdfPoint(e);
+      if (point) {
+        const [px, py] = point;
+        if (!drawing.moved && Math.hypot(px - drawing.startPdfX, py - drawing.startPdfY) > 1) drawing.moved = true;
+        if (drawing.mode === 'pen') {
+          const prev = draftStrokeRef.current ?? [];
+          const last = prev[prev.length - 1];
+          if (!last || Math.hypot(px - last.x, py - last.y) >= 2) {
+            const next = [...prev, { x: px, y: py }];
+            draftStrokeRef.current = next;
+            setDraftStroke(next);
+          }
+        } else {
+          const prev = draftShapeRef.current;
+          if (prev) {
+            const next: ShapeObject = {
+              ...prev,
+              box: {
+                x: Math.min(drawing.startPdfX, px),
+                y: Math.min(drawing.startPdfY, py),
+                width: Math.abs(px - drawing.startPdfX),
+                height: Math.abs(py - drawing.startPdfY),
+              },
+              // The corner the drag started at, so the line keeps its diagonal.
+              from: px >= drawing.startPdfX
+                ? (py >= drawing.startPdfY ? 'bl' : 'tl')
+                : (py >= drawing.startPdfY ? 'br' : 'tr'),
+            };
+            draftShapeRef.current = next;
+            setDraftShape(next);
+          }
+        }
+      }
+      return;
+    }
     const active = drag.current;
     if (!active || !stageRef.current || !page) return;
     const [dx, dy] = unrotate(view, e.clientX - active.startX, e.clientY - active.startY);
@@ -579,30 +848,110 @@ export default function PdfEditor({
       setGuides(guides);
       const size = active.box.height / 1.16;
       updateBlock(active.id, { x, y: y + size * 0.36 });
+    } else if (active.kind === 'shape-move') {
+      if (!active.moved && Math.hypot(e.clientX - active.startX, e.clientY - active.startY) < 3) return;
+      if (!active.moved) active.moved = true;
+      updateShape(active.id, { box: { ...active.box, x: active.box.x + dx, y: active.box.y + dy } });
     } else {
       const width = Math.max(4, active.box.width + dx);
       const height = Math.max(4, active.box.height - dy);
       updateImage(active.id, { box: { x: active.box.x, y: active.box.y + active.box.height - height, width, height } });
     }
-  }, [page, updateImage, updateBlock, view, scale, snapTargets]);
+  }, [page, updateImage, updateBlock, updateShape, view, scale, snapTargets, eventToPdfPoint]);
 
   const onPointerUp = useCallback(() => {
+    // Finish a shape or pen stroke: commit the draft, or drop it if it was
+    // just a tap. The drawing tool stays armed for the next one.
+    const drawing = drawDrag.current;
+    drawDrag.current = null;
+    if (drawing) {
+      // The click that follows a draw would deselect the new object; suppress it.
+      suppressClick.current = true;
+      if (drawing.mode === 'pen') {
+        const pts = draftStrokeRef.current;
+        draftStrokeRef.current = null;
+        setDraftStroke(null);
+        if (pts && pts.length > 1) {
+          const stroke: DrawingStroke = {
+            id: `stroke-${addedCount.current++}`,
+            page: pageIndex,
+            points: pts,
+            color: hexToRgb(penColor),
+            width: penWidth,
+            opacity: 1,
+          };
+          setStrokes(prev => [...prev, stroke]);
+          setSelectedId(stroke.id);
+        }
+      } else {
+        const shape = draftShapeRef.current;
+        draftShapeRef.current = null;
+        setDraftShape(null);
+        if (shape) {
+          const { width, height } = shape.box;
+          const bigEnough = shape.kind === 'line' || shape.kind === 'arrow'
+            ? Math.hypot(width, height) >= 4
+            : width >= 4 && height >= 4;
+          if (bigEnough) {
+            // A perfectly horizontal or vertical line has a zero box side;
+            // keep one point of size so it still renders and saves.
+            const committed: ShapeObject = {
+              ...shape,
+              box: { ...shape.box, width: Math.max(width, 1), height: Math.max(height, 1) },
+            };
+            setShapes(prev => [...prev, committed]);
+            setSelectedId(committed.id);
+          }
+        }
+      }
+      setDone(false);
+    }
     const active = drag.current;
     drag.current = null;
     // The click that follows a text drag would put the caret back in the line
     // the user just moved. Suppress exactly that one.
     if (active?.kind === 'text-move' && active.moved) suppressClick.current = true;
     setGuides([]);
-  }, []);
+  }, [pageIndex, penColor, penWidth]);
 
   // Arrow keys nudge the selected object in fine steps, but never while the
   // caret is inside a text line (where they move the caret instead).
+  // Ctrl+Z / Ctrl+Shift+Z undo and redo; Delete removes a selected shape or
+  // stroke; Escape puts the draw tool away.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      const active = document.activeElement as HTMLElement | null;
+      const editingText = !!active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA');
+      if ((e.ctrlKey || e.metaKey) && !editingText) {
+        const key = e.key.toLowerCase();
+        if (key === 'z' && !e.shiftKey) { e.preventDefault(); undo(); return; }
+        if (key === 'y' || (key === 'z' && e.shiftKey)) { e.preventDefault(); redo(); return; }
+      }
+      if (e.key === 'Escape' && drawMode) {
+        setDrawMode(null);
+        setDraftShape(null);
+        setDraftStroke(null);
+        draftShapeRef.current = null;
+        draftStrokeRef.current = null;
+        return;
+      }
+      if ((e.key === 'Delete' || e.key === 'Backspace') && selectedId && !editingText) {
+        if (selectedShape) {
+          e.preventDefault();
+          setShapes(prev => prev.filter(s => s.id !== selectedId));
+          setSelectedId(null);
+          return;
+        }
+        if (selectedStroke) {
+          e.preventDefault();
+          setStrokes(prev => prev.filter(s => s.id !== selectedId));
+          setSelectedId(null);
+          return;
+        }
+      }
       if (!selectedId || !page) return;
       if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
-      const active = document.activeElement as HTMLElement | null;
-      if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) return;
+      if (editingText) return;
       e.preventDefault();
       const step = (e.shiftKey ? 10 : 1) / scale;
       const dx = e.key === 'ArrowLeft' ? -step : e.key === 'ArrowRight' ? step : 0;
@@ -613,11 +962,15 @@ export default function PdfEditor({
       else {
         const image = pageImages.find(i => i.id === selectedId);
         if (image) updateImage(image.id, { box: { ...image.box, x: image.box.x + dx, y: image.box.y + dy } });
+        else {
+          const shape = pageShapes.find(s => s.id === selectedId);
+          if (shape) updateShape(shape.id, { box: { ...shape.box, x: shape.box.x + dx, y: shape.box.y + dy } });
+        }
       }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [selectedId, pageBlocks, pageImages, page, scale, updateBlock, updateImage]);
+  }, [selectedId, pageBlocks, pageImages, pageShapes, page, scale, updateBlock, updateImage, updateShape, undo, redo, drawMode, selectedShape, selectedStroke]);
 
   return (
     <>
@@ -701,6 +1054,87 @@ export default function PdfEditor({
                 {t('Add image')}
               </button>
 
+              <span className="w-px h-5 bg-border" />
+
+              {/* Shapes, whiteout and the pen — the annotate set. */}
+              {([
+                { mode: 'rect' as DrawMode, Icon: Square, label: t('Rectangle') },
+                { mode: 'ellipse' as DrawMode, Icon: Circle, label: t('Ellipse') },
+                { mode: 'line' as DrawMode, Icon: Slash, label: t('Line') },
+                { mode: 'arrow' as DrawMode, Icon: MoveUpRight, label: t('Arrow') },
+                { mode: 'whiteout' as DrawMode, Icon: Eraser, label: t('Whiteout') },
+                { mode: 'pen' as DrawMode, Icon: PenLine, label: t('Draw') },
+              ]).map(({ mode, Icon, label }) => (
+                <button
+                  key={mode}
+                  onClick={() => { setDrawMode(m => (m === mode ? null : mode)); setPlacing(false); setSelectedId(null); }}
+                  className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[13px] font-medium border transition-colors ${
+                    drawMode === mode ? 'bg-foreground text-white border-foreground' : 'border-border text-foreground hover:bg-muted'
+                  }`}
+                  title={drawMode === mode ? t('Click the page and drag') : label}
+                  aria-label={label}
+                  aria-pressed={drawMode === mode}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span className="hidden xl:inline">{label}</span>
+                </button>
+              ))}
+
+              {drawMode && drawMode !== 'pen' && drawMode !== 'whiteout' && (
+                <span className="flex items-center gap-1.5">
+                  <input
+                    type="color"
+                    value={shapeStroke}
+                    onChange={(e) => setShapeStroke(e.target.value)}
+                    className="w-7 h-7 p-0.5 rounded-md border border-border bg-white cursor-pointer"
+                    aria-label={t('Shape colour')}
+                    title={t('Shape colour')}
+                  />
+                  <select
+                    value={shapeFill}
+                    onChange={(e) => setShapeFill(e.target.value as typeof shapeFill)}
+                    className="h-7 px-1 rounded-md border border-border bg-white text-[12px] outline-none"
+                    aria-label={t('Fill')}
+                  >
+                    <option value="none">{t('No fill')}</option>
+                    <option value="white">{t('White fill')}</option>
+                    <option value="stroke">{t('Colour fill')}</option>
+                  </select>
+                  <select
+                    value={shapeWidth}
+                    onChange={(e) => setShapeWidth(Number(e.target.value))}
+                    className="h-7 px-1 rounded-md border border-border bg-white text-[12px] outline-none"
+                    aria-label={t('Line width')}
+                  >
+                    <option value={1}>{t('Thin')}</option>
+                    <option value={2}>{t('Medium')}</option>
+                    <option value={4}>{t('Thick')}</option>
+                  </select>
+                </span>
+              )}
+              {drawMode === 'pen' && (
+                <span className="flex items-center gap-1.5">
+                  <input
+                    type="color"
+                    value={penColor}
+                    onChange={(e) => setPenColor(e.target.value)}
+                    className="w-7 h-7 p-0.5 rounded-md border border-border bg-white cursor-pointer"
+                    aria-label={t('Pen colour')}
+                    title={t('Pen colour')}
+                  />
+                  <select
+                    value={penWidth}
+                    onChange={(e) => setPenWidth(Number(e.target.value))}
+                    className="h-7 px-1 rounded-md border border-border bg-white text-[12px] outline-none"
+                    aria-label={t('Line width')}
+                  >
+                    <option value={1}>{t('Thin')}</option>
+                    <option value={2}>{t('Medium')}</option>
+                    <option value={4}>{t('Thick')}</option>
+                  </select>
+                </span>
+              )}
+
               <span className="text-xs text-muted-foreground hidden lg:inline tabular-nums">
                 {pageImages.length === 1
                   ? t('{text} text · {images} image', { text: pageBlocks.length, images: pageImages.length })
@@ -708,6 +1142,24 @@ export default function PdfEditor({
               </span>
 
               <div className="ml-auto flex items-center gap-3">
+                <span className="flex items-center gap-1">
+                  <button
+                    onClick={undo}
+                    disabled={!canUndo}
+                    className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
+                    aria-label={t('Undo')}
+                  >
+                    <Undo2 className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    onClick={redo}
+                    disabled={!canRedo}
+                    className="w-7 h-7 rounded-md border border-border flex items-center justify-center hover:bg-muted disabled:opacity-40 transition-colors"
+                    aria-label={t('Redo')}
+                  >
+                    <Redo2 className="w-3.5 h-3.5" />
+                  </button>
+                </span>
                 {(previewBusy || loading) && (
                   <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Loader2 className="w-3.5 h-3.5 animate-spin" /> {t('Updating')}
@@ -727,6 +1179,8 @@ export default function PdfEditor({
                         x: b.ox, y: b.oy,
                       })));
                       setImages(prev => prev.filter(i => i.opIndex >= 0).map(i => ({ ...i, deleted: false, replacement: null, box: { ...i.originalBox } })));
+                      setShapes([]);
+                      setStrokes([]);
                       setGuides([]);
                       setSelectedId(null);
                       setDone(false);
@@ -752,16 +1206,16 @@ export default function PdfEditor({
 
             {/* Always present: appearing on selection would shift the page under the pointer. */}
             <div className={`flex items-center gap-1.5 h-11 shrink-0 px-4 border-b border-border overflow-x-auto ${
-              selectedBlock || selectedImage ? 'bg-foreground text-white' : 'bg-muted/40'
+              selectedBlock || selectedImage || selectedShape || selectedStroke ? 'bg-foreground text-white' : 'bg-muted/40'
             }`}>
-              {(selectedBlock || selectedImage) && (
+              {(selectedBlock || selectedImage || selectedShape || selectedStroke) && (
                 <span className="text-[11px] uppercase tracking-wide text-white/50 mr-1 shrink-0">
-                  {selectedBlock ? t('Text') : t('Picture')}
+                  {selectedBlock ? t('Text') : selectedImage ? t('Picture') : selectedShape ? t('Shape') : t('Drawing')}
                 </span>
               )}
-              {!selectedBlock && !selectedImage ? (
+              {!selectedBlock && !selectedImage && !selectedShape && !selectedStroke ? (
                 <span className="text-[12px] text-muted-foreground">
-                  {t('Click a line on the page to edit it, or a picture to replace, move or delete it. Use Add text or Add image to place new content.')}
+                  {t('Click a line on the page to edit it, or a picture to replace, move or delete it. Use Add text or Add image to place new content. Drag with a shape tool to draw, or with the pen to write freehand.')}
                 </span>
               ) : selectedBlock ? (
                 <>
@@ -944,6 +1398,82 @@ export default function PdfEditor({
                     {round(selectedBlock.x)} · {round(selectedBlock.y)} pt
                   </span>
                 </>
+              ) : selectedShape ? (
+                <>
+                  {selectedShape.stroke && (
+                    <span className="flex items-center gap-1 shrink-0">
+                      {['#2563eb', '#dc2626', '#16a34a', '#d97706', '#111827'].map(hex => (
+                        <button
+                          key={hex}
+                          onClick={() => updateShape(selectedShape.id, { stroke: hexToRgb(hex) })}
+                          className={`w-5 h-5 rounded-full border-2 transition-transform ${
+                            selectedShape.stroke && rgbToHex(selectedShape.stroke).toLowerCase() === hex ? 'border-white scale-110' : 'border-transparent'
+                          }`}
+                          style={{ backgroundColor: hex }}
+                          aria-label={t('Colour {hex}', { hex })}
+                        />
+                      ))}
+                      <input
+                        type="color"
+                        value={selectedShape.stroke ? rgbToHex(selectedShape.stroke) : '#2563eb'}
+                        onChange={(e) => updateShape(selectedShape.id, { stroke: hexToRgb(e.target.value) })}
+                        className="w-6 h-6 p-0 rounded border-0 bg-transparent cursor-pointer"
+                        aria-label={t('Custom colour')}
+                      />
+                    </span>
+                  )}
+                  <button
+                    onClick={() => {
+                      setShapes(prev => {
+                        const i = prev.findIndex(s => s.id === selectedShape.id);
+                        if (i < 0 || i === prev.length - 1) return prev;
+                        const next = [...prev];
+                        const [s] = next.splice(i, 1);
+                        next.push(s);
+                        return next;
+                      });
+                    }}
+                    className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
+                  >
+                    <ArrowUpToLine className="w-3.5 h-3.5" /> {t('Bring to front')}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShapes(prev => {
+                        const i = prev.findIndex(s => s.id === selectedShape.id);
+                        if (i <= 0) return prev;
+                        const next = [...prev];
+                        const [s] = next.splice(i, 1);
+                        next.unshift(s);
+                        return next;
+                      });
+                    }}
+                    className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
+                  >
+                    <ArrowDownToLine className="w-3.5 h-3.5" /> {t('Send to back')}
+                  </button>
+                  <button
+                    onClick={() => { setShapes(prev => prev.filter(s => s.id !== selectedShape.id)); setSelectedId(null); }}
+                    className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" /> {t('Delete')}
+                  </button>
+                  <span className="ml-auto text-[11px] tabular-nums text-white/70 whitespace-nowrap">
+                    {t('Drag to move · Delete key removes it')}
+                  </span>
+                </>
+              ) : selectedStroke ? (
+                <>
+                  <button
+                    onClick={() => { setStrokes(prev => prev.filter(s => s.id !== selectedStroke.id)); setSelectedId(null); }}
+                    className="inline-flex items-center gap-1.5 px-2 h-7 rounded-md text-[12px] font-medium hover:bg-white/20 transition-colors"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" /> {t('Delete')}
+                  </button>
+                  <span className="ml-auto text-[11px] tabular-nums text-white/70 whitespace-nowrap">
+                    {t('Delete key removes it')}
+                  </span>
+                </>
               ) : selectedImage && (
                 <>
                   <button
@@ -1024,9 +1554,10 @@ export default function PdfEditor({
                   ref={stageRef}
                   data-paper=""
                   onClick={onStageClick}
+                  onPointerDown={onStagePointerDown}
                   onPointerMove={onPointerMove}
                   onPointerUp={onPointerUp}
-                  className={`relative mx-auto bg-white shadow-xl ${placing ? 'cursor-crosshair' : ''}`}
+                  className={`relative mx-auto bg-white shadow-xl ${placing || drawMode ? 'cursor-crosshair touch-none' : ''}`}
                   style={{ width: page.width * scale, height: page.height * scale }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1048,7 +1579,7 @@ export default function PdfEditor({
                         onPointerDown={(e) => onPointerDown(e, image, 'move')}
                         title={t('Drag to move · corner to resize')}
                         className={`absolute top-0 left-0 origin-top-left transition-colors ${
-                          placing ? 'pointer-events-none' : 'cursor-move'
+                          placing || drawMode ? 'pointer-events-none' : 'cursor-move'
                         } ${image.id === selectedId && !image.deleted ? 'bg-primary/10' : 'hover:bg-primary/10'}`}
                         style={{
                           transform: `matrix(${m.join(',')})`,
@@ -1079,6 +1610,107 @@ export default function PdfEditor({
                       </div>
                     );
                   })}
+
+                  {/* Shapes, drawn in array order (later shapes sit on top). */}
+                  {pageShapes.map(shape => {
+                    const m = composeM(view, [1, 0, 0, -1, shape.box.x, shape.box.y + shape.box.height]);
+                    const hair = 1 / scale;
+                    return (
+                      <div
+                        key={shape.id}
+                        onPointerDown={(e) => onShapePointerDown(e, shape)}
+                        title={t('Drag to move · Delete key removes it')}
+                        className={`absolute top-0 left-0 origin-top-left ${
+                          drawMode ? 'pointer-events-none' : 'cursor-move'
+                        }`}
+                        style={{
+                          transform: `matrix(${m.join(',')})`,
+                          width: Math.max(shape.box.width, 1),
+                          height: Math.max(shape.box.height, 1),
+                          outline: shape.id === selectedId
+                            ? `${hair * 2}px solid ${PRIMARY}`
+                            : 'none',
+                        }}
+                      >
+                        <svg
+                          width={Math.max(shape.box.width, 1)}
+                          height={Math.max(shape.box.height, 1)}
+                          viewBox={`0 0 ${Math.max(shape.box.width, 1)} ${Math.max(shape.box.height, 1)}`}
+                          className="block overflow-visible"
+                        >
+                          {shapeSvg(shape)}
+                        </svg>
+                      </div>
+                    );
+                  })}
+                  {draftShape && (
+                    <div
+                      className="absolute top-0 left-0 origin-top-left pointer-events-none"
+                      style={{
+                        transform: `matrix(${composeM(view, [1, 0, 0, -1, draftShape.box.x, draftShape.box.y + Math.max(draftShape.box.height, 1)]).join(',')})`,
+                        width: Math.max(draftShape.box.width, 1),
+                        height: Math.max(draftShape.box.height, 1),
+                      }}
+                    >
+                      <svg
+                        width={Math.max(draftShape.box.width, 1)}
+                        height={Math.max(draftShape.box.height, 1)}
+                        viewBox={`0 0 ${Math.max(draftShape.box.width, 1)} ${Math.max(draftShape.box.height, 1)}`}
+                        className="block overflow-visible"
+                      >
+                        {shapeSvg(draftShape)}
+                      </svg>
+                    </div>
+                  )}
+
+                  {/* Freehand strokes, over the whole page. */}
+                  <svg
+                    className="absolute inset-0 pointer-events-none"
+                    width={page.width * scale}
+                    height={page.height * scale}
+                    viewBox={`0 0 ${page.width} ${page.height}`}
+                  >
+                    {pageStrokes.map(stroke => (
+                      <g key={stroke.id}>
+                        {/* Wide invisible hit area, so a thin stroke is easy to click. */}
+                        <polyline
+                          points={strokePoints(stroke.points)}
+                          fill="none"
+                          stroke="transparent"
+                          strokeWidth={Math.max(stroke.width + 10, 12)}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          style={{ pointerEvents: 'stroke', cursor: 'pointer' }}
+                          onPointerDown={(e) => {
+                            if (drawMode) return;
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setSelectedId(stroke.id);
+                          }}
+                        />
+                        <polyline
+                          points={strokePoints(stroke.points)}
+                          fill="none"
+                          stroke={css(stroke.color)}
+                          strokeWidth={stroke.width}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          opacity={stroke.opacity}
+                          style={{ pointerEvents: 'none' }}
+                        />
+                      </g>
+                    ))}
+                    {draftStroke && draftStroke.length > 1 && (
+                      <polyline
+                        points={strokePoints(draftStroke)}
+                        fill="none"
+                        stroke={penColor}
+                        strokeWidth={penWidth}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    )}
+                  </svg>
 
                   {pageBlocks.map(block => {
                     const size = block.fontSize;
@@ -1115,7 +1747,7 @@ export default function PdfEditor({
                       title: block.deleted ? t('Deleted — restore it to edit') : block.text,
                       'aria-label': t('Edit: {text}', { text: block.original || block.text }),
                       className: `absolute top-0 left-0 origin-top-left p-0 m-0 border-0 bg-transparent ${
-                        placing ? 'pointer-events-none'
+                        placing || drawMode ? 'pointer-events-none'
                           : block.added ? 'cursor-move' : 'cursor-text'
                       } ${block.id === selectedId ? '' : 'hover:bg-primary/10'}`,
                       style: {

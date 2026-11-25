@@ -1091,7 +1091,7 @@
       "name": "Edit PDF",
       "description": "Change the text, headings and numbers in a PDF",
       "seoTitle": "Edit PDF — Change Text, Headings & Numbers Free",
-      "metaDescription": "Edit text, headings, and numbers in a PDF directly in your browser. Fix typos, update dates, restyle with bold, italic, underline, strikethrough, colour and highlight, and add new text or images — without converting to Word.",
+      "metaDescription": "Edit text, headings, and numbers in a PDF directly in your browser. Fix typos, update dates, restyle with bold, italic, underline, strikethrough, colour and highlight, and add new text, images, shapes, whiteout and freehand drawings — without converting to Word.",
       "faqs": [
         {
           "q": "Can I edit any PDF?",
@@ -1108,11 +1108,11 @@
       ],
       "howTo": {
         "title": "How to edit text in a PDF",
-        "intro": "Edit PDF lets you change the existing words, headings and numbers on a page: click a line and type, just like a word processor. Restyle with bold, italic, underline, strikethrough, colour and highlight, or add new text and pictures.",
+        "intro": "Edit PDF lets you change the existing words, headings and numbers on a page: click a line and type, just like a word processor. Restyle with bold, italic, underline, strikethrough, colour and highlight, or add new text, pictures, shapes, whiteout and freehand drawings — and undo any step with Ctrl+Z.",
         "steps": [
           "Choose your PDF",
           "Click any line of text on the page",
-          "Type your changes and restyle them from the formatting bar",
+          "Type your changes and restyle them from the formatting bar, or draw a shape with the shape tools",
           "Click Save edited PDF to download it"
         ],
         "benefits": [

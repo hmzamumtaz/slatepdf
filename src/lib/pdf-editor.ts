@@ -1,6 +1,6 @@
 'use client';
 
-import { PDFDocument, PDFDict, PDFName, PDFRawStream, PDFArray, rgb, decodePDFRawStream } from 'pdf-lib';
+import { PDFDocument, PDFDict, PDFName, PDFPage, PDFRawStream, PDFArray, rgb, decodePDFRawStream } from 'pdf-lib';
 import { getPdfJs, readFileAsArrayBuffer, loadPdf } from './pdf-engine';
 import { collectEmbeddedFonts, FontResolver, type FontFamily } from './pdf-fonts';
 import { repairFontProgram } from './sfnt';
@@ -99,6 +99,32 @@ export interface ImageObject {
   deleted: boolean;
   /** A picture chosen to take its place. */
   replacement: { dataUrl: string; name: string } | null;
+}
+
+export type ShapeKind = 'rect' | 'ellipse' | 'line' | 'arrow';
+
+export interface ShapeObject {
+  id: string;
+  page: number;
+  kind: ShapeKind;
+  /** Normalised bounding box in PDF points, bottom-left origin. */
+  box: Box;
+  /** For line/arrow: which corner the stroke starts at — 'bl' runs bottom-left to top-right. */
+  from: 'bl' | 'br' | 'tl' | 'tr';
+  /** Null means no fill (outline only). Whiteout is a rect with a white fill and no stroke. */
+  fill: Rgb | null;
+  stroke: Rgb | null;
+  strokeWidth: number;
+  opacity: number;
+}
+
+export interface DrawingStroke {
+  id: string;
+  page: number;
+  points: { x: number; y: number }[];
+  color: Rgb;
+  width: number;
+  opacity: number;
 }
 
 /** A font programme from the document, repaired so a browser can load it. */
@@ -592,6 +618,8 @@ export async function buildEditedPdf(
   file: File,
   blocks: TextBlock[],
   images: ImageObject[] = [],
+  shapes: ShapeObject[] = [],
+  strokes: DrawingStroke[] = [],
 ): Promise<BuildResult> {
   const buf = await readFileAsArrayBuffer(file);
   const doc = await loadPdf(buf);
@@ -599,6 +627,8 @@ export async function buildEditedPdf(
   const changedPages = new Set<number>([
     ...blocks.filter(isChanged).map(b => b.page),
     ...images.filter(isImageChanged).map(i => i.page),
+    ...shapes.map(s => s.page),
+    ...strokes.map(s => s.page),
   ]);
   if (changedPages.size === 0) {
     return { bytes: await doc.save(), rebuiltPages: [], substituted: false };
@@ -615,14 +645,24 @@ export async function buildEditedPdf(
 
     const pageBlocks = blocks.filter(b => b.page === pageIndex);
     const pageImages = images.filter(i => i.page === pageIndex);
+    const pageShapes = shapes.filter(s => s.page === pageIndex);
+    const pageStrokes = strokes.filter(s => s.page === pageIndex);
     const bytes = pageContentBytes(doc, pageIndex);
 
-    if (!bytes) {
+    // Shapes and strokes are pure additions drawn on top, so a page that
+    // only carries those needs no rewrite of its own content — which is
+    // also what lets a scanned or blank page be annotated.
+    const changedBlocks = pageBlocks.filter(isChanged);
+    const needsRewrite =
+      changedBlocks.length > 0 || pageImages.some(isImageChanged);
+
+    if (!bytes && needsRewrite) {
       throw new Error(
         `Page ${pageIndex + 1} uses a content stream this tool cannot rewrite, so its contents cannot be edited.`,
       );
     }
 
+    if (needsRewrite && bytes) {
     const scan = scanContentStream(bytes, imageNamesFor(doc, pageIndex));
 
     // Work out which show operators sit behind each block. Matching runs
@@ -640,7 +680,6 @@ export async function buildEditedPdf(
       showsForBlock.set(block.id, matches);
     }
 
-    const changedBlocks = pageBlocks.filter(isChanged);
     const unmatched = changedBlocks.some(b => !b.added && (showsForBlock.get(b.id)?.length ?? 0) === 0);
 
     let redraw: TextBlock[];
@@ -799,9 +838,96 @@ export async function buildEditedPdf(
         throw new Error(`"${image.replacement.name}" could not be placed — try a PNG or JPEG.`);
       }
     }
+    }
+
+    // Shapes and freehand strokes sit on top of everything else on the page.
+    drawAnnotations(page, pageShapes, pageStrokes);
   }
 
   return { bytes: await doc.save(), rebuiltPages, substituted };
+}
+
+/**
+ * Draw shapes and freehand strokes onto a page. They are additions only —
+ * nothing underneath is removed — so this works on any page, including
+ * scanned ones, and needs no content-stream rewrite.
+ */
+function drawAnnotations(
+  page: PDFPage,
+  shapes: ShapeObject[],
+  strokes: DrawingStroke[],
+): void {
+  for (const shape of shapes) {
+    const { x, y, width, height } = shape.box;
+    const strokeColor = shape.stroke ? rgb(shape.stroke.r / 255, shape.stroke.g / 255, shape.stroke.b / 255) : undefined;
+    const fillColor = shape.fill ? rgb(shape.fill.r / 255, shape.fill.g / 255, shape.fill.b / 255) : undefined;
+    if (shape.kind === 'rect') {
+      page.drawRectangle({
+        x, y, width, height,
+        // No fill means outline only: an invisible fill with a visible border.
+        color: fillColor ?? rgb(1, 1, 1),
+        opacity: fillColor ? shape.opacity : 0,
+        borderColor: strokeColor,
+        borderWidth: strokeColor ? shape.strokeWidth : 0,
+        borderOpacity: strokeColor ? shape.opacity : 0,
+      });
+    } else if (shape.kind === 'ellipse') {
+      page.drawEllipse({
+        x: x + width / 2, y: y + height / 2,
+        xScale: width / 2, yScale: height / 2,
+        color: fillColor ?? rgb(1, 1, 1),
+        opacity: fillColor ? shape.opacity : 0,
+        borderColor: strokeColor,
+        borderWidth: strokeColor ? shape.strokeWidth : 0,
+        borderOpacity: strokeColor ? shape.opacity : 0,
+      });
+    } else {
+      // line / arrow: endpoints follow `from` (the corner the drag started at).
+      const corners = {
+        bl: [{ x, y }, { x: x + width, y: y + height }],
+        br: [{ x: x + width, y }, { x, y: y + height }],
+        tl: [{ x, y: y + height }, { x: x + width, y }],
+        tr: [{ x: x + width, y: y + height }, { x, y }],
+      } as const;
+      const [start, end] = corners[shape.from];
+      const color = strokeColor ?? rgb(0, 0, 0);
+      page.drawLine({ start, end, thickness: shape.strokeWidth, color, opacity: shape.opacity });
+      if (shape.kind === 'arrow') {
+        const angle = Math.atan2(end.y - start.y, end.x - start.x);
+        const len = Math.max(8, shape.strokeWidth * 4);
+        for (const a of [angle + Math.PI * 0.85, angle - Math.PI * 0.85]) {
+          page.drawLine({
+            start: end,
+            end: { x: end.x + len * Math.cos(a), y: end.y + len * Math.sin(a) },
+            thickness: shape.strokeWidth,
+            color,
+            opacity: shape.opacity,
+          });
+        }
+      }
+    }
+  }
+
+  for (const stroke of strokes) {
+    const color = rgb(stroke.color.r / 255, stroke.color.g / 255, stroke.color.b / 255);
+    // A dot at each vertex rounds the joints between segments.
+    for (const p of stroke.points) {
+      page.drawEllipse({
+        x: p.x, y: p.y,
+        xScale: stroke.width / 2, yScale: stroke.width / 2,
+        color, opacity: stroke.opacity,
+      });
+    }
+    for (let i = 1; i < stroke.points.length; i++) {
+      page.drawLine({
+        start: stroke.points[i - 1],
+        end: stroke.points[i],
+        thickness: stroke.width,
+        color,
+        opacity: stroke.opacity,
+      });
+    }
+  }
 }
 
 export function rgbToHex({ r, g, b }: Rgb): string {

@@ -31,7 +31,7 @@ export default function EditPdfTool() {
           </Link>
           <h1 className="text-xl sm:text-2xl font-bold text-foreground">{t('Edit PDF')}</h1>
           <p className="text-muted-foreground text-[13px]">
-            {t('Click any line on the page and type. Everything runs in this tab — your file is never uploaded.')}
+            {t('Click any line on the page and type — or add text, shapes, whiteout and freehand drawings. Everything runs in this tab — your file is never uploaded.')}
           </p>
         </div>
 

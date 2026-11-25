@@ -237,7 +237,7 @@ const toolSeo: Record<string, {
   },
   'edit-pdf': {
     title: 'Edit PDF — Change Text, Headings & Numbers Free',
-    description: 'Edit text, headings, and numbers in a PDF directly in your browser. Fix typos, update dates, restyle with bold, italic, underline, strikethrough, colour and highlight, and add new text or images — without converting to Word.',
+    description: 'Edit text, headings, and numbers in a PDF directly in your browser. Fix typos, update dates, restyle with bold, italic, underline, strikethrough, colour and highlight, and add new text, images, shapes, whiteout and freehand drawings — without converting to Word.',
     keywords: ['edit pdf', 'pdf editor free', 'change pdf text', 'modify pdf', 'edit pdf online'],
     faqs: [
       { q: 'Can I edit any PDF?', a: 'Any digitally created PDF with selectable text can be edited. A scanned PDF is a picture of text, so there are no words to change in place.' },
