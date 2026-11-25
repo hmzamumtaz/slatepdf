@@ -97,120 +97,85 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Hero — conversion-first */}
-      <section className="relative overflow-hidden pt-16 sm:pt-24 pb-14 sm:pb-20">
+      {/* Hero — centered, tools-first. The old two-column hero with its
+          black highlight block and fake-browser launcher card is gone:
+          one headline, one search, and the six popular tools as cards. */}
+      <section className="relative overflow-hidden pt-16 sm:pt-24 pb-12 sm:pb-16">
         {/* Ambient neutral glow */}
-        <div aria-hidden className="pointer-events-none absolute -top-24 right-[-8%] h-[440px] w-[440px] xl:h-[540px] xl:w-[540px] rounded-full bg-gradient-to-br from-gray-900/[0.05] to-transparent blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute top-24 left-[-10%] h-[360px] w-[360px] rounded-full bg-gradient-to-tr from-gray-100 to-transparent blur-2xl" />
+        <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[420px] w-[720px] rounded-full bg-gradient-to-b from-gray-900/[0.06] to-transparent blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-10 xl:gap-14 items-center">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 border border-green-200 rounded-full text-sm font-medium text-green-800">
+            <Shield className="w-4 h-4 text-green-600" />
+            <span>Files never leave your device</span>
+          </div>
 
-            {/* Copy + actions */}
-            <div className="lg:col-span-7 text-center lg:text-left animate-fade-in">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 border border-green-200 rounded-full text-sm font-medium text-green-800">
-                <Shield className="w-4 h-4 text-green-600" />
-                <span>Files never leave your device</span>
-              </div>
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-foreground text-balance">
+            Every PDF tool you need,{' '}
+            <span className="bg-gray-100 rounded-xl px-2 sm:px-3 box-decoration-clone">free and private.</span>
+          </h1>
 
-              <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-foreground text-balance">
-                Every PDF tool you need,
-                <span className="mt-3 block w-fit mx-auto lg:mx-0 bg-foreground text-white px-4 sm:px-5 rounded-xl leading-snug">
-                  free and private.
-                </span>
-              </h1>
+          <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Merge, split, compress, convert, edit and sign documents in your browser.
+            No uploads, no sign up, no watermarks and no limits.
+          </p>
 
-              <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Merge, split, compress, convert, edit and sign documents in your browser.
-                No uploads, no sign up, no watermarks and no limits.
-              </p>
+          {/* Search-first: the fastest way to a tool is to type its name.
+              Typing jumps to the grid below. */}
+          <div className="mt-9 relative max-w-xl mx-auto">
+            <Search className="w-5 h-5 text-muted-foreground absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <input
+              type="search"
+              value={toolQuery}
+              onChange={(e) => onHeroSearch(e.target.value)}
+              placeholder="Search all tools — try “compress”, “sign” or “word”…"
+              aria-label="Search tools"
+              className="w-full pl-11 pr-10 py-4 rounded-2xl border border-border bg-white text-base text-foreground placeholder:text-muted-foreground shadow-md shadow-gray-900/[0.06] focus:outline-none focus:ring-2 focus:ring-foreground/30 focus:border-foreground/40"
+            />
+            {toolQuery && (
+              <button
+                onClick={() => setToolQuery('')}
+                aria-label="Clear search"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
 
-              {/* Search-first: the fastest way to a tool is to type its name,
-                  like Smallpdf's hero. Typing jumps to the grid below. */}
-              <div className="mt-9 relative max-w-xl mx-auto lg:mx-0">
-                <Search className="w-5 h-5 text-muted-foreground absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
-                <input
-                  type="search"
-                  value={toolQuery}
-                  onChange={(e) => onHeroSearch(e.target.value)}
-                  placeholder="Search all tools — try “compress”, “sign” or “word”…"
-                  aria-label="Search tools"
-                  className="w-full pl-11 pr-10 py-4 rounded-2xl border border-border bg-white text-base text-foreground placeholder:text-muted-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-foreground/30 focus:border-foreground/40"
-                />
-                {toolQuery && (
-                  <button
-                    onClick={() => setToolQuery('')}
-                    aria-label="Clear search"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground"
-                  >
-                    <X className="w-3.5 h-3.5" />
-                  </button>
-                )}
-              </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            or press <kbd className="px-1.5 py-0.5 rounded-md border border-border bg-muted text-xs font-semibold text-foreground">Ctrl K</kbd> anywhere to search
+          </p>
 
-              <div className="mt-5 flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start">
-                <a
-                  href="#tools"
-                  className="group inline-flex items-center gap-2 font-semibold text-foreground hover:underline underline-offset-4"
-                >
-                  Browse every tool
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </a>
-                <span className="hidden sm:inline text-muted-foreground">·</span>
-                <span className="text-sm text-muted-foreground">or press <kbd className="px-1.5 py-0.5 rounded-md border border-border bg-muted text-xs font-semibold text-foreground">Ctrl K</kbd> anywhere to search</span>
-              </div>
+          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2.5 justify-center text-sm text-muted-foreground">
+            <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-600" /> No sign up</span>
+            <span className="inline-flex items-center gap-2"><Server className="w-4 h-4 text-green-600" /> No uploads</span>
+            <span className="inline-flex items-center gap-2"><Infinity className="w-4 h-4 text-green-600" /> No limits</span>
+            <span className="inline-flex items-center gap-2"><Lock className="w-4 h-4 text-green-600" /> 100% private</span>
+          </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2.5 justify-center lg:justify-start text-sm text-muted-foreground">
-                <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-600" /> No sign up</span>
-                <span className="inline-flex items-center gap-2"><Server className="w-4 h-4 text-green-600" /> No uploads</span>
-                <span className="inline-flex items-center gap-2"><Infinity className="w-4 h-4 text-green-600" /> No limits</span>
-                <span className="inline-flex items-center gap-2"><Lock className="w-4 h-4 text-green-600" /> 100% private</span>
-              </div>
-            </div>
-
-            {/* Real tools quick launcher */}
-            <div className="lg:col-span-5">
-              <div className="mx-auto w-full max-w-md lg:max-w-none">
-                <div className="rounded-2xl border border-gray-200 bg-white shadow-2xl shadow-gray-900/[0.08] overflow-hidden">
-                  <div className="flex items-center gap-1.5 px-5 py-3.5 border-b border-gray-200 bg-gray-50">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-300" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-300" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-green-300" />
-                    <span className="ml-3 text-xs font-semibold text-muted-foreground tracking-wide">Start with a popular tool</span>
-                  </div>
-                  <div className="p-3">
-                    {popularTools.map((tool) => {
-                      const IconComp = toolIcon(tool.icon);
-                      return (
-                        <Link
-                          key={tool.slug}
-                          href={`/tools/${tool.slug}`}
-                          className="group flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-muted transition-colors"
-                        >
-                          <span className="w-10 h-10 rounded-xl bg-gray-900/[0.05] flex items-center justify-center shrink-0">
-                            <IconComp className="w-5 h-5 text-foreground" />
-                          </span>
-                          <span className="flex-1 min-w-0 text-left">
-                            <span className="block text-sm font-semibold text-foreground">{tool.name}</span>
-                            <span className="block text-xs text-muted-foreground truncate">{tool.description}</span>
-                          </span>
-                          <ArrowRight className="w-4 h-4 text-muted-foreground -translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all" />
-                        </Link>
-                      );
-                    })}
-                  </div>
+          {/* Popular tools as cards — the old launcher list, out in the open. */}
+          <div className="mt-12 sm:mt-14">
+            <p className="eyebrow text-muted-foreground mb-5">Start with a popular tool</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-left">
+              {popularTools.map((tool) => {
+                const IconComp = toolIcon(tool.icon);
+                return (
                   <Link
-                    href="/tools/pdf-workspace"
-                    className="group flex items-center justify-center gap-2 px-5 py-3.5 border-t border-gray-200 bg-gray-50 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
+                    key={tool.slug}
+                    href={`/tools/${tool.slug}`}
+                    className="tool-card group p-4 bg-white border border-border rounded-2xl hover:border-foreground/25"
                   >
-                    See all tools now
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    <div
+                      className="w-11 h-11 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-110"
+                      style={{ backgroundColor: `${tool.color}12` }}
+                    >
+                      <IconComp className="w-5 h-5" style={{ color: tool.color }} />
+                    </div>
+                    <h3 className="text-sm font-semibold text-foreground leading-tight">{tool.name}</h3>
                   </Link>
-                </div>
-                <p className="mt-4 text-center text-xs text-muted-foreground">
-                  Runs entirely in your browser with nothing uploaded anywhere
-                </p>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -64,8 +64,8 @@ export default async function LocalizedHome({ params }: PageProps<'/[lang]'>) {
           <span>{site.heroBadge}</span>
         </div>
         <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-foreground text-balance">
-          {site.heroTitle}
-          <span className="mt-3 block w-fit mx-auto bg-foreground text-white px-4 sm:px-5 rounded-xl leading-snug">{site.heroHighlight}</span>
+          {site.heroTitle}{' '}
+          <span className="bg-gray-100 rounded-xl px-2 sm:px-3 box-decoration-clone">{site.heroHighlight}</span>
         </h1>
         <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">{site.heroSubtitle}</p>
         <Link
