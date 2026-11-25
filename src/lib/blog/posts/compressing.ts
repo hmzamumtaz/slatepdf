@@ -262,7 +262,7 @@ export const compressingPosts: BlogPost[] = [
     keyword: 'reduce pdf file size to 100kb',
     category: 'Compressing',
     published: '2026-04-19',
-    updated: '2026-10-13',
+    updated: '2026-11-25',
     tool: 'compress-pdf',
     blocks: [
       { type: 'p', text: 'Government portals, university applications and job sites frequently insist on limits that were set when broadband was new. To reduce a PDF file size to 100KB — for a scanned certificate, say — you need a strategy rather than a slider.' },
@@ -305,6 +305,7 @@ export const compressingPosts: BlogPost[] = [
       { type: 'callout', title: 'Never submit the first file that fits', text: 'Read the reference number on the compressed copy aloud. If you hesitate over a single digit, so will the person checking your application — and a 3 that looks like an 8 is worse than a file that is slightly too big. Go back to the original and fix the input instead.' },
     ],
     faqs: [
+      { q: 'How do I reduce a PDF to 100KB for free?', a: 'Remove every page the form does not need, then open Compress PDF, type 95 KB as the target and download the result. It is free, runs in your browser and the file is never uploaded. Check the smallest text is still readable at 100% zoom before you submit it.' },
       { q: 'Can any PDF be reduced to 100KB?', a: 'No. A ten-page colour scan cannot reach 100KB and stay readable. Reduce the page count or rescan at a lower setting.' },
       { q: 'Why does the form insist on such a small file?', a: 'Usually an old limit that nobody has revisited. It is rarely negotiable, so work within it.' },
       { q: 'Is it better to lower resolution or JPEG quality?', a: 'Resolution, mostly. Text degrades more gracefully when downsampled than when heavily re-encoded, which is why a lower-resolution rescan beats crushing a big one.' },

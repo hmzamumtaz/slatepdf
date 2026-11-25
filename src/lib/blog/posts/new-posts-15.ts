@@ -178,7 +178,7 @@ export const newPosts15: BlogPost[] = [
     keyword: 'how to compress a pdf for whatsapp',
     category: 'Compressing',
     published: '2026-09-19',
-    updated: '2026-10-13',
+    updated: '2026-11-25',
     tool: 'compress-pdf',
     blocks: [
       { type: 'p', text: 'A 40 MB scanned contract takes ages to send over mobile data, eats the recipient’s data allowance, and often sits undownloaded because their phone does not auto-download documents. Here is how to compress a PDF for WhatsApp in under a minute, in your browser, with no upload and no app.' },
@@ -223,6 +223,7 @@ export const newPosts15: BlogPost[] = [
       { type: 'p', text: 'The same method works for any channel with a limit; [compressing a PDF for an email attachment](/blog/how-to-compress-pdf-for-email-attachment) covers the 20–25 MB limits most mail services set.' },
     ],
     faqs: [
+      { q: 'Can I compress a PDF for WhatsApp for free?', a: 'Yes. Open Compress PDF in your browser, type a target size such as 5 MB, download the result and send it in WhatsApp as a Document. It is free, needs no app, and the file never leaves your device.' },
       { q: 'What is the file size limit for PDFs on WhatsApp?', a: 'In current versions of the WhatsApp app, files of up to 2 GB can be shared, so most PDFs send fine. Business API accounts are capped lower, at 100 MB for documents, and the often-quoted 16 MB is an older media limit.' },
       { q: 'Why does WhatsApp ruin the quality of my document?', a: 'It was probably sent as a photo, which WhatsApp recompresses. Send the PDF as a Document and it arrives exactly as it left.' },
       { q: 'Can I compress a PDF on my phone without an app?', a: 'Yes. A browser-based compressor works in Safari or Chrome on your phone, and the file stays on the device.' },

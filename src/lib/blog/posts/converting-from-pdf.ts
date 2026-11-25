@@ -8,13 +8,15 @@ export const convertingFromPdfPosts: BlogPost[] = [
     keyword: 'convert pdf to word without losing formatting',
     category: 'Converting',
     published: '2026-03-04',
-    updated: '2026-10-04',
+    updated: '2026-11-25',
     tool: 'pdf-to-word',
     blocks: [
       { type: 'p', text: 'Converting PDF to Word is not really a conversion — it is a reconstruction. Understanding why explains everything about what you get back, and stops you expecting something no tool can deliver.' },
+      { type: 'h2', text: 'Can I convert PDF to Word for free online?' },
+      { type: 'p', text: 'Yes. Open the [PDF to Word](/tools/pdf-to-word) tool, add your file and download an editable .docx — free, with no account and no upload, because the conversion runs in your browser. It rebuilds the text as flowing paragraphs and headings, which suits letters, reports and contracts; it does not carry images across, and tables come back as lines of text rather than Word tables, so check the result before you send it on.' },
       { type: 'h2', text: 'Convert a PDF to Word' },
       { type: 'steps', items: [
-        'Open the PDF to Word tool and add your file.',
+        'Open the [PDF to Word](/tools/pdf-to-word) tool and add your file.',
         'Convert. The text and structure are read out and rebuilt as a .docx.',
         'Open the result in Word, Google Docs or LibreOffice and check headings, lists and tables before you start editing.',
       ] },
@@ -52,6 +54,7 @@ export const convertingFromPdfPosts: BlogPost[] = [
       { type: 'p', text: 'And if the original Word document still exists somewhere, edit that. A reconstruction is never better than the file it was reconstructed from.' },
     ],
     faqs: [
+      { q: 'How do I convert a PDF to Word for free?', a: 'Open PDF to Word, add your PDF and download the .docx. It is free, needs no account, and the conversion runs in your browser so the file is never uploaded.' },
       { q: 'Will my PDF convert to Word perfectly?', a: 'Simple text documents convert very well. Anything with a designed layout — columns, wrapped images, complex tables — comes back as a close approximation that needs tidying.' },
       { q: 'Why is my converted Word file full of text boxes?', a: 'Some converters position each block absolutely to preserve appearance. It looks right and edits terribly. A converter that produces flowing paragraphs is more useful even if it matches the original slightly less exactly.' },
       { q: 'Can I convert a scanned PDF to Word?', a: 'Only after OCR. Without it, the pages are images and there is no text to extract — the converter will hand back pages marked as empty.' },
