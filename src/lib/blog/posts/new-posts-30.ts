@@ -24,6 +24,7 @@ export const newPosts30: BlogPost[] = [
     keyword: 'ircc document upload file size limit',
     category: 'Compressing',
     published: '2026-10-13',
+    updated: '2026-11-25',
     tool: 'compress-pdf',
     blocks: [
       { type: 'p', text: 'The IRCC document upload file size limit catches almost everyone applying to Canada online: you scan a passport, a bank statement or a stack of employment letters, press upload, and the portal refuses the file. The good news is that the limit is published, it depends on which IRCC account you use, and getting a PDF under it takes a couple of minutes once you know the target.' },
@@ -85,6 +86,7 @@ export const newPosts30: BlogPost[] = [
       { type: 'p', text: 'An IRCC application is a full identity kit: passport scans, bank balances, tax records, police certificates, sometimes medical details. Most free “compress PDF” sites upload each file to their servers to process it. Slate PDF compresses inside your browser instead — the file never leaves your device, there is no account, and nothing is watermarked. If you want the longer reasoning, see [are online PDF tools safe](/blog/is-it-safe-to-use-online-pdf-tools).' },
     ],
     faqs: [
+      { q: 'How do I compress a PDF for IRCC for free?', a: 'Open Compress PDF in your browser, type a target just under your limit — 3.8 MB for a 4 MB field, 1.9 MB for a passport copy — and download the result. It is free, needs no account, and the file never leaves your device.' },
       { q: 'What is the maximum file size for IRCC uploads?', a: 'Per IRCC’s Help Centre, as of October 2026, it is 4 MB per file in the IRCC secure account, Permanent Residence Portal, citizenship and asylum portals, and 5 MB in the IRCC Portal. Passport copies are limited to 2 MB.' },
       { q: 'How do I reduce a PDF to under 4 MB for IRCC?', a: 'Use a compressor that takes a target size, type about 3.8 MB, and check the result at 100% zoom. If the file is a high-resolution scan, rescanning at 150 DPI usually gets it under the limit with no visible loss.' },
       { q: 'Can I upload more than one file to the same IRCC field?', a: 'Plan on one file per field. Combine every page for that checklist item into one PDF before uploading, then compress that single file to the limit.' },
@@ -104,6 +106,7 @@ export const newPosts30: BlogPost[] = [
     keyword: 'nvc document upload size limit',
     category: 'Compressing',
     published: '2026-10-13',
+    updated: '2026-11-25',
     tool: 'compress-pdf',
     blocks: [
       { type: 'p', text: 'The NVC document upload size limit is the step where many immigrant visa cases stall: the CEAC portal rejects a birth certificate, an I-864 package or a police certificate because the file is too big, and the forum threads disagree about the real number. This guide gives you the official figure, the scanning rules that come with it, and a reliable way to get every file under the cap without losing legibility.' },
@@ -151,6 +154,7 @@ export const newPosts30: BlogPost[] = [
       { type: 'p', text: 'An NVC case is built from the most sensitive papers you own: passports, birth and marriage certificates, police records, tax returns with Social Security numbers. Most online compressors upload each file to a server to process it. Slate PDF runs entirely in your browser: the file is compressed on your own device, never uploaded, with no account and no watermark. It also works on a phone, which matters when the phone is your scanner.' },
     ],
     faqs: [
+      { q: 'How do I compress a PDF for NVC for free?', a: 'Open Compress PDF in your browser, type 1.8 MB as the target and download the result. It is free, needs no account, and the file never leaves your device. Check the smallest text at 100% zoom before you upload it.' },
       { q: 'What size should NVC documents be?', a: 'Each uploaded file must be 2 MB or smaller, per the State Department’s Scanning and Uploading Tips as of October 2026. Aim for about 1.8 MB to leave a safety margin.' },
       { q: 'What DPI should I scan NVC documents at?', a: 'The State Department suggests about 150 DPI. If a page is unreadable at that setting, rescan higher and compress the result back under 2 MB.' },
       { q: 'Can NVC documents be in color?', a: 'Yes. Scan in colour when the original is in colour; black-and-white originals can be scanned in greyscale, which also keeps the file smaller.' },
