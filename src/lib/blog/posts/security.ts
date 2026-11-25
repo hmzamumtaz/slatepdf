@@ -124,10 +124,12 @@ export const securityPosts: BlogPost[] = [
     keyword: 'how to redact a pdf',
     category: 'Security & Privacy',
     published: '2026-02-28',
-    updated: '2026-10-04',
+    updated: '2026-11-25',
     tool: 'redact-pdf',
     blocks: [
       { type: 'p', text: 'Failed redaction has exposed witness names, unredacted settlement figures and classified passages in court filings, and it happens the same way every time: someone drew a black rectangle over the text and saved the file.' },
+      { type: 'h2', text: 'Can I redact a PDF online for free?' },
+      { type: 'p', text: 'Yes. Open the [Redact PDF](/tools/redact-pdf) tool, add your document, drag a box over each passage that must go, apply the redaction and download the result — free, with no account and no upload, because the work happens in your browser. The catch is verification: a black box is not redaction unless the text underneath is actually removed, so always run the copy-paste test below before you send the file.' },
       { type: 'h2', text: 'Why a black box is not redaction' },
       { type: 'p', text: 'A PDF page is a stack of drawing instructions. Adding a filled rectangle adds one more instruction on top. The text instruction underneath is untouched — it is simply covered, the way a sheet of paper over a screen covers what is displayed.' },
       { type: 'p', text: 'Select the area and copy it, and the clipboard contains the words. Extract the text and they are all there. Delete the rectangle and the page reads normally again.' },
@@ -183,6 +185,7 @@ export const securityPosts: BlogPost[] = [
       ] },
     ],
     faqs: [
+      { q: 'How do I redact a PDF online for free?', a: 'Open Redact PDF, add your document, drag a box over each passage to remove, apply the redaction and download the result. Then verify it: copy from the redacted areas and search the document for the removed name — both should come back empty.' },
       { q: 'Is drawing a black box enough?', a: 'No. The text remains in the file and can be copied out. This is the single most common cause of accidental disclosure.' },
       { q: 'Can redaction be undone?', a: 'Not when it is done properly — the content is deleted rather than hidden. Keep the original if you need it.' },
       { q: 'Does redaction remove metadata?', a: 'Not reliably, in general. Slate PDF writes the redacted file as a new document, so the original title and author are not carried over, but check the properties on the result before you send it.' },

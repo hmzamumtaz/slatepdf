@@ -9,7 +9,7 @@ export const newPosts14: BlogPost[] = [
     keyword: 'how to scan documents to pdf with your phone',
     category: 'Converting',
     published: '2026-09-19',
-    updated: '2026-10-04',
+    updated: '2026-11-25',
     tool: 'scan-pdf',
     experience: 'I scan contracts, receipts, and signed pages into PDFs from my phone several times a week. The camera tool that auto-detects and straightens the page before it captures is what turned scanning from a chore into a two-second habit for me.',
     blocks: [
@@ -58,6 +58,8 @@ export const newPosts14: BlogPost[] = [
         ['Blurry page', 'Retake', 'Reopens the camera and replaces just that page'],
       ] },
       { type: 'p', text: 'Made a mistake? The undo button at the top steps back through your recent changes, and Revert puts one page back to how it was captured.' },
+      { type: 'h2', text: 'Scan documents online from your computer' },
+      { type: 'p', text: 'You do not need a phone to scan documents online. Open the [Scan PDF](/tools/scan-pdf) tool on your computer and import the photos you already took — they get the same page detection, crop, filters and OCR as a camera capture — or use a webcam. That covers the common case the phone guide misses: a folder of receipt or contract photos that needs to become one clean, searchable PDF, with nothing uploaded anywhere.' },
       { type: 'h2', text: 'Choose the right save settings' },
       { type: 'list', items: [
         'Page size: Fit page keeps each page at its own shape; A4 or Letter gives a uniform document that prints cleanly. Legal and landscape sizes are there too.',
@@ -73,6 +75,7 @@ export const newPosts14: BlogPost[] = [
       { type: 'p', text: 'The finished PDF is ready to email, upload to a portal or store in the cloud straight from your phone. If it is still too big, rescan or re-save with File size set to Small first: that keeps the text layer from OCR intact, while a heavy compression pass afterwards can turn the pages back into plain images.' },
     ],
     faqs: [
+      { q: 'Can I scan documents online for free?', a: 'Yes. Open Scan PDF in your browser, use your phone camera or import photos from your computer, review the pages and save one multi-page PDF. No app, no sign-up and nothing is uploaded — the work happens on your device.' },
       { q: 'How do I scan a document to PDF with my phone for free?', a: 'Open a browser-based scanner on your phone, allow camera access, and hold the phone over the page until it captures automatically. Review the pages, tap Save PDF and download the file. No app and no sign-up are needed.' },
       { q: 'Is phone scanning good enough for official documents?', a: 'Yes for most purposes, if the photo is sharp, evenly lit and straightened. The scanner crops and perspective-corrects the page and evens out the lighting, so the result reads like a flat scan.' },
       { q: 'Can I scan several pages into one PDF?', a: 'Yes. Keep the camera open and turn the pages; each capture joins the same document, and you save them all as one multi-page PDF.' },

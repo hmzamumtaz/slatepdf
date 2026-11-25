@@ -9,10 +9,13 @@ export const newPosts: BlogPost[] = [
     keyword: 'compress pdf without losing quality',
     category: 'Compressing',
     published: '2026-08-25',
+    updated: '2026-11-25',
     tool: 'compress-pdf',
     blocks: [
       { type: 'p', text: 'A PDF that is too large to email, upload to a portal, or store efficiently is a problem everyone hits eventually. The good news: modern compression can shrink a ten-megabyte document to under two megabytes without any visible change in quality.' },
       { type: 'p', text: 'This guide explains what compression actually does to a PDF, why the quality usually survives, and exactly how to compress your file in a browser without installing anything.' },
+      { type: 'h2', text: 'Can I compress a PDF online for free?' },
+      { type: 'p', text: 'Yes. Open the [Compress PDF](/tools/compress-pdf) tool, drop your file in, pick a compression level and download the smaller file — no account, no watermark and no upload, because the work happens in your browser. Photo-heavy PDFs typically shrink 60-80% at the Recommended level with no visible quality loss; text-only files shrink less, because there is less to remove.' },
       { type: 'h2', text: 'Why PDFs get so large in the first place' },
       { type: 'p', text: 'Most large PDFs are large because of images. A single high-resolution scan can easily be five megabytes. A presentation with twenty screenshots pushes past fifteen. The text in a PDF is already compact — a hundred-page report with no images is rarely more than a few hundred kilobytes.' },
       { type: 'p', text: 'Understanding this tells you where compression works best: anything image-heavy shrinks dramatically, while text-only files compress modestly.' },
@@ -47,6 +50,8 @@ export const newPosts: BlogPost[] = [
         'Zoom to 200% on an image in the compressed file. Look for softness or blocky artifacts.',
         'Compare file sizes. A 70% reduction on a photo-heavy PDF is normal; a 95% reduction usually means images were removed entirely.',
       ] },
+      { type: 'h2', text: 'Compress a PDF to an exact size' },
+      { type: 'p', text: 'Compression levels shrink by a percentage, which is not the same as hitting a limit. If a portal says "under 100 KB" or "under 2 MB", you need a target, not a level: cut the pages you do not need first, then compress to the exact size. The walkthrough is in [how to reduce a PDF to 100KB (or any exact size)](/blog/how-to-reduce-pdf-file-size-to-100kb) — the same method works for any target, and the immigration guides for [IRCC](/blog/ircc-document-upload-file-size-limit) and [NVC](/blog/nvc-document-upload-size-limit) cover the 4 MB and 2 MB limits specifically.' },
       { type: 'h2', text: 'When compression is not enough' },
       { type: 'p', text: 'If your file is still too large after compression, the content itself is the issue. A three-hundred-page scanned report at 300 DPI is genuinely large. Options at that point include:' },
       { type: 'list', items: [
@@ -59,6 +64,7 @@ export const newPosts: BlogPost[] = [
       { type: 'p', text: 'A browser-based tool never transmits your file. The compression code runs in your tab, the compressed file appears in your downloads, and nothing crosses the network. You can verify this by opening your browser developer tools and watching for upload requests — there will be none.' },
     ],
     faqs: [
+      { q: 'Can I compress a PDF online for free without uploading it?', a: 'Yes. Slate PDF compresses in your browser with no account, so the file never leaves your device. Open Compress PDF, drop the file in, pick a level and download the smaller file.' },
       { q: 'Will compressing a PDF reduce its quality?', a: 'Visibly, no — at the Recommended compression level. Images are technically re-encoded, but the result is indistinguishable from the original for screen viewing and standard printing.' },
       { q: 'How much smaller will my PDF get?', a: 'It depends on content. Photo-heavy PDFs shrink 60-80%. Text-only PDFs shrink 10-30%. Scanned documents can shrink up to 90%.' },
       { q: 'Can I compress a password-protected PDF?', a: 'You need to unlock it first. Password-protected PDFs cannot be read by compression tools until the password is removed.' },
