@@ -138,7 +138,7 @@ export const securityPosts: BlogPost[] = [
       { type: 'p', text: 'Proper redaction removes the underlying content rather than hiding it. The text instructions inside the marked area are deleted and the region is filled, so there is nothing left to recover — no copy-paste, no extraction, no undo.' },
       { type: 'p', text: 'Slate PDF takes the bluntest route to that guarantee. Every page you redact is redrawn as an image with the black boxes burned into it, and the original page — text, fonts and all — is thrown away. Pages you did not touch are copied across unchanged, with their text still selectable.' },
       { type: 'h2', text: 'How to redact a PDF online, free and without uploading' },
-      { type: 'p', text: 'There are two routes, depending on how much of the page has to go. Both run in your browser, so the document never leaves your device, and neither needs an account.' },
+      { type: 'p', text: 'There are two routes, depending on how much of the page has to go. Both run in your browser, so the document never leaves your device, and neither needs an account. If you only need to black out a few words, the shorter [guide to blacking out text in a PDF](/blog/how-to-black-out-text-in-a-pdf) covers that case on its own.' },
       { type: 'h3', text: 'Black out specific passages' },
       { type: 'steps', items: [
         'Open the Redact PDF tool and add your document. "Draw boxes" is the default mode.',

@@ -17,15 +17,18 @@ import { hrefFor, type PageKey } from '@/i18n/paths';
 export const dynamic = 'force-static';
 
 const SITE_LAUNCH = new Date('2025-11-01');
-// Last real change to the /tools hub and the no-upload proof page.
-const HUB_DATE = new Date('2026-10-12');
-// Last real change to every tool page, in every language: a third FAQ, the
-// "at a glance" facts table and HowTo structured data (2026-10-13).
-const TOOL_DATE = new Date('2026-10-13');
+// Last real change to the /tools hub and the no-upload proof page:
+// the 2026-11-25 redesign restyled both (de-indigoed links, ToolGrid).
+const HUB_DATE = new Date('2026-11-25');
+// Last real change to every tool page, in every language: the 2026-11-25
+// site-wide redesign (new headers, trust chips on every tool page) and
+// the Edit PDF annotate set (shapes, whiteout, freehand, undo).
+const TOOL_DATE = new Date('2026-11-25');
 // Translated home and hub pages first published.
 const I18N_DATE = new Date('2026-10-12');
-// Homepage FAQ rewritten, crawlable and marked up as FAQPage.
-const HOME_DATE = new Date('2026-10-13');
+// Homepage redesigned 2026-11-25 (search-first hero, category tabs,
+// trust chips) and the hero redone the same day.
+const HOME_DATE = new Date('2026-11-25');
 
 /** A post's newest real date: publication, content update or editorial review. */
 function postDate(post: (typeof posts)[number]): Date {
