@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, BookOpenText } from 'lucide-react';
 import Breadcrumbs from './Breadcrumbs';
 import RateTool from './RateTool';
+import ToolGrid from './ToolGrid';
 import type { ReactNode } from 'react';
 import { categoryAnchor, getNextTools, getToolBySlug, tools } from '@/lib/tools-data';
 import { getToolFaqs } from '@/lib/tool-seo';
@@ -74,7 +75,7 @@ export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE
       {/* Plain facts in one table: what answer engines quote when asked for a free, private tool. */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <h2 className="text-lg font-semibold text-foreground mb-3">{fill(site.glanceHeading, { tool: name })}</h2>
-        <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-2 rounded-2xl border border-border bg-white p-5 text-sm">
+        <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-2 rounded-2xl border border-border bg-white p-5 text-sm shadow-[var(--shadow-card)]">
           {[
             [site.glancePrice, site.glancePriceValue],
             [site.glanceFile, slug === 'translate-pdf' ? site.glanceFileTranslate : site.glanceFileValue],
@@ -97,7 +98,7 @@ export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE
           <ol className="space-y-3 mb-8">
             {howTo.steps.map((step, i) => (
               <li key={i} className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-indigo-50 text-sm font-semibold text-indigo-700">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-foreground text-sm font-semibold text-white">
                   {i + 1}
                 </span>
                 <span className="text-gray-700 leading-relaxed pt-0.5">{step}</span>
@@ -123,14 +124,14 @@ export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE
       {faqs.length > 0 && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">{fill(site.faqHeading, { tool: name })}</h2>
-          <div className="divide-y divide-border rounded-2xl border border-border bg-white">
+          <div className="space-y-3">
             {faqs.map(f => (
-              <details key={f.q} className="group px-5 py-4">
-                <summary className="cursor-pointer list-none font-semibold text-foreground flex items-start justify-between gap-4">
+              <details key={f.q} className="group rounded-xl border border-border bg-white overflow-hidden open:bg-gray-50">
+                <summary className="cursor-pointer list-none font-semibold text-foreground flex items-start justify-between gap-4 px-5 py-4 hover:bg-gray-50 transition-colors">
                   {f.q}
                   <span className="text-muted-foreground transition-transform group-open:rotate-45 text-xl leading-none">+</span>
                 </summary>
-                <p className="mt-2 text-gray-600 leading-relaxed">{f.a}</p>
+                <p className="px-5 pb-5 text-gray-600 leading-relaxed">{f.a}</p>
               </details>
             ))}
           </div>
@@ -148,7 +149,7 @@ export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE
                   href={`/blog/${p.slug}`}
                   className="flex h-full items-start gap-3 rounded-xl border border-border bg-white p-4 hover:border-gray-300 hover:shadow-md transition-all"
                 >
-                  <BookOpenText className="w-4 h-4 mt-1 shrink-0 text-indigo-600" />
+                  <BookOpenText className="w-4 h-4 mt-1 shrink-0 text-foreground" />
                   <span className="font-medium text-foreground leading-snug">{p.title}</span>
                 </Link>
               </li>
@@ -160,21 +161,10 @@ export default async function ToolPageSEO({ slug, guide, locale = DEFAULT_LOCALE
       {nextTools.length > 0 && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <h2 className="text-xl font-bold text-foreground mb-4">{site.continueHeading}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {nextTools.map((t) => (
-              <Link
-                key={t.slug}
-                href={t.href}
-                className="rounded-xl border border-border bg-white p-4 hover:border-gray-300 hover:shadow-md transition-all"
-              >
-                <p className="font-semibold text-foreground mb-1">{t.name}</p>
-                <p className="text-sm text-gray-600 line-clamp-2">{t.description}</p>
-              </Link>
-            ))}
-          </div>
+          <ToolGrid tools={nextTools} />
           <Link
             href={hubHref}
-            className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:underline"
+            className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground hover:underline"
           >
             {fill(site.seeAllTools, { count: tools.length })} <ArrowRight className="w-4 h-4 rtl:rotate-180" />
           </Link>

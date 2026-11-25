@@ -8,7 +8,7 @@ function Inline({ text }: { text: string }) {
     <>
       {parseInline(text).map((part, i) =>
         typeof part === 'string' ? part : (
-          <Link key={i} href={part.href} className="font-medium text-indigo-700 underline underline-offset-2 hover:text-indigo-900">
+          <Link key={i} href={part.href} className="font-medium text-foreground underline underline-offset-2 hover:text-foreground/70">
             {part.label}
           </Link>
         ),

@@ -14,6 +14,11 @@
   --destructive: #ef4444;
   --success: #22c55e;
   --radius: 0.75rem;
+  /* One shadow language for the whole site: a soft lift for cards, a deep
+     one for things that float above the page (modals, featured banners). */
+  --shadow-card: 0 1px 2px rgba(15, 15, 15, 0.04);
+  --shadow-lift: 0 12px 32px -8px rgba(15, 15, 15, 0.16), 0 4px 12px -4px rgba(15, 15, 15, 0.08);
+  --shadow-float: 0 24px 48px -12px rgba(15, 15, 15, 0.25);
 }
 
 @theme inline {
@@ -75,16 +80,38 @@ html { scroll-behavior: smooth; }
 .upload-zone:hover,
 .upload-zone.dragover {
   border-color: var(--primary);
-  background: #f5f3ff;
+  background: rgba(15, 15, 15, 0.03);
 }
 
 .tool-card {
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-card);
 }
 
 .tool-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-3px);
+  border-color: rgba(15, 15, 15, 0.25);
+  box-shadow: var(--shadow-lift);
+}
+
+/* Category tab pills (homepage tool explorer): the active tab reads as a
+   solid black button, the rest as quiet chips. */
+.tab-pill {
+  transition: all 0.15s ease;
+}
+
+.tab-pill[aria-selected="true"] {
+  background: var(--foreground);
+  color: #fff;
+  border-color: var(--foreground);
+}
+
+/* Section eyebrow: small caps label above a section heading. */
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .progress-bar {
@@ -102,8 +129,8 @@ html { scroll-behavior: smooth; }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
-  50% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(15, 15, 15, 0.25); }
+  50% { box-shadow: 0 0 0 10px rgba(15, 15, 15, 0); }
 }
 
 .animate-fade-in {

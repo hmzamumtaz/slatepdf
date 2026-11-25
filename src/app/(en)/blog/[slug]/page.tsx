@@ -157,7 +157,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         </header>
 
         {headings.length > 2 && (
-          <nav aria-label="On this page" className="mb-10 rounded-2xl border border-border bg-white p-5">
+          <nav aria-label="On this page" className="mb-10 rounded-2xl border border-border bg-white p-5 shadow-[var(--shadow-card)]">
             <p className="text-sm font-semibold text-foreground mb-3">On this page</p>
             <ul className="space-y-2">
               {headings.map((h) => (
@@ -215,7 +215,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
                 <Link
                   key={r.slug}
                   href={`/blog/${r.slug}`}
-                  className="rounded-xl border border-border bg-white p-4 hover:border-gray-300 hover:shadow-sm transition-all"
+                  className="rounded-2xl border border-border bg-white p-4 shadow-[var(--shadow-card)] hover:border-foreground/25 hover:shadow-[var(--shadow-lift)] hover:-translate-y-0.5 transition-all"
                 >
                   <p className="text-xs text-muted-foreground mb-1.5">{r.category}</p>
                   <p className="text-sm font-semibold text-foreground leading-snug">{r.title}</p>

@@ -78,7 +78,7 @@ export default function VerifyNoUploadPage() {
 
       <h2 className="mt-10 text-2xl font-bold text-foreground">Test 1: watch the Network tab</h2>
       <ol className="mt-3 list-decimal ps-6 space-y-2 text-gray-700 leading-relaxed">
-        <li>Open a tool, for example <Link href="/tools/merge-pdf" className="text-indigo-600 underline">Merge PDF</Link>, in Chrome, Edge or Firefox.</li>
+        <li>Open a tool, for example <Link href="/tools/merge-pdf" className="text-foreground underline">Merge PDF</Link>, in Chrome, Edge or Firefox.</li>
         <li>Press <kbd className="px-1.5 py-0.5 rounded border border-border bg-gray-50 text-sm">F12</kbd> (or right-click → Inspect) and open the <strong>Network</strong> tab.</li>
         <li>Click the clear button so the list is empty.</li>
         <li>Add your PDF and run the tool, then download the result.</li>
@@ -124,7 +124,7 @@ export default function VerifyNoUploadPage() {
       </div>
 
       <p className="mt-10 text-gray-700">
-        Ready to try it? <Link href="/tools" className="text-indigo-600 font-semibold underline">See all PDF tools</Link>.
+        Ready to try it? <Link href="/tools" className="text-foreground font-semibold underline">See all PDF tools</Link>.
       </p>
     </article>
   );

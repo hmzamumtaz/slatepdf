@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState, useRef } from 'react';
-import { Upload, FileText, X, Plus, CheckSquare, Square, MinusSquare } from 'lucide-react';
+import { Upload, FileText, X, Plus, CheckSquare, Square, MinusSquare, Lock } from 'lucide-react';
 import { useT } from '@/i18n/I18nProvider';
 
 interface FileUploadProps {
@@ -133,22 +133,26 @@ export default function FileUpload({
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
           onClick={() => inputRef.current?.click()}
-          className={`upload-zone rounded-2xl p-12 text-center cursor-pointer transition-all ${
-            isDragOver ? 'dragover border-primary bg-indigo-50/50' : 'hover:border-primary/50 hover:bg-gray-50'
+          className={`upload-zone rounded-2xl p-10 sm:p-14 text-center cursor-pointer transition-all ${
+            isDragOver ? 'dragover border-primary bg-primary/5' : 'hover:border-primary/50 hover:bg-gray-50'
           }`}
         >
           <div className="flex flex-col items-center gap-4">
-            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-colors ${isDragOver ? 'bg-primary/10' : 'bg-muted'}`}>
-              <Upload className={`w-8 h-8 ${isDragOver ? 'text-primary' : 'text-muted-foreground'}`} />
+            <div className={`w-20 h-20 rounded-3xl flex items-center justify-center transition-colors ${isDragOver ? 'bg-primary text-white' : 'bg-muted'}`}>
+              <Upload className={`w-9 h-9 ${isDragOver ? 'text-white' : 'text-muted-foreground'}`} />
             </div>
             <div>
-              <p className="text-lg font-semibold text-foreground">{label ?? t('Drop your files here')}</p>
+              <p className="text-xl font-bold text-foreground">{label ?? t('Drop your files here')}</p>
               <p className="text-sm text-muted-foreground mt-1">{description ?? t('or click to browse')}</p>
             </div>
             <div className="flex items-center gap-2 text-xs text-gray-600">
               <span className="px-2 py-1 bg-muted rounded-md font-medium">{friendlyAcceptLabel(accept)}</span>
               {multiple && <span>{t('Up to {count} files', { count: maxFiles })}</span>}
             </div>
+            <p className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+              <Lock className="w-3.5 h-3.5 text-green-600" />
+              {t('Your file never leaves this device')}
+            </p>
           </div>
           <input
             ref={inputRef}
@@ -216,7 +220,7 @@ export default function FileUpload({
           {multiple && files.length < maxFiles && (
             <button
               onClick={() => inputRef.current?.click()}
-              className="w-full p-4 border-2 border-dashed border-border rounded-xl text-sm font-medium text-muted-foreground hover:border-primary hover:text-primary hover:bg-indigo-50/50 transition-all flex items-center justify-center gap-2"
+              className="w-full p-4 border-2 border-dashed border-border rounded-xl text-sm font-medium text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-all flex items-center justify-center gap-2"
             >
               <Plus className="w-4 h-4" />
               {t('Add more files')}

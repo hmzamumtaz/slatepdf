@@ -1,12 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
-import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown, Search, X } from 'lucide-react';
+import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown, Search, X, Zap, ShieldCheck, BadgeCheck, Merge, ArrowUpRight } from 'lucide-react';
 import { toolIcon } from '@/components/tool-icons';
-import { categories, getToolsByCategory, featuredTool, getToolBySlug, tools } from '@/lib/tools-data';
+import { categories, categoryAnchor, getToolsByCategory, featuredTool, getToolBySlug, tools } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
-import ToolsModal from '@/components/ToolsModal';
+import CategoryExplorer from '@/components/CategoryExplorer';
 import { SITE_NAME, SITE_URL } from '@/lib/site';
 import { SITE_AUTHOR } from '@/lib/author';
 
@@ -69,21 +69,31 @@ const faqSchema = {
   mainEntity: homeFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 
+const POPULAR_SLUGS = new Set(['merge-pdf', 'compress-pdf', 'jpg-to-pdf', 'pdf-to-word', 'sign-pdf', 'edit-pdf']);
+/** Popular tools carry a "Popular" badge in the grid, like Smallpdf's featured row. */
+const withBadges = (list: typeof tools) => list.map((t) => (POPULAR_SLUGS.has(t.slug) ? { ...t, badge: 'Popular' } : t));
+
 export default function Home() {
-  const [modalOpen, setModalOpen] = useState(false);
   const [toolQuery, setToolQuery] = useState('');
+  const toolsRef = useRef<HTMLElement>(null);
   const query = toolQuery.trim().toLowerCase();
   const searchResults = query
-    ? tools.filter((t) => `${t.name} ${t.description} ${t.category}`.toLowerCase().includes(query))
+    ? withBadges(tools.filter((t) => `${t.name} ${t.description} ${t.category}`.toLowerCase().includes(query)))
     : null;
 
-  const popularTools = ['merge-pdf', 'compress-pdf', 'jpg-to-pdf', 'pdf-to-word', 'sign-pdf', 'edit-pdf']
+  /** Typing in the hero search jumps the tools grid into view, so results
+      are visible as you type — the grid itself stays the single result list. */
+  const onHeroSearch = (value: string) => {
+    if (!query && value.trim()) toolsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setToolQuery(value);
+  };
+
+  const popularTools = [...POPULAR_SLUGS]
     .map(getToolBySlug)
     .filter((t): t is NonNullable<typeof t> => !!t);
 
   return (
     <div className="min-h-screen bg-white">
-      <ToolsModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -115,20 +125,39 @@ export default function Home() {
                 No uploads, no sign up, no watermarks and no limits.
               </p>
 
-              <div className="mt-9 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start">
-                <button
-                  onClick={() => setModalOpen(true)}
-                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-8 py-4 bg-foreground text-white font-bold rounded-2xl transition-all hover:bg-[#27272a] hover:shadow-2xl hover:shadow-foreground/25 active:scale-[0.98] text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40 focus-visible:ring-offset-2"
-                >
-                  Use the tools free
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </button>
+              {/* Search-first: the fastest way to a tool is to type its name,
+                  like Smallpdf's hero. Typing jumps to the grid below. */}
+              <div className="mt-9 relative max-w-xl mx-auto lg:mx-0">
+                <Search className="w-5 h-5 text-muted-foreground absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <input
+                  type="search"
+                  value={toolQuery}
+                  onChange={(e) => onHeroSearch(e.target.value)}
+                  placeholder="Search all tools — try “compress”, “sign” or “word”…"
+                  aria-label="Search tools"
+                  className="w-full pl-11 pr-10 py-4 rounded-2xl border border-border bg-white text-base text-foreground placeholder:text-muted-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-foreground/30 focus:border-foreground/40"
+                />
+                {toolQuery && (
+                  <button
+                    onClick={() => setToolQuery('')}
+                    aria-label="Clear search"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
+
+              <div className="mt-5 flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start">
                 <a
                   href="#tools"
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-2xl border border-border bg-white text-foreground font-semibold text-base transition-all hover:border-gray-400 hover:bg-muted active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40 focus-visible:ring-offset-2"
+                  className="group inline-flex items-center gap-2 font-semibold text-foreground hover:underline underline-offset-4"
                 >
                   Browse every tool
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </a>
+                <span className="hidden sm:inline text-muted-foreground">·</span>
+                <span className="text-sm text-muted-foreground">or press <kbd className="px-1.5 py-0.5 rounded-md border border-border bg-muted text-xs font-semibold text-foreground">Ctrl K</kbd> anywhere to search</span>
               </div>
 
               <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2.5 justify-center lg:justify-start text-sm text-muted-foreground">
@@ -255,9 +284,9 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <Link
           href="/tools/scan-pdf"
-          className="group flex flex-col sm:flex-row sm:items-center gap-5 rounded-3xl border border-violet-200 bg-violet-50 p-6 sm:p-8 transition-all hover:shadow-xl hover:shadow-violet-200/60"
+          className="group flex flex-col sm:flex-row sm:items-center gap-5 rounded-3xl border border-border bg-white p-6 sm:p-8 transition-all hover:shadow-xl"
         >
-          <span className="w-14 h-14 rounded-2xl bg-violet-600 text-white flex items-center justify-center shrink-0">
+          <span className="w-14 h-14 rounded-2xl bg-foreground text-white flex items-center justify-center shrink-0">
             <Camera className="w-7 h-7" />
           </span>
           <span className="flex-1 min-w-0">
@@ -267,55 +296,29 @@ export default function Home() {
               and removes shadows. Book, ID card, business card and whiteboard modes, signatures and searchable text — no app.
             </span>
           </span>
-          <span className="inline-flex items-center gap-2 font-semibold text-violet-700 shrink-0">
+          <span className="inline-flex items-center gap-2 font-semibold text-foreground shrink-0">
             Start scanning <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </span>
         </Link>
       </section>
 
-      <section id="tools" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 scroll-mt-24">
-        <div className="mb-10">
-          <div className="relative max-w-xl">
-            <Search className="w-5 h-5 text-muted-foreground absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
-            <input
-              type="search"
-              value={toolQuery}
-              onChange={(e) => setToolQuery(e.target.value)}
-              placeholder="Search all tools — try “compress”, “sign” or “word”…"
-              aria-label="Search tools"
-              className="w-full pl-11 pr-10 py-3.5 rounded-2xl border border-border bg-white text-base text-foreground placeholder:text-muted-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-foreground/30 focus:border-foreground/40"
-            />
-            {toolQuery && (
-              <button
-                onClick={() => setToolQuery('')}
-                aria-label="Clear search"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            )}
-          </div>
-          {searchResults && (
-            <p className="mt-3 text-sm text-muted-foreground" role="status">
+      <section ref={toolsRef} id="tools" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 scroll-mt-24">
+        {searchResults ? (
+          <>
+            <p className="mb-6 text-sm text-muted-foreground" role="status">
               {searchResults.length === 0
                 ? `No tools match “${toolQuery.trim()}”. Try a shorter word, like “pdf” or “image”.`
                 : `${searchResults.length} tool${searchResults.length === 1 ? '' : 's'} found`}
             </p>
-          )}
-        </div>
-        {searchResults ? (
-          searchResults.length > 0 ? (
-            <ToolGrid tools={searchResults} />
-          ) : null
+            {searchResults.length > 0 && <ToolGrid tools={searchResults} />}
+          </>
         ) : (
-          categories.filter(c => c !== featuredTool.category).map((category) => (
-            <div key={category} className="mb-14 last:mb-0">
-              <div className="flex items-center justify-between mb-5">
-                <h2 className="text-xl font-bold text-foreground">{category}</h2>
-              </div>
-              <ToolGrid tools={getToolsByCategory(category)} />
-            </div>
-          ))
+          <CategoryExplorer
+            categories={categories
+              .filter((c) => c !== featuredTool.category)
+              .map((c) => ({ id: c, label: c, anchorId: categoryAnchor(c), tools: withBadges(getToolsByCategory(c)) }))}
+            allLabel="All tools"
+          />
         )}
       </section>
 
@@ -332,11 +335,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: `${tools.length} Free PDF Tools`, text: 'Merge multiple PDFs, split large files, compress to the size you need, convert between formats, add signatures, and password-protect documents.' },
-              { title: 'Works Everywhere', text: 'Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDFs regularly — it all runs in your browser.' },
-              { title: 'Truly Free. Forever.', text: 'No sign-up required, no watermarks added to your output, no upload size limits, and no hidden fees. Use every tool as many times as you want.' },
+              { icon: Merge, title: `${tools.length} Free PDF Tools`, text: 'Merge multiple PDFs, split large files, compress to the size you need, convert between formats, add signatures, and password-protect documents.' },
+              { icon: Globe, title: 'Works Everywhere', text: 'Whether you are a student combining research papers, a professional preparing contracts, or anyone who works with PDFs regularly — it all runs in your browser.' },
+              { icon: BadgeCheck, title: 'Truly Free. Forever.', text: 'No sign-up required, no watermarks added to your output, no upload size limits, and no hidden fees. Use every tool as many times as you want.' },
             ].map((item) => (
-              <div key={item.title} className="p-6 rounded-xl bg-white border border-border">
+              <div key={item.title} className="p-6 rounded-2xl bg-white border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-lift)] hover:-translate-y-0.5 transition-all">
+                <span className="w-11 h-11 rounded-xl bg-foreground text-white flex items-center justify-center mb-4">
+                  <item.icon className="w-5 h-5" />
+                </span>
                 <h3 className="font-semibold mb-2 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
               </div>
@@ -354,26 +360,19 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-8 rounded-2xl border border-border bg-white">
-              <h3 className="text-lg font-bold mb-2 text-foreground">Your Files Stay Private</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                All processing happens on your device. Your documents never touch our servers — not during processing, not after. Perfect for confidential and sensitive work.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl border border-border bg-white">
-              <h3 className="text-lg font-bold mb-2 text-foreground">Instant Processing</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                No waiting for uploads. No server queues. Your PDF is processed the moment you hit the button — even large files handle in seconds.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl border border-border bg-white">
-              <h3 className="text-lg font-bold mb-2 text-foreground">No Limits. No Watermarks.</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Use every tool as many times as you want. No file size restrictions. No watermarks added to your output. Completely free, forever.
-              </p>
-            </div>
+            {[
+              { icon: ShieldCheck, title: 'Your Files Stay Private', text: 'All processing happens on your device. Your documents never touch our servers — not during processing, not after. Perfect for confidential and sensitive work.' },
+              { icon: Zap, title: 'Instant Processing', text: 'No waiting for uploads. No server queues. Your PDF is processed the moment you hit the button — even large files handle in seconds.' },
+              { icon: Infinity, title: 'No Limits. No Watermarks.', text: 'Use every tool as many times as you want. No file size restrictions. No watermarks added to your output. Completely free, forever.' },
+            ].map((item) => (
+              <div key={item.title} className="p-8 rounded-2xl border border-border bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-lift)] hover:-translate-y-0.5 transition-all">
+                <span className="w-11 h-11 rounded-xl bg-foreground text-white flex items-center justify-center mb-4">
+                  <item.icon className="w-5 h-5" />
+                </span>
+                <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+              </div>
+            ))}
           </div>
 
           {/* Trust badges */}
@@ -400,7 +399,7 @@ export default function Home() {
               <thead>
                 <tr className="border-b border-border">
                   <th className="text-left py-4 px-6 font-semibold text-foreground w-2/5">Feature</th>
-                  <th className="text-center py-4 px-4 font-semibold text-foreground w-1/5">
+                  <th className="text-center py-4 px-4 font-semibold text-foreground w-1/5 bg-gray-50">
                     <span className="inline-flex items-center gap-1.5">
                       <span aria-hidden="true" className="w-5 h-5 rounded bg-foreground text-white text-[10px] font-bold flex items-center justify-center">S</span>
                       Slate PDF
@@ -424,7 +423,7 @@ export default function Home() {
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
                     <td className="py-3.5 px-6 text-foreground font-medium">{row.feature}</td>
-                    <td className="py-3.5 px-4 text-center">
+                    <td className="py-3.5 px-4 text-center bg-gray-50/70">
                       {row.slate ? (
                         <span className="inline-flex w-6 h-6 items-center justify-center rounded-full bg-green-100">
                           <CheckCircle2 className="w-4 h-4 text-green-600" />
@@ -516,9 +515,10 @@ export default function Home() {
               <Link
                 key={guide.href}
                 href={guide.href}
-                className="rounded-2xl border border-border bg-white p-5 hover:border-gray-300 hover:shadow-md transition-all"
+                className="group relative rounded-2xl border border-border bg-white p-5 shadow-[var(--shadow-card)] hover:border-foreground/25 hover:shadow-[var(--shadow-lift)] hover:-translate-y-0.5 transition-all"
               >
-                <h3 className="font-bold text-foreground leading-snug mb-1.5">{guide.title}</h3>
+                <ArrowUpRight className="w-4 h-4 text-muted-foreground absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <h3 className="font-bold text-foreground leading-snug mb-1.5 pr-5">{guide.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{guide.desc}</p>
               </Link>
             ))}
@@ -536,7 +536,7 @@ export default function Home() {
 
           <div className="space-y-3">
             {homeFaqs.map((faq, i) => (
-              <details key={faq.q} open={i === 0} className="group rounded-xl border border-border overflow-hidden">
+              <details key={faq.q} open={i === 0} className="group rounded-xl border border-border overflow-hidden open:bg-gray-50">
                 <summary className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer list-none hover:bg-gray-50 transition-colors">
                   <span className="font-semibold text-foreground">{faq.q}</span>
                   <ChevronDown className="w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-200 group-open:rotate-180" />

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, Shield } from 'lucide-react';
 import ToolGrid from '@/components/ToolGrid';
+import CategoryExplorer from '@/components/CategoryExplorer';
 import { OG_LOCALES, isLocale, type Locale } from '@/i18n/config';
 import { fill, getContent } from '@/i18n/content';
 import { getNav } from '@/i18n/nav';
@@ -81,12 +82,10 @@ export default async function LocalizedHome({ params }: PageProps<'/[lang]'>) {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {nav.categories.map(c => (
-          <div key={c.id} id={categoryAnchor(c.id)} className="mb-12 last:mb-0">
-            <h2 className="text-xl font-bold text-foreground mb-5">{c.label}</h2>
-            <ToolGrid tools={c.tools} />
-          </div>
-        ))}
+        <CategoryExplorer
+          categories={nav.categories.map((c) => ({ id: c.id, label: c.label, anchorId: categoryAnchor(c.id), tools: c.tools }))}
+          allLabel={nav.labels.allTools}
+        />
       </section>
 
       <section className="bg-gray-50 border-y border-border py-16 sm:py-20">
@@ -106,14 +105,14 @@ export default async function LocalizedHome({ params }: PageProps<'/[lang]'>) {
       <section className="py-16 sm:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-foreground">{site.faqTitle}</h2>
-          <div className="divide-y divide-border rounded-2xl border border-border bg-white">
+          <div className="space-y-3">
             {faqs.map(f => (
-              <details key={f.q} className="group px-5 py-4">
-                <summary className="cursor-pointer list-none font-semibold text-foreground flex items-start justify-between gap-4">
+              <details key={f.q} className="group rounded-xl border border-border bg-white overflow-hidden open:bg-gray-50">
+                <summary className="cursor-pointer list-none font-semibold text-foreground flex items-start justify-between gap-4 px-5 py-4 hover:bg-gray-50 transition-colors">
                   {f.q}
                   <span className="text-muted-foreground transition-transform group-open:rotate-45 text-xl leading-none">+</span>
                 </summary>
-                <p className="mt-2 text-gray-600 leading-relaxed">{f.a}</p>
+                <p className="px-5 pb-5 text-gray-600 leading-relaxed">{f.a}</p>
               </details>
             ))}
           </div>

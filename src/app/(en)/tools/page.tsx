@@ -90,9 +90,9 @@ export default function ToolsIndexPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-foreground mb-3">Not sure which tool you need?</h2>
           <p className="text-gray-600 leading-relaxed">
-            Our <Link href="/blog" className="font-medium text-indigo-600 hover:underline">PDF guides</Link> walk
+            Our <Link href="/blog" className="font-medium text-foreground hover:underline">PDF guides</Link> walk
             through common jobs step by step — shrinking a file for email, signing a form, turning a scan into
-            searchable text. Or open the <Link href="/tools/pdf-workspace" className="font-medium text-indigo-600 hover:underline">PDF Workspace</Link> to
+            searchable text. Or open the <Link href="/tools/pdf-workspace" className="font-medium text-foreground hover:underline">PDF Workspace</Link> to
             edit, sign, redact and protect one document without switching pages.
           </p>
         </div>

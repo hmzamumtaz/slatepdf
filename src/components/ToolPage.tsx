@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
-import { ArrowLeft, Download, Loader2, Check, AlertCircle, FileText, Trash2, FileDown, List, LayoutGrid, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
+import { ArrowLeft, Download, Loader2, Check, AlertCircle, FileText, Trash2, FileDown, List, LayoutGrid, ChevronLeft, ChevronRight, Eye, BadgeCheck, Lock, UserX, ShieldCheck } from 'lucide-react';
 import { toolIcon } from '@/components/tool-icons';
 import Link from 'next/link';
 import { getToolBySlug } from '@/lib/tools-data';
@@ -397,15 +397,29 @@ export default function ToolPage({
           <ArrowLeft className="w-4 h-4" /> {t('Back to all tools')}
         </Link>
 
-        <div className="mb-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ backgroundColor: `${tool.color}15` }}>
-              <IconComponent className="w-6 h-6" style={{ color: tool.color }} />
+        <div className="mb-6">
+          <div className="flex items-start gap-4 mb-3">
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${tool.color}15` }}>
+              <IconComponent className="w-7 h-7" style={{ color: tool.color }} />
             </div>
-            <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">{t(tool.name)}</h1>
-              <p className="text-muted-foreground text-sm sm:text-base">{t(tool.description)}</p>
+            <div className="min-w-0">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">{t(tool.name)}</h1>
+              <p className="text-muted-foreground text-sm sm:text-base mt-1">{t(tool.description)}</p>
             </div>
+          </div>
+          {/* The pitch, at a glance: the four facts every competitor hides. */}
+          <div className="flex flex-wrap items-center gap-2">
+            {[
+              { icon: BadgeCheck, label: t('Free') },
+              { icon: Lock, label: t('No upload') },
+              { icon: UserX, label: t('No sign-up') },
+              { icon: ShieldCheck, label: t('No watermark') },
+            ].map((chip) => (
+              <span key={chip.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted text-xs font-semibold text-foreground">
+                <chip.icon className="w-3.5 h-3.5 text-green-600" />
+                {chip.label}
+              </span>
+            ))}
           </div>
         </div>
 

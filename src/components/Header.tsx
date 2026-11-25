@@ -2,11 +2,13 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { Menu, X, ChevronDown, LayoutGrid } from 'lucide-react';
+import { Menu, X, ChevronDown, LayoutGrid, Search } from 'lucide-react';
 import BrandMark from './BrandMark';
 import { toolIcon } from '@/components/tool-icons';
 import { SITE_NAME } from '@/lib/site';
 import LanguageSwitcher from './LanguageSwitcher';
+import ToolsModal from './ToolsModal';
+import { useT } from '@/i18n/I18nProvider';
 import type { NavCategory, NavData } from '@/i18n/nav';
 
 function DropdownMenu({ category, alignRight }: { category: NavCategory; alignRight?: boolean }) {
@@ -68,9 +70,24 @@ const navCategories = [
 ];
 
 export default function Header({ nav }: { nav: NavData }) {
+  const t = useT();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileCategory, setMobileCategory] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
   const byId = (id: string) => nav.categories.find(c => c.id === id)!;
+
+  // Ctrl/⌘ K opens the tool search from any page — the Smallpdf/iLovePDF
+  // pattern of reaching any tool in one keystroke.
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-border">
@@ -105,17 +122,35 @@ export default function Header({ nav }: { nav: NavData }) {
             >
               {nav.labels.guides}
             </Link>
+            <button
+              onClick={() => setSearchOpen(true)}
+              aria-label={t('Search tools')}
+              className="ml-1 inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground bg-muted/70 hover:bg-muted border border-border rounded-lg transition-colors"
+            >
+              <Search className="w-4 h-4" />
+              {t('Search')}
+              <kbd className="px-1.5 py-0.5 rounded border border-border bg-white text-[10px] font-semibold text-muted-foreground">Ctrl K</kbd>
+            </button>
             <LanguageSwitcher label={nav.labels.language} />
           </nav>
 
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={nav.labels.menu}
-            aria-expanded={mobileOpen}
-            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-          >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          <div className="flex items-center gap-1 lg:hidden">
+            <button
+              onClick={() => setSearchOpen(true)}
+              aria-label={t('Search tools')}
+              className="p-2 rounded-lg hover:bg-muted transition-colors"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={nav.labels.menu}
+              aria-expanded={mobileOpen}
+              className="p-2 rounded-lg hover:bg-muted transition-colors"
+            >
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -175,6 +210,7 @@ export default function Header({ nav }: { nav: NavData }) {
           </div>
         </div>
       )}
+      <ToolsModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }
