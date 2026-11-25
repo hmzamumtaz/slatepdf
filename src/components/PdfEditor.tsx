@@ -3,7 +3,7 @@
 import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import {
-  Loader2, Check, AlertCircle, Bold, Italic, Trash2, RotateCcw,
+  Loader2, Check, AlertCircle, Bold, Italic, Underline, Strikethrough, Trash2, RotateCcw,
   Download, ChevronLeft, ChevronRight, Plus, AlertTriangle, Undo2,
   Replace, MoveDiagonal, Minus, ScanText, AlignLeft, AlignCenter, AlignRight,
   ImagePlus,
@@ -382,7 +382,18 @@ export default function PdfEditor({
       family: 'Helvetica',
       bold: false,
       italic: false,
+      underline: false,
+      strikethrough: false,
       color: { r: 0, g: 0, b: 0 },
+      ostyle: {
+        bold: false,
+        italic: false,
+        underline: false,
+        strikethrough: false,
+        fontSize: 12,
+        family: 'Helvetica',
+        color: { r: 0, g: 0, b: 0 },
+      },
       background: { r: 255, g: 255, b: 255 },
       align: 'left',
       highlight: null,
@@ -710,6 +721,9 @@ export default function PdfEditor({
                     onClick={() => {
                       setBlocks(prev => prev.filter(b => !b.added).map(b => ({
                         ...b, text: b.original, deleted: false, align: 'left', highlight: null,
+                        underline: false, strikethrough: false,
+                        bold: b.ostyle.bold, italic: b.ostyle.italic,
+                        fontSize: b.ostyle.fontSize, family: b.ostyle.family, color: b.ostyle.color,
                         x: b.ox, y: b.oy,
                       })));
                       setImages(prev => prev.filter(i => i.opIndex >= 0).map(i => ({ ...i, deleted: false, replacement: null, box: { ...i.originalBox } })));
@@ -770,6 +784,26 @@ export default function PdfEditor({
                     aria-pressed={selectedBlock.italic}
                   >
                     <Italic className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    onClick={() => { updateBlock(selectedBlock.id, { underline: !selectedBlock.underline }); keepCaret(selectedBlock.id); }}
+                    className={`w-7 h-7 rounded-md flex items-center justify-center transition-colors ${
+                      selectedBlock.underline ? 'bg-white text-foreground' : 'hover:bg-white/20'
+                    }`}
+                    aria-label={t('Underline')}
+                    aria-pressed={selectedBlock.underline}
+                  >
+                    <Underline className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    onClick={() => { updateBlock(selectedBlock.id, { strikethrough: !selectedBlock.strikethrough }); keepCaret(selectedBlock.id); }}
+                    className={`w-7 h-7 rounded-md flex items-center justify-center transition-colors ${
+                      selectedBlock.strikethrough ? 'bg-white text-foreground' : 'hover:bg-white/20'
+                    }`}
+                    aria-label={t('Strikethrough')}
+                    aria-pressed={selectedBlock.strikethrough}
+                  >
+                    <Strikethrough className="w-3.5 h-3.5" />
                   </button>
                   <input
                     type="number"
@@ -886,6 +920,10 @@ export default function PdfEditor({
                     <button
                       onClick={() => updateBlock(selectedBlock.id, {
                         text: selectedBlock.original, deleted: false, align: 'left', highlight: null,
+                        underline: false, strikethrough: false,
+                        bold: selectedBlock.ostyle.bold, italic: selectedBlock.ostyle.italic,
+                        fontSize: selectedBlock.ostyle.fontSize, family: selectedBlock.ostyle.family,
+                        color: selectedBlock.ostyle.color,
                         x: selectedBlock.ox, y: selectedBlock.oy,
                       })}
                       className="w-7 h-7 rounded-md flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -1089,6 +1127,10 @@ export default function PdfEditor({
                         fontFamily: fontOf(block),
                         fontWeight: block.bold ? 700 : 400,
                         fontStyle: block.italic ? 'italic' : 'normal',
+                        textDecoration: [
+                          block.underline ? 'underline' : '',
+                          block.strikethrough ? 'line-through' : '',
+                        ].filter(Boolean).join(' ') || 'none',
                         textAlign: block.align,
                         color: covering && !block.deleted ? css(block.color) : 'transparent',
                         backgroundColor: block.deleted

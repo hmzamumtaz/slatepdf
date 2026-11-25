@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown } from 'lucide-react';
+import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown, Search, X } from 'lucide-react';
 import { toolIcon } from '@/components/tool-icons';
 import { categories, getToolsByCategory, featuredTool, getToolBySlug, tools } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
@@ -71,6 +71,11 @@ const faqSchema = {
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [toolQuery, setToolQuery] = useState('');
+  const query = toolQuery.trim().toLowerCase();
+  const searchResults = query
+    ? tools.filter((t) => `${t.name} ${t.description} ${t.category}`.toLowerCase().includes(query))
+    : null;
 
   const popularTools = ['merge-pdf', 'compress-pdf', 'jpg-to-pdf', 'pdf-to-word', 'sign-pdf', 'edit-pdf']
     .map(getToolBySlug)
@@ -269,14 +274,49 @@ export default function Home() {
       </section>
 
       <section id="tools" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 scroll-mt-24">
-        {categories.filter(c => c !== featuredTool.category).map((category) => (
-          <div key={category} className="mb-14 last:mb-0">
-            <div className="flex items-center justify-between mb-5">
-              <h2 className="text-xl font-bold text-foreground">{category}</h2>
-            </div>
-            <ToolGrid tools={getToolsByCategory(category)} />
+        <div className="mb-10">
+          <div className="relative max-w-xl">
+            <Search className="w-5 h-5 text-muted-foreground absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <input
+              type="search"
+              value={toolQuery}
+              onChange={(e) => setToolQuery(e.target.value)}
+              placeholder="Search all tools — try “compress”, “sign” or “word”…"
+              aria-label="Search tools"
+              className="w-full pl-11 pr-10 py-3.5 rounded-2xl border border-border bg-white text-base text-foreground placeholder:text-muted-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-foreground/30 focus:border-foreground/40"
+            />
+            {toolQuery && (
+              <button
+                onClick={() => setToolQuery('')}
+                aria-label="Clear search"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
-        ))}
+          {searchResults && (
+            <p className="mt-3 text-sm text-muted-foreground" role="status">
+              {searchResults.length === 0
+                ? `No tools match “${toolQuery.trim()}”. Try a shorter word, like “pdf” or “image”.`
+                : `${searchResults.length} tool${searchResults.length === 1 ? '' : 's'} found`}
+            </p>
+          )}
+        </div>
+        {searchResults ? (
+          searchResults.length > 0 ? (
+            <ToolGrid tools={searchResults} />
+          ) : null
+        ) : (
+          categories.filter(c => c !== featuredTool.category).map((category) => (
+            <div key={category} className="mb-14 last:mb-0">
+              <div className="flex items-center justify-between mb-5">
+                <h2 className="text-xl font-bold text-foreground">{category}</h2>
+              </div>
+              <ToolGrid tools={getToolsByCategory(category)} />
+            </div>
+          ))
+        )}
       </section>
 
       {/* The Free PDF Toolkit — descriptive section */}
@@ -469,6 +509,9 @@ export default function Home() {
               { href: '/blog/how-to-sign-a-pdf-electronically', title: 'Sign a PDF for free', desc: 'Add an electronic signature without signing up or paying.' },
               { href: '/blog/how-to-password-protect-a-pdf-without-adobe', title: 'Password-protect a PDF', desc: 'Lock your document with strong encryption, no Adobe needed.' },
               { href: '/blog/how-to-convert-pdf-to-word-without-losing-formatting', title: 'PDF to Word without losing formatting', desc: 'Turn a PDF into an editable document that keeps its layout.' },
+              { href: '/blog/how-to-compress-a-pdf-for-whatsapp', title: 'Compress a PDF for WhatsApp', desc: 'Shrink a file to WhatsApp’s 16 MB limit — free, in your browser.' },
+              { href: '/blog/how-to-reduce-pdf-file-size-to-100kb', title: 'Reduce a PDF to 100KB', desc: 'Hit an exact file size for a form or portal, without guessing.' },
+              { href: '/blog/ircc-document-upload-file-size-limit', title: 'IRCC document upload file size limit', desc: 'Get a Canada immigration PDF under the 4 MB limit — passport copies under 2 MB.' },
             ].map((guide) => (
               <Link
                 key={guide.href}

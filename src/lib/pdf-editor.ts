@@ -62,7 +62,19 @@ export interface TextBlock {
   family: FontFamily;
   bold: boolean;
   italic: boolean;
+  underline: boolean;
+  strikethrough: boolean;
   color: Rgb;
+  /** The style the line had when the file was opened (see ostyle note below). */
+  ostyle: {
+    bold: boolean;
+    italic: boolean;
+    underline: boolean;
+    strikethrough: boolean;
+    fontSize: number;
+    family: FontFamily;
+    color: Rgb;
+  };
   /** The paper behind the run, so the editor can cover it while you type. */
   background: Rgb;
   /** How the line is placed inside its box when drawn. */
@@ -152,12 +164,20 @@ export function toWinAnsi(text: string): { text: string; dropped: string[] } {
 }
 
 export function isChanged(block: TextBlock): boolean {
+  const s = block.ostyle;
   return (
     block.added ||
     block.deleted ||
     block.text !== block.original ||
     block.align !== 'left' ||
     block.highlight !== null ||
+    block.bold !== s.bold ||
+    block.italic !== s.italic ||
+    block.underline !== s.underline ||
+    block.strikethrough !== s.strikethrough ||
+    block.fontSize !== s.fontSize ||
+    block.family !== s.family ||
+    block.color.r !== s.color.r || block.color.g !== s.color.g || block.color.b !== s.color.b ||
     Math.abs(block.x - block.ox) > 0.01 ||
     Math.abs(block.y - block.oy) > 0.01
   );
@@ -419,6 +439,7 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
           run.x + run.width, run.y + run.fontSize * 0.82,
         );
         const background = sampleBackground(sampler, left, top, right, bottom);
+        const ink = sampleInk(sampler, left, top, right, bottom, background);
         return {
           id: `p${index}-t${i}`,
           page: index,
@@ -433,7 +454,22 @@ export async function openEditableDocument(file: File): Promise<EditorSession> {
           family: run.family,
           bold: run.bold,
           italic: run.italic,
-          color: sampleInk(sampler, left, top, right, bottom, background),
+          underline: false,
+          strikethrough: false,
+          color: ink,
+          // The style the line had when the file was opened, so a style-only
+          // change (bold, size, colour, underline…) counts as a change and
+          // Discard/Revert can put it back. Without this, toggling Bold on
+          // an untouched line silently did nothing on save.
+          ostyle: {
+            bold: run.bold,
+            italic: run.italic,
+            underline: false,
+            strikethrough: false,
+            fontSize: run.fontSize,
+            family: run.family,
+            color: ink,
+          },
           background,
           align: 'left',
           highlight: null,
@@ -735,6 +771,17 @@ export async function buildEditedPdf(
         if (block.align === 'center') x += (reference - widths[i]) / 2;
         else if (block.align === 'right') x += reference - widths[i];
         page.drawText(line, { x, y: block.y - i * lineHeight, size, font: resolved.font, color });
+        // Underline sits just below the baseline; strikethrough through the
+        // middle of the lowercase x-height, matching the on-screen preview.
+        const thickness = Math.max(0.5, size / 14);
+        if (block.underline) {
+          const uy = block.y - i * lineHeight - size * 0.08;
+          page.drawLine({ start: { x, y: uy }, end: { x: x + widths[i], y: uy }, thickness, color });
+        }
+        if (block.strikethrough) {
+          const sy = block.y - i * lineHeight + size * 0.32;
+          page.drawLine({ start: { x, y: sy }, end: { x: x + widths[i], y: sy }, thickness, color });
+        }
       }
     }
 

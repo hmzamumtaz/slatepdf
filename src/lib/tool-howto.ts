@@ -285,11 +285,11 @@ const howTos: Record<string, Omit<ToolHowTo, 'benefits'> & { benefits?: string[]
   },
   'edit-pdf': {
     title: 'How to edit text in a PDF',
-    intro: 'Edit PDF lets you change the existing words, headings and numbers on a page: click a line and type, just like a word processor.',
+    intro: 'Edit PDF lets you change the existing words, headings and numbers on a page: click a line and type, just like a word processor. Restyle with bold, italic, underline, strikethrough, colour and highlight, or add new text and pictures.',
     steps: [
       'Choose your PDF',
       'Click any line of text on the page',
-      'Type your changes',
+      'Type your changes and restyle them from the formatting bar',
       'Click Save edited PDF to download it',
     ],
   },
