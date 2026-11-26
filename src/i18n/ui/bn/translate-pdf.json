@@ -57,7 +57,7 @@
   "Translation ({language})": "অনুবাদ ({language})",
   "Turkish": "তুর্কি",
   "Ukrainian": "ইউক্রেনীয়",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "অন্য টুলগুলোর মতো নয়, অনুবাদের সময় এক্সট্র্যাক্ট করা টেক্সট একটি ফ্রি পাবলিক অনুবাদ সার্ভিসে (Lingva / LibreTranslate / MyMemory) পাঠানো হয়। গোপনীয় ডকুমেন্ট অনুবাদ করবেন না।",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "অন্য টুলগুলোর মতো নয়, অনুবাদের সময় এক্সট্র্যাক্ট করা টেক্সট একটি ফ্রি পাবলিক অনুবাদ সার্ভিসে (Google Translate / LibreTranslate / MyMemory) পাঠানো হয়। গোপনীয় ডকুমেন্ট অনুবাদ করবেন না।",
   "Urdu": "উর্দু",
   "Vietnamese": "ভিয়েতনামি"
 }

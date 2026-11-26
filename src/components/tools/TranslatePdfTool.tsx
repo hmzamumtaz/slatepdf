@@ -147,7 +147,7 @@ export default function TranslatePdfTool() {
               <div className="p-3 bg-sky-50/60 border border-sky-200 rounded-xl flex items-start gap-2.5">
                 <ShieldAlert className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                 <p className="text-xs text-sky-800 leading-relaxed">
-                  {t('Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.')}
+                  {t('Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.')}
                 </p>
               </div>
 

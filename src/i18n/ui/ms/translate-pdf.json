@@ -57,7 +57,7 @@
   "Translation ({language})": "Terjemahan ({language})",
   "Turkish": "Turki",
   "Ukrainian": "Ukraine",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "Tidak seperti alat lain, terjemahan menghantar teks yang diekstrak kepada perkhidmatan terjemahan awam percuma (Lingva / LibreTranslate / MyMemory). Jangan terjemah dokumen sulit.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "Tidak seperti alat lain, terjemahan menghantar teks yang diekstrak kepada perkhidmatan terjemahan awam percuma (Google Translate / LibreTranslate / MyMemory). Jangan terjemah dokumen sulit.",
   "Urdu": "Urdu",
   "Vietnamese": "Vietnam"
 }

@@ -57,7 +57,7 @@
   "Translation ({language})": "Çeviri ({language})",
   "Turkish": "Türkçe",
   "Ukrainian": "Ukraynaca",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "Diğer araçlardan farklı olarak çeviri, çıkarılan metni ücretsiz ve herkese açık bir çeviri hizmetine (Lingva / LibreTranslate / MyMemory) gönderir. Gizli belgeleri çevirmeyin.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "Diğer araçlardan farklı olarak çeviri, çıkarılan metni ücretsiz ve herkese açık bir çeviri hizmetine (Google Translate / LibreTranslate / MyMemory) gönderir. Gizli belgeleri çevirmeyin.",
   "Urdu": "Urduca",
   "Vietnamese": "Vietnamca"
 }

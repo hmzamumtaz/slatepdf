@@ -57,7 +57,7 @@
   "Translation ({language})": "번역문({language})",
   "Turkish": "튀르키예어",
   "Ukrainian": "우크라이나어",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "다른 도구와 달리, 번역 기능은 추출한 텍스트를 무료 공개 번역 서비스(Lingva / LibreTranslate / MyMemory)로 전송합니다. 기밀 문서는 번역하지 마세요.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "다른 도구와 달리, 번역 기능은 추출한 텍스트를 무료 공개 번역 서비스(Google Translate / LibreTranslate / MyMemory)로 전송합니다. 기밀 문서는 번역하지 마세요.",
   "Urdu": "우르두어",
   "Vietnamese": "베트남어"
 }

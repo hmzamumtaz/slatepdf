@@ -2899,8 +2899,9 @@ export interface ExtractedImage {
 
 /**
  * Pull the embedded images out of a PDF (photos, logos, figures) as PNG
- * files. Images painted inline (tiny masks, etc.) are skipped; each distinct
- * XObject image is exported once per page.
+ * files. Each distinct XObject image is exported once: an image reused on
+ * several pages (a logo, a repeated photo) is exported once, not once per
+ * page.
  *
  * pdf.js 6 notes (verified against the published 6.2.108 build): the object
  * behind a paintImageXObject op is NOT resolved yet when getOperatorList()
@@ -2909,6 +2910,13 @@ export interface ExtractedImage {
  * data ({width, height, kind, data, bitmap?}), NOT the old PDFImage with
  * createImageData() (removed with the 6.x image model): kind 1 is packed
  * 1-bit grayscale, 2 is RGB, 3 is RGBA.
+ *
+ * One more 6.x quirk, verified live 2026-11-26: an image XObject shared by
+ * several pages resolves into the FIRST page's objs only. On later pages
+ * the callback never fires (the object is served from the worker's cache
+ * and never re-posted to that page's objs), so a bounded timeout + a
+ * skip-set is used: a timed-out name is a repeat of an image already
+ * exported, never a new image.
  */
 async function pdfJsImageToBlob(img: any): Promise<Blob> {
   const canvas = document.createElement('canvas');
@@ -2969,6 +2977,8 @@ export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]
   const buf = await readFileAsArrayBuffer(file);
   const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
   const out: ExtractedImage[] = [];
+  const seenFingerprints = new Set<string>();
+  const skippedNames = new Set<string>();
   for (let i = 1; i <= pdf.numPages; i++) {
     const page = await pdf.getPage(i);
     const ops = await page.getOperatorList();
@@ -2977,23 +2987,31 @@ export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]
       const fn = ops.fnArray[j];
       if (fn !== pdfjsLib.OPS.paintImageXObject) continue;
       const name = ops.argsArray[j][0] as string;
-      if (seen.has(name)) continue;
+      if (seen.has(name) || skippedNames.has(name)) continue;
       seen.add(name);
       try {
         // Callback form: resolves once pdf.js has decoded the image object.
         const img = await new Promise<any>((resolve, reject) => {
-          const timer = setTimeout(() => reject(new Error('Image took too long to decode.')), 15000);
+          const timer = setTimeout(() => reject(new Error('Image took too long to decode.')), 3000);
           page.objs.get(name, (resolved: any) => {
             clearTimeout(timer);
             resolve(resolved);
           });
         });
         if (!img || !img.width || !img.height) continue;
+        // Same pixels under another name (shared XObject) = same image.
+        const sample = img.data ? Array.from((img.data as Uint8Array).subarray(0, 64)).join(',') : 'bitmap';
+        const fingerprint = `${img.width}x${img.height}:kind${img.kind}:len${img.data?.length ?? 0}:${sample}`;
+        if (seenFingerprints.has(fingerprint)) continue;
+        seenFingerprints.add(fingerprint);
         const blob = await pdfJsImageToBlob(img);
         const perPage = out.filter(o => o.page === i).length + 1;
         out.push({ name: `page-${i}-image-${perPage}.png`, page: i, blob, width: img.width, height: img.height });
       } catch {
-        // One unreadable image must not fail the whole extraction.
+        // A timeout here means the image was already exported from an
+        // earlier page (shared XObject — see the note above), not a new
+        // image: remember the name so later pages skip it instantly.
+        skippedNames.add(name);
       }
     }
   }
@@ -3218,26 +3236,30 @@ export async function splitPdfBySize(file: File, targetBytes: number): Promise<B
   const total = src.getPageCount();
   const results: Blob[] = [];
   let current = await PDFDocument.create();
-  let currentCount = 0;
+  let currentIndices: number[] = [];
   const flush = async () => {
-    if (currentCount > 0) {
+    if (currentIndices.length > 0) {
       results.push(toBlob(await current.save()));
       current = await PDFDocument.create();
-      currentCount = 0;
+      currentIndices = [];
     }
   };
   for (let i = 0; i < total; i++) {
+    if (currentIndices.length > 0) {
+      // Trial save first: adding this page must not push the part over the
+      // limit. (The old code added the page, saved, then removePage()d it —
+      // but pdf-lib's removePage leaves the page's resources embedded, so
+      // the flushed files came out bigger than the limit, not smaller.)
+      const trial = await PDFDocument.create();
+      const pages = await trial.copyPages(src, [...currentIndices, i]);
+      pages.forEach((p) => trial.addPage(p));
+      if ((await trial.save()).length > targetBytes) {
+        await flush();
+      }
+    }
     const [copied] = await current.copyPages(src, [i]);
     current.addPage(copied);
-    currentCount++;
-    const bytes = await current.save();
-    if (bytes.length > targetBytes && currentCount > 1) {
-      current.removePage(currentCount - 1);
-      await flush();
-      const [again] = await current.copyPages(src, [i]);
-      current.addPage(again);
-      currentCount = 1;
-    }
+    currentIndices.push(i);
   }
   await flush();
   return results;

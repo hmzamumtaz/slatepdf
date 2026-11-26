@@ -57,7 +57,7 @@
   "Translation ({language})": "अनुवाद ({language})",
   "Turkish": "तुर्की",
   "Ukrainian": "यूक्रेनी",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "बाकी टूल के विपरीत, अनुवाद के लिए निकाला गया टेक्स्ट एक मुफ़्त सार्वजनिक अनुवाद सेवा (Lingva / LibreTranslate / MyMemory) को भेजा जाता है। गोपनीय दस्तावेज़ों का अनुवाद न करें।",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "बाकी टूल के विपरीत, अनुवाद के लिए निकाला गया टेक्स्ट एक मुफ़्त सार्वजनिक अनुवाद सेवा (Google Translate / LibreTranslate / MyMemory) को भेजा जाता है। गोपनीय दस्तावेज़ों का अनुवाद न करें।",
   "Urdu": "उर्दू",
   "Vietnamese": "वियतनामी"
 }

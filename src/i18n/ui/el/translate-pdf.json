@@ -57,7 +57,7 @@
   "Translation ({language})": "Μετάφραση ({language})",
   "Turkish": "Τουρκικά",
   "Ukrainian": "Ουκρανικά",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "Σε αντίθεση με τα άλλα εργαλεία, η μετάφραση στέλνει το κείμενο που εξάγεται σε μια δωρεάν δημόσια υπηρεσία μετάφρασης (Lingva / LibreTranslate / MyMemory). Μη μεταφράζετε εμπιστευτικά έγγραφα.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "Σε αντίθεση με τα άλλα εργαλεία, η μετάφραση στέλνει το κείμενο που εξάγεται σε μια δωρεάν δημόσια υπηρεσία μετάφρασης (Google Translate / LibreTranslate / MyMemory). Μη μεταφράζετε εμπιστευτικά έγγραφα.",
   "Urdu": "Ούρντου",
   "Vietnamese": "Βιετναμικά"
 }

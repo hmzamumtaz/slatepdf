@@ -57,7 +57,7 @@
   "Translation ({language})": "Käännös ({language})",
   "Turkish": "Turkki",
   "Ukrainian": "Ukraina",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "Toisin kuin muut työkalut, kääntäminen lähettää poimitun tekstin ilmaiseen julkiseen käännöspalveluun (Lingva / LibreTranslate / MyMemory). Älä käännä luottamuksellisia asiakirjoja.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "Toisin kuin muut työkalut, kääntäminen lähettää poimitun tekstin ilmaiseen julkiseen käännöspalveluun (Google Translate / LibreTranslate / MyMemory). Älä käännä luottamuksellisia asiakirjoja.",
   "Urdu": "Urdu",
   "Vietnamese": "Vietnam"
 }

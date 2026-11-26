@@ -57,7 +57,7 @@
   "Translation ({language})": "Bản dịch ({language})",
   "Turkish": "Tiếng Thổ Nhĩ Kỳ",
   "Ukrainian": "Tiếng Ukraina",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "Khác với các công cụ còn lại, tính năng dịch gửi văn bản đã trích xuất tới một dịch vụ dịch thuật công khai miễn phí (Lingva / LibreTranslate / MyMemory). Không dịch tài liệu mật.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "Khác với các công cụ còn lại, tính năng dịch gửi văn bản đã trích xuất tới một dịch vụ dịch thuật công khai miễn phí (Google Translate / LibreTranslate / MyMemory). Không dịch tài liệu mật.",
   "Urdu": "Tiếng Urdu",
   "Vietnamese": "Tiếng Việt"
 }

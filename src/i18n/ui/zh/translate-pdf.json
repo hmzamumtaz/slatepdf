@@ -57,7 +57,7 @@
   "Translation ({language})": "译文（{language}）",
   "Turkish": "土耳其语",
   "Ukrainian": "乌克兰语",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "与其他工具不同，翻译功能会把提取的文字发送到免费的公共翻译服务（Lingva / LibreTranslate / MyMemory）。请勿翻译机密文档。",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "与其他工具不同，翻译功能会把提取的文字发送到免费的公共翻译服务（Google Translate / LibreTranslate / MyMemory）。请勿翻译机密文档。",
   "Urdu": "乌尔都语",
   "Vietnamese": "越南语"
 }

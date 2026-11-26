@@ -57,7 +57,7 @@
   "Translation ({language})": "Traducere ({language})",
   "Turkish": "Turcă",
   "Ukrainian": "Ucraineană",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "Spre deosebire de celelalte instrumente, traducerea trimite textul extras unui serviciu public și gratuit de traducere (Lingva / LibreTranslate / MyMemory). Nu traduce documente confidențiale.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "Spre deosebire de celelalte instrumente, traducerea trimite textul extras unui serviciu public și gratuit de traducere (Google Translate / LibreTranslate / MyMemory). Nu traduce documente confidențiale.",
   "Urdu": "Urdu",
   "Vietnamese": "Vietnameză"
 }

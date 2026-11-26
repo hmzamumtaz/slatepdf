@@ -39,7 +39,7 @@ const requests: [string, string][] = [
   ['Text-recognition model (OCR tools only)', 'OCR PDF and Scan PDF download the recognition engine and a language model (a few MB) once from cdn.jsdelivr.net. This is a download; your file is not sent.'],
   ['Analytics', 'Google Analytics and Vercel record that a page was viewed. They never receive your file or its contents.'],
   ['Star ratings', 'If you rate a tool, your 1–5 score is sent to slatepdf.space/api/rating. Nothing else.'],
-  ['Translate PDF (the one exception)', 'The text extracted from your PDF is sent to a public translation service (Lingva, LibreTranslate or MyMemory). The tool warns you before it does.'],
+  ['Translate PDF (the one exception)', 'The text extracted from your PDF is sent to a public translation service (Google Translate, LibreTranslate or MyMemory). The tool warns you before it does.'],
 ];
 
 export default function VerifyNoUploadPage() {

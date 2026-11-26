@@ -57,7 +57,7 @@
   "Translation ({language})": "คำแปล ({language})",
   "Turkish": "ภาษาตุรกี",
   "Ukrainian": "ภาษายูเครน",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "ต่างจากเครื่องมืออื่น การแปลภาษาจะส่งข้อความที่ดึงออกมาไปยังบริการแปลภาษาสาธารณะฟรี (Lingva / LibreTranslate / MyMemory) อย่าแปลเอกสารที่เป็นความลับ",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "ต่างจากเครื่องมืออื่น การแปลภาษาจะส่งข้อความที่ดึงออกมาไปยังบริการแปลภาษาสาธารณะฟรี (Google Translate / LibreTranslate / MyMemory) อย่าแปลเอกสารที่เป็นความลับ",
   "Urdu": "ภาษาอูรดู",
   "Vietnamese": "ภาษาเวียดนาม"
 }

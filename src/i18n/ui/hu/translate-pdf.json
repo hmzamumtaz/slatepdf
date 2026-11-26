@@ -57,7 +57,7 @@
   "Translation ({language})": "Fordítás ({language})",
   "Turkish": "Török",
   "Ukrainian": "Ukrán",
-  "Unlike the other tools, translation sends the extracted text to a free public translation service (Lingva / LibreTranslate / MyMemory). Do not translate confidential documents.": "A többi eszközzel ellentétben a fordítás elküldi a kinyert szöveget egy ingyenes, nyilvános fordítószolgáltatásnak (Lingva / LibreTranslate / MyMemory). Bizalmas dokumentumokat ne fordíts vele.",
+  "Unlike the other tools, translation sends the extracted text to a free public translation service (Google Translate / LibreTranslate / MyMemory). Do not translate confidential documents.": "A többi eszközzel ellentétben a fordítás elküldi a kinyert szöveget egy ingyenes, nyilvános fordítószolgáltatásnak (Google Translate / LibreTranslate / MyMemory). Bizalmas dokumentumokat ne fordíts vele.",
   "Urdu": "Urdu",
   "Vietnamese": "Vietnámi"
 }
