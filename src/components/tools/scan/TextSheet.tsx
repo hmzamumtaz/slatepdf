@@ -11,20 +11,24 @@ type Status = 'running' | 'done' | 'error';
 
 /**
  * "Copy text": recognise the text of one scanned page on this device and let
- * the user edit, copy, download or share it.
+ * the user edit, copy, download or share it. When `onSave` is given, the
+ * edited text is also saved back to the page, so the exported PDF's text
+ * layer uses the corrected words instead of re-recognising.
  */
-export default function TextSheet({ image, onClose }: { image: Blob; onClose: () => void }) {
+export default function TextSheet({ image, initialText, onSave, onClose }: { image: Blob; initialText?: string; onSave?: (text: string) => void; onClose: () => void }) {
   const t = useT();
   const [lang, setLang] = useState('eng');
   const [attempt, setAttempt] = useState(0);
-  const [status, setStatus] = useState<Status>('running');
+  const [status, setStatus] = useState<Status>(initialText != null ? 'done' : 'running');
   const [progress, setProgress] = useState(0);
-  const [text, setText] = useState('');
+  const [text, setText] = useState(initialText ?? '');
   const [error, setError] = useState('');
   const [flash, setFlash] = useState('');
   const fieldRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
+    // Text already corrected once: show it instead of recognising again.
+    if (initialText != null) return;
     let cancelled = false;
     recognizeImage(image, lang, p => { if (!cancelled) setProgress(p); }).then(
       res => {
@@ -167,6 +171,15 @@ export default function TextSheet({ image, onClose }: { image: Blob; onClose: ()
       <div className="px-4 pt-2 pb-[calc(env(safe-area-inset-bottom)+1rem)] max-w-2xl w-full mx-auto">
         <p className="min-h-5 text-center text-xs text-white/80" aria-live="polite">{t(flash)}</p>
         <div className="mt-1 flex gap-2">
+          {onSave && (
+            <button
+              onClick={() => onSave(text)}
+              disabled={!hasText}
+              className="flex-1 min-h-12 rounded-xl bg-violet-600 text-sm font-semibold flex items-center justify-center gap-2 active:scale-[0.98] disabled:opacity-40"
+            >
+              <Check className="w-4 h-4" /> {t('Use in PDF')}
+            </button>
+          )}
           <button
             onClick={copy}
             disabled={!hasText}

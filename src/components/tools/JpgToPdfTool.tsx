@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import ToolPage from '@/components/ToolPage';
-import { jpgToPdf, type JpgToPdfOptions } from '@/lib/pdf-engine';
+import { jpgToPdf, decodeImageToPng, type JpgToPdfOptions } from '@/lib/pdf-engine';
 import { useT } from '@/i18n/I18nProvider';
 
 const PAGE_SIZES: NonNullable<JpgToPdfOptions['pageSize']>[] = [
@@ -48,7 +48,7 @@ export default function JpgToPdfTool() {
     <ToolPage
       slug="jpg-to-pdf"
       multiple
-      accept="image/jpeg,image/png,image/webp"
+      accept="image/jpeg,image/png,image/webp,image/bmp,image/gif"
       processLabel={t('Convert to PDF')}
       processAllTogether
       options={
@@ -96,7 +96,13 @@ export default function JpgToPdfTool() {
           </label>
         </div>
       }
-      onProcess={async (files) => jpgToPdf(files, { pageSize, margin, enlarge })}
+      onProcess={async (files) => {
+        // BMP and GIF cannot be embedded directly — decode them to PNG first.
+        const ready = await Promise.all(files.map(async f =>
+          (f.type === 'image/bmp' || f.type === 'image/gif') ? decodeImageToPng(f) : f,
+        ));
+        return jpgToPdf(ready, { pageSize, margin, enlarge });
+      }}
     />
   );
 }

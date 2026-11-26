@@ -29,7 +29,7 @@ function detectMobile(): boolean {
   const coarse = window.matchMedia?.('(pointer: coarse)').matches ?? false;
   return /Mobi|Android|iPhone|iPad|iPod|Silk/i.test(navigator.userAgent) || (coarse && navigator.maxTouchPoints > 0);
 }
-type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes' | 'marks'>>;
+type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes' | 'marks' | 'ocrText'>>;
 
 const HISTORY_LIMIT = 30;
 
@@ -133,7 +133,7 @@ function Scanner() {
         return;
       }
       // Sessions saved before markup existed have no `marks`.
-      const list = saved.pages.map(p => ({ ...p, marks: p.marks ?? [], id: nextId.current++, out: null, url: null }));
+      const list = saved.pages.map(p => ({ ...p, marks: p.marks ?? [], ocrText: p.ocrText ?? null, id: nextId.current++, out: null, url: null }));
       commit(list);
       setDocName(saved.docName || defaultDocName());
       setNotice(list.length === 1
@@ -147,7 +147,7 @@ function Scanner() {
   useEffect(() => {
     if (!restored.current) return;
     const timer = window.setTimeout(() => {
-      void saveSession({ docName, pages: pages.map(({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks }) => ({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks, out: null })) });
+      void saveSession({ docName, pages: pages.map(({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks, ocrText }) => ({ id, parts, layout, rotation, filter, brightness, contrast, strokes, marks, ocrText, out: null })) });
     }, 700);
     return () => window.clearTimeout(timer);
   }, [pages, docName]);

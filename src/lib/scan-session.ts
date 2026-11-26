@@ -47,6 +47,8 @@ export interface PageEdits {
   contrast: number;
   strokes: CleanupStroke[];
   marks: PageMark[];
+  /** Text the user corrected in the text editor; used for the PDF's text layer instead of re-recognising. */
+  ocrText: string | null;
 }
 
 export interface ScanPage extends PageEdits {
@@ -59,7 +61,7 @@ export interface ScanPage extends PageEdits {
   url: string | null;
 }
 
-export const DEFAULT_EDITS: PageEdits = { rotation: 0, filter: 'enhance', brightness: 0, contrast: 0, strokes: [], marks: [] };
+export const DEFAULT_EDITS: PageEdits = { rotation: 0, filter: 'enhance', brightness: 0, contrast: 0, strokes: [], marks: [], ocrText: null };
 
 /* ------------------------------------------------------------------ *
  *  Decoding sources (with a tiny cache — phone photos are large)

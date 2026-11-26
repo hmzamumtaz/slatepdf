@@ -28,6 +28,7 @@ export const tools: ToolInfo[] = [
   { slug: 'remove-pages', name: 'Remove Pages', description: 'Delete specific pages from a PDF', icon: 'Trash2', category: 'Organize PDF', color: '#ef4444' },
   { slug: 'extract-pages', name: 'Extract Pages', description: 'Extract specific pages as a new PDF', icon: 'FileOutput', category: 'Organize PDF', color: '#f59e0b' },
   { slug: 'organize-pdf', name: 'Organize PDF', description: 'Reorder pages and drop the ones you do not need', icon: 'ArrowUpDown', category: 'Organize PDF', color: '#10b981' },
+  { slug: 'alternate-mix', name: 'Alternate & Mix', description: 'Interleave the pages of two PDFs, one after the other', icon: 'Shuffle', category: 'Organize PDF', color: '#0d9488' },
 
   // Optimize
   { slug: 'compress-pdf', name: 'Compress PDF', description: 'Shrink a PDF to the file size you need', icon: 'Minimize2', category: 'Optimize PDF', color: '#06b6d4' },
@@ -47,6 +48,7 @@ export const tools: ToolInfo[] = [
   { slug: 'tiff-to-pdf', name: 'TIFF to PDF', description: 'Convert TIFF images to PDF documents', icon: 'Layers', category: 'Create PDF', color: '#d946ef' },
   { slug: 'svg-to-pdf', name: 'SVG to PDF', description: 'Convert SVG vector images to PDF', icon: 'FileCode', category: 'Create PDF', color: '#14b8a6' },
   { slug: 'epub-to-pdf', name: 'EPUB to PDF', description: 'Convert EPUB ebooks to PDF documents', icon: 'BookOpen', category: 'Create PDF', color: '#f97316' },
+  { slug: 'text-to-pdf', name: 'Text to PDF', description: 'Turn plain text into a PDF document', icon: 'Type', category: 'Create PDF', color: '#2563eb' },
 
   // Convert from PDF
   { slug: 'pdf-to-jpg', name: 'PDF to JPG', description: 'Convert PDF pages to JPG images', icon: 'FileImage', category: 'Export PDF', color: '#eab308' },
@@ -55,6 +57,9 @@ export const tools: ToolInfo[] = [
   { slug: 'pdf-to-excel', name: 'PDF to Excel', description: 'Export PDF text to a spreadsheet, one line per row (XLSX)', icon: 'Grid3x3', category: 'Export PDF', color: '#0d9488' },
   { slug: 'pdf-to-pdfa', name: 'PDF to PDF/A', description: 'Convert PDF to archival PDF/A format', icon: 'Archive', category: 'Export PDF', color: '#64748b' },
   { slug: 'pdf-to-markdown', name: 'PDF to Markdown', description: 'Convert PDF content to Markdown text', icon: 'FileCode', category: 'Export PDF', color: '#0f766e' },
+  { slug: 'pdf-to-text', name: 'PDF to Text', description: 'Extract all the text from a PDF into a plain .txt file', icon: 'AlignLeft', category: 'Export PDF', color: '#64748b' },
+  { slug: 'extract-images', name: 'Extract Images', description: 'Pull the photos and figures out of a PDF as PNG files', icon: 'Image', category: 'Export PDF', color: '#d946ef' },
+  { slug: 'pdf-to-html', name: 'PDF to HTML', description: 'Turn a PDF into a plain HTML web page', icon: 'FileCode', category: 'Export PDF', color: '#0f766e' },
 
   // Edit
   { slug: 'edit-pdf', name: 'Edit PDF', description: 'Change the text, headings and numbers in a PDF', icon: 'TextCursorInput', category: 'Modify PDF', color: '#7c3aed' },
@@ -64,6 +69,11 @@ export const tools: ToolInfo[] = [
   { slug: 'crop-pdf', name: 'Crop PDF', description: 'Crop and resize PDF pages', icon: 'Crop', category: 'Modify PDF', color: '#65a30d' },
   { slug: 'sign-pdf', name: 'Sign PDF', description: 'Place your drawn, typed or uploaded signature on a PDF', icon: 'PenTool', category: 'Modify PDF', color: '#1d4ed8' },
   { slug: 'redact-pdf', name: 'Redact PDF', description: 'Black out text, images or pages permanently', icon: 'Eraser', category: 'Modify PDF', color: '#991b1b' },
+  { slug: 'edit-metadata', name: 'Edit Metadata', description: 'Change a PDF title, author, subject and keywords', icon: 'Info', category: 'Modify PDF', color: '#0891b2' },
+  { slug: 'flatten-pdf', name: 'Flatten PDF', description: 'Make form fields permanent and strip annotations', icon: 'Layers', category: 'Modify PDF', color: '#7c3aed' },
+  { slug: 'fill-pdf-form', name: 'Fill PDF Form', description: 'Fill in a PDF form and save the completed copy', icon: 'ClipboardList', category: 'Modify PDF', color: '#16a34a' },
+  { slug: 'header-footer', name: 'Header & Footer', description: 'Stamp a header and footer on every page', icon: 'Heading', category: 'Modify PDF', color: '#ea580c' },
+  { slug: 'bates-numbering', name: 'Bates Numbering', description: 'Stamp sequential Bates numbers on every page', icon: 'Hash', category: 'Modify PDF', color: '#dc2626' },
 
   // Security
   { slug: 'unlock-pdf', name: 'Unlock PDF', description: 'Remove password protection from PDF', icon: 'Unlock', category: 'PDF Security', color: '#16a34a' },

@@ -408,6 +408,99 @@ const howTos: Record<string, Omit<ToolHowTo, 'benefits'> & { benefits?: string[]
       'Works in any modern browser on Windows, Mac, Linux, iPhone and Android',
     ],
   },
+  'pdf-to-text': {
+    title: 'How to extract text from a PDF',
+    intro: 'PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.',
+    steps: [
+      'Choose a PDF with real text (run OCR PDF first on scans)',
+      'Tick "Add a heading for each page" if you want Page N markers',
+      'Click Convert to Text',
+      'Download the .txt, or copy the text from the preview',
+    ],
+  },
+  'extract-images': {
+    title: 'How to extract images from a PDF',
+    intro: 'Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.',
+    steps: [
+      'Choose a PDF',
+      'Click Extract Images',
+      'Download the images — several download together as a ZIP',
+    ],
+  },
+  'pdf-to-html': {
+    title: 'How to convert PDF to HTML',
+    intro: 'PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.',
+    steps: [
+      'Choose a PDF with real text (run OCR PDF first on scans)',
+      'Click Convert to HTML',
+      'Download the .html file, or copy the markup from the preview',
+    ],
+  },
+  'edit-metadata': {
+    title: 'How to edit PDF metadata',
+    intro: 'Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.',
+    steps: [
+      'Choose a PDF to see its current title, author, subject and keywords',
+      'Change the fields you want — leave one empty to clear it',
+      'Click Save Metadata and download the updated PDF',
+    ],
+  },
+  'flatten-pdf': {
+    title: 'How to flatten a PDF',
+    intro: 'Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.',
+    steps: [
+      'Choose a PDF with form fields or annotations',
+      'Click Flatten PDF',
+      'Download the flattened copy',
+    ],
+  },
+  'fill-pdf-form': {
+    title: 'How to fill in a PDF form',
+    intro: 'Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.',
+    steps: [
+      'Choose a PDF with fillable form fields',
+      'Fill in each field in the panel',
+      'Click Save Filled PDF and download the completed copy',
+    ],
+  },
+  'text-to-pdf': {
+    title: 'How to turn text into a PDF',
+    intro: 'Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.',
+    steps: [
+      'Type or paste your text',
+      'Add a document title if you want one',
+      'Click Convert to PDF and download it',
+    ],
+  },
+  'header-footer': {
+    title: 'How to add a header and footer to a PDF',
+    intro: 'Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.',
+    steps: [
+      'Choose a PDF',
+      'Type the header and footer text — leave one empty to stamp only the other',
+      'Pick a position, a font size, and whether to add page numbers',
+      'Click Add Header & Footer and download the result',
+    ],
+  },
+  'bates-numbering': {
+    title: 'How to Bates-number a PDF',
+    intro: 'Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.',
+    steps: [
+      'Choose a PDF',
+      'Set the prefix, the starting number and how many digits to pad to',
+      'Pick where on the page the stamp goes',
+      'Click Apply Bates Numbers and download the stamped PDF',
+    ],
+  },
+  'alternate-mix': {
+    title: 'How to interleave two PDFs',
+    intro: 'Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.',
+    steps: [
+      'Add the first document, then the second',
+      'Click Mix PDFs',
+      'Download the interleaved file',
+    ],
+  },
 };
 
 export function getToolHowTo(slug: string): ToolHowTo {

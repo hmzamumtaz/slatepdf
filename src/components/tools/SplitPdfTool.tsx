@@ -3,13 +3,18 @@
 import { useState, useMemo, useCallback } from 'react';
 import ToolPage from '@/components/ToolPage';
 import PdfPreview from '@/components/PdfPreview';
-import { splitPdf, getPdfInfo } from '@/lib/pdf-engine';
+import { splitPdf, splitEveryNPages, splitPdfBySize, getPdfInfo } from '@/lib/pdf-engine';
 import { useT } from '@/i18n/I18nProvider';
 import { msg } from '@/i18n/format';
 
+type SplitMode = 'ranges' | 'every-n' | 'by-size';
+
 export default function SplitPdfTool() {
   const t = useT();
+  const [mode, setMode] = useState<SplitMode>('ranges');
   const [ranges, setRanges] = useState('');
+  const [everyN, setEveryN] = useState(1);
+  const [sizeMb, setSizeMb] = useState(5);
   const [pdfInfo, setPdfInfo] = useState<{ totalPages: number } | null>(null);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
 
@@ -61,22 +66,77 @@ export default function SplitPdfTool() {
       onFilesSelected={handleFilesSelected}
       options={
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
-            {t('Page ranges (e.g., 1-3, 5, 7-10)')}
-          </label>
-          <input
-            type="text"
-            value={ranges}
-            onChange={(e) => setRanges(e.target.value)}
-            placeholder="1-3, 5, 7-10"
-            className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-          />
-          {pdfInfo && (
-            <p className="mt-2 text-xs text-muted-foreground">
-              {t('Total pages: {total} | Pages in ranges: {count}', { total: pdfInfo.totalPages, count: previewPages.length })}
-            </p>
+          <div className="flex gap-2 mb-4">
+            {([
+              ['ranges', t('Page ranges')],
+              ['every-n', t('Every N pages')],
+              ['by-size', t('By file size')],
+            ] as [SplitMode, string][]).map(([m, label]) => (
+              <button
+                key={m}
+                onClick={() => setMode(m)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${mode === m ? 'bg-primary text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          {mode === 'ranges' && (
+            <>
+              <label className="block text-sm font-medium text-foreground mb-2">
+                {t('Page ranges (e.g., 1-3, 5, 7-10)')}
+              </label>
+              <input
+                type="text"
+                value={ranges}
+                onChange={(e) => setRanges(e.target.value)}
+                placeholder="1-3, 5, 7-10"
+                className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              />
+              {pdfInfo && (
+                <p className="mt-2 text-xs text-muted-foreground">
+                  {t('Total pages: {total} | Pages in ranges: {count}', { total: pdfInfo.totalPages, count: previewPages.length })}
+                </p>
+              )}
+            </>
           )}
-          {currentFile && previewPages.length > 0 && (
+          {mode === 'every-n' && (
+            <>
+              <label className="block text-sm font-medium text-foreground mb-2">
+                {t('Pages per file')}
+              </label>
+              <input
+                type="number"
+                min={1}
+                value={everyN}
+                onChange={(e) => setEveryN(Math.max(1, Number(e.target.value) || 1))}
+                className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              />
+              {pdfInfo && (
+                <p className="mt-2 text-xs text-muted-foreground">
+                  {t('Total pages: {total} | Files: {count}', { total: pdfInfo.totalPages, count: Math.ceil(pdfInfo.totalPages / everyN) })}
+                </p>
+              )}
+            </>
+          )}
+          {mode === 'by-size' && (
+            <>
+              <label className="block text-sm font-medium text-foreground mb-2">
+                {t('Maximum size per file (MB)')}
+              </label>
+              <input
+                type="number"
+                min={1}
+                value={sizeMb}
+                onChange={(e) => setSizeMb(Math.max(1, Number(e.target.value) || 1))}
+                className="w-full px-4 py-2.5 border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              />
+              <p className="mt-2 text-xs text-muted-foreground">
+                {t('Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.')}
+              </p>
+            </>
+          )}
+          {currentFile && previewPages.length > 0 && mode === 'ranges' && (
             <PdfPreview
               file={currentFile}
               pageNumbers={previewPages}
@@ -86,6 +146,8 @@ export default function SplitPdfTool() {
         </div>
       }
       onProcess={async (files) => {
+        if (mode === 'every-n') return splitEveryNPages(files[0], everyN);
+        if (mode === 'by-size') return splitPdfBySize(files[0], sizeMb * 1024 * 1024);
         const parsed = parseRanges(ranges);
         if (parsed.length === 0) throw new Error(msg('Please enter valid page ranges'));
         return splitPdf(files[0], parsed);

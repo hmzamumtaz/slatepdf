@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ImagePlus, Loader2, RefreshCw, X, Zap, ZapOff } from 'lucide-react';
+import { Copy, ExternalLink, ImagePlus, Loader2, QrCode, RefreshCw, X, Zap, ZapOff } from 'lucide-react';
 import {
   detectDocumentCorners, detectDocumentCornersInImage, drawDetectionOverlayPixels, frameSignature, grabVideoFrame,
   refineCorners, signatureDistance, splitBookQuad,
@@ -124,6 +124,10 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
   const [steady, setSteady] = useState(0);
   const [dark, setDark] = useState(false);
   const [focusAt, setFocusAt] = useState<{ x: number; y: number; n: number } | null>(null);
+  const [qr, setQr] = useState<string | null>(null);
+  const qrBusyRef = useRef(false);
+  const lastQrCheck = useRef(0);
+  const qrDetectorRef = useRef<{ detect: (src: HTMLVideoElement) => Promise<{ rawValue: string }[]> } | null>(null);
 
   useEffect(() => { autoRef.current = auto; }, [auto]);
   useEffect(() => { modeRef.current = mode; }, [mode]);
@@ -340,6 +344,25 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
         }
       }
 
+      // Once a second, in Document mode: look for a QR code (Chrome/Edge
+      // ship a built-in detector; other browsers simply skip this).
+      if (now - lastQrCheck.current > 1000 && !retake && modeRef.current === 'document' && !qrBusyRef.current) {
+        lastQrCheck.current = now;
+        const BD = (window as unknown as { BarcodeDetector?: new (o: { formats: string[] }) => { detect: (s: HTMLVideoElement) => Promise<{ rawValue: string }[]> } }).BarcodeDetector;
+        if (BD) {
+          qrBusyRef.current = true;
+          try {
+            qrDetectorRef.current ??= new BD({ formats: ['qr_code'] });
+            void qrDetectorRef.current.detect(video).then(codes => {
+              const value = codes[0]?.rawValue ?? '';
+              if (value) setQr(v => (v === value ? v : value));
+            }).catch(() => undefined).finally(() => { qrBusyRef.current = false; });
+          } catch {
+            qrBusyRef.current = false;
+          }
+        }
+      }
+
       let raw: Corner[] | null = null;
       try { raw = detectDocumentCorners(video); } catch { raw = null; }
       const prevRaw = rawRef.current;
@@ -429,6 +452,19 @@ export default function CameraScreen({ initialStream, pageCount, lastThumb, reta
 
       {/* Bottom controls */}
       <div className="absolute bottom-0 inset-x-0 pt-16 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] bg-gradient-to-t from-black/85 via-black/60 to-transparent">
+        {qr && (
+          <div className="max-w-md mx-auto mb-3 px-4">
+            <div className="flex items-center gap-2 bg-white text-gray-900 rounded-xl px-3 py-2.5 shadow-lg">
+              <QrCode className="w-5 h-5 shrink-0" />
+              <p className="flex-1 min-w-0 text-xs font-medium truncate">{qr}</p>
+              <button onClick={() => { void navigator.clipboard.writeText(qr); }} className="shrink-0 flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-gray-100 text-xs font-semibold"><Copy className="w-3.5 h-3.5" /> {t('Copy')}</button>
+              {/^https?:\/\//i.test(qr) && (
+                <button onClick={() => window.open(qr, '_blank', 'noopener')} className="shrink-0 flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-violet-600 text-white text-xs font-semibold"><ExternalLink className="w-3.5 h-3.5" /> {t('Open')}</button>
+              )}
+              <button onClick={() => setQr(null)} className="shrink-0 p-1.5 rounded-lg text-gray-500" aria-label={t('Dismiss')}><X className="w-4 h-4" /></button>
+            </div>
+          </div>
+        )}
         <p className="text-center text-sm font-medium mb-3 px-4 flex items-center justify-center gap-2">
           <span className={`inline-block w-2 h-2 rounded-full ${detect === 'steady' ? 'bg-green-400' : detect === 'found' ? 'bg-amber-400' : 'bg-white/40'}`} />
           {retake ? t('Retake page · {status}', { status }) : status}

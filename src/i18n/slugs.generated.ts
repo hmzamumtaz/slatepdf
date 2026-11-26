@@ -39,7 +39,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "proteger-pdf",
     "compare-pdf": "comparar-pdf",
     "ai-summarizer": "resumir-pdf",
-    "translate-pdf": "traducir-pdf"
+    "translate-pdf": "traducir-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "pt": {
     "pdf-workspace": "area-de-trabalho-pdf",
@@ -80,7 +90,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "proteger-pdf",
     "compare-pdf": "comparar-pdf",
     "ai-summarizer": "resumir-pdf",
-    "translate-pdf": "traduzir-pdf"
+    "translate-pdf": "traduzir-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "fr": {
     "pdf-workspace": "espace-de-travail-pdf",
@@ -121,7 +141,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "proteger-pdf",
     "compare-pdf": "comparer-pdf",
     "ai-summarizer": "resumer-pdf",
-    "translate-pdf": "traduire-pdf"
+    "translate-pdf": "traduire-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "de": {
     "pdf-workspace": "pdf-arbeitsbereich",
@@ -162,7 +192,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "pdf-schuetzen",
     "compare-pdf": "pdf-vergleichen",
     "ai-summarizer": "pdf-zusammenfassen",
-    "translate-pdf": "pdf-uebersetzen"
+    "translate-pdf": "pdf-uebersetzen",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "it": {
     "pdf-workspace": "area-di-lavoro-pdf",
@@ -203,7 +243,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "proteggere-pdf",
     "compare-pdf": "confrontare-pdf",
     "ai-summarizer": "riassumere-pdf",
-    "translate-pdf": "tradurre-pdf"
+    "translate-pdf": "tradurre-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "id": {
     "pdf-workspace": "ruang-kerja-pdf",
@@ -244,7 +294,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "kunci-pdf",
     "compare-pdf": "bandingkan-pdf",
     "ai-summarizer": "ringkas-pdf",
-    "translate-pdf": "terjemahkan-pdf"
+    "translate-pdf": "terjemahkan-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "ru": {
     "pdf-workspace": "pdf-workspace",
@@ -285,7 +345,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "ar": {
     "pdf-workspace": "pdf-workspace",
@@ -326,7 +396,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "zh": {
     "pdf-workspace": "pdf-workspace",
@@ -367,7 +447,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "ja": {
     "pdf-workspace": "pdf-workspace",
@@ -408,7 +498,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "ko": {
     "pdf-workspace": "pdf-workspace",
@@ -449,7 +549,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "hi": {
     "pdf-workspace": "pdf-workspace",
@@ -490,7 +600,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "tr": {
     "pdf-workspace": "pdf-calisma-alani",
@@ -531,7 +651,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "pdf-sifrele",
     "compare-pdf": "pdf-karsilastir",
     "ai-summarizer": "pdf-ozetle",
-    "translate-pdf": "pdf-ceviri"
+    "translate-pdf": "pdf-ceviri",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "nl": {
     "pdf-workspace": "pdf-werkruimte",
@@ -572,7 +702,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "pdf-beveiligen",
     "compare-pdf": "pdf-vergelijken",
     "ai-summarizer": "pdf-samenvatten",
-    "translate-pdf": "pdf-vertalen"
+    "translate-pdf": "pdf-vertalen",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "pl": {
     "pdf-workspace": "obszar-roboczy-pdf",
@@ -613,7 +753,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "zabezpiecz-pdf-haslem",
     "compare-pdf": "porownaj-pdf",
     "ai-summarizer": "streszczenie-pdf",
-    "translate-pdf": "przetlumacz-pdf"
+    "translate-pdf": "przetlumacz-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "vi": {
     "pdf-workspace": "khong-gian-lam-viec-pdf",
@@ -654,7 +804,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "dat-mat-khau-pdf",
     "compare-pdf": "so-sanh-pdf",
     "ai-summarizer": "tom-tat-pdf",
-    "translate-pdf": "dich-pdf"
+    "translate-pdf": "dich-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "th": {
     "pdf-workspace": "pdf-workspace",
@@ -695,7 +855,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "uk": {
     "pdf-workspace": "pdf-workspace",
@@ -736,7 +906,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "sv": {
     "pdf-workspace": "pdf-arbetsyta",
@@ -777,7 +957,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "skydda-pdf",
     "compare-pdf": "jamfor-pdf",
     "ai-summarizer": "sammanfatta-pdf",
-    "translate-pdf": "oversatt-pdf"
+    "translate-pdf": "oversatt-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "cs": {
     "pdf-workspace": "pracovni-prostor-pdf",
@@ -818,7 +1008,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "zaheslovat-pdf",
     "compare-pdf": "porovnat-pdf",
     "ai-summarizer": "shrnuti-pdf",
-    "translate-pdf": "prelozit-pdf"
+    "translate-pdf": "prelozit-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "ro": {
     "pdf-workspace": "spatiu-de-lucru-pdf",
@@ -859,7 +1059,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protejare-pdf",
     "compare-pdf": "comparare-pdf",
     "ai-summarizer": "rezumat-pdf",
-    "translate-pdf": "traducere-pdf"
+    "translate-pdf": "traducere-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "hu": {
     "pdf-workspace": "pdf-munkaterulet",
@@ -900,7 +1110,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "pdf-jelszavas-vedelem",
     "compare-pdf": "pdf-osszehasonlitasa",
     "ai-summarizer": "pdf-osszefoglalo",
-    "translate-pdf": "pdf-forditasa"
+    "translate-pdf": "pdf-forditasa",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "el": {
     "pdf-workspace": "pdf-workspace",
@@ -941,7 +1161,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "he": {
     "pdf-workspace": "pdf-workspace",
@@ -982,7 +1212,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "ms": {
     "pdf-workspace": "ruang-kerja-pdf",
@@ -1023,7 +1263,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "lindungi-pdf",
     "compare-pdf": "banding-pdf",
     "ai-summarizer": "ringkaskan-pdf",
-    "translate-pdf": "terjemah-pdf"
+    "translate-pdf": "terjemah-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "bn": {
     "pdf-workspace": "pdf-workspace",
@@ -1064,7 +1314,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "protect-pdf",
     "compare-pdf": "compare-pdf",
     "ai-summarizer": "ai-summarizer",
-    "translate-pdf": "translate-pdf"
+    "translate-pdf": "translate-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "da": {
     "pdf-workspace": "pdf-arbejdsomrade",
@@ -1105,7 +1365,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "beskyt-pdf",
     "compare-pdf": "sammenlign-pdf",
     "ai-summarizer": "opsummer-pdf",
-    "translate-pdf": "oversaet-pdf"
+    "translate-pdf": "oversaet-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "fi": {
     "pdf-workspace": "pdf-tyotila",
@@ -1146,7 +1416,17 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "suojaa-pdf",
     "compare-pdf": "vertaa-pdf",
     "ai-summarizer": "tiivista-pdf",
-    "translate-pdf": "kaanna-pdf"
+    "translate-pdf": "kaanna-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   },
   "nb": {
     "pdf-workspace": "pdf-arbeidsomrade",
@@ -1187,6 +1467,16 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "protect-pdf": "passordbeskytt-pdf",
     "compare-pdf": "sammenlign-pdf",
     "ai-summarizer": "oppsummer-pdf",
-    "translate-pdf": "oversett-pdf"
+    "translate-pdf": "oversett-pdf",
+    "pdf-to-text": "pdf-to-text",
+    "extract-images": "extract-images",
+    "pdf-to-html": "pdf-to-html",
+    "edit-metadata": "edit-metadata",
+    "flatten-pdf": "flatten-pdf",
+    "fill-pdf-form": "fill-pdf-form",
+    "text-to-pdf": "text-to-pdf",
+    "header-footer": "header-footer",
+    "bates-numbering": "bates-numbering",
+    "alternate-mix": "alternate-mix"
   }
 };

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { PDFDocument, degrees, rgb, StandardFonts, type PDFFont } from 'pdf-lib';
+import { PDFDocument, PDFDict, PDFName, PDFTextField, PDFCheckBox, PDFDropdown, PDFRadioGroup, PDFButton, degrees, rgb, StandardFonts, type PDFFont } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 import { SITE_NAME, SITE_SLUG } from './site';
 import { SERVICE_BUSY_MESSAGE } from './errors';
@@ -822,6 +822,13 @@ export interface ScanPdfOptions {
    * text can be selected and copied.
    */
   ocrLanguages?: string[];
+  /**
+   * Per page: text the user corrected in the text editor. When present for
+   * a page it replaces Tesseract's reading for that page, so the exported
+   * PDF searches and copies with the corrected words. Edited text has no
+   * word boxes, so it is laid out as plain lines across the page.
+   */
+  ocrTexts?: (string | null)[];
   onProgress?: (message: string) => void;
   /**
    * Per page: place it on an A4 sheet edge to edge, ignoring `pageSize` and
@@ -850,17 +857,22 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
   if (options.title) merged.setTitle(options.title);
 
   const languages = options.ocrLanguages?.filter(Boolean) ?? [];
+  const editedTexts = options.ocrTexts ?? [];
+  // Tesseract is only needed for pages without a corrected text.
+  const needWorker = languages.length > 0 && editedTexts.some(t => t == null);
   let worker: Awaited<ReturnType<typeof import('tesseract.js')['createWorker']>> | null = null;
   let font: PDFFont | null = null;
   let unicodeFont: PDFFont | null = null;
   if (languages.length > 0) {
     options.onProgress?.(msg('Loading text recognition…'));
-    const Tesseract = await import('tesseract.js');
-    worker = await Tesseract.createWorker(languages.join('+'));
-    // Silence Tesseract's internal diagnostics ("Line cannot be recognized!!").
-    await worker.setParameters({ debug_file: '/dev/null' } as Partial<Tesseract.WorkerParams>).catch(() => undefined);
     font = await merged.embedFont(StandardFonts.Helvetica);
     unicodeFont = await embedUnicodeFallback(merged);
+    if (needWorker) {
+      const Tesseract = await import('tesseract.js');
+      worker = await Tesseract.createWorker(languages.join('+'));
+      // Silence Tesseract's internal diagnostics ("Line cannot be recognized!!").
+      await worker.setParameters({ debug_file: '/dev/null' } as Partial<Tesseract.WorkerParams>).catch(() => undefined);
+    }
   }
 
   try {
@@ -903,7 +915,28 @@ export async function scannedPagesToPdf(images: Blob[], options: ScanPdfOptions 
       const page = merged.addPage([pw, ph]);
       page.drawImage(img, { x: x0, y: y0, width: w, height: h });
 
-      if (worker && font && unicodeFont) {
+      const edited = editedTexts[n];
+      if (font && unicodeFont && edited != null) {
+        // Text the user corrected in the editor: lay it over the page as
+        // invisible lines, so search and copy use the corrected words.
+        // There are no word boxes for edited text, so lines stack top-down.
+        const lines = edited.split('\n').map(l => l.trim()).filter(Boolean);
+        const lineH = Math.min(14, h / Math.max(1, lines.length));
+        lines.forEach((raw, li) => {
+          const clean = isRenderable(raw) ? raw : raw.replace(/[^\x20-\x7E\xA0-\xFF]/g, '');
+          if (!clean.trim()) return;
+          try {
+            page.drawText(clean, {
+              x: x0 + 4,
+              y: y0 + h - (li + 1) * lineH,
+              size: Math.max(4, lineH * 0.8),
+              font: needsUnicodeFallback(clean) ? unicodeFont : font,
+              color: rgb(0, 0, 0),
+              opacity: 0.01,
+            });
+          } catch { /* skip words neither font can encode */ }
+        });
+      } else if (worker && font && unicodeFont) {
         const { data } = await worker.recognize(image, {}, { blocks: true });
         // Image pixels → page points; PDF y runs bottom-up.
         const kx = w / img.width;
@@ -2846,4 +2879,346 @@ export async function epubToPdf(file: File, mode: 'visual' | 'text' = 'visual'):
 async function renderHtmlToPdfVisual(html: string): Promise<Uint8Array> {
   const blob = await htmlToPdfVisual(html);
   return new Uint8Array(await blob.arrayBuffer());
+}
+
+// ---------------------------------------------------------------------------
+// New tools, 2026-11-26 — competitor parity batch. Every function here runs
+// fully in the browser; nothing uploads. See the matching *Tool components.
+// ---------------------------------------------------------------------------
+
+export interface ExtractedImage {
+  name: string;
+  page: number;
+  blob: Blob;
+  width: number;
+  height: number;
+}
+
+/**
+ * Pull the embedded images out of a PDF (photos, logos, figures) as PNG
+ * files. Images painted inline (tiny masks, etc.) are skipped; each distinct
+ * XObject image is exported once per page.
+ */
+export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]> {
+  const pdfjsLib = await getPdfJs();
+  const buf = await readFileAsArrayBuffer(file);
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  const out: ExtractedImage[] = [];
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const ops = await page.getOperatorList();
+    const seen = new Set<string>();
+    for (let j = 0; j < ops.fnArray.length; j++) {
+      const fn = ops.fnArray[j];
+      if (fn !== pdfjsLib.OPS.paintImageXObject && fn !== pdfjsLib.OPS.paintJpegXObject) continue;
+      const name = ops.argsArray[j][0] as string;
+      if (seen.has(name)) continue;
+      seen.add(name);
+      try {
+        const img = await page.objs.get(name);
+        if (!img || typeof img.createImageData !== 'function') continue;
+        const imageData = img.createImageData(true);
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        canvas.getContext('2d')!.putImageData(imageData, 0, 0);
+        const blob = await new Promise<Blob>((resolve, reject) => {
+          canvas.toBlob(b => (b ? resolve(b) : reject(new Error(msg('That image could not be exported.')))), 'image/png');
+        });
+        const perPage = out.filter(o => o.page === i).length + 1;
+        out.push({ name: `page-${i}-image-${perPage}.png`, page: i, blob, width: img.width, height: img.height });
+      } catch {
+        // One unreadable image must not fail the whole extraction.
+      }
+    }
+  }
+  return out;
+}
+
+export interface PdfMetadata {
+  title?: string;
+  author?: string;
+  subject?: string;
+  keywords?: string;
+  creator?: string;
+  producer?: string;
+}
+
+/** Read a PDF's document information dictionary (title, author, ...). */
+export async function getPdfMetadata(file: File): Promise<PdfMetadata> {
+  const buf = await readFileAsArrayBuffer(file);
+  const doc = await loadPdf(buf);
+  return {
+    title: doc.getTitle(),
+    author: doc.getAuthor(),
+    subject: doc.getSubject(),
+    keywords: doc.getKeywords(),
+    creator: doc.getCreator(),
+    producer: doc.getProducer(),
+  };
+}
+
+/**
+ * Rewrite a PDF's title / author / subject / keywords. Fields left as
+ * undefined are kept as they are; pass an empty string to clear one.
+ */
+export async function editPdfMetadata(
+  file: File,
+  meta: { title?: string; author?: string; subject?: string; keywords?: string },
+): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const doc = await loadPdf(buf);
+  if (meta.title !== undefined) doc.setTitle(meta.title);
+  if (meta.author !== undefined) doc.setAuthor(meta.author);
+  if (meta.subject !== undefined) doc.setSubject(meta.subject);
+  if (meta.keywords !== undefined) {
+    doc.setKeywords(meta.keywords.split(',').map(s => s.trim()).filter(Boolean));
+  }
+  return toBlob(await doc.save());
+}
+
+/**
+ * Make a PDF's form fields permanent: field values are drawn into the page
+ * content and the fields themselves removed. Link annotations are kept;
+ * other annotations (comments, highlights) are removed, since they cannot
+ * be baked into the page without rasterising it.
+ */
+export async function flattenPdf(file: File): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const doc = await loadPdf(buf);
+  doc.getForm().flatten();
+  for (const page of doc.getPages()) {
+    const annots = page.node.Annots();
+    if (!annots) continue;
+    const kept = annots.asArray().filter(a => {
+      try {
+        const dict = doc.context.lookup(a);
+        return dict instanceof PDFDict && dict.get(PDFName.of('Subtype'))?.toString() === '/Link';
+      } catch {
+        return false;
+      }
+    });
+    if (kept.length === annots.size()) continue;
+    page.node.set(PDFName.of('Annots'), doc.context.obj(kept));
+  }
+  return toBlob(await doc.save());
+}
+
+export interface PdfFormFieldInfo {
+  name: string;
+  type: 'text' | 'checkbox' | 'dropdown' | 'radio' | 'button' | 'other';
+  value: string | boolean;
+  options?: string[];
+  required: boolean;
+}
+
+/** List the fillable (AcroForm) fields in a PDF, with current values. */
+export async function getPdfFormFields(file: File): Promise<PdfFormFieldInfo[]> {
+  const buf = await readFileAsArrayBuffer(file);
+  const doc = await loadPdf(buf);
+  return doc.getForm().getFields().map(f => {
+    const name = f.getName();
+    const required = f.isRequired();
+    if (f instanceof PDFTextField) return { name, type: 'text' as const, value: f.getText() ?? '', required };
+    if (f instanceof PDFCheckBox) return { name, type: 'checkbox' as const, value: f.isChecked(), required };
+    if (f instanceof PDFDropdown) return { name, type: 'dropdown' as const, value: f.getSelected()[0] ?? '', options: f.getOptions(), required };
+    if (f instanceof PDFRadioGroup) return { name, type: 'radio' as const, value: f.getSelected() ?? '', options: f.getOptions(), required };
+    if (f instanceof PDFButton) return { name, type: 'button' as const, value: '', required };
+    return { name, type: 'other' as const, value: '', required };
+  });
+}
+
+/** Fill a PDF's form fields with the given values and save a filled copy. */
+export async function fillPdfForm(file: File, values: Record<string, string | boolean>): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const doc = await loadPdf(buf);
+  const form = doc.getForm();
+  for (const [name, value] of Object.entries(values)) {
+    try {
+      const field = form.getField(name);
+      if (field instanceof PDFTextField && typeof value === 'string') field.setText(value);
+      else if (field instanceof PDFCheckBox && typeof value === 'boolean') {
+        if (value) field.check();
+        else field.uncheck();
+      } else if (field instanceof PDFDropdown && typeof value === 'string') field.select(value);
+      else if (field instanceof PDFRadioGroup && typeof value === 'string') field.select(value);
+    } catch {
+      // Unknown field name — skip it rather than failing the whole form.
+    }
+  }
+  form.updateFieldAppearances();
+  return toBlob(await doc.save());
+}
+
+/**
+ * Stamp a header and/or footer line on every page (with optional page
+ * numbers). Position is the side the reader sees, matching page numbers.
+ */
+export async function addHeaderFooterToFile(
+  file: File,
+  options: { header?: string; footer?: string; fontSize?: number; showPageNumbers?: boolean; position?: 'left' | 'center' | 'right' },
+): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const doc = await loadPdf(buf);
+  const font = await doc.embedFont(StandardFonts.Helvetica);
+  const size = options.fontSize ?? 10;
+  const total = doc.getPageCount();
+  const pos = options.position ?? 'center';
+  for (let i = 0; i < total; i++) {
+    const page = doc.getPage(i);
+    const frame = displayFrame(page);
+    const draw = (text: string, v: number) => {
+      const w = font.widthOfTextAtSize(text, size);
+      const u = pos === 'left' ? 40 : pos === 'right' ? frame.width - w - 40 : (frame.width - w) / 2;
+      const [x, y] = frame.toUser(u, v);
+      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0), rotate: degrees(frame.turn) });
+    };
+    if (options.header) draw(options.header, frame.height - 30);
+    let footer = options.footer ?? '';
+    if (options.showPageNumbers) footer = footer ? `${footer}  •  ${i + 1} of ${total}` : `${i + 1} of ${total}`;
+    if (footer) draw(footer, 24);
+  }
+  return toBlob(await doc.save());
+}
+
+/**
+ * Bates-stamp every page: a fixed prefix plus a zero-padded running number
+ * (e.g. EXHIBIT-00042). The number counts up from `start`, one per page.
+ */
+export async function addBatesNumbersToFile(
+  file: File,
+  options: { prefix?: string; start?: number; digits?: number; position?: 'bottom-center' | 'bottom-left' | 'bottom-right' | 'top-center' | 'top-left' | 'top-right' },
+): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const doc = await loadPdf(buf);
+  const font = await doc.embedFont(StandardFonts.Helvetica);
+  const total = doc.getPageCount();
+  const prefix = options.prefix ?? '';
+  const start = options.start ?? 1;
+  const digits = options.digits ?? 5;
+  const position = options.position ?? 'bottom-right';
+  const fontSize = 10;
+  for (let i = 0; i < total; i++) {
+    const page = doc.getPage(i);
+    const frame = displayFrame(page);
+    const text = `${prefix}${String(start + i).padStart(digits, '0')}`;
+    const textWidth = font.widthOfTextAtSize(text, fontSize);
+    let u: number;
+    if (position.includes('left')) u = 40;
+    else if (position.includes('right')) u = frame.width - textWidth - 40;
+    else u = (frame.width - textWidth) / 2;
+    const v = position.includes('top') ? frame.height - 30 : 24;
+    const [x, y] = frame.toUser(u, v);
+    page.drawText(text, { x, y, size: fontSize, font, color: rgb(0, 0, 0), rotate: degrees(frame.turn) });
+  }
+  return toBlob(await doc.save());
+}
+
+/**
+ * Interleave the pages of two PDFs: page 1 of A, page 1 of B, page 2 of A,
+ * page 2 of B, ... A longer document's remaining pages go at the end.
+ */
+export async function alternateMixPdfs(fileA: File, fileB: File): Promise<Blob> {
+  const docA = await loadPdf(await readFileAsArrayBuffer(fileA));
+  const docB = await loadPdf(await readFileAsArrayBuffer(fileB));
+  const out = await PDFDocument.create();
+  const a = await out.copyPages(docA, docA.getPageIndices());
+  const b = await out.copyPages(docB, docB.getPageIndices());
+  const max = Math.max(a.length, b.length);
+  for (let i = 0; i < max; i++) {
+    if (a[i]) out.addPage(a[i]);
+    if (b[i]) out.addPage(b[i]);
+  }
+  return toBlob(await out.save());
+}
+
+/** Split a PDF into one file per N pages (e.g. every 10 pages). */
+export async function splitEveryNPages(file: File, n: number): Promise<Blob[]> {
+  const info = await getPdfInfo(file);
+  const ranges: { start: number; end: number }[] = [];
+  for (let s = 1; s <= info.pageCount; s += n) {
+    ranges.push({ start: s, end: Math.min(s + n - 1, info.pageCount) });
+  }
+  return splitPdf(file, ranges);
+}
+
+/**
+ * Split a PDF into files each no bigger than targetBytes. A single page
+ * bigger than the target goes in a file on its own. Sizes are measured on
+ * the saved output, so the parts genuinely fit the limit.
+ */
+export async function splitPdfBySize(file: File, targetBytes: number): Promise<Blob[]> {
+  const buf = await readFileAsArrayBuffer(file);
+  const src = await loadPdf(buf);
+  const total = src.getPageCount();
+  const results: Blob[] = [];
+  let current = await PDFDocument.create();
+  let currentCount = 0;
+  const flush = async () => {
+    if (currentCount > 0) {
+      results.push(toBlob(await current.save()));
+      current = await PDFDocument.create();
+      currentCount = 0;
+    }
+  };
+  for (let i = 0; i < total; i++) {
+    const [copied] = await current.copyPages(src, [i]);
+    current.addPage(copied);
+    currentCount++;
+    const bytes = await current.save();
+    if (bytes.length > targetBytes && currentCount > 1) {
+      current.removePage(currentCount - 1);
+      await flush();
+      const [again] = await current.copyPages(src, [i]);
+      current.addPage(again);
+      currentCount = 1;
+    }
+  }
+  await flush();
+  return results;
+}
+
+/**
+ * Turn a PDF's text into a plain HTML document (one section per page).
+ * This moves the words, not the layout: images and exact formatting are
+ * not carried over.
+ */
+export async function pdfToHtml(file: File): Promise<string> {
+  const pages = await extractTextFromPdf(file);
+  const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const title = file.name.replace(/\.pdf$/i, '');
+  const body = pages
+    .map((text, i) => {
+      const lines = text.split('\n').filter(l => l.trim());
+      const paras = lines.map(l => `<p>${esc(l)}</p>`).join('\n');
+      return `<section>\n<h2>Page ${i + 1}</h2>\n${paras}\n</section>`;
+    })
+    .join('\n');
+  return `<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>${esc(title)}</title>\n</head>\n<body>\n<h1>${esc(title)}</h1>\n${body}\n</body>\n</html>\n`;
+}
+
+/**
+ * Decode a BMP or GIF image (which pdf-lib cannot embed directly) to PNG
+ * via canvas, so the image-to-PDF tools accept them like JPG/PNG/WebP.
+ */
+export async function decodeImageToPng(file: File): Promise<File> {
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+      const el = new Image();
+      el.onload = () => resolve(el);
+      el.onerror = () => reject(new Error(msg('That image could not be read.')));
+      el.src = url;
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    canvas.getContext('2d')!.drawImage(img, 0, 0);
+    const blob = await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob(b => (b ? resolve(b) : reject(new Error(msg('That image could not be read.')))), 'image/png');
+    });
+    return new File([blob], file.name.replace(/\.[^.]+$/, '.png'), { type: 'image/png' });
+  } finally {
+    URL.revokeObjectURL(url);
+  }
 }

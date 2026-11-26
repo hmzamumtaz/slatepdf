@@ -136,7 +136,7 @@ export default function ExportPanel({ pages, docName, onDocName, dark, onScanNew
         : null;
 
   // A finished file only stays valid while the pages and options it was made from are unchanged.
-  const key = JSON.stringify([pages.map(p => [p.id, p.url]), format, pageSize, quality, useOcr, lang, docName, useProtect, useProtect ? password : '']);
+  const key = JSON.stringify([pages.map(p => [p.id, p.url, p.ocrText ?? null]), format, pageSize, quality, useOcr, lang, docName, useProtect, useProtect ? password : '']);
   const current = result && resultKey === key ? result : null;
 
   const createJpg = async () => {
@@ -171,6 +171,7 @@ export default function ExportPanel({ pages, docName, onDocName, dark, onScanNew
       pageSize,
       title: docName.trim() || undefined,
       ocrLanguages: useOcr ? [lang] : undefined,
+      ocrTexts: useOcr ? pages.map(p => p.ocrText ?? null) : undefined,
       onProgress: m => setProgress(t(m)),
       realSizeA4: pages.map(p => p.layout === 'id-card'),
     });

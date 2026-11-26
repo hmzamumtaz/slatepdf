@@ -25,7 +25,7 @@ export const FILTERS: { value: ScanFilter; label: string }[] = [
   { value: 'whiteboard', label: msg('Whiteboard') },
 ];
 
-type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes' | 'marks'>>;
+type Edit = Partial<Pick<ScanPage, 'parts' | 'rotation' | 'filter' | 'brightness' | 'contrast' | 'strokes' | 'marks' | 'ocrText'>>;
 
 interface Props {
   pages: ScanPage[];
@@ -380,7 +380,7 @@ export default function ReviewScreen(props: Props) {
       {(editor === 'text' || editor === 'contact') && (
         ocrImage && ocrImage.id === page.id ? (
           editor === 'text'
-            ? <TextSheet image={ocrImage.blob} onClose={() => setEditor(null)} />
+            ? <TextSheet image={ocrImage.blob} initialText={page.ocrText ?? undefined} onSave={text => { onUpdate(page.id, { ocrText: text }); setEditor(null); }} onClose={() => setEditor(null)} />
             : <ContactSheet image={ocrImage.blob} onClose={() => setEditor(null)} />
         ) : (
           <div className="absolute inset-0 z-40 flex items-center justify-center bg-gray-950"><Loader2 className="w-8 h-8 animate-spin" /></div>
