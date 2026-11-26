@@ -1522,6 +1522,359 @@
           "Fonctionne dans tout navigateur récent sous Windows, Mac, Linux, iPhone et Android"
         ]
       }
+    },
+    "pdf-to-text": {
+      "slug": "pdf-to-text",
+      "name": "PDF to Text",
+      "description": "Extract all the text from a PDF into a plain .txt file",
+      "seoTitle": "PDF to Text — Extract Text from PDF Free",
+      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "What does the .txt file contain?",
+          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+        },
+        {
+          "q": "Does this work on scanned PDFs?",
+          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+        },
+        {
+          "q": "Is my PDF uploaded to extract the text?",
+          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+        }
+      ],
+      "howTo": {
+        "title": "How to extract text from a PDF",
+        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "steps": [
+          "Choose a PDF with real text (run OCR PDF first on scans)",
+          "Tick \"Add a heading for each page\" if you want Page N markers",
+          "Click Convert to Text",
+          "Download the .txt, or copy the text from the preview"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "extract-images": {
+      "slug": "extract-images",
+      "name": "Extract Images",
+      "description": "Pull the photos and figures out of a PDF as PNG files",
+      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
+      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "faqs": [
+        {
+          "q": "What quality are the extracted images?",
+          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+        },
+        {
+          "q": "What if my PDF is a scan?",
+          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+        },
+        {
+          "q": "Is my PDF uploaded to extract the images?",
+          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+        }
+      ],
+      "howTo": {
+        "title": "How to extract images from a PDF",
+        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "steps": [
+          "Choose a PDF",
+          "Click Extract Images",
+          "Download the images — several download together as a ZIP"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "pdf-to-html": {
+      "slug": "pdf-to-html",
+      "name": "PDF to HTML",
+      "description": "Turn a PDF into a plain HTML web page",
+      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
+      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "faqs": [
+        {
+          "q": "Will the HTML look like the PDF?",
+          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+        },
+        {
+          "q": "What can I do with the HTML file?",
+          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to HTML?",
+          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+        }
+      ],
+      "howTo": {
+        "title": "How to convert PDF to HTML",
+        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "steps": [
+          "Choose a PDF with real text (run OCR PDF first on scans)",
+          "Click Convert to HTML",
+          "Download the .html file, or copy the markup from the preview"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "edit-metadata": {
+      "slug": "edit-metadata",
+      "name": "Edit Metadata",
+      "description": "Change a PDF title, author, subject and keywords",
+      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
+      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "Where does the title show up?",
+          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+        },
+        {
+          "q": "Does editing metadata change the document itself?",
+          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+        },
+        {
+          "q": "Can I clear a field?",
+          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+        }
+      ],
+      "howTo": {
+        "title": "How to edit PDF metadata",
+        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "steps": [
+          "Choose a PDF to see its current title, author, subject and keywords",
+          "Change the fields you want — leave one empty to clear it",
+          "Click Save Metadata and download the updated PDF"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "flatten-pdf": {
+      "slug": "flatten-pdf",
+      "name": "Flatten PDF",
+      "description": "Make form fields permanent and strip annotations",
+      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
+      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "faqs": [
+        {
+          "q": "What happens to the form fields?",
+          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+        },
+        {
+          "q": "What happens to comments and highlights?",
+          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+        },
+        {
+          "q": "Does flattening change the text?",
+          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+        }
+      ],
+      "howTo": {
+        "title": "How to flatten a PDF",
+        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "steps": [
+          "Choose a PDF with form fields or annotations",
+          "Click Flatten PDF",
+          "Download the flattened copy"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "fill-pdf-form": {
+      "slug": "fill-pdf-form",
+      "name": "Fill PDF Form",
+      "description": "Fill in a PDF form and save the completed copy",
+      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
+      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "Which fields can I fill?",
+          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+        },
+        {
+          "q": "It says the PDF has no fillable fields. Why?",
+          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+        },
+        {
+          "q": "Can I lock the answers afterwards?",
+          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+        }
+      ],
+      "howTo": {
+        "title": "How to fill in a PDF form",
+        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "steps": [
+          "Choose a PDF with fillable form fields",
+          "Fill in each field in the panel",
+          "Click Save Filled PDF and download the completed copy"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "text-to-pdf": {
+      "slug": "text-to-pdf",
+      "name": "Text to PDF",
+      "description": "Turn plain text into a PDF document",
+      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
+      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "faqs": [
+        {
+          "q": "Can I format the text?",
+          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+        },
+        {
+          "q": "What about long text?",
+          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+        },
+        {
+          "q": "Is my text uploaded?",
+          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+        }
+      ],
+      "howTo": {
+        "title": "How to turn text into a PDF",
+        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "steps": [
+          "Type or paste your text",
+          "Add a document title if you want one",
+          "Click Convert to PDF and download it"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "header-footer": {
+      "slug": "header-footer",
+      "name": "Header & Footer",
+      "description": "Stamp a header and footer on every page",
+      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
+      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "Can I add only a header, or only a footer?",
+          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+        },
+        {
+          "q": "Where does the text go?",
+          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+        },
+        {
+          "q": "Can I add page numbers too?",
+          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+        }
+      ],
+      "howTo": {
+        "title": "How to add a header and footer to a PDF",
+        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "steps": [
+          "Choose a PDF",
+          "Type the header and footer text — leave one empty to stamp only the other",
+          "Pick a position, a font size, and whether to add page numbers",
+          "Click Add Header & Footer and download the result"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "bates-numbering": {
+      "slug": "bates-numbering",
+      "name": "Bates Numbering",
+      "description": "Stamp sequential Bates numbers on every page",
+      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
+      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "What is Bates numbering?",
+          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+        },
+        {
+          "q": "Can I choose the prefix and the starting number?",
+          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+        },
+        {
+          "q": "Does it change the document?",
+          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+        }
+      ],
+      "howTo": {
+        "title": "How to Bates-number a PDF",
+        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "steps": [
+          "Choose a PDF",
+          "Set the prefix, the starting number and how many digits to pad to",
+          "Pick where on the page the stamp goes",
+          "Click Apply Bates Numbers and download the stamped PDF"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "alternate-mix": {
+      "slug": "alternate-mix",
+      "name": "Alternate & Mix",
+      "description": "Interleave the pages of two PDFs, one after the other",
+      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
+      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "What if the two PDFs have different lengths?",
+          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+        },
+        {
+          "q": "Which document comes first?",
+          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+        },
+        {
+          "q": "What is this used for?",
+          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+        }
+      ],
+      "howTo": {
+        "title": "How to interleave two PDFs",
+        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "steps": [
+          "Add the first document, then the second",
+          "Click Mix PDFs",
+          "Download the interleaved file"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
     }
   }
 }
