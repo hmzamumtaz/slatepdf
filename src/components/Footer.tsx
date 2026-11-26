@@ -66,6 +66,45 @@ export default function Footer({ nav }: { nav: NavData }) {
           )}
         </div>
 
+        {/* Listed on — directory badges (reciprocal links) */}
+        <div className="border-t border-gray-800 pt-6 mb-8">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">
+            {nav.labels.listedOn}
+          </p>
+          <ul className="flex flex-wrap items-center gap-x-2 gap-y-3">
+            <li>
+              <a href="https://findalternative.to" target="_blank" rel="noopener" className="inline-flex items-center rounded-full border border-gray-700 px-3 py-1.5 text-xs text-gray-300 hover:text-white hover:border-gray-500 transition-colors">
+                findalternative.to
+              </a>
+            </li>
+            <li>
+              <a href="https://startupbase.io" target="_blank" rel="noopener" className="inline-flex items-center rounded-full border border-gray-700 px-3 py-1.5 text-xs text-gray-300 hover:text-white hover:border-gray-500 transition-colors">
+                StartupBase
+              </a>
+            </li>
+            <li>
+              <a href="https://fazier.com" target="_blank" rel="noopener" className="inline-flex items-center rounded-full border border-gray-700 px-3 py-1.5 text-xs text-gray-300 hover:text-white hover:border-gray-500 transition-colors">
+                Fazier
+              </a>
+            </li>
+            <li>
+              <a href="https://mozolist.com" target="_blank" rel="noopener" className="inline-flex items-center rounded-full border border-gray-700 px-3 py-1.5 text-xs text-gray-300 hover:text-white hover:border-gray-500 transition-colors">
+                Mozolist
+              </a>
+            </li>
+            <li>
+              <a href="https://awesome.tools" target="_blank" rel="noopener" className="inline-flex items-center rounded-full border border-gray-700 px-3 py-1.5 text-xs text-gray-300 hover:text-white hover:border-gray-500 transition-colors">
+                Awesome Tools
+              </a>
+            </li>
+            <li>
+              <a href="https://tools.cafe" target="_blank" rel="noopener noreferrer" aria-label="Listed on tools.cafe">
+                <img src="https://tools.cafe/b/light.svg" alt="Listed on tools.cafe" width={220} height={54} className="h-7 w-auto" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs">

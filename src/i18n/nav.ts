@@ -36,6 +36,7 @@ export interface NavData {
     footerTagline: string;
     footerPrivate: string;
     footerAllTools: string;
+    listedOn: string;
     noSignup: string;
     noWatermark: string;
     about: string;
@@ -73,6 +74,7 @@ export async function getNav(locale: AnyLocale): Promise<NavData> {
       footerTagline: s.footerTagline,
       footerPrivate: s.footerPrivate,
       footerAllTools: fill(s.footerAllTools, { count: tools.length }),
+      listedOn: s.listedOn,
       noSignup: s.footerNoSignup,
       noWatermark: s.footerNoWatermark,
       about: english ? 'About' : s.footerAbout,
