@@ -1,4 +1,5 @@
 {
+  "Already smaller than the minimum": "Ήδη μικρότερο από το ελάχιστο",
   "Back to all tools": "Πίσω σε όλα τα εργαλεία",
   "Compress Again": "Νέα συμπίεση",
   "Compress PDF": "Συμπίεση PDF",
@@ -26,5 +27,7 @@
   "Target size ({target}) is larger than the original ({original}).": "Το μέγεθος-στόχος ({target}) είναι μεγαλύτερο από το αρχικό ({original}).",
   "Target too small": "Πολύ μικρός στόχος",
   "This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).": "Πρόκειται για πολύ επιθετική συμπίεση. Το κείμενο μπορεί να θολώσει, οι εικόνες θα χάσουν σημαντική λεπτομέρεια και το PDF θα γίνει βασισμένο σε εικόνες (το κείμενο δεν θα είναι πλέον επιλέξιμο).",
-  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Αυτό το επίπεδο συμπίεσης θα μειώσει την ποιότητα των εικόνων και μπορεί να κάνει το κείμενο λίγο λιγότερο ευκρινές. Το PDF θα γίνει βασισμένο σε εικόνες (το κείμενο δεν θα είναι πλέον επιλέξιμο)."
+  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Αυτό το επίπεδο συμπίεσης θα μειώσει την ποιότητα των εικόνων και μπορεί να κάνει το κείμενο λίγο λιγότερο ευκρινές. Το PDF θα γίνει βασισμένο σε εικόνες (το κείμενο δεν θα είναι πλέον επιλέξιμο).",
+  "Try Optimize PDF instead": "Δοκιμάστε τη Βελτιστοποίηση PDF",
+  "Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.": "Το αρχείο σας είναι μόνο {original} — μικρότερο από το μικρότερο αρχείο που μπορεί να παράγει αυτός ο συμπιεστής (~50 KB), επειδή η συμπίεση αναδημιουργεί τις σελίδες ως εικόνες. Δεν υπάρχει τίποτα να συμπιεστεί εδώ."
 }

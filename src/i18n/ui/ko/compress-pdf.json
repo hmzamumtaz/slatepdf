@@ -1,4 +1,5 @@
 {
+  "Already smaller than the minimum": "이미 최소 크기보다 작습니다",
   "Back to all tools": "모든 도구로 돌아가기",
   "Compress Again": "다시 압축",
   "Compress PDF": "PDF 압축",
@@ -26,5 +27,7 @@
   "Target size ({target}) is larger than the original ({original}).": "목표 크기({target})가 원본({original})보다 큽니다.",
   "Target too small": "목표가 너무 작음",
   "This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).": "매우 강한 압축입니다. 텍스트가 흐려질 수 있고, 이미지의 세부 묘사가 크게 손실되며, PDF가 이미지 기반으로 바뀝니다(텍스트를 더 이상 선택할 수 없습니다).",
-  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "이 수준의 압축은 이미지 화질을 떨어뜨리고 텍스트가 약간 덜 선명해질 수 있습니다. PDF가 이미지 기반으로 바뀝니다(텍스트를 더 이상 선택할 수 없습니다)."
+  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "이 수준의 압축은 이미지 화질을 떨어뜨리고 텍스트가 약간 덜 선명해질 수 있습니다. PDF가 이미지 기반으로 바뀝니다(텍스트를 더 이상 선택할 수 없습니다).",
+  "Try Optimize PDF instead": "대신 PDF 최적화를 사용해 보세요",
+  "Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.": "파일이 {original}에 불과하며, 압축 시 페이지를 이미지로 다시 만들기 때문에 이 압축기가 만들 수 있는 가장 작은 파일(약 50 KB)보다 작습니다. 여기서 더 줄일 것은 없습니다."
 }

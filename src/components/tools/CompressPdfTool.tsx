@@ -33,6 +33,9 @@ export default function CompressPdfTool() {
   const noCompressionNeeded = targetValid && targetBytes >= originalSize;
   const isPossible = targetValid && targetBytes > 50000;
   const notPossible = targetValid && targetBytes <= 50000;
+  // The rasterizing compressor cannot output less than ~50 KB, so a file
+  // already that small has nothing to squeeze — the presets all dead-end.
+  const alreadyTiny = originalSize > 0 && originalSize <= 50000;
 
   const handleCompress = useCallback(async () => {
     if (files.length === 0 || !targetBytes) return;
@@ -140,9 +143,11 @@ export default function CompressPdfTool() {
 
               {/* Analysis */}
               {targetValid && (
-                <div className={`p-4 rounded-xl border animate-fade-in ${noCompressionNeeded ? 'bg-blue-50 border-blue-200' : notPossible ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200'}`}>
+                <div className={`p-4 rounded-xl border animate-fade-in ${alreadyTiny || noCompressionNeeded ? 'bg-blue-50 border-blue-200' : notPossible ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200'}`}>
                   <div className="flex items-start gap-3">
-                    {noCompressionNeeded ? (
+                    {alreadyTiny ? (
+                      <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                    ) : noCompressionNeeded ? (
                       <AlertCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                     ) : notPossible ? (
                       <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
@@ -150,7 +155,13 @@ export default function CompressPdfTool() {
                       <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                     )}
                     <div>
-                      {noCompressionNeeded ? (
+                      {alreadyTiny ? (
+                        <>
+                          <p className="text-sm font-semibold text-blue-800">{t('Already smaller than the minimum')}</p>
+                          <p className="text-sm text-blue-700">{t('Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.', { original: formatBytes(originalSize) })}</p>
+                          <Link href="/tools/optimize-pdf" className="text-sm font-medium text-blue-700 underline underline-offset-2">{t('Try Optimize PDF instead')}</Link>
+                        </>
+                      ) : noCompressionNeeded ? (
                         <>
                           <p className="text-sm font-semibold text-blue-800">{t('No compression needed')}</p>
                           <p className="text-sm text-blue-700">{t('Target size ({target}) is larger than the original ({original}).', { target: formatBytes(targetBytes), original: formatBytes(originalSize) })}</p>

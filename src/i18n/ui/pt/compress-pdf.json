@@ -1,4 +1,5 @@
 {
+  "Already smaller than the minimum": "Já menor que o mínimo",
   "Back to all tools": "Voltar para todas as ferramentas",
   "Compress Again": "Comprimir outro",
   "Compress PDF": "Comprimir PDF",
@@ -26,5 +27,7 @@
   "Target size ({target}) is larger than the original ({original}).": "O tamanho desejado ({target}) é maior que o original ({original}).",
   "Target too small": "Tamanho desejado pequeno demais",
   "This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).": "Esta é uma compressão muito agressiva. O texto pode ficar borrado, as imagens vão perder muitos detalhes e o PDF passará a ser baseado em imagens (o texto não poderá mais ser selecionado).",
-  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Este nível de compressão vai reduzir a qualidade das imagens e pode deixar o texto um pouco menos nítido. O PDF passará a ser baseado em imagens (o texto não poderá mais ser selecionado)."
+  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Este nível de compressão vai reduzir a qualidade das imagens e pode deixar o texto um pouco menos nítido. O PDF passará a ser baseado em imagens (o texto não poderá mais ser selecionado).",
+  "Try Optimize PDF instead": "Experimente Otimizar PDF",
+  "Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.": "Seu arquivo tem apenas {original} — menor que o menor arquivo que este compressor pode produzir (~50 KB), porque a compressão reconstrói as páginas como imagens. Não há nada para comprimir aqui."
 }

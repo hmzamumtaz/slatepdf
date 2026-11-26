@@ -1,4 +1,5 @@
 {
+  "Already smaller than the minimum": "Már kisebb a minimumnál",
   "Back to all tools": "Vissza az összes eszközhöz",
   "Compress Again": "Újabb tömörítés",
   "Compress PDF": "PDF tömörítés",
@@ -26,5 +27,7 @@
   "Target size ({target}) is larger than the original ({original}).": "A célméret ({target}) nagyobb az eredetinél ({original}).",
   "Target too small": "Túl kicsi a cél",
   "This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).": "Ez nagyon erős tömörítés. A szöveg elmosódhat, a képek sok részletet veszítenek, és a PDF képalapúvá válik (a szöveg többé nem lesz kijelölhető).",
-  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Ez a tömörítési szint rontja a képminőséget, és a szöveg is kissé életlenebb lehet. A PDF képalapúvá válik (a szöveg többé nem lesz kijelölhető)."
+  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Ez a tömörítési szint rontja a képminőséget, és a szöveg is kissé életlenebb lehet. A PDF képalapúvá válik (a szöveg többé nem lesz kijelölhető).",
+  "Try Optimize PDF instead": "Próbálja inkább a PDF optimalizálását",
+  "Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.": "A fájlja mindössze {original} — kisebb, mint a legkisebb fájl, amelyet ez a tömörítő elő tud állítani (~50 KB), mert a tömörítés a lapokat képként építi újra. Itt nincs mit tömöríteni."
 }

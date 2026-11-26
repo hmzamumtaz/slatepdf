@@ -1,4 +1,5 @@
 {
+  "Already smaller than the minimum": "เล็กกว่าขั้นต่ำอยู่แล้ว",
   "Back to all tools": "กลับไปที่เครื่องมือทั้งหมด",
   "Compress Again": "บีบอัดอีกครั้ง",
   "Compress PDF": "บีบอัด PDF",
@@ -26,5 +27,7 @@
   "Target size ({target}) is larger than the original ({original}).": "ขนาดเป้าหมาย ({target}) ใหญ่กว่าไฟล์ต้นฉบับ ({original})",
   "Target too small": "เป้าหมายเล็กเกินไป",
   "This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).": "นี่คือการบีบอัดที่รุนแรงมาก ข้อความอาจเบลอ รูปภาพจะเสียรายละเอียดไปมาก และ PDF จะกลายเป็นไฟล์แบบรูปภาพ (เลือกข้อความไม่ได้อีกต่อไป)",
-  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "การบีบอัดระดับนี้จะลดคุณภาพรูปภาพและอาจทำให้ข้อความคมชัดน้อยลงเล็กน้อย PDF จะกลายเป็นไฟล์แบบรูปภาพ (เลือกข้อความไม่ได้อีกต่อไป)"
+  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "การบีบอัดระดับนี้จะลดคุณภาพรูปภาพและอาจทำให้ข้อความคมชัดน้อยลงเล็กน้อย PDF จะกลายเป็นไฟล์แบบรูปภาพ (เลือกข้อความไม่ได้อีกต่อไป)",
+  "Try Optimize PDF instead": "ลองใช้ ปรับ PDF ให้เหมาะสม แทน",
+  "Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.": "ไฟล์ของคุณมีเพียง {original} ซึ่งเล็กกว่าไฟล์ที่เล็กที่สุดที่เครื่องมือบีบอัดนี้สร้างได้ (~50 KB) เนื่องจากการบีบอัดจะสร้างหน้าใหม่เป็นรูปภาพ จึงไม่มีอะไรให้บีบอัดแล้ว"
 }

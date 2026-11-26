@@ -1,4 +1,5 @@
 {
+  "Already smaller than the minimum": "Sudah lebih kecil daripada minimum",
   "Back to all tools": "Kembali ke semua alat",
   "Compress Again": "Mampatkan Lagi",
   "Compress PDF": "Mampatkan PDF",
@@ -26,5 +27,7 @@
   "Target size ({target}) is larger than the original ({original}).": "Saiz sasaran ({target}) lebih besar daripada asal ({original}).",
   "Target too small": "Sasaran terlalu kecil",
   "This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).": "Ini pemampatan yang sangat agresif. Teks mungkin menjadi kabur, imej akan kehilangan banyak butiran, dan PDF akan menjadi berasaskan imej (teks tidak lagi boleh dipilih).",
-  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Tahap pemampatan ini akan mengurangkan kualiti imej dan mungkin menjadikan teks kurang tajam sedikit. PDF akan menjadi berasaskan imej (teks tidak lagi boleh dipilih)."
+  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "Tahap pemampatan ini akan mengurangkan kualiti imej dan mungkin menjadikan teks kurang tajam sedikit. PDF akan menjadi berasaskan imej (teks tidak lagi boleh dipilih).",
+  "Try Optimize PDF instead": "Cuba Optimumkan PDF",
+  "Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.": "Fail anda hanya {original} — lebih kecil daripada fail terkecil yang boleh dihasilkan oleh pemampat ini (~50 KB), kerana pemampatan membina semula halaman sebagai imej. Tiada apa-apa lagi untuk dimampatkan di sini."
 }

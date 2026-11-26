@@ -293,7 +293,9 @@ async function pagesLookIntact(bytes: Uint8Array, expectedPages: number): Promis
   let pdf;
   try {
     const pdfjsLib = await getPdfJs();
-    pdf = await pdfjsLib.getDocument({ data: bytes, stopAtErrors: false }).promise;
+    // Copy: pdf.js transfers the buffer to its worker, which detaches the
+    // caller's copy — the same bytes are blobbed into the download afterwards.
+    pdf = await pdfjsLib.getDocument({ data: bytes.slice(), stopAtErrors: false }).promise;
     if (pdf.numPages !== expectedPages) return false;
     for (let i = 1; i <= pdf.numPages; i++) {
       const page = await pdf.getPage(i);
@@ -415,7 +417,10 @@ export async function compressToTargetSize(file: File, targetBytes: number, onPr
       'This PDF is password protected, so it can’t be read to compress. Remove the password with Unlock PDF first, then bring the result back here.',
     );
   }
-  const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  // Copy for pdf.js: it transfers the buffer to its worker, which would
+  // detach `buf` — and `buf` is blobbed untouched below when no compression
+  // is needed (target >= original size).
+  const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(buf.slice(0)) }).promise;
   const numPages = pdfDoc.numPages;
 
   try {
@@ -1914,23 +1919,21 @@ async function translateChunk(text: string, from: string, to: string): Promise<s
   try {
     const fromLang = from === 'autodetect' ? 'auto' : from;
 
-    // 1. Try Lingva Translate (free, unlimited, all languages)
-    const lingvaInstances = [
-      'https://lingva.ml',
-      'https://lingva.thedaviddelta.com',
-      'https://lingva.lunar.icu',
-    ];
-    for (const base of lingvaInstances) {
-      try {
-        const url = `${base}/api/v1/${fromLang}/${to}/${encodeURIComponent(text)}`;
-        const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
-        if (res.ok) {
-          const data = await res.json();
-          const translation = typeof data?.translation === 'string' ? data.translation : '';
-          if (translation && !isSuspiciousTranslation(text, translation, to)) return translation;
-        }
-      } catch { /* try next */ }
-    }
+    // 1. Google Translate's free web endpoint (no key). Verified 2026-11-26:
+    // the Lingva instances this used to try first are all dead (lingva.ml
+    // serves an HTML challenge page, thedaviddelta is paused, lunar.icu is
+    // unreachable), and libretranslate.com now demands an API key. Response
+    // shape: [[["translated","source",...],...],null,"en",...].
+    try {
+      const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${fromLang}&tl=${to}&dt=t&q=${encodeURIComponent(text)}`;
+      const gtxRes = await fetch(gtxUrl, { signal: AbortSignal.timeout(8000) });
+      if (gtxRes.ok) {
+        const data = await gtxRes.json();
+        const parts = Array.isArray(data?.[0]) ? data[0] : [];
+        const translation = parts.map((p: any) => (typeof p?.[0] === 'string' ? p[0] : '')).join('');
+        if (translation && !isSuspiciousTranslation(text, translation, to)) return translation;
+      }
+    } catch { /* try next */ }
 
     // 2. Try LibreTranslate public instances (free, open-source)
     const libreInstances = [
@@ -2898,7 +2901,69 @@ export interface ExtractedImage {
  * Pull the embedded images out of a PDF (photos, logos, figures) as PNG
  * files. Images painted inline (tiny masks, etc.) are skipped; each distinct
  * XObject image is exported once per page.
+ *
+ * pdf.js 6 notes (verified against the published 6.2.108 build): the object
+ * behind a paintImageXObject op is NOT resolved yet when getOperatorList()
+ * returns, so the sync `page.objs.get(name)` throws "isn't resolved yet" —
+ * the callback form must be used instead. The resolved object is raw pixel
+ * data ({width, height, kind, data, bitmap?}), NOT the old PDFImage with
+ * createImageData() (removed with the 6.x image model): kind 1 is packed
+ * 1-bit grayscale, 2 is RGB, 3 is RGBA.
  */
+async function pdfJsImageToBlob(img: any): Promise<Blob> {
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext('2d')!;
+  if (img.bitmap) {
+    ctx.drawImage(img.bitmap, 0, 0);
+  } else {
+    const w = img.width as number;
+    const h = img.height as number;
+    const rgba = new Uint8ClampedArray(w * h * 4);
+    const kind = img.kind as number;
+    const data = img.data as Uint8Array;
+    if (kind === 3) {
+      // RGBA_32BPP — data is already RGBA.
+      rgba.set(data.subarray(0, w * h * 4));
+    } else if (kind === 2) {
+      // RGB_24BPP — expand to RGBA.
+      for (let p = 0, q = 0; p < w * h; p++, q += 3) {
+        rgba[p * 4] = data[q];
+        rgba[p * 4 + 1] = data[q + 1];
+        rgba[p * 4 + 2] = data[q + 2];
+        rgba[p * 4 + 3] = 255;
+      }
+    } else if (kind === 1) {
+      // GRAYSCALE_1BPP — packed bits, 1 = white.
+      for (let p = 0; p < w * h; p++) {
+        const v = ((data[p >> 3] >> (7 - (p & 7))) & 1) ? 255 : 0;
+        rgba[p * 4] = v;
+        rgba[p * 4 + 1] = v;
+        rgba[p * 4 + 2] = v;
+        rgba[p * 4 + 3] = 255;
+      }
+    } else {
+      throw new Error('Unsupported image format.');
+    }
+    // Soft mask (transparency): 8-bit grayscale alpha, same pixel count.
+    const smask = img.smask as { width: number; height: number; kind: number; data: Uint8Array } | undefined;
+    if (smask?.data && smask.width === w && smask.height === h) {
+      if (smask.data.length === w * h) {
+        for (let p = 0; p < w * h; p++) rgba[p * 4 + 3] = smask.data[p];
+      } else if (smask.kind === 1) {
+        for (let p = 0; p < w * h; p++) {
+          rgba[p * 4 + 3] = ((smask.data[p >> 3] >> (7 - (p & 7))) & 1) ? 255 : 0;
+        }
+      }
+    }
+    ctx.putImageData(new ImageData(rgba, w, h), 0, 0);
+  }
+  const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'));
+  if (!blob) throw new Error(msg('That image could not be exported.'));
+  return blob;
+}
+
 export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]> {
   const pdfjsLib = await getPdfJs();
   const buf = await readFileAsArrayBuffer(file);
@@ -2915,16 +2980,16 @@ export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]
       if (seen.has(name)) continue;
       seen.add(name);
       try {
-        const img = await page.objs.get(name);
-        if (!img || typeof img.createImageData !== 'function') continue;
-        const imageData = img.createImageData(true);
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        canvas.getContext('2d')!.putImageData(imageData, 0, 0);
-        const blob = await new Promise<Blob>((resolve, reject) => {
-          canvas.toBlob(b => (b ? resolve(b) : reject(new Error(msg('That image could not be exported.')))), 'image/png');
+        // Callback form: resolves once pdf.js has decoded the image object.
+        const img = await new Promise<any>((resolve, reject) => {
+          const timer = setTimeout(() => reject(new Error('Image took too long to decode.')), 15000);
+          page.objs.get(name, (resolved: any) => {
+            clearTimeout(timer);
+            resolve(resolved);
+          });
         });
+        if (!img || !img.width || !img.height) continue;
+        const blob = await pdfJsImageToBlob(img);
         const perPage = out.filter(o => o.page === i).length + 1;
         out.push({ name: `page-${i}-image-${perPage}.png`, page: i, blob, width: img.width, height: img.height });
       } catch {

@@ -1,4 +1,5 @@
 {
+  "Already smaller than the minimum": "पहले से ही न्यूनतम से छोटा है",
   "Back to all tools": "सभी टूल पर वापस जाएँ",
   "Compress Again": "फिर से कंप्रेस करें",
   "Compress PDF": "PDF कंप्रेस करें",
@@ -26,5 +27,7 @@
   "Target size ({target}) is larger than the original ({original}).": "टारगेट साइज़ ({target}) मूल ({original}) से बड़ा है।",
   "Target too small": "टारगेट बहुत छोटा है",
   "This is a very aggressive compression. Text may become blurry, images will lose significant detail, and the PDF will become image-based (text will no longer be selectable).": "यह बहुत ज़्यादा कंप्रेशन है। टेक्स्ट धुंधला हो सकता है, इमेज की काफ़ी डिटेल खो जाएगी, और PDF इमेज-आधारित बन जाएगी (टेक्स्ट सिलेक्ट नहीं हो सकेगा)।",
-  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "इस स्तर का कंप्रेशन इमेज की क्वालिटी घटाएगा और टेक्स्ट थोड़ा कम साफ़ हो सकता है। PDF इमेज-आधारित बन जाएगी (टेक्स्ट सिलेक्ट नहीं हो सकेगा)।"
+  "This level of compression will reduce image quality and may make text slightly less sharp. The PDF will become image-based (text will no longer be selectable).": "इस स्तर का कंप्रेशन इमेज की क्वालिटी घटाएगा और टेक्स्ट थोड़ा कम साफ़ हो सकता है। PDF इमेज-आधारित बन जाएगी (टेक्स्ट सिलेक्ट नहीं हो सकेगा)।",
+  "Try Optimize PDF instead": "इसके बजाय PDF ऑप्टिमाइज़ करें",
+  "Your file is only {original} — smaller than the smallest file this compressor can produce (~50 KB), because compression rebuilds pages as images. There is nothing to squeeze here.": "आपकी फ़ाइल केवल {original} की है — इस कंप्रेसर द्वारा बनाई जा सकने वाली सबसे छोटी फ़ाइल (~50 KB) से भी छोटी है, क्योंकि कंप्रेशन पृष्ठों को छवियों के रूप में फिर से बनाता है। यहाँ संपीड़ित करने के लिए कुछ नहीं है।"
 }
