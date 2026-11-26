@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "اكتشاف تلقائي",
+  "Deskew PDF": "تصحيح انحراف PDF",
+  "Detected tilt: {angle}°": "الميل المكتشف: {angle}°",
+  "Detecting tilt…": "جارٍ اكتشاف الميل…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "تتم إعادة بناء الصفحات كصور، لذا لن يكون النص قابلًا للتحديد في المخرجات. اسحب المنزلق إذا كانت الصفحة لا تزال تبدو مائلة.",
+  "Straighten by": "تصحيح بمقدار"
+}

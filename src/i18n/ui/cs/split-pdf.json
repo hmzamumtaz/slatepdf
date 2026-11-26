@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Podle záložek",
   "By file size": "Podle velikosti souboru",
   "Every N pages": "Každých N stránek",
+  "Loading bookmarks…": "Načítám záložky…",
   "Maximum size per file (MB)": "Maximální velikost souboru (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Jeden soubor na záložku, od stránky dané záložky po další.",
   "Page ranges": "Rozsahy stránek",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Rozsahy stránek (např. 1-3, 5, 7-10)",
+  "Page {page}": "Stránka {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Stránky se seskupí tak, aby každý soubor zůstal pod touto velikostí. Jedna stránka větší než limit půjde do vlastního souboru.",
   "Pages per file": "Stránek na soubor",
   "Please enter valid page ranges": "Zadejte platné rozsahy stránek",
   "Preview of pages in ranges:": "Náhled stránek v rozsazích:",
   "Split PDF": "Rozdělit PDF",
+  "This PDF has no bookmarks.": "Tento PDF nemá žádné záložky.",
   "Total pages: {total} | Files: {count}": "Celkem stránek: {total} | Souborů: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Celkem stránek: {total} | Stránek v rozsazích: {count}"
 }

@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Automatisch erkennen",
+  "Deskew PDF": "PDF entzerren",
+  "Detected tilt: {angle}°": "Erkannte Neigung: {angle}°",
+  "Detecting tilt…": "Neigung wird erkannt…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Seiten werden als Bilder neu aufgebaut, sodass Text im Ergebnis nicht mehr auswählbar ist. Ziehen Sie den Schieberegler, wenn die Seite noch schief aussieht.",
+  "Straighten by": "Begradigen um"
+}

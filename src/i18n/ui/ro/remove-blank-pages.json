@@ -1,0 +1,10 @@
+{
+  "Balanced": "Echilibrat",
+  "Checking pages…": "Se verifică paginile…",
+  "Lenient": "Indulgent",
+  "No blank pages found.": "Nu au fost găsite pagini goale.",
+  "Remove Blank Pages": "Elimină paginile goale",
+  "Sensitivity": "Sensibilitate",
+  "Strict": "Strict",
+  "{count} blank pages will be removed: {pages}": "Vor fi eliminate {count} pagini goale: {pages}"
+}

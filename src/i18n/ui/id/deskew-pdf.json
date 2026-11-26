@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Deteksi otomatis",
+  "Deskew PDF": "Luruskan PDF",
+  "Detected tilt: {angle}°": "Kemiringan terdeteksi: {angle}°",
+  "Detecting tilt…": "Mendeteksi kemiringan…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Halaman dibangun ulang sebagai gambar, sehingga teks tidak lagi dapat dipilih dalam hasilnya. Seret penggeser jika halaman masih terlihat miring.",
+  "Straighten by": "Luruskan sebesar"
+}

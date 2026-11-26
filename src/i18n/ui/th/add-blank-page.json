@@ -1,0 +1,15 @@
+{
+  "Add Blank Page": "เพิ่มหน้าว่าง",
+  "Add the PDF to insert as a second file, after the first one.": "เพิ่ม PDF ที่จะแทรกเป็นไฟล์ที่สอง ต่อจากไฟล์แรก",
+  "Add the PDF to insert pages from.": "เพิ่ม PDF ที่จะแทรกหน้าจากไฟล์นั้น",
+  "After every page": "หลังทุกหน้า",
+  "After page": "หลังหน้า",
+  "After page number": "หลังหมายเลขหน้า",
+  "At the end": "ที่ท้ายสุด",
+  "At the start": "ที่จุดเริ่มต้น",
+  "Blank page": "หน้าว่าง",
+  "Pages from another PDF": "หน้าจาก PDF อื่น",
+  "Position": "ตำแหน่ง",
+  "Total pages: {total}": "จำนวนหน้าทั้งหมด: {total}",
+  "What to insert": "สิ่งที่จะแทรก"
+}

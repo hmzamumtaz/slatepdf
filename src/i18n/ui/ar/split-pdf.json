@@ -1,14 +1,19 @@
 {
+  "By bookmark": "حسب الإشارة المرجعية",
   "By file size": "حسب حجم الملف",
   "Every N pages": "كل N صفحات",
+  "Loading bookmarks…": "جارٍ تحميل الإشارات المرجعية…",
   "Maximum size per file (MB)": "الحد الأقصى لحجم الملف (م.ب)",
+  "One file per bookmark, from that bookmark's page to the next.": "ملف واحد لكل إشارة مرجعية، من صفحة تلك الإشارة إلى التالية.",
   "Page ranges": "نطاقات الصفحات",
   "Page ranges (e.g., 1-3, 5, 7-10)": "نطاقات الصفحات (مثال: 1-3، 5، 7-10)",
+  "Page {page}": "صفحة {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "تُجمَّع الصفحات بحيث يبقى كل ملف أصغر من هذا الحجم. الصفحة الواحدة الأكبر من الحد تذهب إلى ملف منفرد.",
   "Pages per file": "صفحات لكل ملف",
   "Please enter valid page ranges": "يُرجى إدخال نطاقات صفحات صالحة",
   "Preview of pages in ranges:": "معاينة الصفحات ضمن النطاقات:",
   "Split PDF": "تقسيم PDF",
+  "This PDF has no bookmarks.": "لا يحتوي هذا الملف على إشارات مرجعية.",
   "Total pages: {total} | Files: {count}": "إجمالي الصفحات: {total} | الملفات: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "إجمالي الصفحات: {total} | الصفحات ضمن النطاقات: {count}"
 }

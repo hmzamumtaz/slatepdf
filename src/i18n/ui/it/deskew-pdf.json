@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Rilevamento automatico",
+  "Deskew PDF": "Raddrizza PDF",
+  "Detected tilt: {angle}°": "Inclinazione rilevata: {angle}°",
+  "Detecting tilt…": "Rilevamento inclinazione…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Le pagine vengono ricostruite come immagini, quindi il testo non è più selezionabile nel risultato. Trascina il cursore se la pagina sembra ancora storta.",
+  "Straighten by": "Raddrizza di"
+}

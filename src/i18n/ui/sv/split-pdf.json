@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Efter bokmärke",
   "By file size": "Efter filstorlek",
   "Every N pages": "Var N:e sida",
+  "Loading bookmarks…": "Läser in bokmärken…",
   "Maximum size per file (MB)": "Maximal storlek per fil (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "En fil per bokmärke, från det bokmärkets sida till nästa.",
   "Page ranges": "Sidintervall",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Sidintervall (t.ex. 1-3, 5, 7-10)",
+  "Page {page}": "Sida {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Sidorna grupperas så att varje fil håller sig under den här storleken. En enskild sida som är större än gränsen hamnar i en egen fil.",
   "Pages per file": "Sidor per fil",
   "Please enter valid page ranges": "Ange giltiga sidintervall",
   "Preview of pages in ranges:": "Förhandsvisning av sidorna i intervallen:",
   "Split PDF": "Dela PDF",
+  "This PDF has no bookmarks.": "Den här PDF-filen har inga bokmärken.",
   "Total pages: {total} | Files: {count}": "Totalt antal sidor: {total} | Filer: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Totalt antal sidor: {total} | Sidor i intervallen: {count}"
 }

@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Yer imine göre",
   "By file size": "Dosya boyutuna göre",
   "Every N pages": "Her N sayfada bir",
+  "Loading bookmarks…": "Yer imleri yükleniyor…",
   "Maximum size per file (MB)": "Dosya başına azami boyut (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Yer imi başına bir dosya, o yer iminin sayfasından sonrakine kadar.",
   "Page ranges": "Sayfa aralıkları",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Sayfa aralıkları (ör. 1-3, 5, 7-10)",
+  "Page {page}": "Sayfa {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Sayfalar, her dosya bu boyutun altında kalacak şekilde gruplanır. Sınırı aşan tek bir sayfa kendi başına bir dosyaya gider.",
   "Pages per file": "Dosya başına sayfa",
   "Please enter valid page ranges": "Lütfen geçerli sayfa aralıkları girin",
   "Preview of pages in ranges:": "Aralıklardaki sayfaların önizlemesi:",
   "Split PDF": "PDF'yi Böl",
+  "This PDF has no bookmarks.": "Bu PDF’de yer imi yok.",
   "Total pages: {total} | Files: {count}": "Toplam sayfa: {total} | Dosya: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Toplam sayfa: {total} | Aralıklardaki sayfalar: {count}"
 }

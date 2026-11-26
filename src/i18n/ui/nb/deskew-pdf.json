@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Gjenkjenn automatisk",
+  "Deskew PDF": "Rett opp PDF",
+  "Detected tilt: {angle}°": "Registrert helning: {angle}°",
+  "Detecting tilt…": "Registrerer helning…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Sidene bygges om som bilder, så tekst kan ikke lenger markeres i resultatet. Dra i glidebryteren hvis siden fortsatt ser skjev ut.",
+  "Straighten by": "Rett opp med"
+}

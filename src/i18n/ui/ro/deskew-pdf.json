@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Detectare automată",
+  "Deskew PDF": "Îndreaptă PDF-ul",
+  "Detected tilt: {angle}°": "Înclinare detectată: {angle}°",
+  "Detecting tilt…": "Se detectează înclinarea…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Paginile sunt reconstruite ca imagini, deci textul nu mai poate fi selectat în rezultat. Trage glisorul dacă pagina încă pare înclinată.",
+  "Straighten by": "Îndreaptă cu"
+}

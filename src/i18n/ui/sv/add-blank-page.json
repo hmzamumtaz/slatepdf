@@ -1,0 +1,15 @@
+{
+  "Add Blank Page": "Lägg till blank sida",
+  "Add the PDF to insert as a second file, after the first one.": "Lägg till PDF-filen som ska infogas som andra fil, efter den första.",
+  "Add the PDF to insert pages from.": "Lägg till PDF-filen som sidorna ska hämtas från.",
+  "After every page": "Efter varje sida",
+  "After page": "Efter sidan",
+  "After page number": "Efter sidnummer",
+  "At the end": "I slutet",
+  "At the start": "I början",
+  "Blank page": "Blank sida",
+  "Pages from another PDF": "Sidor från en annan PDF",
+  "Position": "Position",
+  "Total pages: {total}": "Totalt antal sidor: {total}",
+  "What to insert": "Vad ska infogas"
+}

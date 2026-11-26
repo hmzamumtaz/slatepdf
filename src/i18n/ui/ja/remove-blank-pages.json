@@ -1,0 +1,10 @@
+{
+  "Balanced": "標準",
+  "Checking pages…": "ページを確認中…",
+  "Lenient": "寛容",
+  "No blank pages found.": "空白ページが見つかりませんでした。",
+  "Remove Blank Pages": "空白ページを削除",
+  "Sensitivity": "感度",
+  "Strict": "厳密",
+  "{count} blank pages will be removed: {pages}": "{count}ページの空白ページが削除されます: {pages}"
+}

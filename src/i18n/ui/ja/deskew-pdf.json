@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "自動検出",
+  "Deskew PDF": "PDFをまっすぐにする",
+  "Detected tilt: {angle}°": "検出された傾き: {angle}°",
+  "Detecting tilt…": "傾きを検出中…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "ページは画像として再構築されるため、出力でテキストを選択できなくなります。ページがまだ傾いて見える場合はスライダーをドラッグしてください。",
+  "Straighten by": "補正角度"
+}

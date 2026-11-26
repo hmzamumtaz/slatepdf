@@ -1,0 +1,10 @@
+{
+  "Balanced": "Afbalanceret",
+  "Checking pages…": "Tjekker sider…",
+  "Lenient": "Eftergivende",
+  "No blank pages found.": "Der blev ikke fundet blanke sider.",
+  "Remove Blank Pages": "Fjern blanke sider",
+  "Sensitivity": "Følsomhed",
+  "Strict": "Streng",
+  "{count} blank pages will be removed: {pages}": "{count} blanke sider fjernes: {pages}"
+}

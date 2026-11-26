@@ -1,0 +1,10 @@
+{
+  "Balanced": "균형",
+  "Checking pages…": "페이지를 확인하는 중…",
+  "Lenient": "관대",
+  "No blank pages found.": "빈 페이지를 찾을 수 없습니다.",
+  "Remove Blank Pages": "빈 페이지 제거",
+  "Sensitivity": "민감도",
+  "Strict": "엄격",
+  "{count} blank pages will be removed: {pages}": "빈 페이지 {count}개가 제거됩니다: {pages}"
+}

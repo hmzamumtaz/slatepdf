@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Tự động nhận diện",
+  "Deskew PDF": "Căn thẳng PDF",
+  "Detected tilt: {angle}°": "Độ nghiêng đã phát hiện: {angle}°",
+  "Detecting tilt…": "Đang phát hiện độ nghiêng…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Các trang được dựng lại thành ảnh, vì vậy văn bản không còn chọn được trong kết quả. Kéo thanh trượt nếu trang vẫn trông nghiêng.",
+  "Straighten by": "Căn thẳng"
+}

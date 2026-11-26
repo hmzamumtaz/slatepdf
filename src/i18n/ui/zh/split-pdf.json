@@ -1,14 +1,19 @@
 {
+  "By bookmark": "按书签",
   "By file size": "按文件大小",
   "Every N pages": "每 N 页",
+  "Loading bookmarks…": "正在加载书签…",
   "Maximum size per file (MB)": "每个文件的最大大小（MB）",
+  "One file per bookmark, from that bookmark's page to the next.": "每个书签一个文件，从该书签的页面到下一个书签之前。",
   "Page ranges": "页面范围",
   "Page ranges (e.g., 1-3, 5, 7-10)": "页码范围（例如：1-3, 5, 7-10）",
+  "Page {page}": "第{page}页",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "页面会分组，确保每个文件不超过此大小。单个超过上限的页面会单独成一个文件。",
   "Pages per file": "每个文件的页数",
   "Please enter valid page ranges": "请输入有效的页码范围",
   "Preview of pages in ranges:": "范围内页面预览：",
   "Split PDF": "拆分PDF",
+  "This PDF has no bookmarks.": "此 PDF 没有书签。",
   "Total pages: {total} | Files: {count}": "总页数：{total} | 文件数：{count}",
   "Total pages: {total} | Pages in ranges: {count}": "总页数：{total} | 范围内页数：{count}"
 }

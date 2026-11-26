@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Automatikus felismerés",
+  "Deskew PDF": "PDF kiegyenesítése",
+  "Detected tilt: {angle}°": "Észlelt dőlés: {angle}°",
+  "Detecting tilt…": "Dőlés észlelése…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Az oldalak képként épülnek újjá, így a szöveg a kimenetben már nem jelölhető ki. Húzza a csúszkát, ha az oldal továbbra is ferdének tűnik.",
+  "Straighten by": "Kiegyenesítés"
+}

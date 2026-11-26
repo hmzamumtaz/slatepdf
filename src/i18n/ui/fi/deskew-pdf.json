@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Tunnista automaattisesti",
+  "Deskew PDF": "Suorista PDF",
+  "Detected tilt: {angle}°": "Havaittu kallistus: {angle}°",
+  "Detecting tilt…": "Tunnistetaan kallistusta…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Sivut rakennetaan uudelleen kuvina, joten tekstiä ei voi enää valita tuloksessa. Vedä liukusäädintä, jos sivu näyttää yhä vinolta.",
+  "Straighten by": "Suorista"
+}

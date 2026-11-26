@@ -1,14 +1,19 @@
 {
+  "By bookmark": "După marcaj",
   "By file size": "După dimensiunea fișierului",
   "Every N pages": "La fiecare N pagini",
+  "Loading bookmarks…": "Se încarcă marcajele…",
   "Maximum size per file (MB)": "Dimensiunea maximă per fișier (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Un fișier per marcaj, de la pagina acelui marcaj până la următorul.",
   "Page ranges": "Intervale de pagini",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Intervale de pagini (de ex. 1-3, 5, 7-10)",
+  "Page {page}": "Pagina {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Paginile sunt grupate astfel încât fiecare fișier să rămână sub această dimensiune. O singură pagină mai mare decât limita ajunge într-un fișier separat.",
   "Pages per file": "Pagini per fișier",
   "Please enter valid page ranges": "Introdu intervale de pagini valide",
   "Preview of pages in ranges:": "Previzualizarea paginilor din intervale:",
   "Split PDF": "Împarte PDF",
+  "This PDF has no bookmarks.": "Acest PDF nu are marcaje.",
   "Total pages: {total} | Files: {count}": "Total pagini: {total} | Fișiere: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Total pagini: {total} | Pagini în intervale: {count}"
 }

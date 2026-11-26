@@ -1,0 +1,15 @@
+{
+  "Add Blank Page": "Lisää tyhjä sivu",
+  "Add the PDF to insert as a second file, after the first one.": "Lisää PDF lisättäväksi toisena tiedostona ensimmäisen jälkeen.",
+  "Add the PDF to insert pages from.": "Lisää PDF, josta sivut lisätään.",
+  "After every page": "Jokaisen sivun jälkeen",
+  "After page": "Sivun jälkeen",
+  "After page number": "Sivunumeron jälkeen",
+  "At the end": "Lopussa",
+  "At the start": "Alussa",
+  "Blank page": "Tyhjä sivu",
+  "Pages from another PDF": "Sivut toisesta PDF-tiedostosta",
+  "Position": "Sijainti",
+  "Total pages: {total}": "Sivuja yhteensä: {total}",
+  "What to insert": "Mitä lisätään"
+}

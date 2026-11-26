@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "זיהוי אוטומטי",
+  "Deskew PDF": "יישור PDF",
+  "Detected tilt: {angle}°": "הטיה שזוהתה: {angle}°",
+  "Detecting tilt…": "מזהה הטיה…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "העמודים נבנים מחדש כתמונות, ולכן לא ניתן עוד לבחור טקסט בפלט. גרור את המחוון אם העמוד עדיין נראה עקום.",
+  "Straighten by": "יישור ב־"
+}

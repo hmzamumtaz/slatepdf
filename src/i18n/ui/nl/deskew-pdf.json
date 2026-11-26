@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Automatisch herkennen",
+  "Deskew PDF": "PDF rechtzetten",
+  "Detected tilt: {angle}°": "Gedetecteerde scheefstand: {angle}°",
+  "Detecting tilt…": "Scheefstand detecteren…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Pagina’s worden opnieuw opgebouwd als afbeeldingen, dus tekst is niet meer selecteerbaar in het resultaat. Sleep de schuifregelaar als de pagina nog scheef oogt.",
+  "Straighten by": "Rechtzetten met"
+}

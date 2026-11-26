@@ -1,0 +1,10 @@
+{
+  "Balanced": "ভারসাম্যপূর্ণ",
+  "Checking pages…": "পৃষ্ঠাগুলি পরীক্ষা করা হচ্ছে…",
+  "Lenient": "নমনীয়",
+  "No blank pages found.": "কোনো ফাঁকা পৃষ্ঠা পাওয়া যায়নি।",
+  "Remove Blank Pages": "ফাঁকা পৃষ্ঠাগুলি সরান",
+  "Sensitivity": "সংবেদনশীলতা",
+  "Strict": "কঠোর",
+  "{count} blank pages will be removed: {pages}": "{count}টি ফাঁকা পৃষ্ঠা সরানো হবে: {pages}"
+}

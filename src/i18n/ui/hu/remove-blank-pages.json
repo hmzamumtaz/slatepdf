@@ -1,0 +1,10 @@
+{
+  "Balanced": "Kiegyensúlyozott",
+  "Checking pages…": "Oldalak ellenőrzése…",
+  "Lenient": "Enyhe",
+  "No blank pages found.": "Nem találhatók üres oldalak.",
+  "Remove Blank Pages": "Üres oldalak eltávolítása",
+  "Sensitivity": "Érzékenység",
+  "Strict": "Szigorú",
+  "{count} blank pages will be removed: {pages}": "{count} üres oldal eltávolításra kerül: {pages}"
+}

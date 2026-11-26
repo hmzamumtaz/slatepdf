@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "স্বয়ংক্রিয় শনাক্তকরণ",
+  "Deskew PDF": "PDF সোজা করুন",
+  "Detected tilt: {angle}°": "শনাক্ত করা কাত: {angle}°",
+  "Detecting tilt…": "কাত শনাক্ত করা হচ্ছে…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "পৃষ্ঠাগুলি ছবি হিসেবে পুনর্নির্মিত হয়, তাই আউটপুটে পাঠ্য আর নির্বাচনযোগ্য থাকে না। পৃষ্ঠাটি এখনও কাত মনে হলে স্লাইডারটি টানুন।",
+  "Straighten by": "সোজা করুন"
+}

@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Efter bogmærke",
   "By file size": "Efter filstørrelse",
   "Every N pages": "Hver N. side",
+  "Loading bookmarks…": "Indlæser bogmærker…",
   "Maximum size per file (MB)": "Maksimal størrelse pr. fil (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Én fil pr. bogmærke, fra det bogmærkes side til det næste.",
   "Page ranges": "Sideintervaller",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Sideintervaller (f.eks. 1-3, 5, 7-10)",
+  "Page {page}": "Side {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Siderne grupperes, så hver fil holder sig under denne størrelse. En enkelt side, der er større end grænsen, kommer i sin egen fil.",
   "Pages per file": "Sider pr. fil",
   "Please enter valid page ranges": "Angiv gyldige sideintervaller",
   "Preview of pages in ranges:": "Forhåndsvisning af sider i intervallerne:",
   "Split PDF": "Opdel PDF",
+  "This PDF has no bookmarks.": "Denne PDF har ingen bogmærker.",
   "Total pages: {total} | Files: {count}": "Sider i alt: {total} | Filer: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Sider i alt: {total} | Sider i intervallerne: {count}"
 }

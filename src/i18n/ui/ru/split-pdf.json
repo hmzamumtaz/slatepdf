@@ -1,14 +1,19 @@
 {
+  "By bookmark": "По закладкам",
   "By file size": "По размеру файла",
   "Every N pages": "Каждые N страниц",
+  "Loading bookmarks…": "Загрузка закладок…",
   "Maximum size per file (MB)": "Максимальный размер файла (МБ)",
+  "One file per bookmark, from that bookmark's page to the next.": "Один файл на закладку, со страницы этой закладки до следующей.",
   "Page ranges": "Диапазоны страниц",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Диапазоны страниц (например, 1-3, 5, 7-10)",
+  "Page {page}": "Страница {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Страницы группируются так, чтобы каждый файл был меньше этого размера. Одна страница больше лимита попадёт в отдельный файл.",
   "Pages per file": "Страниц в файле",
   "Please enter valid page ranges": "Введите корректные диапазоны страниц",
   "Preview of pages in ranges:": "Предпросмотр страниц в диапазонах:",
   "Split PDF": "Разделить PDF",
+  "This PDF has no bookmarks.": "В этом PDF нет закладок.",
   "Total pages: {total} | Files: {count}": "Всего страниц: {total} | Файлов: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Всего страниц: {total} | В диапазонах: {count}"
 }

@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Theo dấu trang",
   "By file size": "Theo kích thước tệp",
   "Every N pages": "Cứ mỗi N trang",
+  "Loading bookmarks…": "Đang tải dấu trang…",
   "Maximum size per file (MB)": "Kích thước tối đa mỗi tệp (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Một tệp cho mỗi dấu trang, từ trang của dấu trang đó đến trang tiếp theo.",
   "Page ranges": "Khoảng trang",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Khoảng trang (ví dụ: 1-3, 5, 7-10)",
+  "Page {page}": "Trang {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Các trang được nhóm lại để mỗi tệp đều dưới kích thước này. Một trang duy nhất lớn hơn giới hạn sẽ thành một tệp riêng.",
   "Pages per file": "Trang mỗi tệp",
   "Please enter valid page ranges": "Vui lòng nhập khoảng trang hợp lệ",
   "Preview of pages in ranges:": "Xem trước các trang trong khoảng:",
   "Split PDF": "Tách PDF",
+  "This PDF has no bookmarks.": "PDF này không có dấu trang.",
   "Total pages: {total} | Files: {count}": "Tổng số trang: {total} | Tệp: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Tổng số trang: {total} | Số trang trong khoảng: {count}"
 }

@@ -1,0 +1,15 @@
+{
+  "Add Blank Page": "添加空白页",
+  "Add the PDF to insert as a second file, after the first one.": "添加要作为第二个文件插入的 PDF，放在第一个文件之后。",
+  "Add the PDF to insert pages from.": "添加要插入页面的 PDF。",
+  "After every page": "在每页之后",
+  "After page": "在页面之后",
+  "After page number": "在页码之后",
+  "At the end": "在末尾",
+  "At the start": "在开头",
+  "Blank page": "空白页",
+  "Pages from another PDF": "来自另一个 PDF 的页面",
+  "Position": "位置",
+  "Total pages: {total}": "总页数：{total}",
+  "What to insert": "要插入的内容"
+}

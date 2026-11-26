@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "自动检测",
+  "Deskew PDF": "纠正 PDF 倾斜",
+  "Detected tilt: {angle}°": "检测到的倾斜：{angle}°",
+  "Detecting tilt…": "正在检测倾斜…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "页面将重建为图像，因此输出中的文本将无法再选择。如果页面看起来仍然倾斜，请拖动滑块。",
+  "Straighten by": "矫正角度"
+}

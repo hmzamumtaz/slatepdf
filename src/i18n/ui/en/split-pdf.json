@@ -1,14 +1,19 @@
 {
+  "By bookmark": "By bookmark",
   "By file size": "By file size",
   "Every N pages": "Every N pages",
+  "Loading bookmarks…": "Loading bookmarks…",
   "Maximum size per file (MB)": "Maximum size per file (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "One file per bookmark, from that bookmark's page to the next.",
   "Page ranges": "Page ranges",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Page ranges (e.g., 1-3, 5, 7-10)",
+  "Page {page}": "Page {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.",
   "Pages per file": "Pages per file",
   "Please enter valid page ranges": "Please enter valid page ranges",
   "Preview of pages in ranges:": "Preview of pages in ranges:",
   "Split PDF": "Split PDF",
+  "This PDF has no bookmarks.": "This PDF has no bookmarks.",
   "Total pages: {total} | Files: {count}": "Total pages: {total} | Files: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Total pages: {total} | Pages in ranges: {count}"
 }

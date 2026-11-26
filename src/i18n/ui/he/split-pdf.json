@@ -1,14 +1,19 @@
 {
+  "By bookmark": "לפי סימנייה",
   "By file size": "לפי גודל הקובץ",
   "Every N pages": "כל N עמודים",
+  "Loading bookmarks…": "טוען סימניות…",
   "Maximum size per file (MB)": "גודל מרבי לקובץ (מ״ב)",
+  "One file per bookmark, from that bookmark's page to the next.": "קובץ אחד לכל סימנייה, מהעמוד של אותה סימנייה ועד הבאה.",
   "Page ranges": "טווחי עמודים",
   "Page ranges (e.g., 1-3, 5, 7-10)": "טווחי עמודים (למשל 1-3, 5, 7-10)",
+  "Page {page}": "עמוד {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "העמודים מקובצים כך שכל קובץ יישאר מתחת לגודל זה. עמוד בודד הגדול מהמגבלה ייכנס לקובץ משלו.",
   "Pages per file": "עמודים לקובץ",
   "Please enter valid page ranges": "יש להזין טווחי עמודים תקינים",
   "Preview of pages in ranges:": "תצוגה מקדימה של העמודים בטווחים:",
   "Split PDF": "פיצול PDF",
+  "This PDF has no bookmarks.": "ב־PDF זה אין סימניות.",
   "Total pages: {total} | Files: {count}": "סה״כ עמודים: {total} | קבצים: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "סך הכול עמודים: {total} | עמודים בטווחים: {count}"
 }

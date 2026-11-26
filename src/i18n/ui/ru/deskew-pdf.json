@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Автоопределение",
+  "Deskew PDF": "Выровнять PDF",
+  "Detected tilt: {angle}°": "Обнаруженный наклон: {angle}°",
+  "Detecting tilt…": "Определение наклона…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Страницы перестраиваются как изображения, поэтому текст в результате больше нельзя выделить. Перетащите ползунок, если страница всё ещё выглядит перекошенной.",
+  "Straighten by": "Выпрямить на"
+}

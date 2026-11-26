@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Détection automatique",
+  "Deskew PDF": "Redresser le PDF",
+  "Detected tilt: {angle}°": "Inclinaison détectée : {angle}°",
+  "Detecting tilt…": "Détection de l’inclinaison…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Les pages sont reconstruites en images, donc le texte n’est plus sélectionnable dans le résultat. Faites glisser le curseur si la page semble encore penchée.",
+  "Straighten by": "Redresser de"
+}

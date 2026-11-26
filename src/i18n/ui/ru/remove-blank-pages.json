@@ -1,0 +1,10 @@
+{
+  "Balanced": "Сбалансированно",
+  "Checking pages…": "Проверка страниц…",
+  "Lenient": "Мягко",
+  "No blank pages found.": "Пустых страниц не найдено.",
+  "Remove Blank Pages": "Удалить пустые страницы",
+  "Sensitivity": "Чувствительность",
+  "Strict": "Строго",
+  "{count} blank pages will be removed: {pages}": "Будет удалено пустых страниц: {count}: {pages}"
+}

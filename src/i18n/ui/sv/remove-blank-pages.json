@@ -1,0 +1,10 @@
+{
+  "Balanced": "Balanserad",
+  "Checking pages…": "Kontrollerar sidor…",
+  "Lenient": "Tillåtande",
+  "No blank pages found.": "Inga blanka sidor hittades.",
+  "Remove Blank Pages": "Ta bort blanka sidor",
+  "Sensitivity": "Känslighet",
+  "Strict": "Strikt",
+  "{count} blank pages will be removed: {pages}": "{count} blanka sidor tas bort: {pages}"
+}

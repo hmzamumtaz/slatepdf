@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Auto-detect",
+  "Deskew PDF": "Deskew PDF",
+  "Detected tilt: {angle}°": "Detected tilt: {angle}°",
+  "Detecting tilt…": "Detecting tilt…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.",
+  "Straighten by": "Straighten by"
+}

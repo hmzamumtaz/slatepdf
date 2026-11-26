@@ -1,0 +1,15 @@
+{
+  "Add Blank Page": "空白ページを追加",
+  "Add the PDF to insert as a second file, after the first one.": "最初のファイルの後に2番目のファイルとして挿入するPDFを追加してください。",
+  "Add the PDF to insert pages from.": "ページを挿入する元のPDFを追加してください。",
+  "After every page": "各ページの後",
+  "After page": "ページの後",
+  "After page number": "ページ番号の後",
+  "At the end": "最後に",
+  "At the start": "最初に",
+  "Blank page": "空白ページ",
+  "Pages from another PDF": "別のPDFからのページ",
+  "Position": "位置",
+  "Total pages: {total}": "総ページ数: {total}",
+  "What to insert": "挿入するもの"
+}

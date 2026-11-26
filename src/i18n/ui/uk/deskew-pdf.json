@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Автовизначення",
+  "Deskew PDF": "Вирівняти PDF",
+  "Detected tilt: {angle}°": "Виявлений нахил: {angle}°",
+  "Detecting tilt…": "Визначення нахилу…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Сторінки перебудовуються як зображення, тому текст у результаті більше не можна виділити. Перетягніть повзунок, якщо сторінка досі виглядає перекошеною.",
+  "Straighten by": "Вирівняти на"
+}

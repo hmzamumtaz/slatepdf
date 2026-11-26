@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Op bladwijzer",
   "By file size": "Op bestandsgrootte",
   "Every N pages": "Elke N pagina’s",
+  "Loading bookmarks…": "Bladwijzers laden…",
   "Maximum size per file (MB)": "Maximale grootte per bestand (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Eén bestand per bladwijzer, van de pagina van die bladwijzer tot de volgende.",
   "Page ranges": "Paginabereiken",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Paginabereiken (bijv. 1-3, 5, 7-10)",
+  "Page {page}": "Pagina {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Pagina’s worden zo gegroepeerd dat elk bestand onder deze grootte blijft. Eén pagina die groter is dan de limiet krijgt een eigen bestand.",
   "Pages per file": "Pagina’s per bestand",
   "Please enter valid page ranges": "Voer geldige paginabereiken in",
   "Preview of pages in ranges:": "Voorbeeld van de pagina's in de bereiken:",
   "Split PDF": "PDF splitsen",
+  "This PDF has no bookmarks.": "Deze PDF heeft geen bladwijzers.",
   "Total pages: {total} | Files: {count}": "Totaal pagina’s: {total} | Bestanden: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Totaal aantal pagina's: {total} | Pagina's in bereiken: {count}"
 }

@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "ऑटो-डिटेक्ट",
+  "Deskew PDF": "PDF सीधा करें",
+  "Detected tilt: {angle}°": "पता चला झुकाव: {angle}°",
+  "Detecting tilt…": "झुकाव पता लगाया जा रहा है…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "पृष्ठों को छवियों के रूप में पुनर्निर्मित किया जाता है, इसलिए आउटपुट में पाठ अब चयन योग्य नहीं रहता। यदि पृष्ठ अभी भी झुका हुआ लगे तो स्लाइडर खींचें।",
+  "Straighten by": "सीधा करें"
+}

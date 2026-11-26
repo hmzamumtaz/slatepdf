@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "ตรวจจับอัตโนมัติ",
+  "Deskew PDF": "ปรับ PDF ให้ตรง",
+  "Detected tilt: {angle}°": "ความเอียงที่ตรวจพบ: {angle}°",
+  "Detecting tilt…": "กำลังตรวจจับความเอียง…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "หน้าจะถูกสร้างใหม่เป็นภาพ ดังนั้นจึงไม่สามารถเลือกข้อความในผลลัพธ์ได้อีก ลากแถบเลื่อนหากหน้ายังดูเอียง",
+  "Straighten by": "ปรับให้ตรง"
+}

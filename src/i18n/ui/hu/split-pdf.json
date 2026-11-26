@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Könyvjelző szerint",
   "By file size": "Fájlméret szerint",
   "Every N pages": "Minden N. oldal",
+  "Loading bookmarks…": "Könyvjelzők betöltése…",
   "Maximum size per file (MB)": "Maximális méret fájlonként (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Egy fájl könyvjelzőnként, az adott könyvjelző oldalától a következőig.",
   "Page ranges": "Oldaltartományok",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Oldaltartományok (pl. 1-3, 5, 7-10)",
+  "Page {page}": "{page}. oldal",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Az oldalak úgy csoportosulnak, hogy minden fájl e méret alatt maradjon. Egyetlen, a korlátnál nagyobb oldal önálló fájlba kerül.",
   "Pages per file": "Oldal fájlonként",
   "Please enter valid page ranges": "Adj meg érvényes oldaltartományokat",
   "Preview of pages in ranges:": "A tartományokba eső oldalak előnézete:",
   "Split PDF": "PDF szétválasztása",
+  "This PDF has no bookmarks.": "Ebben a PDF-ben nincsenek könyvjelzők.",
   "Total pages: {total} | Files: {count}": "Összes oldal: {total} | Fájlok: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Összes oldal: {total} | Tartományokban: {count}"
 }

@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Otomatik algıla",
+  "Deskew PDF": "PDF’yi Düzelt",
+  "Detected tilt: {angle}°": "Algılanan eğiklik: {angle}°",
+  "Detecting tilt…": "Eğiklik algılanıyor…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Sayfalar görüntü olarak yeniden oluşturulur, bu nedenle çıktıda metin artık seçilemez. Sayfa hâlâ eğik görünüyorsa kaydırıcıyı sürükleyin.",
+  "Straighten by": "Düzeltme miktarı"
+}

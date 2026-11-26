@@ -1,0 +1,10 @@
+{
+  "Balanced": "Tasapainoinen",
+  "Checking pages…": "Tarkistetaan sivuja…",
+  "Lenient": "Lievä",
+  "No blank pages found.": "Tyhjiä sivuja ei löytynyt.",
+  "Remove Blank Pages": "Poista tyhjät sivut",
+  "Sensitivity": "Herkkyys",
+  "Strict": "Tiukka",
+  "{count} blank pages will be removed: {pages}": "{count} tyhjää sivua poistetaan: {pages}"
+}

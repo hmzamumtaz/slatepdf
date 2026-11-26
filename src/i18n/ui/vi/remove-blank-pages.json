@@ -1,0 +1,10 @@
+{
+  "Balanced": "Cân bằng",
+  "Checking pages…": "Đang kiểm tra các trang…",
+  "Lenient": "Dễ dãi",
+  "No blank pages found.": "Không tìm thấy trang trống nào.",
+  "Remove Blank Pages": "Xóa trang trống",
+  "Sensitivity": "Độ nhạy",
+  "Strict": "Nghiêm ngặt",
+  "{count} blank pages will be removed: {pages}": "{count} trang trống sẽ bị xóa: {pages}"
+}

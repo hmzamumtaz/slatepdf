@@ -1,14 +1,19 @@
 {
+  "By bookmark": "Por marcador",
   "By file size": "Por tamaño de archivo",
   "Every N pages": "Cada N páginas",
+  "Loading bookmarks…": "Cargando marcadores…",
   "Maximum size per file (MB)": "Tamaño máximo por archivo (MB)",
+  "One file per bookmark, from that bookmark's page to the next.": "Un archivo por marcador, desde la página de ese marcador hasta la siguiente.",
   "Page ranges": "Rangos de páginas",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Rangos de páginas (p. ej., 1-3, 5, 7-10)",
+  "Page {page}": "Página {page}",
   "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Las páginas se agrupan para que cada archivo no supere este tamaño. Una sola página mayor que el límite va en un archivo aparte.",
   "Pages per file": "Páginas por archivo",
   "Please enter valid page ranges": "Escribe rangos de páginas válidos",
   "Preview of pages in ranges:": "Vista previa de las páginas de los rangos:",
   "Split PDF": "Dividir PDF",
+  "This PDF has no bookmarks.": "Este PDF no tiene marcadores.",
   "Total pages: {total} | Files: {count}": "Páginas totales: {total} | Archivos: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Total de páginas: {total} | Páginas en los rangos: {count}"
 }

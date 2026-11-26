@@ -1,0 +1,10 @@
+{
+  "Balanced": "Vyvážené",
+  "Checking pages…": "Kontroluji stránky…",
+  "Lenient": "Mírné",
+  "No blank pages found.": "Nebyly nalezeny žádné prázdné stránky.",
+  "Remove Blank Pages": "Odebrat prázdné stránky",
+  "Sensitivity": "Citlivost",
+  "Strict": "Přísné",
+  "{count} blank pages will be removed: {pages}": "Bude odebráno {count} prázdných stránek: {pages}"
+}

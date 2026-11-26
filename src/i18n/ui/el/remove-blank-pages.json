@@ -1,0 +1,10 @@
+{
+  "Balanced": "Ισορροπημένο",
+  "Checking pages…": "Έλεγχος σελίδων…",
+  "Lenient": "Επιεικές",
+  "No blank pages found.": "Δεν βρέθηκαν κενές σελίδες.",
+  "Remove Blank Pages": "Αφαίρεση κενών σελίδων",
+  "Sensitivity": "Ευαισθησία",
+  "Strict": "Αυστηρό",
+  "{count} blank pages will be removed: {pages}": "Θα αφαιρεθούν {count} κενές σελίδες: {pages}"
+}

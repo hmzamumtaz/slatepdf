@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Wykryj automatycznie",
+  "Deskew PDF": "Wyprostuj PDF",
+  "Detected tilt: {angle}°": "Wykryte pochylenie: {angle}°",
+  "Detecting tilt…": "Wykrywanie pochylenia…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Strony są odbudowywane jako obrazy, więc tekstu nie można już zaznaczać w wyniku. Przeciągnij suwak, jeśli strona nadal wygląda na przekrzywioną.",
+  "Straighten by": "Wyprostuj o"
+}

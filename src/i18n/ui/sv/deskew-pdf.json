@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Identifiera automatiskt",
+  "Deskew PDF": "Räta upp PDF",
+  "Detected tilt: {angle}°": "Upptäckt lutning: {angle}°",
+  "Detecting tilt…": "Upptäcker lutning…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Sidorna byggs om som bilder, så texten går inte längre att markera i resultatet. Dra i reglaget om sidan fortfarande ser sned ut.",
+  "Straighten by": "Räta upp med"
+}

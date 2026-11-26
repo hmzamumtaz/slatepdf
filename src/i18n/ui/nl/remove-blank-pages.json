@@ -1,0 +1,10 @@
+{
+  "Balanced": "Gebalanceerd",
+  "Checking pages…": "Pagina’s controleren…",
+  "Lenient": "Soepel",
+  "No blank pages found.": "Geen lege pagina’s gevonden.",
+  "Remove Blank Pages": "Lege pagina’s verwijderen",
+  "Sensitivity": "Gevoeligheid",
+  "Strict": "Strikt",
+  "{count} blank pages will be removed: {pages}": "Er worden {count} lege pagina’s verwijderd: {pages}"
+}

@@ -1,0 +1,10 @@
+{
+  "Balanced": "สมดุล",
+  "Checking pages…": "กำลังตรวจสอบหน้า…",
+  "Lenient": "ผ่อนปรน",
+  "No blank pages found.": "ไม่พบหน้าว่าง",
+  "Remove Blank Pages": "ลบหน้าว่าง",
+  "Sensitivity": "ความไว",
+  "Strict": "เข้มงวด",
+  "{count} blank pages will be removed: {pages}": "หน้าว่าง {count} หน้าจะถูกลบ: {pages}"
+}

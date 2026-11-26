@@ -1,0 +1,10 @@
+{
+  "Balanced": "متوازن",
+  "Checking pages…": "جارٍ فحص الصفحات…",
+  "Lenient": "متساهل",
+  "No blank pages found.": "لم يتم العثور على صفحات فارغة.",
+  "Remove Blank Pages": "إزالة الصفحات الفارغة",
+  "Sensitivity": "الحساسية",
+  "Strict": "صارم",
+  "{count} blank pages will be removed: {pages}": "سيتم إزالة {count} من الصفحات الفارغة: {pages}"
+}

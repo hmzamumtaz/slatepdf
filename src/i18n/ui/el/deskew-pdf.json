@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Αυτόματη αναγνώριση",
+  "Deskew PDF": "Διόρθωση κλίσης PDF",
+  "Detected tilt: {angle}°": "Ανιχνευθείσα κλίση: {angle}°",
+  "Detecting tilt…": "Ανίχνευση κλίσης…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Οι σελίδες ξαναχτίζονται ως εικόνες, οπότε το κείμενο δεν είναι πλέον επιλέξιμο στο αποτέλεσμα. Σύρετε τον ολισθητή αν η σελίδα εξακολουθεί να φαίνεται στραβή.",
+  "Straighten by": "Ισιώστε κατά"
+}

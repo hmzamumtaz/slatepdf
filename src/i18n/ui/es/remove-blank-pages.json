@@ -1,0 +1,10 @@
+{
+  "Balanced": "Equilibrado",
+  "Checking pages…": "Comprobando páginas…",
+  "Lenient": "Tolerante",
+  "No blank pages found.": "No se encontraron páginas en blanco.",
+  "Remove Blank Pages": "Eliminar páginas en blanco",
+  "Sensitivity": "Sensibilidad",
+  "Strict": "Estricto",
+  "{count} blank pages will be removed: {pages}": "Se eliminarán {count} páginas en blanco: {pages}"
+}

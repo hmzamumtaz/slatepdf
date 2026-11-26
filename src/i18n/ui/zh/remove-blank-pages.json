@@ -1,0 +1,10 @@
+{
+  "Balanced": "均衡",
+  "Checking pages…": "正在检查页面…",
+  "Lenient": "宽松",
+  "No blank pages found.": "未找到空白页。",
+  "Remove Blank Pages": "删除空白页",
+  "Sensitivity": "灵敏度",
+  "Strict": "严格",
+  "{count} blank pages will be removed: {pages}": "将删除 {count} 个空白页：{pages}"
+}

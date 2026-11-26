@@ -1,0 +1,8 @@
+{
+  "Auto-detect": "Automaticky rozpoznat",
+  "Deskew PDF": "Narovnat PDF",
+  "Detected tilt: {angle}°": "Zjištěné zkosení: {angle}°",
+  "Detecting tilt…": "Zjišťuji zkosení…",
+  "Pages are rebuilt as images, so text is no longer selectable in the output. Drag the slider if the page still looks tilted.": "Stránky se přestaví jako obrázky, takže text v nich pak nelze vybírat. Pokud stránka stále vypadá nakřivo, posuňte posuvník.",
+  "Straighten by": "Narovnat o"
+}
