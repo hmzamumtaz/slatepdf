@@ -2918,7 +2918,15 @@ export interface ExtractedImage {
  * skip-set is used: a timed-out name is a repeat of an image already
  * exported, never a new image.
  */
-async function pdfJsImageToBlob(img: any): Promise<Blob> {
+/**
+ * Convert a resolved pdf.js image object to a PNG blob, and fingerprint it
+ * from the rendered pixels. The fingerprint MUST come from pixels, not
+ * from img.data: JPEG images arrive as a decoded `bitmap` with no data
+ * buffer at all, so a data-based fingerprint is identical for every
+ * same-size JPEG and would wrongly dedupe distinct photos (seen live
+ * 2026-11-26: three different 1600x1200 photos collapsed to one PNG).
+ */
+async function pdfJsImageToBlob(img: any): Promise<{ blob: Blob; fingerprint: string }> {
   const canvas = document.createElement('canvas');
   canvas.width = img.width;
   canvas.height = img.height;
@@ -2969,7 +2977,18 @@ async function pdfJsImageToBlob(img: any): Promise<Blob> {
   }
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'));
   if (!blob) throw new Error(msg('That image could not be exported.'));
-  return blob;
+  // Fingerprint from rendered pixels: top, middle and bottom strips, first
+  // 48 bytes of each — enough to tell distinct photos apart, cheap even
+  // for very large images.
+  const w = img.width as number;
+  const h = img.height as number;
+  const stripH = Math.max(1, Math.min(16, h));
+  const parts: string[] = [];
+  for (const y of [0, Math.floor(h / 2), Math.max(0, h - stripH)]) {
+    const px = ctx.getImageData(0, y, w, stripH).data;
+    parts.push(Array.from(px.subarray(0, 48)).join(','));
+  }
+  return { blob, fingerprint: `${w}x${h}:${parts.join('|')}` };
 }
 
 export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]> {
@@ -2999,12 +3018,10 @@ export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]
           });
         });
         if (!img || !img.width || !img.height) continue;
+        const { blob, fingerprint } = await pdfJsImageToBlob(img);
         // Same pixels under another name (shared XObject) = same image.
-        const sample = img.data ? Array.from((img.data as Uint8Array).subarray(0, 64)).join(',') : 'bitmap';
-        const fingerprint = `${img.width}x${img.height}:kind${img.kind}:len${img.data?.length ?? 0}:${sample}`;
         if (seenFingerprints.has(fingerprint)) continue;
         seenFingerprints.add(fingerprint);
-        const blob = await pdfJsImageToBlob(img);
         const perPage = out.filter(o => o.page === i).length + 1;
         out.push({ name: `page-${i}-image-${perPage}.png`, page: i, blob, width: img.width, height: img.height });
       } catch {
