@@ -911,6 +911,42 @@
         ]
       }
     },
+    "pdf-to-png": {
+      "slug": "pdf-to-png",
+      "name": "PDF to PNG",
+      "description": "Convert PDF pages to PNG images",
+      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
+      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "faqs": [
+        {
+          "q": "What resolution will the PNGs be?",
+          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+        },
+        {
+          "q": "What is the difference from PDF to JPG?",
+          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+        },
+        {
+          "q": "Is my PDF uploaded to convert it to PNG?",
+          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+        }
+      ],
+      "howTo": {
+        "title": "How to convert PDF to PNG",
+        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "steps": [
+          "Choose one or more PDFs",
+          "Pick Standard or High resolution",
+          "Click Convert to PNG",
+          "Download single pages, or every page together as a ZIP"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
     "pdf-to-word": {
       "slug": "pdf-to-word",
       "name": "PDF ל-Word",
@@ -1841,6 +1877,113 @@
         ]
       }
     },
+    "grayscale-pdf": {
+      "slug": "grayscale-pdf",
+      "name": "Grayscale PDF",
+      "description": "Turn a colour PDF black and white",
+      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
+      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "faqs": [
+        {
+          "q": "Will the text still be selectable?",
+          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+        },
+        {
+          "q": "Does it work on scanned PDFs?",
+          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+        },
+        {
+          "q": "Is my PDF uploaded?",
+          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+        }
+      ],
+      "howTo": {
+        "title": "How to convert a PDF to grayscale",
+        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "steps": [
+          "Choose your PDF",
+          "Click Convert to Grayscale",
+          "Download the black-and-white PDF"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "resize-pdf": {
+      "slug": "resize-pdf",
+      "name": "Resize PDF",
+      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
+      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
+      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "faqs": [
+        {
+          "q": "What is the difference from Crop PDF?",
+          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+        },
+        {
+          "q": "Will the text stay selectable?",
+          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+        },
+        {
+          "q": "Can I set a custom size?",
+          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+        }
+      ],
+      "howTo": {
+        "title": "How to resize PDF pages",
+        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "steps": [
+          "Choose your PDF",
+          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
+          "Click Resize Pages",
+          "Download the resized PDF"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "deskew-pdf": {
+      "slug": "deskew-pdf",
+      "name": "Deskew PDF",
+      "description": "Straighten tilted scanned pages",
+      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
+      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "faqs": [
+        {
+          "q": "How does it detect the tilt?",
+          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+        },
+        {
+          "q": "Will the text still be selectable?",
+          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+        },
+        {
+          "q": "How far can it straighten?",
+          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+        }
+      ],
+      "howTo": {
+        "title": "How to deskew a PDF",
+        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "steps": [
+          "Choose your PDF — the tilt is detected automatically",
+          "Check the detected angle, and drag the slider if the page still looks tilted",
+          "Use Live preview to see the straightened first page",
+          "Click Deskew PDF and download the result"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
     "alternate-mix": {
       "slug": "alternate-mix",
       "name": "Alternate & Mix",
@@ -1868,6 +2011,114 @@
           "Add the first document, then the second",
           "Click Mix PDFs",
           "Download the interleaved file"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "remove-blank-pages": {
+      "slug": "remove-blank-pages",
+      "name": "Remove Blank Pages",
+      "description": "Delete the blank pages from a PDF",
+      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
+      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "How does it know a page is blank?",
+          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+        },
+        {
+          "q": "Will it remove a page that only has a page number?",
+          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+        },
+        {
+          "q": "Is my PDF uploaded?",
+          "a": "No. Detection and removal run entirely in your browser."
+        }
+      ],
+      "howTo": {
+        "title": "How to remove blank pages from a PDF",
+        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "steps": [
+          "Choose your PDF",
+          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
+          "Click Remove Blank Pages",
+          "Download the cleaned PDF"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "n-up-pdf": {
+      "slug": "n-up-pdf",
+      "name": "N-up PDF",
+      "description": "Put 2, 4, 6 or 9 pages on each sheet",
+      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
+      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "faqs": [
+        {
+          "q": "What size are the sheets?",
+          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+        },
+        {
+          "q": "Will the text stay readable?",
+          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+        },
+        {
+          "q": "Can I choose the order?",
+          "a": "Pages run left to right, top to bottom, in the original order."
+        }
+      ],
+      "howTo": {
+        "title": "How to put multiple PDF pages on one sheet",
+        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "steps": [
+          "Choose your PDF",
+          "Pick 2-up, 4-up, 6-up or 9-up",
+          "Click Create N-up PDF",
+          "Download the result"
+        ],
+        "benefits": [
+          "Private — the file is processed in your browser and never uploaded",
+          "Free, with no account, no watermark and no daily limit",
+          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+        ]
+      }
+    },
+    "add-blank-page": {
+      "slug": "add-blank-page",
+      "name": "Add Blank Page",
+      "description": "Insert blank pages or pages from another PDF",
+      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
+      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "faqs": [
+        {
+          "q": "Where can the blank page go?",
+          "a": "At the start, at the end, after every page, or after any page number you choose."
+        },
+        {
+          "q": "How do I insert pages from another PDF?",
+          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+        },
+        {
+          "q": "What size is the blank page?",
+          "a": "The same size as the first page of your PDF."
+        }
+      ],
+      "howTo": {
+        "title": "How to add a blank page to a PDF",
+        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "steps": [
+          "Choose your PDF",
+          "Pick Blank page, or Pages from another PDF and add the second file",
+          "Choose where the pages go",
+          "Click Add Blank Page and download the result"
         ],
         "benefits": [
           "Private — the file is processed in your browser and never uploaded",
