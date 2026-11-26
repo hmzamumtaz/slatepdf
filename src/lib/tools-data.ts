@@ -29,6 +29,9 @@ export const tools: ToolInfo[] = [
   { slug: 'extract-pages', name: 'Extract Pages', description: 'Extract specific pages as a new PDF', icon: 'FileOutput', category: 'Organize PDF', color: '#f59e0b' },
   { slug: 'organize-pdf', name: 'Organize PDF', description: 'Reorder pages and drop the ones you do not need', icon: 'ArrowUpDown', category: 'Organize PDF', color: '#10b981' },
   { slug: 'alternate-mix', name: 'Alternate & Mix', description: 'Interleave the pages of two PDFs, one after the other', icon: 'Shuffle', category: 'Organize PDF', color: '#0d9488' },
+  { slug: 'remove-blank-pages', name: 'Remove Blank Pages', description: 'Delete the blank pages from a PDF', icon: 'FileMinus', category: 'Organize PDF', color: '#f43f5e' },
+  { slug: 'n-up-pdf', name: 'N-up PDF', description: 'Put 2, 4, 6 or 9 pages on each sheet', icon: 'Grid2x2', category: 'Organize PDF', color: '#0d9488' },
+  { slug: 'add-blank-page', name: 'Add Blank Page', description: 'Insert blank pages or pages from another PDF', icon: 'FilePlus', category: 'Organize PDF', color: '#059669' },
 
   // Optimize
   { slug: 'compress-pdf', name: 'Compress PDF', description: 'Shrink a PDF to the file size you need', icon: 'Minimize2', category: 'Optimize PDF', color: '#06b6d4' },
@@ -52,6 +55,7 @@ export const tools: ToolInfo[] = [
 
   // Convert from PDF
   { slug: 'pdf-to-jpg', name: 'PDF to JPG', description: 'Convert PDF pages to JPG images', icon: 'FileImage', category: 'Export PDF', color: '#eab308' },
+  { slug: 'pdf-to-png', name: 'PDF to PNG', description: 'Convert PDF pages to PNG images', icon: 'FileImage', category: 'Export PDF', color: '#ca8a04' },
   { slug: 'pdf-to-word', name: 'PDF to Word', description: 'Turn a PDF into an editable document (DOCX)', icon: 'FileType', category: 'Export PDF', color: '#0891b2' },
   { slug: 'pdf-to-powerpoint', name: 'PDF to PowerPoint', description: 'Turn a PDF into editable slides (PPTX)', icon: 'Slideshow', category: 'Export PDF', color: '#ea580c' },
   { slug: 'pdf-to-excel', name: 'PDF to Excel', description: 'Export PDF text to a spreadsheet, one line per row (XLSX)', icon: 'Grid3x3', category: 'Export PDF', color: '#0d9488' },
@@ -74,6 +78,9 @@ export const tools: ToolInfo[] = [
   { slug: 'fill-pdf-form', name: 'Fill PDF Form', description: 'Fill in a PDF form and save the completed copy', icon: 'ClipboardList', category: 'Modify PDF', color: '#16a34a' },
   { slug: 'header-footer', name: 'Header & Footer', description: 'Stamp a header and footer on every page', icon: 'Heading', category: 'Modify PDF', color: '#ea580c' },
   { slug: 'bates-numbering', name: 'Bates Numbering', description: 'Stamp sequential Bates numbers on every page', icon: 'Hash', category: 'Modify PDF', color: '#dc2626' },
+  { slug: 'grayscale-pdf', name: 'Grayscale PDF', description: 'Turn a colour PDF black and white', icon: 'Contrast', category: 'Modify PDF', color: '#64748b' },
+  { slug: 'resize-pdf', name: 'Resize PDF', description: 'Change PDF pages to A4, Letter, A3 or a custom size', icon: 'Scaling', category: 'Modify PDF', color: '#0ea5e9' },
+  { slug: 'deskew-pdf', name: 'Deskew PDF', description: 'Straighten tilted scanned pages', icon: 'RotateCcw', category: 'Modify PDF', color: '#8b5cf6' },
 
   // Security
   { slug: 'unlock-pdf', name: 'Unlock PDF', description: 'Remove password protection from PDF', icon: 'Unlock', category: 'PDF Security', color: '#16a34a' },

@@ -1,5 +1,5 @@
 import {
-  AlignLeft, Archive, ArrowUpDown, BookOpen, Camera, ClipboardList, Combine, Crop, Droplets, Eraser, FileCode, FileImage, FileOutput, FileText, FileType, GitCompare, Globe, Grid3x3, Hash, Heading, Image, Info, Languages, Layers, LayoutGrid, Lock, Minimize2, PenTool, Presentation, RotateCw, ScanText, Scissors, Shuffle, Smartphone, Sparkles, Table, TextCursorInput, Trash2, Type, Unlock, Wrench, Zap,
+  AlignLeft, Archive, ArrowUpDown, BookOpen, Camera, ClipboardList, Combine, Contrast, Crop, Droplets, Eraser, FileCode, FileImage, FileMinus, FileOutput, FilePlus, FileText, FileType, GitCompare, Globe, Grid2x2, Grid3x3, Hash, Heading, Image, Info, Languages, Layers, LayoutGrid, Lock, Minimize2, PenTool, Presentation, RotateCcw, RotateCw, Scaling, ScanText, Scissors, Shuffle, Smartphone, Sparkles, Table, TextCursorInput, Trash2, Type, Unlock, Wrench, Zap,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -9,7 +9,7 @@ import {
  * ~190 KB gzipped, out of every page's JavaScript.
  */
 const icons: Record<string, LucideIcon> = {
-  AlignLeft, Archive, ArrowUpDown, BookOpen, Camera, ClipboardList, Combine, Crop, Droplets, Eraser, FileCode, FileImage, FileOutput, FileText, FileType, GitCompare, Globe, Grid3x3, Hash, Heading, Image, Info, Languages, Layers, LayoutGrid, Lock, Minimize2, PenTool, Presentation, RotateCw, ScanText, Scissors, Shuffle, Smartphone, Sparkles, Table, TextCursorInput, Trash2, Type, Unlock, Wrench, Zap,
+  AlignLeft, Archive, ArrowUpDown, BookOpen, Camera, ClipboardList, Combine, Contrast, Crop, Droplets, Eraser, FileCode, FileImage, FileMinus, FileOutput, FilePlus, FileText, FileType, GitCompare, Globe, Grid2x2, Grid3x3, Hash, Heading, Image, Info, Languages, Layers, LayoutGrid, Lock, Minimize2, PenTool, Presentation, RotateCcw, RotateCw, Scaling, ScanText, Scissors, Shuffle, Smartphone, Sparkles, Table, TextCursorInput, Trash2, Type, Unlock, Wrench, Zap,
 };
 
 /** Icon for a tool; unknown names fall back to a document icon. */

@@ -501,6 +501,75 @@ const howTos: Record<string, Omit<ToolHowTo, 'benefits'> & { benefits?: string[]
       'Download the interleaved file',
     ],
   },
+  'pdf-to-png': {
+    title: 'How to convert PDF to PNG',
+    intro: 'PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.',
+    steps: [
+      'Choose one or more PDFs',
+      'Pick Standard or High resolution',
+      'Click Convert to PNG',
+      'Download single pages, or every page together as a ZIP',
+    ],
+  },
+  'grayscale-pdf': {
+    title: 'How to convert a PDF to grayscale',
+    intro: 'Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.',
+    steps: [
+      'Choose your PDF',
+      'Click Convert to Grayscale',
+      'Download the black-and-white PDF',
+    ],
+  },
+  'resize-pdf': {
+    title: 'How to resize PDF pages',
+    intro: 'Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.',
+    steps: [
+      'Choose your PDF',
+      'Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres',
+      'Click Resize Pages',
+      'Download the resized PDF',
+    ],
+  },
+  'deskew-pdf': {
+    title: 'How to deskew a PDF',
+    intro: 'Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.',
+    steps: [
+      'Choose your PDF — the tilt is detected automatically',
+      'Check the detected angle, and drag the slider if the page still looks tilted',
+      'Use Live preview to see the straightened first page',
+      'Click Deskew PDF and download the result',
+    ],
+  },
+  'remove-blank-pages': {
+    title: 'How to remove blank pages from a PDF',
+    intro: 'Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.',
+    steps: [
+      'Choose your PDF',
+      'Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want',
+      'Click Remove Blank Pages',
+      'Download the cleaned PDF',
+    ],
+  },
+  'n-up-pdf': {
+    title: 'How to put multiple PDF pages on one sheet',
+    intro: 'N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.',
+    steps: [
+      'Choose your PDF',
+      'Pick 2-up, 4-up, 6-up or 9-up',
+      'Click Create N-up PDF',
+      'Download the result',
+    ],
+  },
+  'add-blank-page': {
+    title: 'How to add a blank page to a PDF',
+    intro: 'Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.',
+    steps: [
+      'Choose your PDF',
+      'Pick Blank page, or Pages from another PDF and add the second file',
+      'Choose where the pages go',
+      'Click Add Blank Page and download the result',
+    ],
+  },
 };
 
 export function getToolHowTo(slug: string): ToolHowTo {

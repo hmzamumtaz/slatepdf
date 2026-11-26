@@ -3,11 +3,11 @@
 import { useState, useMemo, useCallback } from 'react';
 import ToolPage from '@/components/ToolPage';
 import PdfPreview from '@/components/PdfPreview';
-import { splitPdf, splitEveryNPages, splitPdfBySize, getPdfInfo } from '@/lib/pdf-engine';
+import { splitPdf, splitEveryNPages, splitPdfBySize, splitPdfByBookmarks, getPdfInfo, getPdfBookmarks, type PdfBookmark } from '@/lib/pdf-engine';
 import { useT } from '@/i18n/I18nProvider';
 import { msg } from '@/i18n/format';
 
-type SplitMode = 'ranges' | 'every-n' | 'by-size';
+type SplitMode = 'ranges' | 'every-n' | 'by-size' | 'by-bookmark';
 
 export default function SplitPdfTool() {
   const t = useT();
@@ -17,16 +17,23 @@ export default function SplitPdfTool() {
   const [sizeMb, setSizeMb] = useState(5);
   const [pdfInfo, setPdfInfo] = useState<{ totalPages: number } | null>(null);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
+  const [bookmarks, setBookmarks] = useState<PdfBookmark[] | null>(null);
 
   const handleFilesSelected = useCallback(async (files: File[]) => {
     if (files[0]) {
       setCurrentFile(files[0]);
+      setBookmarks(null);
       try {
         const info = await getPdfInfo(files[0]);
         setPdfInfo({ totalPages: info.pageCount });
         setRanges(`1-${info.pageCount}`);
       } catch {
         setPdfInfo(null);
+      }
+      try {
+        setBookmarks(await getPdfBookmarks(files[0]));
+      } catch {
+        setBookmarks([]);
       }
     }
   }, []);
@@ -66,11 +73,12 @@ export default function SplitPdfTool() {
       onFilesSelected={handleFilesSelected}
       options={
         <div>
-          <div className="flex gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-4">
             {([
               ['ranges', t('Page ranges')],
               ['every-n', t('Every N pages')],
               ['by-size', t('By file size')],
+              ['by-bookmark', t('By bookmark')],
             ] as [SplitMode, string][]).map(([m, label]) => (
               <button
                 key={m}
@@ -136,6 +144,29 @@ export default function SplitPdfTool() {
               </p>
             </>
           )}
+          {mode === 'by-bookmark' && (
+            <>
+              {bookmarks === null ? (
+                <p className="mt-2 text-xs text-muted-foreground">{t('Loading bookmarks…')}</p>
+              ) : bookmarks.length === 0 ? (
+                <p className="mt-2 text-xs text-muted-foreground">{t('This PDF has no bookmarks.')}</p>
+              ) : (
+                <>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    {t("One file per bookmark, from that bookmark's page to the next.")}
+                  </p>
+                  <ul className="mt-2 space-y-1">
+                    {bookmarks.map((b, i) => (
+                      <li key={i} className="text-xs text-muted-foreground flex justify-between gap-2">
+                        <span className="truncate">{b.title}</span>
+                        <span className="shrink-0">{t('Page {page}', { page: b.page })}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </>
+          )}
           {currentFile && previewPages.length > 0 && mode === 'ranges' && (
             <PdfPreview
               file={currentFile}
@@ -148,6 +179,7 @@ export default function SplitPdfTool() {
       onProcess={async (files) => {
         if (mode === 'every-n') return splitEveryNPages(files[0], everyN);
         if (mode === 'by-size') return splitPdfBySize(files[0], sizeMb * 1024 * 1024);
+        if (mode === 'by-bookmark') return splitPdfByBookmarks(files[0]);
         const parsed = parseRanges(ranges);
         if (parsed.length === 0) throw new Error(msg('Please enter valid page ranges'));
         return splitPdf(files[0], parsed);

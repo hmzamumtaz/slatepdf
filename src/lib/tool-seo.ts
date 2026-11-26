@@ -507,6 +507,76 @@ const toolSeo: Record<string, {
       { q: 'What is this used for?', a: 'Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order.' },
     ],
   },
+  'pdf-to-png': {
+    title: 'PDF to PNG — Convert PDF Pages to PNG Free',
+    description: 'Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.',
+    keywords: ['pdf to png', 'convert pdf to png', 'pdf to png free', 'pdf pages to png images'],
+    faqs: [
+      { q: 'What resolution will the PNGs be?', a: 'Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files.' },
+      { q: 'What is the difference from PDF to JPG?', a: 'PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files.' },
+      { q: 'Is my PDF uploaded to convert it to PNG?', a: 'No. Each page is rendered to an image in your browser, so the PDF never leaves your device.' },
+    ],
+  },
+  'grayscale-pdf': {
+    title: 'Grayscale PDF — Convert PDF to Black & White Free',
+    description: 'Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.',
+    keywords: ['grayscale pdf', 'convert pdf to black and white', 'pdf to grayscale', 'make pdf black and white'],
+    faqs: [
+      { q: 'Will the text still be selectable?', a: 'No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards.' },
+      { q: 'Does it work on scanned PDFs?', a: 'Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing.' },
+      { q: 'Is my PDF uploaded?', a: 'No. The conversion runs entirely in your browser, so the PDF never leaves your device.' },
+    ],
+  },
+  'resize-pdf': {
+    title: 'Resize PDF — Change PDF Page Size to A4 or Letter',
+    description: 'Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.',
+    keywords: ['resize pdf', 'change pdf page size', 'pdf to a4', 'pdf to letter size', 'resize pdf pages'],
+    faqs: [
+      { q: 'What is the difference from Crop PDF?', a: 'Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit.' },
+      { q: 'Will the text stay selectable?', a: 'Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact.' },
+      { q: 'Can I set a custom size?', a: 'Yes. Choose Custom and enter the width and height in millimetres.' },
+    ],
+  },
+  'deskew-pdf': {
+    title: 'Deskew PDF — Straighten Tilted Scanned Pages Free',
+    description: 'Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.',
+    keywords: ['deskew pdf', 'straighten pdf', 'fix skewed pdf', 'deskew scanned pdf', 'rotate pdf pages straight'],
+    faqs: [
+      { q: 'How does it detect the tilt?', a: 'It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong.' },
+      { q: 'Will the text still be selectable?', a: 'No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway.' },
+      { q: 'How far can it straighten?', a: 'Up to 10 degrees either way, which covers almost every badly-fed scanner page.' },
+    ],
+  },
+  'remove-blank-pages': {
+    title: 'Remove Blank Pages — Delete Blank PDF Pages Free',
+    description: 'Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.',
+    keywords: ['remove blank pages pdf', 'delete blank pages pdf', 'remove blank pages from pdf', 'clean scanned pdf'],
+    faqs: [
+      { q: 'How does it know a page is blank?', a: 'It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go.' },
+      { q: 'Will it remove a page that only has a page number?', a: 'Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again.' },
+      { q: 'Is my PDF uploaded?', a: 'No. Detection and removal run entirely in your browser.' },
+    ],
+  },
+  'n-up-pdf': {
+    title: 'N-up PDF — Put Multiple Pages on One Sheet Free',
+    description: 'Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.',
+    keywords: ['n-up pdf', '2-up pdf', '4-up pdf', 'multiple pages per sheet pdf', 'pdf booklet'],
+    faqs: [
+      { q: 'What size are the sheets?', a: 'Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell.' },
+      { q: 'Will the text stay readable?', a: 'Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be.' },
+      { q: 'Can I choose the order?', a: 'Pages run left to right, top to bottom, in the original order.' },
+    ],
+  },
+  'add-blank-page': {
+    title: 'Add Blank Page — Insert Pages into a PDF Free',
+    description: 'Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.',
+    keywords: ['add blank page pdf', 'insert page pdf', 'insert blank page into pdf', 'add pages to pdf'],
+    faqs: [
+      { q: 'Where can the blank page go?', a: 'At the start, at the end, after every page, or after any page number you choose.' },
+      { q: 'How do I insert pages from another PDF?', a: 'Choose "Pages from another PDF", add the second file after the first, and pick where its pages go.' },
+      { q: 'What size is the blank page?', a: 'The same size as the first page of your PDF.' },
+    ],
+  },
 };
 
 /** Generate full metadata for a tool page. */

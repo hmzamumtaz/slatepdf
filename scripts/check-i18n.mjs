@@ -32,8 +32,9 @@ const NAMESPACE_RULES = [
 ];
 
 const COMPONENT_SLUGS = {
-  AiSummarizer: 'ai-summarizer', PdfToPdfA: 'pdf-to-pdfa', PdfWorkspace: 'pdf-workspace',
-  PowerPointToPdf: 'powerpoint-to-pdf', PdfToPowerPoint: 'pdf-to-powerpoint',
+  AiSummarizer: 'ai-summarizer', NUpPdf: 'n-up-pdf', PdfToPdfA: 'pdf-to-pdfa',
+  PdfWorkspace: 'pdf-workspace', PowerPointToPdf: 'powerpoint-to-pdf',
+  PdfToPowerPoint: 'pdf-to-powerpoint',
 };
 function toolSlugFromComponent(name) {
   return COMPONENT_SLUGS[name] ?? name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();

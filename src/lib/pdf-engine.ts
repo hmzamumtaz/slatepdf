@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { PDFDocument, PDFDict, PDFName, PDFTextField, PDFCheckBox, PDFDropdown, PDFRadioGroup, PDFButton, degrees, rgb, StandardFonts, type PDFFont } from 'pdf-lib';
+import { PDFDocument, PDFDict, PDFName, PDFRef, PDFArray, PDFString, PDFTextField, PDFCheckBox, PDFDropdown, PDFRadioGroup, PDFButton, degrees, rgb, StandardFonts, type PDFFont } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 import { SITE_NAME, SITE_SLUG } from './site';
 import { SERVICE_BUSY_MESSAGE } from './errors';
@@ -3325,4 +3325,427 @@ export async function decodeImageToPng(file: File): Promise<File> {
   } finally {
     URL.revokeObjectURL(url);
   }
+}
+
+/* ------------------------------------------------------------------ */
+/* Tier 1 tools, 2026-11-26 — competitor-parity batch 2               */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Render every page to grayscale and rebuild the PDF from the images.
+ * Luminance is computed per pixel by hand (0.299R + 0.587G + 0.114B) rather
+ * than with a canvas filter, which older Safari versions silently ignore.
+ * Pages become images, so text is no longer selectable in the output —
+ * the tool copy says so.
+ */
+export async function grayscalePdf(file: File): Promise<Blob> {
+  const pdfjsLib = await getPdfJs();
+  const buf = await readFileAsArrayBuffer(file);
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  const out = await PDFDocument.create();
+  try {
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = safeScale(baseVp.width, baseVp.height, 2, 4000);
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.floor(viewport.width);
+      canvas.height = Math.floor(viewport.height);
+      const ctx = canvas.getContext('2d')!;
+      await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+      const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const d = imgData.data;
+      for (let p = 0; p < d.length; p += 4) {
+        const g = 0.299 * d[p] + 0.587 * d[p + 1] + 0.114 * d[p + 2];
+        d[p] = g;
+        d[p + 1] = g;
+        d[p + 2] = g;
+      }
+      ctx.putImageData(imgData, 0, 0);
+      const img = await out.embedJpg(canvasToJpgBytes(canvas, 0.92));
+      const newPage = out.addPage([baseVp.width, baseVp.height]);
+      newPage.drawImage(img, { x: 0, y: 0, width: baseVp.width, height: baseVp.height });
+    }
+  } finally {
+    void pdf.cleanup();
+  }
+  return toBlob(await out.save({ useObjectStreams: true }));
+}
+
+/**
+ * Resize every page to the given size in PDF points (1 pt = 1/72 inch),
+ * scaling the original page content to fit, centred, keeping its aspect
+ * ratio. Unlike Crop, which trims margins, this changes the page size
+ * itself. Text and vectors stay intact — pages are re-laid-out, not
+ * rasterized.
+ */
+export async function resizePdfPages(file: File, widthPt: number, heightPt: number): Promise<Blob> {
+  if (!(widthPt > 0) || !(heightPt > 0)) throw new Error(msg('Enter a page width and height greater than zero.'));
+  const buf = await readFileAsArrayBuffer(file);
+  const src = await loadPdf(buf);
+  const out = await PDFDocument.create();
+  const embedded = await out.embedPdf(src, src.getPageIndices());
+  for (const emb of embedded) {
+    const scale = Math.min(widthPt / emb.width, heightPt / emb.height);
+    const w = emb.width * scale;
+    const h = emb.height * scale;
+    const page = out.addPage([widthPt, heightPt]);
+    page.drawPage(emb, { x: (widthPt - w) / 2, y: (heightPt - h) / 2, width: w, height: h });
+  }
+  return toBlob(await out.save({ useObjectStreams: true }));
+}
+
+/**
+ * Straighten tilted pages by the given angle in degrees (positive turns
+ * the page clockwise). Rendered, not rotated via /Rotate: the PDF spec
+ * only allows page rotations of 0/90/180/270, so an arbitrary angle has
+ * to be baked into the pixels. Pages become images, like Grayscale.
+ * Angles are small by design (the tool caps them at +/-10 degrees), so
+ * the corners lose almost nothing.
+ */
+export async function deskewPdf(file: File, angleDegrees: number): Promise<Blob> {
+  const pdfjsLib = await getPdfJs();
+  const buf = await readFileAsArrayBuffer(file);
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  const out = await PDFDocument.create();
+  try {
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = safeScale(baseVp.width, baseVp.height, 2, 4000);
+      const viewport = page.getViewport({ scale });
+      const srcCanvas = document.createElement('canvas');
+      srcCanvas.width = Math.floor(viewport.width);
+      srcCanvas.height = Math.floor(viewport.height);
+      await page.render({ canvasContext: srcCanvas.getContext('2d')!, viewport, canvas: srcCanvas }).promise;
+      const canvas = document.createElement('canvas');
+      canvas.width = srcCanvas.width;
+      canvas.height = srcCanvas.height;
+      const ctx = canvas.getContext('2d')!;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate((angleDegrees * Math.PI) / 180);
+      ctx.drawImage(srcCanvas, -srcCanvas.width / 2, -srcCanvas.height / 2);
+      const img = await out.embedJpg(canvasToJpgBytes(canvas, 0.92));
+      const newPage = out.addPage([baseVp.width, baseVp.height]);
+      newPage.drawImage(img, { x: 0, y: 0, width: baseVp.width, height: baseVp.height });
+    }
+  } finally {
+    void pdf.cleanup();
+  }
+  return toBlob(await out.save({ useObjectStreams: true }));
+}
+
+/**
+ * Guess the tilt of the first few pages (median of up to 3) and return the
+ * correction angle in degrees — the value to pass to deskewPdf. Projection
+ * profile method: for each candidate angle the page is rotated and the
+ * variance of its horizontal dark-pixel projection is scored; text lines
+ * make the score peak when the page is straight. Photos and mostly-empty
+ * pages score flat, so the tool always lets the user adjust the angle by
+ * hand afterwards.
+ */
+export async function detectSkewAngle(file: File): Promise<number> {
+  const pdfjsLib = await getPdfJs();
+  const buf = await readFileAsArrayBuffer(file);
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  try {
+    const angles: number[] = [];
+    const pagesToCheck = Math.min(pdf.numPages, 3);
+    for (let i = 1; i <= pagesToCheck; i++) {
+      const page = await pdf.getPage(i);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = Math.min(500 / baseVp.width, 500 / baseVp.height);
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.max(1, Math.floor(viewport.width));
+      canvas.height = Math.max(1, Math.floor(viewport.height));
+      await page.render({ canvasContext: canvas.getContext('2d')!, viewport, canvas }).promise;
+      angles.push(bestSkewAngle(canvas));
+    }
+    angles.sort((a, b) => a - b);
+    return angles[Math.floor(angles.length / 2)];
+  } finally {
+    void pdf.cleanup();
+  }
+}
+
+function bestSkewAngle(canvas: HTMLCanvasElement): number {
+  const w = canvas.width;
+  const h = canvas.height;
+  const tmp = document.createElement('canvas');
+  tmp.width = w;
+  tmp.height = h;
+  const tctx = tmp.getContext('2d')!;
+  let bestAngle = 0;
+  let bestScore = -1;
+  for (let deg = -5; deg <= 5; deg += 0.5) {
+    tctx.save();
+    tctx.clearRect(0, 0, w, h);
+    tctx.translate(w / 2, h / 2);
+    tctx.rotate((deg * Math.PI) / 180);
+    tctx.drawImage(canvas, -w / 2, -h / 2);
+    tctx.restore();
+    const data = tctx.getImageData(0, 0, w, h).data;
+    let score = 0;
+    let prev = 0;
+    for (let y = 0; y < h; y += 2) {
+      let row = 0;
+      for (let x = 0; x < w; x += 2) {
+        const p = (y * w + x) * 4;
+        const lum = 0.299 * data[p] + 0.587 * data[p + 1] + 0.114 * data[p + 2];
+        if (lum < 160) row++;
+      }
+      score += (row - prev) * (row - prev);
+      prev = row;
+    }
+    if (score > bestScore) {
+      bestScore = score;
+      bestAngle = deg;
+    }
+  }
+  return bestAngle;
+}
+
+/**
+ * Pages whose ink covers less than `threshold` of the page (dark pixels as
+ * a fraction of all sampled pixels). Rendered small for speed — a scanned
+ * blank page is mostly paper-coloured noise, so the threshold is on real
+ * ink, not on compression artefacts. 1-based page numbers.
+ */
+export async function findBlankPages(file: File, threshold = 0.002): Promise<number[]> {
+  const pdfjsLib = await getPdfJs();
+  const buf = await readFileAsArrayBuffer(file);
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise;
+  const blank: number[] = [];
+  try {
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const baseVp = page.getViewport({ scale: 1 });
+      const scale = Math.min(400 / baseVp.width, 400 / baseVp.height, 1);
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.max(1, Math.floor(viewport.width));
+      canvas.height = Math.max(1, Math.floor(viewport.height));
+      const ctx = canvas.getContext('2d')!;
+      await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+      const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+      const total = canvas.width * canvas.height;
+      let ink = 0;
+      let sampled = 0;
+      for (let p = 0; p < data.length; p += 16) {
+        sampled++;
+        const lum = 0.299 * data[p] + 0.587 * data[p + 1] + 0.114 * data[p + 2];
+        if (lum < 180) ink++;
+      }
+      if (sampled > 0 && ink / sampled < threshold) blank.push(i);
+    }
+  } finally {
+    void pdf.cleanup();
+  }
+  return blank;
+}
+
+/** Drop every page findBlankPages flags, leaving the rest untouched. */
+export async function removeBlankPages(file: File, threshold = 0.002): Promise<Blob> {
+  const blank = await findBlankPages(file, threshold);
+  if (blank.length === 0) throw new Error(msg('No blank pages found in this PDF. Try the Lenient setting.'));
+  return removePagesFromFile(file, blank);
+}
+
+/**
+ * Lay N source pages on each sheet (2-up, 4-up, 6-up, 9-up), keeping the
+ * sheet the size of the first source page. Each source page is scaled to
+ * fit its cell, centred, keeping its aspect ratio; text and vectors stay
+ * intact.
+ */
+export async function nUpPdf(file: File, cols: number, rows: number): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const src = await loadPdf(buf);
+  const out = await PDFDocument.create();
+  const embedded = await out.embedPdf(src, src.getPageIndices());
+  if (embedded.length === 0) throw new Error(msg('This PDF has no pages.'));
+  const first = src.getPage(0);
+  const sheetW = first.getWidth();
+  const sheetH = first.getHeight();
+  const cellW = sheetW / cols;
+  const cellH = sheetH / rows;
+  const perSheet = cols * rows;
+  for (let s = 0; s < embedded.length; s += perSheet) {
+    const page = out.addPage([sheetW, sheetH]);
+    for (let k = 0; k < perSheet && s + k < embedded.length; k++) {
+      const emb = embedded[s + k];
+      const col = k % cols;
+      const row = Math.floor(k / cols);
+      const scale = Math.min(cellW / emb.width, cellH / emb.height);
+      const w = emb.width * scale;
+      const h = emb.height * scale;
+      page.drawPage(emb, {
+        x: col * cellW + (cellW - w) / 2,
+        y: sheetH - (row + 1) * cellH + (cellH - h) / 2,
+        width: w,
+        height: h,
+      });
+    }
+  }
+  return toBlob(await out.save({ useObjectStreams: true }));
+}
+
+/**
+ * Insert a blank page after each of `afterPages` (1-based page numbers;
+ * 0 means before the first page). Blank pages are the size of the first
+ * page. Duplicates and out-of-range positions are ignored.
+ */
+export async function insertBlankPages(file: File, afterPages: number[]): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const src = await loadPdf(buf);
+  const total = src.getPageCount();
+  const positions = [...new Set(afterPages)].filter(n => n >= 0 && n <= total).sort((a, b) => a - b);
+  if (positions.length === 0) throw new Error(msg('Choose where the blank pages go.'));
+  const out = await PDFDocument.create();
+  const pages = await out.copyPages(src, src.getPageIndices());
+  const posSet = new Set(positions);
+  const w = src.getPage(0).getWidth();
+  const h = src.getPage(0).getHeight();
+  if (posSet.has(0)) out.addPage([w, h]);
+  pages.forEach((p, i) => {
+    out.addPage(p);
+    if (posSet.has(i + 1)) out.addPage([w, h]);
+  });
+  return toBlob(await out.save({ useObjectStreams: true }));
+}
+
+/**
+ * Insert every page of `insertFile` into `file` after page `afterPage`
+ * (1-based; 0 inserts at the start, past-the-end clamps to the end).
+ */
+export async function insertPagesFromFile(file: File, insertFile: File, afterPage: number): Promise<Blob> {
+  const buf = await readFileAsArrayBuffer(file);
+  const src = await loadPdf(buf);
+  const insBuf = await readFileAsArrayBuffer(insertFile);
+  const ins = await loadPdf(insBuf);
+  const total = src.getPageCount();
+  const after = Math.max(0, Math.min(Math.floor(afterPage) || 0, total));
+  const out = await PDFDocument.create();
+  const pages = await out.copyPages(src, src.getPageIndices());
+  const inserted = await out.copyPages(ins, ins.getPageIndices());
+  if (after === 0) inserted.forEach(ip => out.addPage(ip));
+  pages.forEach((p, i) => {
+    out.addPage(p);
+    if (i + 1 === after) inserted.forEach(ip => out.addPage(ip));
+  });
+  return toBlob(await out.save({ useObjectStreams: true }));
+}
+
+export interface PdfBookmark {
+  title: string;
+  /** 1-based page number the bookmark points at. */
+  page: number;
+}
+
+function refKey(ref: PDFRef): string {
+  return `${ref.objectNumber} ${ref.generationNumber}`;
+}
+
+/**
+ * Read a PDF's outline (bookmarks) with pdf-lib's low-level API: the
+ * catalog's /Outlines dict, walked along its /First → /Next sibling chain.
+ * A bookmark's destination is a /Dest array ([pageRef, ...]) or a /GoTo
+ * action's /D; named destinations are resolved through the catalog's
+ * /Names → /Dests name tree. Bookmarks whose destination cannot be
+ * resolved are skipped. Only top-level bookmarks are returned — children
+ * fall inside their parent's range when splitting.
+ */
+export async function getPdfBookmarks(file: File): Promise<PdfBookmark[]> {
+  const buf = await readFileAsArrayBuffer(file);
+  const src = await loadPdf(buf);
+  const context = src.context;
+  const pages = src.getPages();
+  const pageByRef = new Map<string, number>();
+  pages.forEach((p, i) => pageByRef.set(refKey(p.ref), i + 1));
+
+  // Named destinations: /Names → /Dests → /Names [name, dest, name, dest, ...]
+  const namedDests = new Map<string, PDFArray>();
+  const names = context.lookup(src.catalog.get(PDFName.of('Names')));
+  if (names instanceof PDFDict) {
+    const dests = context.lookup(names.get(PDFName.of('Dests')));
+    if (dests instanceof PDFDict) {
+      const pairs = context.lookup(dests.get(PDFName.of('Names')));
+      if (pairs instanceof PDFArray) {
+        for (let i = 0; i + 1 < pairs.size(); i += 2) {
+          const nameObj = context.lookup(pairs.get(i));
+          const destObj = context.lookup(pairs.get(i + 1));
+          if (nameObj instanceof PDFString && destObj instanceof PDFArray) {
+            namedDests.set(nameObj.decodeText(), destObj);
+          }
+        }
+      }
+    }
+  }
+
+  const destToPage = (dest: unknown): number | null => {
+    if (dest instanceof PDFArray) {
+      // The first element is the destination page's indirect reference —
+      // check it BEFORE lookup, because lookup resolves it to the page
+      // dict and the instanceof PDFRef test would then never match.
+      const first = dest.get(0);
+      if (first instanceof PDFRef) return pageByRef.get(refKey(first)) ?? null;
+      return null;
+    }
+    if (dest instanceof PDFName) {
+      const named = namedDests.get(dest.decodeText());
+      return named ? destToPage(named) : null;
+    }
+    return null;
+  };
+
+  const bookmarkPage = (item: PDFDict): number | null => {
+    const dest = context.lookup(item.get(PDFName.of('Dest')));
+    if (dest) return destToPage(dest);
+    const action = context.lookup(item.get(PDFName.of('A')));
+    if (action instanceof PDFDict) {
+      const d = context.lookup(action.get(PDFName.of('D')));
+      if (d) return destToPage(d);
+    }
+    return null;
+  };
+
+  const outlines = context.lookup(src.catalog.get(PDFName.of('Outlines')));
+  if (!(outlines instanceof PDFDict)) return [];
+  let ref = context.lookup(outlines.get(PDFName.of('First')));
+  const out: PdfBookmark[] = [];
+  while (ref instanceof PDFDict) {
+    const titleObj = context.lookup(ref.get(PDFName.of('Title')));
+    const page = bookmarkPage(ref);
+    if (titleObj instanceof PDFString && page !== null) {
+      out.push({ title: titleObj.decodeText(), page });
+    }
+    ref = context.lookup(ref.get(PDFName.of('Next')));
+  }
+  return out;
+}
+
+/**
+ * Split a PDF at its top-level bookmarks: one file per bookmark, from the
+ * bookmark's page up to (but not including) the next bookmark's page. A
+ * bookmark before page 1 is impossible; if the first bookmark is past
+ * page 1, the leading pages become the first file. Throws when the PDF
+ * has no usable bookmarks.
+ */
+export async function splitPdfByBookmarks(file: File): Promise<Blob[]> {
+  const bookmarks = await getPdfBookmarks(file);
+  if (bookmarks.length === 0) throw new Error(msg('This PDF has no bookmarks to split by.'));
+  const total = (await getPdfInfo(file)).pageCount;
+  const starts = [...bookmarks]
+    .filter(b => b.page >= 1 && b.page <= total)
+    .sort((a, b) => a.page - b.page)
+    .map(b => b.page);
+  const unique: number[] = [];
+  for (const s of starts) if (!unique.includes(s)) unique.push(s);
+  if (unique.length === 0) throw new Error(msg('This PDF has no bookmarks to split by.'));
+  if (unique[0] !== 1) unique.unshift(1);
+  const ranges = unique.map((s, i) => ({ start: s, end: i + 1 < unique.length ? unique[i + 1] - 1 : total }));
+  return splitPdf(file, ranges);
 }

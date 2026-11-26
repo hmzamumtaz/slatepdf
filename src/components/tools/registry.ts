@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import AddPageNumbersTool from './AddPageNumbersTool';
+import AddBlankPageTool from './AddBlankPageTool';
 import AddWatermarkTool from './AddWatermarkTool';
 import AiSummarizerTool from './AiSummarizerTool';
 import AlternateMixTool from './AlternateMixTool';
@@ -7,6 +8,7 @@ import BatesNumberingTool from './BatesNumberingTool';
 import ComparePdfTool from './ComparePdfTool';
 import CompressPdfTool from './CompressPdfTool';
 import CropPdfTool from './CropPdfTool';
+import DeskewPdfTool from './DeskewPdfTool';
 import EditPdfTool from './EditPdfTool';
 import EditMetadataTool from './EditMetadataTool';
 import EpubToPdfTool from './EpubToPdfTool';
@@ -15,11 +17,13 @@ import ExtractPagesTool from './ExtractPagesTool';
 import ExtractImagesTool from './ExtractImagesTool';
 import FillPdfFormTool from './FillPdfFormTool';
 import FlattenPdfTool from './FlattenPdfTool';
+import GrayscalePdfTool from './GrayscalePdfTool';
 import HeicToPdfTool from './HeicToPdfTool';
 import HtmlToPdfTool from './HtmlToPdfTool';
 import HeaderFooterTool from './HeaderFooterTool';
 import JpgToPdfTool from './JpgToPdfTool';
 import MergePdfTool from './MergePdfTool';
+import NUpPdfTool from './NUpPdfTool';
 import OcrPdfTool from './OcrPdfTool';
 import OptimizePdfTool from './OptimizePdfTool';
 import OrganizePdfTool from './OrganizePdfTool';
@@ -28,6 +32,7 @@ import PdfToJpgTool from './PdfToJpgTool';
 import PdfToHtmlTool from './PdfToHtmlTool';
 import PdfToMarkdownTool from './PdfToMarkdownTool';
 import PdfToPdfATool from './PdfToPdfATool';
+import PdfToPngTool from './PdfToPngTool';
 import PdfToPowerPointTool from './PdfToPowerPointTool';
 import PdfToWordTool from './PdfToWordTool';
 import PdfToTextTool from './PdfToTextTool';
@@ -36,7 +41,9 @@ import PowerPointToPdfTool from './PowerPointToPdfTool';
 import ProtectPdfTool from './ProtectPdfTool';
 import RedactPdfTool from './RedactPdfTool';
 import RemovePagesTool from './RemovePagesTool';
+import RemoveBlankPagesTool from './RemoveBlankPagesTool';
 import RepairPdfTool from './RepairPdfTool';
+import ResizePdfTool from './ResizePdfTool';
 import RotatePdfTool from './RotatePdfTool';
 import ScanPdfTool from './ScanPdfTool';
 import SignPdfTool from './SignPdfTool';
@@ -52,6 +59,7 @@ import WordToPdfTool from './WordToPdfTool';
 /** Every tool's interface by slug, for pages that render a tool from a URL parameter. */
 export const toolComponents: Record<string, ComponentType> = {
   'add-page-numbers': AddPageNumbersTool,
+  'add-blank-page': AddBlankPageTool,
   'add-watermark': AddWatermarkTool,
   'ai-summarizer': AiSummarizerTool,
   'alternate-mix': AlternateMixTool,
@@ -59,6 +67,7 @@ export const toolComponents: Record<string, ComponentType> = {
   'compare-pdf': ComparePdfTool,
   'compress-pdf': CompressPdfTool,
   'crop-pdf': CropPdfTool,
+  'deskew-pdf': DeskewPdfTool,
   'edit-pdf': EditPdfTool,
   'edit-metadata': EditMetadataTool,
   'epub-to-pdf': EpubToPdfTool,
@@ -67,11 +76,13 @@ export const toolComponents: Record<string, ComponentType> = {
   'extract-images': ExtractImagesTool,
   'fill-pdf-form': FillPdfFormTool,
   'flatten-pdf': FlattenPdfTool,
+  'grayscale-pdf': GrayscalePdfTool,
   'heic-to-pdf': HeicToPdfTool,
   'header-footer': HeaderFooterTool,
   'html-to-pdf': HtmlToPdfTool,
   'jpg-to-pdf': JpgToPdfTool,
   'merge-pdf': MergePdfTool,
+  'n-up-pdf': NUpPdfTool,
   'ocr-pdf': OcrPdfTool,
   'optimize-pdf': OptimizePdfTool,
   'organize-pdf': OrganizePdfTool,
@@ -80,6 +91,7 @@ export const toolComponents: Record<string, ComponentType> = {
   'pdf-to-html': PdfToHtmlTool,
   'pdf-to-markdown': PdfToMarkdownTool,
   'pdf-to-pdfa': PdfToPdfATool,
+  'pdf-to-png': PdfToPngTool,
   'pdf-to-powerpoint': PdfToPowerPointTool,
   'pdf-to-text': PdfToTextTool,
   'pdf-to-word': PdfToWordTool,
@@ -87,8 +99,10 @@ export const toolComponents: Record<string, ComponentType> = {
   'powerpoint-to-pdf': PowerPointToPdfTool,
   'protect-pdf': ProtectPdfTool,
   'redact-pdf': RedactPdfTool,
+  'remove-blank-pages': RemoveBlankPagesTool,
   'remove-pages': RemovePagesTool,
   'repair-pdf': RepairPdfTool,
+  'resize-pdf': ResizePdfTool,
   'rotate-pdf': RotatePdfTool,
   'scan-pdf': ScanPdfTool,
   'sign-pdf': SignPdfTool,

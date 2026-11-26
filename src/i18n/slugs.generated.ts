@@ -23,6 +23,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-a-pdf",
     "epub-to-pdf": "epub-a-pdf",
     "pdf-to-jpg": "pdf-a-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-a-word",
     "pdf-to-powerpoint": "pdf-a-powerpoint",
     "pdf-to-excel": "pdf-a-excel",
@@ -49,7 +50,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "pt": {
     "pdf-workspace": "area-de-trabalho-pdf",
@@ -74,6 +81,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-para-pdf",
     "epub-to-pdf": "epub-para-pdf",
     "pdf-to-jpg": "pdf-para-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-para-word",
     "pdf-to-powerpoint": "pdf-para-powerpoint",
     "pdf-to-excel": "pdf-para-excel",
@@ -100,7 +108,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "fr": {
     "pdf-workspace": "espace-de-travail-pdf",
@@ -125,6 +139,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-en-pdf",
     "epub-to-pdf": "epub-en-pdf",
     "pdf-to-jpg": "pdf-en-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-en-word",
     "pdf-to-powerpoint": "pdf-en-powerpoint",
     "pdf-to-excel": "pdf-en-excel",
@@ -151,7 +166,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "de": {
     "pdf-workspace": "pdf-arbeitsbereich",
@@ -176,6 +197,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-in-pdf",
     "epub-to-pdf": "epub-in-pdf",
     "pdf-to-jpg": "pdf-in-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-in-word",
     "pdf-to-powerpoint": "pdf-in-powerpoint",
     "pdf-to-excel": "pdf-in-excel",
@@ -202,7 +224,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "it": {
     "pdf-workspace": "area-di-lavoro-pdf",
@@ -227,6 +255,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-in-pdf",
     "epub-to-pdf": "epub-in-pdf",
     "pdf-to-jpg": "pdf-in-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-in-word",
     "pdf-to-powerpoint": "pdf-in-powerpoint",
     "pdf-to-excel": "pdf-in-excel",
@@ -253,7 +282,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "id": {
     "pdf-workspace": "ruang-kerja-pdf",
@@ -278,6 +313,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-ke-pdf",
     "epub-to-pdf": "epub-ke-pdf",
     "pdf-to-jpg": "pdf-ke-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-ke-word",
     "pdf-to-powerpoint": "pdf-ke-powerpoint",
     "pdf-to-excel": "pdf-ke-excel",
@@ -304,7 +340,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "ru": {
     "pdf-workspace": "pdf-workspace",
@@ -329,6 +371,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -355,7 +398,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "ar": {
     "pdf-workspace": "pdf-workspace",
@@ -380,6 +429,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -406,7 +456,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "zh": {
     "pdf-workspace": "pdf-workspace",
@@ -431,6 +487,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -457,7 +514,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "ja": {
     "pdf-workspace": "pdf-workspace",
@@ -482,6 +545,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -508,7 +572,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "ko": {
     "pdf-workspace": "pdf-workspace",
@@ -533,6 +603,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -559,7 +630,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "hi": {
     "pdf-workspace": "pdf-workspace",
@@ -584,6 +661,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -610,7 +688,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "tr": {
     "pdf-workspace": "pdf-calisma-alani",
@@ -635,6 +719,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-pdf-donustur",
     "epub-to-pdf": "epub-pdf-donustur",
     "pdf-to-jpg": "pdf-jpg-donustur",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-word-donustur",
     "pdf-to-powerpoint": "pdf-powerpoint-donustur",
     "pdf-to-excel": "pdf-excel-donustur",
@@ -661,7 +746,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "nl": {
     "pdf-workspace": "pdf-werkruimte",
@@ -686,6 +777,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-naar-pdf",
     "epub-to-pdf": "epub-naar-pdf",
     "pdf-to-jpg": "pdf-naar-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-naar-word",
     "pdf-to-powerpoint": "pdf-naar-powerpoint",
     "pdf-to-excel": "pdf-naar-excel",
@@ -712,7 +804,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "pl": {
     "pdf-workspace": "obszar-roboczy-pdf",
@@ -737,6 +835,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-na-pdf",
     "epub-to-pdf": "epub-na-pdf",
     "pdf-to-jpg": "pdf-na-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-na-word",
     "pdf-to-powerpoint": "pdf-na-powerpoint",
     "pdf-to-excel": "pdf-na-excel",
@@ -763,7 +862,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "vi": {
     "pdf-workspace": "khong-gian-lam-viec-pdf",
@@ -788,6 +893,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "chuyen-svg-sang-pdf",
     "epub-to-pdf": "chuyen-epub-sang-pdf",
     "pdf-to-jpg": "chuyen-pdf-sang-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "chuyen-pdf-sang-word",
     "pdf-to-powerpoint": "chuyen-pdf-sang-powerpoint",
     "pdf-to-excel": "chuyen-pdf-sang-excel",
@@ -814,7 +920,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "th": {
     "pdf-workspace": "pdf-workspace",
@@ -839,6 +951,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -865,7 +978,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "uk": {
     "pdf-workspace": "pdf-workspace",
@@ -890,6 +1009,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -916,7 +1036,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "sv": {
     "pdf-workspace": "pdf-arbetsyta",
@@ -941,6 +1067,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-till-pdf",
     "epub-to-pdf": "epub-till-pdf",
     "pdf-to-jpg": "pdf-till-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-till-word",
     "pdf-to-powerpoint": "pdf-till-powerpoint",
     "pdf-to-excel": "pdf-till-excel",
@@ -967,7 +1094,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "cs": {
     "pdf-workspace": "pracovni-prostor-pdf",
@@ -992,6 +1125,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-do-pdf",
     "epub-to-pdf": "epub-do-pdf",
     "pdf-to-jpg": "pdf-do-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-do-wordu",
     "pdf-to-powerpoint": "pdf-do-powerpointu",
     "pdf-to-excel": "pdf-do-excelu",
@@ -1018,7 +1152,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "ro": {
     "pdf-workspace": "spatiu-de-lucru-pdf",
@@ -1043,6 +1183,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-in-pdf",
     "epub-to-pdf": "epub-in-pdf",
     "pdf-to-jpg": "pdf-in-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-in-word",
     "pdf-to-powerpoint": "pdf-in-powerpoint",
     "pdf-to-excel": "pdf-in-excel",
@@ -1069,7 +1210,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "hu": {
     "pdf-workspace": "pdf-munkaterulet",
@@ -1094,6 +1241,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-pdf-konvertalas",
     "epub-to-pdf": "epub-pdf-konvertalas",
     "pdf-to-jpg": "pdf-jpg-konvertalas",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-word-konvertalas",
     "pdf-to-powerpoint": "pdf-powerpoint-konvertalas",
     "pdf-to-excel": "pdf-excel-konvertalas",
@@ -1120,7 +1268,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "el": {
     "pdf-workspace": "pdf-workspace",
@@ -1145,6 +1299,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -1171,7 +1326,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "he": {
     "pdf-workspace": "pdf-workspace",
@@ -1196,6 +1357,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -1222,7 +1384,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "ms": {
     "pdf-workspace": "ruang-kerja-pdf",
@@ -1247,6 +1415,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-ke-pdf",
     "epub-to-pdf": "epub-ke-pdf",
     "pdf-to-jpg": "pdf-ke-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-ke-word",
     "pdf-to-powerpoint": "pdf-ke-powerpoint",
     "pdf-to-excel": "pdf-ke-excel",
@@ -1273,7 +1442,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "bn": {
     "pdf-workspace": "pdf-workspace",
@@ -1298,6 +1473,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-to-pdf",
     "epub-to-pdf": "epub-to-pdf",
     "pdf-to-jpg": "pdf-to-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-to-word",
     "pdf-to-powerpoint": "pdf-to-powerpoint",
     "pdf-to-excel": "pdf-to-excel",
@@ -1324,7 +1500,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "da": {
     "pdf-workspace": "pdf-arbejdsomrade",
@@ -1349,6 +1531,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-til-pdf",
     "epub-to-pdf": "epub-til-pdf",
     "pdf-to-jpg": "pdf-til-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-til-word",
     "pdf-to-powerpoint": "pdf-til-powerpoint",
     "pdf-to-excel": "pdf-til-excel",
@@ -1375,7 +1558,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "fi": {
     "pdf-workspace": "pdf-tyotila",
@@ -1400,6 +1589,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-pdfksi",
     "epub-to-pdf": "epub-pdfksi",
     "pdf-to-jpg": "pdf-jpgksi",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-wordiksi",
     "pdf-to-powerpoint": "pdf-powerpointiksi",
     "pdf-to-excel": "pdf-exceliksi",
@@ -1426,7 +1616,13 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   },
   "nb": {
     "pdf-workspace": "pdf-arbeidsomrade",
@@ -1451,6 +1647,7 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "svg-to-pdf": "svg-til-pdf",
     "epub-to-pdf": "epub-til-pdf",
     "pdf-to-jpg": "pdf-til-jpg",
+    "pdf-to-png": "pdf-to-png",
     "pdf-to-word": "pdf-til-word",
     "pdf-to-powerpoint": "pdf-til-powerpoint",
     "pdf-to-excel": "pdf-til-excel",
@@ -1477,6 +1674,12 @@ export const LOCALIZED_SLUGS: Record<string, Record<string, string>> = {
     "text-to-pdf": "text-to-pdf",
     "header-footer": "header-footer",
     "bates-numbering": "bates-numbering",
-    "alternate-mix": "alternate-mix"
+    "grayscale-pdf": "grayscale-pdf",
+    "resize-pdf": "resize-pdf",
+    "deskew-pdf": "deskew-pdf",
+    "alternate-mix": "alternate-mix",
+    "remove-blank-pages": "remove-blank-pages",
+    "n-up-pdf": "n-up-pdf",
+    "add-blank-page": "add-blank-page"
   }
 };
