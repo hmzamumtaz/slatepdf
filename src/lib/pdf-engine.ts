@@ -2910,7 +2910,7 @@ export async function extractImagesFromPdf(file: File): Promise<ExtractedImage[]
     const seen = new Set<string>();
     for (let j = 0; j < ops.fnArray.length; j++) {
       const fn = ops.fnArray[j];
-      if (fn !== pdfjsLib.OPS.paintImageXObject && fn !== pdfjsLib.OPS.paintJpegXObject) continue;
+      if (fn !== pdfjsLib.OPS.paintImageXObject) continue;
       const name = ops.argsArray[j][0] as string;
       if (seen.has(name)) continue;
       seen.add(name);
