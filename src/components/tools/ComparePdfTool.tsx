@@ -61,8 +61,9 @@ export default function ComparePdfTool() {
           <FileUpload
             accept=".pdf"
             multiple
+            maxFiles={2}
             files={files}
-            onFilesSelected={(f) => { setFiles(f.slice(0, 2)); setResult(null); setError(null); }}
+            onFilesSelected={(f) => { setFiles((prev) => [...prev, ...f].slice(0, 2)); setResult(null); setError(null); }}
             onRemoveFile={(idx) => setFiles((prev) => prev.filter((_, i) => i !== idx))}
           />
 
