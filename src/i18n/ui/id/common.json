@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Pengenalan teks memerlukan koneksi internet saat pertama kali untuk mengunduh model bahasa.",
   "Thanks for rating!": "Terima kasih atas penilaian Anda!",
   "That file has no pages to insert.": "File tersebut tidak memiliki halaman untuk disisipkan.",
+  "That image could not be exported.": "Gambar itu tidak dapat diekspor.",
+  "That image could not be read.": "Gambar itu tidak dapat dibaca.",
   "That page is not in this document any more.": "Halaman tersebut sudah tidak ada di dokumen ini.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Dokumen ini berisi teks, tetapi tidak ada kalimat lengkap untuk diringkas (mungkin berupa formulir, tabel, atau dokumen yang hanya berisi daftar).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Dokumen ini tampaknya ditulis dalam bahasa Mandarin, Jepang, atau Korea — peringkas ini hanya mendeteksi batas kalimat untuk bahasa yang memakai spasi dan tanda baca \".!?\", sehingga belum bisa memecah teks ini.",

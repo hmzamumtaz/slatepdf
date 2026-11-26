@@ -1,0 +1,13 @@
+{
+  "Author": "Tekijä",
+  "Author name": "Tekijän nimi",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Valitse PDF nähdäksesi sen nykyisen otsikon, tekijän, aiheen ja avainsanat.",
+  "Comma-separated keywords": "Pilkulla erotetut avainsanat",
+  "Document title": "Asiakirjan otsikko",
+  "Keywords": "Avainsanat",
+  "Save Metadata": "Tallenna metatiedot",
+  "Subject": "Aihe",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Nykyiset arvot näkyvät yllä – muuta tarvittavat ja tallenna. Jätä kenttä tyhjäksi tyhjentääksesi sen.",
+  "Title": "Otsikko",
+  "What the document is about": "Mistä asiakirjassa on kyse"
+}

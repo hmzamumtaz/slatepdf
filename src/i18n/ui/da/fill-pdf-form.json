@@ -1,0 +1,9 @@
+{
+  "Checked": "Markeret",
+  "Choose a PDF with fillable form fields to see them here.": "Vælg en PDF med udfyldelige formularfelter for at se dem her.",
+  "Choose…": "Vælg…",
+  "Save Filled PDF": "Gem udfyldt PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "De udfyldte værdier gemmes i PDF’en. Brug derefter «Flad PDF ud», hvis svarene ikke længere skal kunne redigeres.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Denne PDF har ingen udfyldelige formularfelter. Det kan være en flad scanning eller en udskrevet formular – udfyldelige felter er dem, en PDF-læser lader dig skrive i.",
+  "This field type cannot be filled here.": "Denne felttype kan ikke udfyldes her."
+}

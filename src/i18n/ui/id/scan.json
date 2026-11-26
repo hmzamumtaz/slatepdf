@@ -56,6 +56,7 @@
   "Delete selected": "Hapus yang dipilih",
   "Delete this scan from this device?": "Hapus pindaian ini dari perangkat ini?",
   "Delete {name}": "Hapus {name}",
+  "Dismiss": "Tutup",
   "Document": "Dokumen",
   "Document language": "Bahasa dokumen",
   "Document name": "Nama dokumen",
@@ -92,6 +93,7 @@
   "Front only — skip the back": "Hanya depan — lewati bagian belakang",
   "Full photo": "Foto penuh",
   "German": "Jerman",
+  "Go back": "Kembali",
   "Grayscale": "Skala abu-abu",
   "Hide password": "Sembunyikan kata sandi",
   "Highlight": "Sorot",
@@ -130,6 +132,7 @@
   "Now turn the card over and scan the back": "Sekarang balik kartunya dan pindai bagian belakang",
   "One JPG image of the page.": "Satu gambar JPG dari halaman.",
   "One per line": "Satu per baris",
+  "Open": "Buka",
   "Original": "Asli",
   "PDF ready": "PDF siap",
   "Page found — hold steady": "Halaman ditemukan — tahan tetap stabil",
@@ -219,6 +222,7 @@
   "Undo last change": "Urungkan perubahan terakhir",
   "Urdu": "Urdu",
   "Use at least {count} characters.": "Gunakan minimal {count} karakter.",
+  "Use in PDF": "Gunakan di PDF",
   "Use signature": "Gunakan tanda tangan",
   "Vietnamese": "Vietnam",
   "Websites": "Situs web",
@@ -237,6 +241,5 @@
   "{count} JPG images, one per page, in a .zip.": "{count} gambar JPG, satu per halaman, dalam .zip.",
   "{count} page": "{count} halaman",
   "{count} pages": "{count} halaman",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Jika pengenalan teks tidak dapat dimuat (perlu koneksi saat pertama kali), nonaktifkan lalu coba lagi.",
-  "Go back": "Kembali"
+  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Jika pengenalan teks tidak dapat dimuat (perlu koneksi saat pertama kali), nonaktifkan lalu coba lagi."
 }

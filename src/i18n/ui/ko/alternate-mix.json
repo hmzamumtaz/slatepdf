@@ -1,0 +1,11 @@
+{
+  "Alternate & Mix": "번갈아 섞기",
+  "Back to all tools": "모든 도구로 돌아가기",
+  "First document": "첫 번째 문서",
+  "Interleave the pages of two PDFs, one after the other": "두 PDF의 페이지를 번갈아 끼워 넣기",
+  "Mix PDFs": "PDF 섞기",
+  "Mixed PDF downloaded": "섞은 PDF 다운로드됨",
+  "Mixing...": "섞는 중…",
+  "Second document": "두 번째 문서",
+  "The result goes page 1 of the first document, page 1 of the second, page 2 of the first, page 2 of the second, and so on. If one document is longer, its remaining pages go at the end.": "결과는 첫 번째 문서의 1페이지, 두 번째 문서의 1페이지, 첫 번째 문서의 2페이지, 두 번째 문서의 2페이지 순입니다. 한 문서가 더 길면 남은 페이지가 끝에 붙습니다."
+}

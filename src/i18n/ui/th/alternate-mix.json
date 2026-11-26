@@ -1,0 +1,11 @@
+{
+  "Alternate & Mix": "สลับและผสม",
+  "Back to all tools": "กลับไปที่เครื่องมือทั้งหมด",
+  "First document": "เอกสารแรก",
+  "Interleave the pages of two PDFs, one after the other": "แทรกหน้าของ PDF สองไฟล์สลับกันทีละหน้า",
+  "Mix PDFs": "ผสม PDF",
+  "Mixed PDF downloaded": "ดาวน์โหลด PDF ที่ผสมแล้ว",
+  "Mixing...": "กำลังผสม…",
+  "Second document": "เอกสารที่สอง",
+  "The result goes page 1 of the first document, page 1 of the second, page 2 of the first, page 2 of the second, and so on. If one document is longer, its remaining pages go at the end.": "ผลลัพธ์คือ หน้า 1 ของเอกสารแรก หน้า 1 ของเอกสารที่สอง หน้า 2 ของเอกสารแรก หน้า 2 ของเอกสารที่สอง และต่อไปเรื่อยๆ หากเอกสารหนึ่งยาวกว่า หน้าที่เหลือจะอยู่ท้ายสุด"
+}

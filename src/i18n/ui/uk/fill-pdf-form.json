@@ -1,0 +1,9 @@
+{
+  "Checked": "Позначено",
+  "Choose a PDF with fillable form fields to see them here.": "Виберіть PDF із заповнюваними полями форми, щоб побачити їх тут.",
+  "Choose…": "Вибрати…",
+  "Save Filled PDF": "Зберегти заповнений PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Заповнені значення зберігаються в PDF. Потім скористайтеся «Звести PDF», якщо відповіді більше не мають редагуватися.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "У цьому PDF немає заповнюваних полів форми. Можливо, це плоский скан або друкована форма: заповнювані поля — це ті, у які програма для читання PDF дозволяє вводити текст.",
+  "This field type cannot be filled here.": "Поле цього типу тут заповнити не можна."
+}

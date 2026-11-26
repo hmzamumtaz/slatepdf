@@ -56,6 +56,7 @@
   "Delete selected": "Auswahl löschen",
   "Delete this scan from this device?": "Diesen Scan von diesem Gerät löschen?",
   "Delete {name}": "{name} löschen",
+  "Dismiss": "Schließen",
   "Document": "Dokument",
   "Document language": "Dokumentsprache",
   "Document name": "Dokumentname",
@@ -92,6 +93,7 @@
   "Front only — skip the back": "Nur Vorderseite – Rückseite überspringen",
   "Full photo": "Ganzes Foto",
   "German": "Deutsch",
+  "Go back": "Zurück",
   "Grayscale": "Graustufen",
   "Hide password": "Passwort ausblenden",
   "Highlight": "Hervorheben",
@@ -130,6 +132,7 @@
   "Now turn the card over and scan the back": "Drehen Sie die Karte jetzt um und scannen Sie die Rückseite",
   "One JPG image of the page.": "Ein JPG-Bild der Seite.",
   "One per line": "Eine pro Zeile",
+  "Open": "Öffnen",
   "Original": "Original",
   "PDF ready": "PDF fertig",
   "Page found — hold steady": "Seite gefunden – ruhig halten",
@@ -219,6 +222,7 @@
   "Undo last change": "Letzte Änderung rückgängig machen",
   "Urdu": "Urdu",
   "Use at least {count} characters.": "Verwenden Sie mindestens {count} Zeichen.",
+  "Use in PDF": "In PDF verwenden",
   "Use signature": "Unterschrift verwenden",
   "Vietnamese": "Vietnamesisch",
   "Websites": "Websites",
@@ -237,6 +241,5 @@
   "{count} JPG images, one per page, in a .zip.": "{count} JPG-Bilder, eines pro Seite, in einer .zip-Datei.",
   "{count} page": "{count} Seite",
   "{count} pages": "{count} Seiten",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Falls die Texterkennung nicht geladen werden konnte (beim ersten Mal ist eine Verbindung nötig), deaktivieren Sie sie und versuchen Sie es erneut.",
-  "Go back": "Zurück"
+  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Falls die Texterkennung nicht geladen werden konnte (beim ersten Mal ist eine Verbindung nötig), deaktivieren Sie sie und versuchen Sie es erneut."
 }

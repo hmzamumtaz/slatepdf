@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "يحتاج التعرف على النص إلى اتصال بالإنترنت في المرة الأولى لتنزيل نموذج اللغة.",
   "Thanks for rating!": "شكرًا على تقييمك!",
   "That file has no pages to insert.": "لا يحتوي هذا الملف على صفحات لإدراجها.",
+  "That image could not be exported.": "تعذّر تصدير هذه الصورة.",
+  "That image could not be read.": "تعذّرت قراءة هذه الصورة.",
   "That page is not in this document any more.": "لم تعد هذه الصفحة موجودة في هذا المستند.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "يحتوي المستند على نص لكن دون جمل كاملة لتلخيصها (قد يكون نموذجًا أو جدولًا أو مستندًا من القوائم فقط).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "يبدو أن هذا المستند مكتوب بالصينية أو اليابانية أو الكورية. لا تكتشف أداة التلخيص هذه حدود الجمل إلا في اللغات التي تستخدم المسافات وعلامات الترقيم \".!?\"، لذا لا يمكنها تقسيم هذا النص بعد.",

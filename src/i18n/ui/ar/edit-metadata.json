@@ -1,0 +1,13 @@
+{
+  "Author": "المؤلف",
+  "Author name": "اسم المؤلف",
+  "Choose a PDF to see its current title, author, subject and keywords.": "اختر ملف PDF لعرض عنوانه الحالي ومؤلفه وموضوعه وكلماته المفتاحية.",
+  "Comma-separated keywords": "كلمات مفتاحية مفصولة بفواصل",
+  "Document title": "عنوان المستند",
+  "Keywords": "كلمات مفتاحية",
+  "Save Metadata": "حفظ البيانات الوصفية",
+  "Subject": "الموضوع",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "القيم الحالية معروضة أعلاه — غيّر ما تحتاجه واحفظ. اترك الحقل فارغًا لمسحه.",
+  "Title": "العنوان",
+  "What the document is about": "موضوع المستند"
+}

@@ -1,7 +1,14 @@
 {
+  "By file size": "Par taille de fichier",
+  "Every N pages": "Toutes les N pages",
+  "Maximum size per file (MB)": "Taille maximale par fichier (Mo)",
+  "Page ranges": "Plages de pages",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Plages de pages (ex. : 1-3, 5, 7-10)",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Les pages sont regroupées pour que chaque fichier reste sous cette taille. Une seule page plus grande que la limite va dans un fichier à part.",
+  "Pages per file": "Pages par fichier",
   "Please enter valid page ranges": "Saisissez des plages de pages valides",
   "Preview of pages in ranges:": "Aperçu des pages des plages :",
   "Split PDF": "Diviser le PDF",
+  "Total pages: {total} | Files: {count}": "Pages au total : {total} | Fichiers : {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Pages au total : {total} | Pages dans les plages : {count}"
 }

@@ -1,0 +1,13 @@
+{
+  "Author": "Autor",
+  "Author name": "Imię i nazwisko autora",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Wybierz plik PDF, aby zobaczyć jego aktualny tytuł, autora, temat i słowa kluczowe.",
+  "Comma-separated keywords": "Słowa kluczowe oddzielone przecinkami",
+  "Document title": "Tytuł dokumentu",
+  "Keywords": "Słowa kluczowe",
+  "Save Metadata": "Zapisz metadane",
+  "Subject": "Temat",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Aktualne wartości są pokazane powyżej — zmień, co trzeba, i zapisz. Pozostaw pole puste, aby je wyczyścić.",
+  "Title": "Tytuł",
+  "What the document is about": "Czego dotyczy dokument"
+}

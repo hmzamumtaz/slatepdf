@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Добавить колонтитулы",
+  "Add page numbers to the footer": "Добавить номера страниц в нижний колонтитул",
+  "Center": "По центру",
+  "Font size": "Размер шрифта",
+  "Footer text": "Текст нижнего колонтитула",
+  "Header text": "Текст верхнего колонтитула",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Оставьте верхний или нижний колонтитул пустым, чтобы поставить только другой. Текст добавляется поверх каждой страницы и не сдвигает существующее содержимое.",
+  "Left": "Слева",
+  "Position": "Положение",
+  "Right": "Справа",
+  "e.g. Confidential — ACME Ltd": "напр., Конфиденциально — ACME Ltd",
+  "e.g. Draft — do not distribute": "напр., Черновик — не распространять"
+}

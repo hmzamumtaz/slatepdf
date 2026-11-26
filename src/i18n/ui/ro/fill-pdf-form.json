@@ -1,0 +1,9 @@
+{
+  "Checked": "Bifat",
+  "Choose a PDF with fillable form fields to see them here.": "Alege un PDF cu câmpuri de formular completabile pentru a le vedea aici.",
+  "Choose…": "Alege…",
+  "Save Filled PDF": "Salvează PDF-ul completat",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Valorile completate sunt salvate în PDF. Folosește apoi „Aplatizează PDF” dacă răspunsurile nu mai trebuie să fie editabile.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Acest PDF nu are câmpuri de formular completabile. Poate fi o scanare plată sau un formular tipărit — câmpurile completabile sunt cele în care un cititor PDF îți permite să tastezi.",
+  "This field type cannot be filled here.": "Acest tip de câmp nu poate fi completat aici."
+}

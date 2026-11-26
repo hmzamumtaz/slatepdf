@@ -1,0 +1,13 @@
+{
+  "Author": "Autor",
+  "Author name": "Name des Autors",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Wählen Sie eine PDF-Datei, um Titel, Autor, Betreff und Stichwörter anzuzeigen.",
+  "Comma-separated keywords": "Durch Kommas getrennte Stichwörter",
+  "Document title": "Dokumenttitel",
+  "Keywords": "Stichwörter",
+  "Save Metadata": "Metadaten speichern",
+  "Subject": "Betreff",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Die aktuellen Werte stehen oben – ändern Sie, was nötig ist, und speichern Sie. Lassen Sie ein Feld leer, um es zu löschen.",
+  "Title": "Titel",
+  "What the document is about": "Worum es im Dokument geht"
+}

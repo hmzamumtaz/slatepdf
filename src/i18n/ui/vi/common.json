@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Lần đầu dùng, tính năng nhận dạng chữ cần kết nối internet để tải mô hình ngôn ngữ.",
   "Thanks for rating!": "Cảm ơn bạn đã đánh giá!",
   "That file has no pages to insert.": "Tệp đó không có trang nào để chèn.",
+  "That image could not be exported.": "Không thể xuất hình ảnh đó.",
+  "That image could not be read.": "Không thể đọc hình ảnh đó.",
   "That page is not in this document any more.": "Trang đó không còn trong tài liệu này nữa.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Tài liệu có văn bản nhưng không có câu hoàn chỉnh nào để tóm tắt (có thể đây là biểu mẫu, bảng hoặc tài liệu chỉ gồm danh sách).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Tài liệu này có vẻ được viết bằng tiếng Trung, tiếng Nhật hoặc tiếng Hàn — công cụ tóm tắt chỉ nhận biết ranh giới câu ở các ngôn ngữ dùng dấu cách và dấu câu \".!?\", nên hiện chưa tách câu được cho văn bản này.",

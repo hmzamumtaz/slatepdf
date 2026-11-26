@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "হেডার ও ফুটার যোগ করুন",
+  "Add page numbers to the footer": "ফুটারে পৃষ্ঠা নম্বর যোগ করুন",
+  "Center": "মাঝখানে",
+  "Font size": "ফন্টের আকার",
+  "Footer text": "ফুটারের লেখা",
+  "Header text": "হেডারের লেখা",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "শুধু অন্যটিতে স্ট্যাম্প বসাতে হেডার বা ফুটার খালি রাখুন। লেখা প্রতিটি পৃষ্ঠার উপরে যোগ হয় — বিদ্যমান বিষয়বস্তু সরে না।",
+  "Left": "বাঁয়ে",
+  "Position": "অবস্থান",
+  "Right": "ডানে",
+  "e.g. Confidential — ACME Ltd": "যেমন, গোপনীয় — ACME লিমিটেড",
+  "e.g. Draft — do not distribute": "যেমন, খসড়া — বিতরণ করবেন না"
+}

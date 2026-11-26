@@ -1,0 +1,13 @@
+{
+  "Author": "Yazar",
+  "Author name": "Yazar adı",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Mevcut başlığını, yazarını, konusunu ve anahtar kelimelerini görmek için bir PDF seçin.",
+  "Comma-separated keywords": "Virgülle ayrılmış anahtar kelimeler",
+  "Document title": "Belge başlığı",
+  "Keywords": "Anahtar kelimeler",
+  "Save Metadata": "Meta verileri kaydet",
+  "Subject": "Konu",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Mevcut değerler yukarıda gösteriliyor — gerekenleri değiştirip kaydedin. Bir alanı boş bırakırsanız temizlenir.",
+  "Title": "Başlık",
+  "What the document is about": "Belgenin konusu"
+}

@@ -1,7 +1,14 @@
 {
+  "By file size": "ファイルサイズで分ける",
+  "Every N pages": "Nページごと",
+  "Maximum size per file (MB)": "1ファイルあたりの最大サイズ（MB）",
+  "Page ranges": "ページ範囲",
   "Page ranges (e.g., 1-3, 5, 7-10)": "ページ範囲（例：1-3, 5, 7-10）",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "各ファイルがこのサイズ以下になるようページをまとめます。制限より大きい1ページは単独のファイルになります。",
+  "Pages per file": "1ファイルあたりのページ数",
   "Please enter valid page ranges": "有効なページ範囲を入力してください",
   "Preview of pages in ranges:": "範囲内のページのプレビュー：",
   "Split PDF": "PDFを分割",
+  "Total pages: {total} | Files: {count}": "合計ページ数：{total} | ファイル数：{count}",
   "Total pages: {total} | Pages in ranges: {count}": "総ページ数：{total} | 範囲内のページ：{count}"
 }

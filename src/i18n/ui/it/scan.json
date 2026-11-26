@@ -56,6 +56,7 @@
   "Delete selected": "Elimina selezionate",
   "Delete this scan from this device?": "Eliminare questa scansione da questo dispositivo?",
   "Delete {name}": "Elimina {name}",
+  "Dismiss": "Chiudi",
   "Document": "Documento",
   "Document language": "Lingua del documento",
   "Document name": "Nome del documento",
@@ -92,6 +93,7 @@
   "Front only — skip the back": "Solo fronte: salta il retro",
   "Full photo": "Foto intera",
   "German": "Tedesco",
+  "Go back": "Indietro",
   "Grayscale": "Scala di grigi",
   "Hide password": "Nascondi password",
   "Highlight": "Evidenzia",
@@ -130,6 +132,7 @@
   "Now turn the card over and scan the back": "Ora gira il biglietto e scansiona il retro",
   "One JPG image of the page.": "Un'immagine JPG della pagina.",
   "One per line": "Uno per riga",
+  "Open": "Apri",
   "Original": "Originale",
   "PDF ready": "PDF pronto",
   "Page found — hold steady": "Pagina trovata: tieni fermo",
@@ -219,6 +222,7 @@
   "Undo last change": "Annulla l'ultima modifica",
   "Urdu": "Urdu",
   "Use at least {count} characters.": "Usa almeno {count} caratteri.",
+  "Use in PDF": "Usa nel PDF",
   "Use signature": "Usa firma",
   "Vietnamese": "Vietnamita",
   "Websites": "Siti web",
@@ -237,6 +241,5 @@
   "{count} JPG images, one per page, in a .zip.": "{count} immagini JPG, una per pagina, in un file .zip.",
   "{count} page": "{count} pagina",
   "{count} pages": "{count} pagine",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Se il riconoscimento del testo non si è caricato (la prima volta serve una connessione), disattivalo e riprova.",
-  "Go back": "Indietro"
+  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Se il riconoscimento del testo non si è caricato (la prima volta serve una connessione), disattivalo e riprova."
 }

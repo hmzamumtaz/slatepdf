@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "প্রথমবার ভাষার মডেল ডাউনলোড করতে টেক্সট শনাক্তকরণের জন্য ইন্টারনেট সংযোগ লাগে।",
   "Thanks for rating!": "রেটিং দেওয়ার জন্য ধন্যবাদ!",
   "That file has no pages to insert.": "ওই ফাইলে যোগ করার মতো কোনো পেজ নেই।",
+  "That image could not be exported.": "ছবিটি এক্সপোর্ট করা যায়নি।",
+  "That image could not be read.": "ছবিটি পড়া যায়নি।",
   "That page is not in this document any more.": "ওই পেজটি আর এই ডকুমেন্টে নেই।",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "ডকুমেন্টে টেক্সট আছে, কিন্তু সারসংক্ষেপ করার মতো পূর্ণ বাক্য নেই (এটি হয়তো ফর্ম, টেবিল বা শুধু তালিকার ডকুমেন্ট)।",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "এই ডকুমেন্টটি চীনা, জাপানি বা কোরীয় ভাষায় লেখা বলে মনে হচ্ছে — এই সারসংক্ষেপ টুল শুধু সেসব ভাষার বাক্যের সীমা শনাক্ত করতে পারে যেগুলোতে স্পেস ও \".!?\" যতিচিহ্ন ব্যবহার হয়, তাই এই টেক্সট এখনো ভাগ করা যাচ্ছে না।",

@@ -1,0 +1,11 @@
+{
+  "Alternate & Mix": "Xen kẽ và trộn",
+  "Back to all tools": "Quay lại tất cả công cụ",
+  "First document": "Tài liệu đầu tiên",
+  "Interleave the pages of two PDFs, one after the other": "Xen kẽ các trang của hai PDF, trang này rồi đến trang kia",
+  "Mix PDFs": "Trộn PDF",
+  "Mixed PDF downloaded": "Đã tải xuống PDF đã trộn",
+  "Mixing...": "Đang trộn…",
+  "Second document": "Tài liệu thứ hai",
+  "The result goes page 1 of the first document, page 1 of the second, page 2 of the first, page 2 of the second, and so on. If one document is longer, its remaining pages go at the end.": "Kết quả: trang 1 của tài liệu đầu tiên, trang 1 của tài liệu thứ hai, trang 2 của tài liệu đầu tiên, trang 2 của tài liệu thứ hai, v.v. Nếu một tài liệu dài hơn, các trang còn lại sẽ ở cuối."
+}

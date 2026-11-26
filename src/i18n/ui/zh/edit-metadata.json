@@ -1,0 +1,13 @@
+{
+  "Author": "作者",
+  "Author name": "作者姓名",
+  "Choose a PDF to see its current title, author, subject and keywords.": "选择一个 PDF 即可查看其当前的标题、作者、主题和关键词。",
+  "Comma-separated keywords": "以逗号分隔的关键词",
+  "Document title": "文档标题",
+  "Keywords": "关键词",
+  "Save Metadata": "保存元数据",
+  "Subject": "主题",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "当前值显示在上方：修改需要的内容并保存。将字段留空即可清除该项。",
+  "Title": "标题",
+  "What the document is about": "文档内容"
+}

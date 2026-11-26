@@ -1,0 +1,9 @@
+{
+  "Checked": "Avkrysset",
+  "Choose a PDF with fillable form fields to see them here.": "Velg en PDF med utfyllbare skjemafelt for å se dem her.",
+  "Choose…": "Velg…",
+  "Save Filled PDF": "Lagre utfylt PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "De utfylte verdiene lagres i PDF-en. Bruk deretter «Flat ut PDF» hvis svarene ikke lenger skal kunne redigeres.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Denne PDF-en har ingen utfyllbare skjemafelt. Det kan være en flat skanning eller et utskrevet skjema – utfyllbare felt er de som en PDF-leser lar deg skrive i.",
+  "This field type cannot be filled here.": "Denne felttypen kan ikke fylles ut her."
+}

@@ -1,0 +1,9 @@
+{
+  "Checked": "เลือกแล้ว",
+  "Choose a PDF with fillable form fields to see them here.": "เลือกไฟล์ PDF ที่มีช่องฟอร์มที่กรอกได้เพื่อดูที่นี่",
+  "Choose…": "เลือก…",
+  "Save Filled PDF": "บันทึก PDF ที่กรอกแล้ว",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "ค่าที่กรอกจะถูกบันทึกใน PDF หากไม่ต้องการให้แก้ไขคำตอบได้อีก ให้ใช้ «รวมเลเยอร์ PDF» หลังจากนั้น",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "PDF นี้ไม่มีช่องฟอร์มที่กรอกได้ อาจเป็นไฟล์สแกนแบบเรียบหรือแบบฟอร์มที่พิมพ์ออกมา — ช่องที่กรอกได้คือช่องที่โปรแกรมอ่าน PDF อนุญาตให้พิมพ์ได้",
+  "This field type cannot be filled here.": "ไม่สามารถกรอกช่องประเภทนี้ที่นี่ได้"
+}

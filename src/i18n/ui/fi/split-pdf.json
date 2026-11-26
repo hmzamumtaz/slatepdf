@@ -1,7 +1,14 @@
 {
+  "By file size": "Tiedostokoon mukaan",
+  "Every N pages": "Joka N. sivu",
+  "Maximum size per file (MB)": "Enimmäiskoko tiedostoa kohti (Mt)",
+  "Page ranges": "Sivuvälit",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Sivuvälit (esim. 1-3, 5, 7-10)",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Sivut ryhmitellään niin, että jokainen tiedosto pysyy tämän koon alla. Yksi rajaa suurempi sivu menee omaan tiedostoonsa.",
+  "Pages per file": "Sivuja tiedostoa kohti",
   "Please enter valid page ranges": "Anna kelvolliset sivuvälit",
   "Preview of pages in ranges:": "Sivuvälien sivujen esikatselu:",
   "Split PDF": "Jaa PDF",
+  "Total pages: {total} | Files: {count}": "Sivuja yhteensä: {total} | Tiedostoja: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Sivuja yhteensä: {total} | Sivuja väleillä: {count}"
 }

@@ -1,7 +1,14 @@
 {
+  "By file size": "Dosya boyutuna göre",
+  "Every N pages": "Her N sayfada bir",
+  "Maximum size per file (MB)": "Dosya başına azami boyut (MB)",
+  "Page ranges": "Sayfa aralıkları",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Sayfa aralıkları (ör. 1-3, 5, 7-10)",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Sayfalar, her dosya bu boyutun altında kalacak şekilde gruplanır. Sınırı aşan tek bir sayfa kendi başına bir dosyaya gider.",
+  "Pages per file": "Dosya başına sayfa",
   "Please enter valid page ranges": "Lütfen geçerli sayfa aralıkları girin",
   "Preview of pages in ranges:": "Aralıklardaki sayfaların önizlemesi:",
   "Split PDF": "PDF'yi Böl",
+  "Total pages: {total} | Files: {count}": "Toplam sayfa: {total} | Dosya: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Toplam sayfa: {total} | Aralıklardaki sayfalar: {count}"
 }

@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Thêm đầu trang và chân trang",
+  "Add page numbers to the footer": "Thêm số trang vào chân trang",
+  "Center": "Giữa",
+  "Font size": "Cỡ chữ",
+  "Footer text": "Văn bản chân trang",
+  "Header text": "Văn bản đầu trang",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Để trống đầu trang hoặc chân trang để chỉ đóng dấu phần còn lại. Văn bản được thêm lên trên mỗi trang và không di chuyển nội dung hiện có.",
+  "Left": "Trái",
+  "Position": "Vị trí",
+  "Right": "Phải",
+  "e.g. Confidential — ACME Ltd": "vd. Bảo mật — Công ty ACME",
+  "e.g. Draft — do not distribute": "vd. Bản nháp — không phát hành"
+}

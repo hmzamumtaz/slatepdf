@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "텍스트 인식을 처음 사용할 때는 언어 모델을 다운로드하기 위해 인터넷 연결이 필요합니다.",
   "Thanks for rating!": "평가해 주셔서 감사합니다!",
   "That file has no pages to insert.": "그 파일에는 삽입할 페이지가 없습니다.",
+  "That image could not be exported.": "해당 이미지를 내보낼 수 없습니다.",
+  "That image could not be read.": "해당 이미지를 읽을 수 없습니다.",
   "That page is not in this document any more.": "그 페이지는 더 이상 이 문서에 없습니다.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "문서에 텍스트는 있지만 요약할 완전한 문장이 없습니다(양식, 표, 목록으로만 된 문서일 수 있습니다).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "이 문서는 중국어, 일본어 또는 한국어로 작성된 것 같습니다. 이 요약 도구는 띄어쓰기와 \".!?\" 문장 부호를 사용하는 언어에서만 문장 경계를 인식하므로 아직 이 텍스트를 나눌 수 없습니다.",

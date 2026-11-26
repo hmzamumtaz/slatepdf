@@ -1,0 +1,9 @@
+{
+  "Checked": "محدد",
+  "Choose a PDF with fillable form fields to see them here.": "اختر ملف PDF يحتوي على حقول نموذج قابلة للتعبئة لعرضها هنا.",
+  "Choose…": "اختر…",
+  "Save Filled PDF": "حفظ PDF المعبأ",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "تُحفظ القيم المعبأة في ملف PDF. استخدم بعد ذلك «تسطيح PDF» إذا لم تعد الإجابات قابلة للتحرير.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "لا يحتوي ملف PDF هذا على حقول نموذج قابلة للتعبئة. قد يكون مسحًا مسطحًا أو نموذجًا مطبوعًا — الحقول القابلة للتعبئة هي التي يتيح قارئ PDF الكتابة فيها.",
+  "This field type cannot be filled here.": "لا يمكن تعبئة هذا النوع من الحقول هنا."
+}

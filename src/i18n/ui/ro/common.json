@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Prima dată, recunoașterea textului are nevoie de o conexiune la internet pentru a descărca modelul de limbă.",
   "Thanks for rating!": "Mulțumim pentru evaluare!",
   "That file has no pages to insert.": "Fișierul nu are pagini de inserat.",
+  "That image could not be exported.": "Imaginea nu a putut fi exportată.",
+  "That image could not be read.": "Imaginea nu a putut fi citită.",
   "That page is not in this document any more.": "Pagina nu mai există în acest document.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Documentul conține text, dar nu are propoziții complete de rezumat (poate fi un formular, un tabel sau un document format doar din liste).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Documentul pare scris în chineză, japoneză sau coreeană — acest instrument de rezumare detectează limitele propozițiilor doar în limbile care folosesc spații și punctuația „.!?”, așa că încă nu poate segmenta acest text.",

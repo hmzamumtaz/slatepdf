@@ -1,0 +1,4 @@
+{
+  "Flatten PDF": "PDFをフラット化",
+  "Form fields are baked permanently into the page, so filled-in values can no longer be changed. Comments and highlights are removed; links are kept. The text stays selectable — nothing is turned into an image.": "フォームフィールドがページに永久に焼き付けられ、入力済みの値は変更できなくなります。コメントとハイライトは削除され、リンクは残ります。テキストは選択可能なままです。画像化はされません。"
+}

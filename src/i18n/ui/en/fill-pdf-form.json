@@ -1,0 +1,9 @@
+{
+  "Checked": "Checked",
+  "Choose a PDF with fillable form fields to see them here.": "Choose a PDF with fillable form fields to see them here.",
+  "Choose…": "Choose…",
+  "Save Filled PDF": "Save Filled PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.",
+  "This field type cannot be filled here.": "This field type cannot be filled here."
+}

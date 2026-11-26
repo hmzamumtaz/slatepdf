@@ -1,7 +1,14 @@
 {
+  "By file size": "ตามขนาดไฟล์",
+  "Every N pages": "ทุก N หน้า",
+  "Maximum size per file (MB)": "ขนาดสูงสุดต่อไฟล์ (MB)",
+  "Page ranges": "ช่วงหน้า",
   "Page ranges (e.g., 1-3, 5, 7-10)": "ช่วงหน้า (เช่น 1-3, 5, 7-10)",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "หน้าจะถูกจัดกลุ่มเพื่อให้แต่ละไฟล์มีขนาดไม่เกินนี้ หน้าเดียวที่ใหญ่กว่าขีดจำกัดจะอยู่ในไฟล์ของตัวเอง",
+  "Pages per file": "หน้าต่อไฟล์",
   "Please enter valid page ranges": "โปรดใส่ช่วงหน้าที่ถูกต้อง",
   "Preview of pages in ranges:": "ตัวอย่างหน้าในช่วงที่เลือก:",
   "Split PDF": "แยก PDF",
+  "Total pages: {total} | Files: {count}": "จำนวนหน้าทั้งหมด: {total} | ไฟล์: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "จำนวนหน้าทั้งหมด: {total} | หน้าในช่วง: {count}"
 }

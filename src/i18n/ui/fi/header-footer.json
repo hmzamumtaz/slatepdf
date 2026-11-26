@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Lisää ylä- ja alatunniste",
+  "Add page numbers to the footer": "Lisää sivunumerot alatunnisteeseen",
+  "Center": "Keskellä",
+  "Font size": "Fonttikoko",
+  "Footer text": "Alatunnisteen teksti",
+  "Header text": "Ylätunnisteen teksti",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Jätä ylä- tai alatunniste tyhjäksi, niin vain toinen leimataan. Teksti lisätään jokaisen sivun päälle, eikä se siirrä olemassa olevaa sisältöä.",
+  "Left": "Vasen",
+  "Position": "Sijainti",
+  "Right": "Oikea",
+  "e.g. Confidential — ACME Ltd": "esim. Luottamuksellinen — ACME Oy",
+  "e.g. Draft — do not distribute": "esim. Luonnos — älä jaa"
+}

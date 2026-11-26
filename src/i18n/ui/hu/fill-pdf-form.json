@@ -1,0 +1,9 @@
+{
+  "Checked": "Bejelölve",
+  "Choose a PDF with fillable form fields to see them here.": "Válasszon kitölthető űrlapmezőket tartalmazó PDF-et, hogy itt lássa őket.",
+  "Choose…": "Választás…",
+  "Save Filled PDF": "Kitöltött PDF mentése",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "A kitöltött értékek a PDF-be mentődnek. Ezután használja a „PDF lapítása” funkciót, ha a válaszok már nem szerkeszthetők.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Ez a PDF nem tartalmaz kitölthető űrlapmezőket. Lehet, hogy lapos szkennelés vagy nyomtatott űrlap – a kitölthető mezők azok, amelyekbe a PDF-olvasó enged gépelni.",
+  "This field type cannot be filled here.": "Ez a mezőtípus itt nem tölthető ki."
+}

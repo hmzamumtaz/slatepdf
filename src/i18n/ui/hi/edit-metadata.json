@@ -1,0 +1,13 @@
+{
+  "Author": "लेखक",
+  "Author name": "लेखक का नाम",
+  "Choose a PDF to see its current title, author, subject and keywords.": "मौजूदा शीर्षक, लेखक, विषय और कीवर्ड देखने के लिए PDF चुनें।",
+  "Comma-separated keywords": "अल्पविराम से अलग किए गए कीवर्ड",
+  "Document title": "दस्तावेज़ का शीर्षक",
+  "Keywords": "कीवर्ड",
+  "Save Metadata": "मेटाडेटा सहेजें",
+  "Subject": "विषय",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "वर्तमान मान ऊपर दिखाए गए हैं — जो बदलना हो बदलें और सहेजें। किसी फ़ील्ड को खाली छोड़ने से वह साफ़ हो जाता है।",
+  "Title": "शीर्षक",
+  "What the document is about": "दस्तावेज़ किस बारे में है"
+}

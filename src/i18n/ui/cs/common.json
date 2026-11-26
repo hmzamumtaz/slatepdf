@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Rozpoznávání textu potřebuje při prvním použití připojení k internetu, aby stáhlo jazykový model.",
   "Thanks for rating!": "Děkujeme za hodnocení!",
   "That file has no pages to insert.": "Tento soubor nemá žádné stránky k vložení.",
+  "That image could not be exported.": "Obrázek se nepodařilo exportovat.",
+  "That image could not be read.": "Obrázek se nepodařilo přečíst.",
   "That page is not in this document any more.": "Tato stránka už v dokumentu není.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Dokument obsahuje text, ale žádné celé věty ke shrnutí (může jít o formulář, tabulku nebo dokument tvořený jen seznamy).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Tento dokument je zřejmě napsán čínsky, japonsky nebo korejsky – tento nástroj pro shrnutí rozpoznává hranice vět jen u jazyků, které používají mezery a interpunkci „.!?“, takže tento text zatím rozdělit nedokáže.",

@@ -1,7 +1,14 @@
 {
+  "By file size": "Mengikut saiz fail",
+  "Every N pages": "Setiap N halaman",
+  "Maximum size per file (MB)": "Saiz maksimum setiap fail (MB)",
+  "Page ranges": "Julat halaman",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Julat halaman (cth., 1-3, 5, 7-10)",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Halaman dikumpulkan supaya setiap fail kekal di bawah saiz ini. Satu halaman yang lebih besar daripada had akan menjadi fail sendiri.",
+  "Pages per file": "Halaman setiap fail",
   "Please enter valid page ranges": "Sila masukkan julat halaman yang sah",
   "Preview of pages in ranges:": "Pratonton halaman dalam julat:",
   "Split PDF": "Pisah PDF",
+  "Total pages: {total} | Files: {count}": "Jumlah halaman: {total} | Fail: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Jumlah halaman: {total} | Halaman dalam julat: {count}"
 }

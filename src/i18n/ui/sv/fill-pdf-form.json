@@ -1,0 +1,9 @@
+{
+  "Checked": "Markerad",
+  "Choose a PDF with fillable form fields to see them here.": "Välj en PDF med ifyllbara formulärfält för att se dem här.",
+  "Choose…": "Välj…",
+  "Save Filled PDF": "Spara ifylld PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "De ifyllda värdena sparas i PDF:en. Använd sedan «Platta till PDF» om svaren inte längre ska gå att redigera.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Den här PDF:en har inga ifyllbara formulärfält. Det kan vara en platt inskanning eller ett utskrivet formulär – ifyllbara fält är de som en PDF-läsare låter dig skriva i.",
+  "This field type cannot be filled here.": "Den här fälttypen kan inte fyllas i här."
+}

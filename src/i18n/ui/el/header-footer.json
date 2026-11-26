@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Προσθήκη κεφαλίδας και υποσέλιδου",
+  "Add page numbers to the footer": "Προσθήκη αριθμών σελίδων στο υποσέλιδο",
+  "Center": "Κέντρο",
+  "Font size": "Μέγεθος γραμματοσειράς",
+  "Footer text": "Κείμενο υποσέλιδου",
+  "Header text": "Κείμενο κεφαλίδας",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Αφήστε κενή την κεφαλίδα ή το υποσέλιδο για να σφραγιστεί μόνο το άλλο. Το κείμενο προστίθεται πάνω από κάθε σελίδα, χωρίς να μετακινεί το υπάρχον περιεχόμενο.",
+  "Left": "Αριστερά",
+  "Position": "Θέση",
+  "Right": "Δεξιά",
+  "e.g. Confidential — ACME Ltd": "π.χ. Εμπιστευτικό — ACME Ltd",
+  "e.g. Draft — do not distribute": "π.χ. Προσχέδιο — μην το διανέμετε"
+}

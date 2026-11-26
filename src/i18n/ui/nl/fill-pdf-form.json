@@ -1,0 +1,9 @@
+{
+  "Checked": "Aangevinkt",
+  "Choose a PDF with fillable form fields to see them here.": "Kies een PDF met invulbare formuliervelden om ze hier te zien.",
+  "Choose…": "Kiezen…",
+  "Save Filled PDF": "Ingevulde PDF opslaan",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "De ingevulde waarden worden in de PDF opgeslagen. Gebruik daarna «PDF afvlakken» als de antwoorden niet meer bewerkbaar mogen zijn.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Deze PDF heeft geen invulbare formuliervelden. Het kan een platte scan of een afgedrukt formulier zijn: invulbare velden zijn velden waarin een PDF-lezer laat typen.",
+  "This field type cannot be filled here.": "Dit veldtype kan hier niet worden ingevuld."
+}

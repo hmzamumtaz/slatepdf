@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Tekstgjenkjenning trenger internettforbindelse første gang for å laste ned språkmodellen.",
   "Thanks for rating!": "Takk for vurderingen!",
   "That file has no pages to insert.": "Den filen har ingen sider som kan settes inn.",
+  "That image could not be exported.": "Det bildet kunne ikke eksporteres.",
+  "That image could not be read.": "Det bildet kunne ikke leses.",
   "That page is not in this document any more.": "Den siden finnes ikke lenger i dette dokumentet.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Dokumentet inneholder tekst, men ingen hele setninger å oppsummere (det kan være et skjema, en tabell eller et dokument med bare lister).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Dette dokumentet ser ut til å være skrevet på kinesisk, japansk eller koreansk – oppsummeringen finner bare setningsgrenser i språk som bruker mellomrom og tegnsettingen «.!?», så den kan ikke dele opp denne teksten ennå.",

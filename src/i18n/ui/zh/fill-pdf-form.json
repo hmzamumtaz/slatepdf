@@ -1,0 +1,9 @@
+{
+  "Checked": "已勾选",
+  "Choose a PDF with fillable form fields to see them here.": "选择一个含有可填写表单字段的 PDF，即可在此查看这些字段。",
+  "Choose…": "选择…",
+  "Save Filled PDF": "保存已填写的 PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "填写的值将保存到 PDF 中。如果希望答案之后不可再编辑，请随后使用“拼合 PDF”。",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "此 PDF 没有可填写的表单字段。它可能是平面扫描件或打印表单：可填写字段是指 PDF 阅读器允许输入文字的字段。",
+  "This field type cannot be filled here.": "此类型的字段无法在此填写。"
+}

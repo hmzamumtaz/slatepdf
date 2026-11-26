@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "ヘッダーとフッターを追加",
+  "Add page numbers to the footer": "フッターにページ番号を追加",
+  "Center": "中央",
+  "Font size": "フォントサイズ",
+  "Footer text": "フッターの文字",
+  "Header text": "ヘッダーの文字",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "ヘッダーかフッターのどちらかを空にすると、もう片方だけが押されます。文字は各ページの上に重ねられ、既存の内容は動きません。",
+  "Left": "左",
+  "Position": "位置",
+  "Right": "右",
+  "e.g. Confidential — ACME Ltd": "例：社外秘 — ACME株式会社",
+  "e.g. Draft — do not distribute": "例：下書き — 配布禁止"
+}

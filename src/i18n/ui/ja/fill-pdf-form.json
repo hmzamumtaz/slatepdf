@@ -1,0 +1,9 @@
+{
+  "Checked": "チェック済み",
+  "Choose a PDF with fillable form fields to see them here.": "入力可能なフォームフィールドのあるPDFを選ぶと、ここに表示されます。",
+  "Choose…": "選択…",
+  "Save Filled PDF": "入力済みPDFを保存",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "入力した値はPDFに保存されます。回答を編集できなくするには、その後「PDFをフラット化」を使ってください。",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "このPDFには入力可能なフォームフィールドがありません。フラットなスキャンや印刷フォームの可能性があります。入力可能なフィールドとは、PDFリーダーで文字を入力できるフィールドのことです。",
+  "This field type cannot be filled here.": "この種類のフィールドはここでは入力できません。"
+}

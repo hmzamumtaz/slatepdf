@@ -1,0 +1,9 @@
+{
+  "Checked": "Zaškrtnuto",
+  "Choose a PDF with fillable form fields to see them here.": "Vyberte PDF s vyplnitelnými poli formuláře, aby se zde zobrazila.",
+  "Choose…": "Vybrat…",
+  "Save Filled PDF": "Uložit vyplněný PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Vyplněné hodnoty se uloží do PDF. Poté použijte „Sloučit PDF“, pokud už odpovědi nemají být upravitelné.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Tento PDF nemá žádná vyplnitelná pole formuláře. Může jít o plochý sken nebo tištěný formulář – vyplnitelná pole jsou ta, do kterých čtečka PDF umožňuje psát.",
+  "This field type cannot be filled here.": "Tento typ pole zde vyplnit nelze."
+}

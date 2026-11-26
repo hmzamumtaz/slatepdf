@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "בפעם הראשונה, זיהוי טקסט דורש חיבור לאינטרנט כדי להוריד את מודל השפה.",
   "Thanks for rating!": "תודה על הדירוג!",
   "That file has no pages to insert.": "אין בקובץ הזה עמודים להוספה.",
+  "That image could not be exported.": "לא ניתן היה לייצא את התמונה.",
+  "That image could not be read.": "לא ניתן היה לקרוא את התמונה.",
   "That page is not in this document any more.": "העמוד הזה כבר לא נמצא במסמך.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "המסמך מכיל טקסט אבל אין בו משפטים שלמים לסיכום (ייתכן שזה טופס, טבלה או מסמך שמכיל רשימות בלבד).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "נראה שהמסמך הזה כתוב בסינית, ביפנית או בקוריאנית — המסכם הזה מזהה גבולות משפטים רק בשפות שמשתמשות ברווחים ובסימני הפיסוק \".!?\", ולכן עדיין אינו יכול לפלח את הטקסט הזה.",

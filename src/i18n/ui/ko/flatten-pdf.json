@@ -1,0 +1,4 @@
+{
+  "Flatten PDF": "PDF 평탄화",
+  "Form fields are baked permanently into the page, so filled-in values can no longer be changed. Comments and highlights are removed; links are kept. The text stays selectable — nothing is turned into an image.": "양식 필드가 페이지에 영구히 새겨져 입력한 값을 더 이상 변경할 수 없습니다. 주석과 강조 표시는 제거되고 링크는 유지됩니다. 텍스트는 계속 선택할 수 있으며 이미지로 바뀌지 않습니다."
+}

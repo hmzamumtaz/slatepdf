@@ -1,7 +1,14 @@
 {
+  "By file size": "Podle velikosti souboru",
+  "Every N pages": "Každých N stránek",
+  "Maximum size per file (MB)": "Maximální velikost souboru (MB)",
+  "Page ranges": "Rozsahy stránek",
   "Page ranges (e.g., 1-3, 5, 7-10)": "Rozsahy stránek (např. 1-3, 5, 7-10)",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "Stránky se seskupí tak, aby každý soubor zůstal pod touto velikostí. Jedna stránka větší než limit půjde do vlastního souboru.",
+  "Pages per file": "Stránek na soubor",
   "Please enter valid page ranges": "Zadejte platné rozsahy stránek",
   "Preview of pages in ranges:": "Náhled stránek v rozsazích:",
   "Split PDF": "Rozdělit PDF",
+  "Total pages: {total} | Files: {count}": "Celkem stránek: {total} | Souborů: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "Celkem stránek: {total} | Stránek v rozsazích: {count}"
 }

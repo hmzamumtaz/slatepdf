@@ -1,0 +1,11 @@
+{
+  "Alternate & Mix": "交互に混ぜる",
+  "Back to all tools": "すべてのツールに戻る",
+  "First document": "1つ目の文書",
+  "Interleave the pages of two PDFs, one after the other": "2つのPDFのページを交互に差し込む",
+  "Mix PDFs": "PDFを混ぜる",
+  "Mixed PDF downloaded": "混ぜたPDFをダウンロードしました",
+  "Mixing...": "混ぜています…",
+  "Second document": "2つ目の文書",
+  "The result goes page 1 of the first document, page 1 of the second, page 2 of the first, page 2 of the second, and so on. If one document is longer, its remaining pages go at the end.": "結果は、1つ目の文書の1ページ、2つ目の文書の1ページ、1つ目の文書の2ページ、2つ目の文書の2ページ、という順になります。長い方の文書の残りのページは最後に付きます。"
+}

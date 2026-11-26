@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "При первом запуске распознаванию текста нужно подключение к интернету, чтобы скачать языковую модель.",
   "Thanks for rating!": "Спасибо за оценку!",
   "That file has no pages to insert.": "В этом файле нет страниц для вставки.",
+  "That image could not be exported.": "Не удалось экспортировать это изображение.",
+  "That image could not be read.": "Не удалось прочитать это изображение.",
   "That page is not in this document any more.": "Этой страницы больше нет в документе.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "В документе есть текст, но нет законченных предложений для краткого содержания (возможно, это форма, таблица или список).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Похоже, документ написан на китайском, японском или корейском языке. Этот инструмент определяет границы предложений только для языков с пробелами и знаками «.!?», поэтому пока не может разбить такой текст на предложения.",

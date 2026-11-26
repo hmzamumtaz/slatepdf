@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Η αναγνώριση κειμένου χρειάζεται σύνδεση στο διαδίκτυο την πρώτη φορά, για τη λήψη του γλωσσικού μοντέλου.",
   "Thanks for rating!": "Ευχαριστούμε για τη βαθμολογία!",
   "That file has no pages to insert.": "Αυτό το αρχείο δεν έχει σελίδες για εισαγωγή.",
+  "That image could not be exported.": "Δεν ήταν δυνατή η εξαγωγή αυτής της εικόνας.",
+  "That image could not be read.": "Δεν ήταν δυνατή η ανάγνωση αυτής της εικόνας.",
   "That page is not in this document any more.": "Αυτή η σελίδα δεν υπάρχει πλέον στο έγγραφο.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Το έγγραφο περιέχει κείμενο αλλά όχι ολοκληρωμένες προτάσεις για σύνοψη (μπορεί να είναι φόρμα, πίνακας ή έγγραφο που περιέχει μόνο λίστες).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Αυτό το έγγραφο φαίνεται γραμμένο στα κινεζικά, ιαπωνικά ή κορεατικά — αυτό το εργαλείο σύνοψης εντοπίζει τα όρια των προτάσεων μόνο σε γλώσσες που χρησιμοποιούν κενά και στίξη \".!?\", οπότε δεν μπορεί ακόμη να χωρίσει αυτό το κείμενο.",

@@ -56,6 +56,7 @@
   "Delete selected": "Excluir selecionadas",
   "Delete this scan from this device?": "Excluir este escaneamento deste dispositivo?",
   "Delete {name}": "Excluir {name}",
+  "Dismiss": "Fechar",
   "Document": "Documento",
   "Document language": "Idioma do documento",
   "Document name": "Nome do documento",
@@ -92,6 +93,7 @@
   "Front only — skip the back": "Só a frente — pular o verso",
   "Full photo": "Foto inteira",
   "German": "Alemão",
+  "Go back": "Voltar",
   "Grayscale": "Tons de cinza",
   "Hide password": "Ocultar senha",
   "Highlight": "Destacar",
@@ -130,6 +132,7 @@
   "Now turn the card over and scan the back": "Agora vire o cartão e escaneie o verso",
   "One JPG image of the page.": "Uma imagem JPG da página.",
   "One per line": "Um por linha",
+  "Open": "Abrir",
   "Original": "Original",
   "PDF ready": "PDF pronto",
   "Page found — hold steady": "Página encontrada — mantenha firme",
@@ -219,6 +222,7 @@
   "Undo last change": "Desfazer a última alteração",
   "Urdu": "Urdu",
   "Use at least {count} characters.": "Use pelo menos {count} caracteres.",
+  "Use in PDF": "Usar no PDF",
   "Use signature": "Usar assinatura",
   "Vietnamese": "Vietnamita",
   "Websites": "Sites",
@@ -237,6 +241,5 @@
   "{count} JPG images, one per page, in a .zip.": "{count} imagens JPG, uma por página, em um .zip.",
   "{count} page": "{count} página",
   "{count} pages": "{count} páginas",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Se o reconhecimento de texto não carregou (ele precisa de conexão na primeira vez), desative-o e tente de novo.",
-  "Go back": "Voltar"
+  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Se o reconhecimento de texto não carregou (ele precisa de conexão na primeira vez), desative-o e tente de novo."
 }

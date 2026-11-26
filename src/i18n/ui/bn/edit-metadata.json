@@ -1,0 +1,13 @@
+{
+  "Author": "লেখক",
+  "Author name": "লেখকের নাম",
+  "Choose a PDF to see its current title, author, subject and keywords.": "বর্তমান শিরোনাম, লেখক, বিষয় ও কীওয়ার্ড দেখতে একটি PDF বেছে নিন।",
+  "Comma-separated keywords": "কমা দিয়ে আলাদা করা কীওয়ার্ড",
+  "Document title": "নথির শিরোনাম",
+  "Keywords": "কীওয়ার্ড",
+  "Save Metadata": "মেটাডেটা সংরক্ষণ করুন",
+  "Subject": "বিষয়",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "বর্তমান মানগুলো উপরে দেখানো হয়েছে — যা দরকার বদলে সংরক্ষণ করুন। কোনো ফিল্ড খালি রাখলে সেটি মুছে যাবে।",
+  "Title": "শিরোনাম",
+  "What the document is about": "নথিটি কী সম্পর্কে"
+}

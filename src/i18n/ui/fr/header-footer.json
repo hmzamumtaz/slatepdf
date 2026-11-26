@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Ajouter un en-tête et un pied de page",
+  "Add page numbers to the footer": "Ajouter les numéros de page au pied de page",
+  "Center": "Centre",
+  "Font size": "Taille de police",
+  "Footer text": "Texte du pied de page",
+  "Header text": "Texte de l’en-tête",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Laissez l’en-tête ou le pied de page vide pour ne tamponner que l’autre. Le texte est ajouté au-dessus de chaque page, sans déplacer le contenu existant.",
+  "Left": "Gauche",
+  "Position": "Position",
+  "Right": "Droite",
+  "e.g. Confidential — ACME Ltd": "p. ex. Confidentiel — ACME SARL",
+  "e.g. Draft — do not distribute": "p. ex. Brouillon — ne pas diffuser"
+}

@@ -1,0 +1,7 @@
+{
+  "... (truncated for preview)": "……（预览已截断）",
+  "Convert to HTML": "转换为 HTML",
+  "Copy to clipboard": "复制到剪贴板",
+  "Preview": "预览",
+  "The PDF text becomes a plain HTML page, one section per PDF page. It moves the words, not the layout — images and exact formatting are not carried over.": "PDF 文本将变成一个简单的 HTML 页面，PDF 的每一页对应一个章节。只迁移文字，不迁移版式：图片和精确格式不会保留。"
+}

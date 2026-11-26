@@ -1,0 +1,13 @@
+{
+  "Author": "Szerző",
+  "Author name": "Szerző neve",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Válasszon PDF-et az aktuális cím, szerző, tárgy és kulcsszavak megtekintéséhez.",
+  "Comma-separated keywords": "Vesszővel elválasztott kulcsszavak",
+  "Document title": "Dokumentum címe",
+  "Keywords": "Kulcsszavak",
+  "Save Metadata": "Metaadatok mentése",
+  "Subject": "Tárgy",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Az aktuális értékek fent láthatók – módosítsa a szükségeseket, és mentse. Hagyjon egy mezőt üresen a törléséhez.",
+  "Title": "Cím",
+  "What the document is about": "Miről szól a dokumentum"
+}

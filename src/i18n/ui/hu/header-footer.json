@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Fejléc és lábléc hozzáadása",
+  "Add page numbers to the footer": "Oldalszámok hozzáadása a lábléchez",
+  "Center": "Középen",
+  "Font size": "Betűméret",
+  "Footer text": "Lábléc szövege",
+  "Header text": "Fejléc szövege",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Hagyja üresen a fejlécet vagy a láblécet, hogy csak a másikat bélyegezze. A szöveg minden oldal tetejére kerül, és nem mozdítja el a meglévő tartalmat.",
+  "Left": "Bal",
+  "Position": "Pozíció",
+  "Right": "Jobb",
+  "e.g. Confidential — ACME Ltd": "pl. Bizalmas — ACME Kft.",
+  "e.g. Draft — do not distribute": "pl. Vázlat — ne terjessze"
+}

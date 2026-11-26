@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Для першого розпізнавання тексту потрібне з'єднання з інтернетом, щоб завантажити мовну модель.",
   "Thanks for rating!": "Дякуємо за оцінку!",
   "That file has no pages to insert.": "У цьому файлі немає сторінок для вставлення.",
+  "That image could not be exported.": "Не вдалося експортувати це зображення.",
+  "That image could not be read.": "Не вдалося прочитати це зображення.",
   "That page is not in this document any more.": "Цієї сторінки вже немає в документі.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Документ містить текст, але в ньому немає повних речень для короткого змісту (можливо, це форма, таблиця або документ лише зі списків).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Схоже, цей документ написано китайською, японською чи корейською — цей інструмент визначає межі речень лише для мов, що використовують пробіли та розділові знаки «.!?», тож поки не може розбити цей текст на речення.",

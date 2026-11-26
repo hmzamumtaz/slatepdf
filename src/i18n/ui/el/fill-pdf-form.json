@@ -1,0 +1,9 @@
+{
+  "Checked": "Επιλεγμένο",
+  "Choose a PDF with fillable form fields to see them here.": "Επιλέξτε ένα PDF με συμπληρώσιμα πεδία φόρμας για να τα δείτε εδώ.",
+  "Choose…": "Επιλογή…",
+  "Save Filled PDF": "Αποθήκευση συμπληρωμένου PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Οι συμπληρωμένες τιμές αποθηκεύονται στο PDF. Χρησιμοποιήστε μετά το «Ισοπέδωση PDF», αν οι απαντήσεις δεν πρέπει πλέον να είναι επεξεργάσιμες.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Αυτό το PDF δεν έχει συμπληρώσιμα πεδία φόρμας. Μπορεί να είναι επίπεδη σάρωση ή έντυπη φόρμα — συμπληρώσιμα πεδία είναι αυτά στα οποία ένας αναγνώστης PDF επιτρέπει την πληκτρολόγηση.",
+  "This field type cannot be filled here.": "Αυτός ο τύπος πεδίου δεν μπορεί να συμπληρωθεί εδώ."
+}

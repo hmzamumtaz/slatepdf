@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Tekstherkenning heeft de eerste keer een internetverbinding nodig om het taalmodel te downloaden.",
   "Thanks for rating!": "Bedankt voor je beoordeling!",
   "That file has no pages to insert.": "Dat bestand heeft geen pagina's om in te voegen.",
+  "That image could not be exported.": "Die afbeelding kon niet worden geëxporteerd.",
+  "That image could not be read.": "Die afbeelding kon niet worden gelezen.",
   "That page is not in this document any more.": "Die pagina zit niet meer in dit document.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Het document bevat tekst, maar geen volledige zinnen om samen te vatten (het is misschien een formulier, een tabel of een document met alleen lijsten).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Dit document lijkt in het Chinees, Japans of Koreaans geschreven — deze samenvatter herkent zinsgrenzen alleen in talen met spaties en \".!?\"-leestekens, dus deze tekst kan hij nog niet opdelen.",

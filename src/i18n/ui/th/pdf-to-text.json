@@ -1,0 +1,8 @@
+{
+  "... (truncated for preview)": "... (ตัดให้สั้นลงสำหรับตัวอย่าง)",
+  "Add a heading for each page": "เพิ่มหัวข้อในทุกหน้า",
+  "Convert to Text": "แปลงเป็นข้อความ",
+  "Copy to clipboard": "คัดลอกไปยังคลิปบอร์ด",
+  "Preview": "ตัวอย่าง",
+  "The text of every page is saved as one plain .txt file. Scanned pages with no text layer come out empty — run OCR PDF on those first.": "ข้อความของทุกหน้าจะถูกบันทึกเป็นไฟล์ .txt ธรรมดาหนึ่งไฟล์ หน้าที่สแกนโดยไม่มีเลเยอร์ข้อความจะว่างเปล่า — ให้รัน OCR PDF กับหน้านั้นก่อน"
+}

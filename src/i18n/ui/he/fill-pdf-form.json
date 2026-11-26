@@ -1,0 +1,9 @@
+{
+  "Checked": "מסומן",
+  "Choose a PDF with fillable form fields to see them here.": "בחרו PDF עם שדות טופס הניתנים למילוי כדי לראות אותם כאן.",
+  "Choose…": "בחירה…",
+  "Save Filled PDF": "שמירת ה-PDF המלא",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "הערכים שמולאו נשמרים ב-PDF. השתמשו לאחר מכן ב«שטחו PDF» אם התשובות לא אמורות להיות ניתנות לעריכה.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "ב-PDF זה אין שדות טופס הניתנים למילוי. ייתכן שזו סריקה שטוחה או טופס מודפס — שדות הניתנים למילוי הם אלו שקורא PDF מאפשר להקליד בהם.",
+  "This field type cannot be filled here.": "לא ניתן למלא סוג שדה זה כאן."
+}

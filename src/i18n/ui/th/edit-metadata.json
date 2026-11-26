@@ -1,0 +1,13 @@
+{
+  "Author": "ผู้เขียน",
+  "Author name": "ชื่อผู้เขียน",
+  "Choose a PDF to see its current title, author, subject and keywords.": "เลือกไฟล์ PDF เพื่อดูชื่อเรื่อง ผู้เขียน หัวข้อ และคำสำคัญปัจจุบัน",
+  "Comma-separated keywords": "คำสำคัญคั่นด้วยจุลภาค",
+  "Document title": "ชื่อเอกสาร",
+  "Keywords": "คำสำคัญ",
+  "Save Metadata": "บันทึกข้อมูลเมตา",
+  "Subject": "หัวข้อ",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "ค่าปัจจุบันแสดงอยู่ด้านบน — เปลี่ยนตามต้องการแล้วบันทึก ปล่อยช่องว่างไว้เพื่อลบออก",
+  "Title": "ชื่อเรื่อง",
+  "What the document is about": "เอกสารนี้เกี่ยวกับอะไร"
+}

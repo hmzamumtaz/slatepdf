@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "हेडर और फ़ुटर जोड़ें",
+  "Add page numbers to the footer": "फ़ुटर में पृष्ठ संख्या जोड़ें",
+  "Center": "बीच में",
+  "Font size": "फ़ॉन्ट साइज़",
+  "Footer text": "फ़ुटर टेक्स्ट",
+  "Header text": "हेडर टेक्स्ट",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "केवल दूसरे पर मुहर लगाने के लिए हेडर या फ़ुटर को खाली छोड़ दें। टेक्स्ट हर पृष्ठ के ऊपर जुड़ता है — मौजूदा सामग्री नहीं हिलती।",
+  "Left": "बाएँ",
+  "Position": "जगह",
+  "Right": "दाएँ",
+  "e.g. Confidential — ACME Ltd": "जैसे, गोपनीय — ACME लिमिटेड",
+  "e.g. Draft — do not distribute": "जैसे, मसौदा — वितरित न करें"
+}

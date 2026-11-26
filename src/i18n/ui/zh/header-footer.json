@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "添加页眉和页脚",
+  "Add page numbers to the footer": "在页脚添加页码",
+  "Center": "居中",
+  "Font size": "字号",
+  "Footer text": "页脚文字",
+  "Header text": "页眉文字",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "将页眉或页脚留空，即可只盖另一处。文字会加在每页上方，不会移动现有内容。",
+  "Left": "左",
+  "Position": "位置",
+  "Right": "右",
+  "e.g. Confidential — ACME Ltd": "例如：机密 — ACME 有限公司",
+  "e.g. Draft — do not distribute": "例如：草稿 — 请勿分发"
+}

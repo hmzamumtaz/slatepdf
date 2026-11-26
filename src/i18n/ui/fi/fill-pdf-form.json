@@ -1,0 +1,9 @@
+{
+  "Checked": "Valittu",
+  "Choose a PDF with fillable form fields to see them here.": "Valitse PDF, jossa on täytettäviä lomakekenttiä, niin ne näkyvät tässä.",
+  "Choose…": "Valitse…",
+  "Save Filled PDF": "Tallenna täytetty PDF",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Täytetyt arvot tallennetaan PDF:ään. Käytä sen jälkeen «Litistä PDF», jos vastauksia ei enää saa muokata.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Tässä PDF:ssä ei ole täytettäviä lomakekenttiä. Se voi olla tasoskannaus tai tulostettu lomake – täytettävät kentät ovat niitä, joihin PDF-lukija antaa kirjoittaa.",
+  "This field type cannot be filled here.": "Tämäntyyppistä kenttää ei voi täyttää tässä."
+}

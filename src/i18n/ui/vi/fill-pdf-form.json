@@ -1,0 +1,9 @@
+{
+  "Checked": "Đã chọn",
+  "Choose a PDF with fillable form fields to see them here.": "Chọn một PDF có trường biểu mẫu điền được để xem chúng ở đây.",
+  "Choose…": "Chọn…",
+  "Save Filled PDF": "Lưu PDF đã điền",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Các giá trị đã điền được lưu vào PDF. Sau đó dùng «Làm phẳng PDF» nếu đáp án không nên chỉnh sửa được nữa.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "PDF này không có trường biểu mẫu điền được. Có thể đây là bản quét phẳng hoặc biểu mẫu in — trường điền được là trường mà trình đọc PDF cho phép nhập văn bản.",
+  "This field type cannot be filled here.": "Không thể điền loại trường này ở đây."
+}

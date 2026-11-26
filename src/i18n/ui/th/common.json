@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "การอ่านข้อความต้องเชื่อมต่ออินเทอร์เน็ตในครั้งแรกเพื่อดาวน์โหลดโมเดลภาษา",
   "Thanks for rating!": "ขอบคุณที่ให้คะแนน!",
   "That file has no pages to insert.": "ไฟล์นั้นไม่มีหน้าให้แทรก",
+  "That image could not be exported.": "ไม่สามารถส่งออกรูปภาพนั้นได้",
+  "That image could not be read.": "ไม่สามารถอ่านรูปภาพนั้นได้",
   "That page is not in this document any more.": "หน้านั้นไม่อยู่ในเอกสารนี้แล้ว",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "เอกสารมีข้อความ แต่ไม่มีประโยคที่สมบูรณ์ให้สรุป (อาจเป็นแบบฟอร์ม ตาราง หรือเอกสารที่มีแต่รายการ)",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "เอกสารนี้ดูเหมือนเขียนเป็นภาษาจีน ญี่ปุ่น หรือเกาหลี — เครื่องมือสรุปนี้ตรวจจับขอบเขตประโยคได้เฉพาะภาษาที่ใช้การเว้นวรรคและเครื่องหมาย \".!?\" จึงยังแบ่งข้อความนี้ไม่ได้",

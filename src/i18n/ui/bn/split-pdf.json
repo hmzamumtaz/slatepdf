@@ -1,7 +1,14 @@
 {
+  "By file size": "ফাইলের আকার অনুযায়ী",
+  "Every N pages": "প্রতি N পৃষ্ঠা",
+  "Maximum size per file (MB)": "প্রতি ফাইলে সর্বোচ্চ আকার (MB)",
+  "Page ranges": "পৃষ্ঠার পরিসর",
   "Page ranges (e.g., 1-3, 5, 7-10)": "পেজের রেঞ্জ (যেমন: 1-3, 5, 7-10)",
+  "Pages are grouped so each file stays under this size. A single page bigger than the limit goes in a file on its own.": "পৃষ্ঠাগুলো এমনভাবে গোষ্ঠীবদ্ধ হয় যাতে প্রতিটি ফাইল এই আকারের নিচে থাকে। সীমার চেয়ে বড় একটি পৃষ্ঠা নিজে আলাদা ফাইলে যায়।",
+  "Pages per file": "প্রতি ফাইলে পৃষ্ঠা",
   "Please enter valid page ranges": "অনুগ্রহ করে বৈধ পেজ রেঞ্জ লিখুন",
   "Preview of pages in ranges:": "রেঞ্জের পেজগুলোর প্রিভিউ:",
   "Split PDF": "PDF স্প্লিট করুন",
+  "Total pages: {total} | Files: {count}": "মোট পৃষ্ঠা: {total} | ফাইল: {count}",
   "Total pages: {total} | Pages in ranges: {count}": "মোট পেজ: {total} | রেঞ্জের পেজ: {count}"
 }

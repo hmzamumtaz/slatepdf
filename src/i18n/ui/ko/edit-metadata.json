@@ -1,0 +1,13 @@
+{
+  "Author": "작성자",
+  "Author name": "작성자 이름",
+  "Choose a PDF to see its current title, author, subject and keywords.": "PDF를 선택하면 현재 제목, 작성자, 주제, 키워드를 볼 수 있습니다.",
+  "Comma-separated keywords": "쉼표로 구분된 키워드",
+  "Document title": "문서 제목",
+  "Keywords": "키워드",
+  "Save Metadata": "메타데이터 저장",
+  "Subject": "주제",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "현재 값이 위에 표시됩니다. 필요한 항목을 변경하고 저장하세요. 비워 두면 해당 항목이 지워집니다.",
+  "Title": "제목",
+  "What the document is about": "문서 내용"
+}

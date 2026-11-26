@@ -1,0 +1,9 @@
+{
+  "Checked": "Selezionato",
+  "Choose a PDF with fillable form fields to see them here.": "Scegli un PDF con campi modulo compilabili per vederli qui.",
+  "Choose…": "Scegli…",
+  "Save Filled PDF": "Salva il PDF compilato",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "I valori inseriti vengono salvati nel PDF. Usa poi «Appiattisci PDF» se le risposte non devono più essere modificabili.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Questo PDF non ha campi modulo compilabili. Potrebbe essere una scansione piatta o un modulo stampato: i campi compilabili sono quelli in cui un lettore PDF consente di digitare.",
+  "This field type cannot be filled here.": "Questo tipo di campo non può essere compilato qui."
+}

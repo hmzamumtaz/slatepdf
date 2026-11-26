@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "टेक्स्ट पहचान को पहली बार भाषा मॉडल डाउनलोड करने के लिए इंटरनेट कनेक्शन चाहिए।",
   "Thanks for rating!": "रेटिंग देने के लिए धन्यवाद!",
   "That file has no pages to insert.": "उस फ़ाइल में जोड़ने के लिए कोई पेज नहीं है।",
+  "That image could not be exported.": "वह छवि निर्यात नहीं की जा सकी।",
+  "That image could not be read.": "वह छवि पढ़ी नहीं जा सकी।",
   "That page is not in this document any more.": "वह पेज अब इस दस्तावेज़ में नहीं है।",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "दस्तावेज़ में टेक्स्ट है, लेकिन सारांश के लिए कोई पूरा वाक्य नहीं है (यह फ़ॉर्म, टेबल या सिर्फ़ सूची वाला दस्तावेज़ हो सकता है)।",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "यह दस्तावेज़ चीनी, जापानी या कोरियाई में लिखा हुआ लगता है — यह सारांश टूल सिर्फ़ उन भाषाओं में वाक्यों की सीमाएँ पहचानता है जिनमें स्पेस और \".!?\" विराम चिह्न होते हैं, इसलिए यह अभी इस टेक्स्ट को वाक्यों में नहीं बाँट सकता।",

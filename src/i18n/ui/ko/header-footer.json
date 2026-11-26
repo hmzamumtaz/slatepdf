@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "머리글 및 바닥글 추가",
+  "Add page numbers to the footer": "바닥글에 페이지 번호 추가",
+  "Center": "가운데",
+  "Font size": "글자 크기",
+  "Footer text": "바닥글 텍스트",
+  "Header text": "머리글 텍스트",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "머리글 또는 바닥글 중 하나를 비워 두면 다른 하나만 찍힙니다. 텍스트는 각 페이지 위에 추가되며 기존 내용을 이동시키지 않습니다.",
+  "Left": "왼쪽",
+  "Position": "위치",
+  "Right": "오른쪽",
+  "e.g. Confidential — ACME Ltd": "예: 기밀 — ACME 주식회사",
+  "e.g. Draft — do not distribute": "예: 초안 — 배포 금지"
+}

@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "文字認識を初めて使うときは、言語モデルをダウンロードするためにインターネット接続が必要です。",
   "Thanks for rating!": "評価ありがとうございます！",
   "That file has no pages to insert.": "そのファイルには挿入できるページがありません。",
+  "That image could not be exported.": "その画像を書き出せませんでした。",
+  "That image could not be read.": "その画像を読み取れませんでした。",
   "That page is not in this document any more.": "そのページはこのドキュメントにもうありません。",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "ドキュメントにテキストはありますが、要約できる完全な文がありません（フォーム、表、リストだけのドキュメントの可能性があります）。",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "このドキュメントは中国語・日本語・韓国語で書かれているようです。この要約ツールは、スペースと「.!?」の句読点を使う言語でしか文の区切りを判別できないため、現時点ではこのテキストを分割できません。",

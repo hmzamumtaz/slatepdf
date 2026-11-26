@@ -91,6 +91,8 @@
   "Text recognition needs an internet connection the first time to download the language model.": "Il riconoscimento del testo richiede una connessione a internet la prima volta, per scaricare il modello della lingua.",
   "Thanks for rating!": "Grazie per la valutazione!",
   "That file has no pages to insert.": "Quel file non ha pagine da inserire.",
+  "That image could not be exported.": "Impossibile esportare questa immagine.",
+  "That image could not be read.": "Impossibile leggere questa immagine.",
   "That page is not in this document any more.": "Quella pagina non fa più parte di questo documento.",
   "The document contains text but no complete sentences to summarize (it may be a form, table, or list-only document).": "Il documento contiene testo ma nessuna frase completa da riassumere (potrebbe essere un modulo, una tabella o un documento composto solo da elenchi).",
   "This document looks like it is written in Chinese, Japanese or Korean — this summarizer only detects sentence boundaries for languages that use spaces and \".!?\" punctuation, so it can't segment this text yet.": "Questo documento sembra scritto in cinese, giapponese o coreano: questo strumento riconosce la fine delle frasi solo nelle lingue che usano gli spazi e la punteggiatura \".!?\", quindi non riesce ancora a suddividere questo testo.",

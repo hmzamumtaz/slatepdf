@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "הוספת כותרת עליונה ותחתונה",
+  "Add page numbers to the footer": "הוספת מספרי עמודים לכותרת התחתונה",
+  "Center": "מרכז",
+  "Font size": "גודל גופן",
+  "Footer text": "טקסט הכותרת התחתונה",
+  "Header text": "טקסט הכותרת העליונה",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "השאירו את הכותרת העליונה או התחתונה ריקה כדי לחתום רק את השנייה. הטקסט מתווסף מעל כל עמוד ואינו מזיז את התוכן הקיים.",
+  "Left": "שמאל",
+  "Position": "מיקום",
+  "Right": "ימין",
+  "e.g. Confidential — ACME Ltd": "למשל: חסוי — ACME בע״מ",
+  "e.g. Draft — do not distribute": "למשל: טיוטה — אין להפיץ"
+}

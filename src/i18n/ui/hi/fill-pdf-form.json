@@ -1,0 +1,9 @@
+{
+  "Checked": "चयनित",
+  "Choose a PDF with fillable form fields to see them here.": "भरे जा सकने वाले फ़ॉर्म फ़ील्ड वाला PDF चुनें, वे यहाँ दिखेंगे।",
+  "Choose…": "चुनें…",
+  "Save Filled PDF": "भरा हुआ PDF सहेजें",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "भरे हुए मान PDF में सहेजे जाते हैं। यदि उत्तर अब संपादन योग्य नहीं होने चाहिए, तो बाद में «PDF फ़्लैट करें» का उपयोग करें।",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "इस PDF में भरने योग्य फ़ॉर्म फ़ील्ड नहीं हैं। यह एक सपाट स्कैन या मुद्रित फ़ॉर्म हो सकता है — भरने योग्य फ़ील्ड वे होते हैं जिनमें PDF रीडर टाइप करने देता है।",
+  "This field type cannot be filled here.": "इस प्रकार का फ़ील्ड यहाँ भरा नहीं जा सकता।"
+}

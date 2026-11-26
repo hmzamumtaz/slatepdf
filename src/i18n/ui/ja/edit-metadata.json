@@ -1,0 +1,13 @@
+{
+  "Author": "著者",
+  "Author name": "著者名",
+  "Choose a PDF to see its current title, author, subject and keywords.": "PDFを選ぶと、現在のタイトル・著者・件名・キーワードが表示されます。",
+  "Comma-separated keywords": "カンマ区切りのキーワード",
+  "Document title": "文書のタイトル",
+  "Keywords": "キーワード",
+  "Save Metadata": "メタデータを保存",
+  "Subject": "件名",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "現在の値が上に表示されています。必要なものを変更して保存してください。空にするとその項目は消えます。",
+  "Title": "タイトル",
+  "What the document is about": "文書の内容"
+}

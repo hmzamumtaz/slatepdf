@@ -1,0 +1,9 @@
+{
+  "Checked": "İşaretli",
+  "Choose a PDF with fillable form fields to see them here.": "Doldurulabilir form alanları olan bir PDF seçin; alanlar burada görünür.",
+  "Choose…": "Seç…",
+  "Save Filled PDF": "Doldurulmuş PDF’yi kaydet",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Doldurulan değerler PDF’ye kaydedilir. Yanıtların artık düzenlenememesi gerekiyorsa ardından «PDF’yi düzleştir»i kullanın.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "Bu PDF’de doldurulabilir form alanı yok. Düz bir tarama veya basılı bir form olabilir — doldurulabilir alanlar, PDF okuyucunun yazmaya izin verdiği alanlardır.",
+  "This field type cannot be filled here.": "Bu alan türü burada doldurulamaz."
+}

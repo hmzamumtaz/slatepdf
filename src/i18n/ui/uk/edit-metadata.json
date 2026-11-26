@@ -1,0 +1,13 @@
+{
+  "Author": "Автор",
+  "Author name": "Ім’я автора",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Виберіть PDF, щоб побачити його поточні назву, автора, тему та ключові слова.",
+  "Comma-separated keywords": "Ключові слова через кому",
+  "Document title": "Назва документа",
+  "Keywords": "Ключові слова",
+  "Save Metadata": "Зберегти метадані",
+  "Subject": "Тема",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Поточні значення показано вище — змініть потрібне та збережіть. Залиште поле порожнім, щоб очистити його.",
+  "Title": "Назва",
+  "What the document is about": "Про що цей документ"
+}

@@ -56,6 +56,7 @@
   "Delete selected": "حذف المحدد",
   "Delete this scan from this device?": "حذف هذا المسح من هذا الجهاز؟",
   "Delete {name}": "حذف {name}",
+  "Dismiss": "إغلاق",
   "Document": "مستند",
   "Document language": "لغة المستند",
   "Document name": "اسم المستند",
@@ -92,6 +93,7 @@
   "Front only — skip the back": "الوجه الأمامي فقط، وتخطَّ الخلفي",
   "Full photo": "الصورة كاملة",
   "German": "الألمانية",
+  "Go back": "رجوع",
   "Grayscale": "تدرّج رمادي",
   "Hide password": "إخفاء كلمة المرور",
   "Highlight": "تمييز",
@@ -130,6 +132,7 @@
   "Now turn the card over and scan the back": "اقلب البطاقة الآن وامسح وجهها الخلفي",
   "One JPG image of the page.": "صورة JPG واحدة للصفحة.",
   "One per line": "واحد في كل سطر",
+  "Open": "فتح",
   "Original": "الأصلي",
   "PDF ready": "ملف PDF جاهز",
   "Page found — hold steady": "عُثر على الصفحة، ثبّت الجهاز",
@@ -219,6 +222,7 @@
   "Undo last change": "التراجع عن آخر تغيير",
   "Urdu": "الأردية",
   "Use at least {count} characters.": "استخدم ما لا يقل عن {count} من الأحرف.",
+  "Use in PDF": "استخدام في PDF",
   "Use signature": "استخدام التوقيع",
   "Vietnamese": "الفيتنامية",
   "Websites": "المواقع الإلكترونية",
@@ -237,6 +241,5 @@
   "{count} JPG images, one per page, in a .zip.": "صور JPG ({count})، صورة لكل صفحة، في ملف ‎.zip.",
   "{count} page": "{count} صفحة",
   "{count} pages": "عدد الصفحات: {count}",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} إذا تعذّر تحميل التعرف على النص (يحتاج إلى اتصال في المرة الأولى)، فأوقفه وحاول مرة أخرى.",
-  "Go back": "رجوع"
+  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} إذا تعذّر تحميل التعرف على النص (يحتاج إلى اتصال في المرة الأولى)، فأوقفه وحاول مرة أخرى."
 }

@@ -1,0 +1,13 @@
+{
+  "Author": "Tác giả",
+  "Author name": "Tên tác giả",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Chọn một PDF để xem tiêu đề, tác giả, chủ đề và từ khóa hiện tại của nó.",
+  "Comma-separated keywords": "Từ khóa phân tách bằng dấu phẩy",
+  "Document title": "Tiêu đề tài liệu",
+  "Keywords": "Từ khóa",
+  "Save Metadata": "Lưu siêu dữ liệu",
+  "Subject": "Chủ đề",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Các giá trị hiện tại hiển thị ở trên — thay đổi những gì cần rồi lưu. Để trống một trường để xóa nó.",
+  "Title": "Tiêu đề",
+  "What the document is about": "Tài liệu này nói về gì"
+}

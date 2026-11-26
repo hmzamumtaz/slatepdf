@@ -1,0 +1,13 @@
+{
+  "Author": "Автор",
+  "Author name": "Имя автора",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Выберите PDF, чтобы увидеть его текущие название, автора, тему и ключевые слова.",
+  "Comma-separated keywords": "Ключевые слова через запятую",
+  "Document title": "Название документа",
+  "Keywords": "Ключевые слова",
+  "Save Metadata": "Сохранить метаданные",
+  "Subject": "Тема",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Текущие значения показаны выше — измените нужное и сохраните. Оставьте поле пустым, чтобы очистить его.",
+  "Title": "Название",
+  "What the document is about": "О чём этот документ"
+}

@@ -1,0 +1,9 @@
+{
+  "Checked": "Dicentang",
+  "Choose a PDF with fillable form fields to see them here.": "Pilih PDF dengan kolom formulir yang dapat diisi untuk melihatnya di sini.",
+  "Choose…": "Pilih…",
+  "Save Filled PDF": "Simpan PDF yang diisi",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Nilai yang diisi disimpan ke dalam PDF. Gunakan «Ratakan PDF» setelahnya jika jawaban tidak boleh lagi diedit.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "PDF ini tidak memiliki kolom formulir yang dapat diisi. Mungkin ini hasil pindaian datar atau formulir cetak — kolom yang dapat diisi adalah kolom yang memungkinkan pembaca PDF mengetik di dalamnya.",
+  "This field type cannot be filled here.": "Jenis kolom ini tidak dapat diisi di sini."
+}

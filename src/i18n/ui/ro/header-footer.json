@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Adaugă antet și subsol",
+  "Add page numbers to the footer": "Adaugă numere de pagină în subsol",
+  "Center": "Centru",
+  "Font size": "Mărimea fontului",
+  "Footer text": "Textul subsolului",
+  "Header text": "Textul antetului",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Lasă antetul sau subsolul gol pentru a ștampila doar celălalt. Textul este adăugat deasupra fiecărei pagini și nu mută conținutul existent.",
+  "Left": "Stânga",
+  "Position": "Poziție",
+  "Right": "Dreapta",
+  "e.g. Confidential — ACME Ltd": "ex. Confidențial — ACME SRL",
+  "e.g. Draft — do not distribute": "ex. Schiță — nu distribui"
+}

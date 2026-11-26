@@ -1,0 +1,9 @@
+{
+  "Checked": "Ditanda",
+  "Choose a PDF with fillable form fields to see them here.": "Pilih PDF dengan medan borang yang boleh diisi untuk melihatnya di sini.",
+  "Choose…": "Pilih…",
+  "Save Filled PDF": "Simpan PDF yang diisi",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "Nilai yang diisi disimpan ke dalam PDF. Gunakan «Ratakan PDF» selepas itu jika jawapan tidak patut boleh diedit lagi.",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "PDF ini tiada medan borang yang boleh diisi. Ia mungkin imbasan rata atau borang bercetak — medan boleh isi ialah medan yang membolehkan pembaca PDF menaip di dalamnya.",
+  "This field type cannot be filled here.": "Jenis medan ini tidak boleh diisi di sini."
+}

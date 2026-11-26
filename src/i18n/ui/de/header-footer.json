@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Kopf- und Fußzeile hinzufügen",
+  "Add page numbers to the footer": "Seitenzahlen in die Fußzeile einfügen",
+  "Center": "Mitte",
+  "Font size": "Schriftgröße",
+  "Footer text": "Fußzeilentext",
+  "Header text": "Kopfzeilentext",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Lassen Sie die Kopf- oder Fußzeile leer, um nur die andere zu stempeln. Der Text wird über jede Seite gelegt – der vorhandene Inhalt verschiebt sich nicht.",
+  "Left": "Links",
+  "Position": "Position",
+  "Right": "Rechts",
+  "e.g. Confidential — ACME Ltd": "z. B. Vertraulich — ACME GmbH",
+  "e.g. Draft — do not distribute": "z. B. Entwurf — nicht weitergeben"
+}

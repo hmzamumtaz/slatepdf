@@ -1,0 +1,11 @@
+{
+  "Alternate & Mix": "交错混合",
+  "Back to all tools": "返回全部工具",
+  "First document": "第一个文档",
+  "Interleave the pages of two PDFs, one after the other": "将两个 PDF 的页面交错合并",
+  "Mix PDFs": "混合 PDF",
+  "Mixed PDF downloaded": "已下载混合后的 PDF",
+  "Mixing...": "正在混合…",
+  "Second document": "第二个文档",
+  "The result goes page 1 of the first document, page 1 of the second, page 2 of the first, page 2 of the second, and so on. If one document is longer, its remaining pages go at the end.": "结果顺序为：第一个文档第 1 页、第二个文档第 1 页、第一个文档第 2 页、第二个文档第 2 页，依此类推。如果一个文档更长，其剩余页面将放在末尾。"
+}

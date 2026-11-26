@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Přidat záhlaví a zápatí",
+  "Add page numbers to the footer": "Přidat čísla stránek do zápatí",
+  "Center": "Uprostřed",
+  "Font size": "Velikost písma",
+  "Footer text": "Text zápatí",
+  "Header text": "Text záhlaví",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Nechte záhlaví nebo zápatí prázdné, abyste označili jen to druhé. Text se přidá na každou stránku a neposune stávající obsah.",
+  "Left": "Vlevo",
+  "Position": "Pozice",
+  "Right": "Vpravo",
+  "e.g. Confidential — ACME Ltd": "např. Důvěrné — ACME s.r.o.",
+  "e.g. Draft — do not distribute": "např. Návrh — nešířit"
+}

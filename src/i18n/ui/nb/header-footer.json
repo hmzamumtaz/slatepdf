@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Legg til topptekst og bunntekst",
+  "Add page numbers to the footer": "Legg til sidetall i bunnteksten",
+  "Center": "Midten",
+  "Font size": "Skriftstørrelse",
+  "Footer text": "Bunntekst",
+  "Header text": "Topptekst",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "La toppteksten eller bunnteksten stå tom for å bare stemple den andre. Teksten legges oppå hver side og flytter ikke det eksisterende innholdet.",
+  "Left": "Venstre",
+  "Position": "Plassering",
+  "Right": "Høyre",
+  "e.g. Confidential — ACME Ltd": "f.eks. Konfidensielt — ACME AS",
+  "e.g. Draft — do not distribute": "f.eks. Utkast — ikke del videre"
+}

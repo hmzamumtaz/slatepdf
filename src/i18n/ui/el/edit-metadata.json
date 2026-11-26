@@ -1,0 +1,13 @@
+{
+  "Author": "Συγγραφέας",
+  "Author name": "Όνομα συγγραφέα",
+  "Choose a PDF to see its current title, author, subject and keywords.": "Επιλέξτε ένα PDF για να δείτε τον τρέχοντα τίτλο, τον συγγραφέα, το θέμα και τις λέξεις-κλειδιά του.",
+  "Comma-separated keywords": "Λέξεις-κλειδιά χωρισμένες με κόμματα",
+  "Document title": "Τίτλος εγγράφου",
+  "Keywords": "Λέξεις-κλειδιά",
+  "Save Metadata": "Αποθήκευση μεταδεδομένων",
+  "Subject": "Θέμα",
+  "The current values are shown above — change what you need and save. Leave a field empty to clear it.": "Οι τρέχουσες τιμές εμφανίζονται παραπάνω — αλλάξτε ό,τι χρειάζεται και αποθηκεύστε. Αφήστε ένα πεδίο κενό για να το διαγράψετε.",
+  "Title": "Τίτλος",
+  "What the document is about": "Τι αφορά το έγγραφο"
+}

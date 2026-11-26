@@ -1,0 +1,9 @@
+{
+  "Checked": "চিহ্নিত",
+  "Choose a PDF with fillable form fields to see them here.": "পূরণযোগ্য ফর্ম ফিল্ড আছে এমন PDF বেছে নিন, সেগুলো এখানে দেখা যাবে।",
+  "Choose…": "বেছে নিন…",
+  "Save Filled PDF": "পূরণ করা PDF সংরক্ষণ করুন",
+  "The filled values are saved into the PDF. Use Flatten PDF afterwards if the answers should no longer be editable.": "পূরণ করা মানগুলো PDF-এ সংরক্ষিত হয়। উত্তরগুলো আর সম্পাদনাযোগ্য না হওয়া উচিত হলে পরে «PDF ফ্ল্যাট করুন» ব্যবহার করুন।",
+  "This PDF has no fillable form fields. It may be a flat scan or a printed form — fillable fields are the ones a PDF reader lets you type into.": "এই PDF-এ পূরণযোগ্য ফর্ম ফিল্ড নেই। এটি ফ্ল্যাট স্ক্যান বা মুদ্রিত ফর্ম হতে পারে — পূরণযোগ্য ফিল্ড হলো সেগুলো যেখানে PDF রিডার টাইপ করতে দেয়।",
+  "This field type cannot be filled here.": "এই ধরনের ফিল্ড এখানে পূরণ করা যায় না।"
+}

@@ -1,0 +1,14 @@
+{
+  "Add Header & Footer": "Dodaj nagłówek i stopkę",
+  "Add page numbers to the footer": "Dodaj numery stron do stopki",
+  "Center": "Środek",
+  "Font size": "Rozmiar czcionki",
+  "Footer text": "Tekst stopki",
+  "Header text": "Tekst nagłówka",
+  "Leave the header or footer empty to stamp only the other one. The text is added on top of every page — it does not move the existing content.": "Pozostaw nagłówek lub stopkę puste, aby oznaczyć tylko drugie. Tekst jest dodawany na każdej stronie bez przesuwania istniejącej treści.",
+  "Left": "Lewo",
+  "Position": "Położenie",
+  "Right": "Prawo",
+  "e.g. Confidential — ACME Ltd": "np. Poufne — ACME Sp. z o.o.",
+  "e.g. Draft — do not distribute": "np. Szkic — nie rozpowszechniać"
+}
