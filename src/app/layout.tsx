@@ -91,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-KKY1G55F4D"
+          src="https://www.googletagmanager.com/gtag/js?id=G-HLJ6607XWJ"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-KKY1G55F4D');
+            gtag('config', 'G-HLJ6607XWJ');
           `}
         </Script>
       </head>
