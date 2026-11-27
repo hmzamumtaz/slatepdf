@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { createPortal } from 'react-dom';
 import { X, Search } from 'lucide-react';
 import { toolIcon } from '@/components/tool-icons';
 import { tools, categories, getToolsByCategory } from '@/lib/tools-data';
@@ -39,7 +40,10 @@ export default function ToolsModal({ isOpen, onClose }: ToolsModalProps) {
     ? tools.filter(t => t.name.toLowerCase().includes(search.toLowerCase()) || t.description.toLowerCase().includes(search.toLowerCase()))
     : null;
 
-  return (
+  // Portal to <body>: the header has backdrop-blur, which makes it the
+  // containing block for position:fixed children, so rendered in place the
+  // backdrop only covered the header strip instead of the whole viewport.
+  return createPortal(
     <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] sm:pt-[15vh]">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 max-h-[75vh] flex flex-col animate-slide-up">
@@ -116,6 +120,7 @@ export default function ToolsModal({ isOpen, onClose }: ToolsModalProps) {
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
