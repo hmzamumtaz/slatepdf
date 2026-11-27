@@ -91,15 +91,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-HLJ6607XWJ"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-WNBP3XSD"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-HLJ6607XWJ');
           `}
         </Script>
       </head>
