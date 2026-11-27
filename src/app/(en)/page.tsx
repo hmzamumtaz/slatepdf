@@ -143,7 +143,7 @@ export default function Home() {
               type="search"
               value={toolQuery}
               onChange={(e) => onHeroSearch(e.target.value)}
-              placeholder={`Search ${tools.length} tools — try “compress”`}
+              placeholder={`Search ${tools.length} PDF tools…`}
               aria-label="Search tools"
               className="w-full pl-13 pr-24 py-4 sm:py-5 rounded-2xl border border-border bg-white text-base sm:text-lg text-foreground placeholder:text-muted-foreground shadow-lg shadow-gray-900/[0.07] focus:outline-none focus:ring-4 focus:ring-foreground/10 focus:border-foreground/40 [&::-webkit-search-cancel-button]:hidden"
             />

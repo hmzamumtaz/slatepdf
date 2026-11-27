@@ -107,22 +107,22 @@ export default function Footer({ nav }: { nav: NavData }) {
 
         {/* Bottom bar */}
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs">
+          <p className="text-xs text-center sm:text-left">
             &copy; {new Date().getFullYear()} {SITE_NAME}.{english && ' Files are processed locally in your browser — only the optional Translate tool contacts an online service.'}
           </p>
-          <div className="flex items-center gap-4 text-xs">
-            {english && <><span>No file size limits</span><span className="text-gray-600">|</span></>}
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
+            {english && <><span>No file size limits</span><span aria-hidden="true" className="hidden sm:inline text-gray-600">|</span></>}
             <span>{nav.labels.noWatermark}</span>
-            <span className="text-gray-600">|</span>
+            <span aria-hidden="true" className="hidden sm:inline text-gray-600">|</span>
             <span>{nav.labels.noSignup}</span>
           </div>
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
             <Link href="/about" className="hover:text-white transition-colors">{nav.labels.about}</Link>
-            <span className="text-gray-600">|</span>
+            <span aria-hidden="true" className="hidden sm:inline text-gray-600">|</span>
             <Link href="/privacy" className="hover:text-white transition-colors">{nav.labels.privacy}</Link>
-            <span className="text-gray-600">|</span>
+            <span aria-hidden="true" className="hidden sm:inline text-gray-600">|</span>
             <Link href="/terms" className="hover:text-white transition-colors">{nav.labels.terms}</Link>
-            <span className="text-gray-600">|</span>
+            <span aria-hidden="true" className="hidden sm:inline text-gray-600">|</span>
             <LanguageSwitcher label={nav.labels.language} dropUp dark />
           </div>
         </div>
