@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   ],
   verification: {
     google: 'Hvb5bTrA4ZW9NqtbgrZMqJBkKencFn9NE8hOKR8XAnU',
+    other: {
+      'p:domain_verify': 'ef1ccaaba4d29161002a4877b7b8fc33',
+    },
   },
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME }],
