@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import Link from 'next/link';
-import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, Server, CheckCircle2, Infinity, ChevronDown, Search, X, Zap, ShieldCheck, BadgeCheck, Merge, ArrowUpRight } from 'lucide-react';
+import { Shield, Lock, ArrowRight, Camera, Globe, LayoutGrid, CheckCircle2, Infinity, ChevronDown, Search, X, Zap, ShieldCheck, BadgeCheck, Merge, ArrowUpRight, FileText, CloudUpload, Download, Laptop } from 'lucide-react';
 import { toolIcon } from '@/components/tool-icons';
 import { categories, categoryAnchor, getToolsByCategory, featuredTool, getToolBySlug, tools } from '@/lib/tools-data';
 import ToolGrid from '@/components/ToolGrid';
@@ -97,66 +97,103 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Hero — centered, tools-first. The old two-column hero with its
-          black highlight block and fake-browser launcher card is gone:
-          one headline, one search, and the six popular tools as cards. */}
-      <section className="relative overflow-hidden pt-16 sm:pt-24 pb-12 sm:pb-16">
-        {/* Ambient neutral glow */}
-        <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[420px] w-[720px] rounded-full bg-gradient-to-b from-gray-900/[0.06] to-transparent blur-3xl" />
+      {/* Hero — tools-first, built around the one claim competitors can't
+          make: the file never leaves the device. The "where does your file
+          go?" strip shows that contrast instead of just asserting it. */}
+      <section className="relative overflow-hidden pt-12 sm:pt-16 pb-14 sm:pb-20">
+        {/* Dot grid, faded out towards the edges */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: 'radial-gradient(rgba(15,15,15,0.10) 1px, transparent 1px)',
+            backgroundSize: '22px 22px',
+            maskImage: 'radial-gradient(ellipse 70% 55% at 50% 25%, black 30%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 55% at 50% 25%, black 30%, transparent 100%)',
+          }}
+        />
+        <div aria-hidden className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[460px] w-[820px] rounded-full bg-gradient-to-b from-green-400/[0.10] to-transparent blur-3xl" />
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 border border-green-200 rounded-full text-sm font-medium text-green-800">
-            <Shield className="w-4 h-4 text-green-600" />
-            <span>Files never leave your device</span>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+          <div className="inline-flex items-center gap-2.5 pl-3 pr-4 py-1.5 bg-white border border-border rounded-full text-sm font-medium text-foreground shadow-sm">
+            <span className="relative flex w-2 h-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60 animate-ping" />
+              <span className="relative inline-flex w-2 h-2 rounded-full bg-green-500" />
+            </span>
+            Free forever · No account · No uploads
           </div>
 
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-foreground text-balance">
-            Every PDF tool you need,{' '}
-            <span className="bg-gray-100 rounded-xl px-2 sm:px-3 box-decoration-clone">free and private.</span>
+          <h1 className="mt-6 text-[2.6rem] sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.04] text-foreground text-balance">
+            Every PDF tool you need.
+            <span className="block bg-gradient-to-r from-gray-400 via-gray-500 to-gray-400 bg-clip-text text-transparent pb-1">
+              Zero uploads.
+            </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Merge, split, compress, convert, edit and sign documents in your browser.
-            No uploads, no sign up, no watermarks and no limits.
+          <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
+            Merge, split, compress, convert, edit and sign PDFs right in your browser.
+            Free, no sign up, no watermark — and your files never leave your device.
           </p>
 
           {/* Search-first: the fastest way to a tool is to type its name.
               Typing jumps to the grid below. */}
-          <div className="mt-9 relative max-w-xl mx-auto">
-            <Search className="w-5 h-5 text-muted-foreground absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="mt-8 relative max-w-2xl mx-auto">
+            <Search className="w-5 h-5 text-muted-foreground absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="search"
               value={toolQuery}
               onChange={(e) => onHeroSearch(e.target.value)}
-              placeholder="Search all tools — try “compress”, “sign” or “word”…"
+              placeholder={`Search ${tools.length} tools — try “compress”`}
               aria-label="Search tools"
-              className="w-full pl-11 pr-10 py-4 rounded-2xl border border-border bg-white text-base text-foreground placeholder:text-muted-foreground shadow-md shadow-gray-900/[0.06] focus:outline-none focus:ring-2 focus:ring-foreground/30 focus:border-foreground/40"
+              className="w-full pl-13 pr-24 py-4 sm:py-5 rounded-2xl border border-border bg-white text-base sm:text-lg text-foreground placeholder:text-muted-foreground shadow-lg shadow-gray-900/[0.07] focus:outline-none focus:ring-4 focus:ring-foreground/10 focus:border-foreground/40 [&::-webkit-search-cancel-button]:hidden"
             />
-            {toolQuery && (
+            {toolQuery ? (
               <button
                 onClick={() => setToolQuery('')}
                 aria-label="Clear search"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground"
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-4 h-4" />
               </button>
+            ) : (
+              <kbd className="hidden sm:inline-flex absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 rounded-lg border border-border bg-muted text-xs font-semibold text-muted-foreground pointer-events-none">
+                Ctrl K
+              </kbd>
             )}
           </div>
 
-          <p className="mt-4 text-sm text-muted-foreground">
-            or press <kbd className="px-1.5 py-0.5 rounded-md border border-border bg-muted text-xs font-semibold text-foreground">Ctrl K</kbd> anywhere to search
+          {/* Where does your file go? — the differentiator, shown not told. */}
+          <div className="mt-8 max-w-3xl mx-auto text-left rounded-2xl border border-border bg-white/90 backdrop-blur shadow-[var(--shadow-card)] overflow-hidden">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 px-5 py-4">
+              <span className="sm:w-40 shrink-0 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Typical PDF sites</span>
+              <div className="flex flex-1 items-center gap-1.5 sm:gap-2.5 text-xs sm:text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-1.5 whitespace-nowrap"><FileText className="w-4 h-4" /> Your file</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 text-gray-300" />
+                <span className="inline-flex items-center gap-1.5 whitespace-nowrap px-2 py-0.5 rounded-md bg-red-50 text-red-700"><CloudUpload className="w-4 h-4" /> Their server</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 text-gray-300" />
+                <span className="inline-flex items-center gap-1.5 whitespace-nowrap"><Download className="w-4 h-4" /> Back to you</span>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 px-5 py-4 border-t border-border bg-green-50/60">
+              <span className="sm:w-40 shrink-0 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-foreground">
+                <span aria-hidden="true" className="w-4 h-4 rounded bg-foreground text-white text-[9px] font-bold flex items-center justify-center">S</span>
+                {SITE_NAME}
+              </span>
+              <div className="flex flex-1 items-center gap-1.5 sm:gap-2.5 text-xs sm:text-sm text-foreground font-medium">
+                <span className="inline-flex items-center gap-1.5 whitespace-nowrap"><FileText className="w-4 h-4" /> Your file</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 text-green-600" />
+                <span className="inline-flex items-center gap-1.5 whitespace-nowrap px-2 py-0.5 rounded-md bg-green-100 text-green-800"><Laptop className="w-4 h-4" /> Your browser</span>
+                <span className="ml-auto hidden sm:inline-flex items-center gap-1.5 whitespace-nowrap text-green-700"><CheckCircle2 className="w-4 h-4" /> Never sent</span>
+              </div>
+            </div>
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Don&apos;t take our word for it: open a tool, switch off your Wi‑Fi, and it keeps working.
           </p>
 
-          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2.5 justify-center text-sm text-muted-foreground">
-            <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-600" /> No sign up</span>
-            <span className="inline-flex items-center gap-2"><Server className="w-4 h-4 text-green-600" /> No uploads</span>
-            <span className="inline-flex items-center gap-2"><Infinity className="w-4 h-4 text-green-600" /> No limits</span>
-            <span className="inline-flex items-center gap-2"><Lock className="w-4 h-4 text-green-600" /> 100% private</span>
-          </div>
-
-          {/* Popular tools as cards — the old launcher list, out in the open. */}
-          <div className="mt-12 sm:mt-14">
-            <p className="eyebrow text-muted-foreground mb-5">Start with a popular tool</p>
+          {/* Popular tools as cards */}
+          <div className="mt-10 sm:mt-12">
+            <p className="eyebrow text-muted-foreground mb-5">Most used</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-left">
               {popularTools.map((tool) => {
                 const IconComp = toolIcon(tool.icon);
@@ -164,19 +201,24 @@ export default function Home() {
                   <Link
                     key={tool.slug}
                     href={`/tools/${tool.slug}`}
-                    className="tool-card group p-4 bg-white border border-border rounded-2xl hover:border-foreground/25"
+                    className="tool-card group relative flex flex-col p-4 bg-white border border-border rounded-2xl hover:border-foreground/25"
                   >
                     <div
                       className="w-11 h-11 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-110"
-                      style={{ backgroundColor: `${tool.color}12` }}
+                      style={{ backgroundColor: `${tool.color}14` }}
                     >
                       <IconComp className="w-5 h-5" style={{ color: tool.color }} />
                     </div>
                     <h3 className="text-sm font-semibold text-foreground leading-tight">{tool.name}</h3>
+                    <p className="mt-1 text-xs text-muted-foreground leading-snug line-clamp-2">{tool.description}</p>
+                    <ArrowUpRight className="absolute top-4 right-4 w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 );
               })}
             </div>
+            <a href="#tools" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground hover:underline underline-offset-4">
+              Browse all {tools.length} tools <ChevronDown className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
