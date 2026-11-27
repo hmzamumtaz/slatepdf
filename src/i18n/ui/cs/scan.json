@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Klepněte tam, kde má být text. Tažením text přesunete.",
   "Text": "Text",
   "Text recognition and passwords only apply to PDFs.": "Rozpoznávání textu a hesla platí jen pro PDF.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Rozpoznávání textu se nepodařilo načíst. Poprvé vyžaduje připojení k internetu. Vypněte ho a uložte PDF bez něj, nebo to zkuste znovu, až budete online.",
   "Text recognition progress": "Průběh rozpoznávání textu",
   "Text to add": "Text k přidání",
   "The corners cross over — drag them back into a four-sided shape.": "Rohy se kříží – přetáhněte je zpět do čtyřúhelníku.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "převést obrázky do PDF",
   "{count} JPG images, one per page, in a .zip.": "Obrázky JPG v souboru .zip, jeden na stránku (počet: {count}).",
   "{count} page": "{count} stránka",
-  "{count} pages": "Stránky: {count}",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Pokud se rozpoznávání textu nepodařilo načíst (při prvním použití potřebuje připojení), vypněte ho a zkuste to znovu."
+  "{count} pages": "Stránky: {count}"
 }

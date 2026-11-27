@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Chạm vào chỗ cần đặt chữ. Kéo chữ để di chuyển.",
   "Text": "Chữ",
   "Text recognition and passwords only apply to PDFs.": "Nhận dạng chữ và mật khẩu chỉ áp dụng cho PDF.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Không thể tải tính năng nhận dạng văn bản. Lần đầu sử dụng cần có kết nối internet. Hãy tắt tính năng này để lưu PDF mà không cần nó, hoặc thử lại khi bạn có mạng.",
   "Text recognition progress": "Tiến độ nhận dạng chữ",
   "Text to add": "Chữ cần thêm",
   "The corners cross over — drag them back into a four-sided shape.": "Các góc đang bắt chéo nhau — hãy kéo lại thành hình bốn cạnh.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "chuyển ảnh thành PDF",
   "{count} JPG images, one per page, in a .zip.": "{count} ảnh JPG, mỗi trang một ảnh, trong tệp .zip.",
   "{count} page": "{count} trang",
-  "{count} pages": "{count} trang",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Nếu không tải được tính năng nhận dạng chữ (lần đầu cần có kết nối mạng), hãy tắt tính năng này và thử lại."
+  "{count} pages": "{count} trang"
 }

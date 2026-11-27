@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "जहाँ टेक्स्ट रखना है वहाँ टैप करें। टेक्स्ट खिसकाने के लिए उसे ड्रैग करें।",
   "Text": "टेक्स्ट",
   "Text recognition and passwords only apply to PDFs.": "टेक्स्ट पहचान और पासवर्ड सिर्फ़ PDF पर लागू होते हैं।",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "टेक्स्ट पहचान लोड नहीं हो सकी। पहली बार इसके लिए इंटरनेट कनेक्शन चाहिए। इसे बंद करके PDF सेव करें, या ऑनलाइन होने पर फिर से कोशिश करें।",
   "Text recognition progress": "टेक्स्ट पहचान की प्रगति",
   "Text to add": "जोड़ने वाला टेक्स्ट",
   "The corners cross over — drag them back into a four-sided shape.": "कोने एक-दूसरे को काट रहे हैं — उन्हें खींचकर वापस चार भुजाओं वाला आकार बनाएँ।",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "इमेज को PDF में बदलें",
   "{count} JPG images, one per page, in a .zip.": "{count} JPG इमेज, हर पेज की एक, एक .zip में।",
   "{count} page": "{count} पेज",
-  "{count} pages": "{count} पेज",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} अगर टेक्स्ट पहचान लोड नहीं हो सकी (पहली बार इसके लिए कनेक्शन चाहिए), तो इसे बंद करके फिर से कोशिश करें।"
+  "{count} pages": "{count} पेज"
 }

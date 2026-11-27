@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Trykk der teksten skal stå. Dra teksten for å flytte den.",
   "Text": "Tekst",
   "Text recognition and passwords only apply to PDFs.": "Tekstgjenkjenning og passord gjelder bare for PDF-er.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Tekstgjenkjenningen kunne ikke lastes inn. Første gang trengs en internettforbindelse. Slå den av for å lagre PDF-en uten den, eller prøv igjen når du er på nett.",
   "Text recognition progress": "Fremdrift for tekstgjenkjenning",
   "Text to add": "Tekst som skal legges til",
   "The corners cross over — drag them back into a four-sided shape.": "Hjørnene krysser hverandre – dra dem tilbake til en firkant.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "gjør bilder om til en PDF",
   "{count} JPG images, one per page, in a .zip.": "{count} JPG-bilder, ett per side, i en .zip-fil.",
   "{count} page": "{count} side",
-  "{count} pages": "{count} sider",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Hvis tekstgjenkjenningen ikke kunne lastes inn (den trenger internettforbindelse første gang), slår du den av og prøver igjen."
+  "{count} pages": "{count} sider"
 }

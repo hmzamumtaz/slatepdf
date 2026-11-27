@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Atinge locul unde trebuie să apară textul. Trage textul pentru a-l muta.",
   "Text": "Text",
   "Text recognition and passwords only apply to PDFs.": "Recunoașterea textului și parolele se aplică doar PDF-urilor.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Recunoașterea textului nu s-a putut încărca. Prima dată are nevoie de conexiune la internet. Dezactivați-o pentru a salva PDF-ul fără ea sau încercați din nou când sunteți online.",
   "Text recognition progress": "Progresul recunoașterii textului",
   "Text to add": "Text de adăugat",
   "The corners cross over — drag them back into a four-sided shape.": "Colțurile se încrucișează — trage-le înapoi într-o formă cu patru laturi.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "transformă imaginile în PDF",
   "{count} JPG images, one per page, in a .zip.": "Imagini JPG: {count}, câte una pe pagină, într-o arhivă .zip.",
   "{count} page": "{count} pagină",
-  "{count} pages": "Pagini: {count}",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Dacă recunoașterea textului nu s-a putut încărca (prima dată are nevoie de conexiune), dezactiveaz-o și încearcă din nou."
+  "{count} pages": "Pagini: {count}"
 }

@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Ketuk tempat teks akan diletakkan. Seret teks untuk memindahkannya.",
   "Text": "Teks",
   "Text recognition and passwords only apply to PDFs.": "Pengenalan teks dan kata sandi hanya berlaku untuk PDF.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Pengenalan teks tidak dapat dimuat. Fitur ini memerlukan koneksi internet saat pertama kali digunakan. Matikan untuk menyimpan PDF tanpanya, atau coba lagi setelah Anda online.",
   "Text recognition progress": "Progres pengenalan teks",
   "Text to add": "Teks yang akan ditambahkan",
   "The corners cross over — drag them back into a four-sided shape.": "Sudut-sudutnya bersilangan — seret kembali hingga membentuk segi empat.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "ubah gambar menjadi PDF",
   "{count} JPG images, one per page, in a .zip.": "{count} gambar JPG, satu per halaman, dalam .zip.",
   "{count} page": "{count} halaman",
-  "{count} pages": "{count} halaman",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Jika pengenalan teks tidak dapat dimuat (perlu koneksi saat pertama kali), nonaktifkan lalu coba lagi."
+  "{count} pages": "{count} halaman"
 }

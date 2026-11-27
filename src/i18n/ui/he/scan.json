@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "מקישים במקום שבו הטקסט צריך להופיע. גוררים את הטקסט כדי להזיז אותו.",
   "Text": "טקסט",
   "Text recognition and passwords only apply to PDFs.": "זיהוי טקסט וסיסמאות חלים רק על PDF.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "לא ניתן היה לטעון את זיהוי הטקסט. בפעם הראשונה נדרש חיבור לאינטרנט. כבו אותו כדי לשמור את ה-PDF בלעדיו, או נסו שוב כשתהיו מחוברים.",
   "Text recognition progress": "התקדמות זיהוי הטקסט",
   "Text to add": "טקסט להוספה",
   "The corners cross over — drag them back into a four-sided shape.": "הפינות חוצות זו את זו — יש לגרור אותן חזרה לצורה בעלת ארבע צלעות.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "להפוך תמונות ל-PDF",
   "{count} JPG images, one per page, in a .zip.": "{count} תמונות JPG, אחת לכל עמוד, בקובץ .zip.",
   "{count} page": "{count} עמוד",
-  "{count} pages": "{count} עמודים",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} אם זיהוי הטקסט לא נטען (בפעם הראשונה הוא צריך חיבור לאינטרנט), אפשר לכבות אותו ולנסות שוב."
+  "{count} pages": "{count} עמודים"
 }

@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Tap where the text should go. Drag text to move it.",
   "Text": "Text",
   "Text recognition and passwords only apply to PDFs.": "Text recognition and passwords only apply to PDFs.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.",
   "Text recognition progress": "Text recognition progress",
   "Text to add": "Text to add",
   "The corners cross over — drag them back into a four-sided shape.": "The corners cross over — drag them back into a four-sided shape.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "turn images into a PDF",
   "{count} JPG images, one per page, in a .zip.": "{count} JPG images, one per page, in a .zip.",
   "{count} page": "{count} page",
-  "{count} pages": "{count} pages",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again."
+  "{count} pages": "{count} pages"
 }
