@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "যেখানে টেক্সট বসাতে চান সেখানে ট্যাপ করুন। সরাতে টেক্সট টেনে আনুন।",
   "Text": "টেক্সট",
   "Text recognition and passwords only apply to PDFs.": "টেক্সট শনাক্তকরণ ও পাসওয়ার্ড শুধু PDF-এ প্রযোজ্য।",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "টেক্সট শনাক্তকরণ লোড করা যায়নি। প্রথমবার এর জন্য ইন্টারনেট সংযোগ লাগে। এটি বন্ধ করে PDF সংরক্ষণ করুন, অথবা অনলাইনে এলে আবার চেষ্টা করুন।",
   "Text recognition progress": "টেক্সট শনাক্তকরণের অগ্রগতি",
   "Text to add": "যে টেক্সট যোগ করবেন",
   "The corners cross over — drag them back into a four-sided shape.": "কোণগুলো একে অপরকে অতিক্রম করেছে — টেনে আবার চারকোনা আকারে আনুন।",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "ছবি থেকে PDF বানান",
   "{count} JPG images, one per page, in a .zip.": "{count}টি JPG ছবি, প্রতি পেজে একটি, একটি .zip ফাইলে।",
   "{count} page": "{count}টি পেজ",
-  "{count} pages": "{count}টি পেজ",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} টেক্সট শনাক্তকরণ লোড না হলে (প্রথমবার ইন্টারনেট সংযোগ লাগে), এটি বন্ধ করে আবার চেষ্টা করুন।"
+  "{count} pages": "{count}টি পেজ"
 }

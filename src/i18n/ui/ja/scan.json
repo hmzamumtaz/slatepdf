@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "テキストを入れたい場所をタップします。テキストはドラッグで移動できます。",
   "Text": "テキスト",
   "Text recognition and passwords only apply to PDFs.": "文字認識とパスワードはPDFにのみ適用されます。",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "文字認識を読み込めませんでした。初回はインターネット接続が必要です。文字認識をオフにすると PDF をそのまま保存できます。オンラインになってから再度お試しください。",
   "Text recognition progress": "文字認識の進行状況",
   "Text to add": "追加するテキスト",
   "The corners cross over — drag them back into a four-sided shape.": "角が交差しています。四角形になるようにドラッグして戻してください。",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "画像をPDFに変換",
   "{count} JPG images, one per page, in a .zip.": "1ページにつき1枚、計{count}枚のJPG画像を.zipにまとめます。",
   "{count} page": "{count}ページ",
-  "{count} pages": "{count}ページ",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} 文字認識を読み込めなかった場合（初回はインターネット接続が必要です）は、オフにしてもう一度お試しください。"
+  "{count} pages": "{count}ページ"
 }

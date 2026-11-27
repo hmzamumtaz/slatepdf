@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Tippen Sie dorthin, wo der Text stehen soll. Ziehen Sie Text, um ihn zu verschieben.",
   "Text": "Text",
   "Text recognition and passwords only apply to PDFs.": "Texterkennung und Passwörter gelten nur für PDFs.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Die Texterkennung konnte nicht geladen werden. Beim ersten Mal ist eine Internetverbindung nötig. Deaktivieren Sie sie, um Ihr PDF ohne Texterkennung zu speichern, oder versuchen Sie es erneut, sobald Sie online sind.",
   "Text recognition progress": "Fortschritt der Texterkennung",
   "Text to add": "Hinzuzufügender Text",
   "The corners cross over — drag them back into a four-sided shape.": "Die Ecken überkreuzen sich – ziehen Sie sie zurück in ein Viereck.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "Bilder in ein PDF umwandeln",
   "{count} JPG images, one per page, in a .zip.": "{count} JPG-Bilder, eines pro Seite, in einer .zip-Datei.",
   "{count} page": "{count} Seite",
-  "{count} pages": "{count} Seiten",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Falls die Texterkennung nicht geladen werden konnte (beim ersten Mal ist eine Verbindung nötig), deaktivieren Sie sie und versuchen Sie es erneut."
+  "{count} pages": "{count} Seiten"
 }

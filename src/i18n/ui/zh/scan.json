@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "点按要放置文字的位置，拖动文字可移动。",
   "Text": "文字",
   "Text recognition and passwords only apply to PDFs.": "文字识别和密码仅适用于PDF。",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "无法加载文字识别。首次使用需要联网。关闭文字识别即可直接保存 PDF，或在联网后重试。",
   "Text recognition progress": "文字识别进度",
   "Text to add": "要添加的文字",
   "The corners cross over — drag them back into a four-sided shape.": "四角交叉了，请拖回成四边形。",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "将图片转为PDF",
   "{count} JPG images, one per page, in a .zip.": "{count}张JPG图片，每页一张，打包为.zip。",
   "{count} page": "{count}页",
-  "{count} pages": "{count}页",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error}如果文字识别无法加载（首次使用需要联网），请将其关闭后重试。"
+  "{count} pages": "{count}页"
 }

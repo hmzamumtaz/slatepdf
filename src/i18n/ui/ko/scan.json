@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "텍스트를 넣을 곳을 탭하세요. 텍스트는 드래그해 옮길 수 있습니다.",
   "Text": "텍스트",
   "Text recognition and passwords only apply to PDFs.": "텍스트 인식과 암호는 PDF에만 적용됩니다.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "텍스트 인식을 불러오지 못했습니다. 처음 사용할 때는 인터넷 연결이 필요합니다. 텍스트 인식을 끄고 PDF를 저장하거나, 온라인 상태에서 다시 시도하세요.",
   "Text recognition progress": "텍스트 인식 진행률",
   "Text to add": "추가할 텍스트",
   "The corners cross over — drag them back into a four-sided shape.": "모서리가 서로 교차합니다. 사각형 모양이 되도록 다시 드래그하세요.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "이미지를 PDF로 변환",
   "{count} JPG images, one per page, in a .zip.": "페이지당 하나씩, JPG 이미지 {count}개를 .zip으로.",
   "{count} page": "{count}페이지",
-  "{count} pages": "{count}페이지",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} 텍스트 인식을 불러오지 못했다면(처음에는 인터넷 연결이 필요합니다) 끄고 다시 시도하세요."
+  "{count} pages": "{count}페이지"
 }

@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Napauta kohtaa, johon teksti tulee. Vedä tekstiä siirtääksesi sitä.",
   "Text": "Teksti",
   "Text recognition and passwords only apply to PDFs.": "Tekstintunnistus ja salasanat koskevat vain PDF-tiedostoja.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Tekstintunnistusta ei voitu ladata. Ensimmäisellä kerralla se tarvitsee internetyhteyden. Poista se käytöstä tallentaaksesi PDF:n ilman sitä, tai yritä uudelleen, kun olet verkossa.",
   "Text recognition progress": "Tekstintunnistuksen edistyminen",
   "Text to add": "Lisättävä teksti",
   "The corners cross over — drag them back into a four-sided shape.": "Kulmat menevät ristiin – vedä ne takaisin nelikulmion muotoon.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "muunna kuvat PDF:ksi",
   "{count} JPG images, one per page, in a .zip.": "{count} JPG-kuvaa, yksi sivua kohden, .zip-tiedostossa.",
   "{count} page": "{count} sivu",
-  "{count} pages": "{count} sivua",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Jos tekstintunnistusta ei voitu ladata (se tarvitsee yhteyden ensimmäisellä kerralla), poista se käytöstä ja yritä uudelleen."
+  "{count} pages": "{count} sivua"
 }

@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Metnin gideceği yere dokunun. Taşımak için metni sürükleyin.",
   "Text": "Metin",
   "Text recognition and passwords only apply to PDFs.": "Metin tanıma ve parolalar yalnızca PDF'ler için geçerlidir.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Metin tanıma yüklenemedi. İlk seferde internet bağlantısı gerekir. PDF’nizi metin tanıma olmadan kaydetmek için kapatın veya çevrimiçi olduğunuzda tekrar deneyin.",
   "Text recognition progress": "Metin tanıma ilerlemesi",
   "Text to add": "Eklenecek metin",
   "The corners cross over — drag them back into a four-sided shape.": "Köşeler birbirini kesiyor — dört kenarlı bir şekle geri sürükleyin.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "görselleri PDF'ye dönüştürün",
   "{count} JPG images, one per page, in a .zip.": "Sayfa başına bir tane olmak üzere {count} JPG görseli, bir .zip içinde.",
   "{count} page": "{count} sayfa",
-  "{count} pages": "{count} sayfa",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Metin tanıma yüklenemediyse (ilk seferde bağlantı gerektirir), kapatıp yeniden deneyin."
+  "{count} pages": "{count} sayfa"
 }

@@ -204,8 +204,14 @@ export default function ExportPanel({ pages, docName, onDocName, dark, onScanNew
       if (isPdf) await createPdf();
       else await createJpg();
     } catch (err) {
-      setError(useOcr
-        ? t('{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.', { error: t(friendlyError(err)) })
+      // A failed language-model download is not "high usage": say what
+      // happened and how to save anyway, instead of the generic busy text.
+      const message = err instanceof Error ? err.message : String(err ?? '');
+      const ocrDidNotLoad = useOcr && (
+        (typeof navigator !== 'undefined' && navigator.onLine === false)
+        || /fetch|network|load|importScripts|traineddata|failed to/i.test(message));
+      setError(ocrDidNotLoad
+        ? t('Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.')
         : t(friendlyError(err)));
     } finally {
       setBusy(false);

@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Koppints oda, ahová a szöveget szeretnéd. A szöveg áthelyezéséhez húzd el.",
   "Text": "Szöveg",
   "Text recognition and passwords only apply to PDFs.": "A szövegfelismerés és a jelszó csak PDF-ekre vonatkozik.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "A szövegfelismerés nem tölthető be. Első alkalommal internetkapcsolat szükséges hozzá. Kapcsolja ki, hogy nélküle mentse a PDF-et, vagy próbálja újra, amikor online lesz.",
   "Text recognition progress": "Szövegfelismerés állapota",
   "Text to add": "Hozzáadandó szöveg",
   "The corners cross over — drag them back into a four-sided shape.": "A sarkok keresztezik egymást – húzd őket vissza négyszög alakba.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "készíts PDF-et képekből",
   "{count} JPG images, one per page, in a .zip.": "{count} JPG kép, oldalanként egy, .zip fájlban.",
   "{count} page": "{count} oldal",
-  "{count} pages": "{count} oldal",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Ha a szövegfelismerés nem töltődött be (első alkalommal internetkapcsolat kell hozzá), kapcsold ki, és próbáld újra."
+  "{count} pages": "{count} oldal"
 }

@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Πατήστε εκεί όπου θέλετε το κείμενο. Σύρετε το κείμενο για να το μετακινήσετε.",
   "Text": "Κείμενο",
   "Text recognition and passwords only apply to PDFs.": "Η αναγνώριση κειμένου και οι κωδικοί ισχύουν μόνο για PDF.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Δεν ήταν δυνατή η φόρτωση της αναγνώρισης κειμένου. Την πρώτη φορά χρειάζεται σύνδεση στο διαδίκτυο. Απενεργοποιήστε την για να αποθηκεύσετε το PDF χωρίς αυτήν ή δοκιμάστε ξανά όταν είστε online.",
   "Text recognition progress": "Πρόοδος αναγνώρισης κειμένου",
   "Text to add": "Κείμενο για προσθήκη",
   "The corners cross over — drag them back into a four-sided shape.": "Οι γωνίες διασταυρώνονται — σύρετέ τες ώστε να σχηματίζουν ξανά τετράπλευρο.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "μετατρέψτε εικόνες σε PDF",
   "{count} JPG images, one per page, in a .zip.": "Εικόνες JPG: {count}, μία ανά σελίδα, σε ένα .zip.",
   "{count} page": "{count} σελίδα",
-  "{count} pages": "{count} σελίδες",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Αν η αναγνώριση κειμένου δεν φόρτωσε (χρειάζεται σύνδεση την πρώτη φορά), απενεργοποιήστε την και δοκιμάστε ξανά."
+  "{count} pages": "{count} σελίδες"
 }

@@ -206,6 +206,7 @@
   "Tap where the text should go. Drag text to move it.": "Торкніться місця, де має бути текст. Перетягуйте текст, щоб перемістити його.",
   "Text": "Текст",
   "Text recognition and passwords only apply to PDFs.": "Розпізнавання тексту й паролі застосовуються лише до PDF.",
+  "Text recognition could not load. It needs an internet connection the first time. Turn it off to save your PDF without it, or try again once you are online.": "Не вдалося завантажити розпізнавання тексту. Під час першого запуску потрібне підключення до інтернету. Вимкніть його, щоб зберегти PDF без розпізнавання, або спробуйте ще раз, коли будете онлайн.",
   "Text recognition progress": "Перебіг розпізнавання тексту",
   "Text to add": "Текст для додавання",
   "The corners cross over — drag them back into a four-sided shape.": "Кути перехрещуються — перетягніть їх, щоб знову утворився чотирикутник.",
@@ -240,6 +241,5 @@
   "turn images into a PDF": "перетворити зображення на PDF",
   "{count} JPG images, one per page, in a .zip.": "Зображення JPG ({count}), по одному на сторінку, у .zip.",
   "{count} page": "{count} сторінка",
-  "{count} pages": "Сторінок: {count}",
-  "{error} If text recognition could not load (it needs a connection the first time), turn it off and try again.": "{error} Якщо розпізнавання тексту не завантажилося (першого разу потрібне з'єднання з інтернетом), вимкніть його й спробуйте ще раз."
+  "{count} pages": "Сторінок: {count}"
 }
