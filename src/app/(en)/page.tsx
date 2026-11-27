@@ -59,7 +59,7 @@ const homeFaqs = [
   },
   {
     q: `Can I use ${SITE_NAME} offline?`,
-    a: 'Mostly, yes. Once a tool has loaded, it keeps working if your connection drops, because the processing happens on your device. Translate PDF needs a connection, and OCR needs one the first time to download its language data.',
+    a: 'You need an internet connection to open the site. Once a tool has loaded, it keeps working if your connection drops, because the processing happens on your device. Translate PDF always needs a connection, and OCR needs one the first time to download its language data.',
   },
 ];
 
@@ -187,9 +187,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Don&apos;t take our word for it: open a tool, switch off your Wi‑Fi, and it keeps working.
-          </p>
 
           {/* Popular tools as cards */}
           <div className="mt-10 sm:mt-12">
@@ -423,7 +420,7 @@ export default function Home() {
                   { feature: 'No file size limits', slate: true, small: false, ilove: false },
                   { feature: 'No watermarks on output', slate: true, small: false, ilove: false },
                   { feature: 'Completely free forever', slate: true, small: false, ilove: false },
-                  { feature: 'Offline / local processing', slate: true, small: false, ilove: false },
+                  { feature: 'Processes files on your device', slate: true, small: false, ilove: false },
                   { feature: 'PDF editing & signing', slate: true, small: true, ilove: true },
 
 
