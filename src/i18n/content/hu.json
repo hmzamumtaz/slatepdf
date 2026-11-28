@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF-ből PNG",
+      "description": "PDF-oldalak konvertálása PNG képekké",
+      "seoTitle": "PDF-ből PNG – PDF-oldalak konvertálása PNG-be (ingyen)",
+      "metaDescription": "Konvertálja a PDF minden oldalát PNG képpé, 144 vagy 216 DPI felbontásban. Ingyenes, regisztráció és vízjel nélkül, a PDF sosem hagyja el a böngészőt.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Milyen felbontásúak lesznek a PNG képek?",
+          "a": "Az oldalak 144 DPI (Normál) vagy 216 DPI (Magas) felbontásban készülnek, a forrástól függetlenül. A magas felbontás élesebb szöveget és nagyobb fájlokat ad."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Mi a különbség a PDF-ből JPG-hez képest?",
+          "a": "A PNG veszteségmentes, ezért megőrzi az éles széleket és a szöveg tisztaságát; a JPG fájlok kisebbek. PNG-t válasszon, ha pontos pixelekre van szüksége, JPG-t, ha kis fájlokra."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "Fel kell töltenem a PDF-et a PNG-vé alakításhoz?",
+          "a": "Nem. Minden oldal a böngészőjében készül képpé, így a PDF sosem hagyja el az eszközét."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Hogyan lehet PDF-et PNG-vé konvertálni",
+        "intro": "A PDF-ből PNG a PDF minden oldalát PNG képpé menti, normál (144 DPI) vagy magas (216 DPI) felbontásban. A PNG veszteségmentes, ezért a szöveg és az éles szélek tiszták maradnak.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Válasszon egy vagy több PDF-et",
+          "Válassza a Normál vagy a Magas felbontást",
+          "Kattintson a Konvertálás PNG-be gombra",
+          "Töltse le az oldalakat egyenként, vagy az összeset együtt ZIP-ben"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF-ből szöveg",
+      "description": "A PDF teljes szövegének kinyerése egyszerű .txt fájlba",
+      "seoTitle": "PDF-ből szöveg – Szöveg kinyerése PDF-ből (ingyen)",
+      "metaDescription": "Nyerje ki a PDF teljes szövegét egyszerű .txt fájlba, oldalankénti címsorral is. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Mit tartalmaz a .txt fájl?",
+          "a": "Minden oldal szövegét, oldalak sorrendjében. Kapcsolja be az oldalak címsorait, és minden oldal elé egy „N. oldal” sor kerül, ami megkönnyíti a hosszú dokumentumokban való tájékozódást."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Működik ez szkennelt PDF-eken?",
+          "a": "Csak akkor, ha a szkennelésnek van szövegrétege. Egy sima fényképszerű szkennelésben nincs kinyerhető szöveg, és üresen jön ki — először futtassa rajta a PDF szövegfelismerést (OCR), majd konvertálja a kereshető eredményt szöveggé."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "Fel kell töltenem a PDF-et a szöveg kinyeréséhez?",
+          "a": "Nem. A szöveg a böngészőjében olvasható ki a PDF-ből, így a fájl sosem hagyja el az eszközét."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Hogyan lehet szöveget kinyerni egy PDF-ből",
+        "intro": "A PDF-ből szöveg a PDF szövegét egyszerű .txt fájlba emeli ki, oldalról oldalra, oldalankénti címsorral is.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Válasszon valódi szöveget tartalmazó PDF-et (szkenneléseknél először futtassa a PDF szövegfelismerést)",
+          "Jelölje be az „Oldalankénti címsor hozzáadása” lehetőséget, ha N. oldal jelöléseket szeretne",
+          "Kattintson a Konvertálás szöveggé gombra",
+          "Töltse le a .txt fájlt, vagy másolja ki a szöveget az előnézetből"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Képek kinyerése",
+      "description": "Fényképek és ábrák kiemelése PDF-ből PNG fájlként",
+      "seoTitle": "Képek kinyerése PDF-ből – Fényképek mentése PNG-ként (ingyen)",
+      "metaDescription": "Emelje ki a fényképeket, logókat és ábrákat egy PDF-ből, és mentse őket PNG fájlként. Ingyenes, regisztráció nélkül, a PDF sosem hagyja el a böngészőt.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Milyen minőségűek a kinyert képek?",
+          "a": "Teljes, beágyazott minőségben — a kép pontosan úgy kerül mentésre PNG-ként, ahogyan a PDF-ben van. Semmi sincs újratömörítve vagy lekicsinyítve."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Mi van, ha a PDF-em egy szkennelés?",
+          "a": "Egy szkennelt oldal egyetlen nagy kép, így az egész oldal képét kapja vissza. Valódi szöveges oldalaknál minden beágyazott fénykép, logó és ábra külön kerül kinyerésre."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "Fel kell töltenem a PDF-et a képek kinyeréséhez?",
+          "a": "Nem. A képek a böngészőjében kerülnek ki a PDF-ből, így a fájl sosem hagyja el az eszközét."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Hogyan lehet képeket kinyerni egy PDF-ből",
+        "intro": "A Képek kinyerése a PDF minden beágyazott fényképét, logóját és ábráját kiemeli, és teljes beágyazott minőségben PNG fájlként menti.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Válasszon egy PDF-et",
+          "Kattintson a Képek kinyerése gombra",
+          "Töltse le a képeket — ha több van, együtt, ZIP-ben töltődnek le"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF-ből HTML",
+      "description": "PDF átalakítása egyszerű HTML weboldallá",
+      "seoTitle": "PDF-ből HTML – PDF konvertálása weboldallá (ingyen)",
+      "metaDescription": "Alakítsa a PDF-et egyszerű HTML oldallá, oldalanként egy szakasszal. Ingyenes, regisztráció és feltöltés nélkül — a szöveg sosem hagyja el a böngészőt.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "Úgy fog kinézni a HTML, mint a PDF?",
+          "a": "Nem. A szavakat viszi át, nem az elrendezést: minden PDF-oldalból egy szakasz lesz, a szöveggel bekezdések formájában. A képek és a pontos formázás nem kerülnek át."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Mit kezdhetek a HTML fájllal?",
+          "a": "Megnyithatja bármely böngészőben, beillesztheti egy weboldalba vagy egy tartalomszerkesztőbe, vagy kiindulópontként használhatja egy dokumentumból épülő weboldalhoz."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "Fel kell töltenem a PDF-et a HTML-lé alakításhoz?",
+          "a": "Nem. A szöveg kinyerése és a HTML felépítése a böngészőjében történik, így a PDF sosem hagyja el az eszközét."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Hogyan lehet PDF-et HTML-lé konvertálni",
+        "intro": "A PDF-ből HTML egyszerű weboldallá alakítja a PDF-et: oldalanként egy szakasz, a szöveggel bekezdések formájában. A szavakat viszi át, nem az elrendezést.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Válasszon valódi szöveget tartalmazó PDF-et (szkenneléseknél először futtassa a PDF szövegfelismerést)",
+          "Kattintson a Konvertálás HTML-lé gombra",
+          "Töltse le a .html fájlt, vagy másolja ki a kódot az előnézetből"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Metaadatok szerkesztése",
+      "description": "PDF címének, szerzőjének, tárgyának és kulcsszavainak módosítása",
+      "seoTitle": "PDF metaadatok szerkesztése – Cím, szerző és kulcsszavak",
+      "metaDescription": "Módosítsa egy PDF címét, szerzőjét, tárgyát és kulcsszavait a böngészőjében. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Hol jelenik meg a cím?",
+          "a": "A PDF-olvasó lapján vagy címsorában, a fájlkeresésben, és a keresési találatok között, ha a PDF indexelve van. Egy egyértelmű cím segít megtalálni a dokumentumot."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "A metaadatok szerkesztése megváltoztatja magát a dokumentumot?",
+          "a": "Nem. Az oldalak, a szöveg és a képek pontosan ugyanazok maradnak — csak a dokumentumról tárolt információ változik."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Törölhetek egy mezőt?",
+          "a": "Igen. Hagyja üresen a mezőt, és mentse — az érték törlődik a PDF-ből."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Hogyan lehet egy PDF metaadatait szerkeszteni",
+        "intro": "A Metaadatok szerkesztése a PDF-ről tárolt információkat módosítja — a címet, a szerzőt, a tárgyat és a kulcsszavakat — anélkül, hogy az oldalakhoz hozzányúlna.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Válasszon egy PDF-et, hogy lássa a jelenlegi címét, szerzőjét, tárgyát és kulcsszavait",
+          "Módosítsa a kívánt mezőket — egyet üresen hagyva törölheti",
+          "Kattintson a Metaadatok mentése gombra, és töltse le a frissített PDF-et"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "PDF simítása",
+      "description": "Az űrlapmezők véglegessé tétele és a megjegyzések eltávolítása",
+      "seoTitle": "PDF simítása – Űrlapmezők véglegesítése (ingyen)",
+      "metaDescription": "Égesse be véglegesen a PDF űrlapmezőit az oldalba, és távolítsa el a megjegyzéseket, hogy a válaszok ne legyenek módosíthatók. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Mi történik az űrlapmezőkkel?",
+          "a": "Az értékük magába az oldalba kerül berajzolásra, a mezők pedig megszűnnek, így a kitöltött válaszok többé nem szerkeszthetők és nem törölhetők."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Mi történik a megjegyzésekkel és a kiemelésekkel?",
+          "a": "Eltávolításra kerülnek, mert nem éghetők be az oldalba anélkül, hogy az képpé válna. A hivatkozások megmaradnak."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "A simítás megváltoztatja a szöveget?",
+          "a": "Nem. A szöveg valódi, kijelölhető szöveg marad — semmi sem válik képpé."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Hogyan lehet egy PDF-et lesimítani",
+        "intro": "A PDF simítása véglegesen beégeti az űrlapmezőket az oldalba, és eltávolítja a megjegyzéseket és a kiemeléseket, így a kitöltött válaszok többé nem módosíthatók. A hivatkozások megmaradnak, a szöveg pedig kijelölhető marad.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Válasszon űrlapmezőket vagy megjegyzéseket tartalmazó PDF-et",
+          "Kattintson a PDF simítása gombra",
+          "Töltse le a lesimított másolatot"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "PDF űrlap kitöltése",
+      "description": "PDF űrlap kitöltése és a kész másolat mentése",
+      "seoTitle": "PDF űrlap kitöltése – Űrlap kitöltése online (ingyen)",
+      "metaDescription": "Töltsön ki PDF űrlapot a böngészőben — szövegmezők, jelölőnégyzetek, legördülő listák —, és mentse a kész másolatot. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Milyen mezőket tölthetek ki?",
+          "a": "Szövegmezőket, jelölőnégyzeteket, legördülő listákat és választógomb-csoportokat. Gombok és aláírásmezők itt nem tölthetők ki — aláíráshoz használja a PDF aláírás eszközt."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Azt írja, hogy a PDF-ben nincsenek kitölthető mezők. Miért?",
+          "a": "A PDF egy sík szkennelés vagy egy kinyomtatott űrlap, interaktív mezők nélkül. Csak valódi űrlapmezőkkel készült PDF-ek tölthetők ki — egy szkennelt űrlaphoz először OCR kell, és azután is csak egy űrlap képe marad."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Lezárhatom utána a válaszokat?",
+          "a": "Igen. Futtassa át a kitöltött PDF-et a PDF simítása eszközön, és a válaszok véglegessé válnak."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Hogyan lehet egy PDF űrlapot kitölteni",
+        "intro": "A PDF űrlap kitöltése felsorolja a PDF minden kitölthető mezőjét — szövegmezők, jelölőnégyzetek, legördülő listák —, így kitöltheti az űrlapot a böngészőjében, és elmentheti.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Válasszon kitölthető űrlapmezőket tartalmazó PDF-et",
+          "Töltse ki az egyes mezőket a panelen",
+          "Kattintson a Kitöltött PDF mentése gombra, és töltse le a kész másolatot"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Szövegből PDF",
+      "description": "Egyszerű szöveg átalakítása PDF dokumentummá",
+      "seoTitle": "Szövegből PDF – Egyszerű szöveg átalakítása PDF-dé (ingyen)",
+      "metaDescription": "Írjon be vagy illesszen be egyszerű szöveget, és alakítsa PDF dokumentummá a böngészőjében. Ingyenes, regisztráció, feltöltés és vízjel nélkül.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Formázhatom a szöveget?",
+          "a": "Nem. Ez az eszköz egyszerű szöveget alakít át tiszta PDF-dé — a címsorok és a félkövér kiemelés nem kerül át. Formázott dokumentumokhoz használja inkább a Word PDF konvertálás vagy a HTML PDF konvertálás eszközt."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Mi lesz a hosszú szöveggel?",
+          "a": "Annyi oldalon folyik tovább, amennyire szüksége van, és ha ad meg címet, az az első oldalon szerepel."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Feltöltődik a szövegem?",
+          "a": "Nem. A PDF a böngészőjében készül el, így a szöveg sosem hagyja el az eszközét."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Hogyan lehet szöveget PDF-dé alakítani",
+        "intro": "A Szövegből PDF a beírt vagy beillesztett egyszerű szöveget tiszta PDF dokumentummá alakítja, az első oldalon opcionális címmel.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Írja be vagy illessze be a szöveget",
+          "Adjon meg egy dokumentumcímet, ha szeretne",
+          "Kattintson a Konvertálás PDF-dé gombra, és töltse le"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Fejléc és lábléc",
+      "description": "Fejléc és lábléc elhelyezése minden oldalon",
+      "seoTitle": "Fejléc és lábléc hozzáadása PDF-hez (ingyen, feltöltés nélkül)",
+      "metaDescription": "Helyezzen el fejléc- és láblécsort — akár oldalszámokkal — a PDF minden oldalán. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Hozzáadhatok csak fejlécet vagy csak láblécet?",
+          "a": "Igen. Hagyja üresen a másik mezőt, és csak a kitöltött kerül az oldalakra."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Hová kerül a szöveg?",
+          "a": "Balra, középre vagy jobbra, minden oldal tetejére vagy aljára. A szöveg az oldalra kerül — nem tolja arrébb a meglévő tartalmat."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Oldalszámot is hozzáadhatok?",
+          "a": "Igen. Jelölje be az „Oldalszámok hozzáadása a lábléchez” lehetőséget, és minden oldal „1 / 12” jellegű számot kap a lábléc szövege mellé."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Hogyan lehet fejlécet és láblécet hozzáadni egy PDF-hez",
+        "intro": "A Fejléc és lábléc egy sor szöveget helyez minden oldal tetejére és/vagy aljára, a láblécben opcionális oldalszámokkal.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Válasszon egy PDF-et",
+          "Írja be a fejléc és a lábléc szövegét — egyet üresen hagyva csak a másikat helyezi el",
+          "Válasszon pozíciót, betűméretet, és azt, hogy kerüljenek-e oldalszámok",
+          "Kattintson a Fejléc és lábléc hozzáadása gombra, és töltse le az eredményt"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Bates-számozás",
+      "description": "Folyamatos Bates-számok elhelyezése minden oldalon",
+      "seoTitle": "Bates-számozás – Folyamatos számok elhelyezése PDF-en",
+      "metaDescription": "Bélyegezze meg a PDF minden oldalát előtaggal és nullákkal kiegészített sorszámmal. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Mi a Bates-számozás?",
+          "a": "Egy módszer arra, hogy egy dokumentumkészlet minden oldalát egyedi, folyamatos számmal lássák el — például EXHIBIT-00042 —, hogy az oldalak jogi és feltáró munkában azonosíthatók és hivatkozhatók legyenek."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Megválaszthatom az előtagot és a kezdőszámot?",
+          "a": "Igen. Beállíthat bármilyen előtagot, kezdőszámot, a kitöltendő számjegyek számát, és azt, hogy hová kerüljön a bélyeg az oldalon."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Megváltoztatja ez a dokumentumot?",
+          "a": "Nem. A bélyeg az egyes oldalak fölé kerül; a meglévő tartalom érintetlen marad."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Hogyan lehet Bates-számozni egy PDF-et",
+        "intro": "A Bates-számozás minden oldalt egyedi, folyamatos számmal lát el — előtag plusz nullákkal kiegészített sorszám, például EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Válasszon egy PDF-et",
+          "Állítsa be az előtagot, a kezdőszámot és a kitöltendő számjegyek számát",
+          "Válassza ki, hová kerüljön a bélyeg az oldalon",
+          "Kattintson a Bates-számok alkalmazása gombra, és töltse le a lebélyegzett PDF-et"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "Szürkeárnyalatos PDF",
+      "description": "Színes PDF átalakítása fekete-fehérré",
+      "seoTitle": "Szürkeárnyalatos PDF – PDF konvertálása fekete-fehérré (ingyen)",
+      "metaDescription": "Alakítsa a színes PDF-et fekete-fehérré, oldalról oldalra. Ingyenes, regisztráció és feltöltés nélkül — a fájl sosem hagyja el a böngészőt.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Kijelölhető marad a szöveg?",
+          "a": "Nem. Az oldalak fekete-fehér képekké épülnek újra, így a szöveg a kép részévé válik. Nyomtatáshoz vagy megosztáshoz használja, ne a szöveg utólagos szerkesztéséhez."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Működik szkennelt PDF-eken?",
+          "a": "Igen. A szkennelt oldalak eleve képek, így tisztán konvertálódnak — gyakran éppen ez a lényeg, nyomtatáshoz vagy faxoláshoz."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "Fel kell töltenem a PDF-et?",
+          "a": "Nem. A konvertálás teljes egészében a böngészőjében fut, így a PDF sosem hagyja el az eszközét."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Hogyan lehet egy PDF-et szürkeárnyalatossá konvertálni",
+        "intro": "A Szürkeárnyalatos PDF minden oldalt fekete-fehérben épít újra. Nyomtatásra és faxolásra készült — az oldalak képekké válnak, így a szöveg utána már nem kijelölhető.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Válassza ki a PDF-et",
+          "Kattintson a Konvertálás szürkeárnyalatossá gombra",
+          "Töltse le a fekete-fehér PDF-et"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "PDF átméretezése",
+      "description": "PDF-oldalak átállítása A4, Letter, A3 méretre vagy egyéni méretre",
+      "seoTitle": "PDF átméretezése – PDF oldalméret módosítása A4-re vagy Letterre",
+      "metaDescription": "Állítsa át a PDF oldalait A4, Letter, A3, A5 vagy egyéni méretre. A tartalom középre igazítva skálázódik. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Mi a különbség a PDF körbevágáshoz képest?",
+          "a": "A körbevágás levágja az oldal margóit; az átméretezés magát az oldalméretet változtatja — A4, Letter, A3, A5 vagy bármilyen egyéni méret —, és a tartalmat a mérethez skálázza."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Kijelölhető marad a szöveg?",
+          "a": "Igen. Az oldalak újra elrendeződnek, nem renderelődnek újra, így a szöveg és a vektorok érintetlenek maradnak."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Beállíthatok egyéni méretet?",
+          "a": "Igen. Válassza az Egyéni lehetőséget, és adja meg a szélességet és a magasságot milliméterben."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Hogyan lehet PDF-oldalakat átméretezni",
+        "intro": "A PDF átméretezése minden oldalt A4, Letter, A3, A5 méretre vagy egy megadott méretre állít át, a tartalmat középre igazítva skálázva. A szöveg és a vektorok érintetlenek maradnak.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Válassza ki a PDF-et",
+          "Válasszon A4, Letter, A3, A5 vagy Egyéni méretet, és adja meg a méretet milliméterben",
+          "Kattintson az Oldalak átméretezése gombra",
+          "Töltse le az átméretezett PDF-et"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "PDF kiegyenesítése",
+      "description": "Ferde szkennelt oldalak kiegyenesítése",
+      "seoTitle": "PDF kiegyenesítése – Ferde szkennelt oldalak javítása (ingyen)",
+      "metaDescription": "Egyenesítse ki a ferde szkennelt oldalakat. A ferdeség automatikusan észlelhető, vagy kézzel beállítható a csúszkával. Ingyenes, feltöltés nélkül.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Hogyan észleli a ferdeséget?",
+          "a": "Beolvassa az első oldalakat, és megtalálja azt a szöget, amelynél a szövegsorok a legegyenesebbek, majd ezt az értéket kínálja fel a csúszkán. Kézzel is igazíthat rajta, ha nem tűnik jónak."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Kijelölhető marad a szöveg?",
+          "a": "Nem. Az oldalak kiegyenesített képekké épülnek újra, így a szöveg a kép részévé válik. Szkennelt oldalakhoz használja, ahol úgysincs kijelölhető szöveg."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Meddig lehet kiegyenesíteni?",
+          "a": "Mindkét irányban legfeljebb 10 fokig, ami szinte minden rosszul beadott szkenneroldalt lefed."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Hogyan lehet egy PDF-et kiegyenesíteni",
+        "intro": "A PDF kiegyenesítése a ferde szkennelt oldalakat egyenesíti ki. A ferdeség automatikusan észlelésre kerül, amikor hozzáad egy fájlt, a csúszkával pedig kézzel is igazíthat rajta.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Válasszon egy PDF-et — a ferdeség automatikusan észlelésre kerül",
+          "Ellenőrizze az észlelt szöget, és húzza el a csúszkát, ha az oldal még mindig ferde",
+          "Az Élő előnézettel megnézheti a kiegyenesített első oldalt",
+          "Kattintson a PDF kiegyenesítése gombra, és töltse le az eredményt"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Váltakozó összefűzés",
+      "description": "Két PDF oldalainak váltakozó összefűzése, egyik a másik után",
+      "seoTitle": "Váltakozó összefűzés – Két PDF oldalainak váltogatása (ingyen)",
+      "metaDescription": "Fűzze egymásba két PDF oldalait — mindkettő 1. oldalát, majd mindkettő 2. oldalát — egyetlen fájlba. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Mi van, ha a két PDF különböző hosszúságú?",
+          "a": "A rövidebb előbb elfogy; a hosszabb megmaradt oldalai sorrendben a végére kerülnek."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Melyik dokumentum kerül előre?",
+          "a": "Az elsőként hozzáadott dokumentum adja az 1. oldalt, a második a 2. oldalt, és onnan váltakozva folytatódik."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "Mire használható ez?",
+          "a": "Egy dokumentum két változatának oldalankénti összevetésére, kérdések és válaszok váltogatására, vagy az előlap-hátlap szkennelések olvasási sorrendbe rendezésére."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Hogyan lehet két PDF-et váltakozva összefűzni",
+        "intro": "A Váltakozó összefűzés két PDF-et vesz, és az oldalaikat váltakozva — mindkettő 1. oldalát, majd mindkettő 2. oldalát — egyetlen fájlba fűzi.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Adja hozzá az első dokumentumot, majd a másodikat",
+          "Kattintson a PDF-ek keverése gombra",
+          "Töltse le a váltakozva összefűzött fájlt"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Üres oldalak eltávolítása",
+      "description": "Üres oldalak törlése egy PDF-ből",
+      "seoTitle": "Üres oldalak eltávolítása – Üres PDF-oldalak törlése (ingyen)",
+      "metaDescription": "Keresse meg és törölje a PDF üres oldalait — azokat, amelyeket a szkenner véletlenül ad hozzá. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Honnan tudja, hogy egy oldal üres?",
+          "a": "Minden oldalt lerenderel, és megméri, mennyi festék van rajta. A küszöb alatti oldalak listázásra kerülnek, mielőtt bármi törlődne, így pontosan látja, mi fog eltűnni."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Eltávolít egy olyan oldalt, amelyen csak oldalszám van?",
+          "a": "Kiegyensúlyozott beállításon nem — az oldalszám festéknek számít. Ha mégis eltávolít egy megtartani kívánt oldalt, használja a Szigorú beállítást, és futtassa újra."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "Fel kell töltenem a PDF-et?",
+          "a": "Nem. Az észlelés és az eltávolítás teljes egészében a böngészőjében fut."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Hogyan lehet üres oldalakat eltávolítani egy PDF-ből",
+        "intro": "Az Üres oldalak eltávolítása megtalálja a szkenner által hozzáadott üres oldalakat — általában egy köteg végén —, listázza őket, és kidobja, a többit érintetlenül hagyva.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Válasszon egy PDF-et",
+          "Ellenőrizze a talált üres oldalakat, és változtassa meg az érzékenységet, ha kimaradt egy, vagy megjelölt egy megtartani kívánt oldalt",
+          "Kattintson az Üres oldalak eltávolítása gombra",
+          "Töltse le a megtisztított PDF-et"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "2, 4, 6 vagy 9 oldal elhelyezése egy-egy lapon",
+      "seoTitle": "N-up PDF – Több oldal elhelyezése egy lapon (ingyen)",
+      "metaDescription": "Helyezzen 2, 4, 6 vagy 9 PDF-oldalt egy-egy lapra, füzetekhez és segédanyagokhoz. Ingyenes, regisztráció és feltöltés nélkül.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Mekkorák a lapok?",
+          "a": "Minden lap a PDF első oldalának méretét tartja meg — általában A4 vagy Letter. A forrásoldalak a cellájukhoz méretezve kerülnek elhelyezésre."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Olvasható marad a szöveg?",
+          "a": "Igen. Az oldalak újra elrendeződnek, nem renderelődnek újra, így a szöveg és a vektorok élesek maradnak. 9-es elrendezésnél a nyomtatás kicsi, ahogyan lennie kell."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Megválaszthatom a sorrendet?",
+          "a": "Az oldalak balról jobbra, fentről lefelé, az eredeti sorrendben futnak."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Hogyan lehet több PDF-oldalt egy lapra tenni",
+        "intro": "Az N-up PDF 2, 4, 6 vagy 9 forrásoldalt helyez el egy-egy lapon, füzetekhez és segédanyagokhoz. Minden lap az első oldal méretét tartja meg.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Válasszon egy PDF-et",
+          "Válasszon 2-es, 4-es, 6-os vagy 9-es elrendezést",
+          "Kattintson az N-up PDF létrehozása gombra",
+          "Töltse le az eredményt"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Üres oldal hozzáadása",
+      "description": "Üres oldalak vagy egy másik PDF oldalainak beszúrása",
+      "seoTitle": "Üres oldal hozzáadása – Oldalak beszúrása PDF-be (ingyen)",
+      "metaDescription": "Szúrjon be üres oldalakat — vagy egy másik PDF oldalait — egy PDF-be: az elejére, a végére, minden oldal után vagy egy választott oldal után. Ingyenes.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Hová kerülhet az üres oldal?",
+          "a": "Az elejére, a végére, minden oldal után, vagy bármely választott oldalszám után."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Hogyan szúrhatok be oldalakat egy másik PDF-ből?",
+          "a": "Válassza a „Másik PDF oldalai” lehetőséget, adja hozzá a második fájlt az első után, és válassza ki, hová kerüljenek az oldalai."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Mekkora az üres oldal?",
+          "a": "Ugyanakkora, mint a PDF első oldala."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Hogyan lehet üres oldalt hozzáadni egy PDF-hez",
+        "intro": "Az Üres oldal hozzáadása üres oldalakat — vagy egy második PDF minden oldalát — szúr be az elejére, a végére, minden oldal után vagy egy választott oldal után.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Válasszon egy PDF-et",
+          "Válassza az Üres oldal lehetőséget, vagy a Másik PDF oldalai lehetőséget, és adja hozzá a második fájlt",
+          "Válassza ki, hová kerüljenek az oldalak",
+          "Kattintson az Üres oldal hozzáadása gombra, és töltse le az eredményt"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privát – a fájlt a böngésződ dolgozza fel, és sosem töltődik fel",
+          "Ingyenes, fiók, vízjel és napi korlát nélkül",
+          "Bármely modern böngészőben működik Windowson, Macen, Linuxon, iPhone-on és Androidon"
         ]
       }
     }

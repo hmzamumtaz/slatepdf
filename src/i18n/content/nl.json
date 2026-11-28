@@ -914,38 +914,38 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF naar PNG",
+      "description": "PDF-pagina's omzetten naar PNG-afbeeldingen",
+      "seoTitle": "PDF naar PNG — PDF-pagina's gratis omzetten naar PNG",
+      "metaDescription": "Zet elke pagina van een PDF om naar een PNG-afbeelding op 144 of 216 DPI. Gratis, geen account, geen watermerk, en de PDF verlaat je browser nooit.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "a": "Pagina's worden weergegeven op 144 DPI (Standaard) of 216 DPI (Hoog). Hoog geeft scherpere tekst en grotere bestanden.",
+          "q": "Welke resolutie krijgen de PNG's?"
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "a": "PNG is verliesvrij, dus scherpe randen en tekst blijven scherp; JPG-bestanden zijn kleiner. Gebruik PNG als je exacte pixels nodig hebt, JPG als je kleine bestanden nodig hebt.",
+          "q": "Wat is het verschil met PDF naar JPG?"
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "a": "Nee. Elke pagina wordt in je browser naar een afbeelding omgezet, dus de PDF verlaat je apparaat nooit.",
+          "q": "Wordt mijn PDF geüpload om hem naar PNG om te zetten?"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
-        "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF naar PNG slaat elke pagina van een PDF op als PNG-afbeelding, in standaard (144 DPI) of hoge (216 DPI) resolutie. PNG is verliesvrij, dus tekst en scherpe randen blijven scherp.",
+        "steps": [
+          "Kies een of meer PDF's",
+          "Kies Standaard of Hoge resolutie",
+          "Klik op Omzetten naar PNG",
+          "Download losse pagina's, of alle pagina's samen als ZIP"
+        ],
+        "title": "Zo zet je een PDF om naar PNG"
       }
     },
     "pdf-to-word": {
@@ -1562,570 +1562,570 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF naar tekst",
+      "description": "Alle tekst uit een PDF halen als een gewoon .txt-bestand",
+      "seoTitle": "PDF naar tekst — Tekst uit een PDF halen, gratis",
+      "metaDescription": "Haal alle tekst uit een PDF als een gewoon .txt-bestand, eventueel met een kopje per pagina. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "a": "De tekst van elke pagina, in paginavolgorde. Zet paginakopjes aan en je krijgt vóór elke pagina een regel 'Pagina N', waarmee lange documenten makkelijker te doorzoeken zijn.",
+          "q": "Wat staat er in het .txt-bestand?"
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "a": "Alleen als de scan een tekstlaag heeft. Een gewone fotoscans bevat geen tekst om te halen en komt leeg uit — draai er eerst OCR PDF op en zet het doorzoekbare resultaat dan om naar tekst.",
+          "q": "Werkt dit ook bij gescande PDF's?"
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "a": "Nee. De tekst wordt in je browser uit de PDF gelezen, dus het bestand verlaat je apparaat nooit.",
+          "q": "Wordt mijn PDF geüpload om de tekst eruit te halen?"
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
-        "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF naar tekst haalt de tekst uit een PDF en zet die in een gewoon .txt-bestand, pagina na pagina, eventueel met een kopje per pagina.",
+        "steps": [
+          "Kies een PDF met echte tekst (draai eerst OCR PDF op scans)",
+          "Vink 'Voeg een kopje toe per pagina' aan als je Pagina N-markeringen wilt",
+          "Klik op Omzetten naar tekst",
+          "Download de .txt, of kopieer de tekst uit het voorbeeld"
+        ],
+        "title": "Zo haal je tekst uit een PDF"
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Afbeeldingen uit PDF halen",
+      "description": "Foto's en figuren uit een PDF halen als PNG-bestanden",
+      "seoTitle": "Afbeeldingen uit PDF halen — Foto's opslaan als PNG, gratis",
+      "metaDescription": "Haal de foto's, logo's en figuren uit een PDF en sla ze op als PNG-bestanden. Gratis, geen account, de PDF verlaat je browser nooit.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "a": "Volledige ingesloten kwaliteit — de afbeelding wordt precies zo opgeslagen als hij in de PDF zit, als PNG. Niets wordt opnieuw gecomprimeerd of verkleind.",
+          "q": "Welke kwaliteit hebben de gehaalde afbeeldingen?"
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "a": "Een gescande pagina is zelf één grote afbeelding, dus je krijgt die hele pagina-afbeelding terug. Bij echte tekstpagina's worden elke ingesloten foto, elk logo en elke figuur apart gehaald.",
+          "q": "Wat als mijn PDF een scan is?"
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "a": "Nee. De afbeeldingen worden in je browser uit de PDF gehaald, dus het bestand verlaat je apparaat nooit.",
+          "q": "Wordt mijn PDF geüpload om de afbeeldingen eruit te halen?"
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
-        "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "Afbeeldingen uit PDF halen haalt elke ingesloten foto, elk logo en elke figuur uit een PDF en slaat ze op als PNG-bestanden in volledige ingesloten kwaliteit.",
+        "steps": [
+          "Kies een PDF",
+          "Klik op Afbeeldingen halen",
+          "Download de afbeeldingen — meerdere afbeeldingen worden samen als ZIP gedownload"
+        ],
+        "title": "Zo haal je afbeeldingen uit een PDF"
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF naar HTML",
+      "description": "Een PDF omzetten naar een gewone HTML-webpagina",
+      "seoTitle": "PDF naar HTML — PDF gratis omzetten naar een webpagina",
+      "metaDescription": "Zet een PDF om naar een gewone HTML-pagina, één sectie per PDF-pagina. Gratis, geen account, geen upload — de tekst verlaat je browser nooit.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "a": "Nee. Hij neemt de woorden mee, niet de opmaak: elke PDF-pagina wordt een sectie met de tekst als alinea's. Afbeeldingen en de exacte opmaak worden niet meegenomen.",
+          "q": "Ziet de HTML eruit als de PDF?"
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "a": "Open het in een browser, plak het in een website of contenteditor, of gebruik het als beginpunt voor een webpagina op basis van een document.",
+          "q": "Wat kan ik met het HTML-bestand doen?"
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "a": "Nee. De tekst wordt gehaald en de HTML wordt in je browser gebouwd, dus de PDF verlaat je apparaat nooit.",
+          "q": "Wordt mijn PDF geüpload om hem naar HTML om te zetten?"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
-        "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF naar HTML zet een PDF om naar een gewone webpagina: één sectie per PDF-pagina, met de tekst als alinea's. Hij neemt de woorden mee, niet de opmaak.",
+        "steps": [
+          "Kies een PDF met echte tekst (draai eerst OCR PDF op scans)",
+          "Klik op Omzetten naar HTML",
+          "Download het .html-bestand, of kopieer de code uit het voorbeeld"
+        ],
+        "title": "Zo zet je een PDF om naar HTML"
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "PDF-metadata bewerken",
+      "description": "Titel, auteur, onderwerp en trefwoorden van een PDF wijzigen",
+      "seoTitle": "PDF-metadata bewerken — Titel, auteur en trefwoorden wijzigen",
+      "metaDescription": "Wijzig in je browser de titel, auteur, onderwerp en trefwoorden van een PDF. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "a": "In het tabblad of de titelbalk van de PDF-lezer, in zoekopdrachten naar bestanden en in zoekresultaten als de PDF wordt geïndexeerd. Een duidelijke titel helpt mensen het document te vinden.",
+          "q": "Waar zie je de titel?"
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "a": "Nee. De pagina's, tekst en afbeeldingen blijven precies zoals ze zijn — alleen de informatie die over het document is opgeslagen, verandert.",
+          "q": "Verandert het bewerken van metadata het document zelf?"
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "a": "Ja. Laat een veld leeg en sla op — die waarde wordt dan uit de PDF verwijderd.",
+          "q": "Kan ik een veld leegmaken?"
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
-        "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "Metadata bewerken verandert de informatie die over een PDF is opgeslagen — titel, auteur, onderwerp en trefwoorden — zonder de pagina's aan te raken.",
+        "steps": [
+          "Kies een PDF om de huidige titel, auteur, onderwerp en trefwoorden te zien",
+          "Wijzig de velden die je wilt — laat er een leeg om hem te wissen",
+          "Klik op Metadata opslaan en download de bijgewerkte PDF"
+        ],
+        "title": "Zo bewerk je de metadata van een PDF"
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "PDF afvlakken",
+      "description": "Formuliervelden permanent maken en annotaties verwijderen",
+      "seoTitle": "PDF afvlakken — Formuliervelden permanent maken, gratis",
+      "metaDescription": "Bak de formuliervelden van een PDF permanent in de pagina en verwijder annotaties, zodat antwoorden niet meer te wijzigen zijn. Gratis, geen upload.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "a": "Hun waarden worden in de pagina zelf getekend en de velden worden verwijderd, zodat de ingevulde antwoorden niet meer te bewerken of te wissen zijn.",
+          "q": "Wat gebeurt er met de formuliervelden?"
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "a": "Die worden verwijderd, omdat ze niet in de pagina kunnen worden gebakken zonder er een afbeelding van te maken. Links blijven behouden.",
+          "q": "Wat gebeurt er met opmerkingen en markeringen?"
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "a": "Nee. De tekst blijft echte, selecteerbare tekst — niets wordt omgezet in een afbeelding.",
+          "q": "Verandert afvlakken de tekst?"
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
-        "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF afvlakken bakt formuliervelden permanent in de pagina en verwijdert opmerkingen en markeringen, zodat ingevulde antwoorden niet meer te wijzigen zijn. Links blijven behouden en de tekst blijft selecteerbaar.",
+        "steps": [
+          "Kies een PDF met formuliervelden of annotaties",
+          "Klik op PDF afvlakken",
+          "Download de afgevlakte kopie"
+        ],
+        "title": "Zo vlak je een PDF af"
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "PDF-formulier invullen",
+      "description": "Een PDF-formulier invullen en de ingevulde kopie opslaan",
+      "seoTitle": "PDF-formulier invullen — Online gratis een PDF-formulier invullen",
+      "metaDescription": "Vul in je browser een PDF-formulier in — tekstvelden, selectievakjes en keuzelijsten — en sla de ingevulde kopie op. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "a": "Tekstvelden, selectievakjes, keuzelijsten en keuzerondjes. Knoppen en handtekeningvelden kunnen hier niet worden ingevuld — gebruik PDF ondertekenen voor handtekeningen.",
+          "q": "Welke velden kan ik invullen?"
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "a": "De PDF is een platte scan of een geprint formulier zonder interactieve velden. Alleen PDF's met echte formuliervelden kunnen worden ingevuld — een gescand formulier heeft eerst OCR nodig, en zelfs dan blijft het een foto van een formulier.",
+          "q": "Er staat dat de PDF geen invulbare velden heeft. Waarom?"
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "a": "Ja. Haal de ingevulde PDF door PDF afvlakken en de antwoorden worden permanent.",
+          "q": "Kan ik de antwoorden daarna vergrendelen?"
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
-        "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF-formulier invullen toont elk invulbaar veld in een PDF — tekstvelden, selectievakjes, keuzelijsten — zodat je het formulier in je browser kunt invullen en opslaan.",
+        "steps": [
+          "Kies een PDF met invulbare formuliervelden",
+          "Vul elk veld in het paneel in",
+          "Klik op Ingevulde PDF opslaan en download de ingevulde kopie"
+        ],
+        "title": "Zo vul je een PDF-formulier in"
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Tekst naar PDF",
+      "description": "Gewone tekst omzetten naar een PDF-document",
+      "seoTitle": "Tekst naar PDF — Gewone tekst gratis omzetten naar PDF",
+      "metaDescription": "Typ of plak gewone tekst en zet die in je browser om naar een PDF-document. Gratis, geen account, geen upload, geen watermerk.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "a": "Nee. Deze tool zet gewone tekst om naar een nette PDF — kopjes en vet worden niet meegenomen. Gebruik voor opgemaakte documenten Word naar PDF of HTML naar PDF.",
+          "q": "Kan ik de tekst opmaken?"
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "a": "Die loopt door over zoveel pagina's als nodig, met een titel op de eerste pagina als je die toevoegt.",
+          "q": "Wat gebeurt er met lange tekst?"
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "a": "Nee. De PDF wordt in je browser gebouwd, dus de tekst verlaat je apparaat nooit.",
+          "q": "Wordt mijn tekst geüpload?"
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
-        "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "Tekst naar PDF zet gewone tekst die je typt of plakt om naar een net PDF-document, eventueel met een titel op de eerste pagina.",
+        "steps": [
+          "Typ of plak je tekst",
+          "Voeg een documenttitel toe als je dat wilt",
+          "Klik op Omzetten naar PDF en download hem"
+        ],
+        "title": "Zo zet je tekst om naar een PDF"
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Koptekst en voettekst",
+      "description": "Op elke pagina een koptekst en voettekst zetten",
+      "seoTitle": "Koptekst en voettekst aan PDF toevoegen — gratis, geen upload",
+      "metaDescription": "Zet op elke pagina van een PDF een koptekst- en voettekstregel — eventueel met paginanummers. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "a": "Ja. Laat het andere veld leeg en alleen het veld dat je hebt ingevuld, wordt gestempeld.",
+          "q": "Kan ik alleen een koptekst of alleen een voettekst toevoegen?"
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "a": "Links, in het midden of rechts, boven- of onderaan elke pagina. De tekst wordt boven op de pagina getekend — hij duwt de bestaande inhoud niet weg.",
+          "q": "Waar komt de tekst te staan?"
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "a": "Ja. Vink 'Paginanummers toevoegen aan de voettekst' aan en elke pagina krijgt naast je voettekst een nummer in de stijl '1 van 12'.",
+          "q": "Kan ik ook paginanummers toevoegen?"
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
-        "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "Koptekst en voettekst stempelt een regel tekst boven- en/of onderaan elke pagina, eventueel met paginanummers in de voettekst.",
+        "steps": [
+          "Kies een PDF",
+          "Typ de koptekst- en voettekst — laat er een leeg om alleen de andere te stempelen",
+          "Kies een positie, een lettergrootte en of je paginanummers wilt toevoegen",
+          "Klik op Koptekst en voettekst toevoegen en download het resultaat"
+        ],
+        "title": "Zo voeg je een koptekst en voettekst toe aan een PDF"
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Bates-nummering",
+      "description": "Opeenvolgende Bates-nummers op elke pagina stempelen",
+      "seoTitle": "Bates-nummering — Opeenvolgende nummers op een PDF stempelen",
+      "metaDescription": "Stempel elke pagina van een PDF met een voorvoegsel en een oplopend nummer met voorloopnullen. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "a": "Een manier om elke pagina van een set documenten te stempelen met een uniek oplopend nummer — bijvoorbeeld EXHIBIT-00042 — zodat pagina's in juridisch werk en bij discovery kunnen worden geïdentificeerd en aangehaald.",
+          "q": "Wat is Bates-nummering?"
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "a": "Ja. Stel een willekeurig voorvoegsel in, het nummer waarmee je begint, tot hoeveel cijfers er wordt aangevuld en waar op de pagina de stempel komt.",
+          "q": "Kan ik het voorvoegsel en het beginnummer kiezen?"
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "a": "Nee. De stempel wordt boven op elke pagina gezet; de bestaande inhoud blijft onaangeroerd.",
+          "q": "Verandert het het document?"
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
-        "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "Bates-nummering stempelt op elke pagina een uniek oplopend nummer — een voorvoegsel plus een oplopend nummer met voorloopnullen, zoals EXHIBIT-00042.",
+        "steps": [
+          "Kies een PDF",
+          "Stel het voorvoegsel, het beginnummer en het aantal cijfers in",
+          "Kies waar op de pagina de stempel komt",
+          "Klik op Bates-nummers toepassen en download de gestempelde PDF"
+        ],
+        "title": "Zo geef je een PDF Bates-nummers"
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF naar grijswaarden",
+      "description": "Een kleuren-PDF zwart-wit maken",
+      "seoTitle": "PDF naar grijswaarden — PDF gratis omzetten naar zwart-wit",
+      "metaDescription": "Zet een kleuren-PDF pagina voor pagina om naar zwart-wit. Gratis, geen account, geen upload — het bestand verlaat je browser nooit.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "a": "Nee. Pagina's worden opnieuw opgebouwd als zwart-witafbeeldingen, dus de tekst wordt onderdeel van de afbeelding. Gebruik het om te printen of te delen, niet om de tekst daarna nog te bewerken.",
+          "q": "Blijft de tekst dan nog selecteerbaar?"
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "a": "Ja. Gescande pagina's zijn al afbeeldingen, dus die zetten netjes om — vaak is dat juist het doel, voor printen of faxen.",
+          "q": "Werkt het ook bij gescande PDF's?"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "a": "Nee. De omzetting draait volledig in je browser, dus de PDF verlaat je apparaat nooit.",
+          "q": "Wordt mijn PDF geüpload?"
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
-        "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF naar grijswaarden bouwt elke pagina opnieuw op in zwart-wit. Het is gemaakt voor printen en faxen — pagina's worden afbeeldingen, dus de tekst is daarna niet meer selecteerbaar.",
+        "steps": [
+          "Kies je PDF",
+          "Klik op Omzetten naar grijswaarden",
+          "Download de zwart-wit-PDF"
+        ],
+        "title": "Zo zet je een PDF om naar grijswaarden"
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "PDF-formaat wijzigen",
+      "description": "PDF-pagina's wijzigen naar A4, Letter, A3 of een eigen formaat",
+      "seoTitle": "PDF-formaat wijzigen — PDF-paginagrootte naar A4 of Letter",
+      "metaDescription": "Wijzig elke PDF-pagina naar A4, Letter, A3, A5 of een eigen formaat. De inhoud wordt passend geschaald en gecentreerd. Gratis, geen upload.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "a": "Bijsnijden snijdt de marges van een pagina bij; Formaat wijzigen verandert de paginagrootte zelf — A4, Letter, A3, A5 of een eigen formaat — en schaalt de inhoud zodat hij past.",
+          "q": "Wat is het verschil met PDF bijsnijden?"
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "a": "Ja. Pagina's worden opnieuw ingedeeld, niet opnieuw weergegeven, dus tekst en vectoren blijven intact.",
+          "q": "Blijft de tekst selecteerbaar?"
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "a": "Ja. Kies Aangepast en vul de breedte en hoogte in millimeters in.",
+          "q": "Kan ik een eigen formaat instellen?"
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
-        "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF-formaat wijzigen zet elke pagina om naar A4, Letter, A3, A5 of een formaat dat je zelf invoert, waarbij de inhoud passend wordt geschaald en gecentreerd. Tekst en vectoren blijven intact.",
+        "steps": [
+          "Kies je PDF",
+          "Kies A4, Letter, A3, A5, of Aangepast en vul het formaat in millimeters in",
+          "Klik op Pagina's van formaat wijzigen",
+          "Download de PDF in het nieuwe formaat"
+        ],
+        "title": "Zo wijzig je het formaat van PDF-pagina's"
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "PDF rechtzetten",
+      "description": "Scheef gescande pagina's rechtzetten",
+      "seoTitle": "PDF rechtzetten — Scheef gescande pagina's gratis rechtzetten",
+      "metaDescription": "Zet scheef gescande pagina's recht. De scheefstand wordt automatisch gedetecteerd, of stel hem handmatig in met de schuifregelaar. Gratis, geen upload.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "a": "Hij leest de eerste pagina's en vindt de hoek waarbij de tekstregels het rechtst staan, en biedt die hoek dan aan op de schuifregelaar. Je kunt hem handmatig aanpassen als hij er niet goed uitziet.",
+          "q": "Hoe wordt de scheefstand gedetecteerd?"
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "a": "Nee. Pagina's worden opnieuw opgebouwd als rechtgezette afbeeldingen, dus de tekst wordt onderdeel van de afbeelding. Gebruik het voor gescande pagina's, waar toch geen selecteerbare tekst is.",
+          "q": "Blijft de tekst dan nog selecteerbaar?"
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "a": "Tot 10 graden beide kanten op, wat bijna elke slecht ingevoerde scannerpagina dekt.",
+          "q": "Hoe ver kan hij rechtzetten?"
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
-        "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF rechtzetten maakt scheef gescande pagina's recht. De scheefstand wordt automatisch gedetecteerd zodra je een bestand toevoegt, en met de schuifregelaar kun je hem handmatig aanpassen.",
+        "steps": [
+          "Kies je PDF — de scheefstand wordt automatisch gedetecteerd",
+          "Controleer de gedetecteerde hoek en sleep de schuifregelaar als de pagina nog scheef oogt",
+          "Bekijk met de live preview de rechtgezette eerste pagina",
+          "Klik op PDF rechtzetten en download het resultaat"
+        ],
+        "title": "Zo zet je een PDF recht"
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "PDF's afwisselend samenvoegen",
+      "description": "De pagina's van twee PDF's om en om in elkaar voegen",
+      "seoTitle": "PDF's afwisselend samenvoegen — Twee PDF's gratis in elkaar voegen",
+      "metaDescription": "Voeg de pagina's van twee PDF's in elkaar — eerst pagina 1 van beide, dan pagina 2 van beide — tot één bestand. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "a": "De kortste is het eerst op; de overgebleven pagina's van de langste komen daarna, in volgorde, aan het eind.",
+          "q": "Wat als de twee PDF's niet even lang zijn?"
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "a": "Het eerste document dat je toevoegt levert pagina 1, het tweede levert pagina 2, en daarna blijven ze elkaar afwisselen.",
+          "q": "Welk document komt eerst?"
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "a": "Om twee versies van een document pagina voor pagina te combineren, vragen en antwoorden om en om te zetten, of voor- en achterkantscans in leesvolgorde te krijgen.",
+          "q": "Waarvoor wordt dit gebruikt?"
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
-        "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "PDF's afwisselend samenvoegen neemt twee PDF's en voegt hun pagina's in elkaar — eerst pagina 1 van beide, dan pagina 2 van beide — tot één bestand.",
+        "steps": [
+          "Voeg het eerste document toe, dan het tweede",
+          "Klik op PDF's mixen",
+          "Download het samengevoegde bestand"
+        ],
+        "title": "Zo voeg je twee PDF's in elkaar"
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Lege pagina's verwijderen",
+      "description": "De lege pagina's uit een PDF verwijderen",
+      "seoTitle": "Lege pagina's verwijderen — Lege PDF-pagina's gratis verwijderen",
+      "metaDescription": "Zoek de lege pagina's in een PDF en verwijder ze — de pagina's die de scanner er per ongeluk bij zet. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "a": "Hij geeft elke pagina weer en meet hoeveel inkt erop zit. Pagina's onder de drempel worden eerst getoond voordat er iets wordt verwijderd, zodat je precies ziet wat er weggaat.",
+          "q": "Hoe weet hij dat een pagina leeg is?"
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "a": "Niet op de instelling Gebalanceerd — een paginanummer telt als inkt. Verwijdert hij toch een pagina die je wilde houden, gebruik dan Strikt en draai het opnieuw.",
+          "q": "Verwijdert hij ook een pagina met alleen een paginanummer?"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "a": "Nee. Detectie en verwijdering draaien volledig in je browser.",
+          "q": "Wordt mijn PDF geüpload?"
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
-        "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "Lege pagina's verwijderen zoekt de lege pagina's die een scanner heeft toegevoegd — meestal aan het einde van een stapel — toont ze en haalt ze eruit; de rest blijft onaangeroerd.",
+        "steps": [
+          "Kies je PDF",
+          "Controleer de lege pagina's die hij heeft gevonden, en pas de gevoeligheid aan als hij er een heeft gemist of een pagina markeert die je wilt houden",
+          "Klik op Lege pagina's verwijderen",
+          "Download de opgeschoonde PDF"
+        ],
+        "title": "Zo verwijder je lege pagina's uit een PDF"
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "2, 4, 6 of 9 pagina's op elk vel zetten",
+      "seoTitle": "N-up PDF — Meerdere pagina's op één vel zetten, gratis",
+      "metaDescription": "Zet 2, 4, 6 of 9 PDF-pagina's op elk vel, voor boekjes en hand-outs. Gratis, geen account, geen upload.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "a": "Elk vel houdt de grootte van de eerste pagina van je PDF — meestal A4 of Letter. Bronpagina's worden geschaald zodat ze in hun vak passen.",
+          "q": "Hoe groot zijn de vellen?"
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "a": "Ja. Pagina's worden opnieuw ingedeeld, niet opnieuw weergegeven, dus tekst en vectoren blijven scherp. Bij 9-up is de druk klein, zoals het hoort.",
+          "q": "Blijft de tekst leesbaar?"
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "a": "Pagina's lopen van links naar rechts, van boven naar beneden, in de oorspronkelijke volgorde.",
+          "q": "Kan ik de volgorde kiezen?"
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
-        "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "N-up PDF zet 2, 4, 6 of 9 bronpagina's op elk vel, voor boekjes en hand-outs. Elk vel houdt de grootte van de eerste pagina.",
+        "steps": [
+          "Kies je PDF",
+          "Kies 2-up, 4-up, 6-up of 9-up",
+          "Klik op N-up PDF maken",
+          "Download het resultaat"
+        ],
+        "title": "Zo zet je meerdere PDF-pagina's op één vel"
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Lege pagina toevoegen",
+      "description": "Lege pagina's invoegen, of pagina's uit een andere PDF",
+      "seoTitle": "Lege pagina toevoegen — Pagina's invoegen in een PDF, gratis",
+      "metaDescription": "Voeg lege pagina's in — of elke pagina van een andere PDF — aan het begin, het einde, na elke pagina of na een gekozen pagina. Gratis, geen upload.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "a": "Aan het begin, aan het einde, na elke pagina, of na een paginanummer dat je kiest.",
+          "q": "Waar kan de lege pagina komen?"
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "a": "Kies 'Pagina's uit een andere PDF', voeg na het eerste bestand het tweede toe en kies waar de pagina's moeten komen.",
+          "q": "Hoe voeg ik pagina's uit een andere PDF in?"
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "a": "Even groot als de eerste pagina van je PDF.",
+          "q": "Hoe groot is de lege pagina?"
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
-        "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "Privé — het bestand wordt in je browser verwerkt en nooit geüpload",
+          "Gratis, zonder account, zonder watermerk en zonder daglimiet",
+          "Werkt in elke moderne browser op Windows, Mac, Linux, iPhone en Android"
+        ],
+        "intro": "Lege pagina toevoegen voegt lege pagina's in — of elke pagina van een tweede PDF — aan het begin, het einde, na elke pagina of na een pagina die je kiest.",
+        "steps": [
+          "Kies je PDF",
+          "Kies Lege pagina, of Pagina's uit een andere PDF en voeg het tweede bestand toe",
+          "Kies waar de pagina's moeten komen",
+          "Klik op Lege pagina toevoegen en download het resultaat"
+        ],
+        "title": "Zo voeg je een lege pagina toe aan een PDF"
       }
     }
   }

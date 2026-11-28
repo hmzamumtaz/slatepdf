@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF sang PNG",
+      "description": "Chuyển các trang PDF thành ảnh PNG",
+      "seoTitle": "PDF sang PNG — Chuyển trang PDF sang PNG miễn phí",
+      "metaDescription": "Chuyển mọi trang của PDF thành ảnh PNG ở 144 hoặc 216 DPI. Miễn phí, không cần đăng ký, không watermark, tệp không rời khỏi trình duyệt của bạn.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Ảnh PNG sẽ có độ phân giải bao nhiêu?",
+          "a": "Các trang được dựng ở 144 DPI (Tiêu chuẩn) hoặc 216 DPI (Cao), bất kể nguồn gốc. Mức Cao cho chữ sắc nét hơn và tệp lớn hơn."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Khác gì so với PDF sang JPG?",
+          "a": "PNG không mất dữ liệu nên giữ các cạnh sắc và chữ rõ nét; JPG có tệp nhỏ hơn. Dùng PNG khi cần từng điểm ảnh chính xác, JPG khi cần tệp nhỏ."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "PDF của tôi có bị tải lên để chuyển sang PNG không?",
+          "a": "Không. Mỗi trang được dựng thành ảnh ngay trong trình duyệt của bạn, nên PDF không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Cách chuyển PDF sang PNG",
+        "intro": "PDF sang PNG lưu mọi trang của PDF thành ảnh PNG, ở độ phân giải tiêu chuẩn (144 DPI) hoặc cao (216 DPI). PNG không mất dữ liệu nên chữ và các cạnh sắc vẫn rõ nét.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Chọn một hoặc nhiều tệp PDF",
+          "Chọn độ phân giải Tiêu chuẩn hoặc Cao",
+          "Bấm Chuyển sang PNG",
+          "Tải từng trang riêng, hoặc tải mọi trang cùng lúc dưới dạng ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF sang văn bản",
+      "description": "Trích toàn bộ chữ trong PDF thành tệp .txt thuần",
+      "seoTitle": "PDF sang văn bản — Trích xuất chữ từ PDF miễn phí",
+      "metaDescription": "Trích toàn bộ chữ từ PDF thành tệp .txt thuần, có thể thêm tiêu đề cho từng trang. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Tệp .txt chứa những gì?",
+          "a": "Chữ của mọi trang, theo đúng thứ tự trang. Bật tiêu đề trang để có dòng “Trang N” trước mỗi trang, giúp tài liệu dài dễ theo dõi hơn."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Có dùng được cho PDF scan không?",
+          "a": "Chỉ khi bản scan có lớp chữ. Bản scan chỉ là ảnh thì không có chữ để trích và sẽ ra trống — hãy chạy OCR PDF trước, rồi chuyển kết quả đã tìm kiếm được sang văn bản."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "PDF của tôi có bị tải lên để trích chữ không?",
+          "a": "Không. Chữ được đọc từ PDF ngay trong trình duyệt của bạn, nên tệp không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Cách trích xuất chữ từ PDF",
+        "intro": "PDF sang văn bản lấy chữ ra khỏi PDF thành tệp .txt thuần, trang nối tiếp trang, có thể thêm tiêu đề cho từng trang.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Chọn một PDF có chữ thật (chạy OCR PDF trước với bản scan)",
+          "Tick “Thêm tiêu đề cho từng trang” nếu bạn muốn có dấu Trang N",
+          "Bấm Chuyển sang văn bản",
+          "Tải tệp .txt xuống, hoặc sao chép chữ từ bản xem trước"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Trích xuất hình ảnh",
+      "description": "Lấy ảnh và hình minh họa ra khỏi PDF thành tệp PNG",
+      "seoTitle": "Trích xuất hình ảnh từ PDF — Lưu ảnh thành PNG miễn phí",
+      "metaDescription": "Lấy ảnh, logo và hình minh họa ra khỏi PDF rồi lưu thành tệp PNG. Miễn phí, không cần đăng ký, PDF không rời khỏi trình duyệt của bạn.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Hình ảnh trích ra có chất lượng thế nào?",
+          "a": "Chất lượng gốc đầy đủ — hình được lưu đúng như trong PDF, dưới dạng PNG. Không nén lại hay giảm độ phân giải."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Nếu PDF của tôi là bản scan thì sao?",
+          "a": "Một trang scan là một ảnh lớn, nên bạn sẽ nhận lại đúng ảnh của toàn trang. Với trang chữ thật, từng ảnh, logo và hình minh họa được trích riêng."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "PDF của tôi có bị tải lên để trích hình không?",
+          "a": "Không. Hình được lấy ra khỏi PDF ngay trong trình duyệt của bạn, nên tệp không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Cách trích xuất hình ảnh từ PDF",
+        "intro": "Trích xuất hình ảnh lấy mọi ảnh, logo và hình minh họa nhúng trong PDF ra và lưu thành tệp PNG với chất lượng gốc đầy đủ.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Chọn một tệp PDF",
+          "Bấm Trích xuất hình ảnh",
+          "Tải hình ảnh xuống — nhiều ảnh sẽ tải cùng nhau dưới dạng ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF sang HTML",
+      "description": "Biến PDF thành trang web HTML thuần",
+      "seoTitle": "PDF sang HTML — Chuyển PDF thành trang web miễn phí",
+      "metaDescription": "Biến PDF thành trang HTML thuần, mỗi trang PDF một mục. Miễn phí, không cần đăng ký, không tải lên — chữ không rời khỏi trình duyệt của bạn.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "HTML có giống PDF không?",
+          "a": "Không. Nó chuyển chữ chứ không chuyển bố cục: mỗi trang PDF thành một mục với chữ dạng đoạn văn. Hình ảnh và định dạng chính xác không được giữ lại."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Tôi có thể làm gì với tệp HTML?",
+          "a": "Mở trong bất kỳ trình duyệt nào, dán vào website hay trình soạn thảo nội dung, hoặc dùng làm điểm bắt đầu cho trang web dựng từ tài liệu."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "PDF của tôi có bị tải lên để chuyển sang HTML không?",
+          "a": "Không. Chữ được trích và HTML được dựng ngay trong trình duyệt của bạn, nên PDF không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Cách chuyển PDF sang HTML",
+        "intro": "PDF sang HTML biến PDF thành trang web thuần: mỗi trang PDF một mục, chữ dạng đoạn văn. Nó chuyển chữ chứ không chuyển bố cục.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Chọn PDF có chữ thật (chạy OCR PDF trước với bản scan)",
+          "Bấm Chuyển sang HTML",
+          "Tải tệp .html xuống, hoặc sao chép mã từ bản xem trước"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Chỉnh sửa siêu dữ liệu",
+      "description": "Đổi tiêu đề, tác giả, chủ đề và từ khóa của PDF",
+      "seoTitle": "Chỉnh sửa siêu dữ liệu PDF — Đổi tiêu đề, tác giả & từ khóa",
+      "metaDescription": "Đổi tiêu đề, tác giả, chủ đề và từ khóa của PDF ngay trong trình duyệt. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Tiêu đề hiển thị ở đâu?",
+          "a": "Trong tab hay thanh tiêu đề của trình đọc PDF, trong tìm kiếm tệp, và trong kết quả tìm kiếm khi PDF được lập chỉ mục. Tiêu đề rõ ràng giúp người khác tìm thấy tài liệu."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Chỉnh sửa siêu dữ liệu có đổi chính tài liệu không?",
+          "a": "Không. Trang, chữ và hình ảnh vẫn y nguyên — chỉ thông tin lưu về tài liệu thay đổi."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Tôi có thể xóa một trường không?",
+          "a": "Có. Để trống trường đó rồi lưu — giá trị đó sẽ bị gỡ khỏi PDF."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Cách chỉnh sửa siêu dữ liệu PDF",
+        "intro": "Chỉnh sửa siêu dữ liệu đổi thông tin lưu về PDF — tiêu đề, tác giả, chủ đề và từ khóa — mà không chạm tới các trang.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Chọn một PDF để xem tiêu đề, tác giả, chủ đề và từ khóa hiện tại",
+          "Đổi các trường bạn muốn — để trống một trường để xóa nó",
+          "Bấm Lưu siêu dữ liệu rồi tải PDF đã cập nhật xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Làm phẳng PDF",
+      "description": "Cố định trường biểu mẫu và gỡ chú thích",
+      "seoTitle": "Làm phẳng PDF — Cố định trường biểu mẫu vĩnh viễn miễn phí",
+      "metaDescription": "Khóa các trường biểu mẫu của PDF vĩnh viễn vào trang và gỡ chú thích, để đáp án không còn thay đổi được. Miễn phí, không tải lên.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Trường biểu mẫu sẽ ra sao?",
+          "a": "Giá trị của chúng được vẽ vào chính trang và các trường bị gỡ bỏ, nên đáp án đã điền không còn chỉnh sửa hay xóa được nữa."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Nhận xét và tô sáng thì sao?",
+          "a": "Chúng bị gỡ, vì không thể khóa vào trang mà không biến trang thành ảnh. Liên kết được giữ lại."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Làm phẳng có đổi chữ không?",
+          "a": "Không. Chữ vẫn là chữ thật, chọn được — không có gì bị chuyển thành ảnh."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Cách làm phẳng PDF",
+        "intro": "Làm phẳng PDF khóa trường biểu mẫu vĩnh viễn vào trang và gỡ nhận xét, tô sáng, để đáp án đã điền không còn thay đổi được. Liên kết được giữ, chữ vẫn chọn được.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Chọn PDF có trường biểu mẫu hoặc chú thích",
+          "Bấm Làm phẳng PDF",
+          "Tải bản đã làm phẳng xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Điền biểu mẫu PDF",
+      "description": "Điền biểu mẫu PDF rồi lưu bản đã hoàn thành",
+      "seoTitle": "Điền biểu mẫu PDF — Điền biểu mẫu PDF trực tuyến miễn phí",
+      "metaDescription": "Điền biểu mẫu PDF trong trình duyệt — trường chữ, ô tick và danh sách thả xuống — rồi lưu bản đã hoàn thành. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Điền được những trường nào?",
+          "a": "Trường chữ, ô tick, danh sách thả xuống và nhóm nút radio. Nút bấm và trường chữ ký không điền được ở đây — dùng Ký PDF cho chữ ký."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Nó báo PDF không có trường điền được. Vì sao?",
+          "a": "PDF là bản scan phẳng hoặc biểu mẫu in không có trường tương tác. Chỉ PDF được tạo với trường biểu mẫu thật mới điền được — biểu mẫu scan cần OCR trước, mà dù vậy vẫn chỉ là ảnh của biểu mẫu."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Tôi có thể khóa đáp án sau đó không?",
+          "a": "Có. Chạy PDF đã điền qua Làm phẳng PDF và đáp án sẽ trở nên vĩnh viễn."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Cách điền biểu mẫu PDF",
+        "intro": "Điền biểu mẫu PDF liệt kê mọi trường điền được trong PDF — trường chữ, ô tick, danh sách thả xuống — để bạn hoàn thành biểu mẫu trong trình duyệt rồi lưu lại.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Chọn PDF có trường biểu mẫu điền được",
+          "Điền từng trường trong bảng",
+          "Bấm Lưu PDF đã điền rồi tải bản hoàn thành xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Văn bản sang PDF",
+      "description": "Biến văn bản thuần thành tài liệu PDF",
+      "seoTitle": "Văn bản sang PDF — Biến văn bản thuần thành PDF miễn phí",
+      "metaDescription": "Gõ hoặc dán văn bản thuần rồi biến thành tài liệu PDF ngay trong trình duyệt. Miễn phí, không cần đăng ký, không tải lên, không watermark.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Tôi có thể định dạng chữ không?",
+          "a": "Không. Công cụ này biến văn bản thuần thành PDF gọn gàng — tiêu đề và chữ đậm không được giữ lại. Với tài liệu có định dạng, hãy dùng Word sang PDF hoặc HTML sang PDF."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Văn bản dài thì sao?",
+          "a": "Nó chảy qua bao nhiêu trang tùy cần, với tiêu đề ở trang đầu nếu bạn thêm."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Chữ của tôi có bị tải lên không?",
+          "a": "Không. PDF được tạo ngay trong trình duyệt của bạn, nên chữ không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Cách biến văn bản thành PDF",
+        "intro": "Văn bản sang PDF biến văn bản thuần bạn gõ hoặc dán thành tài liệu PDF gọn gàng, có thể thêm tiêu đề ở trang đầu.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Gõ hoặc dán văn bản của bạn",
+          "Thêm tiêu đề tài liệu nếu bạn muốn",
+          "Bấm Chuyển sang PDF rồi tải xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Đầu trang & chân trang",
+      "description": "Đóng dấu đầu trang và chân trang lên mọi trang",
+      "seoTitle": "Thêm đầu trang & chân trang vào PDF miễn phí, không tải lên",
+      "metaDescription": "Đóng dấu đầu trang và chân trang — kèm số trang tùy chọn — lên mọi trang của PDF. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Tôi có thể chỉ thêm đầu trang, hoặc chỉ chân trang không?",
+          "a": "Có. Để trống trường còn lại, chỉ phần bạn điền mới được đóng dấu."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Chữ sẽ nằm ở đâu?",
+          "a": "Trái, giữa hoặc phải, ở đầu hay cuối mỗi trang. Chữ được vẽ lên trên trang — không đẩy nội dung sẵn có xê dịch."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Tôi có thể thêm số trang nữa không?",
+          "a": "Có. Tick “Thêm số trang vào chân trang” và mỗi trang sẽ có số kiểu “1 trên 12” bên cạnh chữ chân trang của bạn."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Cách thêm đầu trang và chân trang vào PDF",
+        "intro": "Đầu trang & chân trang đóng dấu một dòng chữ ở đầu và/hoặc cuối mọi trang, có thể kèm số trang ở chân trang.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Chọn một tệp PDF",
+          "Nhập chữ đầu trang và chân trang — để trống một bên để chỉ đóng dấu bên còn lại",
+          "Chọn vị trí, cỡ chữ, và có thêm số trang hay không",
+          "Bấm Thêm đầu trang & chân trang rồi tải kết quả xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Đánh số Bates",
+      "description": "Đóng dấu số Bates liên tiếp lên mọi trang",
+      "seoTitle": "Đánh số Bates — Đóng dấu số liên tiếp lên PDF",
+      "metaDescription": "Đóng dấu Bates lên mọi trang của PDF với tiền tố và số chạy có đệm số 0. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Đánh số Bates là gì?",
+          "a": "Cách đóng dấu lên mọi trang của một bộ tài liệu một số liên tiếp duy nhất — ví dụ EXHIBIT-00042 — để các trang có thể được nhận diện và trích dẫn trong công việc pháp lý và thu thập chứng cứ."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Tôi có thể chọn tiền tố và số bắt đầu không?",
+          "a": "Có. Đặt tiền tố bất kỳ, số bắt đầu, số chữ số đệm, và vị trí đóng dấu trên trang."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Nó có thay đổi tài liệu không?",
+          "a": "Không. Dấu được thêm lên trên mỗi trang; nội dung sẵn có không bị đụng tới."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Cách đánh số Bates cho PDF",
+        "intro": "Đánh số Bates đóng dấu lên mọi trang một số liên tiếp duy nhất — tiền tố cộng số chạy có đệm số 0, như EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Chọn một tệp PDF",
+          "Đặt tiền tố, số bắt đầu và số chữ số đệm",
+          "Chọn vị trí đóng dấu trên trang",
+          "Bấm Áp dụng số Bates rồi tải PDF đã đóng dấu xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF đen trắng",
+      "description": "Biến PDF màu thành đen trắng",
+      "seoTitle": "PDF đen trắng — Chuyển PDF sang đen trắng miễn phí",
+      "metaDescription": "Biến PDF màu thành đen trắng, từng trang một. Miễn phí, không cần đăng ký, không tải lên — tệp không rời khỏi trình duyệt của bạn.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Chữ còn chọn được không?",
+          "a": "Không. Các trang được dựng lại thành ảnh đen trắng, nên chữ trở thành một phần của ảnh. Dùng để in hoặc chia sẻ, không dùng để sửa chữ sau đó."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Có dùng được cho PDF scan không?",
+          "a": "Có. Trang scan vốn đã là ảnh nên chuyển rất tốt — thường đó chính là mục đích, để in hay fax."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "PDF của tôi có bị tải lên không?",
+          "a": "Không. Việc chuyển đổi chạy hoàn toàn trong trình duyệt của bạn, nên PDF không bao giờ rời khỏi thiết bị của bạn."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Cách chuyển PDF sang thang độ xám",
+        "intro": "PDF đen trắng dựng lại mọi trang thành đen trắng. Nó được làm để in và fax — trang trở thành ảnh, nên chữ không còn chọn được nữa.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Chọn PDF của bạn",
+          "Bấm Chuyển sang thang độ xám",
+          "Tải PDF đen trắng xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Thay đổi kích thước PDF",
+      "description": "Đổi trang PDF sang A4, Letter, A3 hoặc kích thước tùy chỉnh",
+      "seoTitle": "Thay đổi kích thước PDF — Đổi khổ trang PDF sang A4 hoặc Letter",
+      "metaDescription": "Đổi mọi trang PDF sang A4, Letter, A3, A5 hoặc kích thước tùy chỉnh. Nội dung được thu phóng vừa trang, căn giữa. Miễn phí, không tải lên, không cần đăng ký.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Khác gì so với Cắt lề PDF?",
+          "a": "Cắt lề xén lề của trang; Thay đổi kích thước đổi chính khổ trang — A4, Letter, A3, A5 hoặc bất kỳ kích thước tùy chỉnh nào — và thu phóng nội dung cho vừa."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Chữ có còn chọn được không?",
+          "a": "Có. Các trang được sắp lại, không bị dựng lại, nên chữ và vector vẫn nguyên vẹn."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Tôi có thể đặt kích thước tùy chỉnh không?",
+          "a": "Có. Chọn Tùy chỉnh rồi nhập chiều rộng và chiều cao tính bằng milimét."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Cách thay đổi kích thước trang PDF",
+        "intro": "Thay đổi kích thước PDF đổi mọi trang sang A4, Letter, A3, A5 hoặc kích thước bạn nhập, thu phóng nội dung cho vừa, căn giữa. Chữ và vector vẫn nguyên vẹn.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Chọn PDF của bạn",
+          "Chọn A4, Letter, A3, A5, hoặc Tùy chỉnh rồi nhập kích thước tính bằng milimét",
+          "Bấm Thay đổi kích thước trang",
+          "Tải PDF đã đổi kích thước xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Chỉnh nghiêng PDF",
+      "description": "Căn thẳng các trang scan bị nghiêng",
+      "seoTitle": "Chỉnh nghiêng PDF — Căn thẳng trang scan bị nghiêng miễn phí",
+      "metaDescription": "Căn thẳng các trang scan bị nghiêng. Độ nghiêng được phát hiện tự động, hoặc chỉnh tay bằng thanh trượt. Miễn phí, không tải lên, không cần đăng ký.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Nó phát hiện độ nghiêng thế nào?",
+          "a": "Nó đọc các trang đầu và tìm góc mà các dòng chữ thẳng nhất, rồi gợi ý góc đó trên thanh trượt. Bạn có thể chỉnh tay nếu thấy chưa đúng."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Chữ có còn chọn được không?",
+          "a": "Không. Các trang được dựng lại thành ảnh đã căn thẳng, nên chữ trở thành một phần của ảnh. Dùng cho trang scan, vốn đã không có chữ chọn được."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Căn được nghiêng tối đa bao nhiêu?",
+          "a": "Tối đa 10 độ mỗi hướng, đủ cho gần như mọi trang scan bị kẹp lệch."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Cách chỉnh nghiêng PDF",
+        "intro": "Chỉnh nghiêng PDF căn thẳng các trang scan bị nghiêng. Độ nghiêng được phát hiện tự động khi bạn thêm tệp, và thanh trượt cho phép chỉnh tay.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Chọn PDF của bạn — độ nghiêng được phát hiện tự động",
+          "Kiểm tra góc đã phát hiện, và kéo thanh trượt nếu trang vẫn còn nghiêng",
+          "Dùng Xem trước trực tiếp để xem trang đầu đã căn thẳng",
+          "Bấm Chỉnh nghiêng PDF rồi tải kết quả xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Xen kẽ & trộn",
+      "description": "Xen kẽ các trang của hai PDF, trang này nối trang kia",
+      "seoTitle": "Xen kẽ & trộn PDF — Xen kẽ hai PDF miễn phí",
+      "metaDescription": "Xen kẽ các trang của hai PDF — trang 1 của mỗi tệp, rồi trang 2 của mỗi tệp — thành một tệp. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Nếu hai PDF có độ dài khác nhau thì sao?",
+          "a": "Tệp ngắn hơn hết trước; các trang còn lại của tệp dài hơn sẽ nằm ở cuối, theo thứ tự."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Tài liệu nào đứng trước?",
+          "a": "Tài liệu đầu tiên bạn thêm cho trang 1, tài liệu thứ hai cho trang 2, và chúng cứ xen kẽ từ đó."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "Dùng để làm gì?",
+          "a": "Kết hợp hai phiên bản của một tài liệu theo từng trang, xen kẽ câu hỏi và đáp án, hoặc gộp các bản scan mặt trước và mặt sau theo thứ tự đọc."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Cách xen kẽ hai PDF",
+        "intro": "Xen kẽ & trộn lấy hai PDF và xen kẽ các trang của chúng — trang 1 của mỗi tệp, rồi trang 2 của mỗi tệp — thành một tệp duy nhất.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Thêm tài liệu đầu tiên, rồi tài liệu thứ hai",
+          "Bấm Trộn PDF",
+          "Tải tệp đã xen kẽ xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Xóa trang trắng",
+      "description": "Xóa các trang trắng khỏi PDF",
+      "seoTitle": "Xóa trang trắng — Xóa trang trắng trong PDF miễn phí",
+      "metaDescription": "Tìm và xóa các trang trắng trong PDF — những trang máy scan thêm nhầm. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Nó biết trang nào trắng bằng cách nào?",
+          "a": "Nó dựng từng trang và đo lượng mực trên đó. Các trang dưới ngưỡng được liệt kê trước khi xóa bất cứ gì, nên bạn thấy chính xác những gì sẽ bị gỡ."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Nó có xóa trang chỉ có số trang không?",
+          "a": "Không với chế độ Cân bằng — số trang vẫn tính là mực. Nếu nó vẫn xóa một trang bạn muốn giữ, hãy dùng Chặt chẽ rồi chạy lại."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "PDF của tôi có bị tải lên không?",
+          "a": "Không. Việc phát hiện và xóa chạy hoàn toàn trong trình duyệt của bạn."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Cách xóa trang trắng khỏi PDF",
+        "intro": "Xóa trang trắng tìm các trang trắng máy scan thêm vào — thường ở cuối chồng giấy — liệt kê chúng rồi bỏ đi, phần còn lại giữ nguyên.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Chọn PDF của bạn",
+          "Kiểm tra các trang trắng nó tìm được, và đổi độ nhạy nếu nó bỏ sót hay đánh dấu nhầm trang bạn muốn",
+          "Bấm Xóa trang trắng",
+          "Tải PDF đã dọn xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "Đặt 2, 4, 6 hoặc 9 trang lên mỗi tờ",
+      "seoTitle": "N-up PDF — Đặt nhiều trang lên một tờ miễn phí",
+      "metaDescription": "Đặt 2, 4, 6 hoặc 9 trang PDF lên mỗi tờ, để làm sách nhỏ và tài liệu phát tay. Miễn phí, không cần đăng ký, không tải lên.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Tờ giấy có kích thước bao nhiêu?",
+          "a": "Mỗi tờ giữ nguyên kích thước của trang đầu tiên trong PDF của bạn — thường là A4 hoặc Letter. Các trang gốc được thu nhỏ cho vừa ô của chúng."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Chữ có còn đọc được không?",
+          "a": "Có. Các trang được sắp lại, không bị dựng lại, nên chữ và vector vẫn sắc nét. Ở 9-up chữ in sẽ nhỏ, đúng như nó phải thế."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Tôi có thể chọn thứ tự không?",
+          "a": "Các trang chạy từ trái sang phải, từ trên xuống dưới, theo thứ tự gốc."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Cách đặt nhiều trang PDF lên một tờ",
+        "intro": "N-up PDF xếp 2, 4, 6 hoặc 9 trang gốc lên mỗi tờ, để làm sách nhỏ và tài liệu phát tay. Mỗi tờ giữ nguyên kích thước của trang đầu tiên.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Chọn PDF của bạn",
+          "Chọn 2-up, 4-up, 6-up hoặc 9-up",
+          "Bấm Tạo N-up PDF",
+          "Tải kết quả xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Thêm trang trắng",
+      "description": "Chèn trang trắng hoặc trang từ một PDF khác",
+      "seoTitle": "Thêm trang trắng — Chèn trang vào PDF miễn phí",
+      "metaDescription": "Chèn trang trắng — hoặc mọi trang của một PDF khác — vào PDF, ở đầu, ở cuối, sau mỗi trang, hoặc sau một trang bạn chọn. Miễn phí, không tải lên.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Trang trắng có thể đặt ở đâu?",
+          "a": "Ở đầu, ở cuối, sau mỗi trang, hoặc sau bất kỳ số trang nào bạn chọn."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Làm sao chèn trang từ một PDF khác?",
+          "a": "Chọn “Trang từ một PDF khác”, thêm tệp thứ hai sau tệp đầu tiên, rồi chọn vị trí đặt các trang của nó."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Trang trắng có kích thước bao nhiêu?",
+          "a": "Bằng kích thước trang đầu tiên của PDF của bạn."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Cách thêm trang trắng vào PDF",
+        "intro": "Thêm trang trắng chèn trang trắng — hoặc mọi trang của PDF thứ hai — ở đầu, ở cuối, sau mỗi trang, hoặc sau một trang bạn chọn.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Chọn PDF của bạn",
+          "Chọn Trang trắng, hoặc Trang từ một PDF khác rồi thêm tệp thứ hai",
+          "Chọn vị trí đặt các trang",
+          "Bấm Thêm trang trắng rồi tải kết quả xuống"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Riêng tư — tệp được xử lý trong trình duyệt của bạn và không bao giờ bị tải lên",
+          "Miễn phí, không cần tài khoản, không watermark và không giới hạn mỗi ngày",
+          "Hoạt động trên mọi trình duyệt hiện đại trên Windows, Mac, Linux, iPhone và Android"
         ]
       }
     }

@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF do PNG",
+      "description": "Převeďte stránky PDF na obrázky PNG",
+      "seoTitle": "PDF do PNG — převod stránek PDF do PNG zdarma",
+      "metaDescription": "Převeďte každou stránku PDF na obrázek PNG v rozlišení 144 nebo 216 DPI. Zdarma, bez registrace, bez vodoznaku a PDF nikdy neopustí váš prohlížeč.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "V jakém rozlišení budou obrázky PNG?",
+          "a": "Stránky se vykreslí v rozlišení 144 DPI (Standardní) nebo 216 DPI (Vysoké), bez ohledu na zdroj. Vysoké rozlišení dává ostřejší text a větší soubory."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "V čem se to liší od PDF do JPG?",
+          "a": "PNG je bezztrátové, takže zachová ostré hrany a text; soubory JPG jsou menší. PNG použijte, když potřebujete přesné pixely, JPG, když potřebujete malé soubory."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "Nahrává se moje PDF, aby se převedlo do PNG?",
+          "a": "Ne. Každá stránka se vykreslí do obrázku přímo ve vašem prohlížeči, takže PDF nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Jak převést PDF do PNG",
+        "intro": "PDF do PNG uloží každou stránku PDF jako obrázek PNG ve standardním (144 DPI) nebo vysokém (216 DPI) rozlišení. PNG je bezztrátové, takže text a ostré hrany zůstanou ostré.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Vyberte jeden nebo více souborů PDF",
+          "Zvolte standardní nebo vysoké rozlišení",
+          "Klikněte na Převést do PNG",
+          "Stáhněte jednotlivé stránky, nebo všechny stránky najednou jako ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF do textu",
+      "description": "Extrahujte veškerý text z PDF do prostého souboru .txt",
+      "seoTitle": "PDF do textu — extrakce textu z PDF zdarma",
+      "metaDescription": "Extrahujte veškerý text z PDF do prostého souboru .txt, volitelně s nadpisem na každé stránce. Zdarma, bez registrace, bez nahrávání.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Co soubor .txt obsahuje?",
+          "a": "Text každé stránky v pořadí stránek. Zapněte nadpisy stránek a před každou stránkou se objeví řádek „Stránka N“, což usnadní orientaci v dlouhých dokumentech."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Funguje to u naskenovaných PDF?",
+          "a": "Jen pokud má sken textovou vrstvu. Prostý fotosken nemá žádný text k extrakci a vyjde prázdný — nejprve na něm spusťte OCR PDF a pak převeďte prohledávatelný výsledek do textu."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "Nahrává se moje PDF, aby se z něj extrahoval text?",
+          "a": "Ne. Text se čte z PDF přímo ve vašem prohlížeči, takže soubor nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Jak extrahovat text z PDF",
+        "intro": "PDF do textu vytáhne text z PDF do prostého souboru .txt, stránku za stránkou, volitelně s nadpisem na každé stránce.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Vyberte PDF se skutečným textem (u skenů nejprve spusťte OCR PDF)",
+          "Zaškrtněte „Přidat nadpis pro každou stránku“, pokud chcete značky Stránka N",
+          "Klikněte na Převést do textu",
+          "Stáhněte soubor .txt, nebo zkopírujte text z náhledu"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Extrahovat obrázky",
+      "description": "Vytáhněte fotografie a obrázky z PDF jako soubory PNG",
+      "seoTitle": "Extrahovat obrázky z PDF — uložení fotografií jako PNG zdarma",
+      "metaDescription": "Vytáhněte fotografie, loga a obrázky z PDF a uložte je jako soubory PNG. Zdarma, bez registrace, PDF nikdy neopustí váš prohlížeč.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "V jaké kvalitě jsou extrahované obrázky?",
+          "a": "V plné vložené kvalitě — obrázek se uloží přesně tak, jak je vložen v PDF, jako PNG. Nic se znovu nekomprimuje ani nezmenšuje."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Co když je moje PDF sken?",
+          "a": "Naskenovaná stránka je jeden velký obrázek, takže dostanete zpět celý obrázek stránky. U skutečných textových stránek se každá vložená fotografie, logo a obrázek extrahuje zvlášť."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "Nahrává se moje PDF, aby se z něj extrahovaly obrázky?",
+          "a": "Ne. Obrázky se vytáhnou z PDF přímo ve vašem prohlížeči, takže soubor nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Jak extrahovat obrázky z PDF",
+        "intro": "Extrahovat obrázky vytáhne každou vloženou fotografii, logo a obrázek z PDF a uloží je jako soubory PNG v plné vložené kvalitě.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Vyberte soubor PDF",
+          "Klikněte na Extrahovat obrázky",
+          "Stáhněte obrázky — více obrázků se stáhne společně jako ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF do HTML",
+      "description": "Převeďte PDF na prostou webovou stránku HTML",
+      "seoTitle": "PDF do HTML — převod PDF na webovou stránku zdarma",
+      "metaDescription": "Převeďte PDF na prostou stránku HTML, jeden oddíl na stránku PDF. Zdarma, bez registrace, bez nahrávání — text nikdy neopustí váš prohlížeč.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "Bude HTML vypadat jako PDF?",
+          "a": "Ne. Přenesou se slova, ne rozvržení: každá stránka PDF se stane oddílem s textem v odstavcích. Obrázky a přesné formátování se nepřenášejí."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Co můžu s HTML souborem dělat?",
+          "a": "Otevřít ho v libovolném prohlížeči, vložit na web nebo do editoru obsahu, nebo ho použít jako výchozí bod pro webovou stránku vytvořenou z dokumentu."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "Nahrává se moje PDF, aby se převedlo do HTML?",
+          "a": "Ne. Text se extrahuje a HTML se sestaví přímo ve vašem prohlížeči, takže PDF nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Jak převést PDF do HTML",
+        "intro": "PDF do HTML převede PDF na prostou webovou stránku: jeden oddíl na stránku PDF, s textem v odstavcích. Přenesou se slova, ne rozvržení.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Vyberte PDF se skutečným textem (u skenů nejprve spusťte OCR PDF)",
+          "Klikněte na Převést do HTML",
+          "Stáhněte soubor .html, nebo zkopírujte kód z náhledu"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Upravit metadata",
+      "description": "Změňte název, autora, předmět a klíčová slova PDF",
+      "seoTitle": "Upravit metadata PDF — změna názvu, autora a klíčových slov",
+      "metaDescription": "Změňte název, autora, předmět a klíčová slova PDF ve svém prohlížeči. Zdarma, bez registrace, bez nahrávání.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Kde se název zobrazuje?",
+          "a": "V kartě nebo titulkovém pruhu čtečky PDF, při vyhledávání souborů a ve výsledcích vyhledávání, když je PDF indexováno. Jasný název lidem pomůže dokument najít."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Změní úprava metadat samotný dokument?",
+          "a": "Ne. Stránky, text i obrázky zůstanou přesně stejné — změní se pouze informace uložené o dokumentu."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Můžu pole vyčistit?",
+          "a": "Ano. Pole nechte prázdné a uložte — daná hodnota se z PDF odstraní."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Jak upravit metadata PDF",
+        "intro": "Upravit metadata změní informace uložené o PDF — jeho název, autora, předmět a klíčová slova — aniž by se dotkla stránek.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Vyberte PDF a podívejte se na jeho aktuální název, autora, předmět a klíčová slova",
+          "Změňte pole, která chcete — jedno nechte prázdné, abyste ho vyčistili",
+          "Klikněte na Uložit metadata a stáhněte aktualizované PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Zploštit PDF",
+      "description": "Udělejte z polí formuláře trvalou součást a odstraňte poznámky",
+      "seoTitle": "Zploštit PDF — trvalé sloučení polí formuláře zdarma",
+      "metaDescription": "Zapečte pole formuláře PDF trvale do stránky a odstraňte poznámky, aby už odpovědi nešly měnit. Zdarma, bez nahrávání.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Co se stane s poli formuláře?",
+          "a": "Jejich hodnoty se vkreslí přímo do stránky a pole se odstraní, takže vyplněné odpovědi už nelze upravovat ani vymazat."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Co se stane s komentáři a zvýrazněním?",
+          "a": "Odstraní se, protože je nelze zapečt do stránky, aniž by se z ní stal obrázek. Odkazy zůstanou zachovány."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Změní zploštění text?",
+          "a": "Ne. Text zůstane skutečným, označitelným textem — nic se nerastruje do obrázku."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Jak zploštit PDF",
+        "intro": "Zploštit PDF zapeče pole formuláře trvale do stránky a odstraní komentáře a zvýraznění, aby už vyplněné odpovědi nešly měnit. Odkazy zůstanou a text je stále označitelný.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Vyberte PDF s poli formuláře nebo poznámkami",
+          "Klikněte na Zploštit PDF",
+          "Stáhněte zploštěnou kopii"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Vyplnit formulář PDF",
+      "description": "Vyplňte formulář PDF a uložte vyplněnou kopii",
+      "seoTitle": "Vyplnit formulář PDF — vyplnění formuláře PDF online zdarma",
+      "metaDescription": "Vyplňte formulář PDF ve svém prohlížeči — textová pole, zaškrtávací políčka a rozevírací seznamy — a uložte vyplněnou kopii. Zdarma, bez registrace.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Která pole můžu vyplnit?",
+          "a": "Textová pole, zaškrtávací políčka, rozevírací seznamy a skupiny přepínačů. Tlačítka a pole pro podpis tu vyplnit nelze — pro podpisy použijte Podepsat PDF."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Píše to, že PDF nemá vyplnitelná pole. Proč?",
+          "a": "PDF je plochý sken nebo vytištěný formulář bez interaktivních polí. Vyplnit lze jen PDF vytvořená se skutečnými poli formuláře — naskenovaný formulář potřebuje nejprve OCR, a i pak zůstane jen obrázkem formuláře."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Můžu odpovědi potom uzamknout?",
+          "a": "Ano. Vyplněné PDF projeďte nástrojem Zploštit PDF a odpovědi se stanou trvalými."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Jak vyplnit formulář PDF",
+        "intro": "Vyplnit formulář PDF vypíše každé vyplnitelné pole v PDF — textová pole, zaškrtávací políčka, rozevírací seznamy — abyste mohli formulář vyplnit ve svém prohlížeči a uložit ho.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Vyberte PDF s vyplnitelnými poli formuláře",
+          "Vyplňte každé pole v panelu",
+          "Klikněte na Uložit vyplněné PDF a stáhněte hotovou kopii"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Text do PDF",
+      "description": "Převeďte prostý text na dokument PDF",
+      "seoTitle": "Text do PDF — převod prostého textu do PDF zdarma",
+      "metaDescription": "Napište nebo vložte prostý text a převeďte ho na dokument PDF ve svém prohlížeči. Zdarma, bez registrace, bez nahrávání, bez vodoznaku.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Můžu text formátovat?",
+          "a": "Ne. Tento nástroj převede prostý text na čisté PDF — nadpisy ani tučné písmo se nepřenášejí. U formátovaných dokumentů použijte místo toho Word do PDF nebo HTML do PDF."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Co dlouhý text?",
+          "a": "Rozteče se na tolik stránek, kolik je potřeba, s názvem na první stránce, pokud ho přidáte."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Nahrává se můj text?",
+          "a": "Ne. PDF se sestaví přímo ve vašem prohlížeči, takže text nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Jak převést text do PDF",
+        "intro": "Text do PDF převede prostý text, který napíšete nebo vložíte, na čistý dokument PDF, volitelně s názvem na první stránce.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Napište nebo vložte svůj text",
+          "Přidejte název dokumentu, pokud chcete",
+          "Klikněte na Převést do PDF a stáhněte ho"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Záhlaví a zápatí",
+      "description": "Orazítkujte záhlaví a zápatí na každé stránce",
+      "seoTitle": "Přidat záhlaví a zápatí do PDF zdarma, bez nahrávání",
+      "metaDescription": "Orazítkujte řádek záhlaví a zápatí — volitelně s čísly stránek — na každé stránce PDF. Zdarma, bez registrace, bez nahrávání.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Můžu přidat jen záhlaví, nebo jen zápatí?",
+          "a": "Ano. Druhé pole nechte prázdné a orazítkuje se jen to, které jste vyplnili."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Kam se text umístí?",
+          "a": "Vlevo, na střed nebo vpravo, nahoře nebo dole na každé stránce. Text se vykreslí nad stránku — stávající obsah se neposune."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Můžu přidat i čísla stránek?",
+          "a": "Ano. Zaškrtněte „Přidat čísla stránek do zápatí“ a každá stránka dostane číslo ve stylu „1 z 12“ vedle vašeho textu zápatí."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Jak přidat záhlaví a zápatí do PDF",
+        "intro": "Záhlaví a zápatí orazítkují řádek textu nahoře a/nebo dole na každé stránce, volitelně s čísly stránek v zápatí.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Vyberte soubor PDF",
+          "Napište text záhlaví a zápatí — jedno nechte prázdné, pokud chcete orazítkovat jen druhé",
+          "Zvolte pozici, velikost písma a zda přidat čísla stránek",
+          "Klikněte na Přidat záhlaví a zápatí a stáhněte výsledek"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Batesovo číslování",
+      "description": "Orazítkujte každou stránku sekvenčním Batesovým číslem",
+      "seoTitle": "Batesovo číslování — sekvenční čísla na PDF",
+      "metaDescription": "Orazítkujte každou stránku PDF Batesovým razítkem s předponou a průběžným číslem doplněným nulami. Zdarma, bez registrace, bez nahrávání.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Co je Batesovo číslování?",
+          "a": "Způsob, jak orazítkovat každou stránku sady dokumentů jedinečným sekvenčním číslem — například EXHIBIT-00042 — aby bylo možné stránky identifikovat a odkazovat na ně při právní práci a dokazování."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Můžu zvolit předponu a počáteční číslo?",
+          "a": "Ano. Nastavte libovolnou předponu, číslo, od kterého začít, počet číslic doplněných nulami a místo, kam razítko na stránce umístit."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Změní to dokument?",
+          "a": "Ne. Razítko se přidá nad každou stránku; stávající obsah zůstane nedotčen."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Jak očíslovat PDF podle Batese",
+        "intro": "Batesovo číslování orazítkuje každou stránku jedinečným sekvenčním číslem — předponou plus průběžným číslem doplněným nulami, například EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Vyberte soubor PDF",
+          "Nastavte předponu, počáteční číslo a počet číslic doplněných nulami",
+          "Vyberte, kam na stránce razítko umístit",
+          "Klikněte na Použít Batesova čísla a stáhněte orazítkované PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF ve stupních šedi",
+      "description": "Převeďte barevné PDF na černobílé",
+      "seoTitle": "PDF ve stupních šedi — převod PDF na černobílé zdarma",
+      "metaDescription": "Převeďte barevné PDF na černobílé, stránku po stránce. Zdarma, bez registrace, bez nahrávání — soubor nikdy neopustí váš prohlížeč.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Zůstane text označitelný?",
+          "a": "Ne. Stránky se přestaví jako černobílé obrázky, takže text se stane součástí obrázku. Použijte to k tisku nebo sdílení, ne k pozdější úpravě textu."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Funguje to u naskenovaných PDF?",
+          "a": "Ano. Naskenované stránky už jsou obrázky, takže se převedou čistě — často je to právě smysl, pro tisk nebo fax."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "Nahrává se moje PDF?",
+          "a": "Ne. Převod probíhá celý ve vašem prohlížeči, takže PDF nikdy neopustí vaše zařízení."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Jak převést PDF do stupňů šedi",
+        "intro": "PDF ve stupních šedi přestaví každou stránku na černobílou. Je určeno pro tisk a fax — stránky se stanou obrázky, takže text už pak nelze označit.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Vyberte své PDF",
+          "Klikněte na Převést do stupňů šedi",
+          "Stáhněte černobílé PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Změnit velikost PDF",
+      "description": "Změňte stránky PDF na A4, Letter, A3 nebo vlastní velikost",
+      "seoTitle": "Změnit velikost PDF — změna velikosti stránky PDF na A4 nebo Letter",
+      "metaDescription": "Změňte každou stránku PDF na A4, Letter, A3, A5 nebo vlastní velikost. Obsah se přizpůsobí, na střed. Zdarma, bez nahrávání, bez registrace.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "V čem se to liší od Oříznout PDF?",
+          "a": "Oříznutí ořeže okraje stránky; změna velikosti změní samotnou velikost stránky — A4, Letter, A3, A5 nebo jakoukoli vlastní velikost — a obsah přizpůsobí, aby se vešel."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Zůstane text označitelný?",
+          "a": "Ano. Stránky se znovu rozvrhnou, ne znovu vykreslí, takže text a vektory zůstanou nedotčené."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Můžu nastavit vlastní velikost?",
+          "a": "Ano. Zvolte Vlastní a zadejte šířku a výšku v milimetrech."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Jak změnit velikost stránek PDF",
+        "intro": "Změnit velikost PDF změní každou stránku na A4, Letter, A3, A5 nebo vámi zadanou velikost a obsah přizpůsobí, aby se vešel, na střed. Text a vektory zůstanou nedotčené.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Vyberte své PDF",
+          "Zvolte A4, Letter, A3, A5, nebo Vlastní a zadejte velikost v milimetrech",
+          "Klikněte na Změnit velikost stránek",
+          "Stáhněte PDF se změněnou velikostí"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Narovnat PDF",
+      "description": "Narovnejte nakloněné naskenované stránky",
+      "seoTitle": "Narovnat PDF — narovnání nakloněných naskenovaných stránek zdarma",
+      "metaDescription": "Narovnejte nakloněné naskenované stránky. Náklon se zjistí automaticky, nebo ho nastavte ručně posuvníkem. Zdarma, bez nahrávání, bez registrace.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Jak se zjistí náklon?",
+          "a": "Přečte první stránky a najde úhel, při kterém jsou řádky textu nejrovnější, a pak tento úhel nabídne na posuvníku. Pokud se zdá špatný, můžete ho upravit ručně."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Zůstane text označitelný?",
+          "a": "Ne. Stránky se přestaví jako narovnané obrázky, takže text se stane součástí obrázku. Použijte to u naskenovaných stránek, kde stejně žádný označitelný text není."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Jak moc to narovná?",
+          "a": "Až o 10 stupňů na každou stranu, což pokryje téměř každou špatně podanou stránku skeneru."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Jak narovnat PDF",
+        "intro": "Narovnat PDF narovná nakloněné naskenované stránky. Náklon se zjistí automaticky, jakmile přidáte soubor, a posuvník ho umožňuje upravit ručně.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Vyberte své PDF — náklon se zjistí automaticky",
+          "Zkontrolujte zjištěný úhel a posuňte posuvník, pokud stránka stále vypadá nakloněně",
+          "Použijte živý náhled, abyste viděli narovnanou první stránku",
+          "Klikněte na Narovnat PDF a stáhněte výsledek"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Střídat a míchat",
+      "description": "Prokládejte stránky dvou PDF, jednu za druhou",
+      "seoTitle": "Střídat a míchat PDF — prokládání dvou PDF zdarma",
+      "metaDescription": "Prokládejte stránky dvou PDF — stránku 1 z každého, pak stránku 2 z každého — do jednoho souboru. Zdarma, bez registrace, bez nahrávání.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Co když mají obě PDF různou délku?",
+          "a": "Kratší dojde první; zbývající stránky delšího se zařadí na konec, v pořadí."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Který dokument je první?",
+          "a": "První přidaný dokument dodá stránku 1, druhý stránku 2 a od té chvíle se střídají."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "K čemu se to používá?",
+          "a": "Ke spojení dvou verzí dokumentu stránku po stránce, prokládání otázek a odpovědí nebo sloučení skenů předních a zadních stran do pořadí čtení."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Jak prokládat dvě PDF",
+        "intro": "Střídat a míchat vezme dvě PDF a prokládá jejich stránky — stránku 1 z každého, pak stránku 2 z každého — do jednoho souboru.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Přidejte první dokument, pak druhý",
+          "Klikněte na Smíchat PDF",
+          "Stáhněte prokládaný soubor"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Odebrat prázdné stránky",
+      "description": "Smažte prázdné stránky z PDF",
+      "seoTitle": "Odebrat prázdné stránky — smazání prázdných stránek PDF zdarma",
+      "metaDescription": "Najděte a smažte prázdné stránky v PDF — ty, které skener přidal omylem. Zdarma, bez registrace, bez nahrávání.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Jak pozná, že je stránka prázdná?",
+          "a": "Vykreslí každou stránku a změří, kolik je na ní inkoustu. Stránky pod prahem se vypíšou dřív, než se cokoli odstraní, takže přesně vidíte, co zmizí."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Odstraní stránku, na které je jen číslo stránky?",
+          "a": "Ne při nastavení Vyvážené — číslo stránky se počítá jako inkoust. Pokud přesto odstraní stránku, kterou jste chtěli, použijte Přísné a spusťte to znovu."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "Nahrává se moje PDF?",
+          "a": "Ne. Zjišťování i odstraňování probíhá celé ve vašem prohlížeči."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Jak odebrat prázdné stránky z PDF",
+        "intro": "Odebrat prázdné stránky najde prázdné stránky, které přidal skener — obvykle na konci stohu — vypíše je a odstraní, zbytek zůstane nedotčen.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Vyberte své PDF",
+          "Zkontrolujte nalezené prázdné stránky a změňte citlivost, pokud nějaké chybí nebo označilo stránku, kterou chcete",
+          "Klikněte na Odebrat prázdné stránky",
+          "Stáhněte vyčištěné PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "Umístěte 2, 4, 6 nebo 9 stránek na každý list",
+      "seoTitle": "N-up PDF — více stránek na jednom listu zdarma",
+      "metaDescription": "Umístěte 2, 4, 6 nebo 9 stránek PDF na každý list, pro brožury a podklady. Zdarma, bez registrace, bez nahrávání.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Jak velké jsou listy?",
+          "a": "Každý list si zachová velikost první stránky vašeho PDF — obvykle A4 nebo Letter. Zdrojové stránky se přizpůsobí své buňce."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Zůstane text čitelný?",
+          "a": "Ano. Stránky se znovu rozvrhnou, ne znovu vykreslí, takže text a vektory zůstanou ostré. U 9-up je tisk malý, jak má být."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Můžu zvolit pořadí?",
+          "a": "Stránky jdou zleva doprava, shora dolů, v původním pořadí."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Jak umístit více stránek PDF na jeden list",
+        "intro": "N-up PDF rozmístí 2, 4, 6 nebo 9 zdrojových stránek na každý list, pro brožury a podklady. Každý list si zachová velikost první stránky.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Vyberte své PDF",
+          "Zvolte 2-up, 4-up, 6-up nebo 9-up",
+          "Klikněte na Vytvořit N-up PDF",
+          "Stáhněte výsledek"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Přidat prázdnou stránku",
+      "description": "Vložte prázdné stránky nebo stránky z jiného PDF",
+      "seoTitle": "Přidat prázdnou stránku — vložení stránek do PDF zdarma",
+      "metaDescription": "Vložte prázdné stránky — nebo všechny stránky jiného PDF — do PDF, na začátek, na konec, za každou stránku nebo za zvolenou stránku. Zdarma, bez nahrávání.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Kam lze prázdnou stránku umístit?",
+          "a": "Na začátek, na konec, za každou stránku nebo za libovolné číslo stránky, které zvolíte."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Jak vložím stránky z jiného PDF?",
+          "a": "Zvolte „Stránky z jiného PDF“, přidejte druhý soubor za první a vyberte, kam se jeho stránky vloží."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Jak velká je prázdná stránka?",
+          "a": "Stejně velká jako první stránka vašeho PDF."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Jak přidat prázdnou stránku do PDF",
+        "intro": "Přidat prázdnou stránku vloží prázdné stránky — nebo všechny stránky druhého PDF — na začátek, na konec, za každou stránku nebo za stránku, kterou zvolíte.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Vyberte své PDF",
+          "Zvolte Prázdná stránka, nebo Stránky z jiného PDF a přidejte druhý soubor",
+          "Zvolte, kam se stránky vloží",
+          "Klikněte na Přidat prázdnou stránku a stáhněte výsledek"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Soukromé – soubor se zpracuje ve vašem prohlížeči a nikdy se nenahrává",
+          "Zdarma, bez účtu, bez vodoznaku a bez denního limitu",
+          "Funguje v každém moderním prohlížeči na Windows, Macu, Linuxu, iPhonu i Androidu"
         ]
       }
     }

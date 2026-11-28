@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF în PNG",
+      "description": "Convertește paginile unui PDF în imagini PNG",
+      "seoTitle": "PDF în PNG — convertește paginile PDF în PNG gratuit",
+      "metaDescription": "Convertește fiecare pagină a unui PDF într-o imagine PNG, la 144 sau 216 DPI. Gratuit, fără cont, fără filigran, iar PDF-ul nu părăsește niciodată browserul.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Ce rezoluție vor avea imaginile PNG?",
+          "a": "Paginile sunt redate la 144 DPI (Standard) sau 216 DPI (Înaltă), indiferent de sursă. Rezoluția înaltă oferă text mai clar și fișiere mai mari."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Care este diferența față de PDF în JPG?",
+          "a": "PNG este fără pierderi, deci păstrează marginile clare și textul ascuțit; fișierele JPG sunt mai mici. Folosește PNG când ai nevoie de pixeli exacți și JPG când ai nevoie de fișiere mici."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "PDF-ul meu este încărcat pentru a-l converti în PNG?",
+          "a": "Nu. Fiecare pagină este redată ca imagine în browserul tău, deci PDF-ul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Cum convertești un PDF în PNG",
+        "intro": "PDF în PNG salvează fiecare pagină a unui PDF ca imagine PNG, la rezoluție standard (144 DPI) sau înaltă (216 DPI). PNG este fără pierderi, deci textul și marginile clare rămân ascuțite.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Alege unul sau mai multe fișiere PDF",
+          "Alege rezoluția Standard sau Înaltă",
+          "Apasă pe Convertește în PNG",
+          "Descarcă paginile separat sau pe toate împreună, ca arhivă ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF în text",
+      "description": "Extrage tot textul dintr-un PDF într-un fișier .txt simplu",
+      "seoTitle": "PDF în text — extrage textul dintr-un PDF gratuit",
+      "metaDescription": "Extrage tot textul dintr-un PDF într-un fișier .txt simplu, cu un titlu opțional pentru fiecare pagină. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Ce conține fișierul .txt?",
+          "a": "Textul fiecărei pagini, în ordinea paginilor. Activează titlurile de pagină pentru a primi o linie „Pagina N” înaintea fiecărei pagini, ceea ce face documentele lungi mai ușor de parcurs."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Funcționează și pe PDF-uri scanate?",
+          "a": "Doar dacă scanarea are un strat de text. O scanare simplă, ca fotografie, nu are text de extras și rezultă goală — rulează mai întâi OCR PDF pe ea, apoi convertește rezultatul căutabil în text."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "PDF-ul meu este încărcat pentru a-i extrage textul?",
+          "a": "Nu. Textul este citit din PDF în browserul tău, deci fișierul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Cum extragi textul dintr-un PDF",
+        "intro": "PDF în text scoate textul dintr-un PDF într-un fișier .txt simplu, pagină după pagină, cu un titlu opțional pentru fiecare pagină.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Alege un PDF cu text real (rulează mai întâi OCR PDF pe scanări)",
+          "Bifează „Adaugă un titlu pentru fiecare pagină” dacă vrei marcaje Pagina N",
+          "Apasă pe Convertește în text",
+          "Descarcă fișierul .txt sau copiază textul din previzualizare"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Extrage imagini",
+      "description": "Scoate fotografiile și figurile dintr-un PDF ca fișiere PNG",
+      "seoTitle": "Extrage imagini din PDF — salvează fotografiile ca PNG gratuit",
+      "metaDescription": "Scoate fotografiile, siglele și figurile dintr-un PDF și salvează-le ca fișiere PNG. Gratuit, fără cont, iar PDF-ul nu părăsește niciodată browserul.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Ce calitate au imaginile extrase?",
+          "a": "Calitatea completă, așa cum sunt încorporate — imaginea este salvată exact așa cum se află în PDF, ca PNG. Nimic nu este recomprimat sau micșorat."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Ce se întâmplă dacă PDF-ul meu este o scanare?",
+          "a": "O pagină scanată este o singură imagine mare, deci primești înapoi întreaga imagine a paginii. La paginile cu text real, fiecare fotografie, siglă și figură încorporată este extrasă separat."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "PDF-ul meu este încărcat pentru a-i extrage imaginile?",
+          "a": "Nu. Imaginile sunt scoase din PDF în browserul tău, deci fișierul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Cum extragi imagini dintr-un PDF",
+        "intro": "Extrage imagini scoate fiecare fotografie, siglă și figură încorporată dintr-un PDF și le salvează ca fișiere PNG, la calitatea completă din fișier.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Alege un PDF",
+          "Apasă pe Extrage imagini",
+          "Descarcă imaginile — mai multe se descarcă împreună, ca arhivă ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF în HTML",
+      "description": "Transformă un PDF într-o pagină web HTML simplă",
+      "seoTitle": "PDF în HTML — convertește un PDF într-o pagină web gratuit",
+      "metaDescription": "Transformă un PDF într-o pagină HTML simplă, cu o secțiune pe pagină. Gratuit, fără cont, fără încărcare — textul rămâne în browser.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "Va arăta pagina HTML ca PDF-ul?",
+          "a": "Nu. Mută cuvintele, nu aspectul: fiecare pagină din PDF devine o secțiune cu textul ei ca paragrafe. Imaginile și formatarea exactă nu sunt preluate."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Ce pot face cu fișierul HTML?",
+          "a": "Îl poți deschide în orice browser, îl poți lipi într-un site sau într-un editor de conținut ori îl poți folosi ca punct de plecare pentru o pagină web pornind de la un document."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "PDF-ul meu este încărcat pentru a-l converti în HTML?",
+          "a": "Nu. Textul este extras și pagina HTML este construită în browserul tău, deci PDF-ul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Cum convertești un PDF în HTML",
+        "intro": "PDF în HTML transformă un PDF într-o pagină web simplă: o secțiune pentru fiecare pagină din PDF, cu textul ca paragrafe. Mută cuvintele, nu aspectul.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Alege un PDF cu text real (rulează mai întâi OCR PDF pe scanări)",
+          "Apasă pe Convertește în HTML",
+          "Descarcă fișierul .html sau copiază codul din previzualizare"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Editare metadate",
+      "description": "Schimbă titlul, autorul, subiectul și cuvintele-cheie ale unui PDF",
+      "seoTitle": "Editare metadate PDF — schimbă titlul, autorul și cuvintele-cheie",
+      "metaDescription": "Schimbă titlul, autorul, subiectul și cuvintele-cheie ale unui PDF, în browser. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Unde apare titlul?",
+          "a": "În fila sau bara de titlu a cititorului de PDF, în căutările de fișiere și în rezultatele căutării, când PDF-ul este indexat. Un titlu clar îi ajută pe oameni să găsească documentul."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Editarea metadatelor schimbă documentul în sine?",
+          "a": "Nu. Paginile, textul și imaginile rămân exact cum sunt — se schimbă doar informațiile stocate despre document."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Pot șterge un câmp?",
+          "a": "Da. Lasă câmpul gol și salvează — valoarea respectivă este eliminată din PDF."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Cum editezi metadatele unui PDF",
+        "intro": "Editare metadate schimbă informațiile stocate despre un PDF — titlul, autorul, subiectul și cuvintele-cheie — fără a atinge paginile.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Alege un PDF pentru a-i vedea titlul, autorul, subiectul și cuvintele-cheie actuale",
+          "Schimbă câmpurile dorite — lasă unul gol pentru a-l șterge",
+          "Apasă pe Salvează metadatele și descarcă PDF-ul actualizat"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Aplatizare PDF",
+      "description": "Fixează definitiv câmpurile de formular și elimină adnotările",
+      "seoTitle": "Aplatizare PDF — fixează definitiv câmpurile de formular, gratuit",
+      "metaDescription": "Fixează definitiv câmpurile de formular ale unui PDF în pagină și elimină adnotările, ca răspunsurile să nu mai poată fi schimbate. Gratuit, fără încărcare.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Ce se întâmplă cu câmpurile de formular?",
+          "a": "Valorile lor sunt desenate în pagina însăși, iar câmpurile sunt eliminate, deci răspunsurile completate nu mai pot fi editate sau șterse."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Ce se întâmplă cu comentariile și evidențierile?",
+          "a": "Sunt eliminate, fiindcă nu pot fi fixate în pagină fără a o transforma într-o imagine. Linkurile sunt păstrate."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Aplatizarea schimbă textul?",
+          "a": "Nu. Textul rămâne text real, selectabil — nimic nu este transformat într-o imagine."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Cum aplatizezi un PDF",
+        "intro": "Aplatizare PDF fixează definitiv câmpurile de formular în pagină și elimină comentariile și evidențierile, ca răspunsurile completate să nu mai poată fi schimbate. Linkurile sunt păstrate, iar textul rămâne selectabil.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Alege un PDF cu câmpuri de formular sau adnotări",
+          "Apasă pe Aplatizează PDF",
+          "Descarcă copia aplatizată"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Completare formular PDF",
+      "description": "Completează un formular PDF și salvează copia completată",
+      "seoTitle": "Completare formular PDF — completează un formular PDF online, gratuit",
+      "metaDescription": "Completează un formular PDF în browser — câmpuri de text, casete de bifat, liste derulante — și salvează copia completată. Gratuit, fără cont.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Ce câmpuri pot completa?",
+          "a": "Câmpuri de text, casete de bifat, liste derulante și grupuri de butoane radio. Butoanele și câmpurile de semnătură nu pot fi completate aici — folosește Semnare PDF pentru semnături."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Spune că PDF-ul nu are câmpuri completabile. De ce?",
+          "a": "PDF-ul este o scanare plată sau un formular tipărit, fără câmpuri interactive. Doar PDF-urile create cu câmpuri reale de formular pot fi completate — un formular scanat are nevoie mai întâi de OCR și chiar și așa rămâne o imagine a unui formular."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Pot bloca răspunsurile după aceea?",
+          "a": "Da. Treci PDF-ul completat prin Aplatizare PDF și răspunsurile devin definitive."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Cum completezi un formular PDF",
+        "intro": "Completare formular PDF listează fiecare câmp completabil dintr-un PDF — câmpuri de text, casete de bifat, liste derulante — ca să poți completa formularul în browser și să-l salvezi.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Alege un PDF cu câmpuri de formular completabile",
+          "Completează fiecare câmp din panou",
+          "Apasă pe Salvează PDF-ul completat și descarcă copia finală"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Text în PDF",
+      "description": "Transformă textul simplu într-un document PDF",
+      "seoTitle": "Text în PDF — transformă textul simplu într-un PDF gratuit",
+      "metaDescription": "Scrie sau lipește text simplu și transformă-l într-un document PDF, în browser. Gratuit, fără cont, fără încărcare, fără filigran.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Pot formata textul?",
+          "a": "Nu. Acest instrument transformă textul simplu într-un PDF curat — titlurile și aldinul nu sunt preluate. Pentru documente cu stil, folosește în schimb Word în PDF sau HTML în PDF."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Ce se întâmplă cu textele lungi?",
+          "a": "Se întind pe câte pagini sunt necesare, cu un titlu pe prima pagină, dacă adaugi unul."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Textul meu este încărcat?",
+          "a": "Nu. PDF-ul este construit în browserul tău, deci textul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Cum transformi textul într-un PDF",
+        "intro": "Text în PDF transformă textul simplu pe care îl scrii sau îl lipești într-un document PDF curat, cu un titlu opțional pe prima pagină.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Scrie sau lipește textul",
+          "Adaugă un titlu al documentului, dacă vrei",
+          "Apasă pe Convertește în PDF și descarcă-l"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Antet și subsol",
+      "description": "Adaugă un antet și un subsol pe fiecare pagină",
+      "seoTitle": "Adaugă antet și subsol la PDF, gratuit, fără încărcare",
+      "metaDescription": "Adaugă o linie de antet și una de subsol — cu numere de pagină opționale — pe fiecare pagină a unui PDF. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Pot adăuga doar un antet sau doar un subsol?",
+          "a": "Da. Lasă celălalt câmp gol și se adaugă doar cel completat."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Unde se pune textul?",
+          "a": "În stânga, în centru sau în dreapta, în partea de sus sau de jos a fiecărei pagini. Textul este desenat peste pagină — nu împinge conținutul existent."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Pot adăuga și numere de pagină?",
+          "a": "Da. Bifează „Adaugă numere de pagină în subsol” și fiecare pagină primește un număr de tipul „1 din 12” lângă textul subsolului."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Cum adaugi un antet și un subsol la un PDF",
+        "intro": "Antet și subsol adaugă o linie de text în partea de sus și/sau de jos a fiecărei pagini, cu numere de pagină opționale în subsol.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Alege un PDF",
+          "Scrie textul antetului și al subsolului — lasă unul gol pentru a-l adăuga doar pe celălalt",
+          "Alege poziția, dimensiunea fontului și dacă adaugi numere de pagină",
+          "Apasă pe Adaugă antet și subsol și descarcă rezultatul"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Numerotare Bates",
+      "description": "Adaugă numere Bates secvențiale pe fiecare pagină",
+      "seoTitle": "Numerotare Bates — adaugă numere secvențiale pe PDF",
+      "metaDescription": "Adaugă numere Bates pe fiecare pagină a unui PDF, cu un prefix și un număr curent completat cu zerouri. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Ce este numerotarea Bates?",
+          "a": "Un mod de a marca fiecare pagină dintr-un set de documente cu un număr secvențial unic — de exemplu EXHIBIT-00042 — pentru ca paginile să poată fi identificate și citate în activitatea juridică și de descoperire a probelor."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Pot alege prefixul și numărul de pornire?",
+          "a": "Da. Setează orice prefix, numărul de la care să înceapă, câte cifre să fie completate cu zerouri și unde pe pagină să fie pusă ștampila."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Schimbă documentul?",
+          "a": "Nu. Ștampila este adăugată peste fiecare pagină; conținutul existent rămâne neatins."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Cum numerotezi Bates un PDF",
+        "intro": "Numerotare Bates marchează fiecare pagină cu un număr secvențial unic — un prefix plus un număr curent completat cu zerouri, ca EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Alege un PDF",
+          "Setează prefixul, numărul de pornire și câte cifre să fie completate cu zerouri",
+          "Alege unde pe pagină să fie pusă ștampila",
+          "Apasă pe Aplică numerele Bates și descarcă PDF-ul marcat"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF în tonuri de gri",
+      "description": "Transformă un PDF color în alb-negru",
+      "seoTitle": "PDF în tonuri de gri — convertește un PDF în alb-negru, gratuit",
+      "metaDescription": "Transformă un PDF color în alb-negru, pagină cu pagină. Gratuit, fără cont, fără încărcare — fișierul nu părăsește niciodată browserul.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Va rămâne textul selectabil?",
+          "a": "Nu. Paginile sunt reconstruite ca imagini alb-negru, deci textul devine parte a imaginii. Folosește-l pentru tipărire sau partajare, nu pentru a edita textul după aceea."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Funcționează pe PDF-uri scanate?",
+          "a": "Da. Paginile scanate sunt deja imagini, deci se convertesc curat — de multe ori exact asta e și scopul, pentru tipărire sau fax."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "PDF-ul meu este încărcat?",
+          "a": "Nu. Conversia rulează în întregime în browserul tău, deci PDF-ul nu părăsește niciodată dispozitivul."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Cum convertești un PDF în tonuri de gri",
+        "intro": "PDF în tonuri de gri reconstruiește fiecare pagină în alb-negru. Este creat pentru tipărire și fax — paginile devin imagini, deci textul nu mai este selectabil după aceea.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Alege PDF-ul",
+          "Apasă pe Convertește în tonuri de gri",
+          "Descarcă PDF-ul alb-negru"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Redimensionare PDF",
+      "description": "Schimbă paginile unui PDF la A4, Letter, A3 sau o dimensiune personalizată",
+      "seoTitle": "Redimensionare PDF — schimbă dimensiunea paginilor PDF la A4 sau Letter",
+      "metaDescription": "Schimbă paginile unui PDF la A4, Letter, A3, A5 sau o dimensiune personalizată. Conținutul e scalat să încapă, centrat. Gratuit, fără cont.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Care este diferența față de Decupare PDF?",
+          "a": "Decuparea taie marginile unei pagini; Redimensionarea schimbă însăși dimensiunea paginii — A4, Letter, A3, A5 sau orice dimensiune personalizată — și scalează conținutul pentru a încăpea."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Va rămâne textul selectabil?",
+          "a": "Da. Paginile sunt rearanjate, nu redesenate, deci textul și elementele vectoriale rămân intacte."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Pot seta o dimensiune personalizată?",
+          "a": "Da. Alege Personalizată și introdu lățimea și înălțimea în milimetri."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Cum redimensionezi paginile unui PDF",
+        "intro": "Redimensionare PDF schimbă fiecare pagină la A4, Letter, A3, A5 sau o dimensiune pe care o introduci, scalând conținutul pentru a încăpea, centrat. Textul și elementele vectoriale rămân intacte.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Alege PDF-ul",
+          "Alege A4, Letter, A3, A5 sau Personalizată și introdu dimensiunea în milimetri",
+          "Apasă pe Redimensionează paginile",
+          "Descarcă PDF-ul redimensionat"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Îndreptare PDF",
+      "description": "Îndreaptă paginile scanate înclinate",
+      "seoTitle": "Îndreptare PDF — îndreaptă paginile scanate înclinate, gratuit",
+      "metaDescription": "Îndreaptă paginile scanate înclinate. Înclinarea este detectată automat sau o setezi manual cu glisorul. Gratuit, fără încărcare, fără cont.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Cum detectează înclinarea?",
+          "a": "Citește primele pagini și găsește unghiul la care liniile de text sunt cele mai drepte, apoi îți propune acel unghi pe glisor. Îl poți ajusta manual dacă pare greșit."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Va rămâne textul selectabil?",
+          "a": "Nu. Paginile sunt reconstruite ca imagini îndreptate, deci textul devine parte a imaginii. Folosește-l pentru paginile scanate, unde oricum nu există text selectabil."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Cât de mult poate îndrepta?",
+          "a": "Până la 10 grade în ambele direcții, ceea ce acoperă aproape orice pagină alimentată prost în scaner."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Cum îndrepți un PDF",
+        "intro": "Îndreptare PDF îndreaptă paginile scanate înclinate. Înclinarea este detectată automat când adaugi un fișier, iar glisorul îți permite să o ajustezi manual.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Alege PDF-ul — înclinarea este detectată automat",
+          "Verifică unghiul detectat și trage glisorul dacă pagina încă pare înclinată",
+          "Folosește previzualizarea live pentru a vedea prima pagină îndreptată",
+          "Apasă pe Îndreaptă PDF și descarcă rezultatul"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Alternare și combinare",
+      "description": "Intercalează paginile a două PDF-uri, una după alta",
+      "seoTitle": "Alternare și combinare PDF — intercalează două PDF-uri gratuit",
+      "metaDescription": "Intercalează paginile a două PDF-uri — pagina 1 din fiecare, apoi pagina 2 din fiecare — într-un singur fișier. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Ce se întâmplă dacă cele două PDF-uri au lungimi diferite?",
+          "a": "Cel mai scurt se termină primul; paginile rămase ale celui mai lung ajung la sfârșit, în ordine."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Care document vine primul?",
+          "a": "Primul document adăugat furnizează pagina 1, al doilea furnizează pagina 2, și alternează în continuare de acolo."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "La ce se folosește?",
+          "a": "Pentru a combina două versiuni ale unui document pagină cu pagină, pentru a intercala întrebări și răspunsuri sau pentru a pune în ordine de citire scanările față și verso."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Cum intercalezi două PDF-uri",
+        "intro": "Alternare și combinare ia două PDF-uri și le intercalează paginile — pagina 1 din fiecare, apoi pagina 2 din fiecare — într-un singur fișier.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Adaugă primul document, apoi al doilea",
+          "Apasă pe Combină PDF-urile",
+          "Descarcă fișierul intercalat"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Eliminare pagini goale",
+      "description": "Șterge paginile goale dintr-un PDF",
+      "seoTitle": "Eliminare pagini goale — șterge paginile goale din PDF, gratuit",
+      "metaDescription": "Găsește și șterge paginile goale dintr-un PDF — cele pe care scanerul le adaugă din greșeală. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Cum știe că o pagină este goală?",
+          "a": "Randează fiecare pagină și măsoară câtă cerneală este pe ea. Paginile sub prag sunt listate înainte ca ceva să fie eliminat, ca să vezi exact ce va dispărea."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Va elimina o pagină care are doar un număr de pagină?",
+          "a": "Nu pe setarea Echilibrat — numărul de pagină contează ca cerneală. Dacă totuși elimină o pagină pe care o voiai, folosește Strict și rulează din nou."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "PDF-ul meu este încărcat?",
+          "a": "Nu. Detectarea și eliminarea rulează în întregime în browserul tău."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Cum elimini paginile goale dintr-un PDF",
+        "intro": "Eliminare pagini goale găsește paginile goale adăugate de scaner — de obicei la sfârșitul unui teanc — le listează și le elimină, lăsând restul neatins.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Alege PDF-ul",
+          "Verifică paginile goale găsite și schimbă sensibilitatea dacă a ratat vreuna sau a marcat o pagină pe care o vrei",
+          "Apasă pe Elimină paginile goale",
+          "Descarcă PDF-ul curățat"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "Pune 2, 4, 6 sau 9 pagini pe fiecare coală",
+      "seoTitle": "N-up PDF — pune mai multe pagini pe o singură coală, gratuit",
+      "metaDescription": "Pune 2, 4, 6 sau 9 pagini PDF pe fiecare coală, pentru broșuri și fișe. Gratuit, fără cont, fără încărcare.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Ce dimensiune au colile?",
+          "a": "Fiecare coală păstrează dimensiunea primei pagini din PDF — de obicei A4 sau Letter. Paginile sursă sunt scalate pentru a încăpea în celula lor."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Va rămâne textul lizibil?",
+          "a": "Da. Paginile sunt rearanjate, nu redesenate, deci textul și elementele vectoriale rămân clare. La 9 pe coală, scrisul este mic, cum trebuie să fie."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Pot alege ordinea?",
+          "a": "Paginile merg de la stânga la dreapta, de sus în jos, în ordinea originală."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Cum pui mai multe pagini PDF pe o singură coală",
+        "intro": "N-up PDF așază 2, 4, 6 sau 9 pagini sursă pe fiecare coală, pentru broșuri și fișe. Fiecare coală păstrează dimensiunea primei pagini.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Alege PDF-ul",
+          "Alege 2, 4, 6 sau 9 pagini pe coală",
+          "Apasă pe Creează PDF N-up",
+          "Descarcă rezultatul"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Adăugare pagină goală",
+      "description": "Inserează pagini goale sau pagini dintr-un alt PDF",
+      "seoTitle": "Adăugare pagină goală — inserează pagini într-un PDF gratuit",
+      "metaDescription": "Inserează pagini goale — sau paginile unui alt PDF — la început, la sfârșit, după fiecare pagină sau după o pagină aleasă. Gratuit, fără încărcare.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Unde poate ajunge pagina goală?",
+          "a": "La început, la sfârșit, după fiecare pagină sau după orice număr de pagină alegi."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Cum inserez pagini dintr-un alt PDF?",
+          "a": "Alege „Pagini dintr-un alt PDF”, adaugă al doilea fișier după primul și alege unde ajung paginile lui."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Ce dimensiune are pagina goală?",
+          "a": "Aceeași dimensiune ca prima pagină din PDF-ul tău."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Cum adaugi o pagină goală la un PDF",
+        "intro": "Adăugare pagină goală inserează pagini goale — sau fiecare pagină a unui al doilea PDF — la început, la sfârșit, după fiecare pagină sau după o pagină pe care o alegi.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Alege PDF-ul",
+          "Alege Pagină goală sau Pagini dintr-un alt PDF și adaugă al doilea fișier",
+          "Alege unde ajung paginile",
+          "Apasă pe Adaugă pagina goală și descarcă rezultatul"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — fișierul este procesat în browser și nu este încărcat niciodată",
+          "Gratuit, fără cont, fără filigran și fără limită zilnică",
+          "Funcționează în orice browser modern pe Windows, Mac, Linux, iPhone și Android"
         ]
       }
     }

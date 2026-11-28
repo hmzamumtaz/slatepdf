@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF PNG:ksi",
+      "description": "Muunna PDF-sivut PNG-kuviksi",
+      "seoTitle": "PDF PNG:ksi – muunna PDF-sivut PNG-kuviksi ilmaiseksi",
+      "metaDescription": "Muunna PDF:n jokainen sivu PNG-kuvaksi 144 tai 216 DPI:n tarkkuudella. Ilmainen, ei rekisteröitymistä eikä vesileimoja – PDF ei koskaan poistu selaimestasi.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Millä tarkkuudella PNG-kuvat ovat?",
+          "a": "Sivut piirretään 144 DPI:n (vakio) tai 216 DPI:n (korkea) tarkkuudella, lähteestä riippumatta. Korkea tarkkuus tekee tekstistä terävämpää ja tiedostoista suurempia."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Miten tämä eroaa PDF JPG:ksi -muunnoksesta?",
+          "a": "PNG on häviötön, joten se säilyttää terävät reunat ja tekstin terävänä; JPG-tiedostot ovat pienempiä. Käytä PNG:tä, kun tarvitset tarkkoja pikseleitä, ja JPG:tä, kun tarvitset pieniä tiedostoja."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "Lähetetäänkö PDF:ni palvelimelle, kun muunnan sen PNG:ksi?",
+          "a": "Ei. Jokainen sivu piirretään kuvaksi selaimessasi, joten PDF ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Näin muunnat PDF:n PNG-kuviksi",
+        "intro": "PDF PNG:ksi tallentaa PDF:n jokaisen sivun PNG-kuvana vakio- (144 DPI) tai korkean (216 DPI) tarkkuudella. PNG on häviötön, joten teksti ja terävät reunat pysyvät terävinä.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Valitse yksi tai useampi PDF",
+          "Valitse vakio- tai korkea tarkkuus",
+          "Napsauta Muunna PNG:ksi",
+          "Lataa yksittäisiä sivuja tai kaikki sivut yhdessä ZIP-tiedostona"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF tekstiksi",
+      "description": "Pura PDF:n koko teksti tavalliseksi .txt-tiedostoksi",
+      "seoTitle": "PDF tekstiksi – pura teksti PDF:stä ilmaiseksi",
+      "metaDescription": "Pura PDF:n koko teksti tavalliseksi .txt-tiedostoksi, halutessasi otsikko jokaiselle sivulle. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Mitä .txt-tiedosto sisältää?",
+          "a": "Jokaisen sivun tekstin sivujärjestyksessä. Ota sivujen otsikot käyttöön, niin jokaisen sivun eteen tulee »Sivu N« -rivi, joka helpottaa pitkien asiakirjojen selaamista."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Toimiiko tämä skannatuissa PDF-tiedostoissa?",
+          "a": "Vain jos skannauksessa on tekstikerros. Tavallinen valokuvaskannaus ei sisällä purettavaa tekstiä ja tulee tyhjänä ulos – aja ensin OCR PDF ja muunna sitten haettava tulos tekstiksi."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "Lähetetäänkö PDF:ni palvelimelle tekstin purkamista varten?",
+          "a": "Ei. Teksti luetaan PDF:stä selaimessasi, joten tiedosto ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Näin purat tekstin PDF:stä",
+        "intro": "PDF tekstiksi poimii tekstin PDF:stä tavalliseksi .txt-tiedostoksi, sivu sivulta, halutessasi otsikko jokaiselle sivulle.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Valitse PDF, jossa on oikeaa tekstiä (aja ensin OCR PDF skannauksille)",
+          "Valitse »Lisää otsikko jokaiselle sivulle«, jos haluat Sivu N -merkinnät",
+          "Napsauta Muunna tekstiksi",
+          "Lataa .txt-tiedosto tai kopioi teksti esikatselusta"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Pura kuvat",
+      "description": "Poimi valokuvat ja kuviot PDF:stä PNG-tiedostoina",
+      "seoTitle": "Pura kuvat PDF:stä – tallenna kuvat PNG:nä ilmaiseksi",
+      "metaDescription": "Poimi valokuvat, logot ja kuviot PDF:stä ja tallenna ne PNG-tiedostoina. Ilmainen, ei rekisteröitymistä – PDF ei poistu selaimestasi.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Millaisia puretut kuvat ovat laadultaan?",
+          "a": "Täysin upotetun laadun mukaisia – kuva tallennetaan täsmälleen sellaisena kuin se on PDF:n sisällä, PNG-muodossa. Mitään ei pakata uudelleen eikä pienennetä."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Entä jos PDF:ni on skannaus?",
+          "a": "Skannattu sivu on yksi iso kuva, joten saat takaisin koko sivun kuvan. Oikeilla tekstisivuilla jokainen upotettu valokuva, logo ja kuvio puretaan erikseen."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "Lähetetäänkö PDF:ni palvelimelle kuvien purkamista varten?",
+          "a": "Ei. Kuvat poimitaan PDF:stä selaimessasi, joten tiedosto ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Näin purat kuvat PDF:stä",
+        "intro": "Pura kuvat poimii jokaisen upotetun valokuvan, logon ja kuvion PDF:stä ja tallentaa ne PNG-tiedostoina täydellä upotetulla laadulla.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Valitse PDF",
+          "Napsauta Pura kuvat",
+          "Lataa kuvat – useampi kuva latautuu yhdessä ZIP-tiedostona"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF HTML:ksi",
+      "description": "Muunna PDF tavalliseksi HTML-verkkosivuksi",
+      "seoTitle": "PDF HTML:ksi – muunna PDF verkkosivuksi ilmaiseksi",
+      "metaDescription": "Muunna PDF tavalliseksi HTML-sivuksi, yksi osio PDF:n sivua kohden. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "Näyttääkö HTML samalta kuin PDF?",
+          "a": "Ei. Se siirtää sanat, ei asettelua: jokaisesta PDF-sivusta tulee osio, jonka teksti on kappaleina. Kuvat ja tarkka muotoilu eivät siirry mukana."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Mitä voin tehdä HTML-tiedostolla?",
+          "a": "Avaa se missä tahansa selaimessa, liitä se verkkosivulle tai sisältöeditoriin tai käytä sitä lähtökohtana asiakirjasta rakennettavalle verkkosivulle."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "Lähetetäänkö PDF:ni palvelimelle HTML-muunnosta varten?",
+          "a": "Ei. Teksti puretaan ja HTML rakennetaan selaimessasi, joten PDF ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Näin muunnat PDF:n HTML:ksi",
+        "intro": "PDF HTML:ksi muuntaa PDF:n tavalliseksi verkkosivuksi: yksi osio PDF:n sivua kohden, teksti kappaleina. Se siirtää sanat, ei asettelua.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Valitse PDF, jossa on oikeaa tekstiä (aja ensin OCR PDF skannauksille)",
+          "Napsauta Muunna HTML:ksi",
+          "Lataa .html-tiedosto tai kopioi merkintäkoodi esikatselusta"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Muokkaa metatietoja",
+      "description": "Vaihda PDF:n otsikko, tekijä, aihe ja avainsanat",
+      "seoTitle": "Muokkaa PDF:n metatietoja – vaihda otsikko, tekijä ja avainsanat",
+      "metaDescription": "Vaihda PDF:n otsikko, tekijä, aihe ja avainsanat selaimessasi. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Missä otsikko näkyy?",
+          "a": "PDF-lukijan välilehdellä tai otsikkopalkissa, tiedostohaussa ja hakutuloksissa, kun PDF on indeksoitu. Selkeä otsikko auttaa ihmisiä löytämään asiakirjan."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Muuttaako metatietojen muokkaus itse asiakirjaa?",
+          "a": "Ei. Sivut, teksti ja kuvat pysyvät täsmälleen ennallaan – vain asiakirjasta tallennetut tiedot muuttuvat."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Voinko tyhjentää kentän?",
+          "a": "Kyllä. Jätä kenttä tyhjäksi ja tallenna – arvo poistetaan PDF:stä."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Näin muokkaat PDF:n metatietoja",
+        "intro": "Muokkaa metatietoja muuttaa PDF:stä tallennettuja tietoja – otsikon, tekijän, aiheen ja avainsanat – koskematta sivuihin.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Valitse PDF nähdäksesi sen nykyisen otsikon, tekijän, aiheen ja avainsanat",
+          "Muuta haluamasi kentät – jätä kenttä tyhjäksi tyhjentääksesi sen",
+          "Napsauta Tallenna metatiedot ja lataa päivitetty PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Litteistä PDF",
+      "description": "Tee lomakekentistä pysyviä ja poista kommentit",
+      "seoTitle": "Litteistä PDF – tee lomakekentät pysyviksi ilmaiseksi",
+      "metaDescription": "Polta PDF:n lomakekentät pysyvästi sivuun ja poista kommentit, jotta vastauksia ei voi enää muuttaa. Ilmainen, ei lähetystä.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Mitä lomakekentille tapahtuu?",
+          "a": "Niiden arvot piirretään itse sivuun ja kentät poistetaan, joten täytettyjä vastauksia ei voi enää muokata tai tyhjentää."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Mitä kommenteille ja korostuksille tapahtuu?",
+          "a": "Ne poistetaan, koska niitä ei voi polttaa sivuun muuttamatta sivua kuvaksi. Linkit säilyvät."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Muuttaako litistäminen tekstiä?",
+          "a": "Ei. Teksti pysyy oikeana, valittavana tekstinä – mitään ei muuteta kuvaksi."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Näin litistät PDF:n",
+        "intro": "Litteistä PDF polttaa lomakekentät pysyvästi sivuun ja poistaa kommentit ja korostukset, joten täytettyjä vastauksia ei voi enää muuttaa. Linkit säilyvät, ja teksti pysyy valittavana.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Valitse PDF, jossa on lomakekenttiä tai kommentteja",
+          "Napsauta Litteistä PDF",
+          "Lataa litistetty kopio"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Täytä PDF-lomake",
+      "description": "Täytä PDF-lomake ja tallenna täytetty kopio",
+      "seoTitle": "Täytä PDF-lomake – täytä PDF-lomake verkossa ilmaiseksi",
+      "metaDescription": "Täytä PDF-lomake selaimessasi – tekstikentät, valintaruudut ja pudotusvalikot – ja tallenna täytetty kopio. Ilmainen, ei lähetystä.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Mitä kenttiä voin täyttää?",
+          "a": "Tekstikenttiä, valintaruutuja, pudotusvalikoita ja valintaryhmiä. Painikkeita ja allekirjoituskenttiä ei voi täyttää tässä – käytä allekirjoituksiin Sign PDF -työkalua."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Se sanoo, ettei PDF:ssä ole täytettäviä kenttiä. Miksi?",
+          "a": "PDF on litteä skannaus tai tulostettu lomake, jossa ei ole vuorovaikutteisia kenttiä. Vain oikeilla lomakekentillä rakennetut PDF:t voi täyttää – skannattu lomake tarvitsee ensin OCR:n, ja silloinkin se pysyy kuvana lomakkeesta."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Voinko lukita vastaukset jälkeenpäin?",
+          "a": "Kyllä. Aja täytetty PDF Litteistä PDF -työkalun läpi, niin vastauksista tulee pysyviä."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Näin täytät PDF-lomakkeen",
+        "intro": "Täytä PDF-lomake listaa PDF:n jokaisen täytettävän kentän – tekstikentät, valintaruudut, pudotusvalikot – jotta voit täyttää lomakkeen selaimessasi ja tallentaa sen.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Valitse PDF, jossa on täytettäviä lomakekenttiä",
+          "Täytä jokainen kenttä paneelissa",
+          "Napsauta Tallenna täytetty PDF ja lataa valmis kopio"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Teksti PDF:ksi",
+      "description": "Muunna pelkkä teksti PDF-asiakirjaksi",
+      "seoTitle": "Teksti PDF:ksi – muunna pelkkä teksti PDF:ksi ilmaiseksi",
+      "metaDescription": "Kirjoita tai liitä pelkkää tekstiä ja muunna se PDF-asiakirjaksi selaimessasi. Ilmainen, ei rekisteröitymistä, lähetystä eikä vesileimaa.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Voinko muotoilla tekstiä?",
+          "a": "Ei. Tämä työkalu muuntaa pelkän tekstin siistiksi PDF:ksi – otsikot ja lihavointi eivät siirry mukana. Muotoiltuihin asiakirjoihin käytä sen sijaan Word PDF:ksi- tai HTML PDF:ksi -työkalua."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Entä pitkä teksti?",
+          "a": "Se jatkuu niin monelle sivulle kuin tarvitaan, ja ensimmäisellä sivulla on otsikko, jos lisäät sellaisen."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Lähetetäänkö tekstini palvelimelle?",
+          "a": "Ei. PDF rakennetaan selaimessasi, joten teksti ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Näin muunnat tekstin PDF:ksi",
+        "intro": "Teksti PDF:ksi muuntaa kirjoittamasi tai liittämäsi pelkän tekstin siistiksi PDF-asiakirjaksi, halutessasi otsikko ensimmäisellä sivulla.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Kirjoita tai liitä tekstisi",
+          "Lisää asiakirjan otsikko, jos haluat",
+          "Napsauta Muunna PDF:ksi ja lataa se"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Ylä- ja alatunniste",
+      "description": "Leimaa ylä- ja alatunniste jokaiselle sivulle",
+      "seoTitle": "Lisää PDF:ään ylä- ja alatunniste ilmaiseksi, ei lähetystä",
+      "metaDescription": "Leimaa ylä- ja alatunnisterivi – halutessasi sivunumeroilla – PDF:n jokaiselle sivulle. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Voinko lisätä vain ylätunnisteen tai vain alatunnisteen?",
+          "a": "Kyllä. Jätä toinen kenttä tyhjäksi, niin vain täyttämäsi leimataan."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Minne teksti tulee?",
+          "a": "Vasemmalle, keskelle tai oikealle, jokaisen sivun ylä- tai alareunaan. Teksti piirretään sivun päälle – se ei työnnä olemassa olevaa sisältöä minnekään."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Voinko lisätä myös sivunumerot?",
+          "a": "Kyllä. Valitse »Lisää sivunumerot alatunnisteeseen«, niin jokainen sivu saa alatunnisteen viereen numeron tyyliin »1 / 12«."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Näin lisäät PDF:ään ylä- ja alatunnisteen",
+        "intro": "Ylä- ja alatunniste leimaa tekstirivin jokaisen sivun ylä- ja/tai alareunaan, halutessasi sivunumerot alatunnisteeseen.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Valitse PDF",
+          "Kirjoita ylä- ja alatunnisteen teksti – jätä toinen tyhjäksi leimataksesi vain toisen",
+          "Valitse sijainti, fonttikoko ja lisätäänkö sivunumerot",
+          "Napsauta Lisää ylä- ja alatunniste ja lataa tulos"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Bates-numerointi",
+      "description": "Leimaa jokaiselle sivulle juokseva Bates-numero",
+      "seoTitle": "Bates-numerointi – leimaa PDF:n sivut juoksevilla numeroilla",
+      "metaDescription": "Leimaa PDF:n jokainen sivu Bates-numerolla: etuliite ja nollilla täytetty juokseva numero. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Mitä Bates-numerointi on?",
+          "a": "Tapa leimata asiakirjakokoelman jokainen sivu yksilöllisellä juoksevalla numerolla – esimerkiksi EXHIBIT-00042 – jotta sivut voidaan tunnistaa ja niihin voidaan viitata oikeudellisessa työssä ja todistusaineistossa."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Voinko valita etuliitteen ja aloitusnumeron?",
+          "a": "Kyllä. Aseta mikä tahansa etuliite, aloitusnumero, kuinka moneen numeroon täytetään ja minne sivulla leima tulee."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Muuttaako se asiakirjaa?",
+          "a": "Ei. Leima lisätään jokaisen sivun päälle; olemassa oleva sisältö pysyy koskemattomana."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Näin Bates-numeroit PDF:n",
+        "intro": "Bates-numerointi leimaa jokaiselle sivulle yksilöllisen juoksevan numeron – etuliitteen ja nollilla täytetyn juoksevan numeron, kuten EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Valitse PDF",
+          "Aseta etuliite, aloitusnumero ja kuinka moneen numeroon täytetään",
+          "Valitse, minne sivulla leima tulee",
+          "Napsauta Käytä Bates-numerot ja lataa leimattu PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF harmaasävyiseksi",
+      "description": "Muunna väri-PDF mustavalkoiseksi",
+      "seoTitle": "PDF harmaasävyiseksi – muunna PDF mustavalkoiseksi ilmaiseksi",
+      "metaDescription": "Muunna väri-PDF mustavalkoiseksi sivu sivulta. Ilmainen, ei rekisteröitymistä eikä lähetystä – tiedosto ei koskaan poistu selaimestasi.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Pysyykö teksti valittavana?",
+          "a": "Ei. Sivut rakennetaan uudelleen mustavalkoisina kuvina, joten tekstistä tulee osa kuvaa. Käytä sitä tulostamiseen tai jakamiseen, älä tekstin muokkaamiseen jälkikäteen."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Toimiiko se skannatuissa PDF-tiedostoissa?",
+          "a": "Kyllä. Skannatut sivut ovat jo kuvia, joten ne muuntuvat siististi – usein se on koko tarkoitus, tulostamista tai faksaamista varten."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "Lähetetäänkö PDF:ni palvelimelle?",
+          "a": "Ei. Muunnos toimii kokonaan selaimessasi, joten PDF ei koskaan poistu laitteeltasi."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Näin muunnat PDF:n harmaasävyiseksi",
+        "intro": "PDF harmaasävyiseksi rakentaa jokaisen sivun uudelleen mustavalkoisena. Se on tehty tulostamista ja faksaamista varten – sivuista tulee kuvia, joten tekstiä ei voi enää valita jälkikäteen.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Valitse PDF",
+          "Napsauta Muunna harmaasävyiseksi",
+          "Lataa mustavalkoinen PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Muuta PDF:n kokoa",
+      "description": "Vaihda PDF-sivut A4-, Letter-, A3-kokoon tai omaan kokoon",
+      "seoTitle": "Muuta PDF:n sivukokoa – A4- tai Letter-kokoon",
+      "metaDescription": "Vaihda PDF:n jokainen sivu A4-, Letter-, A3-, A5-kokoon tai omaan kokoon. Sisältö skaalataan sopivaksi ja keskitetään. Ilmainen, ei lähetystä.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Miten tämä eroaa Rajaa PDF -työkalusta?",
+          "a": "Rajaus leikkaa sivun marginaaleja; koon muuttaminen vaihtaa itse sivukoon – A4, Letter, A3, A5 tai mikä tahansa oma koko – ja skaalaa sisällön sopivaksi."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Pysyykö teksti valittavana?",
+          "a": "Kyllä. Sivut asetellaan uudelleen, niitä ei piirretä uudelleen, joten teksti ja vektorit pysyvät ennallaan."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Voinko asettaa oman koon?",
+          "a": "Kyllä. Valitse Oma ja kirjoita leveys ja korkeus millimetreinä."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Näin muutat PDF-sivujen kokoa",
+        "intro": "Muuta PDF:n kokoa vaihtaa jokaisen sivun A4-, Letter-, A3-, A5-kokoon tai kirjoittamaasi kokoon ja skaalaa sisällön sopivaksi, keskitetysti. Teksti ja vektorit pysyvät ennallaan.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Valitse PDF",
+          "Valitse A4, Letter, A3, A5 tai Oma ja kirjoita koko millimetreinä",
+          "Napsauta Muuta sivujen kokoa",
+          "Lataa kooltaan muutettu PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Suorista PDF",
+      "description": "Suorista vinot skannatut sivut",
+      "seoTitle": "Suorista PDF – oikaise vinot skannatut sivut ilmaiseksi",
+      "metaDescription": "Suorista vinot skannatut sivut. Vinous tunnistetaan automaattisesti tai säädä se itse liukusäätimellä. Ilmainen, ei lähetystä.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Miten vinous tunnistetaan?",
+          "a": "Se lukee ensimmäiset sivut ja löytää kulman, jossa tekstirivit ovat suorimmat, ja ehdottaa sitten kulmaa liukusäätimellä. Voit säätää sitä itse, jos se näyttää väärältä."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Pysyykö teksti valittavana?",
+          "a": "Ei. Sivut rakennetaan uudelleen suoristettuina kuvina, joten tekstistä tulee osa kuvaa. Käytä sitä skannatuille sivuille, joissa ei muutenkaan ole valittavaa tekstiä."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Kuinka paljon se voi suoristaa?",
+          "a": "Jopa 10 astetta kumpaankin suuntaan, mikä kattaa lähes jokaisen huonosti syötetyn skannerisivun."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Näin suoristat PDF:n",
+        "intro": "Suorista PDF oikaisee vinot skannatut sivut. Vinous tunnistetaan automaattisesti, kun lisäät tiedoston, ja liukusäätimellä voit säätää sitä itse.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Valitse PDF – vinous tunnistetaan automaattisesti",
+          "Tarkista tunnistettu kulma ja vedä liukusäädintä, jos sivu näyttää yhä vinolta",
+          "Käytä reaaliaikaista esikatselua nähdäksesi suoristetun ensimmäisen sivun",
+          "Napsauta Suorista PDF ja lataa tulos"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Lomittele PDF:t",
+      "description": "Lomittele kahden PDF:n sivut vuorotellen",
+      "seoTitle": "Lomittele PDF:t – yhdistä kaksi PDF:ää ilmaiseksi",
+      "metaDescription": "Lomittele kahden PDF:n sivut – ensin kummankin sivu 1, sitten sivu 2 – yhdeksi tiedostoksi. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Entä jos kahdella PDF:llä on eri pituus?",
+          "a": "Lyhyempi loppuu ensin; pidemmän jäljellä olevat sivut tulevat loppuun järjestyksessä."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Kumpi asiakirja tulee ensin?",
+          "a": "Ensimmäinen lisäämäsi asiakirja antaa sivun 1, toinen sivun 2, ja ne jatkavat vuorottelua siitä eteenpäin."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "Mihin tätä käytetään?",
+          "a": "Asiakirjan kahden version yhdistämiseen sivu sivulta, kysymysten ja vastausten lomitteluun tai etu- ja takasivuskannausten järjestämiseen lukujärjestykseen."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Näin lomittele kaksi PDF:ää",
+        "intro": "Lomittele PDF:t ottaa kaksi PDF:ää ja lomittelee niiden sivut – ensin kummankin sivu 1, sitten sivu 2 – yhdeksi tiedostoksi.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Lisää ensimmäinen asiakirja ja sitten toinen",
+          "Napsauta Yhdistä PDF:t",
+          "Lataa lomiteltu tiedosto"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Poista tyhjät sivut",
+      "description": "Poista tyhjät sivut PDF:stä",
+      "seoTitle": "Poista tyhjät sivut – poista tyhjät PDF-sivut ilmaiseksi",
+      "metaDescription": "Etsi ja poista PDF:n tyhjät sivut – ne, jotka skanneri lisää vahingossa. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Mistä se tietää sivun olevan tyhjä?",
+          "a": "Se piirtää jokaisen sivun ja mittaa, kuinka paljon mustetta sillä on. Kynnysarvon alle jäävät sivut listataan ennen kuin mitään poistetaan, joten näet tarkalleen, mitä lähtee."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Poistaako se sivun, jolla on vain sivunumero?",
+          "a": "Ei Tasapainoinen-asetuksella – sivunumero lasketaan musteeksi. Jos se silti poistaa sivun, jonka halusit säilyttää, käytä Tiukka-asetusta ja aja uudelleen."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "Lähetetäänkö PDF:ni palvelimelle?",
+          "a": "Ei. Tunnistus ja poisto toimivat kokonaan selaimessasi."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Näin poistat tyhjät sivut PDF:stä",
+        "intro": "Poista tyhjät sivut löytää skannerin lisäämät tyhjät sivut – yleensä pinon lopusta – listaa ne ja poistaa ne, jättäen loput koskemattomiksi.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Valitse PDF",
+          "Tarkista löydetyt tyhjät sivut ja muuta herkkyyttä, jos se jätti jonkin huomaamatta tai merkitsi sivun, jonka haluat säilyttää",
+          "Napsauta Poista tyhjät sivut",
+          "Lataa siivottu PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "Laita 2, 4, 6 tai 9 sivua jokaiselle arkille",
+      "seoTitle": "N-up PDF – laita useita sivuja yhdelle arkille ilmaiseksi",
+      "metaDescription": "Laita 2, 4, 6 tai 9 PDF-sivua jokaiselle arkille, vihkoja ja monisteita varten. Ilmainen, ei rekisteröitymistä eikä lähetystä.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Kuinka suuria arkit ovat?",
+          "a": "Jokainen arkki pysyy PDF:n ensimmäisen sivun kokoisena – yleensä A4 tai Letter. Lähdesivut skaalataan sopimaan omaan ruutuunsa."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Pysyykö teksti luettavana?",
+          "a": "Kyllä. Sivut asetellaan uudelleen, niitä ei piirretä uudelleen, joten teksti ja vektorit pysyvät terävinä. 9 sivun arkilla painatus on pientä, kuten pitääkin."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Voinko valita järjestyksen?",
+          "a": "Sivut etenevät vasemmalta oikealle, ylhäältä alas, alkuperäisessä järjestyksessä."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Näin laitat useita PDF-sivuja yhdelle arkille",
+        "intro": "N-up PDF asettelee 2, 4, 6 tai 9 lähdesivua jokaiselle arkille, vihkoja ja monisteita varten. Jokainen arkki pysyy ensimmäisen sivun kokoisena.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Valitse PDF",
+          "Valitse 2, 4, 6 tai 9 sivua arkille",
+          "Napsauta Luo N-up PDF",
+          "Lataa tulos"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Lisää tyhjä sivu",
+      "description": "Lisää tyhjiä sivuja tai toisen PDF:n sivuja",
+      "seoTitle": "Lisää tyhjä sivu – lisää sivuja PDF:ään ilmaiseksi",
+      "metaDescription": "Lisää tyhjiä sivuja – tai toisen PDF:n kaikki sivut – PDF:ään, alkuun, loppuun, jokaisen sivun jälkeen tai valitsemasi sivun jälkeen. Ilmainen, ei lähetystä.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Minne tyhjä sivu voi mennä?",
+          "a": "Alkuun, loppuun, jokaisen sivun jälkeen tai minkä tahansa valitsemasi sivunumeron jälkeen."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Miten lisään sivuja toisesta PDF:stä?",
+          "a": "Valitse »Sivut toisesta PDF:stä«, lisää toinen tiedosto ensimmäisen jälkeen ja valitse, minne sen sivut menevät."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Kuinka suuri tyhjä sivu on?",
+          "a": "Saman kokoinen kuin PDF:n ensimmäinen sivu."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Näin lisäät tyhjän sivun PDF:ään",
+        "intro": "Lisää tyhjä sivu lisää tyhjiä sivuja – tai toisen PDF:n jokaisen sivun – alkuun, loppuun, jokaisen sivun jälkeen tai valitsemasi sivun jälkeen.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Valitse PDF",
+          "Valitse Tyhjä sivu tai Sivut toisesta PDF:stä ja lisää toinen tiedosto",
+          "Valitse, minne sivut menevät",
+          "Napsauta Lisää tyhjä sivu ja lataa tulos"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Yksityinen – tiedosto käsitellään selaimessasi, eikä sitä koskaan lähetetä palvelimelle",
+          "Ilmainen: ei tiliä, ei vesileimaa eikä päivittäistä käyttörajaa",
+          "Toimii kaikissa nykyaikaisissa selaimissa Windowsissa, Macissa, Linuxissa, iPhonessa ja Androidissa"
         ]
       }
     }

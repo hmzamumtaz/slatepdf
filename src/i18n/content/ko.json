@@ -914,38 +914,38 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF PNG 변환",
+      "description": "PDF 페이지를 PNG 이미지로 변환하세요",
+      "seoTitle": "PDF PNG 변환 — PDF 페이지를 PNG로 무료 변환",
+      "metaDescription": "PDF의 모든 페이지를 144 또는 216 DPI PNG 이미지로 변환하세요. 무료, 회원가입·워터마크 없음. 파일은 브라우저를 떠나지 않습니다.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "a": "페이지는 144 DPI(표준) 또는 216 DPI(고화질)로 렌더링됩니다. 고화질을 선택하면 텍스트가 더 선명해지지만 파일 크기가 커집니다.",
+          "q": "PNG의 해상도는 어떻게 되나요?"
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "a": "PNG는 무손실 형식이라 날카로운 모서리와 텍스트가 선명하게 유지되고, JPG는 파일이 더 작습니다. 정확한 픽셀이 필요하면 PNG, 작은 파일이 필요하면 JPG를 사용하세요.",
+          "q": "PDF JPG 변환과는 어떻게 다른가요?"
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "a": "아니요. 각 페이지는 브라우저에서 이미지로 렌더링되므로 PDF는 사용자의 기기를 떠나지 않습니다.",
+          "q": "PNG로 변환하기 위해 PDF를 업로드해야 하나요?"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
-        "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF PNG 변환은 PDF의 모든 페이지를 표준(144 DPI) 또는 고화질(216 DPI) PNG 이미지로 저장합니다. PNG는 무손실이라 텍스트와 날카로운 모서리가 선명하게 유지됩니다.",
+        "steps": [
+          "PDF를 하나 이상 선택하세요",
+          "표준 또는 고화질 해상도를 선택하세요",
+          "PNG로 변환을 클릭하세요",
+          "페이지를 하나씩 다운로드하거나, 전체를 ZIP으로 한 번에 다운로드하세요"
+        ],
+        "title": "PDF를 PNG로 변환하는 방법"
       }
     },
     "pdf-to-word": {
@@ -1562,570 +1562,570 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF 텍스트 추출",
+      "description": "PDF의 모든 텍스트를 일반 .txt 파일로 추출하세요",
+      "seoTitle": "PDF 텍스트 추출 — PDF에서 텍스트 추출하기 (무료)",
+      "metaDescription": "PDF의 모든 텍스트를 일반 .txt 파일로 추출하세요. 페이지별 제목을 추가할 수도 있습니다. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "a": "모든 페이지의 텍스트가 페이지 순서대로 들어 있습니다. 페이지 제목을 켜면 각 페이지 앞에 '페이지 N'이라는 줄이 추가되어 긴 문서를 탐색하기 쉬워집니다.",
+          "q": ".txt 파일에는 무엇이 들어 있나요?"
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "a": "텍스트 레이어가 있는 스캔에서만 작동합니다. 사진만 있는 스캔에는 추출할 텍스트가 없어 빈 파일이 나옵니다. 먼저 PDF OCR을 실행한 뒤, 검색 가능한 결과 파일을 텍스트로 변환하세요.",
+          "q": "스캔한 PDF에서도 작동하나요?"
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "a": "아니요. 텍스트는 브라우저에서 PDF로부터 직접 읽히므로 파일은 사용자의 기기를 떠나지 않습니다.",
+          "q": "텍스트를 추출하기 위해 PDF를 업로드해야 하나요?"
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
-        "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 텍스트 추출은 PDF의 텍스트를 페이지 순서대로 일반 .txt 파일로 뽑아내며, 원하면 페이지마다 제목을 추가할 수 있습니다.",
+        "steps": [
+          "실제 텍스트가 있는 PDF를 선택하세요(스캔본은 먼저 PDF OCR을 실행하세요)",
+          "페이지마다 '페이지 N' 표시를 원하면 '각 페이지에 제목 추가'를 선택하세요",
+          "텍스트로 변환을 클릭하세요",
+          ".txt 파일을 다운로드하거나 미리보기에서 텍스트를 복사하세요"
+        ],
+        "title": "PDF에서 텍스트를 추출하는 방법"
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "PDF 이미지 추출",
+      "description": "PDF에서 사진과 도형을 PNG 파일로 추출하세요",
+      "seoTitle": "PDF 이미지 추출 — 사진과 도형을 PNG로 저장 (무료)",
+      "metaDescription": "PDF에서 사진, 로고, 도형을 추출해 PNG 파일로 저장하세요. 무료, 회원가입 없음. PDF는 브라우저를 떠나지 않습니다.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "a": "PDF 안에 들어 있는 그대로의 품질입니다. 이미지는 다시 압축하거나 축소하지 않고 PNG로 저장됩니다.",
+          "q": "추출된 이미지의 품질은 어떤가요?"
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "a": "스캔한 페이지는 그 자체가 하나의 큰 이미지이므로 페이지 전체 이미지를 그대로 받게 됩니다. 실제 텍스트 페이지에서는 사진, 로고, 도형이 각각 따로 추출됩니다.",
+          "q": "스캔한 PDF라면 어떻게 되나요?"
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "a": "아니요. 이미지는 브라우저에서 PDF로부터 직접 추출되므로 파일은 사용자의 기기를 떠나지 않습니다.",
+          "q": "이미지를 추출하기 위해 PDF를 업로드해야 하나요?"
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
-        "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 이미지 추출은 PDF에 들어 있는 모든 사진, 로고, 도형을 원래 품질 그대로 PNG 파일로 저장합니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "이미지 추출을 클릭하세요",
+          "이미지를 다운로드하세요. 여러 장이면 ZIP으로 함께 다운로드됩니다."
+        ],
+        "title": "PDF에서 이미지를 추출하는 방법"
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF HTML 변환",
+      "description": "PDF를 일반 HTML 웹페이지로 바꾸세요",
+      "seoTitle": "PDF HTML 변환 — PDF를 웹페이지로 무료 변환",
+      "metaDescription": "PDF를 일반 HTML 페이지로 바꾸세요. PDF 페이지마다 하나의 섹션이 만들어집니다. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "a": "아니요. 레이아웃이 아니라 단어만 옮깁니다. PDF 페이지마다 하나의 섹션이 만들어지고 텍스트는 단락으로 들어갑니다. 이미지와 정확한 서식은 그대로 옮겨지지 않습니다.",
+          "q": "HTML이 PDF와 똑같이 보이나요?"
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "a": "브라우저에서 열거나, 웹사이트나 콘텐츠 편집기에 붙여넣거나, 문서에서 만든 웹페이지의 출발점으로 사용할 수 있습니다.",
+          "q": "HTML 파일을 어떻게 활용할 수 있나요?"
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "a": "아니요. 텍스트 추출과 HTML 생성이 모두 브라우저에서 이루어지므로 PDF는 사용자의 기기를 떠나지 않습니다.",
+          "q": "HTML로 변환하기 위해 PDF를 업로드해야 하나요?"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
-        "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF HTML 변환은 PDF를 일반 웹페이지로 바꿉니다. PDF 페이지마다 하나의 섹션이 만들어지고 텍스트는 단락으로 들어갑니다. 레이아웃이 아니라 단어만 옮깁니다.",
+        "steps": [
+          "실제 텍스트가 있는 PDF를 선택하세요(스캔본은 먼저 PDF OCR을 실행하세요)",
+          "HTML로 변환을 클릭하세요",
+          ".html 파일을 다운로드하거나 미리보기에서 마크업을 복사하세요"
+        ],
+        "title": "PDF를 HTML로 변환하는 방법"
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "PDF 메타데이터 편집",
+      "description": "PDF 제목, 작성자, 주제, 키워드를 바꾸세요",
+      "seoTitle": "PDF 메타데이터 편집 — 제목, 작성자, 키워드 변경",
+      "metaDescription": "브라우저에서 PDF의 제목, 작성자, 주제, 키워드를 바꾸세요. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "a": "PDF 리더의 탭이나 제목 표시줄, 파일 검색 결과, 그리고 PDF가 검색엔진에 색인될 때 검색 결과에 표시됩니다. 명확한 제목은 사람들이 문서를 찾는 데 도움이 됩니다.",
+          "q": "제목은 어디에 표시되나요?"
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "a": "아니요. 페이지, 텍스트, 이미지는 그대로 유지되고 문서에 저장된 정보만 바뀝니다.",
+          "q": "메타데이터를 편집하면 문서 자체가 바뀌나요?"
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "a": "네. 필드를 비워 두고 저장하면 해당 값이 PDF에서 제거됩니다.",
+          "q": "필드를 비울 수 있나요?"
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
-        "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "메타데이터 편집은 페이지에는 손대지 않고 PDF에 저장된 정보 — 제목, 작성자, 주제, 키워드 — 를 바꿉니다.",
+        "steps": [
+          "PDF를 선택해 현재 제목, 작성자, 주제, 키워드를 확인하세요",
+          "바꾸려는 필드를 수정하세요. 비워 두면 해당 값이 지워집니다",
+          "메타데이터 저장을 클릭하고 업데이트된 PDF를 다운로드하세요"
+        ],
+        "title": "PDF 메타데이터를 편집하는 방법"
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "PDF 평탄화",
+      "description": "양식 필드를 영구적으로 고정하고 주석을 제거하세요",
+      "seoTitle": "PDF 평탄화 — 양식 필드를 영구 고정 (무료)",
+      "metaDescription": "PDF의 양식 필드를 페이지에 영구적으로 고정하고 주석을 제거하세요. 답을 더 이상 바꿀 수 없게 됩니다. 무료, 업로드 없음.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "a": "입력한 값이 페이지 자체에 그려지고 필드가 제거되므로, 채워 넣은 답을 더 이상 수정하거나 지울 수 없게 됩니다.",
+          "q": "양식 필드는 어떻게 되나요?"
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "a": "제거됩니다. 페이지를 이미지로 바꾸지 않고는 페이지에 고정할 수 없기 때문입니다. 링크는 유지됩니다.",
+          "q": "댓글과 하이라이트는 어떻게 되나요?"
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "a": "아니요. 텍스트는 선택 가능한 실제 텍스트로 그대로 남습니다. 이미지로 변환되지 않습니다.",
+          "q": "평탄화하면 텍스트가 바뀌나요?"
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
-        "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 평탄화는 양식 필드를 페이지에 영구적으로 고정하고 댓글과 하이라이트를 제거하므로, 채워 넣은 답을 더 이상 바꿀 수 없습니다. 링크는 유지되고 텍스트는 선택 가능한 상태로 남습니다.",
+        "steps": [
+          "양식 필드나 주석이 있는 PDF를 선택하세요",
+          "PDF 평탄화를 클릭하세요",
+          "평탄화된 사본을 다운로드하세요"
+        ],
+        "title": "PDF를 평탄화하는 방법"
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "PDF 양식 작성",
+      "description": "PDF 양식을 작성하고 완성된 사본을 저장하세요",
+      "seoTitle": "PDF 양식 작성 — PDF 양식을 온라인으로 무료 작성",
+      "metaDescription": "브라우저에서 PDF 양식을 작성하세요. 텍스트 필드, 체크박스, 드롭다운을 지원합니다. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "a": "텍스트 필드, 체크박스, 드롭다운 목록, 라디오 그룹을 작성할 수 있습니다. 버튼과 서명 필드는 이곳에서 작성할 수 없습니다. 서명은 PDF 서명을 사용하세요.",
+          "q": "어떤 필드를 작성할 수 있나요?"
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "a": "PDF가 평면 스캔본이거나 대화형 필드가 없는 인쇄 양식이기 때문입니다. 실제 양식 필드가 있는 PDF만 작성할 수 있습니다. 스캔한 양식은 먼저 OCR을 실행해야 하며, 그 후에도 양식의 사진 상태로 남습니다.",
+          "q": "채울 수 있는 필드가 없다고 나옵니다. 왜 그런가요?"
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "a": "네. 작성한 PDF를 PDF 평탄화로 처리하면 답이 영구적으로 고정됩니다.",
+          "q": "답을 입력한 뒤 잠글 수 있나요?"
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
-        "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 양식 작성은 PDF의 모든 작성 가능한 필드 — 텍스트 필드, 체크박스, 드롭다운 — 를 나열해 브라우저에서 양식을 완성하고 저장할 수 있게 합니다.",
+        "steps": [
+          "채울 수 있는 필드가 있는 PDF를 선택하세요",
+          "패널에서 각 필드를 작성하세요",
+          "작성한 PDF 저장을 클릭하고 완성된 사본을 다운로드하세요"
+        ],
+        "title": "PDF 양식을 작성하는 방법"
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "텍스트 PDF 변환",
+      "description": "일반 텍스트를 PDF 문서로 바꾸세요",
+      "seoTitle": "텍스트 PDF 변환 — 일반 텍스트를 PDF로 (무료)",
+      "metaDescription": "일반 텍스트를 입력하거나 붙여넣어 브라우저에서 PDF 문서로 만드세요. 무료, 회원가입·업로드·워터마크 없음.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "a": "아니요. 이 도구는 일반 텍스트를 깔끔한 PDF로 바꿉니다. 제목이나 굵은 글씨는 그대로 옮겨지지 않습니다. 서식이 있는 문서는 워드 PDF 변환이나 HTML PDF 변환을 사용하세요.",
+          "q": "텍스트 서식을 지정할 수 있나요?"
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "a": "필요한 만큼 페이지가 늘어나며, 제목을 추가하면 첫 페이지에 표시됩니다.",
+          "q": "긴 텍스트는 어떻게 되나요?"
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "a": "아니요. PDF는 브라우저에서 만들어지므로 텍스트는 사용자의 기기를 떠나지 않습니다.",
+          "q": "제 텍스트가 업로드되나요?"
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
-        "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "텍스트 PDF 변환은 입력하거나 붙여넣은 일반 텍스트를 깔끔한 PDF 문서로 바꾸며, 원하면 첫 페이지에 제목을 넣을 수 있습니다.",
+        "steps": [
+          "텍스트를 입력하거나 붙여넣으세요",
+          "원하면 문서 제목을 추가하세요",
+          "PDF로 변환을 클릭하고 다운로드하세요"
+        ],
+        "title": "텍스트를 PDF로 바꾸는 방법"
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "PDF 머리글 및 바닥글",
+      "description": "모든 페이지에 머리글과 바닥글을 찍으세요",
+      "seoTitle": "PDF 머리글 및 바닥글 추가 — 무료, 업로드 없음",
+      "metaDescription": "PDF의 모든 페이지에 머리글과 바닥글을 찍으세요. 페이지 번호도 선택할 수 있습니다. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "a": "네. 다른 쪽 필드를 비워 두면 입력한 쪽만 찍힙니다.",
+          "q": "머리글만, 또는 바닥글만 추가할 수 있나요?"
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "a": "모든 페이지의 위쪽이나 아래쪽, 왼쪽·가운데·오른쪽 중 선택한 위치에 찍힙니다. 텍스트는 페이지 위에 그려지므로 기존 내용이 밀리지 않습니다.",
+          "q": "텍스트는 어디에 찍히나요?"
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "a": "네. '바닥글에 페이지 번호 추가'를 선택하면 각 페이지에 바닥글 텍스트 옆에 '1 / 12' 형식의 번호가 찍힙니다.",
+          "q": "페이지 번호도 추가할 수 있나요?"
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
-        "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "머리글 및 바닥글은 모든 페이지의 위쪽이나 아래쪽에 한 줄의 텍스트를 찍으며, 바닥글에 페이지 번호를 추가할 수도 있습니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "머리글과 바닥글 텍스트를 입력하세요. 한쪽만 찍으려면 다른 쪽을 비워 두세요",
+          "위치와 글자 크기, 페이지 번호 추가 여부를 선택하세요",
+          "머리글 및 바닥글 추가를 클릭하고 결과를 다운로드하세요"
+        ],
+        "title": "PDF에 머리글과 바닥글을 추가하는 방법"
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Bates 번호 매기기",
+      "description": "모든 페이지에 순서대로 Bates 번호를 찍으세요",
+      "seoTitle": "Bates 번호 매기기 — PDF 페이지에 순차 번호 찍기",
+      "metaDescription": "PDF의 모든 페이지에 접두사와 0으로 채워진 일련번호를 찍으세요. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "a": "문서 묶음의 모든 페이지에 고유한 순차 번호(예: EXHIBIT-00042)를 찍는 방법으로, 법률 문서나 증거 개시 과정에서 페이지를 식별하고 참조할 수 있게 합니다.",
+          "q": "Bates 번호 매기기란 무엇인가요?"
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "a": "네. 원하는 접두사, 시작 번호, 자릿수, 그리고 스탬프를 찍을 페이지 위치를 설정할 수 있습니다.",
+          "q": "접두사와 시작 번호를 선택할 수 있나요?"
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "a": "아니요. 스탬프는 각 페이지 위에 추가될 뿐 기존 내용은 그대로 유지됩니다.",
+          "q": "문서 내용이 바뀌나요?"
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
-        "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "Bates 번호 매기기는 모든 페이지에 고유한 순차 번호 — 접두사에 0으로 채워진 일련번호를 붙인 형태(예: EXHIBIT-00042) — 를 찍습니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "접두사, 시작 번호, 자릿수를 설정하세요",
+          "스탬프를 찍을 페이지 위치를 선택하세요",
+          "Bates 번호 적용을 클릭하고 찍힌 PDF를 다운로드하세요"
+        ],
+        "title": "PDF에 Bates 번호를 매기는 방법"
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF 흑백 변환",
+      "description": "컬러 PDF를 흑백으로 바꾸세요",
+      "seoTitle": "PDF 흑백 변환 — PDF를 흑백으로 무료 변환",
+      "metaDescription": "컬러 PDF를 페이지마다 흑백으로 바꾸세요. 무료, 회원가입·업로드 없음. 파일은 브라우저를 떠나지 않습니다.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "a": "아니요. 페이지는 흑백 이미지로 다시 만들어지므로 텍스트가 이미지의 일부가 됩니다. 나중에 텍스트를 편집하기보다는 인쇄하거나 공유할 때 사용하세요.",
+          "q": "텍스트를 계속 선택할 수 있나요?"
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "a": "네. 스캔한 페이지는 이미 이미지이므로 깔끔하게 변환됩니다. 인쇄나 팩스용으로 자주 쓰입니다.",
+          "q": "스캔한 PDF에서도 작동하나요?"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "a": "아니요. 변환은 전적으로 브라우저에서 이루어지므로 PDF는 사용자의 기기를 떠나지 않습니다.",
+          "q": "제 PDF가 업로드되나요?"
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
-        "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 흑백 변환은 모든 페이지를 흑백으로 다시 만듭니다. 인쇄와 팩스용으로 만들어졌으며, 페이지는 이미지가 되므로 이후 텍스트를 선택할 수 없습니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "흑백으로 변환을 클릭하세요",
+          "흑백 PDF를 다운로드하세요"
+        ],
+        "title": "PDF를 흑백으로 변환하는 방법"
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "PDF 크기 조정",
+      "description": "PDF 페이지를 A4, Letter, A3 또는 원하는 크기로 바꾸세요",
+      "seoTitle": "PDF 크기 조정 — PDF 페이지 크기를 A4·Letter로 변경",
+      "metaDescription": "PDF의 모든 페이지를 A4, Letter, A3, A5 또는 원하는 크기로 바꾸세요. 내용은 맞춰서 가운데에 배치됩니다. 무료, 업로드 없음.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "a": "자르기는 페이지 여백을 다듬고, 크기 조정은 페이지 크기 자체 — A4, Letter, A3, A5 또는 원하는 크기 — 를 바꾸며 내용을 맞춰 확대·축소합니다.",
+          "q": "PDF 자르기와 어떻게 다른가요?"
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "a": "네. 페이지는 다시 렌더링하지 않고 재배치되므로 텍스트와 벡터가 그대로 유지됩니다.",
+          "q": "텍스트를 계속 선택할 수 있나요?"
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "a": "네. '사용자 지정'을 선택하고 너비와 높이를 밀리미터 단위로 입력하세요.",
+          "q": "원하는 크기를 직접 지정할 수 있나요?"
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
-        "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 크기 조정은 모든 페이지를 A4, Letter, A3, A5 또는 직접 입력한 크기로 바꾸며, 내용을 맞춰 가운데에 배치합니다. 텍스트와 벡터는 그대로 유지됩니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "A4, Letter, A3, A5 중에서 고르거나 '사용자 지정'을 선택해 크기를 밀리미터 단위로 입력하세요",
+          "페이지 크기 조정을 클릭하세요",
+          "조정된 PDF를 다운로드하세요"
+        ],
+        "title": "PDF 페이지 크기를 조정하는 방법"
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "PDF 기울기 보정",
+      "description": "기울어진 스캔 페이지를 바로잡으세요",
+      "seoTitle": "PDF 기울기 보정 — 기울어진 스캔 페이지 바로잡기 (무료)",
+      "metaDescription": "기울어진 스캔 페이지를 바로잡으세요. 기울기는 자동으로 감지되거나 슬라이더로 직접 조절할 수 있습니다. 무료, 업로드 없음.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "a": "처음 몇 페이지를 읽어 텍스트 줄이 가장 곧게 보이는 각도를 찾은 뒤, 그 각도를 슬라이더에 표시합니다. 잘못 보이면 직접 조절할 수 있습니다.",
+          "q": "기울기는 어떻게 감지하나요?"
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "a": "아니요. 페이지는 바로잡힌 이미지로 다시 만들어지므로 텍스트가 이미지의 일부가 됩니다. 선택 가능한 텍스트가 없는 스캔 페이지에 사용하세요.",
+          "q": "텍스트를 계속 선택할 수 있나요?"
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "a": "양쪽으로 최대 10도까지 가능하며, 이는 잘못 급지된 스캐너 페이지의 대부분을 커버합니다.",
+          "q": "어느 정도까지 바로잡을 수 있나요?"
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
-        "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 기울기 보정은 기울어진 스캔 페이지를 바로잡습니다. 파일을 추가하면 기울기가 자동으로 감지되고, 슬라이더로 직접 조절할 수도 있습니다.",
+        "steps": [
+          "PDF를 선택하세요. 기울기가 자동으로 감지됩니다",
+          "감지된 각도를 확인하고, 페이지가 여전히 기울어 보이면 슬라이더를 드래그하세요",
+          "실시간 미리보기로 바로잡힌 첫 페이지를 확인하세요",
+          "기울기 보정을 클릭하고 결과를 다운로드하세요"
+        ],
+        "title": "PDF 기울기를 바로잡는 방법"
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "PDF 교차 병합",
+      "description": "두 PDF의 페이지를 번갈아 끼워 넣으세요",
+      "seoTitle": "PDF 교차 병합 — 두 PDF를 번갈아 합치기 (무료)",
+      "metaDescription": "두 PDF의 페이지를 번갈아 끼워 하나의 파일로 만드세요. 각 문서의 1페이지, 그다음 2페이지 순서입니다. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "a": "짧은 문서가 먼저 끝나면, 긴 문서의 남은 페이지가 순서대로 뒤에 이어집니다.",
+          "q": "두 PDF의 길이가 다르면 어떻게 되나요?"
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "a": "먼저 추가한 문서가 1페이지를, 두 번째 문서가 2페이지를 제공하고, 그 뒤로 번갈아 이어집니다.",
+          "q": "어느 문서가 먼저 오나요?"
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "a": "문서의 두 버전을 페이지마다 나란히 합치거나, 질문과 답을 번갈아 끼우거나, 앞뒷면 스캔을 읽는 순서대로 합칠 때 사용합니다.",
+          "q": "이 도구는 어디에 쓰나요?"
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
-        "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "PDF 교차 병합은 두 PDF를 가져와 페이지를 번갈아 끼워 — 각 문서의 1페이지, 그다음 2페이지 — 하나의 파일로 만듭니다.",
+        "steps": [
+          "첫 번째 문서를 추가한 뒤 두 번째 문서를 추가하세요",
+          "PDF 교차 병합을 클릭하세요",
+          "번갈아 합쳐진 파일을 다운로드하세요"
+        ],
+        "title": "두 PDF를 번갈아 합치는 방법"
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "PDF 빈 페이지 제거",
+      "description": "PDF에서 빈 페이지를 삭제하세요",
+      "seoTitle": "PDF 빈 페이지 제거 — 빈 PDF 페이지 삭제 (무료)",
+      "metaDescription": "PDF에서 빈 페이지를 찾아 삭제하세요. 스캐너가 실수로 추가한 페이지들입니다. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "a": "각 페이지를 렌더링해 잉크가 얼마나 묻어 있는지 측정합니다. 기준보다 적은 페이지는 삭제하기 전에 목록으로 보여 주므로, 무엇이 사라질지 정확히 확인할 수 있습니다.",
+          "q": "빈 페이지인지 어떻게 알 수 있나요?"
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "a": "'균형' 설정에서는 제거되지 않습니다. 페이지 번호도 잉크로 취급하기 때문입니다. 그래도 원하는 페이지가 제거된다면 '엄격' 설정을 사용해 다시 실행하세요.",
+          "q": "페이지 번호만 있는 페이지도 제거되나요?"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "a": "아니요. 감지와 제거는 전적으로 브라우저에서 이루어집니다.",
+          "q": "제 PDF가 업로드되나요?"
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
-        "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "빈 페이지 제거는 스캐너가 추가한 빈 페이지 — 보통 스캔 묶음의 끝에 생깁니다 — 를 찾아 목록으로 보여 주고 삭제합니다. 나머지 페이지는 그대로 유지됩니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "찾아낸 빈 페이지를 확인하고, 놓친 페이지가 있거나 남기고 싶은 페이지가 표시됐다면 감도를 바꾸세요",
+          "빈 페이지 제거를 클릭하세요",
+          "정리된 PDF를 다운로드하세요"
+        ],
+        "title": "PDF에서 빈 페이지를 제거하는 방법"
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "한 장에 2, 4, 6, 9페이지를 배치하세요",
+      "seoTitle": "N-up PDF — 한 장에 여러 페이지 배치 (무료)",
+      "metaDescription": "PDF 페이지 2, 4, 6, 9장을 한 장에 배치하세요. 소책자와 유인물용입니다. 무료, 회원가입·업로드 없음.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "a": "각 용지는 PDF 첫 페이지의 크기를 유지합니다. 보통 A4나 Letter입니다. 원본 페이지는 각 셀에 맞게 축소됩니다.",
+          "q": "용지의 크기는 어떻게 되나요?"
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "a": "네. 페이지는 다시 렌더링하지 않고 재배치되므로 텍스트와 벡터가 선명하게 유지됩니다. 9-up에서는 글자가 작게 인쇄되며, 원래 그래야 합니다.",
+          "q": "텍스트를 계속 읽을 수 있나요?"
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "a": "페이지는 원래 순서대로 왼쪽에서 오른쪽, 위에서 아래로 배치됩니다.",
+          "q": "순서를 선택할 수 있나요?"
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
-        "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "N-up PDF는 원본 페이지 2, 4, 6, 9장을 한 장에 배치합니다. 소책자와 유인물용이며, 각 용지는 첫 페이지의 크기를 유지합니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "2-up, 4-up, 6-up, 9-up 중 하나를 선택하세요",
+          "N-up PDF 만들기를 클릭하세요",
+          "결과를 다운로드하세요"
+        ],
+        "title": "PDF 여러 페이지를 한 장에 배치하는 방법"
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "PDF 빈 페이지 추가",
+      "description": "빈 페이지를 삽입하거나 다른 PDF의 페이지를 넣으세요",
+      "seoTitle": "PDF 빈 페이지 추가 — PDF에 페이지 삽입 (무료)",
+      "metaDescription": "PDF에 빈 페이지를 삽입하거나 다른 PDF의 모든 페이지를 넣으세요. 시작, 끝, 매 페이지 뒤, 원하는 페이지 뒤 중 선택할 수 있습니다. 무료, 업로드 없음.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "a": "시작, 끝, 매 페이지 뒤, 또는 원하는 페이지 번호 뒤에 들어갈 수 있습니다.",
+          "q": "빈 페이지는 어디에 들어갈 수 있나요?"
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "a": "'다른 PDF의 페이지'를 선택하고, 첫 번째 파일 뒤에 두 번째 파일을 추가한 뒤 페이지가 들어갈 위치를 선택하세요.",
+          "q": "다른 PDF의 페이지를 어떻게 삽입하나요?"
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "a": "PDF 첫 페이지와 같은 크기입니다.",
+          "q": "빈 페이지의 크기는 어떻게 되나요?"
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
-        "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "안전한 개인정보 보호 — 파일은 브라우저에서 처리되며 업로드되지 않습니다",
+          "무료 — 계정, 워터마크, 일일 사용 제한이 없습니다",
+          "Windows, Mac, Linux, iPhone, Android의 최신 브라우저에서 작동합니다"
+        ],
+        "intro": "빈 페이지 추가는 빈 페이지 — 또는 두 번째 PDF의 모든 페이지 — 를 시작, 끝, 매 페이지 뒤, 또는 선택한 페이지 뒤에 삽입합니다.",
+        "steps": [
+          "PDF를 선택하세요",
+          "빈 페이지를 선택하거나, '다른 PDF의 페이지'를 선택해 두 번째 파일을 추가하세요",
+          "페이지가 들어갈 위치를 선택하세요",
+          "빈 페이지 추가를 클릭하고 결과를 다운로드하세요"
+        ],
+        "title": "PDF에 빈 페이지를 추가하는 방법"
       }
     }
   }
