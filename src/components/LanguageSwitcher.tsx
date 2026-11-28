@@ -39,10 +39,9 @@ export default function LanguageSwitcher({ label, dropUp, dark }: { label: strin
         <span>{LOCALE_NAMES[locale]}</span>
         <ChevronDown className={`w-3.5 h-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
-      {open && (
-        <ul
-          className={`absolute z-50 w-52 max-h-80 overflow-y-auto bg-white border border-border rounded-xl shadow-xl py-2 end-0 ${dropUp ? 'bottom-full mb-1' : 'top-full mt-1'}`}
-        >
+      <ul
+        className={`absolute z-50 w-52 max-h-80 overflow-y-auto bg-white border border-border rounded-xl shadow-xl py-2 end-0 ${dropUp ? 'bottom-full mb-1' : 'top-full mt-1'} ${open ? '' : 'hidden'}`}
+      >
           {ALL_LOCALES.map(l => (
             <li key={l}>
               <Link
@@ -57,8 +56,7 @@ export default function LanguageSwitcher({ label, dropUp, dark }: { label: strin
               </Link>
             </li>
           ))}
-        </ul>
-      )}
+      </ul>
     </div>
   );
 }

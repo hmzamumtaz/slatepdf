@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF para PNG",
+      "description": "Converta as páginas de um PDF em imagens PNG",
+      "seoTitle": "PDF para PNG — Converter páginas de PDF em PNG grátis",
+      "metaDescription": "Converta cada página de um PDF em uma imagem PNG a 144 ou 216 DPI. Grátis, sem cadastro, sem marca d'água e sem upload.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Qual será a resolução dos PNGs?",
+          "a": "As páginas são renderizadas a 144 DPI (Padrão) ou 216 DPI (Alta), seja qual for a origem. A alta dá um texto mais nítido e arquivos maiores."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Qual é a diferença para PDF para JPG?",
+          "a": "O PNG não tem perdas, então mantém as bordas nítidas e o texto claro; os arquivos JPG são menores. Use PNG quando precisar de pixels exatos e JPG quando precisar de arquivos pequenos."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "Meu PDF é enviado para convertê-lo em PNG?",
+          "a": "Não. Cada página é transformada em imagem no seu navegador, então o PDF nunca sai do seu dispositivo."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Como converter PDF para PNG",
+        "intro": "PDF para PNG salva cada página de um PDF como imagem PNG, em resolução padrão (144 DPI) ou alta (216 DPI). O PNG não tem perdas, então o texto e as bordas nítidas ficam claros.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Escolha um ou mais PDFs",
+          "Escolha a resolução Padrão ou Alta",
+          "Clique em Converter para PNG",
+          "Baixe páginas individuais ou todas juntas em um ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF para texto",
+      "description": "Extraia todo o texto de um PDF para um arquivo .txt",
+      "seoTitle": "PDF para texto — Extrair texto de um PDF grátis",
+      "metaDescription": "Extraia todo o texto de um PDF para um arquivo .txt, com um cabeçalho opcional por página. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "O que o arquivo .txt contém?",
+          "a": "O texto de todas as páginas, em ordem. Ative os cabeçalhos de página para ter uma linha \"Página N\" antes de cada página, o que facilita navegar por documentos longos."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Funciona com PDFs escaneados?",
+          "a": "Só se o escaneamento tiver camada de texto. Um escaneamento que é só uma foto não tem texto para extrair e sai vazio — passe o OCR PDF nele primeiro e depois converta o resultado pesquisável em texto."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "Meu PDF é enviado para extrair o texto?",
+          "a": "Não. O texto é lido do PDF no seu navegador, então o arquivo nunca sai do seu dispositivo."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Como extrair texto de um PDF",
+        "intro": "PDF para texto tira o texto de um PDF e o coloca em um arquivo .txt, uma página após a outra, com um cabeçalho opcional por página.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Escolha um PDF com texto de verdade (passe o OCR PDF primeiro nos escaneamentos)",
+          "Marque \"Adicionar um cabeçalho para cada página\" se quiser marcadores de Página N",
+          "Clique em Converter para texto",
+          "Baixe o .txt ou copie o texto da pré-visualização"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Extrair imagens",
+      "description": "Tire as fotos e figuras de um PDF como arquivos PNG",
+      "seoTitle": "Extrair imagens de PDF — Salvar fotos como PNG grátis",
+      "metaDescription": "Tire as fotos, os logotipos e as figuras de um PDF e salve-os como PNG. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Qual é a qualidade das imagens extraídas?",
+          "a": "A qualidade total embutida — a imagem é salva exatamente como está dentro do PDF, em PNG. Nada é recomprimido nem reduzido."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "E se meu PDF for um escaneamento?",
+          "a": "Uma página escaneada é uma única imagem grande, então você recebe de volta essa imagem da página inteira. Em páginas com texto de verdade, cada foto, logotipo e figura embutidos são extraídos separadamente."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "Meu PDF é enviado para extrair as imagens?",
+          "a": "Não. As imagens são tiradas do PDF no seu navegador, então o arquivo nunca sai do seu dispositivo."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Como extrair imagens de um PDF",
+        "intro": "Extrair imagens tira todas as fotos, os logotipos e as figuras embutidos em um PDF e os salva como arquivos PNG, com a qualidade total embutida.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Escolha um PDF",
+          "Clique em Extrair imagens",
+          "Baixe as imagens — várias são baixadas juntas em um ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF para HTML",
+      "description": "Transforme um PDF em uma página HTML simples",
+      "seoTitle": "PDF para HTML — Converter PDF em página da web grátis",
+      "metaDescription": "Transforme um PDF em uma página HTML simples, uma seção por página do PDF. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "O HTML vai ficar igual ao PDF?",
+          "a": "Não. Ele leva as palavras, não o layout: cada página do PDF vira uma seção com o texto em parágrafos. As imagens e a formatação exata não são levadas."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "O que posso fazer com o arquivo HTML?",
+          "a": "Abrir em qualquer navegador, colar em um site ou em um editor de conteúdo, ou usar como ponto de partida para uma página da web feita a partir de um documento."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "Meu PDF é enviado para convertê-lo em HTML?",
+          "a": "Não. O texto é extraído e o HTML é montado no seu navegador, então o PDF nunca sai do seu dispositivo."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Como converter PDF para HTML",
+        "intro": "PDF para HTML transforma um PDF em uma página da web simples: uma seção por página do PDF, com o texto em parágrafos. Ele leva as palavras, não o layout.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Escolha um PDF com texto de verdade (passe o OCR PDF primeiro nos escaneamentos)",
+          "Clique em Converter para HTML",
+          "Baixe o arquivo .html ou copie o código da pré-visualização"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Editar metadados",
+      "description": "Altere o título, o autor, o assunto e as palavras-chave de um PDF",
+      "seoTitle": "Editar metadados de PDF — Alterar título, autor e palavras-chave",
+      "metaDescription": "Altere o título, o autor, o assunto e as palavras-chave de um PDF no navegador. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Onde o título aparece?",
+          "a": "Na guia ou na barra de título do leitor de PDF, nas buscas de arquivos e nos resultados de pesquisa quando o PDF é indexado. Um título claro ajuda as pessoas a encontrar o documento."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Editar os metadados muda o documento em si?",
+          "a": "Não. As páginas, o texto e as imagens ficam exatamente como estão — só mudam as informações guardadas sobre o documento."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Posso limpar um campo?",
+          "a": "Sim. Deixe o campo vazio e salve — esse valor é removido do PDF."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Como editar os metadados de um PDF",
+        "intro": "Editar metadados muda as informações guardadas sobre um PDF — título, autor, assunto e palavras-chave — sem tocar nas páginas.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Escolha um PDF para ver o título, o autor, o assunto e as palavras-chave atuais",
+          "Altere os campos que quiser — deixe um vazio para limpá-lo",
+          "Clique em Salvar metadados e baixe o PDF atualizado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Achatar PDF",
+      "description": "Torne os campos do formulário permanentes e remova as anotações",
+      "seoTitle": "Achatar PDF — Tornar campos de formulário permanentes grátis",
+      "metaDescription": "Fixe os campos do formulário de um PDF na página e remova as anotações, para que as respostas não possam mais ser alteradas. Grátis, sem upload.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "O que acontece com os campos do formulário?",
+          "a": "Os valores são desenhados na própria página e os campos são removidos, então as respostas preenchidas não podem mais ser editadas nem apagadas."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "O que acontece com os comentários e destaques?",
+          "a": "Eles são removidos, porque não podem ser fixados na página sem transformá-la em imagem. Os links são mantidos."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Achatar muda o texto?",
+          "a": "Não. O texto continua sendo texto de verdade, selecionável — nada é transformado em imagem."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Como achatar um PDF",
+        "intro": "Achatar PDF fixa os campos do formulário permanentemente na página e remove comentários e destaques, para que as respostas preenchidas não possam mais ser alteradas. Os links são mantidos e o texto continua selecionável.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Escolha um PDF com campos de formulário ou anotações",
+          "Clique em Achatar PDF",
+          "Baixe a cópia achatada"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Preencher formulário PDF",
+      "description": "Preencha um formulário PDF e salve a cópia preenchida",
+      "seoTitle": "Preencher formulário PDF — Preencher um PDF online grátis",
+      "metaDescription": "Preencha um formulário PDF no navegador — campos de texto, caixas de seleção e listas suspensas — e salve a cópia preenchida. Grátis, sem cadastro.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Quais campos posso preencher?",
+          "a": "Campos de texto, caixas de seleção, listas suspensas e grupos de botões de opção. Botões e campos de assinatura não podem ser preenchidos aqui — use Assinar PDF para assinaturas."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Diz que o PDF não tem campos preenchíveis. Por quê?",
+          "a": "O PDF é um escaneamento plano ou um formulário impresso sem campos interativos. Só PDFs criados com campos de formulário de verdade podem ser preenchidos — um formulário escaneado precisa de OCR primeiro e, mesmo assim, continua sendo uma imagem de um formulário."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Posso travar as respostas depois?",
+          "a": "Sim. Passe o PDF preenchido pelo Achatar PDF e as respostas se tornam permanentes."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Como preencher um formulário PDF",
+        "intro": "Preencher formulário PDF lista todos os campos preenchíveis de um PDF — campos de texto, caixas de seleção, listas suspensas — para você completar o formulário no navegador e salvá-lo.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Escolha um PDF com campos de formulário preenchíveis",
+          "Preencha cada campo no painel",
+          "Clique em Salvar PDF preenchido e baixe a cópia completa"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Texto para PDF",
+      "description": "Transforme texto simples em um documento PDF",
+      "seoTitle": "Texto para PDF — Transformar texto simples em PDF grátis",
+      "metaDescription": "Digite ou cole texto simples e transforme-o em um documento PDF no navegador. Grátis, sem cadastro, sem upload e sem marca d'água.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Posso formatar o texto?",
+          "a": "Não. Esta ferramenta transforma texto simples em um PDF limpo — títulos e negrito não são levados. Para documentos com estilo, use Word para PDF ou HTML para PDF."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "E os textos longos?",
+          "a": "Eles fluem por quantas páginas forem necessárias, com um título na primeira página se você adicionar um."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Meu texto é enviado?",
+          "a": "Não. O PDF é criado no seu navegador, então o texto nunca sai do seu dispositivo."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Como transformar texto em PDF",
+        "intro": "Texto para PDF transforma o texto simples que você digita ou cola em um documento PDF limpo, com um título opcional na primeira página.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Digite ou cole seu texto",
+          "Adicione um título ao documento, se quiser",
+          "Clique em Converter para PDF e baixe-o"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Cabeçalho e rodapé",
+      "description": "Carimbe um cabeçalho e um rodapé em todas as páginas",
+      "seoTitle": "Adicionar cabeçalho e rodapé a PDF grátis, sem upload",
+      "metaDescription": "Carimbe uma linha de cabeçalho e rodapé — com números de página opcionais — em todas as páginas de um PDF. Grátis, sem cadastro.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Posso adicionar só o cabeçalho ou só o rodapé?",
+          "a": "Sim. Deixe o outro campo vazio e só o que você preencheu será carimbado."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Onde o texto vai?",
+          "a": "À esquerda, no centro ou à direita, no topo ou no rodapé de cada página. O texto é desenhado por cima da página — ele não empurra o conteúdo que já existe."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Posso adicionar números de página também?",
+          "a": "Sim. Marque \"Adicionar números de página ao rodapé\" e cada página recebe um número no estilo \"1 de 12\" ao lado do seu texto de rodapé."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Como adicionar cabeçalho e rodapé a um PDF",
+        "intro": "Cabeçalho e rodapé carimba uma linha de texto no topo e/ou no rodapé de cada página, com números de página opcionais no rodapé.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Escolha um PDF",
+          "Digite o texto do cabeçalho e do rodapé — deixe um vazio para carimbar só o outro",
+          "Escolha a posição, o tamanho da fonte e se quer adicionar números de página",
+          "Clique em Adicionar cabeçalho e rodapé e baixe o resultado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Numeração Bates",
+      "description": "Carimbe números Bates sequenciais em todas as páginas",
+      "seoTitle": "Numeração Bates — Carimbar números sequenciais em PDF",
+      "metaDescription": "Carimbe com Bates todas as páginas de um PDF, com um prefixo e um número sequencial com zeros à esquerda. Grátis, sem cadastro.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "O que é a numeração Bates?",
+          "a": "Uma forma de carimbar cada página de um conjunto de documentos com um número sequencial único — por exemplo, EXHIBIT-00042 — para que as páginas possam ser identificadas e citadas em trabalhos jurídicos e de discovery."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Posso escolher o prefixo e o número inicial?",
+          "a": "Sim. Defina qualquer prefixo, o número inicial, com quantos dígitos completar com zeros e onde o carimbo vai na página."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Isso muda o documento?",
+          "a": "Não. O carimbo é adicionado por cima de cada página; o conteúdo existente não é tocado."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Como numerar um PDF com Bates",
+        "intro": "Numeração Bates carimba cada página com um número sequencial único — um prefixo mais um número sequencial com zeros à esquerda, como EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Escolha um PDF",
+          "Defina o prefixo, o número inicial e com quantos dígitos completar com zeros",
+          "Escolha onde o carimbo vai na página",
+          "Clique em Aplicar numeração Bates e baixe o PDF carimbado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF em tons de cinza",
+      "description": "Transforme um PDF colorido em preto e branco",
+      "seoTitle": "PDF em tons de cinza — Converter PDF para preto e branco grátis",
+      "metaDescription": "Transforme um PDF colorido em preto e branco, página por página. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "O texto continuará selecionável?",
+          "a": "Não. As páginas são reconstruídas como imagens em preto e branco, então o texto passa a fazer parte da imagem. Use para imprimir ou compartilhar, não para editar o texto depois."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Funciona com PDFs escaneados?",
+          "a": "Sim. As páginas escaneadas já são imagens, então convertem sem problema — muitas vezes esse é o objetivo, para imprimir ou enviar por fax."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "Meu PDF é enviado?",
+          "a": "Não. A conversão roda inteiramente no seu navegador, então o PDF nunca sai do seu dispositivo."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Como converter um PDF para tons de cinza",
+        "intro": "PDF em tons de cinza reconstrói cada página em preto e branco. Foi feito para imprimir e enviar por fax — as páginas viram imagens, então o texto não fica mais selecionável depois.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Escolha seu PDF",
+          "Clique em Converter para tons de cinza",
+          "Baixe o PDF em preto e branco"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Redimensionar PDF",
+      "description": "Mude as páginas de um PDF para A4, Carta, A3 ou um tamanho personalizado",
+      "seoTitle": "Redimensionar PDF — Mudar o tamanho da página para A4 ou Carta",
+      "metaDescription": "Mude todas as páginas de um PDF para A4, Carta, A3, A5 ou um tamanho personalizado. O conteúdo é ajustado para caber, centralizado. Grátis, sem upload.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Qual é a diferença para Cortar PDF?",
+          "a": "Cortar apara as margens de uma página; Redimensionar muda o tamanho da página em si — A4, Carta, A3, A5 ou qualquer tamanho personalizado — e ajusta o conteúdo para caber."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "O texto continuará selecionável?",
+          "a": "Sim. As páginas são remontadas, não renderizadas de novo, então o texto e os vetores ficam intactos."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Posso definir um tamanho personalizado?",
+          "a": "Sim. Escolha Personalizado e digite a largura e a altura em milímetros."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Como redimensionar páginas de um PDF",
+        "intro": "Redimensionar PDF muda todas as páginas para A4, Carta, A3, A5 ou um tamanho que você digitar, ajustando o conteúdo para caber, centralizado. O texto e os vetores ficam intactos.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Escolha seu PDF",
+          "Escolha A4, Carta, A3, A5 ou Personalizado e digite o tamanho em milímetros",
+          "Clique em Redimensionar páginas",
+          "Baixe o PDF redimensionado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Endireitar PDF",
+      "description": "Endireite páginas escaneadas tortas",
+      "seoTitle": "Endireitar PDF — Endireitar páginas escaneadas tortas grátis",
+      "metaDescription": "Endireite páginas escaneadas tortas. A inclinação é detectada automaticamente ou ajustada à mão com o controle deslizante. Grátis, sem upload.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Como ele detecta a inclinação?",
+          "a": "Ele lê as primeiras páginas e encontra o ângulo em que as linhas de texto ficam mais retas, e depois oferece esse ângulo no controle deslizante. Você pode ajustá-lo à mão se parecer errado."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "O texto continuará selecionável?",
+          "a": "Não. As páginas são reconstruídas como imagens endireitadas, então o texto passa a fazer parte da imagem. Use para páginas escaneadas, onde não há texto selecionável de qualquer forma."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Até onde ele endireita?",
+          "a": "Até 10 graus para cada lado, o que cobre quase todas as páginas mal alimentadas pelo scanner."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Como endireitar um PDF",
+        "intro": "Endireitar PDF endireita páginas escaneadas tortas. A inclinação é detectada automaticamente quando você adiciona um arquivo, e o controle deslizante permite ajustá-la à mão.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Escolha seu PDF — a inclinação é detectada automaticamente",
+          "Confira o ângulo detectado e arraste o controle deslizante se a página ainda parecer torta",
+          "Use a pré-visualização ao vivo para ver a primeira página endireitada",
+          "Clique em Endireitar PDF e baixe o resultado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Alternar e misturar",
+      "description": "Intercale as páginas de dois PDFs, uma após a outra",
+      "seoTitle": "Alternar e misturar PDF — Intercalar dois PDFs grátis",
+      "metaDescription": "Intercale as páginas de dois PDFs — página 1 de cada um, depois página 2 de cada um — em um só arquivo. Grátis, sem cadastro.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "E se os dois PDFs tiverem tamanhos diferentes?",
+          "a": "O mais curto acaba primeiro; as páginas restantes do mais longo vão para o final, em ordem."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Qual documento vem primeiro?",
+          "a": "O primeiro documento que você adicionar fornece a página 1, o segundo fornece a página 2, e eles continuam alternando a partir daí."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "Para que isso serve?",
+          "a": "Para combinar duas versões de um documento página por página, intercalar perguntas e respostas, ou juntar escaneamentos de frente e verso em ordem de leitura."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Como intercalar dois PDFs",
+        "intro": "Alternar e misturar pega dois PDFs e intercala as páginas — página 1 de cada um, depois página 2 de cada um — em um único arquivo.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Adicione o primeiro documento e depois o segundo",
+          "Clique em Misturar PDFs",
+          "Baixe o arquivo intercalado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Remover páginas em branco",
+      "description": "Exclua as páginas em branco de um PDF",
+      "seoTitle": "Remover páginas em branco — Excluir páginas vazias de PDF grátis",
+      "metaDescription": "Encontre e exclua as páginas em branco de um PDF — aquelas que o scanner adiciona por engano. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Como ele sabe que uma página está em branco?",
+          "a": "Ele renderiza cada página e mede quanta tinta há nela. As páginas abaixo do limite são listadas antes de qualquer remoção, então você vê exatamente o que vai sair."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Ele vai remover uma página que só tem o número da página?",
+          "a": "Não na configuração Equilibrada — um número de página conta como tinta. Se mesmo assim remover uma página que você queria, use Estrita e rode de novo."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "Meu PDF é enviado?",
+          "a": "Não. A detecção e a remoção rodam inteiramente no seu navegador."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Como remover páginas em branco de um PDF",
+        "intro": "Remover páginas em branco encontra as páginas em branco que o scanner adicionou — geralmente no fim de uma pilha —, lista-as e as remove, deixando o resto intacto.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Escolha seu PDF",
+          "Confira as páginas em branco encontradas e mude a sensibilidade se ele perdeu alguma ou marcou uma página que você quer manter",
+          "Clique em Remover páginas em branco",
+          "Baixe o PDF limpo"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "Coloque 2, 4, 6 ou 9 páginas em cada folha",
+      "seoTitle": "N-up PDF — Colocar várias páginas em uma folha grátis",
+      "metaDescription": "Coloque 2, 4, 6 ou 9 páginas de um PDF em cada folha, para livretos e apostilas. Grátis, sem cadastro e sem upload.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Qual é o tamanho das folhas?",
+          "a": "Cada folha mantém o tamanho da primeira página do seu PDF — geralmente A4 ou Carta. As páginas de origem são ajustadas para caber na sua célula."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "O texto continuará legível?",
+          "a": "Sim. As páginas são remontadas, não renderizadas de novo, então o texto e os vetores ficam nítidos. Em 9 por folha, a letra é pequena, como deve ser."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Posso escolher a ordem?",
+          "a": "As páginas vão da esquerda para a direita, de cima para baixo, na ordem original."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Como colocar várias páginas de um PDF em uma folha",
+        "intro": "N-up PDF coloca 2, 4, 6 ou 9 páginas de origem em cada folha, para livretos e apostilas. Cada folha mantém o tamanho da primeira página.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Escolha seu PDF",
+          "Escolha 2, 4, 6 ou 9 por folha",
+          "Clique em Criar PDF N-up",
+          "Baixe o resultado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Adicionar página em branco",
+      "description": "Insira páginas em branco ou páginas de outro PDF",
+      "seoTitle": "Adicionar página em branco — Inserir páginas em um PDF grátis",
+      "metaDescription": "Insira páginas em branco — ou todas as páginas de outro PDF — em um PDF, no início, no fim, após cada página ou após uma página escolhida. Grátis, sem upload.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Onde a página em branco pode ir?",
+          "a": "No início, no fim, após cada página ou após qualquer número de página que você escolher."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Como insiro páginas de outro PDF?",
+          "a": "Escolha \"Páginas de outro PDF\", adicione o segundo arquivo depois do primeiro e escolha para onde vão as páginas dele."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Qual é o tamanho da página em branco?",
+          "a": "O mesmo tamanho da primeira página do seu PDF."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Como adicionar uma página em branco a um PDF",
+        "intro": "Adicionar página em branco insere páginas em branco — ou todas as páginas de um segundo PDF — no início, no fim, após cada página ou após uma página que você escolher.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Escolha seu PDF",
+          "Escolha Página em branco, ou Páginas de outro PDF e adicione o segundo arquivo",
+          "Escolha para onde vão as páginas",
+          "Clique em Adicionar página em branco e baixe o resultado"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privado — o arquivo é processado no seu navegador e nunca é enviado",
+          "Grátis, sem conta, sem marca d'água e sem limite diário",
+          "Funciona em qualquer navegador moderno no Windows, Mac, Linux, iPhone e Android"
         ]
       }
     }

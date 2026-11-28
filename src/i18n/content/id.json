@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF ke PNG",
+      "description": "Ubah halaman PDF menjadi gambar PNG",
+      "seoTitle": "PDF ke PNG — Ubah Halaman PDF Menjadi PNG Gratis",
+      "metaDescription": "Ubah setiap halaman PDF menjadi gambar PNG pada 144 atau 216 DPI. Gratis, tanpa daftar, tanpa tanda air, dan PDF tidak pernah keluar dari browser Anda.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Berapa resolusi PNG yang dihasilkan?",
+          "a": "Halaman dirender pada 144 DPI (Standar) atau 216 DPI (Tinggi), apa pun sumbernya. Resolusi Tinggi menghasilkan teks yang lebih tajam dan file yang lebih besar."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Apa bedanya dengan PDF ke JPG?",
+          "a": "PNG bersifat lossless, jadi tepi yang tajam dan teks tetap jernih; file JPG lebih kecil. Gunakan PNG jika Anda butuh piksel yang persis, JPG jika Anda butuh file kecil."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "Apakah PDF saya diunggah untuk diubah menjadi PNG?",
+          "a": "Tidak. Setiap halaman dirender menjadi gambar di browser Anda, jadi PDF tidak pernah keluar dari perangkat Anda."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Cara mengubah PDF menjadi PNG",
+        "intro": "PDF ke PNG menyimpan setiap halaman PDF sebagai gambar PNG, pada resolusi standar (144 DPI) atau tinggi (216 DPI). PNG bersifat lossless, jadi teks dan tepi yang tajam tetap jernih.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Pilih satu atau beberapa PDF",
+          "Pilih resolusi Standar atau Tinggi",
+          "Klik Ubah ke PNG",
+          "Unduh halaman satu per satu, atau semua halaman sekaligus sebagai ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF ke Teks",
+      "description": "Ekstrak semua teks dari PDF ke dalam file .txt biasa",
+      "seoTitle": "PDF ke Teks — Ekstrak Teks dari PDF Gratis",
+      "metaDescription": "Ekstrak semua teks dari PDF ke file .txt biasa, dengan judul opsional di setiap halaman. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Apa isi file .txt?",
+          "a": "Teks dari setiap halaman, sesuai urutan halaman. Aktifkan judul halaman untuk mendapatkan baris \"Halaman N\" sebelum setiap halaman, sehingga dokumen panjang lebih mudah dinavigasi."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Apakah ini berfungsi pada PDF hasil pindaian?",
+          "a": "Hanya jika hasil pindaian memiliki lapisan teks. Pindaian berupa foto biasa tidak memiliki teks untuk diekstrak dan hasilnya kosong — jalankan OCR PDF terlebih dahulu, lalu ubah hasil yang bisa dicari itu menjadi teks."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "Apakah PDF saya diunggah untuk mengekstrak teksnya?",
+          "a": "Tidak. Teks dibaca dari PDF di browser Anda, jadi file tidak pernah keluar dari perangkat Anda."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Cara mengekstrak teks dari PDF",
+        "intro": "PDF ke Teks menarik teks dari PDF ke dalam file .txt biasa, halaman demi halaman, dengan judul opsional di setiap halaman.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Pilih PDF yang berisi teks asli (jalankan OCR PDF terlebih dahulu pada hasil pindaian)",
+          "Centang \"Tambahkan judul untuk setiap halaman\" jika Anda ingin penanda Halaman N",
+          "Klik Ubah ke Teks",
+          "Unduh file .txt, atau salin teks dari pratinjau"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Ekstrak Gambar",
+      "description": "Ambil foto dan gambar dari PDF sebagai file PNG",
+      "seoTitle": "Ekstrak Gambar dari PDF — Simpan Foto sebagai PNG Gratis",
+      "metaDescription": "Ambil foto, logo, dan gambar dari PDF lalu simpan sebagai file PNG. Gratis, tanpa daftar, PDF tidak pernah keluar dari browser Anda.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Seberapa bagus kualitas gambar yang diekstrak?",
+          "a": "Kualitas penuh seperti yang tersimpan di dalam PDF — gambar disimpan persis seperti di dalam PDF, sebagai PNG. Tidak ada yang dikompres ulang atau diperkecil."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Bagaimana jika PDF saya adalah hasil pindaian?",
+          "a": "Halaman hasil pindaian adalah satu gambar besar, jadi Anda mendapatkan kembali gambar seluruh halaman itu. Untuk halaman teks asli, setiap foto, logo, dan gambar yang tertanam diekstrak secara terpisah."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "Apakah PDF saya diunggah untuk mengekstrak gambarnya?",
+          "a": "Tidak. Gambar diambil dari PDF di browser Anda, jadi file tidak pernah keluar dari perangkat Anda."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Cara mengekstrak gambar dari PDF",
+        "intro": "Ekstrak Gambar mengambil setiap foto, logo, dan gambar yang tertanam dalam PDF lalu menyimpannya sebagai file PNG dengan kualitas penuh seperti aslinya.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Pilih sebuah PDF",
+          "Klik Ekstrak Gambar",
+          "Unduh gambarnya — beberapa gambar diunduh sekaligus sebagai ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF ke HTML",
+      "description": "Ubah PDF menjadi halaman web HTML biasa",
+      "seoTitle": "PDF ke HTML — Ubah PDF Menjadi Halaman Web Gratis",
+      "metaDescription": "Ubah PDF menjadi halaman HTML biasa, satu bagian per halaman PDF. Gratis, tanpa daftar, tanpa unggah — teks tidak pernah keluar dari browser Anda.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "Apakah HTML-nya akan terlihat seperti PDF?",
+          "a": "Tidak. Yang dipindahkan adalah kata-katanya, bukan tata letaknya: setiap halaman PDF menjadi satu bagian dengan teksnya sebagai paragraf. Gambar dan pemformatan persis tidak ikut terbawa."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Apa yang bisa saya lakukan dengan file HTML itu?",
+          "a": "Buka di browser apa pun, tempel ke situs web atau editor konten, atau jadikan titik awal untuk halaman web yang dibuat dari sebuah dokumen."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "Apakah PDF saya diunggah untuk diubah menjadi HTML?",
+          "a": "Tidak. Teks diekstrak dan HTML dibuat di browser Anda, jadi PDF tidak pernah keluar dari perangkat Anda."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Cara mengubah PDF menjadi HTML",
+        "intro": "PDF ke HTML mengubah PDF menjadi halaman web biasa: satu bagian per halaman PDF, dengan teks sebagai paragraf. Yang dipindahkan adalah kata-katanya, bukan tata letaknya.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Pilih PDF yang berisi teks asli (jalankan OCR PDF terlebih dahulu pada hasil pindaian)",
+          "Klik Ubah ke HTML",
+          "Unduh file .html, atau salin markup dari pratinjau"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
       "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "description": "Ubah judul, penulis, subjek, dan kata kunci PDF",
+      "seoTitle": "Edit Metadata PDF — Ubah Judul, Penulis & Kata Kunci",
+      "metaDescription": "Ubah judul, penulis, subjek, dan kata kunci PDF di browser Anda. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Di mana judul itu muncul?",
+          "a": "Di tab atau bilah judul pembaca PDF, dalam pencarian file, dan dalam hasil pencarian saat PDF diindeks. Judul yang jelas membantu orang menemukan dokumen."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Apakah mengedit metadata mengubah dokumen itu sendiri?",
+          "a": "Tidak. Halaman, teks, dan gambar tetap persis seperti semula — hanya informasi yang tersimpan tentang dokumen yang berubah."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Bisakah saya mengosongkan sebuah kolom?",
+          "a": "Ya. Biarkan kolom kosong lalu simpan — nilai itu akan dihapus dari PDF."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Cara mengedit metadata PDF",
+        "intro": "Edit Metadata mengubah informasi yang tersimpan tentang PDF — judul, penulis, subjek, dan kata kuncinya — tanpa menyentuh halaman-halamannya.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Pilih PDF untuk melihat judul, penulis, subjek, dan kata kuncinya saat ini",
+          "Ubah kolom yang Anda inginkan — kosongkan satu kolom untuk menghapusnya",
+          "Klik Simpan Metadata lalu unduh PDF yang sudah diperbarui"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Ratakan PDF",
+      "description": "Jadikan kolom formulir permanen dan hapus anotasi",
+      "seoTitle": "Ratakan PDF — Jadikan Kolom Formulir Permanen Gratis",
+      "metaDescription": "Tanamkan kolom formulir PDF secara permanen ke dalam halaman dan hapus anotasi, sehingga jawaban tidak bisa lagi diubah. Gratis, tanpa unggah.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Apa yang terjadi pada kolom formulir?",
+          "a": "Nilainya digambar ke dalam halaman itu sendiri dan kolomnya dihapus, sehingga jawaban yang sudah diisi tidak bisa lagi diedit atau dihapus."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Apa yang terjadi pada komentar dan sorotan?",
+          "a": "Semuanya dihapus, karena tidak bisa ditanamkan ke halaman tanpa mengubah halaman menjadi gambar. Tautan tetap dipertahankan."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Apakah perataan mengubah teks?",
+          "a": "Tidak. Teks tetap berupa teks asli yang bisa dipilih — tidak ada yang diubah menjadi gambar."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Cara meratakan PDF",
+        "intro": "Ratakan PDF menanamkan kolom formulir secara permanen ke dalam halaman dan menghapus komentar serta sorotan, sehingga jawaban yang sudah diisi tidak bisa lagi diubah. Tautan tetap ada, dan teks tetap bisa dipilih.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Pilih PDF yang memiliki kolom formulir atau anotasi",
+          "Klik Ratakan PDF",
+          "Unduh salinan yang sudah diratakan"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Isi Formulir PDF",
+      "description": "Isi formulir PDF dan simpan salinan yang sudah lengkap",
+      "seoTitle": "Isi Formulir PDF — Isi Formulir PDF Online Gratis",
+      "metaDescription": "Isi formulir PDF di browser Anda — kolom teks, kotak centang, dan dropdown — lalu simpan salinan yang sudah lengkap. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Kolom apa saja yang bisa saya isi?",
+          "a": "Kolom teks, kotak centang, daftar dropdown, dan grup tombol radio. Tombol dan kolom tanda tangan tidak bisa diisi di sini — gunakan Tanda Tangan PDF untuk tanda tangan."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Muncul pesan PDF tidak memiliki kolom yang bisa diisi. Mengapa?",
+          "a": "PDF itu adalah hasil pindaian datar atau formulir cetak tanpa kolom interaktif. Hanya PDF yang dibuat dengan kolom formulir asli yang bisa diisi — formulir hasil pindaian perlu OCR terlebih dahulu, dan itu pun tetap berupa gambar formulir."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Bisakah saya mengunci jawaban setelahnya?",
+          "a": "Ya. Jalankan PDF yang sudah diisi melalui Ratakan PDF dan jawabannya menjadi permanen."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Cara mengisi formulir PDF",
+        "intro": "Isi Formulir PDF menampilkan setiap kolom yang bisa diisi dalam PDF — kolom teks, kotak centang, dropdown — sehingga Anda bisa melengkapi formulir di browser lalu menyimpannya.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Pilih PDF yang memiliki kolom formulir yang bisa diisi",
+          "Isi setiap kolom di panel",
+          "Klik Simpan PDF yang Sudah Diisi lalu unduh salinan lengkapnya"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Teks ke PDF",
+      "description": "Ubah teks biasa menjadi dokumen PDF",
+      "seoTitle": "Teks ke PDF — Ubah Teks Biasa Menjadi PDF Gratis",
+      "metaDescription": "Ketik atau tempel teks biasa lalu ubah menjadi dokumen PDF di browser Anda. Gratis, tanpa daftar, tanpa unggah, tanpa tanda air.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Bisakah saya memformat teks?",
+          "a": "Tidak. Alat ini mengubah teks biasa menjadi PDF yang rapi — judul dan huruf tebal tidak ikut terbawa. Untuk dokumen bergaya, gunakan Word ke PDF atau HTML ke PDF sebagai gantinya."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Bagaimana dengan teks yang panjang?",
+          "a": "Teks mengalir ke halaman sebanyak yang dibutuhkan, dengan judul di halaman pertama jika Anda menambahkannya."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Apakah teks saya diunggah?",
+          "a": "Tidak. PDF dibuat di browser Anda, jadi teks tidak pernah keluar dari perangkat Anda."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Cara mengubah teks menjadi PDF",
+        "intro": "Teks ke PDF mengubah teks biasa yang Anda ketik atau tempel menjadi dokumen PDF yang rapi, dengan judul opsional di halaman pertama.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Ketik atau tempel teks Anda",
+          "Tambahkan judul dokumen jika Anda mau",
+          "Klik Ubah ke PDF lalu unduh"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
       "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "description": "Beri cap header dan footer di setiap halaman",
+      "seoTitle": "Tambah Header & Footer ke PDF Gratis, Tanpa Unggah",
+      "metaDescription": "Beri cap baris header dan footer — dengan nomor halaman opsional — di setiap halaman PDF. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Bisakah saya menambahkan header saja, atau footer saja?",
+          "a": "Ya. Biarkan kolom lainnya kosong dan hanya yang Anda isi yang dicap."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Ke mana teks itu ditempatkan?",
+          "a": "Kiri, tengah, atau kanan, di atas atau bawah setiap halaman. Teks digambar di atas halaman — tidak menggeser konten yang sudah ada."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Bisakah saya menambahkan nomor halaman juga?",
+          "a": "Ya. Centang \"Tambahkan nomor halaman ke footer\" dan setiap halaman mendapat nomor gaya \"1 dari 12\" di samping teks footer Anda."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Cara menambahkan header dan footer ke PDF",
+        "intro": "Header & Footer memberi cap satu baris teks di atas dan/atau bawah setiap halaman, dengan nomor halaman opsional di footer.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Pilih sebuah PDF",
+          "Ketik teks header dan footer — kosongkan salah satunya untuk mencap yang lain saja",
+          "Pilih posisi, ukuran font, dan apakah akan menambahkan nomor halaman",
+          "Klik Tambah Header & Footer lalu unduh hasilnya"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Penomoran Bates",
+      "description": "Beri cap nomor Bates berurutan di setiap halaman",
+      "seoTitle": "Penomoran Bates — Beri Cap Nomor Berurutan pada PDF",
+      "metaDescription": "Beri cap Bates pada setiap halaman PDF dengan awalan dan nomor urut berformat nol di depan. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Apa itu penomoran Bates?",
+          "a": "Cara memberi cap nomor urut unik pada setiap halaman dalam satu set dokumen — misalnya EXHIBIT-00042 — agar halaman bisa diidentifikasi dan dirujuk dalam pekerjaan hukum dan discovery."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Bisakah saya memilih awalan dan nomor awal?",
+          "a": "Ya. Atur awalan apa pun, nomor awal, jumlah digit dengan nol di depan, dan posisi cap pada halaman."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Apakah ini mengubah dokumen?",
+          "a": "Tidak. Cap ditambahkan di atas setiap halaman; konten yang ada tidak disentuh."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Cara memberi nomor Bates pada PDF",
+        "intro": "Penomoran Bates memberi cap nomor urut unik pada setiap halaman — awalan ditambah nomor urut dengan nol di depan, seperti EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Pilih sebuah PDF",
+          "Atur awalan, nomor awal, dan jumlah digit dengan nol di depan",
+          "Pilih posisi cap pada halaman",
+          "Klik Terapkan Nomor Bates lalu unduh PDF yang sudah dicap"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF Grayscale",
+      "description": "Ubah PDF berwarna menjadi hitam putih",
+      "seoTitle": "PDF Grayscale — Ubah PDF Menjadi Hitam Putih Gratis",
+      "metaDescription": "Ubah PDF berwarna menjadi hitam putih, halaman demi halaman. Gratis, tanpa daftar, tanpa unggah — file tidak pernah keluar dari browser Anda.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Apakah teks tetap bisa dipilih?",
+          "a": "Tidak. Halaman dibangun ulang sebagai gambar hitam putih, sehingga teks menjadi bagian dari gambar. Gunakan untuk mencetak atau berbagi, bukan untuk mengedit teks setelahnya."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Apakah ini berfungsi pada PDF hasil pindaian?",
+          "a": "Ya. Halaman hasil pindaian memang sudah berupa gambar, jadi konversinya bersih — seringkali justru itulah tujuannya, untuk mencetak atau mengirim faks."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "Apakah PDF saya diunggah?",
+          "a": "Tidak. Konversi berjalan sepenuhnya di browser Anda, jadi PDF tidak pernah keluar dari perangkat Anda."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Cara mengubah PDF menjadi grayscale",
+        "intro": "PDF Grayscale membangun ulang setiap halaman dalam warna hitam putih. Alat ini dibuat untuk mencetak dan mengirim faks — halaman menjadi gambar, sehingga teks tidak lagi bisa dipilih setelahnya.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Pilih PDF Anda",
+          "Klik Ubah ke Grayscale",
+          "Unduh PDF hitam putih"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Ubah Ukuran PDF",
+      "description": "Ubah halaman PDF ke A4, Letter, A3, atau ukuran kustom",
+      "seoTitle": "Ubah Ukuran PDF — Ubah Ukuran Halaman PDF ke A4 atau Letter",
+      "metaDescription": "Ubah setiap halaman PDF ke A4, Letter, A3, A5, atau ukuran kustom. Konten diskalakan agar muat, di tengah. Gratis, tanpa unggah, tanpa daftar.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Apa bedanya dengan Potong PDF?",
+          "a": "Potong memangkas margin halaman; Ubah Ukuran mengubah ukuran halaman itu sendiri — A4, Letter, A3, A5, atau ukuran kustom apa pun — dan menskalakan konten agar muat."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Apakah teks tetap bisa dipilih?",
+          "a": "Ya. Halaman ditata ulang, bukan dirender ulang, sehingga teks dan vektor tetap utuh."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Bisakah saya mengatur ukuran kustom?",
+          "a": "Ya. Pilih Kustom lalu masukkan lebar dan tinggi dalam milimeter."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Cara mengubah ukuran halaman PDF",
+        "intro": "Ubah Ukuran PDF mengubah setiap halaman ke A4, Letter, A3, A5, atau ukuran yang Anda masukkan, dengan menskalakan konten agar muat, di tengah. Teks dan vektor tetap utuh.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Pilih PDF Anda",
+          "Pilih A4, Letter, A3, A5, atau Kustom lalu masukkan ukuran dalam milimeter",
+          "Klik Ubah Ukuran Halaman",
+          "Unduh PDF yang sudah diubah ukurannya"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Luruskan PDF",
+      "description": "Luruskan halaman pindaian yang miring",
+      "seoTitle": "Luruskan PDF — Luruskan Halaman Pindaian yang Miring Gratis",
+      "metaDescription": "Luruskan halaman pindaian yang miring. Kemiringan terdeteksi otomatis, atau atur sendiri dengan slider. Gratis, tanpa unggah, tanpa daftar.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Bagaimana kemiringan dideteksi?",
+          "a": "Alat ini membaca halaman-halaman pertama dan mencari sudut di mana baris teks paling lurus, lalu menawarkan sudut itu pada slider. Anda bisa menyesuaikannya sendiri jika terlihat salah."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Apakah teks tetap bisa dipilih?",
+          "a": "Tidak. Halaman dibangun ulang sebagai gambar yang sudah diluruskan, sehingga teks menjadi bagian dari gambar. Gunakan untuk halaman hasil pindaian, yang memang tidak memiliki teks yang bisa dipilih."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Seberapa jauh kemiringan bisa diluruskan?",
+          "a": "Hingga 10 derajat ke kedua arah, yang mencakup hampir semua halaman pemindai yang salah masuk."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Cara meluruskan PDF",
+        "intro": "Luruskan PDF meluruskan halaman pindaian yang miring. Kemiringan terdeteksi otomatis saat Anda menambahkan file, dan slider memungkinkan Anda menyesuaikannya sendiri.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Pilih PDF Anda — kemiringan terdeteksi otomatis",
+          "Periksa sudut yang terdeteksi, dan seret slider jika halaman masih terlihat miring",
+          "Gunakan pratinjau Langsung untuk melihat halaman pertama yang sudah diluruskan",
+          "Klik Luruskan PDF lalu unduh hasilnya"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Selang-seling & Gabung",
+      "description": "Sisipkan halaman dua PDF secara berselang-seling",
+      "seoTitle": "Selang-seling & Gabung PDF — Sisipkan Dua PDF Gratis",
+      "metaDescription": "Sisipkan halaman dua PDF — halaman 1 dari masing-masing, lalu halaman 2 dari masing-masing — menjadi satu file. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Bagaimana jika kedua PDF memiliki panjang berbeda?",
+          "a": "Yang lebih pendek habis duluan; sisa halaman dari yang lebih panjang diletakkan di akhir, sesuai urutan."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Dokumen mana yang muncul pertama?",
+          "a": "Dokumen pertama yang Anda tambahkan menyumbang halaman 1, dokumen kedua menyumbang halaman 2, dan keduanya terus berselang-seling dari sana."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "Untuk apa ini digunakan?",
+          "a": "Menggabungkan dua versi dokumen halaman demi halaman, menyisipkan soal dan jawaban secara bergantian, atau menggabungkan pindaian depan dan belakang ke dalam urutan baca."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Cara menyisipkan dua PDF secara berselang-seling",
+        "intro": "Selang-seling & Gabung mengambil dua PDF dan menyisipkan halaman-halamannya — halaman 1 dari masing-masing, lalu halaman 2 dari masing-masing — menjadi satu file.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Tambahkan dokumen pertama, lalu dokumen kedua",
+          "Klik Gabung PDF",
+          "Unduh file yang sudah disisipkan"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Hapus Halaman Kosong",
+      "description": "Hapus halaman kosong dari PDF",
+      "seoTitle": "Hapus Halaman Kosong — Hapus Halaman Kosong PDF Gratis",
+      "metaDescription": "Temukan dan hapus halaman kosong dalam PDF — yang ditambahkan pemindai karena kesalahan. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Bagaimana alat ini tahu sebuah halaman kosong?",
+          "a": "Alat ini merender setiap halaman dan mengukur seberapa banyak tinta di atasnya. Halaman di bawah ambang batas dicantumkan sebelum ada yang dihapus, sehingga Anda melihat persis apa yang akan hilang."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Apakah halaman yang hanya berisi nomor halaman akan dihapus?",
+          "a": "Tidak pada pengaturan Seimbang — nomor halaman dihitung sebagai tinta. Jika masih ada halaman yang Anda inginkan ikut terhapus, gunakan Ketat dan jalankan lagi."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "Apakah PDF saya diunggah?",
+          "a": "Tidak. Deteksi dan penghapusan berjalan sepenuhnya di browser Anda."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Cara menghapus halaman kosong dari PDF",
+        "intro": "Hapus Halaman Kosong menemukan halaman kosong yang ditambahkan pemindai — biasanya di akhir tumpukan — mencantumkannya, lalu menghapusnya, dan membiarkan sisanya tidak tersentuh.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Pilih PDF Anda",
+          "Periksa halaman kosong yang ditemukan, dan ubah sensitivitasnya jika ada yang terlewat atau ada halaman yang ingin Anda pertahankan ikut ditandai",
+          "Klik Hapus Halaman Kosong",
+          "Unduh PDF yang sudah dibersihkan"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "Letakkan 2, 4, 6, atau 9 halaman di setiap lembar",
+      "seoTitle": "N-up PDF — Letakkan Beberapa Halaman dalam Satu Lembar Gratis",
+      "metaDescription": "Letakkan 2, 4, 6, atau 9 halaman PDF di setiap lembar, untuk buklet dan handout. Gratis, tanpa daftar, tanpa unggah.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Berapa ukuran lembarnya?",
+          "a": "Setiap lembar tetap berukuran sama dengan halaman pertama PDF Anda — biasanya A4 atau Letter. Halaman sumber diskalakan agar muat dalam selnya."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Apakah teks tetap bisa dibaca?",
+          "a": "Ya. Halaman ditata ulang, bukan dirender ulang, sehingga teks dan vektor tetap tajam. Pada 9-up, cetakannya kecil, sebagaimana mestinya."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Bisakah saya memilih urutannya?",
+          "a": "Halaman berjalan dari kiri ke kanan, atas ke bawah, sesuai urutan aslinya."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Cara meletakkan beberapa halaman PDF dalam satu lembar",
+        "intro": "N-up PDF menata 2, 4, 6, atau 9 halaman sumber pada setiap lembar, untuk buklet dan handout. Setiap lembar tetap berukuran sama dengan halaman pertama.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Pilih PDF Anda",
+          "Pilih 2-up, 4-up, 6-up, atau 9-up",
+          "Klik Buat N-up PDF",
+          "Unduh hasilnya"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Tambah Halaman Kosong",
+      "description": "Sisipkan halaman kosong atau halaman dari PDF lain",
+      "seoTitle": "Tambah Halaman Kosong — Sisipkan Halaman ke PDF Gratis",
+      "metaDescription": "Sisipkan halaman kosong — atau semua halaman PDF lain — di awal, di akhir, setelah tiap halaman, atau setelah halaman pilihan. Gratis, tanpa unggah.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Di mana halaman kosong bisa ditempatkan?",
+          "a": "Di awal, di akhir, setelah setiap halaman, atau setelah nomor halaman apa pun yang Anda pilih."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Bagaimana cara menyisipkan halaman dari PDF lain?",
+          "a": "Pilih \"Halaman dari PDF lain\", tambahkan file kedua setelah file pertama, lalu pilih ke mana halamannya pergi."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Berapa ukuran halaman kosongnya?",
+          "a": "Sama dengan ukuran halaman pertama PDF Anda."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Cara menambahkan halaman kosong ke PDF",
+        "intro": "Tambah Halaman Kosong menyisipkan halaman kosong — atau semua halaman dari PDF kedua — di awal, di akhir, setelah setiap halaman, atau setelah halaman yang Anda pilih.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Pilih PDF Anda",
+          "Pilih Halaman kosong, atau Halaman dari PDF lain lalu tambahkan file kedua",
+          "Pilih ke mana halaman-halaman itu pergi",
+          "Klik Tambah Halaman Kosong lalu unduh hasilnya"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat — file diproses di browser Anda dan tidak pernah diunggah",
+          "Gratis, tanpa akun, tanpa tanda air, dan tanpa batas harian",
+          "Berfungsi di browser modern apa pun di Windows, Mac, Linux, iPhone, dan Android"
         ]
       }
     }

@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF转PNG",
+      "description": "将PDF页面转换为PNG图片",
+      "seoTitle": "PDF转PNG：免费将PDF页面转换为PNG",
+      "metaDescription": "将PDF的每一页转换为144或216 DPI的PNG图片。免费，无需注册，没有水印，PDF绝不离开浏览器。",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "生成的PNG是什么分辨率？",
+          "a": "页面按144 DPI（标准）或216 DPI（高清）渲染，与来源无关。高清模式文字更清晰，文件也更大。"
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "与PDF转JPG有什么区别？",
+          "a": "PNG是无损格式，边缘锐利、文字清晰；JPG文件更小。需要精确像素时用PNG，需要小文件时用JPG。"
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "转换时我的PDF会被上传吗？",
+          "a": "不会。每一页都在浏览器中渲染成图片，PDF绝不离开你的设备。"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "如何将PDF转换为PNG",
+        "intro": "PDF转PNG会把PDF的每一页保存为PNG图片，标准（144 DPI）或高清（216 DPI）分辨率。PNG是无损格式，文字和锐利边缘保持清晰。",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "选择一个或多个PDF",
+          "选择标准或高清分辨率",
+          "点击“转换为PNG”",
+          "下载单个页面，或将所有页面打包成ZIP一起下载"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF转文本",
+      "description": "把PDF中的全部文字提取为纯文本.txt文件",
+      "seoTitle": "PDF转文本：免费从PDF提取文字",
+      "metaDescription": "把PDF中的全部文字提取为纯文本.txt文件，可选每页加标题。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "TXT文件里有什么内容？",
+          "a": "每一页的文字，按页面顺序排列。开启页标题后，每页前会有一行“第N页”，长文档更容易浏览。"
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "扫描版PDF能用吗？",
+          "a": "只有带文字层的扫描件才可以。纯图片扫描没有文字可提取，结果会是空的——请先用“PDF OCR文字识别”处理，再把可搜索的结果转为文本。"
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "提取文字时我的PDF会被上传吗？",
+          "a": "不会。文字直接在浏览器中从PDF读取，文件绝不离开你的设备。"
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "如何从PDF提取文字",
+        "intro": "PDF转文本会把PDF中的文字提取到纯文本.txt文件中，一页接一页，还可为每页添加标题。",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "选择带有真实文字的PDF（扫描件请先用“PDF OCR文字识别”处理）",
+          "如需“第N页”标记，请勾选“为每页添加标题”",
+          "点击“转换为文本”",
+          "下载.txt文件，或从预览中复制文字"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "提取图片",
+      "description": "把PDF中的照片和插图提取为PNG文件",
+      "seoTitle": "从PDF提取图片：免费将照片保存为PNG",
+      "metaDescription": "把PDF中的照片、标志和插图提取出来，保存为PNG文件。免费，无需注册，PDF绝不离开浏览器。",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "提取的图片质量如何？",
+          "a": "完全是嵌入时的原始质量——图片按其在PDF中的原样保存为PNG，不会重新压缩或缩小。"
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "如果我的PDF是扫描件怎么办？",
+          "a": "扫描页本身就是一张大图，你会得到整页的图片。而在真实文字页面中，每张嵌入的照片、标志和插图都会被单独提取。"
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "提取图片时我的PDF会被上传吗？",
+          "a": "不会。图片直接在浏览器中从PDF提取，文件绝不离开你的设备。"
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "如何从PDF提取图片",
+        "intro": "提取图片会把PDF中嵌入的每一张照片、标志和插图提取出来，以原始嵌入质量保存为PNG文件。",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "选择一个PDF",
+          "点击“提取图片”",
+          "下载图片——多张图片会打包成ZIP一起下载"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF转HTML",
+      "description": "把PDF变成普通的HTML网页",
+      "seoTitle": "PDF转HTML：免费将PDF转换为网页",
+      "metaDescription": "把PDF变成普通的HTML页面，每页PDF对应一个章节。免费，无需注册，无需上传——文字绝不离开浏览器。",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "HTML会和PDF长得一样吗？",
+          "a": "不会。它迁移的是文字，不是版式：每个PDF页面变成一个章节，文字以段落呈现。图片和精确格式不会带过去。"
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "HTML文件可以用来做什么？",
+          "a": "在任何浏览器中打开，粘贴到网站或内容编辑器中，或者作为由文档改建的网页的起点。"
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "转换时我的PDF会被上传吗？",
+          "a": "不会。文字在浏览器中提取，HTML也在浏览器中生成，PDF绝不离开你的设备。"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "如何将PDF转换为HTML",
+        "intro": "PDF转HTML会把PDF变成一个普通网页：每个PDF页面对应一个章节，文字以段落呈现。它迁移的是文字，不是版式。",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "选择带有真实文字的PDF（扫描件请先用“PDF OCR文字识别”处理）",
+          "点击“转换为HTML”",
+          "下载.html文件，或从预览中复制代码"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "编辑元数据",
+      "description": "更改PDF的标题、作者、主题和关键词",
+      "seoTitle": "编辑PDF元数据：更改标题、作者和关键词",
+      "metaDescription": "在浏览器中更改PDF的标题、作者、主题和关键词。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "标题会显示在哪里？",
+          "a": "在PDF阅读器的标签页或标题栏、文件搜索结果中，以及PDF被索引时在搜索结果中。清晰的标题有助于别人找到这份文档。"
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "编辑元数据会改变文档本身吗？",
+          "a": "不会。页面、文字和图片保持原样——改变的只是关于这份文档所存储的信息。"
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "可以清空某个字段吗？",
+          "a": "可以。把字段留空并保存，该值就会从PDF中删除。"
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "如何编辑PDF元数据",
+        "intro": "编辑元数据会更改PDF中存储的信息——标题、作者、主题和关键词——而不动页面内容。",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "选择一个PDF，查看其当前的标题、作者、主题和关键词",
+          "修改想改的字段——留空某个字段即可清除它",
+          "点击“保存元数据”并下载更新后的PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "拼合PDF",
+      "description": "让表单字段永久固定，并去除注释",
+      "seoTitle": "拼合PDF：免费让表单字段永久固定",
+      "metaDescription": "把PDF的表单字段永久烧录到页面中并去除注释，答案将无法再更改。免费，无需上传。",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "表单字段会怎么样？",
+          "a": "它们的值会被绘制到页面本身，字段随之删除，因此填好的答案无法再编辑或清除。"
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "注释和高亮会怎么样？",
+          "a": "会被删除，因为不把页面变成图片就无法把它们烧录进去。链接会保留。"
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "拼合会改变文字吗？",
+          "a": "不会。文字仍是真实的、可选中的文字——没有任何内容被栅格化成图片。"
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "如何拼合PDF",
+        "intro": "拼合PDF会把表单字段永久烧录到页面中，并去除注释和高亮，因此填好的答案无法再更改。链接会保留，文字仍可选中。",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "选择带有表单字段或注释的PDF",
+          "点击“拼合PDF”",
+          "下载拼合后的副本"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "填写PDF表单",
+      "description": "填写PDF表单并保存已完成的副本",
+      "seoTitle": "填写PDF表单：免费在线填写PDF表单",
+      "metaDescription": "在浏览器中填写PDF表单——文本框、复选框和下拉框——并保存已完成的副本。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "可以填写哪些字段？",
+          "a": "文本框、复选框、下拉列表和单选按钮组。按钮和签名字段无法在这里填写——签名请使用“PDF签名”。"
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "为什么提示PDF没有可填写的字段？",
+          "a": "该PDF是平面扫描件或没有交互字段的打印表单。只有用真实表单字段制作的PDF才能填写——扫描表单需要先做OCR，而且即便如此它仍只是一张表单图片。"
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "之后可以锁定答案吗？",
+          "a": "可以。把填好的PDF用“拼合PDF”处理一次，答案就变成永久的了。"
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "如何填写PDF表单",
+        "intro": "填写PDF表单会列出PDF中的所有可填字段——文本框、复选框、下拉框——让你在浏览器中完成表单并保存。",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "选择带有可填表单字段的PDF",
+          "在面板中逐个填写字段",
+          "点击“保存已填PDF”并下载已完成的副本"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "文本转PDF",
+      "description": "把纯文本变成PDF文档",
+      "seoTitle": "文本转PDF：免费将纯文本变成PDF",
+      "metaDescription": "输入或粘贴纯文本，在浏览器中把它变成PDF文档。免费，无需注册，无需上传，没有水印。",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "可以设置文本格式吗？",
+          "a": "不可以。本工具把纯文本变成干净的PDF——标题和加粗不会带过去。如需带样式的文档，请改用Word转PDF或HTML转PDF。"
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "很长的文本怎么办？",
+          "a": "它会流式排布到所需任意多页，如果你加了标题，标题会出现在第一页。"
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "我的文字会被上传吗？",
+          "a": "不会。PDF在浏览器中生成，文字绝不离开你的设备。"
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "如何把文本变成PDF",
+        "intro": "文本转PDF会把你输入或粘贴的纯文本变成干净的PDF文档，第一页可加标题。",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "输入或粘贴你的文本",
+          "如需标题，请添加文档标题",
+          "点击“转换为PDF”并下载"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "页眉和页脚",
+      "description": "在每一页盖上页眉和页脚",
+      "seoTitle": "免费给PDF添加页眉和页脚，无需上传",
+      "metaDescription": "在PDF的每一页盖上页眉和页脚——可附页码。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "可以只加页眉或只加页脚吗？",
+          "a": "可以。把另一栏留空，只会盖上你填写的那一项。"
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "文字会放在哪里？",
+          "a": "左、中、右，位于每页的顶部或底部。文字绘制在页面之上，不会挤动已有内容。"
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "也可以加页码吗？",
+          "a": "可以。勾选“在页脚添加页码”，每一页都会在页脚文字旁得到一个“1 / 12”样式的页码。"
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "如何给PDF添加页眉和页脚",
+        "intro": "页眉和页脚会在每页顶部和/或底部盖上一行文字，页脚中可附页码。",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "选择一个PDF",
+          "输入页眉和页脚文字——留空一项则只盖另一项",
+          "选择位置、字号，以及是否添加页码",
+          "点击“添加页眉和页脚”并下载结果"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "贝茨编号",
+      "description": "在每一页盖上连续的贝茨编号",
+      "seoTitle": "贝茨编号：给PDF盖上连续编号",
+      "metaDescription": "用前缀和补零的流水号给PDF每一页盖上贝茨编号。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "什么是贝茨编号？",
+          "a": "一种给一套文档的每一页盖上唯一连续编号的方法——例如EXHIBIT-00042——便于在法律和证据开示工作中识别和引用页面。"
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "可以自选前缀和起始编号吗？",
+          "a": "可以。任意设置前缀、起始编号、补零位数，以及印章在页面上的位置。"
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "会改变文档吗？",
+          "a": "不会。印章加盖在每页之上，现有内容不受影响。"
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "如何给PDF加贝茨编号",
+        "intro": "贝茨编号会在每一页盖上唯一的连续编号——前缀加补零的流水号，例如EXHIBIT-00042。",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "选择一个PDF",
+          "设置前缀、起始编号和补零位数",
+          "选择印章在页面上的位置",
+          "点击“应用贝茨编号”并下载盖好章的PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF转灰度",
+      "description": "把彩色PDF变成黑白",
+      "seoTitle": "PDF转灰度：免费将PDF转换为黑白",
+      "metaDescription": "把彩色PDF逐页变成黑白。免费，无需注册，无需上传——文件绝不离开浏览器。",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "文字还能选中吗？",
+          "a": "不能。页面会重建为黑白图片，文字成为图片的一部分。适合打印或分享，不适合之后再编辑文字。"
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "扫描版PDF能用吗？",
+          "a": "可以。扫描页本身就是图片，转换很干净——这往往正是目的所在，为了打印或传真。"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "我的PDF会被上传吗？",
+          "a": "不会。转换完全在浏览器中运行，PDF绝不离开你的设备。"
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "如何把PDF转换为灰度",
+        "intro": "PDF转灰度会把每一页重建为黑白。它专为打印和传真而设计——页面变成图片，之后文字就无法再选中了。",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "选择你的PDF",
+          "点击“转换为灰度”",
+          "下载黑白PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "调整PDF尺寸",
+      "description": "把PDF页面改为A4、Letter、A3或自定义尺寸",
+      "seoTitle": "调整PDF尺寸：把PDF页面改为A4或Letter",
+      "metaDescription": "把PDF的每一页改为A4、Letter、A3、A5或自定义尺寸。内容按比例缩放并居中。免费，无需上传，无需注册。",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "与“裁剪PDF”有什么区别？",
+          "a": "裁剪是裁掉页面边距；调整尺寸是改变页面本身的大小——A4、Letter、A3、A5或任意自定义尺寸——并把内容缩放到合适大小。"
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "文字还能选中吗？",
+          "a": "可以。页面是重新排版而不是重新渲染，文字和矢量图保持完整。"
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "可以设置自定义尺寸吗？",
+          "a": "可以。选择“自定义”，输入以毫米为单位的宽度和高度。"
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "如何调整PDF页面尺寸",
+        "intro": "调整PDF尺寸会把每一页改为A4、Letter、A3、A5或你输入的尺寸，内容按比例缩放并居中。文字和矢量图保持完整。",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "选择你的PDF",
+          "选择A4、Letter、A3、A5，或“自定义”并输入毫米尺寸",
+          "点击“调整页面尺寸”",
+          "下载调整后的PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "PDF纠偏",
+      "description": "拉直倾斜的扫描页面",
+      "seoTitle": "PDF纠偏：免费拉直倾斜的扫描页面",
+      "metaDescription": "拉直倾斜的扫描页面。倾斜角度自动检测，也可用滑块手动设置。免费，无需上传，无需注册。",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "如何检测倾斜？",
+          "a": "它会读取前几页，找出文字行最直的角度，然后在滑块上提供该角度。如果看起来不对，你可以手动调整。"
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "文字还能选中吗？",
+          "a": "不能。页面会重建为拉直后的图片，文字成为图片的一部分。适用于本来就没有可选文字的扫描页。"
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "最多能纠正多少？",
+          "a": "任一方向最多10度，几乎涵盖所有进纸不正的扫描页。"
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "如何纠正PDF倾斜",
+        "intro": "PDF纠偏会拉直倾斜的扫描页面。添加文件时会自动检测倾斜角度，滑块可手动微调。",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "选择你的PDF——倾斜角度会自动检测",
+          "检查检测到的角度，如页面仍显倾斜请拖动滑块",
+          "使用实时预览查看拉直后的第一页",
+          "点击“纠偏PDF”并下载结果"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "交错合并",
+      "description": "把两个PDF的页面一页一页交错插入",
+      "seoTitle": "交错合并PDF：免费交错两个PDF",
+      "metaDescription": "把两个PDF的页面交错插入——先各取第1页，再各取第2页——合并为一个文件。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "如果两个PDF页数不同怎么办？",
+          "a": "较短的那个先用完；较长的那个剩余页面按顺序放在末尾。"
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "哪个文档排在前面？",
+          "a": "先添加的文档提供第1页，第二个提供第2页，此后一直交替。"
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "这有什么用？",
+          "a": "逐页合并文档的两个版本、交错排列问题与答案，或把正反面扫描件合并为阅读顺序。"
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "如何交错两个PDF",
+        "intro": "交错合并会取两个PDF并交错它们的页面——先各取第1页，再各取第2页——合并为一个文件。",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "先添加第一个文档，再添加第二个",
+          "点击“合并PDF”",
+          "下载交错后的文件"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "删除空白页",
+      "description": "删除PDF中的空白页",
+      "seoTitle": "删除空白页：免费删除PDF空白页",
+      "metaDescription": "查找并删除PDF中的空白页——那些扫描仪误加的页面。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "怎么知道一页是空白的？",
+          "a": "它会渲染每一页并测量页面上的墨量。低于阈值的页面会在删除前先列出来，让你确切看到哪些会被删掉。"
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "只有页码的页面会被删除吗？",
+          "a": "在“均衡”设置下不会——页码也算作墨量。如果仍删掉了你想要的页面，请改用“严格”再运行一次。"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "我的PDF会被上传吗？",
+          "a": "不会。检测和删除完全在浏览器中运行。"
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "如何删除PDF中的空白页",
+        "intro": "删除空白页会找到扫描仪多加的空白页——通常在纸叠末尾——先列出来再删除，其余页面原封不动。",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "选择你的PDF",
+          "检查找到的空白页，如有遗漏或误标了想要保留的页面，请调整灵敏度",
+          "点击“删除空白页”",
+          "下载清理后的PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
-      "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "name": "N合1 PDF",
+      "description": "把2、4、6或9页放在每张纸上",
+      "seoTitle": "N合1 PDF：免费把多页放在一张纸上",
+      "metaDescription": "把2、4、6或9页PDF放在每张纸上，适合制作小册子和讲义。免费，无需注册，无需上传。",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "纸张是多大？",
+          "a": "每张纸保持与PDF第一页相同的尺寸——通常是A4或Letter。源页面会缩放到各自的格子中。"
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "文字还能看清吗？",
+          "a": "可以。页面是重新排版而不是重新渲染，文字和矢量图保持清晰。9合1时字会很小，本来就该如此。"
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "可以选择顺序吗？",
+          "a": "页面按原始顺序，从左到右、从上到下排列。"
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "如何把多个PDF页面放在一张纸上",
+        "intro": "N合1 PDF会把2、4、6或9个源页面排在每张纸上，适合制作小册子和讲义。每张纸保持与第一页相同的尺寸。",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "选择你的PDF",
+          "选择2合1、4合1、6合1或9合1",
+          "点击“创建N合1 PDF”",
+          "下载结果"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "添加空白页",
+      "description": "插入空白页或另一个PDF的页面",
+      "seoTitle": "添加空白页：免费向PDF插入页面",
+      "metaDescription": "向PDF插入空白页——或另一个PDF的全部页面——可放在开头、结尾、每页之后，或指定页面之后。免费，无需上传。",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "空白页可以放在哪里？",
+          "a": "开头、结尾、每页之后，或任意指定页码之后。"
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "如何插入另一个PDF的页面？",
+          "a": "选择“来自另一个PDF的页面”，在第一个文件后添加第二个文件，再选择它的页面放在哪里。"
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "空白页是多大？",
+          "a": "与PDF第一页相同的尺寸。"
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "如何给PDF添加空白页",
+        "intro": "添加空白页会在开头、结尾、每页之后，或你指定的页面之后，插入空白页——或第二个PDF的全部页面。",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "选择你的PDF",
+          "选择“空白页”，或选择“来自另一个PDF的页面”并添加第二个文件",
+          "选择页面放在哪里",
+          "点击“添加空白页”并下载结果"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "私密：文件在浏览器中处理，绝不上传",
+          "免费，无需账号，没有水印，没有每日次数限制",
+          "适用于Windows、Mac、Linux、iPhone和Android上的任何现代浏览器"
         ]
       }
     }

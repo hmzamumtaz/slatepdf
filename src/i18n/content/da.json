@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF til PNG",
+      "description": "Konverter PDF-sider til PNG-billeder",
+      "seoTitle": "PDF til PNG – konverter PDF-sider til PNG gratis",
+      "metaDescription": "Konverter hver side i en PDF til et PNG-billede ved 144 eller 216 DPI. Gratis, uden tilmelding og uden vandmærker – PDF'en forlader aldrig din browser.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Hvilken opløsning får PNG'erne?",
+          "a": "Siderne gengives ved 144 DPI (Standard) eller 216 DPI (Høj), uanset kilden. Høj giver skarpere tekst og større filer."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Hvad er forskellen fra PDF til JPG?",
+          "a": "PNG er tabsfrit, så det bevarer skarpe kanter og skarp tekst; JPG-filer er mindre. Brug PNG, når du har brug for præcise pixels, og JPG, når du har brug for små filer."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "Uploades min PDF for at konvertere den til PNG?",
+          "a": "Nej. Hver side gengives som billede i din browser, så PDF'en forlader aldrig din enhed."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Sådan konverterer du PDF til PNG",
+        "intro": "PDF til PNG gemmer hver side i en PDF som et PNG-billede i standardopløsning (144 DPI) eller høj opløsning (216 DPI). PNG er tabsfrit, så tekst og skarpe kanter forbliver skarpe.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Vælg en eller flere PDF'er",
+          "Vælg Standard- eller Høj opløsning",
+          "Klik på Konverter til PNG",
+          "Download enkelte sider, eller alle siderne sammen som en ZIP-fil"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF til tekst",
+      "description": "Udtræk al teksten fra en PDF til en almindelig .txt-fil",
+      "seoTitle": "PDF til tekst – udtræk tekst fra PDF gratis",
+      "metaDescription": "Udtræk al teksten fra en PDF til en almindelig .txt-fil, evt. med en overskrift pr. side. Gratis, uden tilmelding og uden upload.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Hvad indeholder .txt-filen?",
+          "a": "Teksten fra hver side, i siderækkefølge. Slå sideoverskrifter til for at få en »Side N«-linje før hver side, så lange dokumenter er nemmere at finde rundt i."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Virker det på scannede PDF'er?",
+          "a": "Kun hvis scanningen har et tekstlag. En almindelig fotoscanning har ingen tekst at udtrække og kommer tom ud – kør først OCR PDF på den, og konverter derefter det søgbare resultat til tekst."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "Uploades min PDF for at udtrække teksten?",
+          "a": "Nej. Teksten læses fra PDF'en i din browser, så filen forlader aldrig din enhed."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Sådan udtrækker du tekst fra en PDF",
+        "intro": "PDF til tekst trækker teksten ud af en PDF og lægger den i en almindelig .txt-fil, side efter side, evt. med en overskrift pr. side.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Vælg en PDF med rigtig tekst (kør først OCR PDF på scanninger)",
+          "Sæt kryds ved »Tilføj en overskrift for hver side«, hvis du vil have Side N-markører",
+          "Klik på Konverter til tekst",
+          "Download .txt-filen, eller kopier teksten fra forhåndsvisningen"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Udtræk billeder",
+      "description": "Træk fotos og figurer ud af en PDF som PNG-filer",
+      "seoTitle": "Udtræk billeder fra PDF – gem fotos som PNG gratis",
+      "metaDescription": "Træk fotos, logoer og figurer ud af en PDF, og gem dem som PNG-filer. Gratis, uden tilmelding – PDF'en forlader aldrig din browser.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Hvilken kvalitet har de udtrukne billeder?",
+          "a": "Fuld indlejret kvalitet – billedet gemmes præcis, som det ligger i PDF'en, som PNG. Intet komprimeres igen eller skaleres ned."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Hvad hvis min PDF er en scanning?",
+          "a": "En scannet side er ét stort billede, så du får hele sidebilledet tilbage. På sider med rigtig tekst udtrækkes hvert indlejret foto, logo og figur for sig."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "Uploades min PDF for at udtrække billederne?",
+          "a": "Nej. Billederne trækkes ud af PDF'en i din browser, så filen forlader aldrig din enhed."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Sådan udtrækker du billeder fra en PDF",
+        "intro": "Udtræk billeder trækker hvert indlejret foto, logo og figur ud af en PDF og gemmer dem som PNG-filer i fuld indlejret kvalitet.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Vælg en PDF",
+          "Klik på Udtræk billeder",
+          "Download billederne – flere downloades sammen som en ZIP-fil"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF til HTML",
+      "description": "Lav en PDF om til en almindelig HTML-webside",
+      "seoTitle": "PDF til HTML – konverter PDF til en webside gratis",
+      "metaDescription": "Lav en PDF om til en almindelig HTML-side med ét afsnit pr. PDF-side. Gratis, uden tilmelding og uden upload.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "Vil HTML'en ligne PDF'en?",
+          "a": "Nej. Den flytter ordene, ikke layoutet: hver PDF-side bliver et afsnit med sin tekst som brødtekst. Billeder og præcis formatering følger ikke med."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Hvad kan jeg gøre med HTML-filen?",
+          "a": "Åbn den i enhver browser, indsæt den på et websted eller i en indholdseditor, eller brug den som udgangspunkt for en webside bygget ud fra et dokument."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "Uploades min PDF for at konvertere den til HTML?",
+          "a": "Nej. Teksten udtrækkes, og HTML'en bygges i din browser, så PDF'en forlader aldrig din enhed."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Sådan konverterer du PDF til HTML",
+        "intro": "PDF til HTML laver en PDF om til en almindelig webside: ét afsnit pr. PDF-side med teksten som brødtekst. Den flytter ordene, ikke layoutet.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Vælg en PDF med rigtig tekst (kør først OCR PDF på scanninger)",
+          "Klik på Konverter til HTML",
+          "Download .html-filen, eller kopier markeringen fra forhåndsvisningen"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Rediger metadata",
+      "description": "Skift en PDFs titel, forfatter, emne og nøgleord",
+      "seoTitle": "Rediger PDF-metadata – skift titel, forfatter og nøgleord",
+      "metaDescription": "Skift en PDFs titel, forfatter, emne og nøgleord i din browser. Gratis, uden tilmelding og uden upload.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Hvor vises titlen?",
+          "a": "I PDF-læserens fane eller titellinje, i filsøgninger og i søgeresultater, når PDF'en indekseres. En klar titel hjælper folk med at finde dokumentet."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Ændrer redigering af metadata selve dokumentet?",
+          "a": "Nej. Siderne, teksten og billederne forbliver præcis, som de er – kun oplysningerne om dokumentet ændres."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Kan jeg rydde et felt?",
+          "a": "Ja. Lad feltet stå tomt, og gem – så fjernes værdien fra PDF'en."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Sådan redigerer du PDF-metadata",
+        "intro": "Rediger metadata ændrer oplysningerne om en PDF – titel, forfatter, emne og nøgleord – uden at røre siderne.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Vælg en PDF for at se dens nuværende titel, forfatter, emne og nøgleord",
+          "Skift de felter, du vil – lad et felt stå tomt for at rydde det",
+          "Klik på Gem metadata, og download den opdaterede PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Flad PDF ud",
+      "description": "Gør formularfelter permanente, og fjern kommentarer",
+      "seoTitle": "Flad PDF ud – gør formularfelter permanente gratis",
+      "metaDescription": "Brænd en PDFs formularfelter fast i siden, og fjern kommentarer, så svar ikke længere kan ændres. Gratis, uden upload.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Hvad sker der med formularfelterne?",
+          "a": "Deres værdier tegnes ind i selve siden, og felterne fjernes, så de udfyldte svar ikke længere kan redigeres eller ryddes."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Hvad sker der med kommentarer og fremhævninger?",
+          "a": "De fjernes, fordi de ikke kan brændes ind i siden uden at gøre den til et billede. Links bevares."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Ændrer udfladning teksten?",
+          "a": "Nej. Teksten forbliver rigtig, markerbar tekst – intet rasteriseres til et billede."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Sådan flader du en PDF ud",
+        "intro": "Flad PDF ud brænder formularfelter permanent ind i siden og fjerner kommentarer og fremhævninger, så udfyldte svar ikke længere kan ændres. Links bevares, og teksten kan stadig markeres.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Vælg en PDF med formularfelter eller kommentarer",
+          "Klik på Flad PDF ud",
+          "Download den udfladede kopi"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Udfyld PDF-formular",
+      "description": "Udfyld en PDF-formular, og gem den udfyldte kopi",
+      "seoTitle": "Udfyld PDF-formular – udfyld en PDF-formular online gratis",
+      "metaDescription": "Udfyld en PDF-formular i din browser – tekstfelter, afkrydsningsfelter og rullelister – og gem den udfyldte kopi. Gratis, uden upload.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Hvilke felter kan jeg udfylde?",
+          "a": "Tekstfelter, afkrydsningsfelter, rullelister og radiogrupper. Knapper og underskriftsfelter kan ikke udfyldes her – brug Sign PDF til underskrifter."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Den siger, at PDF'en ikke har udfyldelige felter. Hvorfor?",
+          "a": "PDF'en er en flad scanning eller en udskrevet formular uden interaktive felter. Kun PDF'er bygget med rigtige formularfelter kan udfyldes – en scannet formular skal først have OCR, og selv derefter er den stadig et billede af en formular."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Kan jeg låse svarene bagefter?",
+          "a": "Ja. Kør den udfyldte PDF gennem Flad PDF ud, så bliver svarene permanente."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Sådan udfylder du en PDF-formular",
+        "intro": "Udfyld PDF-formular viser alle udfyldelige felter i en PDF – tekstfelter, afkrydsningsfelter, rullelister – så du kan udfylde formularen i din browser og gemme den.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Vælg en PDF med udfyldelige formularfelter",
+          "Udfyld hvert felt i panelet",
+          "Klik på Gem udfyldt PDF, og download den færdige kopi"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Tekst til PDF",
+      "description": "Lav almindelig tekst om til et PDF-dokument",
+      "seoTitle": "Tekst til PDF – lav almindelig tekst om til PDF gratis",
+      "metaDescription": "Skriv eller indsæt almindelig tekst, og lav den om til et PDF-dokument i din browser. Gratis, uden tilmelding, upload og vandmærke.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Kan jeg formatere teksten?",
+          "a": "Nej. Dette værktøj laver almindelig tekst om til en ren PDF – overskrifter og fed skrift følger ikke med. Brug Word til PDF eller HTML til PDF til stylede dokumenter i stedet."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Hvad med lang tekst?",
+          "a": "Den flyder over så mange sider, som den har brug for, med en titel på første side, hvis du tilføjer en."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Uploades min tekst?",
+          "a": "Nej. PDF'en bygges i din browser, så teksten forlader aldrig din enhed."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Sådan laver du tekst om til PDF",
+        "intro": "Tekst til PDF laver almindelig tekst, du skriver eller indsætter, om til et rent PDF-dokument, evt. med en titel på første side.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Skriv eller indsæt din tekst",
+          "Tilføj en dokumenttitel, hvis du vil",
+          "Klik på Konverter til PDF, og download den"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Sidehoved og sidefod",
+      "description": "Stemplet et sidehoved og en sidefod på hver side",
+      "seoTitle": "Tilføj sidehoved og sidefod til PDF gratis, uden upload",
+      "metaDescription": "Stemplet en sidehoved- og sidefodslinje – evt. med sidetal – på hver side i en PDF. Gratis, uden tilmelding og uden upload.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Kan jeg kun tilføje et sidehoved eller kun en sidefod?",
+          "a": "Ja. Lad det andet felt stå tomt, så stemples kun det, du har udfyldt."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Hvor havner teksten?",
+          "a": "Til venstre, i midten eller til højre, øverst eller nederst på hver side. Teksten tegnes oven på siden – den skubber ikke det eksisterende indhold rundt."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Kan jeg også tilføje sidetal?",
+          "a": "Ja. Sæt kryds ved »Tilføj sidetal i sidefoden«, så får hver side et tal i stil med »1 af 12« ved siden af din sidefodstekst."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Sådan tilføjer du sidehoved og sidefod til en PDF",
+        "intro": "Sidehoved og sidefod stempler en tekstlinje øverst og/eller nederst på hver side, evt. med sidetal i sidefoden.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Vælg en PDF",
+          "Skriv sidehoved- og sidefodsteksten – lad den ene stå tom for kun at stemple den anden",
+          "Vælg placering, skriftstørrelse, og om der skal tilføjes sidetal",
+          "Klik på Tilføj sidehoved og sidefod, og download resultatet"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Bates-nummerering",
+      "description": "Stemplet fortløbende Bates-numre på hver side",
+      "seoTitle": "Bates-nummerering – stemple fortløbende numre på PDF",
+      "metaDescription": "Bates-stemplet hver side i en PDF med et præfiks og et fortløbende nummer med foranstillede nuller. Gratis, uden upload.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Hvad er Bates-nummerering?",
+          "a": "En måde at stemple hver side i en dokumentsamling med et unikt fortløbende nummer – f.eks. EXHIBIT-00042 – så sider kan identificeres og henvises til i juridisk arbejde og bevismateriale."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Kan jeg vælge præfiks og startnummer?",
+          "a": "Ja. Vælg et præfiks, det tal der startes fra, hvor mange cifre der skal fyldes op til, og hvor på siden stemplet skal sidde."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Ændrer det dokumentet?",
+          "a": "Nej. Stemplet lægges oven på hver side; det eksisterende indhold røres ikke."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Sådan Bates-nummererer du en PDF",
+        "intro": "Bates-nummerering stempler hver side med et unikt fortløbende nummer – et præfiks plus et fortløbende nummer med foranstillede nuller, f.eks. EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Vælg en PDF",
+          "Indstil præfiks, startnummer og hvor mange cifre der skal fyldes op til",
+          "Vælg, hvor på siden stemplet skal sidde",
+          "Klik på Anvend Bates-numre, og download den stemplede PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF i gråtoner",
+      "description": "Lav en farve-PDF sort-hvid",
+      "seoTitle": "Gråtone-PDF – konverter PDF til sort-hvid gratis",
+      "metaDescription": "Lav en farve-PDF sort-hvid, side for side. Gratis, uden tilmelding og uden upload – filen forlader aldrig din browser.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Kan teksten stadig markeres?",
+          "a": "Nej. Siderne genopbygges som sort-hvide billeder, så teksten bliver en del af billedet. Brug det til udskrivning eller deling, ikke til at redigere tekst bagefter."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Virker det på scannede PDF'er?",
+          "a": "Ja. Scannede sider er allerede billeder, så de konverteres rent – ofte hele pointen, når der skal udskrives eller faxes."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "Uploades min PDF?",
+          "a": "Nej. Konverteringen kører udelukkende i din browser, så PDF'en forlader aldrig din enhed."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Sådan konverterer du en PDF til gråtoner",
+        "intro": "Gråtone-PDF genopbygger hver side i sort-hvid. Det er lavet til udskrivning og fax – siderne bliver til billeder, så teksten ikke længere kan markeres bagefter.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Vælg din PDF",
+          "Klik på Konverter til gråtoner",
+          "Download den sort-hvide PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Ændr PDF-størrelse",
+      "description": "Skift PDF-sider til A4, Letter, A3 eller en brugerdefineret størrelse",
+      "seoTitle": "Ændr PDF-størrelse – skift PDF-sidestørrelse til A4 eller Letter",
+      "metaDescription": "Skift hver PDF-side til A4, Letter, A3, A5 eller en brugerdefineret størrelse. Indholdet skaleres til at passe og centreres. Gratis, uden upload.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Hvad er forskellen fra Beskær PDF?",
+          "a": "Beskæring trimmer sidens margener; Ændr størrelse ændrer selve sidestørrelsen – A4, Letter, A3, A5 eller enhver brugerdefineret størrelse – og skalerer indholdet til at passe."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Forbliver teksten markerbar?",
+          "a": "Ja. Siderne lægges om, ikke gengives på ny, så tekst og vektorer forbliver intakte."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Kan jeg indstille en brugerdefineret størrelse?",
+          "a": "Ja. Vælg Brugerdefineret, og indtast bredde og højde i millimeter."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Sådan ændrer du størrelsen på PDF-sider",
+        "intro": "Ændr PDF-størrelse skifter hver side til A4, Letter, A3, A5 eller en størrelse, du indtaster, og skalerer indholdet til at passe, centreret. Tekst og vektorer forbliver intakte.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Vælg din PDF",
+          "Vælg A4, Letter, A3, A5 eller Brugerdefineret, og indtast størrelsen i millimeter",
+          "Klik på Ændr sidestørrelse",
+          "Download den ændrede PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Ret PDF op",
+      "description": "Ret skæve scannede sider op",
+      "seoTitle": "Ret PDF op – ret skæve scannede sider gratis",
+      "metaDescription": "Ret skæve scannede sider. Hældningen registreres automatisk, eller indstil den selv med skyderen. Gratis, uden upload.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Hvordan registreres hældningen?",
+          "a": "Den læser de første sider og finder den vinkel, hvor tekstlinjerne er mest lige, og foreslår derefter vinklen på skyderen. Du kan justere den selv, hvis den ser forkert ud."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Kan teksten stadig markeres?",
+          "a": "Nej. Siderne genopbygges som rettede billeder, så teksten bliver en del af billedet. Brug det til scannede sider, hvor der alligevel ikke er markerbar tekst."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Hvor meget kan den rette op?",
+          "a": "Op til 10 grader hver vej, hvilket dækker næsten alle sider fra en dårligt indført scanner."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Sådan retter du en PDF op",
+        "intro": "Ret PDF op retter skæve scannede sider. Hældningen registreres automatisk, når du tilføjer en fil, og skyderen lader dig justere den selv.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Vælg din PDF – hældningen registreres automatisk",
+          "Tjek den registrerede vinkel, og træk i skyderen, hvis siden stadig ser skæv ud",
+          "Brug Live-forhåndsvisning for at se den rettede første side",
+          "Klik på Ret PDF op, og download resultatet"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Bland skiftevis",
+      "description": "Flet siderne fra to PDF'er sammen, skiftevis",
+      "seoTitle": "Bland PDF skiftevis – flet to PDF'er sammen gratis",
+      "metaDescription": "Flet siderne fra to PDF'er – side 1 fra hver, derefter side 2 fra hver – til én fil. Gratis, uden tilmelding og uden upload.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Hvad hvis de to PDF'er har forskellig længde?",
+          "a": "Den korteste løber tør først; den længeres resterende sider kommer til sidst, i rækkefølge."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Hvilket dokument kommer først?",
+          "a": "Det første dokument, du tilføjer, leverer side 1, det andet leverer side 2, og de fortsætter med at skifte derefter."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "Hvad bruges det til?",
+          "a": "Til at kombinere to versioner af et dokument side for side, flette spørgsmål og svar sammen eller samle for- og bagsidescanninger i læserækkefølge."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Sådan fletter du to PDF'er skiftevis sammen",
+        "intro": "Bland skiftevis tager to PDF'er og fletter deres sider sammen – side 1 fra hver, derefter side 2 fra hver – til én fil.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Tilføj det første dokument, derefter det andet",
+          "Klik på Bland PDF'er",
+          "Download den flettede fil"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Fjern tomme sider",
+      "description": "Slet de tomme sider fra en PDF",
+      "seoTitle": "Fjern tomme sider – slet tomme PDF-sider gratis",
+      "metaDescription": "Find og slet de tomme sider i en PDF – dem, scanneren tilføjer ved en fejl. Gratis, uden tilmelding og uden upload.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Hvordan ved den, at en side er tom?",
+          "a": "Den gengiver hver side og måler, hvor meget blæk der er på den. Sider under grænsen vises, før noget fjernes, så du ser præcis, hvad der forsvinder."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Fjerner den en side, der kun har et sidetal?",
+          "a": "Ikke med indstillingen Afbalanceret – et sidetal tæller som blæk. Fjerner den alligevel en side, du ville beholde, så brug Streng, og kør den igen."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "Uploades min PDF?",
+          "a": "Nej. Registrering og fjernelse kører udelukkende i din browser."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Sådan fjerner du tomme sider fra en PDF",
+        "intro": "Fjern tomme sider finder de tomme sider, en scanner har tilføjet – som regel sidst i bunken – viser dem og fjerner dem, mens resten forbliver urørt.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Vælg din PDF",
+          "Tjek de tomme sider, den fandt, og skift følsomheden, hvis den har overset nogen eller markeret en side, du vil beholde",
+          "Klik på Fjern tomme sider",
+          "Download den rensede PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
-      "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "name": "N-op PDF",
+      "description": "Sæt 2, 4, 6 eller 9 sider på hvert ark",
+      "seoTitle": "N-op PDF – sæt flere sider på ét ark gratis",
+      "metaDescription": "Sæt 2, 4, 6 eller 9 PDF-sider på hvert ark, til hæfter og uddelingskopier. Gratis, uden tilmelding og uden upload.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Hvor store er arkene?",
+          "a": "Hvert ark beholder størrelsen på den første side i din PDF – som regel A4 eller Letter. Kildesiderne skaleres til at passe i deres celle."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Forbliver teksten læsbar?",
+          "a": "Ja. Siderne lægges om, ikke gengives på ny, så tekst og vektorer forbliver skarpe. Ved 9-op er trykken lille, som den bør være."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Kan jeg vælge rækkefølgen?",
+          "a": "Siderne kører fra venstre mod højre, oppefra og ned, i den oprindelige rækkefølge."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Sådan sætter du flere PDF-sider på ét ark",
+        "intro": "N-op PDF lægger 2, 4, 6 eller 9 kildesider på hvert ark, til hæfter og uddelingskopier. Hvert ark beholder størrelsen på den første side.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Vælg din PDF",
+          "Vælg 2-op, 4-op, 6-op eller 9-op",
+          "Klik på Opret N-op PDF",
+          "Download resultatet"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Tilføj tom side",
+      "description": "Indsæt tomme sider eller sider fra en anden PDF",
+      "seoTitle": "Tilføj tom side – indsæt sider i en PDF gratis",
+      "metaDescription": "Indsæt tomme sider – eller alle sider fra en anden PDF – i en PDF, i starten, til sidst, efter hver side eller efter en valgt side. Gratis, uden upload.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Hvor kan den tomme side havne?",
+          "a": "I starten, til sidst, efter hver side eller efter et sidetal, du vælger."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Hvordan indsætter jeg sider fra en anden PDF?",
+          "a": "Vælg »Sider fra en anden PDF«, tilføj den anden fil efter den første, og vælg, hvor dens sider skal hen."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Hvor stor er den tomme side?",
+          "a": "Samme størrelse som den første side i din PDF."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Sådan tilføjer du en tom side til en PDF",
+        "intro": "Tilføj tom side indsætter tomme sider – eller alle sider fra en anden PDF – i starten, til sidst, efter hver side eller efter en side, du vælger.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Vælg din PDF",
+          "Vælg Tom side, eller Sider fra en anden PDF, og tilføj den anden fil",
+          "Vælg, hvor siderne skal hen",
+          "Klik på Tilføj tom side, og download resultatet"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Privat – filen behandles i din browser og uploades aldrig",
+          "Gratis, uden konto, uden vandmærke og uden daglig grænse",
+          "Fungerer i enhver moderne browser på Windows, Mac, Linux, iPhone og Android"
         ]
       }
     }
