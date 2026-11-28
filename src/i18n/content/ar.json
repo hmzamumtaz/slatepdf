@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "تحويل PDF إلى PNG",
+      "description": "حوّل صفحات PDF إلى صور PNG",
+      "seoTitle": "تحويل PDF إلى PNG – حوّل صفحات PDF إلى PNG مجانًا",
+      "metaDescription": "حوّل كل صفحة من ملف PDF إلى صورة PNG بدقة 144 أو 216 نقطة في البوصة. مجاني، بلا تسجيل ولا علامات مائية، ولا يغادر الملف متصفحك أبدًا.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "ما دقة صور PNG الناتجة؟",
+          "a": "تُعرض الصفحات بدقة 144 نقطة في البوصة (قياسية) أو 216 نقطة في البوصة (عالية)، أيًّا كان المصدر. الدقة العالية تعطي نصًا أوضح وملفات أكبر."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "ما الفرق بينه وبين تحويل PDF إلى JPG؟",
+          "a": "صيغة PNG بلا فقدان، فتحافظ على الحواف الحادة والنص واضحًا؛ أما ملفات JPG فأصغر حجمًا. استخدم PNG عندما تحتاج إلى بكسلات دقيقة، وJPG عندما تحتاج إلى ملفات صغيرة."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "هل يُرفع ملف PDF لتحويله إلى PNG؟",
+          "a": "لا. تُعرض كل صفحة كصورة في متصفحك، فلا يغادر ملف PDF جهازك أبدًا."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "كيفية تحويل PDF إلى PNG",
+        "intro": "تحوّل أداة تحويل PDF إلى PNG كل صفحة من ملف PDF إلى صورة PNG، بدقة قياسية (144 نقطة في البوصة) أو عالية (216 نقطة في البوصة). صيغة PNG بلا فقدان، فيبقى النص والحواف الحادة واضحين.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "اختر ملف PDF واحدًا أو أكثر",
+          "اختر الدقة القياسية أو العالية",
+          "انقر على «تحويل إلى PNG»",
+          "نزّل صفحات منفردة، أو كل الصفحات معًا في ملف ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "تحويل PDF إلى نص",
+      "description": "استخرج كل النص من ملف PDF إلى ملف .txt عادي",
+      "seoTitle": "تحويل PDF إلى نص – استخراج النص من PDF مجانًا",
+      "metaDescription": "استخرج كل النص من ملف PDF إلى ملف .txt عادي، مع عنوان اختياري لكل صفحة. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "ماذا يحتوي ملف .txt؟",
+          "a": "نص كل صفحة، بترتيب الصفحات. فعّل عناوين الصفحات لتحصل على سطر «الصفحة N» قبل كل صفحة، ما يجعل المستندات الطويلة أسهل في التصفح."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "هل يعمل هذا مع ملفات PDF الممسوحة ضوئيًا؟",
+          "a": "فقط إذا كان للمسح طبقة نصية. المسح الضوئي العادي كصورة لا يحتوي على نص لاستخراجه فيخرج فارغًا — نفّذ أداة OCR لملفات PDF عليه أولًا، ثم حوّل النتيجة القابلة للبحث إلى نص."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "هل يُرفع ملف PDF لاستخراج النص؟",
+          "a": "لا. يُقرأ النص من ملف PDF في متصفحك، فلا يغادر الملف جهازك أبدًا."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "كيفية استخراج النص من ملف PDF",
+        "intro": "تسحب أداة تحويل PDF إلى نص النص من ملف PDF إلى ملف .txt عادي، صفحة بعد صفحة، مع عنوان اختياري لكل صفحة.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "اختر ملف PDF فيه نص حقيقي (نفّذ أداة OCR لملفات PDF أولًا على الملفات الممسوحة)",
+          "ضع علامة على «إضافة عنوان لكل صفحة» إذا أردت علامات «الصفحة N»",
+          "انقر على «تحويل إلى نص»",
+          "نزّل ملف .txt، أو انسخ النص من المعاينة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "استخراج الصور",
+      "description": "اسحب الصور والرسوم من ملف PDF واحفظها كملفات PNG",
+      "seoTitle": "استخراج الصور من PDF – حفظ الصور كملفات PNG مجانًا",
+      "metaDescription": "اسحب الصور والشعارات والرسوم من ملف PDF واحفظها كملفات PNG. مجاني، بلا تسجيل، ولا يغادر ملف PDF متصفحك أبدًا.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "ما جودة الصور المستخرجة؟",
+          "a": "الجودة الكاملة كما هي مضمّنة — تُحفظ الصورة كما هي تمامًا داخل ملف PDF، بصيغة PNG. لا يُعاد ضغط أي شيء أو تصغيره."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "ماذا لو كان ملف PDF ممسوحًا ضوئيًا؟",
+          "a": "الصفحة الممسوحة صورة واحدة كبيرة، فتستعيد صورة الصفحة الكاملة تلك. أما في صفحات النص الحقيقية، فتُستخرج كل صورة وشعار ورسم مضمّن على حدة."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "هل يُرفع ملف PDF لاستخراج الصور؟",
+          "a": "لا. تُسحب الصور من ملف PDF في متصفحك، فلا يغادر الملف جهازك أبدًا."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "كيفية استخراج الصور من ملف PDF",
+        "intro": "تسحب أداة استخراج الصور كل صورة وشعار ورسم مضمّن من ملف PDF وتحفظها كملفات PNG بالجودة الكاملة كما هي مضمّنة.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "اختر ملف PDF",
+          "انقر على «استخراج الصور»",
+          "نزّل الصور — تُنزَّل عدة صور معًا في ملف ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "تحويل PDF إلى HTML",
+      "description": "حوّل ملف PDF إلى صفحة ويب HTML عادية",
+      "seoTitle": "تحويل PDF إلى HTML – حوّل PDF إلى صفحة ويب مجانًا",
+      "metaDescription": "حوّل ملف PDF إلى صفحة HTML عادية، قسم واحد لكل صفحة PDF. مجاني، بلا تسجيل ولا رفع — النص لا يغادر متصفحك أبدًا.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "هل سيبدو HTML مثل ملف PDF؟",
+          "a": "لا. تُنقل الكلمات لا التخطيط: تصبح كل صفحة PDF قسمًا نصه فقرات. الصور والتنسيق الدقيق لا تُنقل."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "ماذا يمكنني أن أفعل بملف HTML؟",
+          "a": "افتحه في أي متصفح، أو الصقه في موقع ويب أو محرر محتوى، أو استخدمه كنقطة بداية لصفحة ويب مبنية من مستند."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "هل يُرفع ملف PDF لتحويله إلى HTML؟",
+          "a": "لا. يُستخرج النص ويُبنى HTML في متصفحك، فلا يغادر ملف PDF جهازك أبدًا."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "كيفية تحويل PDF إلى HTML",
+        "intro": "تحوّل أداة تحويل PDF إلى HTML ملف PDF إلى صفحة ويب عادية: قسم واحد لكل صفحة PDF، ونصه فقرات. تُنقل الكلمات لا التخطيط.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "اختر ملف PDF فيه نص حقيقي (نفّذ أداة OCR لملفات PDF أولًا على الملفات الممسوحة)",
+          "انقر على «تحويل إلى HTML»",
+          "نزّل ملف .html، أو انسخ الترميز من المعاينة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "تحرير البيانات الوصفية",
+      "description": "غيّر عنوان PDF ومؤلفه وموضوعه وكلماته المفتاحية",
+      "seoTitle": "تحرير البيانات الوصفية لـ PDF – العنوان والمؤلف والكلمات المفتاحية",
+      "metaDescription": "غيّر عنوان PDF ومؤلفه وموضوعه وكلماته المفتاحية في متصفحك. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "أين يظهر العنوان؟",
+          "a": "في تبويب قارئ PDF أو شريط العنوان، وفي نتائج البحث عن الملفات، وفي نتائج البحث عندما يُفهرس ملف PDF. العنوان الواضح يساعد الناس على العثور على المستند."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "هل يغيّر تحرير البيانات الوصفية المستند نفسه؟",
+          "a": "لا. تبقى الصفحات والنص والصور كما هي تمامًا — فقط المعلومات المخزنة عن المستند هي التي تتغير."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "هل يمكنني مسح حقل؟",
+          "a": "نعم. اترك الحقل فارغًا واحفظ — تُزال تلك القيمة من ملف PDF."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "كيفية تحرير البيانات الوصفية لـ PDF",
+        "intro": "يغيّر تحرير البيانات الوصفية المعلومات المخزنة عن ملف PDF — عنوانه ومؤلفه وموضوعه وكلماته المفتاحية — دون المساس بالصفحات.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "اختر ملف PDF لترى عنوانه ومؤلفه وموضوعه وكلماته المفتاحية الحالية",
+          "غيّر الحقول التي تريدها — اترك حقلًا فارغًا لمسحه",
+          "انقر على «حفظ البيانات الوصفية» ونزّل ملف PDF المحدَّث"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "تسطيح PDF",
+      "description": "اجعل حقول النماذج دائمة وأزل التعليقات التوضيحية",
+      "seoTitle": "تسطيح PDF – جعل حقول النماذج دائمة مجانًا",
+      "metaDescription": "ثبّت حقول نماذج PDF نهائيًا في الصفحة وأزل التعليقات التوضيحية، فلا يمكن تغيير الإجابات بعد ذلك. مجاني، بلا رفع.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "ماذا يحدث لحقول النموذج؟",
+          "a": "تُدمج قيمها في الصفحة نفسها وتُزال الحقول، فلا يمكن بعد ذلك تحرير الإجابات المعبأة أو مسحها."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "ماذا يحدث للتعليقات والتمييزات؟",
+          "a": "تُزال، لأنه لا يمكن تثبيتها في الصفحة دون تحويلها إلى صورة. أما الروابط فتبقى."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "هل يغيّر التسطيح النص؟",
+          "a": "لا. يبقى النص نصًا حقيقيًا قابلًا للتحديد — لا يُحوَّل أي شيء إلى صورة."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "كيفية تسطيح ملف PDF",
+        "intro": "يثبّت تسطيح PDF حقول النماذج نهائيًا في الصفحة ويزيل التعليقات والتمييزات، فلا يمكن تغيير الإجابات المعبأة بعد ذلك. تبقى الروابط، ويبقى النص قابلًا للتحديد.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "اختر ملف PDF فيه حقول نماذج أو تعليقات توضيحية",
+          "انقر على «تسطيح PDF»",
+          "نزّل النسخة المسطّحة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "تعبئة نموذج PDF",
+      "description": "املأ نموذج PDF واحفظ النسخة المكتملة",
+      "seoTitle": "تعبئة نموذج PDF – تعبئة نموذج PDF عبر الإنترنت مجانًا",
+      "metaDescription": "املأ نموذج PDF في متصفحك — حقول نصية ومربعات اختيار وقوائم منسدلة — واحفظ النسخة المكتملة. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "ما الحقول التي يمكنني تعبئتها؟",
+          "a": "الحقول النصية ومربعات الاختيار والقوائم المنسدلة ومجموعات أزرار الاختيار. لا يمكن تعبئة الأزرار وحقول التوقيع هنا — استخدم أداة توقيع PDF للتوقيعات."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "لماذا يقال إن ملف PDF بلا حقول قابلة للتعبئة؟",
+          "a": "ملف PDF مسح مسطّح أو نموذج مطبوع بلا حقول تفاعلية. لا يمكن تعبئة إلا ملفات PDF المبنية بحقول نماذج حقيقية — النموذج الممسوح يحتاج إلى التعرف الضوئي أولًا، وحتى بعد ذلك يبقى صورة لنموذج."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "هل يمكنني قفل الإجابات بعد ذلك؟",
+          "a": "نعم. مرّر ملف PDF المعبأ عبر أداة تسطيح PDF فتصبح الإجابات دائمة."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "كيفية تعبئة نموذج PDF",
+        "intro": "تعرض أداة تعبئة نموذج PDF كل حقل قابل للتعبئة في الملف — الحقول النصية ومربعات الاختيار والقوائم المنسدلة — لتكمل النموذج في متصفحك وتحفظه.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "اختر ملف PDF فيه حقول نماذج قابلة للتعبئة",
+          "املأ كل حقل في اللوحة",
+          "انقر على «حفظ PDF المعبأ» ونزّل النسخة المكتملة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "تحويل النص إلى PDF",
+      "description": "حوّل النص العادي إلى مستند PDF",
+      "seoTitle": "تحويل النص إلى PDF – حوّل النص العادي إلى PDF مجانًا",
+      "metaDescription": "اكتب أو الصق نصًا عاديًا وحوّله إلى مستند PDF في متصفحك. مجاني، بلا تسجيل ولا رفع ولا علامة مائية.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "هل يمكنني تنسيق النص؟",
+          "a": "لا. تحوّل هذه الأداة النص العادي إلى ملف PDF أنيق — لا تُنقل العناوين والخط العريض. للمستندات المنسقة، استخدم تحويل Word إلى PDF أو تحويل HTML إلى PDF بدلًا من ذلك."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "ماذا عن النص الطويل؟",
+          "a": "يتدفق على عدد ما يلزم من الصفحات، مع عنوان في الصفحة الأولى إذا أضفت واحدًا."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "هل يُرفع نصي؟",
+          "a": "لا. يُبنى ملف PDF في متصفحك، فلا يغادر النص جهازك أبدًا."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "كيفية تحويل النص إلى PDF",
+        "intro": "تحوّل أداة تحويل النص إلى PDF النص العادي الذي تكتبه أو تلصقه إلى مستند PDF أنيق، مع عنوان اختياري في الصفحة الأولى.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "اكتب نصك أو الصقه",
+          "أضف عنوانًا للمستند إذا أردت",
+          "انقر على «تحويل إلى PDF» ونزّله"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "الترويسة والتذييل",
+      "description": "اختم ترويسة وتذييلًا على كل صفحة",
+      "seoTitle": "إضافة ترويسة وتذييل إلى PDF مجانًا، بلا رفع",
+      "metaDescription": "اختم سطر ترويسة وتذييل — مع أرقام صفحات اختيارية — على كل صفحة من ملف PDF. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "هل يمكنني إضافة ترويسة فقط، أو تذييل فقط؟",
+          "a": "نعم. اترك الحقل الآخر فارغًا فيُختم فقط ما ملأته."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "أين يذهب النص؟",
+          "a": "إلى اليسار أو الوسط أو اليمين، في أعلى كل صفحة أو أسفلها. يُرسم النص فوق الصفحة — ولا يزيح المحتوى الموجود."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "هل يمكنني إضافة أرقام الصفحات أيضًا؟",
+          "a": "نعم. ضع علامة على «إضافة أرقام الصفحات إلى التذييل» فتحصل كل صفحة على رقم بأسلوب «1 من 12» بجانب نص التذييل."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "كيفية إضافة ترويسة وتذييل إلى ملف PDF",
+        "intro": "تختم أداة الترويسة والتذييل سطر نص في أعلى كل صفحة و/أو أسفلها، مع أرقام صفحات اختيارية في التذييل.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "اختر ملف PDF",
+          "اكتب نص الترويسة والتذييل — اترك أحدهما فارغًا لتختم الآخر وحده",
+          "اختر الموضع وحجم الخط وما إذا كنت تريد إضافة أرقام الصفحات",
+          "انقر على «إضافة ترويسة وتذييل» ونزّل النتيجة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "ترقيم بيتس",
+      "description": "اختم أرقام بيتس متسلسلة على كل صفحة",
+      "seoTitle": "ترقيم بيتس – ختم أرقام متسلسلة على PDF",
+      "metaDescription": "اختم كل صفحة من ملف PDF بختم بيتس مع بادئة ورقم متسلسل مملوء بالأصفار. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "ما ترقيم بيتس؟",
+          "a": "طريقة لختم كل صفحة من مجموعة مستندات برقم متسلسل فريد — مثل EXHIBIT-00042 — حتى يمكن تحديد الصفحات والإشارة إليها في الأعمال القانونية والكشف عن الأدلة."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "هل يمكنني اختيار البادئة ورقم البداية؟",
+          "a": "نعم. حدّد أي بادئة، ورقم البداية، وعدد الأرقام المملوءة بالأصفار، وموضع الختم على الصفحة."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "هل يغيّر ذلك المستند؟",
+          "a": "لا. يُضاف الختم فوق كل صفحة؛ والمحتوى الموجود لا يُمس."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "كيفية ترقيم ملف PDF بترقيم بيتس",
+        "intro": "يختم ترقيم بيتس كل صفحة برقم متسلسل فريد — بادئة مع رقم متسلسل مملوء بالأصفار، مثل EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "اختر ملف PDF",
+          "حدّد البادئة ورقم البداية وعدد الأرقام المملوءة بالأصفار",
+          "اختر موضع الختم على الصفحة",
+          "انقر على «تطبيق أرقام بيتس» ونزّل ملف PDF المختوم"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "تحويل PDF إلى رمادي",
+      "description": "حوّل ملف PDF الملون إلى أبيض وأسود",
+      "seoTitle": "تحويل PDF إلى رمادي – حوّل PDF إلى أبيض وأسود مجانًا",
+      "metaDescription": "حوّل ملف PDF الملون إلى أبيض وأسود، صفحة صفحة. مجاني، بلا تسجيل ولا رفع — الملف لا يغادر متصفحك أبدًا.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "هل سيبقى النص قابلًا للتحديد؟",
+          "a": "لا. تُعاد بناء الصفحات كصور بالأبيض والأسود، فيصبح النص جزءًا من الصورة. استخدمه للطباعة أو المشاركة، لا لتحرير النص بعد ذلك."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "هل يعمل مع ملفات PDF الممسوحة؟",
+          "a": "نعم. الصفحات الممسوحة صور أصلًا، فتُحوَّل بسهولة — وهذا غالبًا هو المقصود أصلًا، للطباعة أو الإرسال بالفاكس."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "هل يُرفع ملف PDF؟",
+          "a": "لا. يعمل التحويل بالكامل في متصفحك، فلا يغادر ملف PDF جهازك أبدًا."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "كيفية تحويل ملف PDF إلى رمادي",
+        "intro": "يعيد تحويل PDF إلى رمادي بناء كل صفحة بالأبيض والأسود. وهو مصمم للطباعة والفاكس — تصبح الصفحات صورًا، فلا يعود النص قابلًا للتحديد بعد ذلك.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "اختر ملف PDF",
+          "انقر على «تحويل إلى رمادي»",
+          "نزّل ملف PDF بالأبيض والأسود"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "تغيير حجم PDF",
+      "description": "غيّر صفحات PDF إلى A4 أو Letter أو A3 أو حجم مخصص",
+      "seoTitle": "تغيير حجم PDF – تغيير حجم صفحة PDF إلى A4 أو Letter",
+      "metaDescription": "غيّر كل صفحة PDF إلى A4 أو Letter أو A3 أو A5 أو حجم مخصص. يُقاس المحتوى ليناسب، في المنتصف. مجاني، بلا رفع ولا تسجيل.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "ما الفرق بينه وبين قص PDF؟",
+          "a": "القص يقتطع هوامش الصفحة؛ أما تغيير الحجم فيغيّر حجم الصفحة نفسه — A4 أو Letter أو A3 أو A5 أو أي حجم مخصص — ويقيس المحتوى ليناسب."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "هل يبقى النص قابلًا للتحديد؟",
+          "a": "نعم. تُعاد صياغة الصفحات دون إعادة عرضها، فيبقى النص والرسوم المتجهة سليمة."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "هل يمكنني تعيين حجم مخصص؟",
+          "a": "نعم. اختر «مخصص» وأدخل العرض والارتفاع بالمليمترات."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "كيفية تغيير حجم صفحات PDF",
+        "intro": "يغيّر تغيير حجم PDF كل صفحة إلى A4 أو Letter أو A3 أو A5 أو حجم تدخله، مع قياس المحتوى ليناسب في المنتصف. يبقى النص والرسوم المتجهة سليمة.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "اختر ملف PDF",
+          "اختر A4 أو Letter أو A3 أو A5 أو «مخصص» وأدخل الحجم بالمليمترات",
+          "انقر على «تغيير حجم الصفحات»",
+          "نزّل ملف PDF بعد تغيير حجمه"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "تصحيح ميل PDF",
+      "description": "قوّم الصفحات الممسوحة المائلة",
+      "seoTitle": "تصحيح ميل PDF – تقويم الصفحات الممسوحة المائلة مجانًا",
+      "metaDescription": "قوّم الصفحات الممسوحة المائلة. يُكتشف الميل تلقائيًا، أو حدّده يدويًا بالمنزلق. مجاني، بلا رفع ولا تسجيل.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "كيف يُكتشف الميل؟",
+          "a": "تقرأ الأداة الصفحات الأولى وتجد الزاوية التي تكون فيها سطور النص أكثر استقامة، ثم تعرض تلك الزاوية على المنزلق. ويمكنك تعديلها يدويًا إذا بدت خاطئة."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "هل سيبقى النص قابلًا للتحديد؟",
+          "a": "لا. تُعاد بناء الصفحات كصور مقوّمة، فيصبح النص جزءًا من الصورة. استخدمه للصفحات الممسوحة، حيث لا يوجد نص قابل للتحديد أصلًا."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "إلى أي مدى يمكنه التقويم؟",
+          "a": "حتى 10 درجات في أي اتجاه، وهذا يغطي تقريبًا كل صفحة أُدخلت بشكل سيئ إلى الماسح الضوئي."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "كيفية تصحيح ميل ملف PDF",
+        "intro": "يقوّم تصحيح ميل PDF الصفحات الممسوحة المائلة. يُكتشف الميل تلقائيًا عند إضافة ملف، ويسمح لك المنزلق بتعديله يدويًا.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "اختر ملف PDF — يُكتشف الميل تلقائيًا",
+          "تحقق من الزاوية المكتشفة، واسحب المنزلق إذا بدت الصفحة ما زالت مائلة",
+          "استخدم المعاينة المباشرة لرؤية الصفحة الأولى بعد تقويمها",
+          "انقر على «تصحيح ميل PDF» ونزّل النتيجة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "التناوب والمزج",
+      "description": "بدّل صفحات ملفَّي PDF، صفحة بعد صفحة",
+      "seoTitle": "التناوب والمزج في PDF – تبديل ملفَّي PDF مجانًا",
+      "metaDescription": "بدّل صفحات ملفَّي PDF — الصفحة 1 من كل منهما، ثم الصفحة 2 من كل منهما — في ملف واحد. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "ماذا لو كان لملفَّي PDF طولان مختلفان؟",
+          "a": "ينفد الأقصر أولًا؛ وتذهب الصفحات المتبقية من الأطول إلى النهاية، بالترتيب."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "أي مستند يأتي أولًا؟",
+          "a": "المستند الأول الذي تضيفه يقدّم الصفحة 1، والثاني يقدّم الصفحة 2، ويستمران في التناوب من هناك."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "ما استخدامات ذلك؟",
+          "a": "دمج نسختين من مستند صفحة بصفحة، أو تبديل الأسئلة والإجابات، أو دمج عمليات مسح الوجه الأمامي والخلفي في ترتيب القراءة."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "كيفية تبديل ملفَّي PDF",
+        "intro": "يأخذ التناوب والمزج ملفَّي PDF ويبدّل صفحاتهما — الصفحة 1 من كل منهما، ثم الصفحة 2 من كل منهما — في ملف واحد.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "أضف المستند الأول، ثم الثاني",
+          "انقر على «مزج ملفَّي PDF»",
+          "نزّل الملف المبدَّل"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "إزالة الصفحات الفارغة",
+      "description": "احذف الصفحات الفارغة من ملف PDF",
+      "seoTitle": "إزالة الصفحات الفارغة – حذف صفحات PDF الفارغة مجانًا",
+      "metaDescription": "اعثر على الصفحات الفارغة في ملف PDF واحذفها — تلك التي يضيفها الماسح الضوئي بالخطأ. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "كيف يعرف أن الصفحة فارغة؟",
+          "a": "يعرض كل صفحة ويقيس مقدار الحبر عليها. تُعرض الصفحات الأقل من الحد قبل حذف أي شيء، فترى بالضبط ما سيُحذف."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "هل سيحذف صفحة فيها رقم صفحة فقط؟",
+          "a": "لا على الإعداد «متوازن» — رقم الصفحة يُحسب كحبر. وإذا حذف مع ذلك صفحة أردتها، استخدم «صارم» وأعد التشغيل."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "هل يُرفع ملف PDF؟",
+          "a": "لا. يعمل الكشف والحذف بالكامل في متصفحك."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "كيفية إزالة الصفحات الفارغة من ملف PDF",
+        "intro": "تعثر إزالة الصفحات الفارغة على الصفحات الفارغة التي أضافها الماسح — عادة في نهاية الرزمة — وتدرجها وتحذفها، تاركة الباقي دون مساس.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "اختر ملف PDF",
+          "تحقق من الصفحات الفارغة التي عثر عليها، وغيّر الحساسية إذا فاتته أي صفحة أو علّم صفحة تريدها",
+          "انقر على «إزالة الصفحات الفارغة»",
+          "نزّل ملف PDF بعد تنظيفه"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "ضع 2 أو 4 أو 6 أو 9 صفحات في كل ورقة",
+      "seoTitle": "N-up PDF – وضع صفحات متعددة في ورقة واحدة مجانًا",
+      "metaDescription": "ضع 2 أو 4 أو 6 أو 9 صفحات PDF في كل ورقة، للكتيبات والنشرات. مجاني، بلا تسجيل ولا رفع.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "ما حجم الأوراق؟",
+          "a": "تبقى كل ورقة بحجم الصفحة الأولى من ملف PDF — عادة A4 أو Letter. تُقاس الصفحات المصدر لتناسب خليتها."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "هل سيبقى النص مقروءًا؟",
+          "a": "نعم. تُعاد صياغة الصفحات دون إعادة عرضها، فيبقى النص والرسوم المتجهة حادة. عند 9 صفحات في الورقة تكون الطباعة صغيرة، كما ينبغي."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "هل يمكنني اختيار الترتيب؟",
+          "a": "تسير الصفحات من اليسار إلى اليمين، ومن الأعلى إلى الأسفل، بالترتيب الأصلي."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "كيفية وضع صفحات PDF متعددة في ورقة واحدة",
+        "intro": "ترتب أداة N-up PDF صفحتين أو 4 أو 6 أو 9 صفحات مصدر في كل ورقة، للكتيبات والنشرات. وتبقى كل ورقة بحجم الصفحة الأولى.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "اختر ملف PDF",
+          "اختر 2-up أو 4-up أو 6-up أو 9-up",
+          "انقر على «إنشاء N-up PDF»",
+          "نزّل النتيجة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "إضافة صفحة فارغة",
+      "description": "أدرج صفحات فارغة أو صفحات من ملف PDF آخر",
+      "seoTitle": "إضافة صفحة فارغة – إدراج صفحات في ملف PDF مجانًا",
+      "metaDescription": "أدرج صفحات فارغة — أو كل صفحات ملف PDF آخر — في ملف PDF، في البداية أو النهاية أو بعد كل صفحة أو بعد صفحة تختارها. مجاني، بلا رفع.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "أين يمكن أن تذهب الصفحة الفارغة؟",
+          "a": "في البداية أو النهاية أو بعد كل صفحة أو بعد أي رقم صفحة تختاره."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "كيف أدرج صفحات من ملف PDF آخر؟",
+          "a": "اختر «صفحات من ملف PDF آخر»، وأضف الملف الثاني بعد الأول، واختر إلى أين تذهب صفحاته."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "ما حجم الصفحة الفارغة؟",
+          "a": "نفس حجم الصفحة الأولى من ملف PDF."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "كيفية إضافة صفحة فارغة إلى ملف PDF",
+        "intro": "تدرج إضافة صفحة فارغة صفحات فارغة — أو كل صفحات ملف PDF ثانٍ — في البداية أو النهاية أو بعد كل صفحة أو بعد صفحة تختارها.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "اختر ملف PDF",
+          "اختر «صفحة فارغة» أو «صفحات من ملف PDF آخر» وأضف الملف الثاني",
+          "اختر إلى أين تذهب الصفحات",
+          "انقر على «إضافة صفحة فارغة» ونزّل النتيجة"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "خصوصية تامة: تتم معالجة الملف في متصفحك ولا يُرفع أبدًا",
+          "مجاني، بلا حساب ولا علامة مائية ولا حد يومي",
+          "يعمل في أي متصفح حديث على Windows وMac وLinux وiPhone وAndroid"
         ]
       }
     }

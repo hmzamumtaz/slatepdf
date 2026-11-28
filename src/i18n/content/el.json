@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF σε PNG",
+      "description": "Μετατροπή σελίδων PDF σε εικόνες PNG",
+      "seoTitle": "PDF σε PNG — Μετατρέψτε σελίδες PDF σε PNG δωρεάν",
+      "metaDescription": "Μετατρέψτε κάθε σελίδα ενός PDF σε εικόνα PNG, στα 144 ή 216 DPI. Δωρεάν, χωρίς εγγραφή, χωρίς υδατογράφημα, και το PDF δεν φεύγει ποτέ από τον browser σας.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "Τι ανάλυση θα έχουν τα PNG;",
+          "a": "Οι σελίδες αποδίδονται στα 144 DPI (Κανονική) ή 216 DPI (Υψηλή), ανεξάρτητα από την πηγή. Η υψηλή δίνει πιο καθαρό κείμενο και μεγαλύτερα αρχεία."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "Ποια είναι η διαφορά από το PDF σε JPG;",
+          "a": "Το PNG είναι χωρίς απώλειες, οπότε κρατά τις άκρες καθαρές και το κείμενο ευκρινές· τα αρχεία JPG είναι μικρότερα. Χρησιμοποιήστε PNG όταν χρειάζεστε ακριβή pixel, JPG όταν χρειάζεστε μικρά αρχεία."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "Ανεβαίνει το PDF μου για να μετατραπεί σε PNG;",
+          "a": "Όχι. Κάθε σελίδα αποδίδεται ως εικόνα στον browser σας, οπότε το PDF δεν φεύγει ποτέ από τη συσκευή σας."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "Πώς να μετατρέψετε ένα PDF σε PNG",
+        "intro": "Το PDF σε PNG αποθηκεύει κάθε σελίδα ενός PDF ως εικόνα PNG, σε κανονική (144 DPI) ή υψηλή (216 DPI) ανάλυση. Το PNG είναι χωρίς απώλειες, οπότε το κείμενο και οι καθαρές άκρες παραμένουν ευκρινή.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "Επιλέξτε ένα ή περισσότερα PDF",
+          "Διαλέξτε Κανονική ή Υψηλή ανάλυση",
+          "Πατήστε Μετατροπή σε PNG",
+          "Κατεβάστε μεμονωμένες σελίδες ή όλες μαζί ως ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF σε κείμενο",
+      "description": "Εξαγωγή όλου του κειμένου ενός PDF σε απλό αρχείο .txt",
+      "seoTitle": "PDF σε κείμενο — Εξαγωγή κειμένου από PDF δωρεάν",
+      "metaDescription": "Εξαγάγετε όλο το κείμενο ενός PDF σε απλό αρχείο .txt, με προαιρετική επικεφαλίδα ανά σελίδα. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "Τι περιέχει το αρχείο .txt;",
+          "a": "Το κείμενο κάθε σελίδας, με τη σειρά των σελίδων. Ενεργοποιήστε τις επικεφαλίδες σελίδας για να παίρνετε μια γραμμή «Σελίδα N» πριν από κάθε σελίδα, που κάνει τα μεγάλα έγγραφα ευκολότερα στην πλοήγηση."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "Λειτουργεί σε σαρωμένα PDF;",
+          "a": "Μόνο αν η σάρωση έχει επίπεδο κειμένου. Μια απλή φωτογραφική σάρωση δεν έχει κείμενο προς εξαγωγή και βγαίνει κενή — τρέξτε πρώτα OCR PDF σε αυτήν και μετά μετατρέψτε το αποτέλεσμα με δυνατότητα αναζήτησης σε κείμενο."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "Ανεβαίνει το PDF μου για να εξαχθεί το κείμενο;",
+          "a": "Όχι. Το κείμενο διαβάζεται από το PDF στον browser σας, οπότε το αρχείο δεν φεύγει ποτέ από τη συσκευή σας."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "Πώς να εξαγάγετε κείμενο από ένα PDF",
+        "intro": "Το PDF σε κείμενο βγάζει το κείμενο ενός PDF σε απλό αρχείο .txt, σελίδα προς σελίδα, με προαιρετική επικεφαλίδα ανά σελίδα.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "Επιλέξτε ένα PDF με πραγματικό κείμενο (τρέξτε πρώτα OCR PDF στις σαρώσεις)",
+          "Τικάρετε «Προσθήκη επικεφαλίδας για κάθε σελίδα» αν θέλετε δείκτες Σελίδα N",
+          "Πατήστε Μετατροπή σε κείμενο",
+          "Κατεβάστε το .txt ή αντιγράψτε το κείμενο από την προεπισκόπηση"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "Εξαγωγή εικόνων",
+      "description": "Βγάλτε τις φωτογραφίες και τα σχήματα από ένα PDF ως αρχεία PNG",
+      "seoTitle": "Εξαγωγή εικόνων από PDF — Αποθήκευση φωτογραφιών ως PNG δωρεάν",
+      "metaDescription": "Βγάλτε φωτογραφίες, λογότυπα και σχήματα από ένα PDF και αποθηκεύστε τα ως PNG. Δωρεάν, χωρίς εγγραφή — το PDF δεν φεύγει ποτέ από τον browser σας.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "Τι ποιότητα έχουν οι εξαγόμενες εικόνες;",
+          "a": "Πλήρη ενσωματωμένη ποιότητα — η εικόνα αποθηκεύεται ακριβώς όπως βρίσκεται μέσα στο PDF, ως PNG. Τίποτα δεν συμπιέζεται ξανά ούτε μικραίνει."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "Τι γίνεται αν το PDF μου είναι σάρωση;",
+          "a": "Μια σαρωμένη σελίδα είναι μία μεγάλη εικόνα, οπότε παίρνετε πίσω ολόκληρη την εικόνα της σελίδας. Στις σελίδες με πραγματικό κείμενο, κάθε ενσωματωμένη φωτογραφία, λογότυπο και σχήμα εξάγεται ξεχωριστά."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "Ανεβαίνει το PDF μου για να εξαχθούν οι εικόνες;",
+          "a": "Όχι. Οι εικόνες βγαίνουν από το PDF στον browser σας, οπότε το αρχείο δεν φεύγει ποτέ από τη συσκευή σας."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "Πώς να εξαγάγετε εικόνες από ένα PDF",
+        "intro": "Η Εξαγωγή εικόνων βγάζει κάθε ενσωματωμένη φωτογραφία, λογότυπο και σχήμα από ένα PDF και τα αποθηκεύει ως αρχεία PNG σε πλήρη ενσωματωμένη ποιότητα.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "Επιλέξτε ένα PDF",
+          "Πατήστε Εξαγωγή εικόνων",
+          "Κατεβάστε τις εικόνες — αν είναι πολλές, κατεβαίνουν μαζί ως ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF σε HTML",
+      "description": "Μετατροπή ενός PDF σε απλή ιστοσελίδα HTML",
+      "seoTitle": "PDF σε HTML — Μετατροπή PDF σε ιστοσελίδα δωρεάν",
+      "metaDescription": "Μετατρέψτε ένα PDF σε απλή σελίδα HTML, μία ενότητα ανά σελίδα PDF. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα — το κείμενο δεν φεύγει ποτέ από τον browser σας.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "Θα μοιάζει η HTML με το PDF;",
+          "a": "Όχι. Μεταφέρει τις λέξεις, όχι τη διάταξη: κάθε σελίδα PDF γίνεται μια ενότητα με το κείμενό της σε παραγράφους. Οι εικόνες και η ακριβής μορφοποίηση δεν μεταφέρονται."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "Τι μπορώ να κάνω με το αρχείο HTML;",
+          "a": "Να το ανοίξετε σε οποιονδήποτε browser, να το επικολλήσετε σε έναν ιστότοπο ή σε έναν επεξεργαστή περιεχομένου, ή να το χρησιμοποιήσετε ως αφετηρία για μια ιστοσελίδα φτιαγμένη από ένα έγγραφο."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "Ανεβαίνει το PDF μου για να μετατραπεί σε HTML;",
+          "a": "Όχι. Το κείμενο εξάγεται και η HTML χτίζεται στον browser σας, οπότε το PDF δεν φεύγει ποτέ από τη συσκευή σας."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "Πώς να μετατρέψετε ένα PDF σε HTML",
+        "intro": "Το PDF σε HTML μετατρέπει ένα PDF σε απλή ιστοσελίδα: μία ενότητα ανά σελίδα PDF, με το κείμενο σε παραγράφους. Μεταφέρει τις λέξεις, όχι τη διάταξη.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "Επιλέξτε ένα PDF με πραγματικό κείμενο (τρέξτε πρώτα OCR PDF στις σαρώσεις)",
+          "Πατήστε Μετατροπή σε HTML",
+          "Κατεβάστε το αρχείο .html ή αντιγράψτε τον κώδικα από την προεπισκόπηση"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "Επεξεργασία μεταδεδομένων",
+      "description": "Αλλαγή τίτλου, συγγραφέα, θέματος και λέξεων-κλειδιών ενός PDF",
+      "seoTitle": "Επεξεργασία μεταδεδομένων PDF — Αλλαγή τίτλου, συγγραφέα και λέξεων-κλειδιών",
+      "metaDescription": "Αλλάξτε τον τίτλο, τον συγγραφέα, το θέμα και τις λέξεις-κλειδιά ενός PDF στον browser σας. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "Πού εμφανίζεται ο τίτλος;",
+          "a": "Στην καρτέλα ή στη γραμμή τίτλου του προγράμματος ανάγνωσης PDF, στις αναζητήσεις αρχείων και στα αποτελέσματα αναζήτησης όταν το PDF είναι ευρετηριασμένο. Ένας σαφής τίτλος βοηθά τους ανθρώπους να βρουν το έγγραφο."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "Η επεξεργασία μεταδεδομένων αλλάζει το ίδιο το έγγραφο;",
+          "a": "Όχι. Οι σελίδες, το κείμενο και οι εικόνες μένουν ακριβώς όπως είναι — αλλάζουν μόνο οι πληροφορίες που είναι αποθηκευμένες για το έγγραφο."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "Μπορώ να καθαρίσω ένα πεδίο;",
+          "a": "Ναι. Αφήστε το πεδίο κενό και αποθηκεύστε — η τιμή αυτή αφαιρείται από το PDF."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "Πώς να επεξεργαστείτε τα μεταδεδομένα ενός PDF",
+        "intro": "Η Επεξεργασία μεταδεδομένων αλλάζει τις πληροφορίες που είναι αποθηκευμένες για ένα PDF — τον τίτλο, τον συγγραφέα, το θέμα και τις λέξεις-κλειδιά — χωρίς να αγγίζει τις σελίδες.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "Επιλέξτε ένα PDF για να δείτε τον τρέχοντα τίτλο, συγγραφέα, θέμα και λέξεις-κλειδιά του",
+          "Αλλάξτε τα πεδία που θέλετε — αφήστε ένα κενό για να το καθαρίσετε",
+          "Πατήστε Αποθήκευση μεταδεδομένων και κατεβάστε το ενημερωμένο PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "Ισοπέδωση PDF",
+      "description": "Μόνιμη ενσωμάτωση πεδίων φόρμας και αφαίρεση σχολίων",
+      "seoTitle": "Ισοπέδωση PDF — Μόνιμη ενσωμάτωση πεδίων φόρμας δωρεάν",
+      "metaDescription": "Ενσωματώστε μόνιμα τα πεδία φόρμας ενός PDF στη σελίδα και αφαιρέστε τα σχόλια, ώστε οι απαντήσεις να μην αλλάζουν πια. Δωρεάν, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "Τι συμβαίνει με τα πεδία φόρμας;",
+          "a": "Οι τιμές τους σχεδιάζονται μέσα στην ίδια τη σελίδα και τα πεδία αφαιρούνται, οπότε οι συμπληρωμένες απαντήσεις δεν μπορούν πια να επεξεργαστούν ή να καθαριστούν."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "Τι συμβαίνει με τα σχόλια και τις επισημάνσεις;",
+          "a": "Αφαιρούνται, επειδή δεν μπορούν να ενσωματωθούν στη σελίδα χωρίς να γίνει εικόνα. Οι σύνδεσμοι διατηρούνται."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "Η ισοπέδωση αλλάζει το κείμενο;",
+          "a": "Όχι. Το κείμενο παραμένει πραγματικό, επιλέξιμο κείμενο — τίποτα δεν μετατρέπεται σε εικόνα."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "Πώς να ισοπεδώσετε ένα PDF",
+        "intro": "Η Ισοπέδωση PDF ενσωματώνει μόνιμα τα πεδία φόρμας στη σελίδα και αφαιρεί σχόλια και επισημάνσεις, ώστε οι συμπληρωμένες απαντήσεις να μην αλλάζουν πια. Οι σύνδεσμοι διατηρούνται και το κείμενο παραμένει επιλέξιμο.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "Επιλέξτε ένα PDF με πεδία φόρμας ή σχόλια",
+          "Πατήστε Ισοπέδωση PDF",
+          "Κατεβάστε το ισοπεδωμένο αντίγραφο"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "Συμπλήρωση φόρμας PDF",
+      "description": "Συμπλήρωση φόρμας PDF και αποθήκευση του ολοκληρωμένου αντιγράφου",
+      "seoTitle": "Συμπλήρωση φόρμας PDF — Συμπληρώστε μια φόρμα PDF online δωρεάν",
+      "metaDescription": "Συμπληρώστε φόρμα PDF στον browser — πεδία κειμένου, πλαίσια επιλογής, λίστες — και αποθηκεύστε το ολοκληρωμένο αντίγραφο. Δωρεάν, χωρίς εγγραφή.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "Ποια πεδία μπορώ να συμπληρώσω;",
+          "a": "Πεδία κειμένου, πλαίσια επιλογής, αναπτυσσόμενες λίστες και ομάδες κουμπιών επιλογής. Κουμπιά και πεδία υπογραφής δεν συμπληρώνονται εδώ — για υπογραφές χρησιμοποιήστε την Υπογραφή PDF."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "Λέει ότι το PDF δεν έχει συμπληρώσιμα πεδία. Γιατί;",
+          "a": "Το PDF είναι μια επίπεδη σάρωση ή μια εκτυπωμένη φόρμα χωρίς διαδραστικά πεδία. Μόνο τα PDF που φτιάχτηκαν με πραγματικά πεδία φόρμας συμπληρώνονται — μια σαρωμένη φόρμα χρειάζεται πρώτα OCR, και ακόμα και τότε παραμένει εικόνα μιας φόρμας."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "Μπορώ να κλειδώσω τις απαντήσεις μετά;",
+          "a": "Ναι. Περάστε το συμπληρωμένο PDF από την Ισοπέδωση PDF και οι απαντήσεις γίνονται μόνιμες."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "Πώς να συμπληρώσετε μια φόρμα PDF",
+        "intro": "Η Συμπλήρωση φόρμας PDF παραθέτει κάθε συμπληρώσιμο πεδίο ενός PDF — πεδία κειμένου, πλαίσια επιλογής, αναπτυσσόμενες λίστες — ώστε να συμπληρώσετε τη φόρμα στον browser σας και να την αποθηκεύσετε.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "Επιλέξτε ένα PDF με συμπληρώσιμα πεδία φόρμας",
+          "Συμπληρώστε κάθε πεδίο στον πίνακα",
+          "Πατήστε Αποθήκευση συμπληρωμένου PDF και κατεβάστε το ολοκληρωμένο αντίγραφο"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "Κείμενο σε PDF",
+      "description": "Μετατροπή απλού κειμένου σε έγγραφο PDF",
+      "seoTitle": "Κείμενο σε PDF — Μετατροπή απλού κειμένου σε PDF δωρεάν",
+      "metaDescription": "Πληκτρολογήστε ή επικολλήστε απλό κείμενο και μετατρέψτε το σε έγγραφο PDF στον browser σας. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα, χωρίς υδατογράφημα.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "Μπορώ να μορφοποιήσω το κείμενο;",
+          "a": "Όχι. Αυτό το εργαλείο μετατρέπει το απλό κείμενο σε καθαρό PDF — οι επικεφαλίδες και η έντονη γραφή δεν μεταφέρονται. Για έγγραφα με στυλ, χρησιμοποιήστε αντ' αυτού το Word σε PDF ή το HTML σε PDF."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "Τι γίνεται με τα μεγάλα κείμενα;",
+          "a": "Απλώνονται σε όσες σελίδες χρειάζονται, με τίτλο στην πρώτη σελίδα αν προσθέσετε έναν."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "Ανεβαίνει το κείμενό μου;",
+          "a": "Όχι. Το PDF χτίζεται στον browser σας, οπότε το κείμενο δεν φεύγει ποτέ από τη συσκευή σας."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "Πώς να μετατρέψετε κείμενο σε PDF",
+        "intro": "Το Κείμενο σε PDF μετατρέπει το απλό κείμενο που πληκτρολογείτε ή επικολλάτε σε καθαρό έγγραφο PDF, με προαιρετικό τίτλο στην πρώτη σελίδα.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "Πληκτρολογήστε ή επικολλήστε το κείμενό σας",
+          "Προσθέστε τίτλο εγγράφου αν θέλετε",
+          "Πατήστε Μετατροπή σε PDF και κατεβάστε το"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "Κεφαλίδα και υποσέλιδο",
+      "description": "Προσθήκη κεφαλίδας και υποσέλιδου σε κάθε σελίδα",
+      "seoTitle": "Προσθήκη κεφαλίδας και υποσέλιδου σε PDF δωρεάν, χωρίς ανέβασμα",
+      "metaDescription": "Προσθέστε μια γραμμή κεφαλίδας και υποσέλιδου — με προαιρετικούς αριθμούς σελίδων — σε κάθε σελίδα ενός PDF. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "Μπορώ να προσθέσω μόνο κεφαλίδα ή μόνο υποσέλιδο;",
+          "a": "Ναι. Αφήστε το άλλο πεδίο κενό και προστίθεται μόνο αυτό που συμπληρώσατε."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "Πού πάει το κείμενο;",
+          "a": "Αριστερά, στο κέντρο ή δεξιά, στην κορυφή ή στο κάτω μέρος κάθε σελίδας. Το κείμενο σχεδιάζεται πάνω στη σελίδα — δεν σπρώχνει το υπάρχον περιεχόμενο."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "Μπορώ να προσθέσω και αριθμούς σελίδων;",
+          "a": "Ναι. Τικάρετε «Προσθήκη αριθμών σελίδων στο υποσέλιδο» και κάθε σελίδα παίρνει έναν αριθμό τύπου «1 από 12» δίπλα στο κείμενο του υποσέλιδου."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "Πώς να προσθέσετε κεφαλίδα και υποσέλιδο σε ένα PDF",
+        "intro": "Η Κεφαλίδα και υποσέλιδο βάζει μια γραμμή κειμένου στην κορυφή και/ή στο κάτω μέρος κάθε σελίδας, με προαιρετικούς αριθμούς σελίδων στο υποσέλιδο.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "Επιλέξτε ένα PDF",
+          "Πληκτρολογήστε το κείμενο κεφαλίδας και υποσέλιδου — αφήστε ένα κενό για να βάλετε μόνο το άλλο",
+          "Διαλέξτε θέση, μέγεθος γραμματοσειράς και αν θα προστεθούν αριθμοί σελίδων",
+          "Πατήστε Προσθήκη κεφαλίδας και υποσέλιδου και κατεβάστε το αποτέλεσμα"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "Αρίθμηση Bates",
+      "description": "Προσθήκη διαδοχικών αριθμών Bates σε κάθε σελίδα",
+      "seoTitle": "Αρίθμηση Bates — Προσθήκη διαδοχικών αριθμών σε PDF",
+      "metaDescription": "Βάλτε σφραγίδα Bates σε κάθε σελίδα ενός PDF, με πρόθεμα και αριθμό με μηδενικά. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "Τι είναι η αρίθμηση Bates;",
+          "a": "Ένας τρόπος να σημαδεύεται κάθε σελίδα ενός συνόλου εγγράφων με έναν μοναδικό διαδοχικό αριθμό — για παράδειγμα EXHIBIT-00042 — ώστε οι σελίδες να μπορούν να αναγνωρίζονται και να παραπέμπονται σε νομικές εργασίες και εργασίες αποκάλυψης."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "Μπορώ να διαλέξω το πρόθεμα και τον αρχικό αριθμό;",
+          "a": "Ναι. Ορίστε οποιοδήποτε πρόθεμα, τον αριθμό εκκίνησης, πόσα ψηφία θα συμπληρώνονται με μηδενικά και πού στη σελίδα θα μπαίνει η σφραγίδα."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "Αλλάζει το έγγραφο;",
+          "a": "Όχι. Η σφραγίδα προστίθεται πάνω σε κάθε σελίδα· το υπάρχον περιεχόμενο μένει ανέγγιχτο."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "Πώς να κάνετε αρίθμηση Bates σε ένα PDF",
+        "intro": "Η Αρίθμηση Bates σημαδεύει κάθε σελίδα με έναν μοναδικό διαδοχικό αριθμό — ένα πρόθεμα συν έναν αριθμό με μηδενικά, όπως EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "Επιλέξτε ένα PDF",
+          "Ορίστε το πρόθεμα, τον αρχικό αριθμό και πόσα ψηφία θα συμπληρώνονται με μηδενικά",
+          "Διαλέξτε πού στη σελίδα θα μπαίνει η σφραγίδα",
+          "Πατήστε Εφαρμογή αριθμών Bates και κατεβάστε το σημαδεμένο PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF σε κλίμακα του γκρι",
+      "description": "Μετατροπή ενός έγχρωμου PDF σε ασπρόμαυρο",
+      "seoTitle": "PDF σε κλίμακα του γκρι — Μετατροπή PDF σε ασπρόμαυρο δωρεάν",
+      "metaDescription": "Μετατρέψτε ένα έγχρωμο PDF σε ασπρόμαυρο, σελίδα προς σελίδα. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα — το αρχείο δεν φεύγει ποτέ από τον browser σας.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "Θα παραμείνει το κείμενο επιλέξιμο;",
+          "a": "Όχι. Οι σελίδες ξαναχτίζονται ως ασπρόμαυρες εικόνες, οπότε το κείμενο γίνεται μέρος της εικόνας. Χρησιμοποιήστε το για εκτύπωση ή κοινοποίηση, όχι για να επεξεργαστείτε το κείμενο μετά."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "Λειτουργεί σε σαρωμένα PDF;",
+          "a": "Ναι. Οι σαρωμένες σελίδες είναι ήδη εικόνες, οπότε μετατρέπονται καθαρά — συχνά αυτός είναι και ο σκοπός, για εκτύπωση ή φαξ."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "Ανεβαίνει το PDF μου;",
+          "a": "Όχι. Η μετατροπή τρέχει εξ ολοκλήρου στον browser σας, οπότε το PDF δεν φεύγει ποτέ από τη συσκευή σας."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "Πώς να μετατρέψετε ένα PDF σε κλίμακα του γκρι",
+        "intro": "Το PDF σε κλίμακα του γκρι ξαναχτίζει κάθε σελίδα σε ασπρόμαυρο. Είναι φτιαγμένο για εκτύπωση και φαξ — οι σελίδες γίνονται εικόνες, οπότε το κείμενο δεν είναι πια επιλέξιμο μετά.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "Επιλέξτε το PDF σας",
+          "Πατήστε Μετατροπή σε κλίμακα του γκρι",
+          "Κατεβάστε το ασπρόμαυρο PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "Αλλαγή μεγέθους PDF",
+      "description": "Αλλαγή σελίδων PDF σε A4, Letter, A3 ή προσαρμοσμένο μέγεθος",
+      "seoTitle": "Αλλαγή μεγέθους PDF — Αλλαγή μεγέθους σελίδας PDF σε A4 ή Letter",
+      "metaDescription": "Αλλάξτε τις σελίδες ενός PDF σε A4, Letter, A3, A5 ή προσαρμοσμένο μέγεθος. Το περιεχόμενο κλιμακώνεται και κεντράρεται. Δωρεάν, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "Ποια είναι η διαφορά από την Περικοπή PDF;",
+          "a": "Η περικοπή κόβει τα περιθώρια μιας σελίδας· η αλλαγή μεγέθους αλλάζει το ίδιο το μέγεθος της σελίδας — A4, Letter, A3, A5 ή οποιοδήποτε προσαρμοσμένο μέγεθος — και κλιμακώνει το περιεχόμενο για να χωρέσει."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "Θα παραμείνει το κείμενο επιλέξιμο;",
+          "a": "Ναι. Οι σελίδες ξαναδιατάσσονται, δεν ξαναποδίδονται, οπότε το κείμενο και τα διανύσματα μένουν ανέπαφα."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "Μπορώ να ορίσω προσαρμοσμένο μέγεθος;",
+          "a": "Ναι. Διαλέξτε Προσαρμοσμένο και πληκτρολογήστε το πλάτος και το ύψος σε χιλιοστά."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "Πώς να αλλάξετε το μέγεθος σελίδων PDF",
+        "intro": "Η Αλλαγή μεγέθους PDF αλλάζει κάθε σελίδα σε A4, Letter, A3, A5 ή ένα μέγεθος που πληκτρολογείτε, κλιμακώνοντας το περιεχόμενο για να χωρέσει, κεντραρισμένο. Το κείμενο και τα διανύσματα μένουν ανέπαφα.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "Επιλέξτε το PDF σας",
+          "Διαλέξτε A4, Letter, A3, A5 ή Προσαρμοσμένο και πληκτρολογήστε το μέγεθος σε χιλιοστά",
+          "Πατήστε Αλλαγή μεγέθους σελίδων",
+          "Κατεβάστε το PDF με το νέο μέγεθος"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "Διόρθωση κλίσης PDF",
+      "description": "Ίσιωμα στραβών σαρωμένων σελίδων",
+      "seoTitle": "Διόρθωση κλίσης PDF — Ισιώστε στραβές σαρωμένες σελίδες δωρεάν",
+      "metaDescription": "Ισιώστε τις στραβές σαρωμένες σελίδες. Η κλίση εντοπίζεται αυτόματα ή ορίζεται χειροκίνητα με τον ρυθμιστή. Δωρεάν, χωρίς ανέβασμα, χωρίς εγγραφή.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "Πώς εντοπίζει την κλίση;",
+          "a": "Διαβάζει τις πρώτες σελίδες και βρίσκει τη γωνία όπου οι γραμμές κειμένου είναι πιο ίσιες, και μετά προτείνει αυτή τη γωνία στον ρυθμιστή. Μπορείτε να τη ρυθμίσετε χειροκίνητα αν φαίνεται λάθος."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "Θα παραμείνει το κείμενο επιλέξιμο;",
+          "a": "Όχι. Οι σελίδες ξαναχτίζονται ως ισιωμένες εικόνες, οπότε το κείμενο γίνεται μέρος της εικόνας. Χρησιμοποιήστε το για σαρωμένες σελίδες, όπου έτσι κι αλλιώς δεν υπάρχει επιλέξιμο κείμενο."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "Πόσο μπορεί να ισιώσει;",
+          "a": "Έως 10 μοίρες προς κάθε κατεύθυνση, που καλύπτει σχεδόν κάθε κακοτροφοδοτημένη σελίδα σαρωτή."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "Πώς να διορθώσετε την κλίση ενός PDF",
+        "intro": "Η Διόρθωση κλίσης PDF ισιώνει τις στραβές σαρωμένες σελίδες. Η κλίση εντοπίζεται αυτόματα όταν προσθέτετε ένα αρχείο, και ο ρυθμιστής σάς αφήνει να τη ρυθμίσετε χειροκίνητα.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "Επιλέξτε το PDF σας — η κλίση εντοπίζεται αυτόματα",
+          "Ελέγξτε τη γωνία που εντοπίστηκε και σύρετε τον ρυθμιστή αν η σελίδα δείχνει ακόμα στραβή",
+          "Χρησιμοποιήστε τη Ζωντανή προεπισκόπηση για να δείτε την ισιωμένη πρώτη σελίδα",
+          "Πατήστε Διόρθωση κλίσης PDF και κατεβάστε το αποτέλεσμα"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "Εναλλαγή και ανάμειξη PDF",
+      "description": "Εναλλασσόμενη ανάμειξη των σελίδων δύο PDF, η μία μετά την άλλη",
+      "seoTitle": "Εναλλαγή και ανάμειξη PDF — Αναμείξτε δύο PDF δωρεάν",
+      "metaDescription": "Αναμείξτε τις σελίδες δύο PDF — τη σελίδα 1 του καθενός, μετά τη σελίδα 2 του καθενός — σε ένα αρχείο. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "Τι γίνεται αν τα δύο PDF έχουν διαφορετικό μήκος;",
+          "a": "Το πιο σύντομο τελειώνει πρώτο· οι υπόλοιπες σελίδες του μεγαλύτερου μπαίνουν στο τέλος, με τη σειρά."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "Ποιο έγγραφο έρχεται πρώτο;",
+          "a": "Το πρώτο έγγραφο που προσθέτετε δίνει τη σελίδα 1, το δεύτερο δίνει τη σελίδα 2, και συνεχίζουν να εναλλάσσονται από εκεί."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "Σε τι χρησιμεύει;",
+          "a": "Στον συνδυασμό δύο εκδόσεων ενός εγγράφου σελίδα προς σελίδα, στην εναλλαγή ερωτήσεων και απαντήσεων, ή στην τοποθέτηση σαρώσεων μπροστά-πίσω σε σειρά ανάγνωσης."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "Πώς να αναμείξετε δύο PDF εναλλάξ",
+        "intro": "Η Εναλλαγή και ανάμειξη παίρνει δύο PDF και αναμειγνύει τις σελίδες τους — τη σελίδα 1 του καθενός, μετά τη σελίδα 2 του καθενός — σε ένα μόνο αρχείο.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "Προσθέστε το πρώτο έγγραφο και μετά το δεύτερο",
+          "Πατήστε Ανάμειξη PDF",
+          "Κατεβάστε το αναμεμειγμένο αρχείο"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "Αφαίρεση κενών σελίδων",
+      "description": "Διαγραφή των κενών σελίδων από ένα PDF",
+      "seoTitle": "Αφαίρεση κενών σελίδων — Διαγραφή κενών σελίδων PDF δωρεάν",
+      "metaDescription": "Βρείτε και διαγράψτε τις κενές σελίδες ενός PDF — αυτές που προσθέτει ο σαρωτής κατά λάθος. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "Πώς ξέρει ότι μια σελίδα είναι κενή;",
+          "a": "Αποδίδει κάθε σελίδα και μετρά πόσο μελάνι έχει πάνω της. Οι σελίδες κάτω από το όριο παρατίθενται πριν αφαιρεθεί οτιδήποτε, ώστε να βλέπετε ακριβώς τι θα φύγει."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "Θα αφαιρέσει μια σελίδα που έχει μόνο αριθμό σελίδας;",
+          "a": "Όχι στη ρύθμιση Ισορροπημένη — ο αριθμός σελίδας μετράει ως μελάνι. Αν παρόλα αυτά αφαιρέσει μια σελίδα που θέλατε, χρησιμοποιήστε Αυστηρή και τρέξτε το ξανά."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "Ανεβαίνει το PDF μου;",
+          "a": "Όχι. Ο εντοπισμός και η αφαίρεση τρέχουν εξ ολοκλήρου στον browser σας."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "Πώς να αφαιρέσετε κενές σελίδες από ένα PDF",
+        "intro": "Η Αφαίρεση κενών σελίδων βρίσκει τις κενές σελίδες που πρόσθεσε ο σαρωτής — συνήθως στο τέλος μιας στοίβας — τις παραθέτει και τις αφαιρεί, αφήνοντας τις υπόλοιπες ανέγγιχτες.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "Επιλέξτε το PDF σας",
+          "Ελέγξτε τις κενές σελίδες που βρέθηκαν και αλλάξτε την ευαισθησία αν έχασε κάποια ή σημάδεψε μια σελίδα που θέλετε",
+          "Πατήστε Αφαίρεση κενών σελίδων",
+          "Κατεβάστε το καθαρισμένο PDF"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "Τοποθέτηση 2, 4, 6 ή 9 σελίδων σε κάθε φύλλο",
+      "seoTitle": "N-up PDF — Πολλές σελίδες σε ένα φύλλο δωρεάν",
+      "metaDescription": "Βάλτε 2, 4, 6 ή 9 σελίδες PDF σε κάθε φύλλο, για φυλλάδια και έντυπα. Δωρεάν, χωρίς εγγραφή, χωρίς ανέβασμα.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "Τι μέγεθος έχουν τα φύλλα;",
+          "a": "Κάθε φύλλο κρατά το μέγεθος της πρώτης σελίδας του PDF σας — συνήθως A4 ή Letter. Οι σελίδες προέλευσης κλιμακώνονται για να χωρέσουν στο κελί τους."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "Θα παραμείνει το κείμενο ευανάγνωστο;",
+          "a": "Ναι. Οι σελίδες ξαναδιατάσσονται, δεν ξαναποδίδονται, οπότε το κείμενο και τα διανύσματα παραμένουν ευκρινή. Σε διάταξη 9 σελίδων η εκτύπωση είναι μικρή, όπως πρέπει."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "Μπορώ να διαλέξω τη σειρά;",
+          "a": "Οι σελίδες τρέχουν από αριστερά προς τα δεξιά, από πάνω προς τα κάτω, με την αρχική σειρά."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "Πώς να βάλετε πολλές σελίδες PDF σε ένα φύλλο",
+        "intro": "Το N-up PDF τοποθετεί 2, 4, 6 ή 9 σελίδες προέλευσης σε κάθε φύλλο, για φυλλάδια και έντυπα. Κάθε φύλλο κρατά το μέγεθος της πρώτης σελίδας.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "Επιλέξτε το PDF σας",
+          "Διαλέξτε 2, 4, 6 ή 9 σελίδες ανά φύλλο",
+          "Πατήστε Δημιουργία N-up PDF",
+          "Κατεβάστε το αποτέλεσμα"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "Προσθήκη κενής σελίδας",
+      "description": "Εισαγωγή κενών σελίδων ή σελίδων από άλλο PDF",
+      "seoTitle": "Προσθήκη κενής σελίδας — Εισαγωγή σελίδων σε PDF δωρεάν",
+      "metaDescription": "Εισαγάγετε κενές σελίδες — ή τις σελίδες ενός άλλου PDF — στην αρχή, στο τέλος, μετά από κάθε σελίδα ή μετά από επιλεγμένη σελίδα. Δωρεάν.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "Πού μπορεί να πάει η κενή σελίδα;",
+          "a": "Στην αρχή, στο τέλος, μετά από κάθε σελίδα ή μετά από οποιονδήποτε αριθμό σελίδας διαλέξετε."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "Πώς εισάγω σελίδες από άλλο PDF;",
+          "a": "Διαλέξτε «Σελίδες από άλλο PDF», προσθέστε το δεύτερο αρχείο μετά το πρώτο και διαλέξτε πού θα πάνε οι σελίδες του."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "Τι μέγεθος έχει η κενή σελίδα;",
+          "a": "Το ίδιο μέγεθος με την πρώτη σελίδα του PDF σας."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "Πώς να προσθέσετε μια κενή σελίδα σε ένα PDF",
+        "intro": "Η Προσθήκη κενής σελίδας εισάγει κενές σελίδες — ή κάθε σελίδα ενός δεύτερου PDF — στην αρχή, στο τέλος, μετά από κάθε σελίδα ή μετά από μια σελίδα που διαλέγετε.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "Επιλέξτε το PDF σας",
+          "Διαλέξτε Κενή σελίδα, ή Σελίδες από άλλο PDF και προσθέστε το δεύτερο αρχείο",
+          "Διαλέξτε πού θα πάνε οι σελίδες",
+          "Πατήστε Προσθήκη κενής σελίδας και κατεβάστε το αποτέλεσμα"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "Ιδιωτικό — το αρχείο επεξεργάζεται στο πρόγραμμα περιήγησής σας και δεν ανεβαίνει ποτέ",
+          "Δωρεάν, χωρίς λογαριασμό, χωρίς υδατογράφημα και χωρίς ημερήσιο όριο",
+          "Λειτουργεί σε κάθε σύγχρονο πρόγραμμα περιήγησης σε Windows, Mac, Linux, iPhone και Android"
         ]
       }
     }

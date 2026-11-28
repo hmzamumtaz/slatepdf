@@ -914,38 +914,38 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF से PNG",
+      "description": "PDF पेजों को PNG इमेज में बदलें",
+      "seoTitle": "PDF से PNG — PDF पेजों को PNG में बदलें, मुफ़्त",
+      "metaDescription": "PDF के हर पेज को 144 या 216 DPI पर PNG इमेज में बदलें। मुफ़्त, बिना साइन-अप, बिना वॉटरमार्क — PDF कभी आपके ब्राउज़र से बाहर नहीं जाती।",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "a": "पेज 144 DPI (स्टैंडर्ड) या 216 DPI (हाई) पर रेंडर होते हैं। हाई रिज़ॉल्यूशन से टेक्स्ट ज़्यादा साफ़ दिखता है, पर फ़ाइलें बड़ी होती हैं।",
+          "q": "PNG किस रिज़ॉल्यूशन की होंगी?"
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "a": "PNG लॉसलेस होता है, इसलिए तीखे किनारे और टेक्स्ट साफ़ रहते हैं; JPG फ़ाइलें छोटी होती हैं। जब आपको बिल्कुल सही पिक्सेल चाहिए तो PNG, और जब छोटी फ़ाइल चाहिए तो JPG चुनें।",
+          "q": "PDF से JPG से यह कैसे अलग है?"
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "a": "नहीं। हर पेज आपके ब्राउज़र में ही इमेज बनता है, इसलिए PDF कभी आपके डिवाइस से बाहर नहीं जाती।",
+          "q": "क्या PNG में बदलने के लिए मेरी PDF अपलोड होती है?"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
-        "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF से PNG टूल PDF के हर पेज को स्टैंडर्ड (144 DPI) या हाई (216 DPI) रिज़ॉल्यूशन वाली PNG इमेज के रूप में सहेजता है। PNG लॉसलेस होता है, इसलिए टेक्स्ट और तीखे किनारे साफ़ रहते हैं।",
+        "steps": [
+          "एक या ज़्यादा PDF चुनें",
+          "स्टैंडर्ड या हाई रिज़ॉल्यूशन चुनें",
+          "PNG में बदलें पर क्लिक करें",
+          "अलग-अलग पेज डाउनलोड करें, या सभी पेज एक साथ ZIP में"
+        ],
+        "title": "PDF को PNG में कैसे बदलें"
       }
     },
     "pdf-to-word": {
@@ -1562,570 +1562,570 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF से टेक्स्ट",
+      "description": "PDF का सारा टेक्स्ट एक सादी .txt फ़ाइल में निकालें",
+      "seoTitle": "PDF से टेक्स्ट — PDF से टेक्स्ट निकालें, मुफ़्त",
+      "metaDescription": "PDF का सारा टेक्स्ट एक सादी .txt फ़ाइल में निकालें, हर पेज पर चाहें तो हेडिंग भी। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "a": "हर पेज का टेक्स्ट, पेज के क्रम में। पेज हेडिंग चालू करें तो हर पेज से पहले 'पेज N' वाली लाइन मिलेगी, जिससे लंबे दस्तावेज़ में घूमना आसान हो जाता है।",
+          "q": ".txt फ़ाइल में क्या होगा?"
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "a": "सिर्फ़ तभी, जब स्कैन में टेक्स्ट लेयर हो। सादे फ़ोटो-स्कैन में निकालने लायक कोई टेक्स्ट नहीं होता और वह खाली निकलता है — पहले उस पर OCR PDF चलाएँ, फिर खोजने योग्य नतीजे को टेक्स्ट में बदलें।",
+          "q": "क्या यह स्कैन की हुई PDF पर काम करता है?"
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "a": "नहीं। टेक्स्ट आपके ब्राउज़र में ही PDF से पढ़ा जाता है, इसलिए फ़ाइल कभी आपके डिवाइस से बाहर नहीं जाती।",
+          "q": "क्या टेक्स्ट निकालने के लिए मेरी PDF अपलोड होती है?"
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
-        "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF से टेक्स्ट टूल PDF का टेक्स्ट निकालकर एक सादी .txt फ़ाइल में डालता है — एक पेज के बाद दूसरा, और चाहें तो हर पेज पर हेडिंग भी।",
+        "steps": [
+          "असली टेक्स्ट वाली PDF चुनें (स्कैन पर पहले OCR PDF चलाएँ)",
+          "अगर आपको पेज N मार्कर चाहिए तो 'हर पेज के लिए हेडिंग जोड़ें' पर टिक करें",
+          "टेक्स्ट में बदलें पर क्लिक करें",
+          ".txt डाउनलोड करें, या प्रीव्यू से टेक्स्ट कॉपी करें"
+        ],
+        "title": "PDF से टेक्स्ट कैसे निकालें"
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "PDF से इमेज निकालें",
+      "description": "PDF से फ़ोटो और आकृतियाँ PNG फ़ाइलों के रूप में निकालें",
+      "seoTitle": "PDF से इमेज निकालें — फ़ोटो PNG के रूप में सहेजें, मुफ़्त",
+      "metaDescription": "PDF से फ़ोटो, लोगो और आकृतियाँ निकालकर PNG फ़ाइलों के रूप में सहेजें। मुफ़्त, बिना साइन-अप — PDF कभी आपके ब्राउज़र से बाहर नहीं जाती।",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "a": "पूरी एम्बेडेड क्वालिटी — इमेज बिल्कुल वैसी ही सहेजी जाती है जैसी PDF के अंदर है, PNG के रूप में। न दोबारा कंप्रेस होती है, न छोटी की जाती है।",
+          "q": "निकाली गई इमेज की क्वालिटी कैसी होगी?"
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "a": "स्कैन किया पेज अपने आप में एक बड़ी इमेज होता है, इसलिए आपको पूरे पेज की वही इमेज मिलेगी। असली टेक्स्ट वाले पेजों में हर एम्बेडेड फ़ोटो, लोगो और आकृति अलग-अलग निकाली जाती है।",
+          "q": "अगर मेरी PDF स्कैन की हुई हो तो?"
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "a": "नहीं। इमेज आपके ब्राउज़र में ही PDF से निकाली जाती हैं, इसलिए फ़ाइल कभी आपके डिवाइस से बाहर नहीं जाती।",
+          "q": "क्या इमेज निकालने के लिए मेरी PDF अपलोड होती है?"
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
-        "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF से इमेज निकालें टूल PDF में एम्बेडेड हर फ़ोटो, लोगो और आकृति को पूरी एम्बेडेड क्वालिटी में PNG फ़ाइलों के रूप में सहेजता है।",
+        "steps": [
+          "PDF चुनें",
+          "इमेज निकालें पर क्लिक करें",
+          "इमेज डाउनलोड करें — कई इमेज एक साथ ZIP में डाउनलोड होती हैं"
+        ],
+        "title": "PDF से इमेज कैसे निकालें"
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF से HTML",
+      "description": "PDF को एक सादे HTML वेब पेज में बदलें",
+      "seoTitle": "PDF से HTML — PDF को वेब पेज में बदलें, मुफ़्त",
+      "metaDescription": "PDF को एक सादे HTML पेज में बदलें — हर PDF पेज के लिए एक सेक्शन। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "a": "नहीं। यह लेआउट नहीं, शब्द ले जाता है: हर PDF पेज एक सेक्शन बन जाता है और उसका टेक्स्ट पैराग्राफ़ के रूप में आता है। इमेज और सटीक फ़ॉर्मेटिंग साथ नहीं आतीं।",
+          "q": "क्या HTML बिल्कुल PDF जैसा दिखेगा?"
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "a": "इसे किसी भी ब्राउज़र में खोलें, किसी वेबसाइट या कंटेंट एडिटर में पेस्ट करें, या इसे दस्तावेज़ से बने वेब पेज की शुरुआत के रूप में इस्तेमाल करें।",
+          "q": "HTML फ़ाइल का मैं क्या कर सकता हूँ?"
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "a": "नहीं। टेक्स्ट निकाला जाता है और HTML आपके ब्राउज़र में ही बनता है, इसलिए PDF कभी आपके डिवाइस से बाहर नहीं जाती।",
+          "q": "क्या HTML में बदलने के लिए मेरी PDF अपलोड होती है?"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
-        "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF से HTML टूल PDF को एक सादे वेब पेज में बदलता है: हर PDF पेज के लिए एक सेक्शन, और टेक्स्ट पैराग्राफ़ के रूप में। यह लेआउट नहीं, शब्द ले जाता है।",
+        "steps": [
+          "असली टेक्स्ट वाली PDF चुनें (स्कैन पर पहले OCR PDF चलाएँ)",
+          "HTML में बदलें पर क्लिक करें",
+          ".html फ़ाइल डाउनलोड करें, या प्रीव्यू से मार्कअप कॉपी करें"
+        ],
+        "title": "PDF को HTML में कैसे बदलें"
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "PDF मेटाडेटा एडिट करें",
+      "description": "PDF का टाइटल, लेखक, विषय और कीवर्ड बदलें",
+      "seoTitle": "PDF मेटाडेटा एडिट करें — टाइटल, लेखक और कीवर्ड बदलें",
+      "metaDescription": "अपने ब्राउज़र में PDF का टाइटल, लेखक, विषय और कीवर्ड बदलें। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "a": "PDF रीडर के टैब या टाइटल बार में, फ़ाइल सर्च में, और जब PDF इंडेक्स हो तो सर्च रिज़ल्ट में। साफ़ टाइटल से लोगों को दस्तावेज़ ढूँढने में मदद मिलती है।",
+          "q": "टाइटल कहाँ दिखता है?"
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "a": "नहीं। पेज, टेक्स्ट और इमेज बिल्कुल वैसे ही रहते हैं — सिर्फ़ दस्तावेज़ के बारे में सहेजी जानकारी बदलती है।",
+          "q": "क्या मेटाडेटा एडिट करने से दस्तावेज़ बदल जाता है?"
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "a": "हाँ। फ़ील्ड खाली छोड़कर सहेजें — वह वैल्यू PDF से हट जाएगी।",
+          "q": "क्या मैं कोई फ़ील्ड खाली कर सकता हूँ?"
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
-        "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "मेटाडेटा एडिट करें टूल PDF के बारे में सहेजी जानकारी — टाइटल, लेखक, विषय और कीवर्ड — बदलता है, पेजों को छुए बिना।",
+        "steps": [
+          "PDF चुनकर उसका मौजूदा टाइटल, लेखक, विषय और कीवर्ड देखें",
+          "जो फ़ील्ड बदलनी हो बदलें — किसी को खाली छोड़ने पर वह हट जाएगी",
+          "मेटाडेटा सहेजें पर क्लिक करें और अपडेट की हुई PDF डाउनलोड करें"
+        ],
+        "title": "PDF मेटाडेटा कैसे एडिट करें"
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "PDF फ़्लैटन करें",
+      "description": "फ़ॉर्म फ़ील्ड स्थायी बनाएँ और एनोटेशन हटाएँ",
+      "seoTitle": "PDF फ़्लैटन करें — फ़ॉर्म फ़ील्ड स्थायी बनाएँ, मुफ़्त",
+      "metaDescription": "PDF के फ़ॉर्म फ़ील्ड को पेज में स्थायी रूप से बिठाएँ और एनोटेशन हटाएँ, ताकि जवाब अब बदले न जा सकें। मुफ़्त, बिना अपलोड।",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "a": "उनकी वैल्यू पेज में ही छप जाती है और फ़ील्ड हट जाते हैं, इसलिए भरे हुए जवाब अब एडिट या साफ़ नहीं किए जा सकते।",
+          "q": "फ़ॉर्म फ़ील्ड का क्या होता है?"
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "a": "वे हट जाते हैं, क्योंकि पेज को इमेज बनाए बिना उन्हें पेज में नहीं बिठाया जा सकता। लिंक बने रहते हैं।",
+          "q": "कमेंट और हाइलाइट का क्या होता है?"
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "a": "नहीं। टेक्स्ट असली, सिलेक्ट करने योग्य टेक्स्ट ही रहता है — कुछ भी इमेज में नहीं बदलता।",
+          "q": "क्या फ़्लैटन करने से टेक्स्ट बदलता है?"
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
-        "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF फ़्लैटन करें टूल फ़ॉर्म फ़ील्ड को पेज में स्थायी रूप से बिठाता है और कमेंट व हाइलाइट हटाता है, ताकि भरे हुए जवाब अब बदले न जा सकें। लिंक बने रहते हैं और टेक्स्ट सिलेक्ट करने योग्य रहता है।",
+        "steps": [
+          "फ़ॉर्म फ़ील्ड या एनोटेशन वाली PDF चुनें",
+          "PDF फ़्लैटन करें पर क्लिक करें",
+          "फ़्लैटन की गई कॉपी डाउनलोड करें"
+        ],
+        "title": "PDF को फ़्लैटन कैसे करें"
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "PDF फ़ॉर्म भरें",
+      "description": "PDF फ़ॉर्म भरें और पूरी की हुई कॉपी सहेजें",
+      "seoTitle": "PDF फ़ॉर्म भरें — PDF फ़ॉर्म ऑनलाइन भरें, मुफ़्त",
+      "metaDescription": "अपने ब्राउज़र में PDF फ़ॉर्म भरें — टेक्स्ट फ़ील्ड, टिक बॉक्स और ड्रॉपडाउन — और पूरी की हुई कॉपी सहेजें। मुफ़्त, बिना साइन-अप।",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "a": "टेक्स्ट फ़ील्ड, टिक बॉक्स, ड्रॉपडाउन लिस्ट और रेडियो ग्रुप। बटन और सिग्नेचर फ़ील्ड यहाँ नहीं भरे जा सकते — सिग्नेचर के लिए PDF साइन करें इस्तेमाल करें।",
+          "q": "कौन-से फ़ील्ड भरे जा सकते हैं?"
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "a": "PDF एक फ़्लैट स्कैन है, या बिना इंटरैक्टिव फ़ील्ड वाला छपा हुआ फ़ॉर्म है। सिर्फ़ असली फ़ॉर्म फ़ील्ड वाली PDF ही भरी जा सकती है — स्कैन किए फ़ॉर्म पर पहले OCR चाहिए, और तब भी वह फ़ॉर्म की तस्वीर ही रहता है।",
+          "q": "यह कहता है कि PDF में भरने लायक फ़ील्ड नहीं हैं। क्यों?"
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "a": "हाँ। भरी हुई PDF को PDF फ़्लैटन करें से चलाएँ और जवाब स्थायी हो जाएँगे।",
+          "q": "क्या मैं बाद में जवाब लॉक कर सकता हूँ?"
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
-        "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF फ़ॉर्म भरें टूल PDF के हर भरने लायक फ़ील्ड — टेक्स्ट फ़ील्ड, टिक बॉक्स, ड्रॉपडाउन — की सूची देता है, ताकि आप फ़ॉर्म अपने ब्राउज़र में भरकर सहेज सकें।",
+        "steps": [
+          "भरने लायक फ़ॉर्म फ़ील्ड वाली PDF चुनें",
+          "पैनल में हर फ़ील्ड भरें",
+          "भरी हुई PDF सहेजें पर क्लिक करें और पूरी की हुई कॉपी डाउनलोड करें"
+        ],
+        "title": "PDF फ़ॉर्म कैसे भरें"
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "टेक्स्ट से PDF",
+      "description": "सादे टेक्स्ट को PDF दस्तावेज़ में बदलें",
+      "seoTitle": "टेक्स्ट से PDF — सादा टेक्स्ट PDF में बदलें, मुफ़्त",
+      "metaDescription": "सादा टेक्स्ट टाइप करें या पेस्ट करें और अपने ब्राउज़र में PDF दस्तावेज़ बनाएँ। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "a": "नहीं। यह टूल सादे टेक्स्ट को एक साफ़ PDF में बदलता है — हेडिंग और बोल्ड साथ नहीं आते। स्टाइल वाले दस्तावेज़ों के लिए Word से PDF या HTML से PDF इस्तेमाल करें।",
+          "q": "क्या मैं टेक्स्ट फ़ॉर्मेट कर सकता हूँ?"
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "a": "वह जितने पेज चाहिए, उतने पेजों में बहता है, और अगर आप टाइटल जोड़ें तो वह पहले पेज पर आएगा।",
+          "q": "लंबे टेक्स्ट का क्या होगा?"
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "a": "नहीं। PDF आपके ब्राउज़र में ही बनता है, इसलिए टेक्स्ट कभी आपके डिवाइस से बाहर नहीं जाता।",
+          "q": "क्या मेरा टेक्स्ट अपलोड होता है?"
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
-        "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "टेक्स्ट से PDF टूल आपके टाइप किए या पेस्ट किए सादे टेक्स्ट को एक साफ़ PDF दस्तावेज़ में बदलता है, पहले पेज पर चाहें तो टाइटल भी।",
+        "steps": [
+          "अपना टेक्स्ट टाइप करें या पेस्ट करें",
+          "चाहें तो दस्तावेज़ का टाइटल जोड़ें",
+          "PDF में बदलें पर क्लिक करें और डाउनलोड करें"
+        ],
+        "title": "टेक्स्ट को PDF में कैसे बदलें"
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "PDF में हेडर और फ़ुटर जोड़ें",
+      "description": "हर पेज पर हेडर और फ़ुटर लगाएँ",
+      "seoTitle": "PDF में हेडर और फ़ुटर जोड़ें, मुफ़्त — बिना अपलोड",
+      "metaDescription": "PDF के हर पेज पर हेडर और फ़ुटर लाइन लगाएँ — चाहें तो पेज नंबर के साथ। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "a": "हाँ। दूसरा फ़ील्ड खाली छोड़ दें और सिर्फ़ भरा हुआ वाला ही लगेगा।",
+          "q": "क्या मैं सिर्फ़ हेडर, या सिर्फ़ फ़ुटर जोड़ सकता हूँ?"
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "a": "हर पेज के ऊपर या नीचे, बाएँ, बीच में या दाएँ। टेक्स्ट पेज के ऊपर छपता है — वह मौजूदा कंटेंट को हिलाता नहीं।",
+          "q": "टेक्स्ट कहाँ जाता है?"
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "a": "हाँ। 'फ़ुटर में पेज नंबर जोड़ें' पर टिक करें और हर पेज को आपके फ़ुटर टेक्स्ट के बगल में '1 में से 12' जैसा नंबर मिलेगा।",
+          "q": "क्या मैं पेज नंबर भी जोड़ सकता हूँ?"
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
-        "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "हेडर और फ़ुटर टूल हर पेज के ऊपर और/या नीचे टेक्स्ट की एक लाइन लगाता है, और फ़ुटर में चाहें तो पेज नंबर भी।",
+        "steps": [
+          "PDF चुनें",
+          "हेडर और फ़ुटर का टेक्स्ट लिखें — सिर्फ़ एक लगाना हो तो दूसरा खाली छोड़ दें",
+          "जगह, फ़ॉन्ट साइज़ चुनें, और पेज नंबर जोड़ने हैं या नहीं",
+          "हेडर और फ़ुटर जोड़ें पर क्लिक करें और नतीजा डाउनलोड करें"
+        ],
+        "title": "PDF में हेडर और फ़ुटर कैसे जोड़ें"
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "बेट्स नंबरिंग",
+      "description": "हर पेज पर क्रम से बेट्स नंबर लगाएँ",
+      "seoTitle": "बेट्स नंबरिंग — PDF पर क्रमवार नंबर लगाएँ",
+      "metaDescription": "PDF के हर पेज पर प्रीफ़िक्स और शून्य से भरे क्रमिक नंबर से बेट्स-स्टैंप लगाएँ। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "a": "दस्तावेज़ों के सेट के हर पेज पर एक अनूठा क्रमिक नंबर छापने का तरीक़ा — जैसे EXHIBIT-00042 — ताकि कानूनी और डिस्कवरी के काम में पेजों की पहचान और उनका हवाला दिया जा सके।",
+          "q": "बेट्स नंबरिंग क्या है?"
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "a": "हाँ। कोई भी प्रीफ़िक्स, शुरू करने का नंबर, कितने अंकों तक शून्य भरना है, और पेज पर स्टैंप कहाँ लगेगा — सब सेट कर सकते हैं।",
+          "q": "क्या मैं प्रीफ़िक्स और शुरुआती नंबर चुन सकता हूँ?"
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "a": "नहीं। स्टैंप हर पेज के ऊपर लगता है; मौजूदा कंटेंट को छुआ नहीं जाता।",
+          "q": "क्या इससे दस्तावेज़ बदलता है?"
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
-        "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "बेट्स नंबरिंग टूल हर पेज पर एक अनूठा क्रमिक नंबर छापता है — प्रीफ़िक्स के साथ शून्य से भरा चलता हुआ नंबर, जैसे EXHIBIT-00042।",
+        "steps": [
+          "PDF चुनें",
+          "प्रीफ़िक्स, शुरुआती नंबर और कितने अंकों तक शून्य भरना है, सेट करें",
+          "पेज पर स्टैंप कहाँ लगेगा, चुनें",
+          "बेट्स नंबर लगाएँ पर क्लिक करें और स्टैंप की हुई PDF डाउनलोड करें"
+        ],
+        "title": "PDF पर बेट्स नंबर कैसे लगाएँ"
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF ग्रेस्केल करें",
+      "description": "रंगीन PDF को ब्लैक एंड व्हाइट बनाएँ",
+      "seoTitle": "PDF ग्रेस्केल करें — PDF को ब्लैक एंड व्हाइट बनाएँ, मुफ़्त",
+      "metaDescription": "रंगीन PDF को पेज-दर-पेज ब्लैक एंड व्हाइट बनाएँ। मुफ़्त, बिना साइन-अप, बिना अपलोड — फ़ाइल कभी आपके ब्राउज़र से बाहर नहीं जाती।",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "a": "नहीं। पेज ब्लैक-एंड-व्हाइट इमेज के रूप में दोबारा बनते हैं, इसलिए टेक्स्ट इमेज का हिस्सा बन जाता है। इसे प्रिंट या शेयर करने के लिए इस्तेमाल करें, बाद में टेक्स्ट एडिट करने के लिए नहीं।",
+          "q": "क्या टेक्स्ट अब भी सिलेक्ट किया जा सकेगा?"
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "a": "हाँ। स्कैन किए पेज पहले से इमेज होते हैं, इसलिए वे साफ़-सुथरे बदलते हैं — अक्सर यही मकसद होता है, प्रिंट या फ़ैक्स के लिए।",
+          "q": "क्या यह स्कैन की हुई PDF पर काम करता है?"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "a": "नहीं। कन्वर्ज़न पूरी तरह आपके ब्राउज़र में चलता है, इसलिए PDF कभी आपके डिवाइस से बाहर नहीं जाती।",
+          "q": "क्या मेरी PDF अपलोड होती है?"
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
-        "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF ग्रेस्केल करें टूल हर पेज को ब्लैक एंड व्हाइट में दोबारा बनाता है। यह प्रिंट और फ़ैक्स के लिए बना है — पेज इमेज बन जाते हैं, इसलिए बाद में टेक्स्ट सिलेक्ट नहीं किया जा सकता।",
+        "steps": [
+          "अपनी PDF चुनें",
+          "ग्रेस्केल में बदलें पर क्लिक करें",
+          "ब्लैक-एंड-व्हाइट PDF डाउनलोड करें"
+        ],
+        "title": "PDF को ग्रेस्केल में कैसे बदलें"
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "PDF का साइज़ बदलें",
+      "description": "PDF पेजों को A4, Letter, A3 या कस्टम साइज़ में बदलें",
+      "seoTitle": "PDF का साइज़ बदलें — PDF पेज साइज़ A4 या Letter करें",
+      "metaDescription": "PDF के हर पेज को A4, Letter, A3, A5 या कस्टम साइज़ में बदलें। कंटेंट फ़िट होकर बीच में आता है। मुफ़्त, बिना अपलोड।",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "a": "क्रॉप पेज के मार्जिन काटता है; साइज़ बदलना पेज का साइज़ ही बदल देता है — A4, Letter, A3, A5 या कोई भी कस्टम साइज़ — और कंटेंट को फ़िट होने तक स्केल करता है।",
+          "q": "PDF क्रॉप करें से यह कैसे अलग है?"
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "a": "हाँ। पेज दोबारा रेंडर नहीं, दोबारा लेआउट किए जाते हैं, इसलिए टेक्स्ट और वेक्टर बने रहते हैं।",
+          "q": "क्या टेक्स्ट सिलेक्ट करने योग्य रहेगा?"
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "a": "हाँ। कस्टम चुनें और चौड़ाई व ऊँचाई मिलीमीटर में लिखें।",
+          "q": "क्या मैं कस्टम साइज़ सेट कर सकता हूँ?"
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
-        "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF का साइज़ बदलें टूल हर पेज को A4, Letter, A3, A5 या आपके लिखे साइज़ में बदलता है, कंटेंट को फ़िट करके बीच में रखता है। टेक्स्ट और वेक्टर बने रहते हैं।",
+        "steps": [
+          "अपनी PDF चुनें",
+          "A4, Letter, A3, A5 चुनें, या कस्टम चुनकर साइज़ मिलीमीटर में लिखें",
+          "पेजों का साइज़ बदलें पर क्लिक करें",
+          "साइज़ बदली हुई PDF डाउनलोड करें"
+        ],
+        "title": "PDF पेजों का साइज़ कैसे बदलें"
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "PDF को सीधा करें",
+      "description": "टेढ़े स्कैन किए पेजों को सीधा करें",
+      "seoTitle": "PDF को सीधा करें — टेढ़े स्कैन पेज सीधे करें, मुफ़्त",
+      "metaDescription": "टेढ़े स्कैन किए पेजों को सीधा करें। झुकाव अपने आप पता चलता है, या स्लाइडर से खुद सेट करें। मुफ़्त, बिना अपलोड।",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "a": "यह पहले पेज पढ़कर वह कोण ढूँढता है जिस पर टेक्स्ट की लाइनें सबसे सीधी हों, फिर वही कोण स्लाइडर पर दिखाता है। अगर गलत लगे तो आप हाथ से बदल सकते हैं।",
+          "q": "यह झुकाव कैसे पता करता है?"
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "a": "नहीं। पेज सीधी की हुई इमेज के रूप में दोबारा बनते हैं, इसलिए टेक्स्ट इमेज का हिस्सा बन जाता है। इसे स्कैन किए पेजों के लिए इस्तेमाल करें, जिनमें वैसे भी सिलेक्ट करने लायक टेक्स्ट नहीं होता।",
+          "q": "क्या टेक्स्ट अब भी सिलेक्ट किया जा सकेगा?"
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "a": "दोनों तरफ़ 10 डिग्री तक, जो गलत फ़ीड वाले स्कैनर के लगभग हर पेज के लिए काफ़ी है।",
+          "q": "यह कितना सीधा कर सकता है?"
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
-        "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF को सीधा करें टूल टेढ़े स्कैन किए पेजों को सीधा करता है। फ़ाइल जोड़ते ही झुकाव अपने आप पता चलता है, और स्लाइडर से आप हाथ से भी बदल सकते हैं।",
+        "steps": [
+          "अपनी PDF चुनें — झुकाव अपने आप पता चल जाएगा",
+          "पता चला कोण जाँचें, और अगर पेज अब भी टेढ़ा लगे तो स्लाइडर खींचें",
+          "लाइव प्रीव्यू से सीधा किया गया पहला पेज देखें",
+          "PDF सीधा करें पर क्लिक करें और नतीजा डाउनलोड करें"
+        ],
+        "title": "PDF को सीधा कैसे करें"
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "PDF पेज आपस में मिलाएँ",
+      "description": "दो PDF के पेजों को एक के बाद एक आपस में मिलाएँ",
+      "seoTitle": "PDF पेज आपस में मिलाएँ — दो PDF को एक में मिलाएँ, मुफ़्त",
+      "metaDescription": "दो PDF के पेज आपस में मिलाएँ — पहले एक का पेज 1, फिर दूसरे का पेज 1, फिर पेज 2 — एक फ़ाइल में। मुफ़्त, बिना साइन-अप।",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "a": "छोटी वाली पहले खत्म हो जाती है; लंबी वाली के बचे पेज अंत में क्रम से आ जाते हैं।",
+          "q": "अगर दोनों PDF की लंबाई अलग हो तो?"
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "a": "पहले जोड़ा दस्तावेज़ पेज 1 देता है, दूसरा पेज 2 देता है, और फिर वे बारी-बारी से चलते हैं।",
+          "q": "पहले कौन-सा दस्तावेज़ आता है?"
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "a": "किसी दस्तावेज़ के दो वर्शन को पेज-दर-पेज जोड़ने, सवाल और जवाब आपस में मिलाने, या आगे-पीछे के स्कैन को पढ़ने के क्रम में लाने के काम आता है।",
+          "q": "यह किस काम आता है?"
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
-        "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF पेज आपस में मिलाएँ टूल दो PDF लेता है और उनके पेज आपस में मिलाता है — पहले एक का पेज 1, फिर दूसरे का पेज 1, फिर पेज 2 — एक ही फ़ाइल में।",
+        "steps": [
+          "पहला दस्तावेज़ जोड़ें, फिर दूसरा",
+          "PDF मिलाएँ पर क्लिक करें",
+          "मिली हुई फ़ाइल डाउनलोड करें"
+        ],
+        "title": "दो PDF को आपस में कैसे मिलाएँ"
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "PDF से खाली पेज हटाएँ",
+      "description": "PDF से खाली पेज हटाएँ",
+      "seoTitle": "PDF से खाली पेज हटाएँ — खाली PDF पेज हटाएँ, मुफ़्त",
+      "metaDescription": "PDF में खाली पेज ढूँढकर हटाएँ — वे पेज जो स्कैनर गलती से जोड़ देता है। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "a": "यह हर पेज को रेंडर करके मापता है कि उस पर कितनी स्याही है। सीमा से कम वाले पेज हटाने से पहले सूची में दिखाए जाते हैं, ताकि आप ठीक-ठीक देख सकें कि क्या जाएगा।",
+          "q": "इसे कैसे पता चलता है कि पेज खाली है?"
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "a": "बैलेंस्ड सेटिंग पर नहीं — पेज नंबर भी स्याही माना जाता है। अगर फिर भी कोई चाहा पेज हट जाए, तो स्ट्रिक्ट इस्तेमाल करके दोबारा चलाएँ।",
+          "q": "क्या यह सिर्फ़ पेज नंबर वाला पेज भी हटा देगा?"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "a": "नहीं। पहचान और हटाना पूरी तरह आपके ब्राउज़र में चलता है।",
+          "q": "क्या मेरी PDF अपलोड होती है?"
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
-        "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF से खाली पेज हटाएँ टूल स्कैनर के जोड़े खाली पेज — जो आमतौर पर स्कैन के ढेर के अंत में होते हैं — ढूँढता है, उनकी सूची देता है और उन्हें हटा देता है; बाक़ी पेज छुए नहीं जाते।",
+        "steps": [
+          "अपनी PDF चुनें",
+          "मिले हुए खाली पेज जाँचें, और अगर कोई छूट गया हो या कोई चाहा पेज झंडा हो गया हो तो संवेदनशीलता बदलें",
+          "खाली पेज हटाएँ पर क्लिक करें",
+          "साफ़ की हुई PDF डाउनलोड करें"
+        ],
+        "title": "PDF से खाली पेज कैसे हटाएँ"
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
-      "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "name": "N-अप PDF",
+      "description": "हर शीट पर 2, 4, 6 या 9 पेज रखें",
+      "seoTitle": "N-अप PDF — एक शीट पर कई पेज रखें, मुफ़्त",
+      "metaDescription": "PDF के 2, 4, 6 या 9 पेज हर शीट पर रखें — बुकलेट और हैंडआउट के लिए। मुफ़्त, बिना साइन-अप, बिना अपलोड।",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "a": "हर शीट आपकी PDF के पहले पेज के साइज़ की ही रहती है — आमतौर पर A4 या Letter। सोर्स पेज अपने सेल में फ़िट होने तक स्केल होते हैं।",
+          "q": "शीट का साइज़ क्या होगा?"
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "a": "हाँ। पेज दोबारा रेंडर नहीं, दोबारा लेआउट किए जाते हैं, इसलिए टेक्स्ट और वेक्टर साफ़ रहते हैं। 9-अप पर छपाई छोटी होती है, जैसी होनी चाहिए।",
+          "q": "क्या टेक्स्ट पढ़ने लायक रहेगा?"
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "a": "पेज मूल क्रम में बाएँ से दाएँ, ऊपर से नीचे चलते हैं।",
+          "q": "क्या मैं क्रम चुन सकता हूँ?"
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
-        "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "N-अप PDF टूल हर शीट पर 2, 4, 6 या 9 सोर्स पेज रखता है — बुकलेट और हैंडआउट के लिए। हर शीट पहले पेज के साइज़ की ही रहती है।",
+        "steps": [
+          "अपनी PDF चुनें",
+          "2-अप, 4-अप, 6-अप या 9-अप चुनें",
+          "N-अप PDF बनाएँ पर क्लिक करें",
+          "नतीजा डाउनलोड करें"
+        ],
+        "title": "एक शीट पर कई PDF पेज कैसे रखें"
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "PDF में खाली पेज जोड़ें",
+      "description": "खाली पेज डालें या दूसरी PDF के पेज जोड़ें",
+      "seoTitle": "PDF में खाली पेज जोड़ें — PDF में पेज डालें, मुफ़्त",
+      "metaDescription": "PDF में खाली पेज डालें — या दूसरी PDF के सभी पेज — शुरुआत में, अंत में, हर पेज के बाद, या चुने पेज के बाद। मुफ़्त, बिना अपलोड।",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "a": "शुरुआत में, अंत में, हर पेज के बाद, या आपके चुने किसी भी पेज नंबर के बाद।",
+          "q": "खाली पेज कहाँ जा सकता है?"
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "a": "'दूसरी PDF के पेज' चुनें, पहली फ़ाइल के बाद दूसरी फ़ाइल जोड़ें, और चुनें कि उसके पेज कहाँ जाएँ।",
+          "q": "दूसरी PDF के पेज कैसे डालूँ?"
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "a": "आपकी PDF के पहले पेज के बराबर।",
+          "q": "खाली पेज का साइज़ क्या होगा?"
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
-        "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
-        ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
-        ]
+          "प्राइवेट — फ़ाइल आपके ब्राउज़र में प्रोसेस होती है और कभी अपलोड नहीं होती",
+          "मुफ़्त — न अकाउंट, न वॉटरमार्क और न कोई दैनिक सीमा",
+          "Windows, Mac, Linux, iPhone और Android पर किसी भी आधुनिक ब्राउज़र में काम करता है"
+        ],
+        "intro": "PDF में खाली पेज जोड़ें टूल खाली पेज — या दूसरी PDF के सभी पेज — शुरुआत में, अंत में, हर पेज के बाद, या आपके चुने पेज के बाद डालता है।",
+        "steps": [
+          "अपनी PDF चुनें",
+          "खाली पेज चुनें, या 'दूसरी PDF के पेज' चुनकर दूसरी फ़ाइल जोड़ें",
+          "चुनें कि पेज कहाँ जाएँ",
+          "खाली पेज जोड़ें पर क्लिक करें और नतीजा डाउनलोड करें"
+        ],
+        "title": "PDF में खाली पेज कैसे जोड़ें"
       }
     }
   }

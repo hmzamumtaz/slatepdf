@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF เป็น PNG",
+      "description": "แปลงหน้าของ PDF เป็นรูปภาพ PNG",
+      "seoTitle": "PDF เป็น PNG — แปลงหน้า PDF เป็น PNG ฟรี",
+      "metaDescription": "แปลงทุกหน้าของ PDF เป็นรูปภาพ PNG ที่ 144 หรือ 216 DPI ฟรี ไม่ต้องสมัคร ไม่มีลายน้ำ และไฟล์ไม่เคยออกจากเบราว์เซอร์ของคุณ",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "รูป PNG จะมีความละเอียดเท่าไร?",
+          "a": "หน้าจะถูกเรนเดอร์ที่ 144 DPI (มาตรฐาน) หรือ 216 DPI (สูง) ไม่ว่าต้นฉบับจะเป็นอย่างไร แบบสูงให้ตัวหนังสือคมชัดกว่าและไฟล์ใหญ่กว่า"
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "ต่างจาก PDF เป็น JPG อย่างไร?",
+          "a": "PNG เป็นแบบไม่สูญเสียข้อมูล จึงคงขอบที่คมและตัวหนังสือที่ชัดไว้ ส่วน JPG มีไฟล์เล็กกว่า ใช้ PNG เมื่อต้องการพิกเซลที่แม่นยำ และ JPG เมื่อต้องการไฟล์เล็ก"
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "PDF ของฉันถูกอัปโหลดเพื่อแปลงเป็น PNG หรือไม่?",
+          "a": "ไม่ แต่ละหน้าถูกเรนเดอร์เป็นรูปภาพในเบราว์เซอร์ของคุณ PDF จึงไม่เคยออกจากอุปกรณ์ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "วิธีแปลง PDF เป็น PNG",
+        "intro": "PDF เป็น PNG จะบันทึกทุกหน้าของ PDF เป็นรูปภาพ PNG ที่ความละเอียดมาตรฐาน (144 DPI) หรือสูง (216 DPI) PNG เป็นแบบไม่สูญเสียข้อมูล ตัวหนังสือและขอบที่คมจึงยังชัดเจน",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "เลือกไฟล์ PDF หนึ่งไฟล์ขึ้นไป",
+          "เลือกความละเอียดมาตรฐานหรือสูง",
+          "คลิกแปลงเป็น PNG",
+          "ดาวน์โหลดทีละหน้า หรือดาวน์โหลดทุกหน้าพร้อมกันเป็นไฟล์ ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF เป็นข้อความ",
+      "description": "ดึงข้อความทั้งหมดจาก PDF เป็นไฟล์ .txt ธรรมดา",
+      "seoTitle": "PDF เป็นข้อความ — ดึงข้อความจาก PDF ฟรี",
+      "metaDescription": "ดึงข้อความทั้งหมดจาก PDF เป็นไฟล์ .txt ธรรมดา พร้อมหัวข้อสำหรับแต่ละหน้า ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "ไฟล์ .txt มีอะไรบ้าง?",
+          "a": "ข้อความของทุกหน้าเรียงตามลำดับหน้า เปิดหัวข้อของหน้าเพื่อเพิ่มบรรทัด “หน้า N” ก่อนแต่ละหน้า ทำให้เอกสารยาว ๆ นำทางได้ง่ายขึ้น"
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "ใช้กับ PDF ที่สแกนได้ไหม?",
+          "a": "ได้เฉพาะเมื่อไฟล์สแกนมีชั้นข้อความ ไฟล์สแกนที่เป็นภาพล้วนไม่มีข้อความให้ดึงและจะออกมาว่างเปล่า — ให้รัน OCR PDF ก่อน แล้วจึงแปลงผลลัพธ์ที่ค้นหาได้เป็นข้อความ"
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "PDF ของฉันถูกอัปโหลดเพื่อดึงข้อความหรือไม่?",
+          "a": "ไม่ ข้อความถูกอ่านจาก PDF ในเบราว์เซอร์ของคุณ ไฟล์จึงไม่เคยออกจากอุปกรณ์ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "วิธีดึงข้อความจาก PDF",
+        "intro": "PDF เป็นข้อความจะดึงข้อความออกจาก PDF เป็นไฟล์ .txt ธรรมดา ทีละหน้าต่อกัน พร้อมหัวข้อสำหรับแต่ละหน้าหากต้องการ",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "เลือก PDF ที่มีข้อความจริง (รัน OCR PDF ก่อนสำหรับไฟล์สแกน)",
+          "ติ๊ก “เพิ่มหัวข้อสำหรับแต่ละหน้า” หากต้องการตัวบ่งชี้หน้า N",
+          "คลิกแปลงเป็นข้อความ",
+          "ดาวน์โหลดไฟล์ .txt หรือคัดลอกข้อความจากตัวอย่าง"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "ดึงรูปภาพออก",
+      "description": "ดึงรูปถ่ายและภาพประกอบออกจาก PDF เป็นไฟล์ PNG",
+      "seoTitle": "ดึงรูปภาพจาก PDF — บันทึกรูปภาพเป็น PNG ฟรี",
+      "metaDescription": "ดึงรูปถ่าย โลโก้ และภาพประกอบออกจาก PDF แล้วบันทึกเป็นไฟล์ PNG ฟรี ไม่ต้องสมัคร PDF ไม่เคยออกจากเบราว์เซอร์ของคุณ",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "รูปภาพที่ดึงออกมามีคุณภาพแค่ไหน?",
+          "a": "คุณภาพเต็มรูปแบบที่ฝังไว้ — รูปภาพถูกบันทึกเหมือนที่อยู่ใน PDF ทุกประการเป็นไฟล์ PNG ไม่มีการบีบอัดซ้ำหรือลดความละเอียด"
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "ถ้า PDF ของฉันเป็นไฟล์สแกนล่ะ?",
+          "a": "หน้าสแกนคือภาพใหญ่หนึ่งภาพ คุณจึงได้ภาพทั้งหน้านั้นกลับมา สำหรับหน้าที่มีข้อความจริง รูปถ่าย โลโก้ และภาพประกอบแต่ละภาพจะถูกดึงออกมาแยกกัน"
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "PDF ของฉันถูกอัปโหลดเพื่อดึงรูปภาพหรือไม่?",
+          "a": "ไม่ รูปภาพถูกดึงออกจาก PDF ในเบราว์เซอร์ของคุณ ไฟล์จึงไม่เคยออกจากอุปกรณ์ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "วิธีดึงรูปภาพจาก PDF",
+        "intro": "ดึงรูปภาพจะดึงรูปถ่าย โลโก้ และภาพประกอบที่ฝังอยู่ทั้งหมดออกจาก PDF แล้วบันทึกเป็นไฟล์ PNG ด้วยคุณภาพเต็มรูปแบบที่ฝังไว้",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "เลือกไฟล์ PDF",
+          "คลิกดึงรูปภาพ",
+          "ดาวน์โหลดรูปภาพ — หากมีหลายภาพจะดาวน์โหลดพร้อมกันเป็นไฟล์ ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF เป็น HTML",
+      "description": "เปลี่ยน PDF เป็นหน้าเว็บ HTML ธรรมดา",
+      "seoTitle": "PDF เป็น HTML — แปลง PDF เป็นหน้าเว็บฟรี",
+      "metaDescription": "เปลี่ยน PDF เป็นหน้า HTML ธรรมดา หนึ่งส่วนต่อหนึ่งหน้า PDF ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด — ข้อความไม่เคยออกจากเบราว์เซอร์ของคุณ",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "HTML จะหน้าตาเหมือน PDF ไหม?",
+          "a": "ไม่ มันย้ายคำ ไม่ใช่ย้ายเลย์เอาต์: แต่ละหน้าของ PDF กลายเป็นหนึ่งส่วนที่มีข้อความแบบย่อหน้า รูปภาพและการจัดรูปแบบที่แน่นอนจะไม่ถูกนำไปด้วย"
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "ฉันทำอะไรกับไฟล์ HTML ได้บ้าง?",
+          "a": "เปิดในเบราว์เซอร์ใดก็ได้ วางลงในเว็บไซต์หรือตัวแก้ไขเนื้อหา หรือใช้เป็นจุดเริ่มต้นของหน้าเว็บที่สร้างจากเอกสาร"
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "PDF ของฉันถูกอัปโหลดเพื่อแปลงเป็น HTML หรือไม่?",
+          "a": "ไม่ ข้อความถูกดึงออกมาและสร้าง HTML ในเบราว์เซอร์ของคุณ PDF จึงไม่เคยออกจากอุปกรณ์ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "วิธีแปลง PDF เป็น HTML",
+        "intro": "PDF เป็น HTML เปลี่ยน PDF เป็นหน้าเว็บธรรมดา: หนึ่งส่วนต่อหนึ่งหน้า PDF โดยมีข้อความเป็นย่อหน้า มันย้ายคำ ไม่ใช่ย้ายเลย์เอาต์",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "เลือก PDF ที่มีข้อความจริง (รัน OCR PDF ก่อนสำหรับไฟล์สแกน)",
+          "คลิกแปลงเป็น HTML",
+          "ดาวน์โหลดไฟล์ .html หรือคัดลอกโค้ดจากตัวอย่าง"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "แก้ไขข้อมูลเมตา",
+      "description": "เปลี่ยนชื่อเรื่อง ผู้แต่ง หัวข้อ และคำสำคัญของ PDF",
+      "seoTitle": "แก้ไขข้อมูลเมตา PDF — เปลี่ยนชื่อเรื่อง ผู้แต่ง และคำสำคัญ",
+      "metaDescription": "เปลี่ยนชื่อเรื่อง ผู้แต่ง หัวข้อ และคำสำคัญของ PDF ในเบราว์เซอร์ของคุณ ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "ชื่อเรื่องแสดงที่ไหน?",
+          "a": "ในแท็บหรือแถบชื่อเรื่องของโปรแกรมอ่าน PDF ในการค้นหาไฟล์ และในผลการค้นหาเมื่อ PDF ถูกจัดทำดัชนี ชื่อเรื่องที่ชัดเจนช่วยให้ผู้คนค้นหาเอกสารเจอ"
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "การแก้ไขข้อมูลเมตาจะเปลี่ยนตัวเอกสารหรือไม่?",
+          "a": "ไม่ หน้า ข้อความ และรูปภาพยังคงเหมือนเดิมทุกประการ — มีเพียงข้อมูลที่บันทึกเกี่ยวกับเอกสารที่เปลี่ยนไป"
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "ล้างฟิลด์ได้ไหม?",
+          "a": "ได้ ปล่อยฟิลด์ว่างไว้แล้วบันทึก — ค่านั้นจะถูกลบออกจาก PDF"
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "วิธีแก้ไขข้อมูลเมตา PDF",
+        "intro": "แก้ไขข้อมูลเมตาจะเปลี่ยนข้อมูลที่บันทึกเกี่ยวกับ PDF — ชื่อเรื่อง ผู้แต่ง หัวข้อ และคำสำคัญ — โดยไม่แตะต้องหน้าเอกสาร",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "เลือก PDF เพื่อดูชื่อเรื่อง ผู้แต่ง หัวข้อ และคำสำคัญปัจจุบัน",
+          "เปลี่ยนฟิลด์ที่ต้องการ — ปล่อยว่างไว้หนึ่งฟิลด์เพื่อล้างค่า",
+          "คลิกบันทึกข้อมูลเมตา แล้วดาวน์โหลด PDF ที่อัปเดตแล้ว"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "แบนไฟล์ PDF",
+      "description": "ทำให้ฟิลด์แบบฟอร์มถาวรและลบคำอธิบายประกอบ",
+      "seoTitle": "แบนไฟล์ PDF — ทำให้ฟิลด์แบบฟอร์มถาวรฟรี",
+      "metaDescription": "ผนวกฟิลด์แบบฟอร์มของ PDF ลงในหน้าอย่างถาวรและลบคำอธิบายประกอบ เพื่อไม่ให้แก้ไขคำตอบได้อีก ฟรี ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "ฟิลด์แบบฟอร์มจะเป็นอย่างไร?",
+          "a": "ค่าของฟิลด์จะถูกวาดลงในตัวหน้าและฟิลด์จะถูกลบออก คำตอบที่กรอกไว้จึงแก้ไขหรือล้างไม่ได้อีกต่อไป"
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "ความคิดเห็นและการไฮไลต์จะเป็นอย่างไร?",
+          "a": "จะถูกลบออก เพราะไม่สามารถผนวกเข้ากับหน้าได้โดยไม่เปลี่ยนหน้าให้เป็นรูปภาพ ส่วนลิงก์จะยังคงอยู่"
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "การแบนไฟล์เปลี่ยนข้อความหรือไม่?",
+          "a": "ไม่ ข้อความยังคงเป็นข้อความจริงที่เลือกได้ — ไม่มีอะไรถูกแปลงเป็นรูปภาพ"
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "วิธีแบนไฟล์ PDF",
+        "intro": "แบนไฟล์ PDF จะผนวกฟิลด์แบบฟอร์มลงในหน้าอย่างถาวรและลบความคิดเห็นกับการไฮไลต์ เพื่อไม่ให้แก้ไขคำตอบที่กรอกไว้ได้อีก ลิงก์ยังคงอยู่ และข้อความยังเลือกได้",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "เลือก PDF ที่มีฟิลด์แบบฟอร์มหรือคำอธิบายประกอบ",
+          "คลิกแบนไฟล์ PDF",
+          "ดาวน์โหลดสำเนาที่แบนแล้ว"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "กรอกแบบฟอร์ม PDF",
+      "description": "กรอกแบบฟอร์ม PDF แล้วบันทึกสำเนาที่กรอกเสร็จ",
+      "seoTitle": "กรอกแบบฟอร์ม PDF — กรอกแบบฟอร์ม PDF ออนไลน์ฟรี",
+      "metaDescription": "กรอกแบบฟอร์ม PDF ในเบราว์เซอร์ของคุณ — ฟิลด์ข้อความ ช่องติ๊ก และเมนูแบบเลื่อนลง — แล้วบันทึกสำเนาที่กรอกเสร็จ ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "กรอกฟิลด์แบบไหนได้บ้าง?",
+          "a": "ฟิลด์ข้อความ ช่องติ๊ก รายการแบบเลื่อนลง และกลุ่มปุ่มตัวเลือก ปุ่มและฟิลด์ลายเซ็นกรอกที่นี่ไม่ได้ — ใช้เซ็นชื่อ PDF สำหรับลายเซ็น"
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "ขึ้นว่า PDF ไม่มีฟิลด์ที่กรอกได้ ทำไม?",
+          "a": "PDF เป็นไฟล์สแกนแบบแบนหรือแบบฟอร์มที่พิมพ์ออกมาโดยไม่มีฟิลด์แบบโต้ตอบ เฉพาะ PDF ที่สร้างด้วยฟิลด์แบบฟอร์มจริงเท่านั้นที่กรอกได้ — แบบฟอร์มที่สแกนต้องผ่าน OCR ก่อน และถึงอย่างนั้นก็ยังเป็นเพียงภาพของแบบฟอร์ม"
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "ล็อกคำตอบหลังจากนั้นได้ไหม?",
+          "a": "ได้ นำ PDF ที่กรอกแล้วไปผ่านแบนไฟล์ PDF คำตอบจะกลายเป็นถาวร"
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "วิธีกรอกแบบฟอร์ม PDF",
+        "intro": "กรอกแบบฟอร์ม PDF จะแสดงฟิลด์ที่กรอกได้ทั้งหมดใน PDF — ฟิลด์ข้อความ ช่องติ๊ก เมนูแบบเลื่อนลง — เพื่อให้คุณกรอกแบบฟอร์มในเบราว์เซอร์แล้วบันทึกไว้",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "เลือก PDF ที่มีฟิลด์แบบฟอร์มที่กรอกได้",
+          "กรอกแต่ละฟิลด์ในแผง",
+          "คลิกบันทึก PDF ที่กรอกแล้ว แล้วดาวน์โหลดสำเนาที่เสร็จสมบูรณ์"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "ข้อความ เป็น PDF",
+      "description": "เปลี่ยนข้อความธรรมดาเป็นเอกสาร PDF",
+      "seoTitle": "ข้อความ เป็น PDF — เปลี่ยนข้อความธรรมดาเป็น PDF ฟรี",
+      "metaDescription": "พิมพ์หรือวางข้อความธรรมดาแล้วเปลี่ยนเป็นเอกสาร PDF ในเบราว์เซอร์ของคุณ ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด ไม่มีลายน้ำ",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "จัดรูปแบบข้อความได้ไหม?",
+          "a": "ไม่ได้ เครื่องมือนี้เปลี่ยนข้อความธรรมดาเป็น PDF ที่สะอาด — หัวข้อและตัวหนาจะไม่ถูกนำไปด้วย สำหรับเอกสารที่มีการจัดรูปแบบ ให้ใช้แปลง Word เป็น PDF หรือแปลง HTML เป็น PDF แทน"
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "ข้อความยาว ๆ ล่ะ?",
+          "a": "ข้อความจะไหลไปตามจำนวนหน้าที่ต้องการ โดยมีชื่อเรื่องในหน้าแรกหากคุณเพิ่มไว้"
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "ข้อความของฉันถูกอัปโหลดหรือไม่?",
+          "a": "ไม่ PDF ถูกสร้างในเบราว์เซอร์ของคุณ ข้อความจึงไม่เคยออกจากอุปกรณ์ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "วิธีเปลี่ยนข้อความให้เป็น PDF",
+        "intro": "ข้อความ เป็น PDF จะเปลี่ยนข้อความธรรมดาที่คุณพิมพ์หรือวางให้เป็นเอกสาร PDF ที่สะอาด พร้อมชื่อเรื่องในหน้าแรกหากต้องการ",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "พิมพ์หรือวางข้อความของคุณ",
+          "เพิ่มชื่อเรื่องของเอกสารหากต้องการ",
+          "คลิกแปลงเป็น PDF แล้วดาวน์โหลด"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "หัวกระดาษและท้ายกระดาษ",
+      "description": "ประทับหัวกระดาษและท้ายกระดาษบนทุกหน้า",
+      "seoTitle": "เพิ่มหัวกระดาษและท้ายกระดาษใน PDF ฟรี ไม่ต้องอัปโหลด",
+      "metaDescription": "ประทับหัวกระดาษและท้ายกระดาษ — พร้อมเลขหน้าแบบเลือกได้ — บนทุกหน้าของ PDF ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "เพิ่มเฉพาะหัวกระดาษ หรือเฉพาะท้ายกระดาษได้ไหม?",
+          "a": "ได้ ปล่อยอีกฟิลด์ว่างไว้ ส่วนที่คุณกรอกเท่านั้นที่จะถูกประทับ"
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "ข้อความจะอยู่ที่ไหน?",
+          "a": "ซ้าย กลาง หรือขวา ที่ด้านบนหรือด้านล่างของทุกหน้า ข้อความจะถูกวาดทับบนหน้า — ไม่ดันเนื้อหาที่มีอยู่ให้ขยับ"
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "เพิ่มเลขหน้าด้วยได้ไหม?",
+          "a": "ได้ ติ๊ก “เพิ่มเลขหน้าในท้ายกระดาษ” แล้วแต่ละหน้าจะมีเลขแบบ “1 จาก 12” อยู่ข้างข้อความท้ายกระดาษของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "วิธีเพิ่มหัวกระดาษและท้ายกระดาษใน PDF",
+        "intro": "หัวกระดาษและท้ายกระดาษจะประทับข้อความหนึ่งบรรทัดที่ด้านบนและ/หรือด้านล่างของทุกหน้า พร้อมเลขหน้าในท้ายกระดาษหากต้องการ",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "เลือกไฟล์ PDF",
+          "พิมพ์ข้อความหัวกระดาษและท้ายกระดาษ — ปล่อยว่างไว้หนึ่งช่องเพื่อประทับเฉพาะอีกช่อง",
+          "เลือกตำแหน่ง ขนาดตัวอักษร และว่าจะเพิ่มเลขหน้าหรือไม่",
+          "คลิกเพิ่มหัวกระดาษและท้ายกระดาษ แล้วดาวน์โหลดผลลัพธ์"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "เลข Bates",
+      "description": "ประทับเลข Bates เรียงลำดับบนทุกหน้า",
+      "seoTitle": "เลข Bates — ประทับเลขเรียงลำดับบน PDF",
+      "metaDescription": "ประทับเลข Bates บนทุกหน้าของ PDF ด้วยคำนำหน้าและเลขลำดับที่มีเลขศูนย์นำหน้า ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "เลข Bates คืออะไร?",
+          "a": "วิธีประทับเลขลำดับเฉพาะบนทุกหน้าของชุดเอกสาร — เช่น EXHIBIT-00042 — เพื่อให้ระบุและอ้างอิงหน้าได้ในงานด้านกฎหมายและการค้นหาหลักฐาน"
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "เลือกคำนำหน้าและเลขเริ่มต้นได้ไหม?",
+          "a": "ได้ ตั้งคำนำหน้าใดก็ได้ เลขเริ่มต้น จำนวนหลักที่จะเติมศูนย์ และตำแหน่งที่จะประทับบนหน้า"
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "มันเปลี่ยนเอกสารหรือไม่?",
+          "a": "ไม่ ตราประทับถูกเพิ่มทับบนแต่ละหน้า เนื้อหาที่มีอยู่ไม่ถูกแตะต้อง"
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "วิธีประทับเลข Bates บน PDF",
+        "intro": "เลข Bates จะประทับเลขลำดับเฉพาะบนทุกหน้า — คำนำหน้าบวกเลขลำดับที่มีเลขศูนย์นำหน้า เช่น EXHIBIT-00042",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "เลือกไฟล์ PDF",
+          "ตั้งคำนำหน้า เลขเริ่มต้น และจำนวนหลักที่จะเติมศูนย์",
+          "เลือกตำแหน่งที่จะประทับบนหน้า",
+          "คลิกใช้เลข Bates แล้วดาวน์โหลด PDF ที่ประทับแล้ว"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF ขาวดำ",
+      "description": "เปลี่ยน PDF สีเป็นขาวดำ",
+      "seoTitle": "PDF ขาวดำ — แปลง PDF เป็นขาวดำฟรี",
+      "metaDescription": "เปลี่ยน PDF สีเป็นขาวดำ ทีละหน้า ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด — ไฟล์ไม่เคยออกจากเบราว์เซอร์ของคุณ",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "ข้อความยังเลือกได้อยู่ไหม?",
+          "a": "ไม่ หน้าต่าง ๆ ถูกสร้างใหม่เป็นภาพขาวดำ ข้อความจึงกลายเป็นส่วนหนึ่งของภาพ ใช้สำหรับพิมพ์หรือแชร์ ไม่ใช่สำหรับแก้ไขข้อความภายหลัง"
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "ใช้กับ PDF ที่สแกนได้ไหม?",
+          "a": "ได้ หน้าที่สแกนเป็นภาพอยู่แล้ว จึงแปลงได้อย่างราบรื่น — ซึ่งมักจะเป็นจุดประสงค์หลัก สำหรับการพิมพ์หรือแฟกซ์"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "PDF ของฉันถูกอัปโหลดหรือไม่?",
+          "a": "ไม่ การแปลงทำงานทั้งหมดในเบราว์เซอร์ของคุณ PDF จึงไม่เคยออกจากอุปกรณ์ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "วิธีแปลง PDF เป็นขาวดำ",
+        "intro": "PDF ขาวดำจะสร้างทุกหน้าใหม่เป็นขาวดำ สร้างมาเพื่อการพิมพ์และแฟกซ์ — หน้ากลายเป็นภาพ ข้อความจึงเลือกไม่ได้อีกต่อไป",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "เลือก PDF ของคุณ",
+          "คลิกแปลงเป็นขาวดำ",
+          "ดาวน์โหลด PDF ขาวดำ"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "ปรับขนาด PDF",
+      "description": "เปลี่ยนหน้าของ PDF เป็น A4, Letter, A3 หรือขนาดกำหนดเอง",
+      "seoTitle": "ปรับขนาด PDF — เปลี่ยนขนาดหน้า PDF เป็น A4 หรือ Letter",
+      "metaDescription": "เปลี่ยนทุกหน้าของ PDF เป็น A4, Letter, A3, A5 หรือขนาดกำหนดเอง เนื้อหาถูกปรับให้พอดีและจัดกึ่งกลาง ฟรี ไม่ต้องอัปโหลด ไม่ต้องสมัคร",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "ต่างจากครอป PDF อย่างไร?",
+          "a": "การครอปจะตัดขอบของหน้า ส่วนการปรับขนาดจะเปลี่ยนขนาดของหน้าเอง — A4, Letter, A3, A5 หรือขนาดกำหนดเองใด ๆ — และปรับเนื้อหาให้พอดี"
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "ข้อความยังเลือกได้อยู่ไหม?",
+          "a": "ได้ หน้าถูกจัดวางใหม่ ไม่ได้เรนเดอร์ใหม่ ข้อความและเวกเตอร์จึงยังคงอยู่ครบ"
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "ตั้งขนาดกำหนดเองได้ไหม?",
+          "a": "ได้ เลือกกำหนดเอง แล้วป้อนความกว้างและความสูงเป็นมิลลิเมตร"
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "วิธีปรับขนาดหน้า PDF",
+        "intro": "ปรับขนาด PDF จะเปลี่ยนทุกหน้าเป็น A4, Letter, A3, A5 หรือขนาดที่คุณป้อน โดยปรับเนื้อหาให้พอดีและจัดกึ่งกลาง ข้อความและเวกเตอร์ยังคงอยู่ครบ",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "เลือก PDF ของคุณ",
+          "เลือก A4, Letter, A3, A5 หรือกำหนดเอง แล้วป้อนขนาดเป็นมิลลิเมตร",
+          "คลิกปรับขนาดหน้า",
+          "ดาวน์โหลด PDF ที่ปรับขนาดแล้ว"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "ปรับหน้า PDF ให้ตรง",
+      "description": "ปรับหน้าสแกนที่เอียงให้ตรง",
+      "seoTitle": "ปรับหน้า PDF ให้ตรง — ปรับหน้าสแกนที่เอียงให้ตรงฟรี",
+      "metaDescription": "ปรับหน้าสแกนที่เอียงให้ตรง ระบบจะตรวจจับความเอียงอัตโนมัติ หรือตั้งค่าด้วยตนเองด้วยแถบเลื่อน ฟรี ไม่ต้องอัปโหลด ไม่ต้องสมัคร",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "ตรวจจับความเอียงได้อย่างไร?",
+          "a": "มันอ่านหน้าแรก ๆ แล้วหามุมที่บรรทัดข้อความตรงที่สุด จากนั้นจะเสนอมุมนั้นบนแถบเลื่อน คุณสามารถปรับด้วยตนเองได้หากดูไม่ถูกต้อง"
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "ข้อความยังเลือกได้อยู่ไหม?",
+          "a": "ไม่ หน้าต่าง ๆ ถูกสร้างใหม่เป็นภาพที่ปรับตรงแล้ว ข้อความจึงกลายเป็นส่วนหนึ่งของภาพ ใช้สำหรับหน้าที่สแกน ซึ่งไม่มีข้อความที่เลือกได้อยู่แล้ว"
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "ปรับตรงได้มากแค่ไหน?",
+          "a": "สูงสุด 10 องศาในแต่ละทิศทาง ซึ่งครอบคลุมหน้าสแกนที่ป้อนเอียงเกือบทุกหน้า"
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "วิธีปรับหน้า PDF ให้ตรง",
+        "intro": "ปรับหน้า PDF ให้ตรงจะปรับหน้าสแกนที่เอียงให้ตรง ระบบจะตรวจจับความเอียงอัตโนมัติเมื่อคุณเพิ่มไฟล์ และแถบเลื่อนช่วยให้ปรับด้วยตนเองได้",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "เลือก PDF ของคุณ — ระบบจะตรวจจับความเอียงอัตโนมัติ",
+          "ตรวจสอบมุมที่ตรวจพบ แล้วลากแถบเลื่อนหากหน้ายังดูเอียง",
+          "ใช้ดูตัวอย่างสดเพื่อดูหน้าแรกที่ปรับตรงแล้ว",
+          "คลิกปรับหน้า PDF ให้ตรง แล้วดาวน์โหลดผลลัพธ์"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "สลับและรวม PDF",
+      "description": "สลับหน้าของ PDF สองไฟล์ทีละหน้า",
+      "seoTitle": "สลับและรวม PDF — สลับหน้า PDF สองไฟล์ฟรี",
+      "metaDescription": "สลับหน้าของ PDF สองไฟล์ — หน้า 1 ของแต่ละไฟล์ แล้วหน้า 2 ของแต่ละไฟล์ — เป็นไฟล์เดียว ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "ถ้า PDF สองไฟล์มีความยาวต่างกันล่ะ?",
+          "a": "ไฟล์ที่สั้นกว่าจะหมดก่อน ส่วนหน้าที่เหลือของไฟล์ที่ยาวกว่าจะไปอยู่ท้ายสุดตามลำดับ"
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "เอกสารไหนมาก่อน?",
+          "a": "เอกสารแรกที่คุณเพิ่มจะให้หน้า 1 เอกสารที่สองให้หน้า 2 และจะสลับกันไปเช่นนั้น"
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "ใช้ทำอะไร?",
+          "a": "รวมเอกสารสองเวอร์ชันทีละหน้า สลับคำถามกับคำตอบ หรือรวมไฟล์สแกนด้านหน้าและด้านหลังให้อยู่ในลำดับการอ่าน"
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "วิธีสลับหน้า PDF สองไฟล์",
+        "intro": "สลับและรวม PDF จะนำ PDF สองไฟล์มาสลับหน้า — หน้า 1 ของแต่ละไฟล์ แล้วหน้า 2 ของแต่ละไฟล์ — เป็นไฟล์เดียว",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "เพิ่มเอกสารแรก แล้วเพิ่มเอกสารที่สอง",
+          "คลิกผสม PDF",
+          "ดาวน์โหลดไฟล์ที่สลับแล้ว"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "ลบหน้าว่าง",
+      "description": "ลบหน้าว่างออกจาก PDF",
+      "seoTitle": "ลบหน้าว่าง — ลบหน้าว่างของ PDF ฟรี",
+      "metaDescription": "ค้นหาและลบหน้าว่างใน PDF — หน้าที่เครื่องสแกนเพิ่มมาโดยไม่ได้ตั้งใจ ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "รู้ได้อย่างไรว่าหน้าไหนว่าง?",
+          "a": "มันเรนเดอร์แต่ละหน้าแล้ววัดปริมาณหมึกบนหน้านั้น หน้าที่ต่ำกว่าเกณฑ์จะแสดงรายการก่อนที่จะลบอะไรออก คุณจึงเห็นได้ชัดเจนว่าจะลบอะไรบ้าง"
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "จะลบหน้าที่มีแค่เลขหน้าหรือไม่?",
+          "a": "ไม่ในการตั้งค่าแบบสมดุล — เลขหน้าถือว่าเป็นหมึก หากยังลบหน้าที่คุณต้องการออก ให้ใช้แบบเข้มงวดแล้วรันอีกครั้ง"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "PDF ของฉันถูกอัปโหลดหรือไม่?",
+          "a": "ไม่ การตรวจจับและการลบทำงานทั้งหมดในเบราว์เซอร์ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "วิธีลบหน้าว่างออกจาก PDF",
+        "intro": "ลบหน้าว่างจะค้นหาหน้าว่างที่เครื่องสแกนเพิ่มเข้ามา — มักจะอยู่ท้ายกอง — แสดงรายการ แล้วลบออก ส่วนที่เหลือไม่ถูกแตะต้อง",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "เลือก PDF ของคุณ",
+          "ตรวจสอบหน้าว่างที่พบ และเปลี่ยนความไวหากพลาดหน้าหรือระบุหน้าผิด",
+          "คลิกลบหน้าว่าง",
+          "ดาวน์โหลด PDF ที่ทำความสะอาดแล้ว"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "ใส่ 2, 4, 6 หรือ 9 หน้าลงในแต่ละแผ่น",
+      "seoTitle": "N-up PDF — ใส่หลายหน้าลงในแผ่นเดียวฟรี",
+      "metaDescription": "ใส่ 2, 4, 6 หรือ 9 หน้าของ PDF ลงในแต่ละแผ่น สำหรับทำหนังสือเล่มเล็กและเอกสารแจก ฟรี ไม่ต้องสมัคร ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "แผ่นมีขนาดเท่าไร?",
+          "a": "แต่ละแผ่นยังคงขนาดเท่ากับหน้าแรกของ PDF ของคุณ — มักจะเป็น A4 หรือ Letter หน้าต้นฉบับถูกปรับให้พอดีกับช่องของมัน"
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "ข้อความยังอ่านได้อยู่ไหม?",
+          "a": "ได้ หน้าถูกจัดวางใหม่ ไม่ได้เรนเดอร์ใหม่ ข้อความและเวกเตอร์จึงยังคมชัด ที่แบบ 9-up ตัวพิมพ์จะเล็ก ซึ่งเป็นอย่างที่ควรเป็น"
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "เลือกลำดับได้ไหม?",
+          "a": "หน้าจะเรียงจากซ้ายไปขวา บนลงล่าง ตามลำดับเดิม"
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "วิธีใส่หลายหน้าของ PDF ลงในแผ่นเดียว",
+        "intro": "N-up PDF จะวาง 2, 4, 6 หรือ 9 หน้าต้นฉบับลงในแต่ละแผ่น สำหรับทำหนังสือเล่มเล็กและเอกสารแจก แต่ละแผ่นยังคงขนาดเท่ากับหน้าแรก",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "เลือก PDF ของคุณ",
+          "เลือก 2-up, 4-up, 6-up หรือ 9-up",
+          "คลิกสร้าง N-up PDF",
+          "ดาวน์โหลดผลลัพธ์"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "เพิ่มหน้าว่าง",
+      "description": "แทรกหน้าว่างหรือหน้าจาก PDF อื่น",
+      "seoTitle": "เพิ่มหน้าว่าง — แทรกหน้าลงใน PDF ฟรี",
+      "metaDescription": "แทรกหน้าว่าง — หรือทุกหน้าจาก PDF อื่น — ลงใน PDF ที่จุดเริ่มต้น จุดสิ้นสุด หลังทุกหน้า หรือหลังหน้าที่เลือก ฟรี ไม่ต้องอัปโหลด",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "หน้าว่างใส่ไว้ตรงไหนได้บ้าง?",
+          "a": "ที่จุดเริ่มต้น ที่จุดสิ้นสุด หลังทุกหน้า หรือหลังเลขหน้าใดก็ได้ที่คุณเลือก"
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "แทรกหน้าจาก PDF อื่นอย่างไร?",
+          "a": "เลือก “หน้าจาก PDF อื่น” เพิ่มไฟล์ที่สองต่อจากไฟล์แรก แล้วเลือกตำแหน่งที่จะวางหน้าเหล่านั้น"
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "หน้าว่างมีขนาดเท่าไร?",
+          "a": "ขนาดเดียวกับหน้าแรกของ PDF ของคุณ"
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "วิธีเพิ่มหน้าว่างลงใน PDF",
+        "intro": "เพิ่มหน้าว่างจะแทรกหน้าว่าง — หรือทุกหน้าของ PDF ที่สอง — ที่จุดเริ่มต้น จุดสิ้นสุด หลังทุกหน้า หรือหลังหน้าที่คุณเลือก",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "เลือก PDF ของคุณ",
+          "เลือกหน้าว่าง หรือหน้าจาก PDF อื่น แล้วเพิ่มไฟล์ที่สอง",
+          "เลือกตำแหน่งที่จะวางหน้า",
+          "คลิกเพิ่มหน้าว่าง แล้วดาวน์โหลดผลลัพธ์"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "เป็นส่วนตัว — ประมวลผลไฟล์ในเบราว์เซอร์ของคุณและไม่มีการอัปโหลด",
+          "ฟรี ไม่ต้องมีบัญชี ไม่มีลายน้ำ และไม่จำกัดจำนวนครั้งต่อวัน",
+          "ใช้งานได้ในเบราว์เซอร์รุ่นใหม่ทุกตัวบน Windows, Mac, Linux, iPhone และ Android"
         ]
       }
     }

@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF ל-PNG",
+      "description": "המרת עמודי PDF לתמונות PNG",
+      "seoTitle": "PDF ל-PNG — המרת עמודי PDF ל-PNG בחינם",
+      "metaDescription": "המירו כל עמוד ב-PDF לתמונת PNG, ברזולוציה של 144 או 216 DPI. חינם, ללא הרשמה, ללא סימני מים, וה-PDF לעולם לא עוזב את הדפדפן.",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "באיזו רזולוציה יהיו תמונות ה-PNG?",
+          "a": "העמודים מופקים ברזולוציה של 144 DPI (רגילה) או 216 DPI (גבוהה), ללא קשר למקור. הרזולוציה הגבוהה נותנת טקסט חד יותר וקבצים גדולים יותר."
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "מה ההבדל מ-PDF ל-JPG?",
+          "a": "PNG הוא ללא אובדן, ולכן שומר על קצוות חדים וטקסט ברור; קבצי JPG קטנים יותר. השתמשו ב-PNG כשצריך פיקסלים מדויקים, וב-JPG כשצריך קבצים קטנים."
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "האם ה-PDF שלי מועלה כדי להמיר אותו ל-PNG?",
+          "a": "לא. כל עמוד מופק כתמונה בדפדפן שלכם, כך שה-PDF לעולם לא עוזב את המכשיר."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "איך להמיר PDF ל-PNG",
+        "intro": "PDF ל-PNG שומר כל עמוד ב-PDF כתמונת PNG, ברזולוציה רגילה (144 DPI) או גבוהה (216 DPI). PNG הוא ללא אובדן, ולכן הטקסט והקצוות החדים נשארים ברורים.",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "בחרו קובץ PDF אחד או יותר",
+          "בחרו רזולוציה רגילה או גבוהה",
+          "לחצו על המרה ל-PNG",
+          "הורידו עמודים בודדים, או את כולם יחד כקובץ ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF לטקסט",
+      "description": "חילוץ כל הטקסט מ-PDF לקובץ .txt פשוט",
+      "seoTitle": "PDF לטקסט — חילוץ טקסט מ-PDF בחינם",
+      "metaDescription": "חלצו את כל הטקסט מ-PDF לקובץ .txt פשוט, עם כותרת אופציונלית לכל עמוד. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": "מה מכיל קובץ ה-.txt?",
+          "a": "את הטקסט של כל עמוד, לפי סדר העמודים. הפעילו כותרות עמודים כדי לקבל שורת \"עמוד N\" לפני כל עמוד, מה שמקל על הניווט במסמכים ארוכים."
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "האם זה עובד על PDF סרוקים?",
+          "a": "רק אם לסריקה יש שכבת טקסט. סריקה פשוטה כתמונה אינה מכילה טקסט לחילוץ ויוצאת ריקה — הריצו עליה קודם OCR ל-PDF, ואז המירו את התוצאה הניתנת לחיפוש לטקסט."
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "האם ה-PDF שלי מועלה כדי לחלץ את הטקסט?",
+          "a": "לא. הטקסט נקרא מה-PDF בדפדפן שלכם, כך שהקובץ לעולם לא עוזב את המכשיר."
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "איך לחלץ טקסט מ-PDF",
+        "intro": "PDF לטקסט מוציא את הטקסט מ-PDF לקובץ .txt פשוט, עמוד אחר עמוד, עם כותרת אופציונלית לכל עמוד.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "בחרו PDF עם טקסט אמיתי (הריצו קודם OCR ל-PDF על סריקות)",
+          "סמנו \"הוספת כותרת לכל עמוד\" אם אתם רוצים סימוני עמוד N",
+          "לחצו על המרה לטקסט",
+          "הורידו את קובץ ה-.txt, או העתיקו את הטקסט מהתצוגה המקדימה"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "חילוץ תמונות",
+      "description": "שליפת התמונות והאיורים מתוך PDF כקבצי PNG",
+      "seoTitle": "חילוץ תמונות מ-PDF — שמירת תמונות כ-PNG בחינם",
+      "metaDescription": "שלפו את התמונות, הלוגואים והאיורים מתוך PDF ושמרו אותם כקבצי PNG. חינם, ללא הרשמה, וה-PDF לעולם לא עוזב את הדפדפן.",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "באיזו איכות התמונות המחולצות?",
+          "a": "באיכות המוטמעת המלאה — התמונה נשמרת בדיוק כפי שהיא בתוך ה-PDF, כ-PNG. שום דבר לא נדחס מחדש ולא מוקטן."
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "מה אם ה-PDF שלי הוא סריקה?",
+          "a": "עמוד סרוק הוא תמונה אחת גדולה, ולכן תקבלו בחזרה את תמונת העמוד כולו. בעמודי טקסט אמיתיים, כל תמונה, לוגו ואיור מוטמע מחולצים בנפרד."
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "האם ה-PDF שלי מועלה כדי לחלץ את התמונות?",
+          "a": "לא. התמונות נשלפות מה-PDF בדפדפן שלכם, כך שהקובץ לעולם לא עוזב את המכשיר."
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "איך לחלץ תמונות מ-PDF",
+        "intro": "חילוץ תמונות שולף כל תמונה, לוגו ואיור מוטמעים מתוך PDF ושומר אותם כקבצי PNG באיכות המוטמעת המלאה.",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "בחרו קובץ PDF",
+          "לחצו על חילוץ תמונות",
+          "הורידו את התמונות — כמה תמונות יורדות יחד כקובץ ZIP"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF ל-HTML",
+      "description": "הפיכת PDF לדף אינטרנט HTML פשוט",
+      "seoTitle": "PDF ל-HTML — המרת PDF לדף אינטרנט בחינם",
+      "metaDescription": "הפכו PDF לדף HTML פשוט, עם מקטע אחד לכל עמוד ב-PDF. חינם, ללא הרשמה, ללא העלאה — הטקסט לעולם לא עוזב את הדפדפן.",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "האם ה-HTML ייראה כמו ה-PDF?",
+          "a": "לא. הוא מעביר את המילים, לא את הפריסה: כל עמוד ב-PDF הופך למקטע עם הטקסט שלו כפסקאות. התמונות והעיצוב המדויק לא עוברים."
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "מה אפשר לעשות עם קובץ ה-HTML?",
+          "a": "לפתוח אותו בכל דפדפן, להדביק אותו באתר או בעורך תוכן, או להשתמש בו כנקודת התחלה לדף אינטרנט שנבנה ממסמך."
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "האם ה-PDF שלי מועלה כדי להמיר אותו ל-HTML?",
+          "a": "לא. הטקסט מחולץ וה-HTML נבנה בדפדפן שלכם, כך שה-PDF לעולם לא עוזב את המכשיר."
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "איך להמיר PDF ל-HTML",
+        "intro": "PDF ל-HTML הופך PDF לדף אינטרנט פשוט: מקטע אחד לכל עמוד ב-PDF, עם הטקסט כפסקאות. הוא מעביר את המילים, לא את הפריסה.",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "בחרו PDF עם טקסט אמיתי (הריצו קודם OCR ל-PDF על סריקות)",
+          "לחצו על המרה ל-HTML",
+          "הורידו את קובץ ה-.html, או העתיקו את הקוד מהתצוגה המקדימה"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "עריכת מטא-דאטה",
+      "description": "שינוי כותרת, מחבר, נושא ומילות מפתח של PDF",
+      "seoTitle": "עריכת מטא-דאטה של PDF — שינוי כותרת, מחבר ומילות מפתח",
+      "metaDescription": "שנו כותרת, מחבר, נושא ומילות מפתח של PDF בדפדפן. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "היכן מופיעה הכותרת?",
+          "a": "בלשונית או בשורת הכותרת של קורא ה-PDF, בחיפושי קבצים, ובתוצאות חיפוש כשה-PDF מאונדקס. כותרת ברורה עוזרת לאנשים למצוא את המסמך."
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "האם עריכת מטא-דאטה משנה את המסמך עצמו?",
+          "a": "לא. העמודים, הטקסט והתמונות נשארים בדיוק כפי שהם — רק המידע המאוחסן על המסמך משתנה."
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "האם אפשר לנקות שדה?",
+          "a": "כן. השאירו את השדה ריק ושמרו — הערך הזה יוסר מה-PDF."
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "איך לערוך מטא-דאטה של PDF",
+        "intro": "עריכת מטא-דאטה משנה את המידע המאוחסן על PDF — הכותרת, המחבר, הנושא ומילות המפתח — בלי לגעת בעמודים.",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "בחרו PDF כדי לראות את הכותרת, המחבר, הנושא ומילות המפתח הנוכחיים",
+          "שנו את השדות שאתם רוצים — השאירו אחד ריק כדי לנקות אותו",
+          "לחצו על שמירת מטא-דאטה והורידו את ה-PDF המעודכן"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "השטחת PDF",
+      "description": "הפיכת שדות טופס לקבועים והסרת הערות",
+      "seoTitle": "השטחת PDF — הפיכת שדות טופס לקבועים בחינם",
+      "metaDescription": "הטמיעו לצמיתות את שדות הטופס של PDF בעמוד והסירו הערות, כדי שלא ניתן יהיה לשנות עוד את התשובות. חינם, ללא העלאה.",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "מה קורה לשדות הטופס?",
+          "a": "הערכים שלהם מצוירים לתוך העמוד עצמו והשדות מוסרים, כך שלא ניתן עוד לערוך או לנקות את התשובות שמולאו."
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "מה קורה להערות ולהדגשות?",
+          "a": "הן מוסרות, כי אי אפשר להטמיע אותן בעמוד בלי להפוך אותו לתמונה. הקישורים נשמרים."
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "האם ההשטחה משנה את הטקסט?",
+          "a": "לא. הטקסט נשאר טקסט אמיתי וניתן לבחירה — שום דבר לא הופך לתמונה."
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "איך לשטח PDF",
+        "intro": "השטחת PDF מטמיעה לצמיתות את שדות הטופס בעמוד ומסירה הערות והדגשות, כדי שלא ניתן יהיה לשנות עוד את התשובות שמולאו. הקישורים נשמרים, והטקסט נשאר ניתן לבחירה.",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "בחרו PDF עם שדות טופס או הערות",
+          "לחצו על השטחת PDF",
+          "הורידו את העותק המשוטח"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "מילוי טופס PDF",
+      "description": "מילוי טופס PDF ושמירת העותק המלא",
+      "seoTitle": "מילוי טופס PDF — מילוי טופס PDF אונליין בחינם",
+      "metaDescription": "מלאו טופס PDF בדפדפן — שדות טקסט, תיבות סימון ורשימות נפתחות — ושמרו את העותק המלא. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "אילו שדות אפשר למלא?",
+          "a": "שדות טקסט, תיבות סימון, רשימות נפתחות וקבוצות כפתורי רדיו. כפתורים ושדות חתימה לא ניתנים למילוי כאן — לחתימות השתמשו בחתימה על PDF."
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "כתוב של-PDF אין שדות הניתנים למילוי. למה?",
+          "a": "ה-PDF הוא סריקה שטוחה או טופס מודפס ללא שדות אינטראקטיביים. רק PDF שנבנו עם שדות טופס אמיתיים ניתנים למילוי — טופס סרוק צריך קודם OCR, וגם אז הוא נשאר תמונה של טופס."
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "האם אפשר לנעול את התשובות אחר כך?",
+          "a": "כן. העבירו את ה-PDF המלא דרך השטחת PDF והתשובות הופכות לקבועות."
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "איך למלא טופס PDF",
+        "intro": "מילוי טופס PDF מציג כל שדה הניתן למילוי ב-PDF — שדות טקסט, תיבות סימון, רשימות נפתחות — כדי שתוכלו למלא את הטופס בדפדפן ולשמור אותו.",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "בחרו PDF עם שדות טופס הניתנים למילוי",
+          "מלאו כל שדה בלוח",
+          "לחצו על שמירת PDF מלא והורידו את העותק המלא"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "טקסט ל-PDF",
+      "description": "הפיכת טקסט פשוט למסמך PDF",
+      "seoTitle": "טקסט ל-PDF — הפיכת טקסט פשוט ל-PDF בחינם",
+      "metaDescription": "הקלידו או הדביקו טקסט פשוט והפכו אותו למסמך PDF בדפדפן. חינם, ללא הרשמה, ללא העלאה, ללא סימן מים.",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "האם אפשר לעצב את הטקסט?",
+          "a": "לא. הכלי הזה הופך טקסט פשוט ל-PDF נקי — כותרות והדגשה לא עוברות. למסמכים מעוצבים, השתמשו במקום זאת ב-Word ל-PDF או ב-HTML ל-PDF."
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "מה עם טקסט ארוך?",
+          "a": "הוא זורם על פני כמה עמודים שצריך, עם כותרת בעמוד הראשון אם תוסיפו אחת."
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "האם הטקסט שלי מועלה?",
+          "a": "לא. ה-PDF נבנה בדפדפן שלכם, כך שהטקסט לעולם לא עוזב את המכשיר."
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "איך להפוך טקסט ל-PDF",
+        "intro": "טקסט ל-PDF הופך טקסט פשוט שאתם מקלידים או מדביקים למסמך PDF נקי, עם כותרת אופציונלית בעמוד הראשון.",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "הקלידו או הדביקו את הטקסט",
+          "הוסיפו כותרת למסמך אם אתם רוצים",
+          "לחצו על המרה ל-PDF והורידו אותו"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "כותרת עליונה ותחתונה",
+      "description": "הוספת כותרת עליונה ותחתונה לכל עמוד",
+      "seoTitle": "הוספת כותרת עליונה ותחתונה ל-PDF בחינם, ללא העלאה",
+      "metaDescription": "הוסיפו שורת כותרת עליונה ותחתונה — עם מספרי עמודים אופציונליים — לכל עמוד ב-PDF. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "האם אפשר להוסיף רק כותרת עליונה, או רק תחתונה?",
+          "a": "כן. השאירו את השדה השני ריק ורק זה שמילאתם יוטבע."
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "לאן הולך הטקסט?",
+          "a": "לשמאל, למרכז או לימין, בחלק העליון או התחתון של כל עמוד. הטקסט מצויר מעל העמוד — הוא לא דוחף את התוכן הקיים."
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "האם אפשר להוסיף גם מספרי עמודים?",
+          "a": "כן. סמנו \"הוספת מספרי עמודים לכותרת התחתונה\" וכל עמוד יקבל מספר בסגנון \"1 מתוך 12\" ליד טקסט הכותרת התחתונה."
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "איך להוסיף כותרת עליונה ותחתונה ל-PDF",
+        "intro": "כותרת עליונה ותחתונה מטביעה שורת טקסט בחלק העליון ו/או התחתון של כל עמוד, עם מספרי עמודים אופציונליים בכותרת התחתונה.",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "בחרו קובץ PDF",
+          "הקלידו את טקסט הכותרת העליונה והתחתונה — השאירו אחד ריק כדי להטביע רק את השני",
+          "בחרו מיקום, גודל גופן, והאם להוסיף מספרי עמודים",
+          "לחצו על הוספת כותרת עליונה ותחתונה והורידו את התוצאה"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "מספור בייטס",
+      "description": "הטבעת מספרי בייטס עוקבים על כל עמוד",
+      "seoTitle": "מספור בייטס — הטבעת מספרים עוקבים על PDF",
+      "metaDescription": "הטביעו מספר בייטס בכל עמוד ב-PDF, עם קידומת ומספר רץ עם אפסים מובילים. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "מהו מספור בייטס?",
+          "a": "דרך להטביע על כל עמוד בקבוצת מסמכים מספר עוקב ייחודי — למשל EXHIBIT-00042 — כדי שאפשר יהיה לזהות עמודים ולהפנות אליהם בעבודה משפטית וגילוי מסמכים."
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "האם אפשר לבחור את הקידומת ואת מספר ההתחלה?",
+          "a": "כן. הגדירו כל קידומת, את המספר להתחיל ממנו, כמה ספרות להשלים באפסים, והיכן בעמוד תוטבע החותמת."
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "האם זה משנה את המסמך?",
+          "a": "לא. החותמת מתווספת מעל כל עמוד; התוכן הקיים לא נוגעים בו."
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "איך למספר PDF במספור בייטס",
+        "intro": "מספור בייטס מטביע על כל עמוד מספר עוקב ייחודי — קידומת פלוס מספר רץ עם אפסים מובילים, כמו EXHIBIT-00042.",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "בחרו קובץ PDF",
+          "הגדירו את הקידומת, את מספר ההתחלה וכמה ספרות להשלים באפסים",
+          "בחרו היכן בעמוד תוטבע החותמת",
+          "לחצו על החלת מספרי בייטס והורידו את ה-PDF המוטבע"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDF בגווני אפור",
+      "description": "הפיכת PDF צבעוני לשחור-לבן",
+      "seoTitle": "PDF בגווני אפור — המרת PDF לשחור-לבן בחינם",
+      "metaDescription": "הפכו PDF צבעוני לשחור-לבן, עמוד אחר עמוד. חינם, ללא הרשמה, ללא העלאה — הקובץ לעולם לא עוזב את הדפדפן.",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "האם הטקסט יישאר ניתן לבחירה?",
+          "a": "לא. העמודים נבנים מחדש כתמונות שחור-לבן, כך שהטקסט הופך לחלק מהתמונה. השתמשו בזה להדפסה או לשיתוף, לא לעריכת הטקסט לאחר מכן."
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "האם זה עובד על PDF סרוקים?",
+          "a": "כן. עמודים סרוקים הם כבר תמונות, ולכן הם מומרים בצורה נקייה — לעיתים קרובות זו בדיוק המטרה, להדפסה או לפקס."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "האם ה-PDF שלי מועלה?",
+          "a": "לא. ההמרה פועלת כולה בדפדפן שלכם, כך שה-PDF לעולם לא עוזב את המכשיר."
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "איך להמיר PDF לגווני אפור",
+        "intro": "PDF בגווני אפור בונה מחדש כל עמוד בשחור-לבן. הוא נועד להדפסה ולפקס — העמודים הופכים לתמונות, כך שהטקסט כבר לא ניתן לבחירה לאחר מכן.",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "בחרו את ה-PDF שלכם",
+          "לחצו על המרה לגווני אפור",
+          "הורידו את ה-PDF השחור-לבן"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "שינוי גודל PDF",
+      "description": "שינוי עמודי PDF ל-A4, Letter, A3 או גודל מותאם אישית",
+      "seoTitle": "שינוי גודל PDF — שינוי גודל עמוד PDF ל-A4 או Letter",
+      "metaDescription": "שנו כל עמוד ב-PDF ל-A4, Letter, A3, A5 או גודל מותאם אישית. התוכן מותאם לגודל וממורכז. חינם, ללא העלאה, ללא הרשמה.",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "מה ההבדל מחיתוך PDF?",
+          "a": "חיתוך גוזר את השוליים של עמוד; שינוי גודל משנה את גודל העמוד עצמו — A4, Letter, A3, A5 או כל גודל מותאם אישית — ומותאם את התוכן לגודל."
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "האם הטקסט יישאר ניתן לבחירה?",
+          "a": "כן. העמודים מסודרים מחדש, לא מופקים מחדש, כך שהטקסט והווקטורים נשארים שלמים."
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "האם אפשר להגדיר גודל מותאם אישית?",
+          "a": "כן. בחרו מותאם אישית והזינו את הרוחב והגובה במילימטרים."
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "איך לשנות את גודל עמודי PDF",
+        "intro": "שינוי גודל PDF משנה כל עמוד ל-A4, Letter, A3, A5 או גודל שאתם מזינים, תוך התאמת התוכן לגודל, ממורכז. הטקסט והווקטורים נשארים שלמים.",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "בחרו את ה-PDF שלכם",
+          "בחרו A4, Letter, A3, A5, או מותאם אישית והזינו את הגודל במילימטרים",
+          "לחצו על שינוי גודל עמודים",
+          "הורידו את ה-PDF בגודל החדש"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "יישור PDF",
+      "description": "יישור עמודים סרוקים מוטים",
+      "seoTitle": "יישור PDF — יישור עמודים סרוקים מוטים בחינם",
+      "metaDescription": "יישרו עמודים סרוקים מוטים. ההטיה מזוהית אוטומטית, או נקבעת ידנית עם המחוון. חינם, ללא העלאה, ללא הרשמה.",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "איך מזהים את ההטיה?",
+          "a": "הכלי קורא את העמודים הראשונים ומוצא את הזווית שבה שורות הטקסט ישרות ביותר, ואז מציע את הזווית הזו במחוון. אפשר לכוון ידנית אם זה נראה לא נכון."
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "האם הטקסט יישאר ניתן לבחירה?",
+          "a": "לא. העמודים נבנים מחדש כתמונות מיושרות, כך שהטקסט הופך לחלק מהתמונה. השתמשו בזה לעמודים סרוקים, שבהם ממילא אין טקסט ניתן לבחירה."
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "עד כמה אפשר ליישר?",
+          "a": "עד 10 מעלות לכל כיוון, מה שמכסה כמעט כל עמוד סורק שהוזן בצורה גרועה."
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "איך ליישר PDF",
+        "intro": "יישור PDF מיישר עמודים סרוקים מוטים. ההטיה מזוהית אוטומטית כשמוסיפים קובץ, והמחוון מאפשר לכוון אותה ידנית.",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "בחרו את ה-PDF שלכם — ההטיה מזוהית אוטומטית",
+          "בדקו את הזווית שזוהתה, וגררו את המחוון אם העמוד עדיין נראה מוטה",
+          "השתמשו בתצוגה המקדימה החיה כדי לראות את העמוד הראשון המיושר",
+          "לחצו על יישור PDF והורידו את התוצאה"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "ערבוב לסירוגין",
+      "description": "שזירת עמודי שני קבצי PDF, אחד אחרי השני",
+      "seoTitle": "ערבוב לסירוגין — שזירת שני קבצי PDF בחינם",
+      "metaDescription": "שזרו את עמודי שני קבצי PDF — עמוד 1 מכל אחד, ואז עמוד 2 מכל אחד — לקובץ אחד. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "מה אם שני ה-PDF באורכים שונים?",
+          "a": "הקצר נגמר קודם; העמודים הנותרים של הארוך מגיעים בסוף, לפי הסדר."
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "איזה מסמך בא ראשון?",
+          "a": "המסמך הראשון שאתם מוסיפים מספק את עמוד 1, השני מספק את עמוד 2, והם ממשיכים להתחלף משם."
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "למה משתמשים בזה?",
+          "a": "לשילוב שתי גרסאות של מסמך עמוד אחר עמוד, לשזירת שאלות ותשובות, או לסידור סריקות קדמיות ואחוריות בסדר קריאה."
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "איך לשזור שני קבצי PDF",
+        "intro": "ערבוב לסירוגין לוקח שני קבצי PDF ושוזר את העמודים שלהם — עמוד 1 מכל אחד, ואז עמוד 2 מכל אחד — לקובץ אחד.",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "הוסיפו את המסמך הראשון, ואז את השני",
+          "לחצו על ערבוב PDF",
+          "הורידו את הקובץ השזור"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "הסרת עמודים ריקים",
+      "description": "מחיקת העמודים הריקים מתוך PDF",
+      "seoTitle": "הסרת עמודים ריקים — מחיקת עמודים ריקים מ-PDF בחינם",
+      "metaDescription": "מצאו ומחקו את העמודים הריקים ב-PDF — אלה שהסורק מוסיף בטעות. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "איך יודעים שעמוד ריק?",
+          "a": "הכלי מפיק כל עמוד ומודד כמה דיו יש עליו. עמודים מתחת לסף מוצגים ברשימה לפני שמשהו נמחק, כדי שתראו בדיוק מה ייעלם."
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "האם זה ימחק עמוד שיש עליו רק מספר עמוד?",
+          "a": "לא בהגדרה מאוזנת — מספר עמוד נחשב כדיו. אם זה בכל זאת מוחק עמוד שרציתם, השתמשו בהגדרה מחמירה והריצו שוב."
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "האם ה-PDF שלי מועלה?",
+          "a": "לא. הזיהוי והמחיקה פועלים כולם בדפדפן שלכם."
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "איך להסיר עמודים ריקים מ-PDF",
+        "intro": "הסרת עמודים ריקים מוצאת את העמודים הריקים שהסורק הוסיף — בדרך כלל בסוף ערימה — מציגה אותם ברשימה ומסירה אותם, ומשאירה את השאר ללא שינוי.",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "בחרו את ה-PDF שלכם",
+          "בדקו את העמודים הריקים שנמצאו, ושנו את הרגישות אם פספסו עמוד או סימנו עמוד שאתם רוצים",
+          "לחצו על הסרת עמודים ריקים",
+          "הורידו את ה-PDF הנקי"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "הצבת 2, 4, 6 או 9 עמודים על כל גיליון",
+      "seoTitle": "N-up PDF — כמה עמודים על גיליון אחד בחינם",
+      "metaDescription": "הציבו 2, 4, 6 או 9 עמודי PDF על כל גיליון, לחוברות ולדפי עזר. חינם, ללא הרשמה, ללא העלאה.",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "באיזה גודל הגיליונות?",
+          "a": "כל גיליון שומר על גודל העמוד הראשון ב-PDF שלכם — בדרך כלל A4 או Letter. עמודי המקור מותאמים לגודל התא שלהם."
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "האם הטקסט יישאר קריא?",
+          "a": "כן. העמודים מסודרים מחדש, לא מופקים מחדש, כך שהטקסט והווקטורים נשארים חדים. בתצוגה של 9 עמודים הדפוס קטן, כפי שצריך להיות."
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "האם אפשר לבחור את הסדר?",
+          "a": "העמודים רצים משמאל לימין, מלמעלה למטה, בסדר המקורי."
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "איך לשים כמה עמודי PDF על גיליון אחד",
+        "intro": "N-up PDF מציב 2, 4, 6 או 9 עמודי מקור על כל גיליון, לחוברות ולדפי עזר. כל גיליון שומר על גודל העמוד הראשון.",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "בחרו את ה-PDF שלכם",
+          "בחרו 2, 4, 6 או 9 עמודים לגיליון",
+          "לחצו על יצירת N-up PDF",
+          "הורידו את התוצאה"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "הוספת עמוד ריק",
+      "description": "הוספת עמודים ריקים או עמודים מ-PDF אחר",
+      "seoTitle": "הוספת עמוד ריק — הוספת עמודים ל-PDF בחינם",
+      "metaDescription": "הוסיפו עמודים ריקים — או כל עמוד של PDF אחר — ל-PDF, בהתחלה, בסוף, אחרי כל עמוד, או אחרי עמוד שתבחרו. חינם, ללא העלאה.",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "לאן העמוד הריק יכול ללכת?",
+          "a": "להתחלה, לסוף, אחרי כל עמוד, או אחרי כל מספר עמוד שתבחרו."
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "איך מכניסים עמודים מ-PDF אחר?",
+          "a": "בחרו \"עמודים מ-PDF אחר\", הוסיפו את הקובץ השני אחרי הראשון, ובחרו לאן ילכו העמודים שלו."
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "באיזה גודל העמוד הריק?",
+          "a": "באותו גודל כמו העמוד הראשון ב-PDF שלכם."
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "איך להוסיף עמוד ריק ל-PDF",
+        "intro": "הוספת עמוד ריק מכניסה עמודים ריקים — או כל עמוד של PDF שני — בהתחלה, בסוף, אחרי כל עמוד, או אחרי עמוד שתבחרו.",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "בחרו את ה-PDF שלכם",
+          "בחרו עמוד ריק, או עמודים מ-PDF אחר והוסיפו את הקובץ השני",
+          "בחרו לאן ילכו העמודים",
+          "לחצו על הוספת עמוד ריק והורידו את התוצאה"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "פרטי — הקובץ מעובד בדפדפן ולעולם לא מועלה לשרת",
+          "חינם, ללא חשבון, ללא סימן מים וללא מגבלה יומית",
+          "עובד בכל דפדפן מודרני ב-Windows, ב-Mac, ב-Linux, ב-iPhone וב-Android"
         ]
       }
     }

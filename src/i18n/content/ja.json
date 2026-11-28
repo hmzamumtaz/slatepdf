@@ -914,37 +914,37 @@
     },
     "pdf-to-png": {
       "slug": "pdf-to-png",
-      "name": "PDF to PNG",
-      "description": "Convert PDF pages to PNG images",
-      "seoTitle": "PDF to PNG — Convert PDF Pages to PNG Free",
-      "metaDescription": "Convert every page of a PDF to a PNG image at 144 or 216 DPI. Free, no sign-up, no watermarks, and the PDF never leaves your browser.",
+      "name": "PDF PNG 変換",
+      "description": "PDFのページをPNG画像に変換します",
+      "seoTitle": "PDF PNG 変換 — PDFのページをPNGに無料で変換",
+      "metaDescription": "PDFの全ページを144または216 DPIのPNG画像に変換。無料・登録不要・透かしなし。PDFがブラウザーを離れることはありません。",
       "faqs": [
         {
-          "q": "What resolution will the PNGs be?",
-          "a": "Pages are rendered at 144 DPI (Standard) or 216 DPI (High), whatever the source. High gives sharper text and larger files."
+          "q": "PNGの解像度はどうなりますか？",
+          "a": "ページは、元の内容にかかわらず144 DPI（標準）または216 DPI（高画質）で描画されます。高画質ではテキストがより鮮明になり、ファイルも大きくなります。"
         },
         {
-          "q": "What is the difference from PDF to JPG?",
-          "a": "PNG is lossless, so it keeps sharp edges and text crisp; JPG files are smaller. Use PNG when you need exact pixels, JPG when you need small files."
+          "q": "PDF JPG 変換との違いは何ですか？",
+          "a": "PNGはロスレス形式のため、シャープな輪郭やテキストがくっきり残ります。JPGのファイルは小さくなります。正確なピクセルが必要ならPNG、小さいファイルが必要ならJPGをお使いください。"
         },
         {
-          "q": "Is my PDF uploaded to convert it to PNG?",
-          "a": "No. Each page is rendered to an image in your browser, so the PDF never leaves your device."
+          "q": "PNGに変換するためにPDFはアップロードされますか？",
+          "a": "いいえ。各ページはブラウザー内で画像に描画されるため、PDFが端末を離れることはありません。"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to PNG",
-        "intro": "PDF to PNG saves every page of a PDF as a PNG image, at standard (144 DPI) or high (216 DPI) resolution. PNG is lossless, so text and sharp edges stay crisp.",
+        "title": "PDFをPNGに変換する方法",
+        "intro": "PDF PNG 変換は、PDFの全ページをPNG画像として保存します。解像度は標準（144 DPI）または高画質（216 DPI）です。PNGはロスレス形式のため、テキストやシャープな輪郭がくっきり残ります。",
         "steps": [
-          "Choose one or more PDFs",
-          "Pick Standard or High resolution",
-          "Click Convert to PNG",
-          "Download single pages, or every page together as a ZIP"
+          "PDFを1つ以上選択します",
+          "標準または高画質の解像度を選びます",
+          "「PNGに変換」をクリックします",
+          "ページを1枚ずつ、またはZIPにまとめてすべてダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
@@ -1562,569 +1562,569 @@
     },
     "pdf-to-text": {
       "slug": "pdf-to-text",
-      "name": "PDF to Text",
-      "description": "Extract all the text from a PDF into a plain .txt file",
-      "seoTitle": "PDF to Text — Extract Text from PDF Free",
-      "metaDescription": "Extract all the text from a PDF into a plain .txt file, with an optional heading per page. Free, no sign-up, no upload.",
+      "name": "PDF テキスト変換",
+      "description": "PDFのテキストをすべてプレーンな.txtファイルに抽出します",
+      "seoTitle": "PDF テキスト変換 — PDFからテキストを無料で抽出",
+      "metaDescription": "PDFのテキストをすべてプレーンな.txtファイルに抽出。ページごとの見出しも追加できます。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "What does the .txt file contain?",
-          "a": "The text of every page, in page order. Turn on page headings to get a \"Page N\" line before each page, which makes long documents easier to navigate."
+          "q": ".txtファイルには何が入りますか？",
+          "a": "全ページのテキストがページ順に入ります。ページ見出しをオンにすると、各ページの前に「ページN」という行が入り、長い文書も見通しやすくなります。"
         },
         {
-          "q": "Does this work on scanned PDFs?",
-          "a": "Only if the scan has a text layer. A plain photo-scan has no text to extract and comes out empty — run OCR PDF on it first, then convert the searchable result to text."
+          "q": "スキャンしたPDFでも使えますか？",
+          "a": "テキストレイヤーがあるスキャンでのみ使えます。写真だけのスキャンには抽出するテキストがなく、空の結果になります。まずPDF OCRで処理し、検索可能な結果をテキストに変換してください。"
         },
         {
-          "q": "Is my PDF uploaded to extract the text?",
-          "a": "No. The text is read from the PDF in your browser, so the file never leaves your device."
+          "q": "テキスト抽出のためにPDFはアップロードされますか？",
+          "a": "いいえ。テキストはブラウザー内でPDFから読み取られるため、ファイルが端末を離れることはありません。"
         }
       ],
       "howTo": {
-        "title": "How to extract text from a PDF",
-        "intro": "PDF to Text pulls the text out of a PDF into a plain .txt file, one page after another, with an optional heading per page.",
+        "title": "PDFからテキストを抽出する方法",
+        "intro": "PDF テキスト変換は、PDFからテキストをプレーンな.txtファイルに抽出します。ページ順に並び、ページごとの見出しも追加できます。",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Tick \"Add a heading for each page\" if you want Page N markers",
-          "Click Convert to Text",
-          "Download the .txt, or copy the text from the preview"
+          "テキストのあるPDFを選択します（スキャンはまずPDF OCRで処理してください）",
+          "「ページN」のマーカーがほしい場合は「各ページに見出しを追加」にチェックを入れます",
+          "「テキストに変換」をクリックします",
+          ".txtをダウンロードするか、プレビューからテキストをコピーします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "extract-images": {
       "slug": "extract-images",
-      "name": "Extract Images",
-      "description": "Pull the photos and figures out of a PDF as PNG files",
-      "seoTitle": "Extract Images from PDF — Save Photos as PNG Free",
-      "metaDescription": "Pull the photos, logos and figures out of a PDF and save them as PNG files. Free, no sign-up, the PDF never leaves your browser.",
+      "name": "画像抽出",
+      "description": "PDFから写真や図版を取り出してPNGファイルにします",
+      "seoTitle": "PDFから画像抽出 — 写真をPNGとして無料で保存",
+      "metaDescription": "PDFから写真・ロゴ・図版を取り出し、PNGファイルとして保存します。無料・登録不要、PDFがブラウザーを離れることはありません。",
       "faqs": [
         {
-          "q": "What quality are the extracted images?",
-          "a": "Full embedded quality — the image is saved exactly as it sits inside the PDF, as a PNG. Nothing is re-compressed or downscaled."
+          "q": "抽出される画像の画質はどうですか？",
+          "a": "埋め込み時の完全な画質です。画像はPDF内に収められているままの状態でPNGとして保存されます。再圧縮も縮小もしません。"
         },
         {
-          "q": "What if my PDF is a scan?",
-          "a": "A scanned page is one big image, so you get that whole page image back. For real text pages, each embedded photo, logo and figure is extracted separately."
+          "q": "PDFがスキャンの場合はどうなりますか？",
+          "a": "スキャンされたページは1枚の大きな画像なので、そのページ画像全体が戻ってきます。実際のテキストページでは、埋め込まれた写真・ロゴ・図版がそれぞれ別々に抽出されます。"
         },
         {
-          "q": "Is my PDF uploaded to extract the images?",
-          "a": "No. The images are pulled out of the PDF in your browser, so the file never leaves your device."
+          "q": "画像抽出のためにPDFはアップロードされますか？",
+          "a": "いいえ。画像はブラウザー内でPDFから取り出されるため、ファイルが端末を離れることはありません。"
         }
       ],
       "howTo": {
-        "title": "How to extract images from a PDF",
-        "intro": "Extract Images pulls every embedded photo, logo and figure out of a PDF and saves them as PNG files at full embedded quality.",
+        "title": "PDFから画像を抽出する方法",
+        "intro": "画像抽出は、PDFに埋め込まれたすべての写真・ロゴ・図版を取り出し、埋め込み時の完全な画質でPNGファイルとして保存します。",
         "steps": [
-          "Choose a PDF",
-          "Click Extract Images",
-          "Download the images — several download together as a ZIP"
+          "PDFを選択します",
+          "「画像を抽出」をクリックします",
+          "画像をダウンロードします。複数ある場合はZIPにまとめてダウンロードできます"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "pdf-to-html": {
       "slug": "pdf-to-html",
-      "name": "PDF to HTML",
-      "description": "Turn a PDF into a plain HTML web page",
-      "seoTitle": "PDF to HTML — Convert PDF to a Web Page Free",
-      "metaDescription": "Turn a PDF into a plain HTML page, one section per PDF page. Free, no sign-up, no upload — the text never leaves your browser.",
+      "name": "PDF HTML 変換",
+      "description": "PDFをプレーンなHTMLウェブページに変換します",
+      "seoTitle": "PDF HTML 変換 — PDFをウェブページに無料で変換",
+      "metaDescription": "PDFをプレーンなHTMLページに変換します。PDFの1ページが1セクションになります。無料・登録不要・アップロード不要。テキストがブラウザーを離れることはありません。",
       "faqs": [
         {
-          "q": "Will the HTML look like the PDF?",
-          "a": "No. It moves the words, not the layout: each PDF page becomes a section with its text as paragraphs. Images and exact formatting are not carried over."
+          "q": "HTMLはPDFと同じ見た目になりますか？",
+          "a": "いいえ。移されるのは言葉であってレイアウトではありません。PDFの各ページがセクションになり、そのテキストが段落になります。画像や正確な書式は引き継がれません。"
         },
         {
-          "q": "What can I do with the HTML file?",
-          "a": "Open it in any browser, paste it into a website or a content editor, or use it as the starting point for a web page built from a document."
+          "q": "HTMLファイルで何ができますか？",
+          "a": "どのブラウザーでも開けます。ウェブサイトやコンテンツエディターに貼り付けたり、文書から作るウェブページの出発点にしたりできます。"
         },
         {
-          "q": "Is my PDF uploaded to convert it to HTML?",
-          "a": "No. The text is extracted and the HTML is built in your browser, so the PDF never leaves your device."
+          "q": "HTMLに変換するためにPDFはアップロードされますか？",
+          "a": "いいえ。テキストの抽出とHTMLの生成はブラウザー内で行われるため、PDFが端末を離れることはありません。"
         }
       ],
       "howTo": {
-        "title": "How to convert PDF to HTML",
-        "intro": "PDF to HTML turns a PDF into a plain web page: one section per PDF page, with the text as paragraphs. It moves the words, not the layout.",
+        "title": "PDFをHTMLに変換する方法",
+        "intro": "PDF HTML 変換は、PDFをプレーンなウェブページに変換します。PDFの1ページが1セクションになり、テキストは段落になります。移されるのは言葉であってレイアウトではありません。",
         "steps": [
-          "Choose a PDF with real text (run OCR PDF first on scans)",
-          "Click Convert to HTML",
-          "Download the .html file, or copy the markup from the preview"
+          "テキストのあるPDFを選択します（スキャンはまずPDF OCRで処理してください）",
+          "「HTMLに変換」をクリックします",
+          ".htmlファイルをダウンロードするか、プレビューからマークアップをコピーします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "edit-metadata": {
       "slug": "edit-metadata",
-      "name": "Edit Metadata",
-      "description": "Change a PDF title, author, subject and keywords",
-      "seoTitle": "Edit PDF Metadata — Change Title, Author & Keywords",
-      "metaDescription": "Change a PDF title, author, subject and keywords in your browser. Free, no sign-up, no upload.",
+      "name": "メタデータ編集",
+      "description": "PDFのタイトル・著者・件名・キーワードを変更します",
+      "seoTitle": "PDFメタデータ編集 — タイトル・著者・キーワードを変更",
+      "metaDescription": "ブラウザー内でPDFのタイトル・著者・件名・キーワードを変更。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "Where does the title show up?",
-          "a": "In the PDF reader tab or title bar, in file searches, and in search results when the PDF is indexed. A clear title helps people find the document."
+          "q": "タイトルはどこに表示されますか？",
+          "a": "PDFリーダーのタブやタイトルバー、ファイル検索、そしてPDFがインデックスされたときの検索結果に表示されます。わかりやすいタイトルは、文書を見つけやすくします。"
         },
         {
-          "q": "Does editing metadata change the document itself?",
-          "a": "No. The pages, text and images stay exactly as they are — only the information stored about the document changes."
+          "q": "メタデータを編集すると文書自体も変わりますか？",
+          "a": "いいえ。ページ・テキスト・画像はまったくそのままです。変わるのは文書について保存されている情報だけです。"
         },
         {
-          "q": "Can I clear a field?",
-          "a": "Yes. Leave a field empty and save — that value is removed from the PDF."
+          "q": "フィールドを空にできますか？",
+          "a": "はい。フィールドを空のまま保存すると、その値がPDFから削除されます。"
         }
       ],
       "howTo": {
-        "title": "How to edit PDF metadata",
-        "intro": "Edit Metadata changes the information stored about a PDF — its title, author, subject and keywords — without touching the pages.",
+        "title": "PDFのメタデータを編集する方法",
+        "intro": "メタデータ編集は、PDFについて保存されている情報——タイトル・著者・件名・キーワード——を変更します。ページには触れません。",
         "steps": [
-          "Choose a PDF to see its current title, author, subject and keywords",
-          "Change the fields you want — leave one empty to clear it",
-          "Click Save Metadata and download the updated PDF"
+          "PDFを選択して、現在のタイトル・著者・件名・キーワードを確認します",
+          "変更したいフィールドを編集します。空にすればその値を消去できます",
+          "「メタデータを保存」をクリックし、更新されたPDFをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "flatten-pdf": {
       "slug": "flatten-pdf",
-      "name": "Flatten PDF",
-      "description": "Make form fields permanent and strip annotations",
-      "seoTitle": "Flatten PDF — Make Form Fields Permanent Free",
-      "metaDescription": "Bake a PDF's form fields permanently into the page and strip annotations, so answers can no longer be changed. Free, no upload.",
+      "name": "PDFフラット化",
+      "description": "フォームフィールドを固定し、注釈を取り除きます",
+      "seoTitle": "PDFフラット化 — フォームフィールドを永久に固定（無料）",
+      "metaDescription": "PDFのフォームフィールドをページに永久に焼き付け、注釈を取り除くので、回答をもう変更できなくなります。無料、アップロード不要。",
       "faqs": [
         {
-          "q": "What happens to the form fields?",
-          "a": "Their values are drawn into the page itself and the fields are removed, so the filled-in answers can no longer be edited or cleared."
+          "q": "フォームフィールドはどうなりますか？",
+          "a": "その値がページ自体に描き込まれ、フィールドが削除されるため、入力済みの回答を編集したり消したりできなくなります。"
         },
         {
-          "q": "What happens to comments and highlights?",
-          "a": "They are removed, because they cannot be baked into the page without turning it into an image. Links are kept."
+          "q": "コメントやハイライトはどうなりますか？",
+          "a": "削除されます。ページを画像化せずに焼き付けることはできないからです。リンクは残ります。"
         },
         {
-          "q": "Does flattening change the text?",
-          "a": "No. The text stays real, selectable text — nothing is rasterised into an image."
+          "q": "フラット化するとテキストは変わりますか？",
+          "a": "いいえ。テキストは実際の選択可能なテキストのままです。何も画像にラスタライズされません。"
         }
       ],
       "howTo": {
-        "title": "How to flatten a PDF",
-        "intro": "Flatten PDF bakes form fields permanently into the page and strips comments and highlights, so filled-in answers can no longer be changed. Links are kept, and the text stays selectable.",
+        "title": "PDFをフラット化する方法",
+        "intro": "PDFフラット化は、フォームフィールドをページに永久に焼き付け、コメントやハイライトを取り除くので、入力済みの回答をもう変更できなくなります。リンクは残り、テキストは選択可能なままです。",
         "steps": [
-          "Choose a PDF with form fields or annotations",
-          "Click Flatten PDF",
-          "Download the flattened copy"
+          "フォームフィールドや注釈のあるPDFを選択します",
+          "「PDFをフラット化」をクリックします",
+          "フラット化されたコピーをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "fill-pdf-form": {
       "slug": "fill-pdf-form",
-      "name": "Fill PDF Form",
-      "description": "Fill in a PDF form and save the completed copy",
-      "seoTitle": "Fill PDF Form — Fill In a PDF Form Online Free",
-      "metaDescription": "Fill in a PDF form in your browser — text fields, tick boxes and dropdowns — and save the completed copy. Free, no sign-up, no upload.",
+      "name": "PDFフォーム入力",
+      "description": "PDFフォームに入力し、完成したコピーを保存します",
+      "seoTitle": "PDFフォーム入力 — PDFフォームをオンラインで無料入力",
+      "metaDescription": "ブラウザー内でPDFフォームに入力できます。テキストフィールド・チェックボックス・ドロップダウンに対応し、完成したコピーを保存できます。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "Which fields can I fill?",
-          "a": "Text fields, tick boxes, dropdown lists and radio groups. Buttons and signature fields cannot be filled here — use Sign PDF for signatures."
+          "q": "どのフィールドに入力できますか？",
+          "a": "テキストフィールド・チェックボックス・ドロップダウンリスト・ラジオボタン群です。ボタンと署名フィールドはここでは入力できません。署名には「PDF署名」をお使いください。"
         },
         {
-          "q": "It says the PDF has no fillable fields. Why?",
-          "a": "The PDF is a flat scan or a printed form with no interactive fields. Only PDFs built with real form fields can be filled — a scanned form needs OCR first, and even then it stays a picture of a form."
+          "q": "「入力可能なフィールドがありません」と表示されるのはなぜですか？",
+          "a": "そのPDFはフラットなスキャンか、対話型フィールドのない印刷フォームです。入力できるのは、実際のフォームフィールドで作られたPDFだけです。スキャンしたフォームはまずOCRが必要で、それでもフォームの画像のままです。"
         },
         {
-          "q": "Can I lock the answers afterwards?",
-          "a": "Yes. Run the filled PDF through Flatten PDF and the answers become permanent."
+          "q": "後から回答をロックできますか？",
+          "a": "はい。入力済みのPDFを「PDFフラット化」に通すと、回答が永久に固定されます。"
         }
       ],
       "howTo": {
-        "title": "How to fill in a PDF form",
-        "intro": "Fill PDF Form lists every fillable field in a PDF — text fields, tick boxes, dropdowns — so you can complete the form in your browser and save it.",
+        "title": "PDFフォームに入力する方法",
+        "intro": "PDFフォーム入力は、PDF内のすべての入力可能フィールド——テキストフィールド・チェックボックス・ドロップダウン——を一覧表示し、ブラウザー内でフォームを完成させて保存できます。",
         "steps": [
-          "Choose a PDF with fillable form fields",
-          "Fill in each field in the panel",
-          "Click Save Filled PDF and download the completed copy"
+          "入力可能なフォームフィールドのあるPDFを選択します",
+          "パネルで各フィールドに入力します",
+          "「入力済みPDFを保存」をクリックし、完成したコピーをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "text-to-pdf": {
       "slug": "text-to-pdf",
-      "name": "Text to PDF",
-      "description": "Turn plain text into a PDF document",
-      "seoTitle": "Text to PDF — Turn Plain Text into a PDF Free",
-      "metaDescription": "Type or paste plain text and turn it into a PDF document in your browser. Free, no sign-up, no upload, no watermark.",
+      "name": "テキスト PDF 変換",
+      "description": "プレーンなテキストをPDFドキュメントに変換します",
+      "seoTitle": "テキスト PDF 変換 — プレーンテキストをPDFに無料で変換",
+      "metaDescription": "プレーンテキストを入力または貼り付けて、ブラウザー内でPDFドキュメントに変換。無料・登録不要・アップロード不要・透かしなし。",
       "faqs": [
         {
-          "q": "Can I format the text?",
-          "a": "No. This tool turns plain text into a clean PDF — headings and bold are not carried over. For styled documents, use Word to PDF or HTML to PDF instead."
+          "q": "テキストを書式設定できますか？",
+          "a": "できません。このツールはプレーンテキストをきれいなPDFに変換します。見出しや太字は引き継がれません。スタイル付きの文書には、代わりにWord PDF 変換やHTML PDF 変換をお使いください。"
         },
         {
-          "q": "What about long text?",
-          "a": "It flows across as many pages as it needs, with a title on the first page if you add one."
+          "q": "長いテキストはどうなりますか？",
+          "a": "必要なだけのページに流し込まれます。タイトルを追加すれば、最初のページに表示されます。"
         },
         {
-          "q": "Is my text uploaded?",
-          "a": "No. The PDF is built in your browser, so the text never leaves your device."
+          "q": "テキストはアップロードされますか？",
+          "a": "いいえ。PDFはブラウザー内で作成されるため、テキストが端末を離れることはありません。"
         }
       ],
       "howTo": {
-        "title": "How to turn text into a PDF",
-        "intro": "Text to PDF turns plain text you type or paste into a clean PDF document, with an optional title on the first page.",
+        "title": "テキストをPDFに変換する方法",
+        "intro": "テキスト PDF 変換は、入力または貼り付けたプレーンテキストをきれいなPDFドキュメントに変換します。最初のページにタイトルを追加することもできます。",
         "steps": [
-          "Type or paste your text",
-          "Add a document title if you want one",
-          "Click Convert to PDF and download it"
+          "テキストを入力または貼り付けます",
+          "必要であれば文書のタイトルを追加します",
+          "「PDFに変換」をクリックしてダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "header-footer": {
       "slug": "header-footer",
-      "name": "Header & Footer",
-      "description": "Stamp a header and footer on every page",
-      "seoTitle": "Add Header & Footer to PDF Free, No Upload",
-      "metaDescription": "Stamp a header and footer line — with optional page numbers — on every page of a PDF. Free, no sign-up, no upload.",
+      "name": "ヘッダーとフッター",
+      "description": "すべてのページにヘッダーとフッターを押します",
+      "seoTitle": "PDFにヘッダーとフッターを無料で追加、アップロード不要",
+      "metaDescription": "PDFのすべてのページにヘッダーとフッターの行を押します。ページ番号も追加できます。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "Can I add only a header, or only a footer?",
-          "a": "Yes. Leave the other field empty and only the one you filled in is stamped."
+          "q": "ヘッダーだけ、フッターだけ追加できますか？",
+          "a": "はい。もう一方のフィールドを空にすれば、入力した方だけが押されます。"
         },
         {
-          "q": "Where does the text go?",
-          "a": "Left, centre or right, at the top or bottom of every page. The text is drawn on top of the page — it does not push the existing content around."
+          "q": "テキストはどこに入りますか？",
+          "a": "各ページの上部または下部に、左・中央・右のいずれかで配置されます。テキストはページの上に描かれるため、既存の内容がずれることはありません。"
         },
         {
-          "q": "Can I add page numbers too?",
-          "a": "Yes. Tick \"Add page numbers to the footer\" and each page gets a \"1 of 12\" style number next to your footer text."
+          "q": "ページ番号も追加できますか？",
+          "a": "はい。「フッターにページ番号を追加」にチェックを入れると、各ページにフッターのテキストの横に「1 / 12」式の番号が入ります。"
         }
       ],
       "howTo": {
-        "title": "How to add a header and footer to a PDF",
-        "intro": "Header & Footer stamps a line of text at the top and/or bottom of every page, with optional page numbers in the footer.",
+        "title": "PDFにヘッダーとフッターを追加する方法",
+        "intro": "ヘッダーとフッターは、すべてのページの上部や下部に1行のテキストを押し、フッターにはページ番号も追加できます。",
         "steps": [
-          "Choose a PDF",
-          "Type the header and footer text — leave one empty to stamp only the other",
-          "Pick a position, a font size, and whether to add page numbers",
-          "Click Add Header & Footer and download the result"
+          "PDFを選択します",
+          "ヘッダーとフッターのテキストを入力します。一方を空にすれば、もう一方だけが押されます",
+          "位置・フォントサイズ・ページ番号の有無を選びます",
+          "「ヘッダーとフッターを追加」をクリックして結果をダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "bates-numbering": {
       "slug": "bates-numbering",
-      "name": "Bates Numbering",
-      "description": "Stamp sequential Bates numbers on every page",
-      "seoTitle": "Bates Numbering — Stamp Sequential Numbers on PDF",
-      "metaDescription": "Bates-stamp every page of a PDF with a prefix and a zero-padded running number. Free, no sign-up, no upload.",
+      "name": "ベイツナンバリング",
+      "description": "すべてのページに連番のベイツ番号を押します",
+      "seoTitle": "ベイツナンバリング — PDFに連番を押す",
+      "metaDescription": "PDFのすべてのページに、プレフィックスとゼロ埋めの連番でベイツスタンプを押します。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "What is Bates numbering?",
-          "a": "A way of stamping every page of a document set with a unique sequential number — for example EXHIBIT-00042 — so pages can be identified and referenced in legal and discovery work."
+          "q": "ベイツナンバリングとは何ですか？",
+          "a": "文書一式の各ページに、たとえばEXHIBIT-00042のような固有の連番を押す方法です。法務や証拠開示の作業でページを特定し、参照できるようにします。"
         },
         {
-          "q": "Can I choose the prefix and the starting number?",
-          "a": "Yes. Set any prefix, the number to start from, how many digits to pad to, and where on the page the stamp goes."
+          "q": "プレフィックスと開始番号を選べますか？",
+          "a": "はい。任意のプレフィックス、開始番号、ゼロ埋めの桁数、スタンプの位置を設定できます。"
         },
         {
-          "q": "Does it change the document?",
-          "a": "No. The stamp is added on top of each page; the existing content is untouched."
+          "q": "文書は変わりますか？",
+          "a": "いいえ。スタンプは各ページの上に追加されるだけで、既存の内容には触れません。"
         }
       ],
       "howTo": {
-        "title": "How to Bates-number a PDF",
-        "intro": "Bates Numbering stamps every page with a unique sequential number — a prefix plus a zero-padded running number, like EXHIBIT-00042.",
+        "title": "PDFにベイツ番号を付ける方法",
+        "intro": "ベイツナンバリングは、すべてのページに固有の連番を押します。プレフィックスにゼロ埋めの連番を組み合わせたもの、たとえばEXHIBIT-00042です。",
         "steps": [
-          "Choose a PDF",
-          "Set the prefix, the starting number and how many digits to pad to",
-          "Pick where on the page the stamp goes",
-          "Click Apply Bates Numbers and download the stamped PDF"
+          "PDFを選択します",
+          "プレフィックス・開始番号・ゼロ埋めの桁数を設定します",
+          "ページ上のスタンプ位置を選びます",
+          "「ベイツ番号を適用」をクリックし、スタンプされたPDFをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "grayscale-pdf": {
       "slug": "grayscale-pdf",
-      "name": "Grayscale PDF",
-      "description": "Turn a colour PDF black and white",
-      "seoTitle": "Grayscale PDF — Convert PDF to Black & White Free",
-      "metaDescription": "Turn a colour PDF black and white, page by page. Free, no sign-up, no upload — the file never leaves your browser.",
+      "name": "PDFグレースケール",
+      "description": "カラーPDFを白黒に変換します",
+      "seoTitle": "PDFグレースケール — PDFを白黒に無料で変換",
+      "metaDescription": "カラーPDFを1ページずつ白黒に変換します。無料・登録不要・アップロード不要。ファイルがブラウザーを離れることはありません。",
       "faqs": [
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as black-and-white images, so the text becomes part of the image. Use it for printing or sharing, not for editing text afterwards."
+          "q": "テキストは選択可能なままですか？",
+          "a": "いいえ。ページは白黒画像として再構築されるため、テキストは画像の一部になります。印刷や共有に使い、後からテキストを編集するためには使わないでください。"
         },
         {
-          "q": "Does it work on scanned PDFs?",
-          "a": "Yes. Scanned pages are already images, so they convert cleanly — often the whole point, for printing or faxing."
+          "q": "スキャンしたPDFでも使えますか？",
+          "a": "はい。スキャンしたページはもともと画像なので、きれいに変換できます。印刷やFAX送信のために使うのが、たいていの目的です。"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. The conversion runs entirely in your browser, so the PDF never leaves your device."
+          "q": "PDFはアップロードされますか？",
+          "a": "いいえ。変換はすべてブラウザー内で行われるため、PDFが端末を離れることはありません。"
         }
       ],
       "howTo": {
-        "title": "How to convert a PDF to grayscale",
-        "intro": "Grayscale PDF rebuilds every page in black and white. It is built for printing and faxing — pages become images, so the text is no longer selectable afterwards.",
+        "title": "PDFをグレースケールに変換する方法",
+        "intro": "PDFグレースケールは、すべてのページを白黒で再構築します。印刷やFAX用に作られており、ページは画像になるため、テキストはその後選択できなくなります。",
         "steps": [
-          "Choose your PDF",
-          "Click Convert to Grayscale",
-          "Download the black-and-white PDF"
+          "PDFを選択します",
+          "「グレースケールに変換」をクリックします",
+          "白黒のPDFをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "resize-pdf": {
       "slug": "resize-pdf",
-      "name": "Resize PDF",
-      "description": "Change PDF pages to A4, Letter, A3 or a custom size",
-      "seoTitle": "Resize PDF — Change PDF Page Size to A4 or Letter",
-      "metaDescription": "Change every PDF page to A4, Letter, A3, A5 or a custom size. Content is scaled to fit, centred. Free, no upload, no sign-up.",
+      "name": "PDFサイズ変更",
+      "description": "PDFのページをA4・Letter・A3・カスタムサイズに変更します",
+      "seoTitle": "PDFサイズ変更 — PDFのページサイズをA4やLetterに変更",
+      "metaDescription": "PDFのすべてのページをA4・Letter・A3・A5・カスタムサイズに変更します。内容は中央に合わせて拡大縮小されます。無料、アップロード不要、登録不要。",
       "faqs": [
         {
-          "q": "What is the difference from Crop PDF?",
-          "a": "Crop trims the margins of a page; Resize changes the page size itself — A4, Letter, A3, A5 or any custom size — and scales the content to fit."
+          "q": "PDFトリミングとの違いは何ですか？",
+          "a": "トリミングはページの余白を切り落とします。サイズ変更はページサイズそのものを変更します。A4・Letter・A3・A5、または任意のカスタムサイズにして、内容を収まるよう拡大縮小します。"
         },
         {
-          "q": "Will the text stay selectable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay intact."
+          "q": "テキストは選択可能なままですか？",
+          "a": "はい。ページは再描画ではなく再レイアウトされるため、テキストやベクターはそのまま残ります。"
         },
         {
-          "q": "Can I set a custom size?",
-          "a": "Yes. Choose Custom and enter the width and height in millimetres."
+          "q": "カスタムサイズを設定できますか？",
+          "a": "はい。「カスタム」を選び、幅と高さをミリメートルで入力してください。"
         }
       ],
       "howTo": {
-        "title": "How to resize PDF pages",
-        "intro": "Resize PDF changes every page to A4, Letter, A3, A5 or a size you enter, scaling the content to fit, centred. Text and vectors stay intact.",
+        "title": "PDFページのサイズを変更する方法",
+        "intro": "PDFサイズ変更は、すべてのページをA4・Letter・A3・A5、または入力したサイズに変更し、内容を中央に合わせて拡大縮小します。テキストやベクターはそのまま残ります。",
         "steps": [
-          "Choose your PDF",
-          "Pick A4, Letter, A3, A5, or Custom and enter the size in millimetres",
-          "Click Resize Pages",
-          "Download the resized PDF"
+          "PDFを選択します",
+          "A4・Letter・A3・A5、または「カスタム」を選んでサイズをミリメートルで入力します",
+          "「ページサイズを変更」をクリックします",
+          "サイズ変更されたPDFをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "deskew-pdf": {
       "slug": "deskew-pdf",
-      "name": "Deskew PDF",
-      "description": "Straighten tilted scanned pages",
-      "seoTitle": "Deskew PDF — Straighten Tilted Scanned Pages Free",
-      "metaDescription": "Straighten tilted scanned pages. The tilt is detected automatically, or set it by hand with the slider. Free, no upload, no sign-up.",
+      "name": "PDF傾き補正",
+      "description": "傾いたスキャンページをまっすぐにします",
+      "seoTitle": "PDF傾き補正 — 傾いたスキャンページを無料でまっすぐに",
+      "metaDescription": "傾いたスキャンページをまっすぐにします。傾きは自動で検出されるか、スライダーで手動設定できます。無料、アップロード不要、登録不要。",
       "faqs": [
         {
-          "q": "How does it detect the tilt?",
-          "a": "It reads the first pages and finds the angle where the text lines are straightest, then offers that angle on the slider. You can adjust it by hand if it looks wrong."
+          "q": "傾きはどうやって検出しますか？",
+          "a": "最初の数ページを読み取り、テキストの行が最もまっすぐになる角度を見つけ、その角度をスライダーに提示します。おかしいと感じたら手動で調整できます。"
         },
         {
-          "q": "Will the text still be selectable?",
-          "a": "No. Pages are rebuilt as straightened images, so the text becomes part of the image. Use it for scanned pages, where there is no selectable text anyway."
+          "q": "テキストは選択可能なままですか？",
+          "a": "いいえ。ページはまっすぐにした画像として再構築されるため、テキストは画像の一部になります。選択可能なテキストがもともとないスキャンページにお使いください。"
         },
         {
-          "q": "How far can it straighten?",
-          "a": "Up to 10 degrees either way, which covers almost every badly-fed scanner page."
+          "q": "どこまでまっすぐにできますか？",
+          "a": "どちらの方向にも最大10度までです。スキャナーへの給紙ミスのほとんどはこれでカバーできます。"
         }
       ],
       "howTo": {
-        "title": "How to deskew a PDF",
-        "intro": "Deskew PDF straightens tilted scanned pages. The tilt is detected automatically when you add a file, and the slider lets you adjust it by hand.",
+        "title": "PDFの傾きを補正する方法",
+        "intro": "PDF傾き補正は、傾いたスキャンページをまっすぐにします。ファイルを追加すると傾きが自動で検出され、スライダーで手動調整もできます。",
         "steps": [
-          "Choose your PDF — the tilt is detected automatically",
-          "Check the detected angle, and drag the slider if the page still looks tilted",
-          "Use Live preview to see the straightened first page",
-          "Click Deskew PDF and download the result"
+          "PDFを選択します。傾きは自動で検出されます",
+          "検出された角度を確認し、ページがまだ傾いて見える場合はスライダーをドラッグします",
+          "ライブプレビューで、まっすぐになった最初のページを確認します",
+          "「PDFの傾きを補正」をクリックして結果をダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "alternate-mix": {
       "slug": "alternate-mix",
-      "name": "Alternate & Mix",
-      "description": "Interleave the pages of two PDFs, one after the other",
-      "seoTitle": "Alternate & Mix PDF — Interleave Two PDFs Free",
-      "metaDescription": "Interleave the pages of two PDFs — page 1 of each, then page 2 of each — into one file. Free, no sign-up, no upload.",
+      "name": "交互ミックス",
+      "description": "2つのPDFのページを1ページずつ交互に挿入します",
+      "seoTitle": "交互ミックスPDF — 2つのPDFを無料で交互に挿入",
+      "metaDescription": "2つのPDFのページを交互に挿入します。各PDFの1ページ目、次に2ページ目という順で1つのファイルにします。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "What if the two PDFs have different lengths?",
-          "a": "The shorter one runs out first; the longer one's remaining pages go at the end, in order."
+          "q": "2つのPDFの長さが違う場合はどうなりますか？",
+          "a": "短い方が先になくなります。長い方の残りのページは、順番通りに最後に置かれます。"
         },
         {
-          "q": "Which document comes first?",
-          "a": "The first document you add supplies page 1, the second supplies page 2, and they keep alternating from there."
+          "q": "どちらの文書が先になりますか？",
+          "a": "最初に追加した文書が1ページ目、2番目が2ページ目を提供し、そこから交互に続きます。"
         },
         {
-          "q": "What is this used for?",
-          "a": "Combining two versions of a document page by page, interleaving questions and answers, or merging front and back scans into reading order."
+          "q": "何に使いますか？",
+          "a": "文書の2つのバージョンをページごとに組み合わせたり、問題と答えを交互に並べたり、表裏のスキャンを読む順序に並べたりするのに使います。"
         }
       ],
       "howTo": {
-        "title": "How to interleave two PDFs",
-        "intro": "Alternate & Mix takes two PDFs and interleaves their pages — page 1 of each, then page 2 of each — into a single file.",
+        "title": "2つのPDFを交互に挿入する方法",
+        "intro": "交互ミックスは、2つのPDFを取り、そのページを交互に挿入します。各PDFの1ページ目、次に2ページ目という順で、1つのファイルにします。",
         "steps": [
-          "Add the first document, then the second",
-          "Click Mix PDFs",
-          "Download the interleaved file"
+          "最初の文書、次に2番目の文書を追加します",
+          "「PDFをミックス」をクリックします",
+          "交互に挿入されたファイルをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "remove-blank-pages": {
       "slug": "remove-blank-pages",
-      "name": "Remove Blank Pages",
-      "description": "Delete the blank pages from a PDF",
-      "seoTitle": "Remove Blank Pages — Delete Blank PDF Pages Free",
-      "metaDescription": "Find and delete the blank pages in a PDF — the ones scanners add by mistake. Free, no sign-up, no upload.",
+      "name": "空白ページ削除",
+      "description": "PDFから空白ページを削除します",
+      "seoTitle": "空白ページ削除 — PDFの空白ページを無料で削除",
+      "metaDescription": "PDFの空白ページ——スキャナーが誤って追加したもの——を見つけて削除します。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "How does it know a page is blank?",
-          "a": "It renders each page and measures how much ink is on it. Pages below the threshold are listed before anything is removed, so you see exactly what will go."
+          "q": "空白ページだとどうやってわかりますか？",
+          "a": "各ページを描画し、インクの量を測ります。しきい値を下回るページは、削除する前に一覧表示されるため、何が削除されるのか正確に確認できます。"
         },
         {
-          "q": "Will it remove a page that only has a page number?",
-          "a": "Not on the Balanced setting — a page number counts as ink. If it still removes a page you wanted, use Strict and run it again."
+          "q": "ページ番号だけのページも削除されますか？",
+          "a": "「バランス」設定では削除されません。ページ番号もインクとして数えられます。それでも必要なページが削除された場合は、「厳密」にして再度実行してください。"
         },
         {
-          "q": "Is my PDF uploaded?",
-          "a": "No. Detection and removal run entirely in your browser."
+          "q": "PDFはアップロードされますか？",
+          "a": "いいえ。検出と削除はすべてブラウザー内で行われます。"
         }
       ],
       "howTo": {
-        "title": "How to remove blank pages from a PDF",
-        "intro": "Remove Blank Pages finds the blank pages a scanner added — usually at the end of a stack — lists them, and drops them, leaving the rest untouched.",
+        "title": "PDFから空白ページを削除する方法",
+        "intro": "空白ページ削除は、スキャナーが追加した空白ページ——たいていは紙の束の最後にあります——を見つけて一覧表示し、削除します。残りはそのままです。",
         "steps": [
-          "Choose your PDF",
-          "Check the blank pages it found, and change the sensitivity if it missed any or flagged a page you want",
-          "Click Remove Blank Pages",
-          "Download the cleaned PDF"
+          "PDFを選択します",
+          "見つかった空白ページを確認し、見逃しや残したいページの誤検出があれば感度を変更します",
+          "「空白ページを削除」をクリックします",
+          "整理されたPDFをダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "n-up-pdf": {
       "slug": "n-up-pdf",
       "name": "N-up PDF",
-      "description": "Put 2, 4, 6 or 9 pages on each sheet",
-      "seoTitle": "N-up PDF — Put Multiple Pages on One Sheet Free",
-      "metaDescription": "Put 2, 4, 6 or 9 PDF pages on each sheet, for booklets and handouts. Free, no sign-up, no upload.",
+      "description": "1枚の用紙に2・4・6・9ページを並べます",
+      "seoTitle": "N-up PDF — 複数のページを1枚に無料で配置",
+      "metaDescription": "PDFの2・4・6・9ページを1枚の用紙に並べます。小冊子や配布資料に。無料・登録不要・アップロード不要。",
       "faqs": [
         {
-          "q": "What size are the sheets?",
-          "a": "Each sheet stays the size of the first page of your PDF — usually A4 or Letter. Source pages are scaled to fit their cell."
+          "q": "用紙のサイズはどうなりますか？",
+          "a": "各用紙はPDFの最初のページと同じサイズのままです。たいていA4かLetterです。元のページは各セルに収まるよう拡大縮小されます。"
         },
         {
-          "q": "Will the text stay readable?",
-          "a": "Yes. Pages are re-laid-out, not re-rendered, so text and vectors stay sharp. At 9-up the print is small, as it should be."
+          "q": "テキストは読めるままですか？",
+          "a": "はい。ページは再描画ではなく再レイアウトされるため、テキストやベクターは鮮明なままです。9-upでは印刷が小さくなりますが、それが当然です。"
         },
         {
-          "q": "Can I choose the order?",
-          "a": "Pages run left to right, top to bottom, in the original order."
+          "q": "順番を選べますか？",
+          "a": "ページは元の順序のまま、左から右へ、上から下へ並びます。"
         }
       ],
       "howTo": {
-        "title": "How to put multiple PDF pages on one sheet",
-        "intro": "N-up PDF lays 2, 4, 6 or 9 source pages on each sheet, for booklets and handouts. Each sheet stays the size of the first page.",
+        "title": "複数のPDFページを1枚に配置する方法",
+        "intro": "N-up PDFは、2・4・6・9ページの元のページを1枚の用紙に並べます。小冊子や配布資料用です。各用紙は最初のページと同じサイズのままです。",
         "steps": [
-          "Choose your PDF",
-          "Pick 2-up, 4-up, 6-up or 9-up",
-          "Click Create N-up PDF",
-          "Download the result"
+          "PDFを選択します",
+          "2-up・4-up・6-up・9-upを選びます",
+          "「N-up PDFを作成」をクリックします",
+          "結果をダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     },
     "add-blank-page": {
       "slug": "add-blank-page",
-      "name": "Add Blank Page",
-      "description": "Insert blank pages or pages from another PDF",
-      "seoTitle": "Add Blank Page — Insert Pages into a PDF Free",
-      "metaDescription": "Insert blank pages — or every page of another PDF — into a PDF, at the start, the end, after every page, or after a chosen page. Free, no upload.",
+      "name": "空白ページ追加",
+      "description": "空白ページや別のPDFのページを挿入します",
+      "seoTitle": "空白ページ追加 — PDFにページを無料で挿入",
+      "metaDescription": "空白ページ——または別のPDFのすべてのページ——をPDFに挿入します。先頭・末尾・各ページの後、または指定したページの後に。無料、アップロード不要。",
       "faqs": [
         {
-          "q": "Where can the blank page go?",
-          "a": "At the start, at the end, after every page, or after any page number you choose."
+          "q": "空白ページはどこに入れられますか？",
+          "a": "先頭・末尾・各ページの後、または任意のページ番号の後に挿入できます。"
         },
         {
-          "q": "How do I insert pages from another PDF?",
-          "a": "Choose \"Pages from another PDF\", add the second file after the first, and pick where its pages go."
+          "q": "別のPDFのページを挿入するにはどうしますか？",
+          "a": "「別のPDFのページ」を選び、最初のファイルの後に2番目のファイルを追加して、ページの行き先を選びます。"
         },
         {
-          "q": "What size is the blank page?",
-          "a": "The same size as the first page of your PDF."
+          "q": "空白ページのサイズはどうなりますか？",
+          "a": "PDFの最初のページと同じサイズです。"
         }
       ],
       "howTo": {
-        "title": "How to add a blank page to a PDF",
-        "intro": "Add Blank Page inserts blank pages — or every page of a second PDF — at the start, the end, after every page, or after a page you choose.",
+        "title": "PDFに空白ページを追加する方法",
+        "intro": "空白ページ追加は、空白ページ——または2番目のPDFのすべてのページ——を、先頭・末尾・各ページの後、または指定したページの後に挿入します。",
         "steps": [
-          "Choose your PDF",
-          "Pick Blank page, or Pages from another PDF and add the second file",
-          "Choose where the pages go",
-          "Click Add Blank Page and download the result"
+          "PDFを選択します",
+          "「空白ページ」、または「別のPDFのページ」を選んで2番目のファイルを追加します",
+          "ページの行き先を選びます",
+          "「空白ページを追加」をクリックして結果をダウンロードします"
         ],
         "benefits": [
-          "Private — the file is processed in your browser and never uploaded",
-          "Free, with no account, no watermark and no daily limit",
-          "Works in any modern browser on Windows, Mac, Linux, iPhone and Android"
+          "プライベート：ファイルはブラウザー内で処理され、アップロードされません",
+          "無料で、アカウント登録・透かし・1日の利用制限はありません",
+          "Windows、Mac、Linux、iPhone、Androidの最新ブラウザーで動作します"
         ]
       }
     }
