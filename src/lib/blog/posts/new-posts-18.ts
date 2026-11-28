@@ -199,8 +199,8 @@ export const newPosts18: BlogPost[] = [
 
   {
     slug: 'how-to-change-a-pdf-from-portrait-to-landscape',
-    title: 'How to Change a PDF from Portrait to Landscape (Free)',
-    description: 'Change a PDF from portrait to landscape and save it for good: free in your browser with no upload, plus Mac Preview, Acrobat and the keep-text-upright trick.',
+    title: 'Change a PDF From Portrait to Landscape — Free, No Upload',
+    description: 'Change a PDF from portrait to landscape and save it: free in your browser, no upload — plus Mac Preview and Acrobat. Keeps your text upright.',
     keyword: 'how to change a pdf from portrait to landscape',
     category: 'Editing & Signing',
     published: '2026-09-24',

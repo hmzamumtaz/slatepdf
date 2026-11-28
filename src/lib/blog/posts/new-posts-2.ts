@@ -84,8 +84,8 @@ export const newPosts2: BlogPost[] = [
   // Article 3: How to Combine Images into One PDF
   {
     slug: 'how-to-combine-images-into-one-pdf',
-    title: 'How to Combine Images into One PDF (JPG, PNG, Any Format)',
-    description: 'Merge multiple images — photos, scans, screenshots — into a single PDF in your browser. Free, no signup, and works with JPG, PNG, and more.',
+    title: 'How to Combine Images Into One PDF Free (JPG, PNG)',
+    description: 'Combine JPG, PNG and screenshots into one PDF free in your browser — drag, order, download. No upload, no signup, no watermark.',
     keyword: 'how to combine images into one pdf',
     category: 'Merging & Organizing',
     published: '2026-08-26',
@@ -226,8 +226,8 @@ export const newPosts2: BlogPost[] = [
   // Article 5: How to Make a PDF on iPhone
   {
     slug: 'how-to-make-a-pdf-on-iphone',
-    title: 'How to Make a PDF on iPhone (7 Free Ways, No App)',
-    description: 'Make a PDF on iPhone from photos, paper, web pages, notes or documents — 7 free built-in ways using Files, Print and Notes. No app, no account needed.',
+    title: 'How to Make a PDF on iPhone Free — 7 Ways, No App',
+    description: 'Make a PDF on iPhone from photos, paper, web pages or notes — 7 free built-in ways using Files, Print and Notes. No app, no account, no upload.',
     keyword: 'how to make a pdf on iphone',
     category: 'Converting',
     published: '2026-08-26',

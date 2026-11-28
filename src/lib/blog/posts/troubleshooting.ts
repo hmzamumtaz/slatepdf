@@ -80,8 +80,8 @@ export const troubleshootingPosts: BlogPost[] = [
 
   {
     slug: 'pdf-wont-open-how-to-fix-it',
-    title: 'PDF Won\'t Open? How to Fix It, Step by Step',
-    description: 'PDF won\'t open or shows an error? Check the reader, the download, the password and corruption in the right order and get the file open in minutes.',
+    title: 'PDF Won\'t Open? 7 Fixes That Work, in Order',
+    description: 'PDF won\'t open or shows an error? Try these 7 fixes in order — reader, download, password, corruption — and get the file open in minutes. Free, in your browser.',
     keyword: 'pdf wont open',
     category: 'Troubleshooting',
     published: '2026-03-28',
@@ -199,8 +199,8 @@ export const troubleshootingPosts: BlogPost[] = [
 
   {
     slug: 'how-to-fix-fonts-not-displaying-in-a-pdf',
-    title: 'How to Fix Fonts Not Displaying Correctly in a PDF',
-    description: 'Boxes instead of letters, swapped typefaces and shifted layouts come from fonts that were not embedded. How to check, fix at the source, or freeze the look.',
+    title: 'Why Does My PDF Look Different on Another Device? (Fonts)',
+    description: 'Why does your PDF look different on another device? Missing fonts, swapped typefaces, shifted layouts — check, fix at the source, or freeze the look. Free.',
     keyword: 'pdf font problems',
     category: 'Troubleshooting',
     published: '2026-05-14',

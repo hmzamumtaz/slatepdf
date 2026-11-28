@@ -69,8 +69,8 @@ export const troubleshootingPosts3: BlogPost[] = [
 
   {
     slug: 'how-to-fix-a-pdf-that-wont-print',
-    title: 'PDF Won\'t Print? How to Fix It, Step by Step',
-    description: 'PDF won\'t print, prints blank or stalls in the queue? Fix print permissions, drivers, rendering and spool problems in order and get it printed.',
+    title: 'PDF Won\'t Print? Fix It in Minutes, Step by Step',
+    description: 'PDF won\'t print, prints blank, or stalls in the queue? Fix drivers, spooler and permissions in order. Free, no install, works in your browser.',
     keyword: 'pdf wont print',
     category: 'Troubleshooting',
     published: '2026-07-29',

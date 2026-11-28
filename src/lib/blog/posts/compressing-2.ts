@@ -72,8 +72,8 @@ export const compressingPosts2: BlogPost[] = [
 
   {
     slug: 'how-to-reduce-pdf-size-without-adobe',
-    title: 'How to Reduce PDF Size Without Adobe Acrobat',
-    description: 'Compress a PDF to a smaller size without Acrobat — set a target size in your browser, or use macOS, Windows or the command line. The trade-offs.',
+    title: 'How to Reduce PDF Size Without Adobe (Free, Online)',
+    description: 'Reduce PDF size without Adobe: set a target size in your browser, or use macOS, Windows or the command line. Free — your files stay on your device.',
     keyword: 'reduce pdf size without adobe',
     category: 'Compressing',
     published: '2026-06-27',

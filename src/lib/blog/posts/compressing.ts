@@ -141,8 +141,8 @@ export const compressingPosts: BlogPost[] = [
 
   {
     slug: 'how-to-compress-pdf-for-email-attachment',
-    title: 'How to Compress a PDF for an Email Attachment',
-    description: 'How to compress a PDF for email: get under Gmail and Outlook limits, the safe target size to aim for, and what to do when compression is not enough.',
+    title: 'How to Share Large PDFs via Email (Compress to Fit)',
+    description: 'Share large PDFs via email: compress them under Gmail and Outlook limits, the safe target size, and what to do when compression is not enough. Free.',
     keyword: 'compress pdf for email',
     category: 'Compressing',
     published: '2026-03-24',

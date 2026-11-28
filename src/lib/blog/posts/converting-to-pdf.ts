@@ -268,8 +268,8 @@ export const convertingToPdfPosts: BlogPost[] = [
 
   {
     slug: 'how-to-convert-powerpoint-to-pdf',
-    title: 'How to Convert PowerPoint to PDF (One Slide Per Page)',
-    description: 'How to convert PowerPoint to PDF with one slide per page, in order — and what happens to animations, notes, fonts and charts. Free, nothing uploaded.',
+    title: 'How to Convert PowerPoint to PDF Free (PPT to PDF)',
+    description: 'Convert PowerPoint to PDF free in your browser — one slide per page, in order. What happens to animations, notes, fonts and charts. No upload, no signup.',
     keyword: 'how to convert powerpoint to pdf',
     category: 'Converting',
     published: '2026-04-15',
